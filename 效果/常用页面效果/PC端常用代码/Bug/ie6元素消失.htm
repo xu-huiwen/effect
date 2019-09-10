@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>IE6: 在浮动元素后的定义了“position:absolute”的元素框可能会消失</title>
+<style type="text/css">
+* {margin:0;padding:0;border:0;}
+.c:before,.c:after{content:"";display:table}
+.c:after{clear:both}
+.c{zoom:1}
+.mt20 {margin-top:20px;}
+.pr {position:relative;}
+.pa {position:absolute;}
+.fl {float:left;}
+
+.main {width:1000px;margin:0 auto;}
+.box {width:600px;height:200px;border:1px solid #f00;}
+	.item1 {width:200px;height:100px;background-color:#FF0;}
+	.item2 {width:50px;height:50px;right:0;bottom:0;background-color:#00F;color:#fff;}
+.fix1 {width:603px;}
+.fix2 .item1 {margin-right:-1px;}
+.fix3 .item2 {clear:both;}
+</style>
+</head>
+
+<body>
+	<div class="main">
+		<div class="box pr">
+			<div class="item1 fl">元素1</div>
+			<div class="item1 fl">元素2</div>
+			<div class="item1 fl">元素3</div>
+            <div class="item2 pa">元素4</div>
+		</div>
+        <h4 class="mt20">解决方法1</h4>
+        <p>父元素宽度-浮动元素总宽度>=3px</p>
+        <div class="box pr mt20 fix1">
+			<div class="item1 fl">元素1</div>
+			<div class="item1 fl">元素2</div>
+			<div class="item1 fl">元素3</div>
+            <div class="item2 pa">元素4</div>
+		</div>
+        <h4 class="mt20">解决方法2</h4>
+        <p>浮动元素浮动方向反方向负外边距>0</p>
+        <div class="box pr mt20 fix2">
+			<div class="item1 fl">元素1</div>
+			<div class="item1 fl">元素2</div>
+			<div class="item1 fl">元素3</div>
+            <div class="item2 pa">元素4</div>
+		</div>
+        <h4 class="mt20">解决方法3</h4>
+        <p>绝对定位元素放到最后，然后clear:both</p>
+        <div class="box pr mt20 fix3">
+			<div class="item1 fl">元素1</div>
+			<div class="item1 fl">元素2</div>
+			<div class="item1 fl">元素3</div>
+            <div class="item2 pa">元素4</div>
+		</div>
+	</div>
+</body>
+</html>

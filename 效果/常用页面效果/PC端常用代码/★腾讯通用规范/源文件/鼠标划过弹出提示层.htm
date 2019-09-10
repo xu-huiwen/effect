@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{height:200px;}
+/*tips*/
+.gift_1,.gift_2{position:absolute;top:150px;border:1px solid #999999;padding:10px;line-height:22px;}
+.gift_1{left:320px;_left:176px;}
+.gift_2{left:362px;_left:365px;}
+
+.non{display:none;}
+</style>
+<title>鼠标划过弹出提示层 - 腾讯游戏</title>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>鼠标划过弹出提示层</h1>
+	</div>
+	<div id="main">
+		<p><a href="javascript:void(0)" onmouseover="showhidediv('gift_1')" onmouseout="showhidediv('gift_1')" class="gift_bg">查看礼包内容1</a>
+		<a href="javascript:void(0)" onmouseover="showhidediv('gift_2')" onmouseout="showhidediv('gift_2')" class="gift_bg">查看礼包内容2</a></p>
+		<!--弹出层内容开始-->	
+			<div id="gift_1" class="gift_1 non">
+				<h4 class="gift_title">打开礼包将获得：</h4>
+				<div class="img_over">
+					<p><em>主动经验5次</em><span>×1</span></p>
+					<p><em>被动经验5次</em><span>×1</span></p>
+					<p><em>白色武器强化石</em><span>×1</span></p>
+				</div>
+				<div class="img_over_end"></div>
+			</div>
+			
+			<div id="gift_2" class="gift_2 non">
+				<h4 class="gift_title">打开礼包将获得：</h4>
+				<div class="img_over">
+					<p><em>主动经验10次</em><span>×10</span></p>
+					<p><em>被动经验10次</em><span>×10</span></p>
+					<p><em>白色武器强化石</em><span>×1</span></p>
+				</div>
+				<div class="img_over_end"></div>
+			</div>
+		<!--弹出层内容结束-->
+			
+	</div>
+</div>
+<script type="text/javascript">
+function showhidediv(id){
+var title=document.getElementById(id);
+if(title){
+	if(title.style.display=='block'){
+	title.style.visibility='visible';
+	title.style.display='none';
+		}else{
+		title.style.visibility=='visible';
+		title.style.display='block';
+		}
+	}
+}
+</script>
+</body>
+</html>

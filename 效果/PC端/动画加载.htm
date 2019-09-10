@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gbk" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-CP" />
+<meta name="description" content="英雄联盟官方网站，海量风格各异的英雄，丰富、便捷的物品合成系统，游戏内置的匹配、排行和竞技系统，独创的“召唤师”系统及技能、符文、天赋等系统组合，必将带你进入一个崭新而又丰富多彩的游戏世界。" />
+<meta name="Keywords" content="英雄联盟,lol,league of legends,DOTA,即时战略,MOBA,召唤师,符文,匹配,英雄,技能,团队,Gank,快节奏,Farm,成长" />
+<!-- 设计：cp  | 重构：cp | 创建：2016/05/03 | 更新：| 团队博客：http://tgideas.qq.com/ -->
+<title>赛场每日一段-英雄联盟官方网站-腾讯游戏</title>
+<style>
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+q:before,q:after{content:''}
+fieldset,img,abbr,acronym{border:0}
+
+/* footer */
+#footer_ied {left: 0;bottom: 0;margin: 0 auto;height: 120px;text-align:center;font-size:12px;line-height:19px;color:#cccccc;background: #0c0d11;}
+.wrap_ied {margin:0 auto;padding:30px;width:940px;}
+.wrap_ied a {color:#cccccc;}
+#footer_ied .e {font-size:10px;-webkit-text-size-adjust:none;}
+
+/* page */
+.c:before,.c:after {content:"";display:table}
+.c:after {clear:both}
+.c {zoom:1}
+body {font:12px/1.5 "\5FAE\8F6F\96C5\9ED1",sans-serif;padding-top: 42px;}
+a {text-decoration:none;overflow:hidden;}
+a:hover {text-decoration:underline}
+body,.wrap,.ost,#footer_ied {width: 100%;min-width: 1000px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1002?'1000px':'');}
+.hide {display:block;width:0;height:0;overflow:hidden;}
+.pr {position:relative;}
+.pa {position:absolute;}
+.db {display:block;text-indent:-999em;}
+
+/* killyesterday */
+a,em,i,b{color: inherit;font-style: inherit;font-weight: inherit;_font-style: normal;_font-weight: normal;}
+.wrap a:hover{text-decoration: none;}
+.fl{float: left;}
+.fr{float: right;}
+.mc{margin: 0 auto;}
+.sp{background: url(images/sp.png) no-repeat;}
+:focus{outline: none;}
+
+.container{margin: 0 auto;width: 1000px;height: 100%;}
+.con{width: 100%;height: 100%;opacity: 0;}
+
+.type1{background:#446456;}
+.type2{background:#544654;}
+.type3{background: url(images/type3.jpg);}
+.arrow,.arrow2{left: 50%;bottom: 0;margin-left: -67px;width: 133px;height: 52px;background-position: -46px 0;}
+.arrow a,.arrow2 a{left: 50%;bottom: 0;margin-left: -16px;width: 32px;height: 27px;display: block;z-index: 999;
+	animation: arrowShow 1s infinite alternate;
+	-webkit-animation: arrowShow 1s infinite alternate;
+}
+.arrow2{height: 52px;margin-left: -67px;width: 134px;background-position: -46px -68px;}
+.arrow2 a{background-position: 0 -67px;}
+@keyframes arrowShow{
+	0%{transform: translateY(-5px) scale(1);opacity: 1;}
+	100%{transform: translateY(0) scale(0.95);opacity: 0.8;}
+}
+@-webkit-keyframes arrowShow{
+	0%{-webkit-transform: translateY(-5px) scale(1);opacity: 1;}
+	100%{-webkit-transform: translateY(0) scale(0.95);opacity: 0.8;}
+}
+
+.bg{overflow: hidden;}
+.bg1{height: 650px;}
+.bg2{height: 970px;}
+.bg3{height: 610px;}
+.bg4{padding: 105px 0 65px;}
+.bg5{height: 700px;}
+.bg6{padding: 50px 0;background: #0c0d11;}
+
+.cover{left: 0;top: 0;width: 100%;height: 380px;background: url(images/cover.png) no-repeat 50% 0;}
+.logo{left: 22px;top: 25px;width: 139px;height: 138px;background: url(images/logo.png) no-repeat;display: block;z-index: 999;}
+.draven1{left: 0;bottom: 26px;width: 100%;height: 579px;background: url(images/draven1.png) no-repeat 50% 0;}
+.intro{left: 198px;top: 495px;width: 306px;color: #262626;font-size: 26px;line-height: 32px;text-align: center;display: block;z-index: 999;}
+.intro b{font-weight: bold;display: block;}
+.slogan{left: 26px;top: 132px;width: 653px;height: 367px;background:#654657;}
+
+.mic{right: 0;bottom: 0;width: 100%;height: 820px;background: url(images/mic.png) no-repeat 50% 0;}
+.draven2{left: 116px;top: 54px;width: 372px;height: 554px;background:#975815;}
+.draven2 i{right: 11px;top: 340px;width: 109px;height: 67px;background-position: -199px 0;display: block;z-index: 999;}
+.msg1{left: 445px;top: 95px;padding: 75px 100px 0 110px;width: 251px;height: 230px;background:#978783;color: #40403f;font-size: 18px;line-height: 27px;text-align: center;}
+.list{left: -30px;bottom: 0;padding: 70px 60px 0 100px;width: 855px;height: 485px;background:#fff;}
+.ul-match li{float: left;width: 50%;height: 155px;color: #3a2e26;font-size: 37px;line-height: 109px;text-align: center;}
+.ul-match img{margin: 0 2px;width: 109px;height: 109px;display: inline-block;vertical-align: middle;}
+
+@keyframes coverShow{
+	0%{opacity: 0;}
+}
+@-webkit-keyframes coverShow{
+	0%{opacity: 0;}
+}
+.show .draven1{animation: dravenGo 1.2s 1.4s backwards;-webkit-animation: dravenGo 1.2s 1.4s backwards;}
+.show .intro{animation: dravenGo 1.2s 1.4s backwards;-webkit-animation: dravenGo 1.2s 1.4s backwards;}
+@keyframes dravenGo{
+	0%{transform: translateY(50px);opacity: 0;}
+}
+@-webkit-keyframes dravenGo{
+	0%{-webkit-transform: translateY(50px);opacity: 0;}
+}
+.show .slogan{animation: sloganShow 1.5s 0.3s backwards;-webkit-animation: sloganShow 1.5s 0.3s backwards;}
+@keyframes sloganShow{
+	0%{opacity: 0;transform: scale(1.5);}
+	60%{opacity: 1;transform: scale(0.65);}
+	80%{transform: scale(1.1);}
+	100%{transform: scale(1);}
+}
+@-webkit-keyframes sloganShow{
+	0%{opacity: 0;-webkit-transform: scale(1.5);}
+	60%{opacity: 1;-webkit-transform: scale(0.65);}
+	80%{-webkit-transform: scale(1.1);}
+	100%{-webkit-transform: scale(1);}
+}
+
+.show .draven2{animation: dravenShow 1.2s 0.5s backwards;-webkit-animation: dravenShow 1.2s 0.5s backwards;}
+@keyframes dravenShow{
+	0%{transform: translateX(-200px);opacity: 0;}
+}
+@-webkit-keyframes dravenShow{
+	0%{-webkit-transform: translateX(-200px);opacity: 0;}
+}
+.show .mic{animation: micShow 1.5s 0.8s backwards;-webkit-animation: micShow 1.5s 0.8s backwards;}
+@keyframes micShow{
+	0%{transform: translateY(200px);opacity: 0;}
+}
+@-webkit-keyframes micShow{
+	0%{-webkit-transform: translateY(200px);opacity: 0;}
+}
+.show .msg1{animation: msgShow 1s 1.3s backwards;-webkit-animation: msgShow 1s 1.3s backwards;}
+@keyframes msgShow{
+	0%{transform: scale(0.2);opacity: 0;}
+	60%{transform: scale(1.2);opacity: 1;}
+}
+@-webkit-keyframes msgShow{
+	0%{-webkit-transform: scale(0.2);opacity: 0;}
+	60%{-webkit-transform: scale(1.2);opacity: 1;}
+}
+.show .list{animation: listShow 1.5s 2s backwards;-webkit-animation: listShow 1.5s 2s backwards;}
+@keyframes listShow{
+	0%{transform: translateY(300px) rotateY(360deg);opacity: 0;}
+}
+@-webkit-keyframes listShow{
+	0%{-webkit-transform: translateY(300px) rotateY(360deg);opacity: 0;}
+}
+
+</style>
+<script type="text/javascript">
+document.domain = 'qq.com';
+</script>
+</head>
+<body>
+
+<div class="wrap pr">
+	<h1 class="hide">赛场每日一段</h1>
+	<div class="bg bg1 type1 pr">
+		<div class="con">
+			<div class="container pr">
+				<a class="logo pa" href="http://lol.qq.com/match/msi/" target="_blank" title="英雄联盟"></a>
+				<p class="slogan pa"></p>
+				<p class="intro pa">金牌段子手德莱文<b>带你看不一样的比赛</b></p>
+			</div>
+			<p class="draven1 pa"></p>
+			<p class="cover pa"></p>
+			<p class="arrow sp pa">
+				<a class="sp pa" href="javascript:;"></a>
+			</p>
+		</div>
+	</div>
+	<div class="bg bg2 type2 pr">
+		<div class="con">
+			<p class="mic pa"></p>
+			<div class="container pr">
+				<p class="draven2 pa"><i class="sp pa"></i></p>
+				<p class="msg1 pa">
+					大家好，我是金牌段子手<br />德莱文，季中赛期间就让我来带你们看看赛场上都发生了哪些有趣的事情吧，我们先来回顾一下今天的比赛结果。
+				</p>
+				<div class="list pa">
+					<ul class="ul-match c">
+						<li>
+							<img src="images/test1.png" />
+							1 : 1
+							<img src="images/test2.png" />
+						</li>
+						<li>
+							<img src="images/test1.png" />
+							1 : 1
+							<img src="images/test2.png" />
+						</li>
+						<li>
+							<img src="images/test1.png" />
+							1 : 1
+							<img src="images/test2.png" />
+						</li>
+						<li>
+							<img src="images/test1.png" />
+							1 : 1
+							<img src="images/test2.png" />
+						</li>
+						<li>
+							<img src="images/test1.png" />
+							1 : 1
+							<img src="images/test2.png" />
+						</li>
+						<li>
+							<img src="images/test1.png" />
+							1 : 1
+							<img src="images/test2.png" />
+						</li>
+					</ul>
+				</div>
+			</div>
+			<p class="arrow2 sp pa">
+				<a class="sp pa" href="javascript:;"></a>
+			</p>
+		</div>
+	</div>
+</div>
+
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+<script>
+//初始化
+$(window).ready(function(){
+	winSize();
+});
+$(window).resize(function(){
+	winSize();
+});
+function winSize(){
+	$(".bg1").addClass("show").find(".con").css('opacity',1);
+	if($(window).height()-42 >= $(".bg1").height()){
+		$(".bg2").addClass("show").find(".con").css('opacity',1);
+	}
+}
+
+//动画
+$(window).bind('load scroll', function (){
+	var t = $(window).scrollTop();
+	$(".bg").each(function(i){
+		if(t >= $(this).offset().top - $(window).height()-42 - 100){
+			if(!$(this).hasClass("show")){
+				$(this).addClass("show").find(".con").css('opacity',1);
+				if(i==3){
+					talkGo();
+				}
+			}
+		}
+	})
+});
+
+</script>
+</body>
+</html>

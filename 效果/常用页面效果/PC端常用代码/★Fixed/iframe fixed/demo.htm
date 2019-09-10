@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-CP" />
+<title>iframe fixed问题解决</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow: hidden;/*隐藏当前页面滚动条*/
+}
+</style>
+</head>
+<body scroll="no">
+<iframe id="iframe" src="1.htm" width="100%" height="100%" frameborder="0"></iframe>
+<script>
+function addEventSimple(obj, evt, fn) {
+	if (obj.addEventListener) obj.addEventListener(evt, fn, false);
+	else if (obj.attachEvent) obj.attachEvent('on' + evt, fn);
+}
+var setHeight = function() {
+	var height = document.documentElement.clientHeight || window.innerHeight;
+	document.getElementById("iframe").style.height = height + "px";
+}
+setHeight();
+addEventSimple(window, "resize", setHeight);
+</script>
+</body>
+</html>

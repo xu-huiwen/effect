@@ -1,0 +1,200 @@
+<!DOCTYPE html><html><head><title>约战吧，兄弟！（9月）-穿越火线官方网站-腾讯游戏</title><meta charset="gbk"><meta name="description" content="玩穿越火线，参与约战吧，兄弟，赢取AK47-火鹰、Barrett-翔龙、沙漠之鹰-S 等丰厚奖励！"><meta name="Keyword" content="CF,CF官网,CF游戏下载,CF下载,CF官方下载,AK47-火鹰,Barrett-翔龙,烟雾保护头盔,沙漠之鹰-S"><!-- Encoding: GBK -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tencent-Tgideas">
+    <script src="http://game.gtimg.cn/images/codo/2017/atemple/common.js"></script>
+    <script>
+        if(!popup.isMobile()) { popup.loadjs("http://game.gtimg.cn/images/codo/2017/atemple/popup.css",function(){});
+            popup.loadjs("../popupCustom.css",function(){});}
+        else{ popup.loadjs("http://game.gtimg.cn/images/codo/2017/atemple/popupm.css",function(){});
+            popup.loadjs("../popupCustomM.css",function(){});}
+    </script>
+    </head>
+<body>
+
+<div class="wrap">
+<div class="popup popup-red" id="popup">
+<!-- Encoding: GBK -->
+        <div class="tab-hd">
+            <ul id="navDom"></ul>
+        </div>
+        <div class="tab-focus">
+            <div class="tabbar"><a href="/" class="toback" id="toback"></a></div>
+            <img id="tabFocus" src="">
+        </div>
+        <div class="tab-bd" id="tabBd">
+            <div class="login-box">
+                <p id="unlogin">亲爱的玩家，请 <a href="javascript:;" id="dologin">【登录】</a></p>
+                <!--登录前状态 End-->
+                <!--登录后状态 Start-->
+                <p id="logined" style="display:none;color:#c80c0c;">
+                    欢迎您，<span id='login_qq_span'></span>，
+                    <span id="spanNotBind">
+                        <a href="javascript:showSelectZone();">【绑定大区】</a>
+                    </span>
+                    <span id="spanBind" style="display:none">
+                        <span id="area_info"></span>
+                        <span id="role_info"></span>
+                        <a href="javascript:showSelectZone();">【更改绑定】</a>
+                    </span>
+                    <a href="javascript:showMyGiftList();" >【我的礼包】</a>
+                    <a href="javascript:;" id="dologout">【注销】</a>
+                </p>
+            </div>
+            <div class="js_edit_template" id="recordDom"></div>
+        </div>
+        <a href="javascript:popup.popHide();" class="popup-close">&times;	</a>
+    </div>
+    <div class="act_pop act_pop_blue" id="showAlert">
+        <a href="javascript:closeDialog();" title="关闭" class="act_pop_close">&times;</a>
+        <h2 class="act_pop_sprite">消息提示</h2>
+        <div class="act_pop_main">
+            <p class="text_c" id="showAlertContent"></p>
+            <a href="javascript:closeDialog();" title="确认" class="btn-submit">确认</a>
+        </div>
+    </div>
+
+
+    <!-- 我的礼包记录 -->
+    <div class="act_pop  act_pop_blue" id="showMyGiftContent">
+        <a href="javascript:giftDialogHide();" title="关闭" class="act_pop_close">&times;</a>
+        <h2 class="act_pop_sprite">我的礼包记录</h2>
+        <div class="act_pop_main">
+            <table class="act_pop_table">
+                <thead>
+                <tr>
+                    <th>获奖大区</th>
+                    <th>所获礼包</th>
+                    <th>获奖时间</th>
+                    <th>CDKEY</th>
+                </tr>
+                </thead>
+                <tbody id="getGiftContent"></tbody>
+                <tfoot>
+                <tr>
+                    <td id="getGiftPageContent" align="center" colspan="4"></td>
+                </tr>
+                </tfoot>
+            </table>
+            <p class="font_s12"><b>温馨提示</b>：虚拟道具奖品将在24小时内发到您的游戏内仓库，请耐心等候，谢谢您的理解与支持！</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="temple0"><div class="tab-con accept clearfix pr">
+                <h2><%= data.tab_name%></h2>
+                <p class="lottery-status"><%= data.lottery_status%></b></p>
+                <a class="btn-look pa" href="javascript:;" title="查询我的抽奖资格">查询我的抽奖资格</a>
+                <div class="lottery-box lottery-box-16">
+                    <img src="<%= data.lottery_img%>" alt="lottery">
+                    <div class="flashbox" id="lotteryBox16"></div>
+                </div>
+                <div class="lottery-trend"><%= data.lottery_num%></div>
+            </div>
+</script>
+<script type="text/html" id="temple1"><%var list = data.list;
+            var listLength = list.length;%>
+            <div class="tab-con accept clearfix">
+                <h2><%= data.tab_name%></h2>
+                <ul>
+                    <%for(var i=0; i< listLength;i++){%>
+                    <li>
+                        <p class="accept-intro "><%= list[i].item_desc%></p>
+                        <div class="accept-pic"><img src="<%= list[i].item_img%>" alt="<%= list.item_img_desc%>"></div>
+                        <a href="javascript:void(0);" name="bridge_tab1_<%= i%>" class="btn accept-btn"><span><%= list[i].item_btn%></span><b class="d1"><b></b><i></i></b><b class="d2"><b></b><i></i></b></a>
+                    </li>
+                    <% }%>
+                </ul>
+            </div>
+</script>
+<script type="text/html" id="temple2"><%var list = data.list;
+            var listLength = list.length;%>
+            <div class="tab-con accept clearfix">
+                <h2><%= data.tab_name%></h2>
+                <ul>
+                    <%for(var i=0; i< listLength;i++){%>
+                    <li>
+                        <p class="accept-intro "><%= list[i].item_desc%></p>
+                        <div class="accept-pic"><img src="<%= list[i].item_img%>" alt="<%= list.item_img_desc%>"></div>
+                        <a href="javascript:void(0);" name="bridge_tab2_<%= i%>" class="btn accept-btn"><span><%= list[i].item_btn%></span><b class="d1"><b></b><i></i></b><b class="d2"><b></b><i></i></b></a>
+                    </li>
+                    <% }%>
+                </ul>
+            </div>
+</script>
+<script type="text/html" id="temple3"><%var list = data.list;
+            var listLength = list.length;%>
+            <div class="tab-con accept clearfix">
+                <h2><%= data.tab_name%></h2>
+                <ul>
+                    <%for(var i=0; i< listLength;i++){%>
+                    <li>
+                        <p class="accept-intro "><%= list[i].item_desc%></p>
+                        <div class="accept-pic"><img src="<%= list[i].item_img%>" alt="<%= list.item_img_desc%>"></div>
+                        <a href="javascript:void(0);" name="bridge_tab3_<%= i%>" class="btn accept-btn"><span><%= list[i].item_btn%></span><b class="d1"><b></b><i></i></b><b class="d2"><b></b><i></i></b></a>
+                    </li>
+                    <% }%>
+                </ul>
+            </div>
+</script>
+<script>
+var setSite={"siteType":"a20170906yzxd","pageType":"pop","pageName":"\u6d3b\u52a8\u6d6e\u51fa\u5c42","osact":0,"ingame":0};</script>
+<!-- Encoding: GBK -->
+<script type="text/html" charset="utf-8" id="templeNav">
+    <li>
+        <span class="js-tab-name"><%= data.tab_name%></span><b></b><b></b><i></i>
+    </li>
+</script>
+<script type="text/html" id="getGiftTemplate">
+    {if MyGiftListObject.iRet!='0'}
+    <tr>
+        <td colspan="4" align="center">${MyGiftListObject.sMsg}</td>
+    </tr>
+    {else}
+    {for giftInfo in MyGiftListObject.myGiftList}
+    <tr>
+
+        <td>${giftInfo.areaName}</td>
+        <td>${giftInfo.packageName}</td>
+        <td>${giftInfo.getTime}</td>
+        <td>${giftInfo.sCdkey}</td>
+    </tr>
+    {forelse}
+    <tr>
+        <td colspan="4" align="center">您尚未获得任何礼包</td>
+    </tr>
+    {/for}
+    {/if}
+</script>
+<script>
+    //获取url参数
+    function getUrlParam(name, url) {
+        //参数：变量名，url为空则表从当前页面的url中取
+        var u = arguments[1] || window.location.search,
+            reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"),
+            r = u.substr(u.indexOf("\?") + 1).match(reg);
+        return r != null ? r[2] : "";
+    }
+    var basejs = [
+        'http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.2.min.js', // 这里不需要可以删除哈
+        'http://ossweb-img.qq.com/images/js/milo/milo.js',
+        'http://ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js'
+    ];
+    var _isMobile_ = function(){
+        return /iphone|ios|android|mini|mobile|mobi|Nokia|Symbian|iPod|iPad|Windows\s+Phone|MQQBrowser|wp7|wp8|UCBrowser7|UCWEB|360\s+Aphone\s+Browser|blackberry/i.test(navigator.userAgent);
+    };
+    if(_isMobile_()){
+        basejs = [
+            'http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.2.min.js',// 这里不需要可以删除哈
+            'http://ossweb-img.qq.com/images/js/mobile/util/zepto.js',
+            'http://ossweb-img.qq.com/images/js/mobile/milo.js',
+            'http://ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js'
+        ]
+    }
+    for (var i = 0; i < basejs.length; i++) {
+        document.write('<script type="text/javascript" src="' + basejs[i] + '"></s'+'cript>');
+    }
+    document.write('<script type="text/javascript" charset="utf-8" src="../popupJson.js"></s'+'cript>');
+</script>
+<script type="text/javascript" src="bridgeTpl.js"></script>
+<script type="text/javascript" src="popup.js"></script>
+<script type="text/javascript" src="bridgeIndex.js"></script></body></html>

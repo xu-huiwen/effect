@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+	<title>标签切换</title>
+	<style>
+		* {margin: 0;padding: 0;border: 0;}
+		.c:before,.c:after{content:"";display: table}
+		.c:after{clear:both}
+
+		.tab li {width: 100px;height: 20px;background-color: #ccc;float: left;list-style-type: none;}
+		.tab .on {background-color: #f00;}
+		.hide {position:absolute;left:-999em;}
+		.show {position:static;}
+	</style>
+</head>
+<body>
+	<ul class="tab c">
+		<li class="on">标签1</li>
+		<li>标签2</li>
+		<li>标签3</li>
+	</ul>
+	<div class="ct">内容1</div>
+	<div class="ct hide">内容2</div>
+	<div class="ct hide">内容3</div>
+
+<script>
+function setTab(a, b) {
+	var tabs = document.querySelectorAll(a),
+		cts = document.querySelectorAll(b);
+	for (var i = tabs.length - 1; i >= 0; i--) {
+		tabs[i].current = i;
+		tabs[i].addEventListener('touchend', function(e) {
+			if (!this.classList.contains('on')) {
+				for (var j = 0; j < tabs.length; j++) {
+					tabs[j].classList.remove('on');
+					cts[j].classList.remove('show')
+					cts[j].classList.add('hide');
+				};
+				this.classList.add('on');
+				cts[this.current].classList.remove('hide');
+				cts[this.current].classList.add('show');
+			}
+		})
+	};
+}
+setTab('.tab li', '.ct');
+</script>
+</body>
+</html>

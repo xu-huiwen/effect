@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>根据类名标签切换</title>
+<style>
+    .on {color: #f00;}
+</style>
+</head>
+
+<body>
+<div class="map" id="map">
+	<ul class="tab">
+		<li class="r on">标签1</li>
+		<li class="r">标签2</li>
+		<li class="r">标签3</li>
+		<li class="r">标签4</li>
+		<li class="r">标签5</li>
+	</ul>
+    <ul class="ct">
+    	<li class="intro">内容1</li>
+    	<li class="intro">内容2</li>
+    	<li class="intro">内容3</li>
+    	<li class="intro">内容4</li>
+    	<li class="intro">内容5</li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+var GLOBAL = {};
+GLOBAL.namespace = function (str) {
+    var arr = str.split('.'),
+        o = GLOBAL;
+    for (i = (arr[0] == "GLOBAL") ? 1 : 0; i < arr.length; i++) {
+        o[arr[i]] = o[arr[i]] || {};
+        o = o[arr[i]];
+    }
+};
+GLOBAL.namespace("Dom");
+GLOBAL.Dom.getElementsByClassName = function (str, root, tag) {
+    if (root) {
+        root = (typeof root == "string") ? document.getElementById(root) : root;
+    } else {
+        root = document.body;
+    }
+    tag = tag || '*';
+    var els = root.getElementsByTagName(tag),
+        arr = [];
+    for (var i = 0, leng = els.length; i < leng; i++) {
+        var k = els[i].className.split(' ');
+        for (j = 0, len = k.length; j < len; j++) {
+            if (k[j] == str) {
+                arr.push(els[i]);
+                break;
+            }
+        }
+    }
+    return arr;
+}
+
+function setTab(root) {
+    var w = GLOBAL.Dom.getElementsByClassName("r", root);
+    var con = GLOBAL.Dom.getElementsByClassName("intro", root);
+    for (var i = 0; i < w.length; i++) {
+        w[i]._index = i;
+        w[i].onclick = function () {
+            for (var j = 0; j < con.length; j++) {
+                con[j].style.display = "none"
+                w[j].className = "r"
+            }
+            this.className = "r on"
+            con[this._index].style.display = "block";
+        }
+    }
+};
+var tabs = GLOBAL.Dom.getElementsByClassName("map");
+for (var i = 0; i < tabs.length; i++) {
+    setTab(tabs[i]);
+}
+</script>
+</body>
+</html>

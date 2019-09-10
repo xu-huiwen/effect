@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹窗本地视频</title>
+	<style>
+		* {margin:0;padding:0;border:0;}
+		.pop {display:none;width:800px;height:500px;border:5px solid #1d1c1a;position:relative;background-color:#1d1c1a;}
+			.pop-close {display:block;width:40px;height:35px;text-align:center;line-height:35px;background-color:#1d1c1a;position:absolute;right:-5px;top:-40px;font-family:Tahoma;font-size:30px;color:#aaa;text-decoration: none;}
+			.pop-close:hover {color:#fff;text-decoration:none;}
+			.video {left:0;top:0;z-index:20;position:absolute;width: 800px;height: 500px;}
+			.ts {text-align:center;width:100%;top:50%;margin-top:-9px;color:#fff;z-index:10;position:absolute;}
+	</style>
+</head>
+<body>
+<a href="javascript:pop('http://down.qq.com/xgame/other/yl_6weapondao.flv')">霸刀系</a>
+<a href="javascript:pop('http://down.qq.com/xgame/other/yl_6weaponjian.flv')">重剑系</a>
+<a href="javascript:pop('http://down.qq.com/xgame/other/yl_6weaponqiang.flv')">银枪系</a>
+<a href="javascript:pop('http://down.qq.com/xgame/other/yl_6weapongong.flv')">神弓系</a>
+<a href="javascript:pop('http://down.qq.com/xgame/other/yl_6weaponshan.flv')">羽扇系</a>
+<a href="javascript:pop('http://down.qq.com/xgame/other/yl_6weaponzhang.flv')">法杖系</a>
+
+<div class="pop" id="pop-video">
+    <div id="video-p" class="video">
+    	<div id="video-p-i"></div>
+    </div>
+    <p class="ts">稍等片刻，载入中…</p>
+    <a href="javascript:hide();" class="pop-close" id="pop-close" title="关闭">&times;</a>
+</div>
+
+<script src="http://ossweb-img.qq.com/images/js/swfobject.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/comm/showDialog.min.js"></script>
+<script>
+function pop(url) {
+	var info = "&flv=" + url + "&src=http://ossweb-img.qq.com/images/jade/act/pop/video_bg.jpg&autoplay=true",
+		params = {
+			menu: "false",
+			scale: "noScale",
+			salign: "T",
+			wmode: "transparent",
+			allowFullscreen: "true",
+			allowScriptAccess: "always"
+		};
+	swfobject.embedSWF("http://ossweb-img.qq.com/images/yl/video/mediaer.swf?mg=" + Math.random() + "" + info, "video-p-i", "100%", "100%", "10.0.0", "http://ossweb-img.qq.com/images/swf/expressInstall.swf", "", params, "");
+	showDialog.show({
+		id: "pop-video",
+		bgcolor: "#000",
+		opacity: 70
+	});
+}
+
+function hide() {
+	var flv_s = document.getElementById("video");
+	if (flv_s) {
+		flv_s.innerHTML = "<div id='video-i'></div>";
+	}
+	showDialog.hide('pop-video');
+}
+</script>
+</body>
+</html>

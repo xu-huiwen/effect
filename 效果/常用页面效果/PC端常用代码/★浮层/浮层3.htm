@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>炫舞浮层</title>
+<style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+ol,ul{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+q:before,q:after{content:'';}
+fieldset,img,abbr,acronym{border:0;}
+.cf:before,.cf:after{content:"";display:table;}
+.cf:after{clear:both;}
+.cf{zoom:1;}
+
+.list {width:1000px;margin:100px auto 0 auto;}
+.list-item {float:left;width:400px;height:400px;margin-right:50px;border:1px solid #000;}
+.box-lb {width:200px;height:200px;margin:0 auto;background-color:#00f;}
+.box-lb-i {position:relative;width:0;height:0;}
+
+.tips {display:none;width:240px;position:absolute;border:2px solid #760000;background-color:#ffcda5;top:0;left:12px;color:#760000;}
+.tips-tit {height:24px;line-height:22px;padding:0 10px;background-color:#760000;color:#ffedcd;font-size:14px;font-weight:bold;}
+.tips-bd {padding:5px 10px;}
+.arrow {width:0;height:0;overflow:hidden;border-color:transparent #760000 transparent transparent;border-style:dashed solid dashed dashed;border-width:6px 12px;position:absolute;left:-26px;top:5px;}
+.showtips .tips {display:block;}
+</style>
+</head>
+
+<body>
+	<ul class="list cf" id="list">
+    	<li class="list-item">
+        	<div class="box-lb">
+            	<div class="box-lb-i">
+            		<div class="tips">
+            		    <h5 class="tips-tit">累积X个活跃天</h5>
+            		    <div class="tips-bd">
+            		    	内容区域<br />
+            		        内容区域<br />
+            		        内容区域<br />
+            		        内容区域<br />
+            		        内容区域<br />
+            		        内容区域<br />
+            		    </div>
+            		    <span class="arrow"></span>
+            		</div>
+            	</div>
+            	<h4>累积X个活跃天</h4>
+            </div>
+            <a href="#" class="btn-lq">领取</a>
+        </li>
+        <li class="list-item">
+        	<div class="box-lb">
+            	<div class="box-lb-i">
+            		<div class="tips">
+            		    <h5 class="tips-tit">累积X个活跃天</h5>
+            		    <div class="tips-bd">
+            		    	内容区域<br />
+            		        内容区域<br />
+            		        内容区域<br />
+            		        内容区域<br />
+            		        内容区域<br />
+            		        内容区域<br />
+            		    </div>
+            		    <span class="arrow"></span>
+            		</div>
+            	</div>
+            	<h4>累积X个活跃天</h4>
+            </div>
+            <a href="#" class="btn-lq">领取</a>
+        </li>
+    </ul>
+
+<script>
+    var GLOBAL = {};
+    GLOBAL.namespace = function (str) {
+        var arr = str.split('.'),
+            o = GLOBAL;
+        for (i = (arr[0] == "GLOBAL") ? 1 : 0; i < arr.length; i++) {
+            o[arr[i]] = o[arr[i]] || {};
+            o = o[arr[i]];
+        }
+    };
+    GLOBAL.namespace("Dom");
+    GLOBAL.Dom.getElementsByClassName = function (str, root, tag) {
+        if (root) {
+            root = (typeof root == "string") ? document.getElementById(root) : root;
+        } else {
+            root = document.body;
+        }
+        tag = tag || '*';
+        var els = root.getElementsByTagName(tag),
+            arr = [];
+        for (var i = 0, leng = els.length; i < leng; i++) {
+            var k = els[i].className.split(' ');
+            for (j = 0, len = k.length; j < len; j++) {
+                if (k[j] == str) {
+                    arr.push(els[i]);
+                    break;
+                }
+            }
+        }
+        return arr;
+    }
+
+    var obj = GLOBAL.Dom.getElementsByClassName('box-lb')
+    for (var i=0; i < obj.length; i++) {
+        obj[i].onmouseover = function() {
+            this.className += " " + "showtips";
+        }
+        obj[i].onmouseout = function() {
+            this.className = this.className.replace(new RegExp("\\b" + "showtips" + "\\b\\s*", "g"), "");
+        }
+    }
+</script>
+</body>
+</html>

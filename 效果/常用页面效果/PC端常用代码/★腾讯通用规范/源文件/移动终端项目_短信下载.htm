@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta name="Copyright" content="Tencent" />
+<meta name="Description" content=" " />
+<meta name="Keywords" content="" />
+<title>xxx官方网站-腾讯游戏</title>
+<style>
+</style>
+</head>
+<body> 
+<div style="background: none repeat scroll 0 0 #E4E4E4;margin-left:20px;border: 2px solid #777777;height: 100px;margin: 20px;padding: 20px; width: 400px; border-radius: 5px 5px 5px 5px;">
+					<p style="font-size: 15px;">免费发送下载地址到手机</p>
+					<div style="margin-top:10px;">
+						<p><input id="sms_phone" type="text" style="color: #333333;font-family: '华文中宋';font-size: 18px;font-style: normal;font-weight: bold;height: 32px; position: absolute;text-align: left;text-decoration: none;width: 196px;"></p>
+						<p style="margin-left: 220px;"><input id="sms_sendBtn" type="button" style="font-weight: bold; margin:0; width: 100px;height: 28px;cursor: pointer; color: #FFFFFF;border-radius: 5px 5px 5px 5px;;  background: none repeat scroll 0 0 #104E8B; border: 1px solid #1874CD;" value="发送短信"></p>
+						<p id="smd_sendRet" style="color: red;font-size: 13px;float: left; display:none;margin-top:2px;">发送成功!</p>
+						<p style="color: #797979;font-size: 12px;margin-top: 25px;">系统繁忙时会有3-5分钟的发送延迟，请勿在短时候内重复下载</p>
+					</div>				
+</div>
+<p>不同的游戏需要不同的id，请向需求人获取</p>
+</body>
+	
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.1.min.js"></script>
+<script>
+//sms_sendBtn 为发送短信按钮ID
+$("#sms_sendBtn").unbind().bind('click',function(){
+	var id_phone = 	"sms_phone"; //号码输入框ID
+	var id_ret = "smd_sendRet";  //显示返回结果元素ID
+		
+	var phoneElement = $("#" + id_phone), retElement = $("#" + id_ret);
+	retElement.hide();
+	retElement.css("color","gray").html("请求发送中...").show();
+	var showSucc = function(msg){
+		setTimeout(function(){
+			retElement.css("color","green").html(msg).show();
+		},500)
+	}, showErr = function(msg){
+		setTimeout(function(){
+			retElement.css("color","red").html(msg).show();
+		},500)
+	}
+	
+	var phone = phoneElement.val();
+	if (!phone){
+		showErr("请输入手机号码！");
+		return false;
+	}
+	if(!/^1\d{10}$/g.test(phone)){
+		showErr("请输入正确的手机号码！");
+		return false;		
+	}
+	$.getScript("http://apps.game.qq.com/cgi-bin/sy/sms/send.cgi?id=15&phone="+phone+"&_r"+new Date().getTime(), function(){//不同的游戏需修改此id，如圣犬帕拉为id=1
+	  	if (typeof RES_SIGN == "undefined"){
+			showErr("服务器繁忙，请您稍后再试！");
+	  	}
+	  	if (RES_SIGN.result == "0"){
+	  		showSucc(RES_SIGN.msg);
+	  	}else{  
+	  		showErr(RES_SIGN.msg);
+	  	}
+	});	
+})
+</script>
+			
+</html>

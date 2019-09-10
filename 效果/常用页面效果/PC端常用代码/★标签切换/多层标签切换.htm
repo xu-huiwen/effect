@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多层标签切换</title>
+	<style>
+		*{margin:0;padding:0;border:0;}
+		ul{list-style-type:none;}
+		.c:before,.c:after {content:"";display:table;}
+		.c:after {clear:both;}
+		.c {zoom:1;}
+
+		.main{width:1000px;margin:0 auto;}
+		.tab li {float:left;margin-right:20px;}
+		.tab .on {border:1px solid #f00;}
+		.bg00 {border:#f00 1px dashed;}
+		.bg01 {border:#0f0 1px dashed;}
+		.bg02 {border:#00f 1px dashed;}
+		.bg10 {border:#2f02f0 1px dashed;}
+		.bg11 {border:#ccc 1px dashed;}
+		.bg12 {border:#f0f 1px dashed;}
+		.bg20 {border:#00f 1px dashed;}
+		.bg21 {border:#0ff 1px dashed;}
+		.bg22 {border:#f0f 1px dashed;}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<ul class="tab c">
+			<li id="tab-item0" date-cur="0" class="on">
+				<a href="javascript:changeA(0)">标签1</a>
+				<ul class="list c">
+					<li><a href="javascript:changeB(0,0)">子标签1</a></li>
+					<li><a href="javascript:changeB(0,1)">子标签2</a></li>
+					<li><a href="javascript:changeB(0,2)">子标签3</a></li>
+				</ul>
+			</li>
+			<li id="tab-item1" date-cur="0">
+				<a href="javascript:changeA(1)">标签2</a>
+				<ul class="list c">
+					<li><a href="javascript:changeB(1,0)">子标签1</a></li>
+					<li><a href="javascript:changeB(1,1)">子标签2</a></li>
+					<li><a href="javascript:changeB(1,2)">子标签3</a></li>
+				</ul>
+			</li>
+			<li id="tab-item2" date-cur="0">
+				<a href="javascript:changeA(2)">标签3</a>
+				<ul class="list c">
+					<li><a href="javascript:changeB(2,0)">子标签1</a></li>
+					<li><a href="javascript:changeB(2,1)">子标签2</a></li>
+					<li><a href="javascript:changeB(2,2)">子标签3</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div class="bg00" id="content">
+			子标签1内容
+		</div>
+	</div>
+<script>
+var date = [
+	['1子标签1内容','1子标签2内容','1子标签3内容'],
+	['2子标签1内容','2子标签2内容','2子标签3内容'],
+	['3子标签1内容','3子标签2内容','3子标签3内容']
+];
+function gid(id) {
+	return document.getElementById(id);
+}
+function hasClass(o,c) {
+	var regexp = new RegExp("(^|\\s)" + c + "(\\s|$)", "g");
+	return regexp.test(o.className)
+}
+function changeA(index) {
+	for (var i = 0; i < 3; i++) {
+		if (i == index) {
+			if (!hasClass(gid('tab-item' + i),'on')) {
+				gid('tab-item' + i).className += ( gid('tab-item' + i).className ? ' ' : '' ) + 'on';
+				changeB(i,gid('tab-item' + i).getAttribute('date-cur'));
+			}
+		}
+		else {
+			gid('tab-item' + i).className = gid('tab-item' + i).className.replace(RegExp("(^|\\s)" + 'on' + "(\\s|$)", "g"), "");
+		}
+	}
+}
+function changeB(a,b) {
+	gid('content').className ='bg' + a + b;
+	gid('content').innerHTML = date[a][b];
+	gid('tab-item' + a).setAttribute('date-cur', b);
+}
+</script>
+</body>
+</html>

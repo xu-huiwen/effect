@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>角标</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<style>
+.list li {width:200px;height:300px;background-color:#ccc;margin:0 auto;
+	overflow:hidden;
+	border-radius:10px;
+	position:relative;
+}
+.mark {display:block;width:200px;height:60px;background-color:#f0f;
+	transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	position:absolute;
+	right:-100px;
+	top:0;
+	color:#fff;
+}
+.num {position:absolute;color:#fff;right:10px;top:10px;}
+</style>
+</head>
+<body>
+<ul class="list">
+	<li>
+		<div class="mark">
+		</div>
+		<span class="num">12</span>
+	</li>
+</ul>
+</body>
+</html>

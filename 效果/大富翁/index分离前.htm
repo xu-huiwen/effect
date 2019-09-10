@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="author" content="Tencent-CP" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="Description" content="《万王之王3D》年度魔幻史诗手游大作，开启了全新的波波克神秘副本，海量礼包资源等你来搜刮" />
+<meta name="Keywords" content="万王之王3D, MMO，签到，波波克，神秘副本" />
+<!-- 设计：cp  | 重构：cp | 创建：2018/11/20 | 更新：| 团队博客：http://tgideas.qq.com/ -->
+<title>波波克的神秘副本</title>
+<script>
+function AutoPage(){ 
+	document.documentElement.style.fontSize = document.documentElement.clientWidth * 100 / 750 + 'px';
+ } ;
+AutoPage();
+window.addEventListener('resize',AutoPage,false)  
+</script>
+<style>
+/* reset */
+body,div,p,ul,li,table,tbody,tr,td,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,iframe,header,nav,section,article,footer,figure,figcaption,menu{margin:0;padding:0;list-style:none;}
+body{-webkit-text-size-adjust:none; font-size: 0.24rem;}
+header,nav,section,article,footer,figure,figcaption{display:block;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+ol,ul{margin:0;padding:0;}
+fieldset{border:none;margin:0;padding:0;}
+a,li,ul,[onclick]{-webkit-tap-highlight-color:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+table{border-collapse:collapse;border-spacing:0;}
+em,strong{font-weight:normal;font-style:normal;}
+a {text-decoration:none;}
+.hide {display:block;width:0;height:0;overflow:hidden;}
+.c:before,.c:after {content:"";display:table;}
+.c:after {clear:both;}
+.fl {float:left;}
+.fr {float:right;}
+.pr {position:relative;}
+.pa {position:absolute;}
+.db {display:block;text-indent:-999em;}
+.sp {background:url(ossweb-img/sp.png) no-repeat;background-size:3.98rem auto;}
+body,html{background-color: #0c0807;}
+header,footer {width:100%;margin:0 auto;}
+#afooter{color:#fff;background-color:#0c0807;padding:0.2rem 0;font-size:0.2rem;text-align:center;}
+#afooter a{color:#fff;}
+
+ /* 横屏提示 */
+.horizon{width:100%;height:100%;background:#32373b;position:fixed;left:0;top:0;z-index:1001;display:none;}
+.horizon-box{width:100%;height:3rem;position:absolute;top:50%;left:0;margin-top:-1.5rem;}
+.horizon-pic{width:1.5rem;height:2.3rem;margin:0 auto;text-align:center;}
+.horizon span{font-size:0.22rem;display:block;color:#ffd40a;text-align:center;}
+.horizon i{width:1.5rem;height:2.27rem;background:url(ossweb-img/hengping.png) 0 0 no-repeat;background-size:1.5rem 2.27rem;margin:0 auto;-webkit-animation: maskAni 1.5s ease infinite alternate;position:static;display:block;}
+@-webkit-keyframes maskAni{0% {-webkit-transform:rotate(-90deg);}30% {-webkit-transform:rotate(-90deg);}70%{-webkit-transform:rotate(0deg);}100% {-webkit-transform:rotate(0deg);}}
+@media screen and (orientation:landscape) {.horizon{display:block}}
+
+/*main*/
+.wrap{background:url(ossweb-img/bg.jpg) no-repeat;background-size:100% auto;height:12.54rem;}
+/* 抽奖开始 */
+.lottery{position:relative;width:7.5rem;height:12.54rem;}
+.day{position:absolute;text-align:center;left:3rem;top:6.5rem;font-size:0.2rem;color:#f2d188;width:2.6rem;}
+.link_box{width:3.05rem;text-align:center;position:absolute;left:2.9rem;top:6.9rem;}
+.link_box a{display:inline-block;text-decoration:underline;color:#cc8425;font-size:0.22rem;line-height:0.24rem;margin:0 0.1rem;}
+/* 奖品 */
+.gamesteps{width:7.5rem;height:12.54rem;position:relative;}
+.gamesteps li{position:absolute;width:1.11rem;height:1.19rem;background:url(ossweb-img/list_bg2.png) no-repeat;background-size:1.11rem 1.19rem;}
+.gamesteps .act1{background:url(ossweb-img/list_bg3.png) no-repeat;background-size:1.11rem 1.19rem;}
+.gamesteps .act2{background:url(ossweb-img/list_bg4.png) no-repeat;background-size:1.11rem 1.19rem;}
+.gamesteps img{width:1.11rem;height:1.19rem;}
+.gamesteps li span{position:absolute;width:100%;text-align:center;left:0;bottom:0.15rem;text-align:center;line-height:0.2rem;color:#fbcfbc;font-size:0.18rem;}
+.gamesteps .act1 span{color:#692500;}
+.gamesteps .act2 span{color:#d8d8d8;}
+/* 移动的框 */
+.mod-gamedfw .step{position:absolute;top:0.24rem;left:0.3rem;z-index:999;display:block;width:1.09rem;height:1.14rem;background:url(ossweb-img/cur.png) no-repeat;background-size:1.09rem 1.14rem;}
+
+/*骰子*/
+.mod-gamedfw .dicewrap{position:absolute;top:5.26rem;left:3.75rem;width:1.2rem;height:1.18rem;-webkit-animation:0.8s ease-out 0s alternate none infinite running diceClick;z-index:99;-webkit-transform:scale(.9);display:none;}
+.dice_nomal{position:absolute;top:5.26rem;left:3.77rem;width:1.2rem;height:1.18rem;background:url(ossweb-img/dice_nor.png) no-repeat;background-size:1.2rem auto;-webkit-transform:scale(.86);}
+.dice-mask{position:absolute;top:0.2rem;left:0;width:1.2rem;height:1.18rem;background:url(about:blank);cursor:default;z-index:2;display:none;}
+.mod-gamedfw .dicewrap:hover{-webkit-animation:none;-moz-animation:none;-ms-animation:none;-o-animation:none;animation:none;}
+.mod-gamedfw .dice{width:1.2rem;height:1.18rem;background:url(ossweb-img/dice.png) no-repeat;background-size:1.2rem auto;position:absolute;}
+.mod-gamedfw .dice_1{background-position:0 0;left:-0.02rem;top:0.02rem;}
+.mod-gamedfw .dice_2{background-position:0 -1.31rem;}
+.mod-gamedfw .dice_3{background-position:0 -2.61rem;}
+.mod-gamedfw .dice_4{background-position:0 -3.92rem;}
+.mod-gamedfw .dice_5{background-position:0 -5.22rem;}
+.mod-gamedfw .dice_6{background-position:0 -6.52rem;}
+.mod-gamedfw .dice_t{background-position:0 -7.84rem;}
+.mod-gamedfw .dice_s{background-position:0 -9.11rem;}
+.mod-gamedfw .dice_e{background-position:-0.01rem -10.41rem;}
+.cj_box{height:12.54rem;}
+/* 首页 */
+.index_box{width:100%;height:100%;background:rgba(0,0,0,.8);position:fixed;left:0;top:0;z-index:999;}
+.index_con{width:7.5rem;position:absolute;left:0;top:50%;margin-top:-1.75rem;height:3.5rem;}
+.slogan{background:url(ossweb-img/slogan.png) no-repeat;width:6.63rem;height:1.51rem;margin:0 auto 0.6rem;background-size:6.63rem auto;}
+.btn_starts{width:2.91rem;height:0.89rem;display:block;margin:0 auto 0.1rem;line-height:0.88rem;text-align:center;font-size:0.28rem;color:#fff4d8;}
+.tips{text-align:center;font-size:0.18rem;color:#f2d188;line-height:0.2rem;}
+/* 开宝箱动效 */
+.bx_con{width:100%;height:100%;background:rgba(0,0,0,.8);position:fixed;left:0;top:0;z-index:999;}
+.bx_box{width:5.9rem;height:4.27rem;position:absolute;left:50%;top:50%;margin:-2.5rem 0 0 -2.95rem;}
+.bx_bg{background:url(ossweb-img/pic_bxon.png) no-repeat;background-size:100%;width:5.9rem;height:4.27rem;display:block;}
+.bx_bg{-webkit-animation:flash2 2s ease-in-out both infinite;transform-origin:50% 70%;}
+@-webkit-keyframes flash2{
+0%{opacity: 1;-webkit-transform:scale(1.2);}
+50%{opacity: 0.5;-webkit-transform:scale(1);}
+100%{opacity: 1;-webkit-transform:scale(1.2);}
+}
+.bx_g{width:3.07rem;height:2.54rem;position:absolute;left:50%;top:0.79rem;margin-left:-1.53rem;}
+.bx_box img{width:3.07rem;height:2.54rem;}
+.g1{position:absolute;background:url(ossweb-img/g1.png) no-repeat;width:0.38rem;height:0.51rem;background-size:100%;left:0.15rem;top:0.80rem;-webkit-animation:flash 3s .2s ease both infinite;}
+.g2{position:absolute;background:url(ossweb-img/g2.png) no-repeat;width:0.45rem;height:0.51rem;background-size:100%;left:2.15rem;top:0.25rem;-webkit-animation:flash 3s .4s ease both infinite;}
+.g3{position:absolute;background:url(ossweb-img/g3.png) no-repeat;width:0.3rem;height:0.31rem;background-size:100%;left:1.95rem;top:2.05rem;-webkit-animation:flash 3s .6s ease both infinite;}
+@-webkit-keyframes flash{
+0%,50%,100%{opacity: 1;}
+25%,75%{opacity: 0;}
+}
+/* 底部条 */
+.bot_bar{background:url(ossweb-img/bot_bar.jpg) no-repeat;width:6.93rem;height:0.72rem;position:fixed;left:0;bottom:0;padding:0.08rem 0.17rem 0 0.4rem;z-index:999;}
+.btn_start{width:1.97rem;height:0.75rem;background-position:0 -0.93rem;margin-left:0.1rem;text-align:center;line-height:0.68rem;color:#fff;font-weight:bold;font-size:0.2rem;text-shadow:#000 0 0 0.02rem;}
+.btn_start.btn_act,.btn_start:active{background-position:-2.02rem -3.3rem;transform:scale(.9);}
+.btn_again{width:1.97rem;height:0.75rem;background-position:0 -1.72rem;text-align:center;line-height:0.68rem;color:#fff;font-weight:bold;font-size:0.2rem;text-shadow:#000 0 0 0.02rem;}
+.btn_again.btn_act,.btn_again:active{background-position:0 -3.3rem;transform:scale(.9);}
+.btn_gray,.btn_gray:active{background-position:0 -2.51rem;transform:scale(1);}
+.btn_bx{width:2.3rem;height:0.76rem;}
+.btn_bx em{background:url(ossweb-img/bx.png) no-repeat;width:1rem;height:0.76rem;background-size:1rem auto;float:left;}
+.btn_ani{-webkit-animation:tada 1s ease both infinite;}
+@-webkit-keyframes tada{
+0%{-webkit-transform:scale(1)}
+10%,20%{-webkit-transform:scale(0.9) rotate(-3deg)}
+30%,50%,70%,90%{-webkit-transform:scale(1.1) rotate(3deg)}
+40%,60%,80%{-webkit-transform:scale(1.1) rotate(-3deg)}
+100%{-webkit-transform:scale(1) rotate(0)}
+}
+.btn_bx span{float:left;width:1.3rem;color:#f2d188;font-size:0.24rem;line-height:0.64rem;font-weight:bold;text-shadow:#1a0c06 0 0.01rem 0.02rem;}
+/* 弹窗 */
+.pop{width:4.82rem;background:url(ossweb-img/pop_bg2.png) no-repeat 50% bottom,url(ossweb-img/pop_bg1.png) repeat-y;text-align:center;background-size:4.82rem auto;padding-bottom:0.2rem;outline:none;}
+.pop_tit{font-size:0.26rem;color:#ffe5ab;font-weight:bold;background:url(ossweb-img/pop_tit.png) no-repeat;width:4.82rem;height:0.46rem;background-size:4.82rem auto;line-height:0.46rem;margin-bottom:0.15rem;}
+.dj_box{background:url(ossweb-img/dj_bg.jpg) no-repeat;width:0.86rem;height:0.86rem;overflow:hidden;background-size:0.86rem auto;margin:0 auto 0.1rem;}
+.dj_box img{display:block;width:100%;}
+.dj_name{font-size:0.18rem;color:#382b25;line-height:0.22rem;padding-bottom:0.1rem;}
+.btn_confirm{width:1.19rem;height:0.38rem;background-position:-2.41rem -2.1rem;margin:0 auto 0.14rem;}
+.jl_tips{font-size:0.18rem;color:#382b25;line-height:0.24rem;}
+.gift_list{width:4.4rem;margin:0 auto;line-height:0.28rem;padding-bottom:0.2rem;padding-top:0.05rem;text-align:left;}
+.gift_list li{height:0.28rem;overflow:hidden;font-size:0.18rem;color:#382b25;white-space:nowrap;text-overflow:ellipsis;}
+.gift_list .gift_li{text-align:center;}
+.gift_list span{padding:0 0.05rem;}
+.btn_know{width:1.59rem;height:0.5rem;margin:0 auto;background-position:-2.01rem -0.93rem;}
+.rule_list{width:4.4rem;margin:0 auto;line-height:0.28rem;text-align:left;}
+.rule_list li{font-size:0.18rem;color:#382b25;margin-bottom:0.05rem;}
+.pop_close{width:0.58rem;height:0.58rem;background-position:-3rem -0.15rem;right:-0.22rem;top:-0.07rem;}
+.pop_txt{font-size:0.2rem;color:#382b25;padding-bottom:0.1rem;line-height:0.24rem;}
+.pop{-webkit-animation:fadeInDownBig .8s ease both;}
+@-webkit-keyframes fadeInDownBig{
+0%{opacity:0;-webkit-transform:scale(.3)}
+50%{opacity:1;-webkit-transform:scale(1.2)}
+70%{-webkit-transform:scale(.9)}
+100%{-webkit-transform:scale(1)}
+}
+.slogan{-webkit-animation:fadeInUp 1s .2s ease both;}
+.btn_starts{-webkit-animation:fadeInUp 1s .4s ease both;}
+.tips{-webkit-animation:fadeInUp 1s .6s ease both;}
+@-webkit-keyframes fadeInUp{
+0%{opacity:0;-webkit-transform:translateY(20px)}
+100%{opacity:1;-webkit-transform:translateY(0)}
+}
+</style>
+</head>
+<body>
+<div class="horizon" id="horizon">
+    <div class="horizon-box">
+        <div class="horizon-pic"><i></i></div>
+        <span>为了更好的体验，请将手机/平板竖过来</span>
+    </div>
+</div>
+<h1 class="hide">波波克的神秘副本</h1>
+<div class="wrap">
+	<!-- 抽奖开始 -->
+	<div class="cj_box pr">
+			<div class="lottery">
+			<div class="mod-gamedfw" id="gameDFW">
+                <div class="game-inner">
+                    <span class="step"></span>
+                    <div class="dice_nomal"></div>
+                    <div class="dicewrap"><span class="dice dice_1"></span><span class="dice-mask"></span></div>
+                    <ul class="gamesteps" id="gamesteps">
+                    	<li class="step-item"><img src="ossweb-img/list_bg1.png" alt="" /></li>
+                    	<li class="step-item"><img src="ossweb-img/gift1.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift2.png" alt="" /><span>道具X1</span></li>
+                    	<li class="act1 step-item"><img src="ossweb-img/gift3.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift1.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift2.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift3.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift1.png" alt="" /><span>道具X1</span></li>
+                    	<li class="act1 step-item"><img src="ossweb-img/gift2.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift3.png" alt="" /><span>道具X1</span></li>
+                    	<li class="act2 step-item"><img src="ossweb-img/gift1.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift2.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift3.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift1.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift2.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift3.png" alt="" /><span>道具X1</span></li>
+                    	<li class="act1 step-item"><img src="ossweb-img/gift1.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift2.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift3.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift1.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift2.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift3.png" alt="" /><span>道具X1</span></li>
+                    	<li class="act2 step-item"><img src="ossweb-img/gift1.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift2.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift3.png" alt="" /><span>道具X1</span></li>
+                    	<li class="act1 step-item"><img src="ossweb-img/gift1.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift2.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift3.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/gift1.png" alt="" /><span>道具X1</span></li>
+                    	<li class="step-item"><img src="ossweb-img/list_bg5.png" alt="" /></li>
+                    </ul>
+                	<p class="day">活动剩余数：5天</p>
+                	<div class="link_box">
+                		<a ontouchend="PTTSendClick('btn','bz','查看我的宝藏');" href="javascript:TGDialogS('pop2');">查看我的宝藏</a>
+                		<a ontouchend="PTTSendClick('btn','rule','查看规则');" href="javascript:TGDialogS('pop_rule');">查看规则</a>
+                	</div>
+                </div>
+            </div>
+		</div>
+	</div>
+	<!-- 抽奖结束 -->
+</div>
+<div class="bot_bar c">
+	<a ontouchend="PTTSendClick('btn','complete','完成一圈');" href="javascript:;" class="btn_bx fl">
+		<em></em>
+		<span>完成一圈</span>
+	</a>
+	<!-- 点击选中状态添加类名btn_act  不可点灰态添加类名btn_gray -->
+	<a href="javascript:;" ontouchend="PTTSendClick('btn','play','掷骰子');" class="btn_start sp fr">掷骰子</a>
+	<a href="javascript:;" ontouchend="PTTSendClick('btn','playag','再掷一次');" class="btn_again sp fr btn_gray">再掷一次</a>
+</div>
+<div class="bx_con" style="display:none">
+	<div class="bx_box">
+		<em class="bx_bg"></em>
+		<div class="bx_g">
+			<img src="ossweb-img/pop_bx.png" alt="" />
+			<em class="g1"></em>
+			<em class="g2"></em>
+			<em class="g3"></em>
+		</div>
+	</div>
+</div>
+<div class="index_box">
+	<div class="index_con">
+		<div class="slogan db">波波克的神秘副本</div>
+		<a href="javascript:;" ontouchend="PTTSendClick('btn','start','开始掷骰子');" class="btn_starts sp">开始掷骰子</a>
+		<p class="tips">规则：12月1日-12月16日，每日掷骰子领取地图中礼包</p>
+	</div>
+</div>
+<!-- pop1 -->
+<div class="pop" id="pop1" style="display:none">
+    <h2 class="pop_tit">恭喜你获得</h2>
+	<div class="dj_box">
+		<img src="" alt="" />
+	</div>
+	<p class="dj_name">元宝</p>
+	<a href="javascript:closeDialog();" ontouchend="PTTSendClick('btn','confirm','确定');" class="btn_confirm sp db">确定</a>
+	<p class="jl_tips">奖励将通过邮件24小时之内发放到你的邮箱，<br />请注意查收~</p>
+    <a ontouchend="PTTSendClick('btn','close1','关闭');" class="pop_close sp pa" href="javascript:closeDialog();" title="关闭"></a>
+</div>
+<!-- pop2 -->
+<div class="pop" id="pop2" style="display:none">
+    <h2 class="pop_tit">恭喜你，你一共获得</h2>
+    <ul class="gift_list" id="gift_list">
+    </ul>
+	<a href="javascript:closeDialog();" ontouchend="PTTSendClick('btn','know1','我知道了');" class="btn_know sp db">我知道了</a>
+    <a ontouchend="PTTSendClick('btn','close2','关闭');" class="pop_close sp pa" href="javascript:closeDialog();" title="关闭"></a>
+</div>
+<!-- pop3 -->
+<div class="pop" id="pop3" style="display:none">
+    <h2 class="pop_tit"></h2>
+    <p class="pop_txt">您已经跑完一圈啦~</p>
+	<a href="javascript:closeDialog();" ontouchend="PTTSendClick('btn','know2','我知道了');" class="btn_know sp db">我知道了</a>
+    <a ontouchend="PTTSendClick('btn','close3','关闭');" class="pop_close sp pa" href="javascript:closeDialog();" title="关闭"></a>
+</div>
+<!-- pop_rule -->
+<div class="pop" id="pop_rule" style="display:none">
+    <h2 class="pop_tit">活动规则</h2>
+    <ul class="rule_list">
+    	<li>1.文案文案文案文案文案文案文案文案文案</li>
+    	<li>2.文案文案文案文案文案文案文案文案文案文案文文案</li>
+    	<li>3.文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</li>
+    	<li>4.文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</li>
+    	<li>5.文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案案</li>
+    </ul>
+    <a ontouchend="PTTSendClick('btn','close4','关闭');" class="pop_close sp pa" href="javascript:closeDialog();" title="关闭"></a>
+</div>
+<!--<script src="http://ossweb-img.qq.com/images/js/mobile_build/util/zepto.js"></script>-->
+<script src="http://ossweb-img.qq.com/images/js/mobile_bundle/milo.js"></script>
+<script src="http://game.gtimg.cn/images/js/2018foot/foot.js"></script>
+<script src="ossweb-img/jquery-1.9.1.min.js"></script>
+<script src="ossweb-img/lottery.js"></script>
+<script type="text/javascript">
+//点击进入
+$(".btn_starts").click(function(){
+	$(".index_box").fadeOut(400)
+})
+if($(".gift_list li").length==0){
+	$(".gift_list").html("<li class='gift_li'>暂无获奖记录</li>")
+}
+$(".index_box").on("touchmove",function(e) {
+e.preventDefault(); 
+})
+//弹窗
+function TGDialogS(e){
+    // 利用milo库引入dialog组件
+    need("biz.dialog",function(Dialog){
+        Dialog.show({
+            id:e,
+            bgcolor:'#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+            opacity:80 //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+        });
+    });
+}
+function closeDialog(){
+    // 利用milo库引入dialog组件
+    need("biz.dialog",function(Dialog){
+        Dialog.hide();
+    });
+}
+</script>
+<script src="http://ossweb-img.qq.com/images/js/TGMobileShare/TGMobileShare.min.js"></script>
+<script>
+TGMobileShare({
+shareTitle:'波波克的神秘副本', //不设置或设置为空时，页面有title，则调取title
+shareDesc:'满地图的礼包，10天期限，你能抱走多少？', //不设置或设置为空时，页面有Description，则调取Description
+shareImgUrl:'ossweb-img/share.png', //分享图片尺寸200*200，且填写绝对路径
+shareLink:'', //分享链接要跟当前页面同域名(手Q分享有这个要求) ,不设置或设置为空时，默认调取当前URL
+actName:'a20181120qdxyx' //点击流命名，用于统计分享量，专题一般采用目录名称如a20151029demo
+});
+</script>
+<script src="http://ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script>
+//此段代码不能放到外链JS中，
+var setSite={ //设置网站属性
+ siteType:"a20181120qdxyx", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+ pageType:"index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+ pageName:"首页", //必填项:页面中文名
+ osact:0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+ ingame:0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+ stayTime:0 //选填项:是否需要统计停留时长boolean；默认是0
+}
+if(typeof(pgvMain)=='function')pgvMain();//千万不能忘记！
+</script>
+</body>
+</html>

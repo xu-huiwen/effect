@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="gbk">
+	<title>弹窗视频</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		/* 视频弹窗 */
+		.pop {display:none;width:800px;height:500px;border:5px solid #1d1c1a;position:relative;background-color:#1d1c1a;}
+			.pop-close {display:block;width:40px;height:40px;text-align:center;line-height:40px;background-color:#1d1c1a;position:absolute;right:-45px;top:-5px;font-family:Tahoma;font-size:30px;color:#aaa;text-decoration: none;}
+			.pop-close:hover {color:#fff;text-decoration:none;}
+			.video {left:0;top:0;z-index:20;position:absolute;width: 800px;height: 500px;}
+			.ts {text-align:center;width:100%;top:50%;margin-top:-9px;color:#fff;z-index:10;position:absolute;}
+	</style>
+</head>
+<body>
+<a href="javascript:popVideo('1008_ebb2d8db63a24b1bb4964ec8b50d5c6f')">点击弹出视频1</a>
+<a href="javascript:popVideo('1008_757b297238224af497b1f013977c46e6')">点击弹出视频2</a>
+
+<!-- 视频弹窗 -->
+<div class="pop" id="pop-video">
+    <div id="video" class="video">
+    	<div id="video-i"></div>
+    </div>
+    <p class="ts">稍等片刻，载入中…</p>
+    <a href="javascript:hideVideo();" class="pop-close" title="关闭">&times;</a>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/milo/milo.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/swfobject.js"></script>
+<script>
+	function TGDialogS(e){
+	    need("biz.dialog-min",function(Dialog){
+	        Dialog.show({
+	            id:e,
+	            bgcolor:'#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+	            opacity:70      //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+	        });
+	    });
+	}
+	function closeDialog(){
+	    need("biz.dialog-min",function(Dialog){
+	        Dialog.hide();
+	    });
+	}
+	function playVideo(vid) {
+		var info = "&vid="+vid+"&autoplay=1&loop=1",
+			params = {
+				menu: "false",
+				scale: "noScale",
+				salign: "T",
+				wmode: "transparent",
+				allowFullscreen: "true",
+				allowScriptAccess: "always"
+			};
+		swfobject.embedSWF("http://mat1.gtimg.com/weishi/player/weishiplayerIn.swf?" + info, "video-i", "100%", "100%", "10.0.0", "http://ossweb-img.qq.com/images/swf/expressInstall.swf", "", params, "");
+	}
+	function popVideo(vid) {
+		TGDialogS('pop-video')
+		playVideo(vid);
+	}
+	function hideVideo() {
+		var flv_s = document.getElementById("video");
+		if (flv_s){flv_s.innerHTML= '<div id="video-i"></div>';}
+		closeDialog();
+	}
+</script>
+</body>
+</html>

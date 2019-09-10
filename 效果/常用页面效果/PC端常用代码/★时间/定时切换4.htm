@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="robots" content="all" />
+<title>定时切换</title>
+<style>
+
+	/* 页面样式 */
+	.c:before,.c:after {content:"";display:table;}
+	.c:after {clear:both;}
+	.c {zoom:1;}
+	body {font:12px/1.5 tahoma,\5b8b\4f53,sans-serif;padding-top:42px;background-color: #ffffff;}
+	a {text-decoration:none;overflow:hidden;}
+	a:hover {text-decoration:underline;}
+	.container {width:1000px;margin:0 auto;}
+	.pr {position:relative;}
+	.pa {position:absolute;}
+	.hide {display:block;width:0;height:0;overflow:hidden;}
+	.db {display:block;text-indent:-999em;}
+
+	/* content */
+	.content {height: 471px;}
+		.tabs {margin: 54px 0 0 43px;padding-left: 47px;}
+			.tabs li {float: left;height: 107px;width:100px;text-align:center;}
+			.tabs li .on{color:red;}
+			.over {background-color:#0f0;}
+
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	<div class="container">
+	    <div class="content">
+    		<div class="ct-all">
+    			<div id="ct1" class="ct" style="display: none;">
+    				<h2 class="">周末乐翻天1</h2>
+    			</div>
+    			<div id="ct2" class="ct" style="display: none;">
+    				<h2 class="">周末乐翻天2</h2>
+    			</div>
+    			<div id="ct3" class="ct" style="display: none;">
+    				<h2 class="">暑假进行曲3</h2>
+    			</div>
+    			<div id="ct4" class="ct" style="display: none;">
+    				<h2 class="">周末乐翻天4</h2>
+    			</div>
+    			<div id="ct5" class="ct" style="display: none;">
+    				<h2 class="">周末乐翻天5</h2>
+    			</div>
+    		</div>
+    		<ul class="tabs c" id="tabs">
+    			<li class="t-i1"><a href="javascript:">标签1</a></li>
+    			<li class="t-i2"><a href="javascript:">标签2</a></li>
+    			<li class="t-i3"><a href="javascript:">标签3</a></li>
+    			<li class="t-i4"><a href="javascript:">标签4</a></li>
+    			<li class="t-i5"><a href="javascript:">标签5</a></li>
+    		</ul>
+	    </div>
+	</div>
+</div>
+
+
+<script src="http://apps.game.qq.com/CommArticle/app/reg/gdate.php"></script>
+<script>
+var nortag = {
+	todayTag: -1,
+	g: function(id) {
+		return document.getElementById(id)
+	},
+	ge: function(o, tagname) {
+		return o.getElementsByTagName(tagname)
+	},
+	ctn: function() {
+		var tabs = this.g("tabs");
+		var tris = this.ge(tabs, "a");
+		return {
+			o: tabs,
+			tags: tris,
+			len: tris.length
+		}
+	},
+	action: function() {
+		var len = this.ctn().len;
+		for (var i = 0; i < len; i++) {
+			(function(arg) {
+				nortag.ctn().tags[i].setAttribute("tag", i);
+				nortag.ctn().tags[i].onclick = function() {
+					var index = this.getAttribute("tag");
+					if (index <= nortag.todayTag) {
+						nortag.settag(arg);
+					} else {
+						alert("此活动还未开启～");
+					}
+				}
+			})(i)
+		}
+	},
+	over: function() {
+		var len = nortag.todayTag;
+		for (var i = 0; i < len; i++) {
+			nortag.ctn().tags[i].className += (nortag.ctn().tags[i].className ? " " : "") + 'over';
+		}
+	},
+	settag: function(n) {
+		var len = nortag.ctn().len;
+		for (var i = 0; i < len; i++) {
+			nortag.ctn().tags[i].className = nortag.ctn().tags[i].className.replace(RegExp("(^|\\s)" + 'on' + "(\\s|$)", "g"), "");
+			nortag.g("ct" + (i + 1)).style.display = "none";
+		}
+		nortag.ctn().tags[n].className += (nortag.ctn().tags[n].className ? " " : "") + 'on';
+		if (nortag.todayTag < 0) {
+			nortag.todayTag = nortag.ctn().tags[n].getAttribute("tag");
+		}
+		this.g("ct" + (n + 1)).style.display = "block";
+	},
+	init: function(n) {
+		nortag.ctn().tags[n].className += (nortag.ctn().tags[n].className ? " " : "") + 'on';
+		nortag.action();
+		nortag.settag(n);
+		nortag.over();
+	}
+}
+nortag.action();
+
+function getT(t) {
+	var time = new Date(Date.parse(t.replace(/-/g, "/")));
+	return time.getTime();
+}
+
+
+var t1 = getT('2014-07-30 10:00:00'),
+	t2 = getT('2014-08-11 10:00:00'),
+	t3 = getT('2014-08-12 10:00:00'),
+	t4 = getT('2014-08-14 10:00:00'),
+	t5 = getT('2014-08-23 10:00:00'),
+	t6 = getT('2014-08-27 10:00:00')
+	nowTime = getT(json_curdate);
+
+if ((nowTime > t1) && (nowTime < t2)) {
+	nortag.init(0);
+}
+if ((nowTime > t2) && (nowTime < t3)) {
+	nortag.init(1);
+}
+if ((nowTime > t3) && (nowTime < t4)) {
+	nortag.init(2);
+}
+if ((nowTime > t4) && (nowTime < t5)) {
+	nortag.init(3);
+}
+if (nowTime > t5) {
+	nortag.init(4);
+}
+</script>
+</body>
+</html>

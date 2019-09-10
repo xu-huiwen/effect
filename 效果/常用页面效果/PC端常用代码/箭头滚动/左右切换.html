@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>左右切换</title>
+	<style>
+	/* reset */
+	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+	table{border-collapse:collapse;border-spacing:0;}
+	address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+	ol,ul{list-style:none;}
+	h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+	q:before,q:after{content:'';}
+	fieldset,img,abbr,acronym{border:0;}
+
+	.c:before,.c:after {content:"";display:table;}
+	.c:after {clear:both;}
+	.c {zoom:1;}
+
+	.box {width:500px;height:500px;margin:0 auto;overflow:hidden;border:5px solid #ccc;position:relative;}
+	.list {width:1500px;position:absolute;}
+	.list li {float:left;width:500px;height:500px;}
+	.item1 {background-color:#f00;}
+	.item2 {background-color:#0f0;}
+	.item3 {background-color:#00f;}
+	.prev,.next {display:block;width:50px;height:50px;text-align:center;line-height:50px;color:#fff;background-color:#000;position:absolute;top:50%;margin-top:-25px;font-size:40px;text-decoration:none;}
+	.prev {left:0;display:none;}
+	.next {right:0;}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="list c" id="list" style="left:0">
+			<li class="item1">1</li>
+			<li class="item2">2</li>
+			<li class="item3">3</li>
+		</ul>
+		<a id="prev" href="javascript:prev()" class="prev">&laquo;</a>
+		<a id="next" href="javascript:next()" class="next">&raquo;</a>
+	</div>
+<script>
+function g(obj) {
+    return (typeof obj == 'object') ? obj : document.getElementById(obj);
+}
+var currentTime = 0,
+	duration = 8,
+	step = 0,
+	noAnimated = true,
+	btnPrev = g("prev"),
+	btnNext = g("next"),
+	list = g("list"),
+	listItem = list.getElementsByTagName("li");
+
+
+function prev() {
+	if (noAnimated) {
+		step--
+		if (step == 0) {
+			btnPrev.style.display = "none";
+			btnNext.style.display = "block";
+		} else {
+			btnPrev.style.display = "block";
+			btnNext.style.display = "block";
+		}
+		noAnimated = false;
+		currentTime = 0;
+		animation([
+			[list, -step * 500, "left"]
+		])
+
+	}
+}
+
+function next() {
+	if (noAnimated) {
+		step++
+		if (step == (listItem.length - 1)) {
+			btnPrev.style.display = "block";
+			btnNext.style.display = "none";
+		} else {
+			btnPrev.style.display = "block";
+			btnNext.style.display = "block";
+		}
+		noAnimated = false;
+		currentTime = 0;
+		animation([
+			[list, -step * 500, "left"]
+		])
+
+	}
+}
+//------移动组件-------//
+var Tween = {
+	Quart: {
+		easeOut: function(t, b, c, d) {
+			return -c * (t /= d) * (t - 2) + b
+		}
+	}
+};
+
+function animation(obj, func, v) {
+	for (i = 0; i < obj.length; i++) {
+		var n2 = Number(obj[i][0].style[obj[i][2]].split("px")[0]);
+		obj[i][0].style[obj[i][2]] = Tween.Quart.easeOut(currentTime, n2, (obj[i][1] - n2), duration) + "px"
+	}
+	if (currentTime == duration) {
+		noAnimated = true;
+		if (arguments.length > 1) {
+			func(v)
+		}
+	} else if (currentTime < duration) {
+		currentTime++
+		setTimeout(function() {
+			if (arguments.length > 1) {
+				animation(obj, func, v)
+			} else(
+				animation(obj)
+			)
+
+		}, 100)
+	}
+}
+</script>
+</body>
+</html>

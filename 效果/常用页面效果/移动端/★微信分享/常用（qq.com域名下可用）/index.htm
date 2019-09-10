@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+<title>微信分享</title>
+<style>
+/* reset */
+body,div,p,ul,li,table,tbody,tr,td,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,iframe,header,nav,section,article,footer,figure,figcaption,menu{margin:0;padding:0;}
+body{font-family:"\5FAE\8F6F\96C5\9ED1",Helvetica;-webkit-user-select:none;-webkit-text-size-adjust:none;font-size:12px;}
+header,nav,section,article,footer,figure,figcaption{display:block;}
+ol,ul{margin:0;padding:0;list-style:none;}
+fieldset{border:none;margin:0;padding:0;}
+a,li,ul,[onclick]{-webkit-tap-highlight-color:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+table{border-collapse:collapse;border-spacing:0;}
+em,strong{font-weight:normal;font-style:normal;}
+a {text-decoration:none;}
+
+/*自定义字体*/
+@font-face {
+	font-family: 'wx';
+	src:url('fonts/wx.eot?1dmzdg');
+	src:url('fonts/wx.eot?#iefix1dmzdg') format('embedded-opentype'),
+		url('fonts/wx.woff?1dmzdg') format('woff'),
+		url('fonts/wx.ttf?1dmzdg') format('truetype'),
+		url('fonts/wx.svg?1dmzdg#wx') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.pop-share-list li::before,.pop-share-arrow{
+	font-family: 'wx';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+/*弹窗*/
+#pop-mask {position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.84);}
+.pop-share{display: none;padding: 10px;border:1px solid #fff;color: #fff;width: 256px;position: absolute;left: 50%;margin-left: -128px;top: 15%;border-radius: 10px}
+.pop-share-txt {text-align: center;}
+.pop-share-list {text-align: center;width: 100%;margin-top: 10px;}
+.pop-share-list li {display: inline-block;text-align: center;margin: 0 10px;}
+.pop-share-list li::before{display: block;width: 40px;height: 36px;line-height: 36px;background-color: #2f3535;border: 1px solid #fff;border-radius: 5px;margin: 0 auto 5px;}
+.pop-share-list li:nth-child(1)::before{content: '\e601';font-size: 32px;}
+.pop-share-list li:nth-child(2)::before{content: '\e600';font-size: 24px;}
+.pop-share-arrow::before {content: '\e602';font-size: 24px;position: fixed;right: 16px;top: 0;z-index: 9999;}
+.pop-share-em {color: #f00;font-weight: bold;}
+</style>
+</head>
+<body>
+<a href="javascript:pop('.pop-share')">点击分享</a>
+
+<div class="pop-share">
+	<p class="pop-share-txt">点击<em class="pop-share-em">右上角箭头</em>所指位置的按钮<br>选择"发送给朋友"或<br />"分享到朋友圈"进行分享。</p>
+	<ul class="pop-share-list">
+		<li>发送给朋友</li>
+		<li>分享到朋友圈</li>
+	</ul>
+	<span class="pop-share-arrow sp"></span>
+</div>
+
+<script>
+//弹窗
+function gE(e) {
+	return document.querySelector(e)
+}
+
+function pop(e) {
+	if (!gE('#pop-mask')) {
+		gE(e).style.display = "block";
+		var popH = gE(e).offsetHeight,
+			popW = gE(e).offsetWidth;
+		gE(e).style.cssText = "position:fixed;left:50%;display:block;top:50%;z-index:999;"+"margin-left:-"+popW/2+"px;"+"margin-top:-"+popH/2+"px;"
+		var bgObj = document.createElement("div");
+		bgObj.setAttribute('id', 'pop-mask');
+		document.body.appendChild(bgObj);
+		var conH = document.body.scrollHeight,
+			viewH = document.documentElement.clientHeight;
+		if (conH > viewH) {
+			gE('#pop-mask').style.height = conH + "px";
+		} else {
+			gE('#pop-mask').style.height = viewH + "px";
+		}
+		hidePop(e);
+	}
+}
+
+function hidePop(e) {
+	gE('#pop-mask').addEventListener('click', function() {
+		gE(e).style.display = "none";
+		var bgObj = gE("#pop-mask");
+		document.body.removeChild(bgObj);
+	});
+}
+
+//微信
+function onBridgeReady() {
+	var mainTitle = "UP2014腾讯互动娱乐年度发布会邀请函",
+		mainDesc = "4月16日，UP2014腾讯互动娱乐年度发布会将于北京国家会议中心正式开启",
+		mainURL = "http://up.qq.com/2014/invitation/",
+		mainImgUrl = "http://ossweb-img.qq.com/images/invatation/up.jpg";
+	//转发朋友圈【朋友圈分享显示的内容是title】
+	WeixinJSBridge.on("menu:share:timeline", function(e) {
+		var data = {
+			img_url: mainImgUrl,
+			img_width: "120",
+			img_height: "120",
+			link: mainURL,
+			//desc这个属性要加上，虽然不会显示，但是不加暂时会导致无法转发至朋友圈，
+			desc: mainDesc,
+			title: mainTitle
+		};
+		WeixinJSBridge.invoke("shareTimeline", data, function(res) {
+			WeixinJSBridge.log(res.err_msg)
+		});
+	});
+	//同步到微博
+	WeixinJSBridge.on("menu:share:weibo", function() {
+		WeixinJSBridge.invoke("shareWeibo", {
+			"content": mainDesc,
+			"url": mainURL
+		}, function(res) {
+			WeixinJSBridge.log(res.err_msg);
+		});
+	});
+	//分享给朋友
+	WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+		WeixinJSBridge.invoke("sendAppMessage", {
+			img_url: mainImgUrl,
+			img_width: "120",
+			img_height: "120",
+			link: mainURL,
+			desc: mainDesc,
+			title: mainTitle
+		}, function(res) {
+			WeixinJSBridge.log(res.err_msg)
+		});
+	});
+};
+//执行
+try {
+	document.addEventListener('WeixinJSBridgeReady', function() {
+		onBridgeReady();
+	});
+} catch (e) {};
+</script>
+</body>
+</html>

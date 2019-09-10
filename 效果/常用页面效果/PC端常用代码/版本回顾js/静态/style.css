@@ -1,0 +1,104 @@
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+q:before,q:after{content:''}
+fieldset,img,abbr,acronym{border:0}
+
+/* footer */
+#footer_ied {text-align:center;font-size:12px;line-height:19px;min-width:1000px;}
+.wrap_ied {margin:0 auto;padding:30px;width:940px}
+#footer_ied .e {font-size:10px;-webkit-text-size-adjust:none;}
+
+/* basic */
+.c:before,.c:after {content:"";display:table}
+.c:after {clear:both}
+.c {zoom:1}
+body {font:12px/1.5 tahoma,\5b8b\4f53,sans-serif;padding-top:42px;}
+a {text-decoration:none;overflow:hidden;}
+a:hover {text-decoration:underline}
+.i-wrap,.wrap-nav,.wrap,#footer_ied,.wrap-top-link {min-width:1000px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1002?'1000px':'');width: 100%;}
+.container,.i-container,.center,.head,.content {width:1000px;margin:0 auto}
+.hide {display:block;width:0;height:0;overflow:hidden;}
+.pr {position:relative;}
+.pa {position:absolute;}
+.db {display: block;text-indent: -999em;}
+.nav a,.content,.top-link {font-family: \5FAE\8F6F\96C5\9ED1;}
+.sp,.tit1,.list1 li,.list2 li,.tab a,.list3 li {background-image: url(images/sp.png);background-repeat: no-repeat;}
+
+.logo1 {width: 208px;height: 69px;left: 7px;top: 54px;}
+.mt1 {margin-top: 10px;}
+.mt2 {margin-top: 20px;}
+.mt3 {margin-top: 30px;}
+
+/*µ¼º½*/
+.wrap-nav {position: relative;margin-top: -43px;}
+.wrap-nav-i {filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#E5220F33', endColorstr='#E5220F33');background:rgba(34,15,51,0.9);height: 43px;border-bottom: 1px solid #fff;}
+:root .wrap-nav-i{filter:none;}
+.nav {margin-right: -65px;}
+	.nav li {float: left;width: 199px;height: 43px;border-right: 1px solid #e6e6e6;position: relative;}
+	.nav-i5 {border-right: 0 !important;}
+		.nav a {display: block;width: 100%;height: 43px;line-height: 43px;text-align: center;color: #fed997;font-size: 26px;}
+		.nav a:hover {color: #fff;text-decoration: none;}
+		.index .nav a:hover,.nav .on {background-image: url(images/nav.png);background-repeat: no-repeat;width: 213px;height: 68px;text-indent: -999em;position: absolute;left: -5px;top: -25px;}
+		.nav-i2 a:hover,.nav-i2 .on {background-position: 0 -69px;}
+		.nav-i3 a:hover,.nav-i3 .on {background-position: 0 -138px;}
+		.nav-i4 a:hover,.nav-i4 .on {background-position: 0 -207px;}
+		.nav-i5 a:hover,.nav-i5 .on {background-position: 0 -276px;}
+
+/*Ê×Ò³*/
+.index {background-color: #191919;}
+.index .wrap_ied a,.index #footer_ied {color:#b0b0b0}
+.i-wrap {background:url(images/i-rp.jpg) no-repeat 50% 0;}
+	.i-container {background:url(images/i-bg1.jpg) no-repeat;}
+		.i-main {background:url(images/i-bg2.jpg) no-repeat 50% 386px;height: 825px;}
+			.btn-khhd {width: 416px;height: 118px;left: 530px;top: 558px;}
+
+/* ÄÚÒ³ */
+.sub #footer_ied,.sub .wrap_ied a {color:#9c9b9b}
+.sub {background: url(images/rp2.jpg) no-repeat 50% 536px #f0f0f0;}
+.wrap {background: url(images/rp1.jpg) no-repeat 50% 0;}
+.head {background: url(images/hd.jpg) no-repeat;height: 494px;}
+.content {background-color: #fff;padding: 25px 50px 50px;color: #5c5c5c;font-size: 16px;line-height: 26px;width: 900px;}
+.tit-tts,.tit-xyh,.tit-xdt {height: 53px;margin-left: -55px;position: relative;}
+.tit-tts {width: 324px;}
+.tit-xyh {width: 409px;background-position: 0 -108px;}
+.tit-xdt {width: 324px;background-position: 0 -54px;}
+.hd1 {border-bottom: 1px dashed #dadada;height: 39px;}
+.tit1 {width: 204px;height: 40px;line-height: 40px;font-size: 24px;background-position: 0 -162px;margin-bottom: -1px;position: relative;}
+.tit1 span {color: #fff;font-weight: bold;font-size: 26px;margin-right: 5px;}
+.pic1 {display: block;border: 1px solid #5c5c5c;}
+.list1 li {background-position: -396px -309px;padding-left: 20px;font-size: 14px;}
+.tb1 {width: 100%;}
+.tb1 th,.tb1 td {text-align: center;height: 46px;}
+.tb1 th {background-color: #c0c0c0;}
+.tb1 td {background-color: #f0f0f0;}
+.tb1 .even td {background-color: #e4e4e4;}
+.num1 {font-size: 28px;color: #4e426a;font-weight: bold;margin-right: 5px;}
+.video {width: 650px;height: 410px;}
+.pic2 {display: block;float: left;margin-right: 20px;}
+.box1 {float: left;width: 655px;}
+.list2 li,.list3 li {float: left;width: 100%;line-height: 22px;font-size: 16px;margin-top: 5px;}
+	.list2 strong,.list3 strong {color: #bc9d78;display: block;padding-left: 40px;width: 107px;float: left;}
+	.lsit2 span,.list3 span {display: block;float: left;}
+.list2 li {background-position: 0 -203px;}
+.list3 li {background-position: 0 -331px;}
+.btn-xnsd {width: 104px;height: 104px;background-position: 0 -226px;position: absolute;left: 50%;margin-left: 448px;top: 551px;}
+.wrap-top-link{position: absolute;left: 0;top: 0}
+.wrap-top-link-i,.t-l-i ul {filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#33000000', endColorstr='#33000000');background:rgba(0,0,0,0.2);background-image: url(about:blank);}
+.wrap-top-link-i {height: 30px;}
+:root .wrap-top-link-i,:root .t-l-i ul {filter:none;}
+.top-link {float: right;}
+	.t-l-i {float: left;padding: 8px 0;display: inline;width: 74px;}
+		.t-l-a {color: #11001f;font-size: 14px;border-left: 4px solid #11001f;padding-left: 4px;height: 14px;line-height: 14px;display: block;font-weight: bold;}
+		.t-l-a:hover,.t-l-i ul li a:hover {color: #fff;border-color: #fff;text-decoration: none;}
+		.t-l-i ul {position: absolute;top: 30px;padding: 0 10px 10px;display: none;}
+		.t-l-i ul li a {color: #11001f;line-height: 20px;}
+.tab li {float: left;margin-left: -9px;}
+	.tab a {display: block;width: 140px;height: 36px;line-height: 36px;text-align: center;background-position: -114px -263px;color: #bfa37b;}
+	.tab a:hover {text-decoration: none;color: #fff;}
+	.tab .on {background-position: -114px -226px;color: #5d5c5c;cursor: default;}
+	.tab .on:hover {color: #5d5c5c;}

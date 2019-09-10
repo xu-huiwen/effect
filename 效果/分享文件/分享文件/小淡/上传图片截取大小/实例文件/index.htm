@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="author" content="Tencent-CP" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!-- 设计：cp  | 重构：cp | 创建：2017/10/10 | 更新：| 团队博客：http://tgideas.qq.com/ -->
+<title>上传照片看看你与哪位球星属性类似</title>
+<style>
+/* reset */
+body,div,p,ul,li,table,tbody,tr,td,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,iframe,header,nav,section,article,footer,figure,figcaption,menu{margin:0;padding:0;list-style:none;}
+body{font-family:"\5FAE\8F6F\96C5\9ED1",Helvetica;-webkit-text-size-adjust:none;font-size:0.24rem;background:#0e1c2d;}
+header,nav,section,article,footer,figure,figcaption{display:block;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+ol,ul{margin:0;padding:0;}
+fieldset{border:none;margin:0;padding:0;}
+a,li,ul,[onclick]{-webkit-tap-highlight-color:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+table{border-collapse:collapse;border-spacing:0;}
+em,strong{font-weight:normal;font-style:normal;}
+a{text-decoration:none;}
+.hide{display:none;}
+.c:before,.c:after{content:"";display:table;}
+.c:after{clear:both;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.db{display:block;text-indent:-999em;}
+footer{color:#566c8a;background-color:#0e1c2d;padding:0.2rem 0;font-size:0.22rem;text-align:center;}
+
+body{overflow-x:hidden;}
+.wrap{text-align:center;background:url(ossweb-img/bg.jpg) no-repeat #0e1c2d;background-size:6.4rem auto;}
+.wrap2{text-align:center;background:url(ossweb-img/bg2.jpg) no-repeat;background-size:6.4rem 9.3rem;height:9.3rem;}
+.wrap a:hover{text-decoration:none;}
+.wrap img{display:block;}
+.fl{float:left;}
+.fr{float:right;}
+.sp{background:url(ossweb-img/sp.png) no-repeat;background-size:5.61rem 4.24rem;}
+
+/* head */
+header{height:11.53rem;}
+	.tips{width:4.09rem;height:0.94rem;background:url(ossweb-img/tips.png) no-repeat;background-size:4.31rem 0.96rem;font-size:0.18rem;color:#d8e4f7;text-align:left;padding-left:0.22rem;padding-top:0.02rem;line-height:0.32rem;left:1.74rem;top:9.31rem;}
+	.btn_order{width:2.48rem;height:0.66rem;background-position:0 -0.88rem;font-size:0.28rem;color:#fff;line-height:0.66rem;font-weight:bold;}
+	.btn_kq{left:2.58rem;top:10.6rem;background-position:0 -0.14rem;width:2.3rem;height:0.56rem;font-size:0.24rem;color:#4d1b00;font-weight:bold;line-height:0.56rem;}
+	.btn_kq{-webkit-animation:pulse 1.1s .1s ease-in-out both infinite;}
+	@-webkit-keyframes pulse{
+	0%{-webkit-transform:scale(1.1)}
+	50%{-webkit-transform:scale(1)}
+	100%{-webkit-transform:scale(1.1)}
+	}
+	.tips{-webkit-animation:bounceIn .7s .2s ease both;-webkit-transform-origin:left 60%;}
+	@-webkit-keyframes bounceIn{0%{opacity:0;-webkit-transform:scale(.3)}100%{-webkit-transform:scale(1)}}
+	
+/* main */
+.con{padding-bottom:0.2rem;}
+	.tit1,.tit2,.tit3,.tit4{margin:0 auto 0.2rem;width:5.61rem;height:0.49rem;}
+	.tit1{background-position:0 -3.79rem;}
+	.tit2{background-position:0 -3.23rem;}
+	.tit3{background-position:0 -2.21rem;}
+	.tit4{background-position:0 -2.72rem;}
+	.txt{font-size:0.2rem;color:#d8e4f7;line-height:0.24rem;height:0.24rem;}
+	.lb_box{background:url(ossweb-img/lb_bg.png) no-repeat;width:2.77rem;height:1.21rem;background-size:4.67rem 1.91rem;margin:0 auto 0.1rem;text-align:center;font-size:0.24rem;color:#cba861;font-weight:bold;padding-top:0.7rem;padding-right:1.9rem;line-height:0.34rem;}
+	.qx_box{background:url(ossweb-img/pic_qx.png) no-repeat;width:5.95rem;height:2.59rem;background-size:5.95rem 2.59rem;margin:0 auto 0.2rem;}
+	.dj_list{width:6.04rem;margin:0 auto 0.3rem;height:1.9rem;}
+		.dj_list li{float:left;width:1.91rem;height:1.9rem;display:inline;margin:0 0.05rem;position:relative;}
+			.dj_list img{display:block;width:1.91rem;height:1.9rem;}
+			.dj_list span{position:absolute;color:#232323;font-size:0.22rem;font-weight:bold;line-height:0.44rem;height:0.44rem;left:0;bottom:0.45rem;text-align:center;width:100%;}
+	.btn_order{display:block;margin:0 auto 0.4rem;}
+	.txt1{margin-bottom:1.22rem;}
+	.btn_yq{display:block;margin:0 auto 0.28rem;width:2.09rem;height:0.56rem;background-position:0 -1.6rem;font-size:0.24rem;color:#fff;line-height:0.56rem;font-weight:bold;}
+	.btn_change{display:inline-block;color:#fff;text-decoration:underline;margin:0 0 0.3rem 4.1rem;}
+		.icon{width:0.18rem;height:0.16rem;background-position:-3.82rem -1.36rem;left:-0.23rem;top:0.07rem;}
+	.f_list{width:5.8rem;margin:0 auto;height:2.05rem;}
+		.f_list li{float:left;width:0.96rem;margin:0 0.1rem;display:inline;}
+			.f_list img{display:block;width:0.9rem;height:0.9rem;overflow:hidden;border:0.03rem solid #1b284e;border-radius:100%;margin-bottom:0.17rem;}
+			.select_icon{display:block;margin:0 auto;width:0.18rem;height:0.18rem;background-position:-2.21rem -1.92rem;}
+			.select_icon.cur{background-position:-2.21rem -1.62rem;}
+	.yq_list{width:5.52rem;margin:0 auto;height:5.28rem;}
+		.yq_list li{float:left;width:1.84rem;}
+			.yq_txt{font-size:0.2rem;color:#fff;line-height:0.24;height:0.24rem;margin-bottom:0.28rem;}
+			.dj_box{width:1.48rem;height:1.08rem;margin:0 auto 0.18rem;}
+				.dj_box img{width:1.48rem;height:1.08rem;display:block;}
+				.dj_box span{position:absolute;width:100%;left:0;bottom:0.08rem;font-size:0.2rem;color:#dadfed;line-height:0.24rem;}
+			.btn_lq{font-size:0.22rem;color:#fff;font-weight:bold;display:block;margin:0 auto;width:1.57rem;height:0.41rem;background-position:-2.52rem -1.6rem;line-height:0.42rem;}
+	.gif_list{width:5.78rem;margin:0 auto;height:3.8rem;overflow:hidden;}
+		.gif_list li{float:left;width:2.59rem;height:1.58rem;margin:0 0.13rem 0.3rem;border:0.01rem solid #3a557f;border-radius:0.05rem;}
+			.gif_list img{display:block;width:2.59rem;height:1.58rem;}
+	.btn_order1{margin-bottom:0.6rem;}
+	.btn_vid{background:url(ossweb-img/vid.jpg) no-repeat;background-size:5.8rem 3.2rem;width:5.8rem;height:3.2rem;margin:0 auto 0.4rem;}
+	.gz_box{width:4rem;margin:0 auto;height:2.35rem;}
+		.gz_box li{width:1.5rem;position:relative;}
+			.gz_box img{width:1.4rem;height:1.4rem;display:block;margin:0 auto 0.25rem;}
+			.gz_txt{width:100%;left:0;color:#d0def3;font-size:0.22rem;line-height:0.24rem;top:0.98rem;}
+			.btn_gz{width:1.5rem;height:0.4rem;background-position:-2.6rem -0.89rem;line-height:0.4rem;color:#fff;font-weight:bold;font-weight:bold;display:block;}
+	.rule_list{width:5.8rem;margin:0 auto;text-align:left;color:#8b96a3;}
+		.rule_list dt{font-size:0.24rem;font-weight:bold;height:0.44rem;line-height:0.44rem;}
+		.rule_list dd{font-size:0.2rem;line-height:0.32rem;}
+			.rule_list dd em{color:#e68700;}
+/* 弹窗 */		
+.b_bg{width:100%;height:100%;position:fixed;left: 0;top: 0;background-color: rgba(0,0,0,0.9);z-index:9;}			
+.pop_vid{position:fixed;width:5.75rem;height:4rem;left:50%;margin-left:-2.88rem;top:50%;margin-top:-2rem;z-index:10;}
+.close{width:0.15rem;height:0.6rem;color:#fff;font-size:0.5rem;font-weight:bold;position:absolute;right:0.15rem;top:-0.7rem;}
+#video{width:5.75rem;height:4rem;}
+
+/* 结果页 */
+.half {width: 2.47rem;height: 3.55rem;padding:0.02rem;background:url(ossweb-img/tx_bg.png) no-repeat;background-size:2.51rem 3.59rem;position:relative;}
+.half img { width: 2.46rem;height: 3.55rem;}
+/*图片裁剪-触屏设备*/
+.htmleaf-container{margin: 0 auto; text-align: center;overflow: hidden;width: 100%;height: 100%;position: fixed; top: 0;background: #000;  display: none; z-index: 9999999;}
+#clipArea {height: 90%;}
+/*上传图标*/
+#file{ float: left;height: 100%;}
+#clipBtn{ float: right;height: 100%;width: 25%;border: 0;outline: none; color: #4d1b00; background: #ffa528; font-size: 0.28rem;z-index: 999;}
+.foot-use{background: #fff; height: 10%;width: 100%;position: relative;}
+.button { float: left; height: 100%;display: inline-block; outline: 0 none; margin: 0; cursor: pointer;border: 0;width: 50%; font-size: 0.28rem;}
+.uploader { position: absolute;width: 54%;height: 0.8rem; left: 23%;cursor: default;height: 100%;float: left;}
+.uploader1 { position: absolute;width: 50%;height: 0.8rem; cursor: default;height: 100%;float: left;}
+.filename { position: absolute; outline: 0 none;line-height: 0.15rem;font-size: 0.15rem;color: #999; width: 100%;margin: 0; overflow: hidden; cursor: default;text-overflow: ellipsis; white-space: nowrap;border: 0;top: 0.92rem;text-align: center;}
+.uploader input[type=file] {position: absolute;top: 0;right: 0;bottom: 0;border: 0;padding: 0;margin: 0;height:0.8rem;width: 100%; cursor: pointer;border: solid 0.01rem #ddd;opacity: 0;}
+.uploader1 input[type=file] {position: absolute;top: 0;left: 0;bottom: 0;padding: 0;margin: 0; height:0.8rem;width: 50%;cursor: pointer;opacity: 0;}
+input[type=button]::-moz-focus-inner {padding: 0; border: 0 none;-moz-box-sizing: content-box;}
+input[type=button]::-webkit-focus-inner { padding: 0;border: 0 none;-webkit-box-sizing: content-box;}
+input[type=text]::-moz-focus-inner { padding: 0;border: 0 none;-moz-box-sizing: content-box;}
+input[type=text]::-webkit-focus-inner {padding: 0;border: 0 none;-webkit-box-sizing: content-box;}
+.blue .button {color: #4d1b00;background: #ffa528;height: 100%;}
+
+.wrap2{display:none;}
+.jg_tit{font-size:0.36rem;color:#ffda59;font-weight:bold;line-height:0.54rem;padding:0.46rem 0 0.26rem 0;}
+	.jg_tit span{display:block;background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(255,253,247,1)), to(rgba(255,208,45,1)));-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
+	.jg_tit .span{font-size:0.29rem;}
+.tx_box{width:5.6rem;margin:0 auto 0.5rem;}
+.qx_tx{position:relative;width: 2.47rem;height: 3.55rem;padding:0.02rem;background:url(ossweb-img/tx_bg.png) no-repeat;background-size:2.51rem 3.59rem;}
+	.qx_tx img{width: 2.46rem;height: 3.55rem;}
+	.tx_name{background:url(ossweb-img/name_bg1.png) repeat-x;height:0.42rem;background-size:0.03rem 0.42rem;padding:0 0.2rem;font-size:0.22rem;color:#b78900;font-weight:bold;left:0.01rem;top:0.11rem;line-height:0.46rem;}
+		.name_bg{background:url(ossweb-img/name_bg2.png) no-repeat;width:0.21rem;height:0.42rem;background-size:0.21rem 0.42rem;right:-0.21rem;top:0;}
+.jg_txt{font-size:0.2rem;color:#fff;line-height:0.28rem;width:5.5rem;margin:0 auto;text-align:left;height:1.1rem;}
+.bc_box{width:5.25rem;margin:0 auto;}
+	.bc_tit{background:url(ossweb-img/bc_bg.png) no-repeat;width:3.65rem;height:0.75rem;line-height:0.82rem;background-size:3.65rem 0.75rem;margin-top:0.13rem;font-size:0.22rem;color:#ec2e2e;font-weight:bold;}
+	.code{background:url(ossweb-img/code.png) no-repeat;width:1.04rem;height:1.04rem;background-size:1.04rem;}
+	
+/* 进度条 */	
+.jd_bar{background:url(ossweb-img/jd_bar.png) no-repeat;width:4.57rem;height:0.63rem;left:50%;top:50%;margin-left:-2.28rem;background-size:4.57rem 0.63rem;}
+	.num{font-size:0.16rem;color:#eab138;font-weight:bold;text-align:center;line-height:0.63rem;width:0.72rem;height:0.63rem;left:0;top:0;}
+	.jd_bg{width:3.1rem;height:0.09rem;left:0.72rem;top:0.27rem;}
+		.jd_bg em{display:block;height:0.09rem;background:url(ossweb-img/jd_bg.png) no-repeat;background-size:3.1rem 0.09rem;}
+	.jd_txt{font-size:0.18rem;color:#f8ca44;width:100%;text-align:center;left:0;top:110%;}
+	.jd_txt{-webkit-animation:flash 2s ease-in-out both infinite;}
+	@-webkit-keyframes flash{0%,50%,100%{opacity: 1;}25%,75%{opacity: 0.1;}}
+</style>
+<script type="text/javascript">
+//自适应
+AutoPage();
+var  timer=setInterval(AutoPage,30);
+function AutoPage(){ 
+	document.documentElement.style.fontSize = document.documentElement.clientWidth * 100 /640 + 'px';
+ } ;
+window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize" , AutoPage, false);  
+</script>
+</head>
+<body>
+<div class="wrap">
+	<header>
+		<h1 class="hide">上传照片看看你与哪位球星属性类似</h1>
+		<p class="tips pa">上传你的照片，看看你与NBA球星有<br />多少的相似DNA。<br />你是否也有成为黑曼巴的潜力！</p>
+		<a href="javascript:;" class="btn_kq sp pa" id="logox" ontouchend="PTTSendClick('btn','kq','测试并预约');">测试并预约</a>
+	</header>
+	<div class="con">
+		<h2 class="tit1 sp db">《最强NBA》首款NBA正版真实竞技手游</h2>
+		<p class="txt">预约成功后，礼包将自动发放到你的卡包</p>
+		<div class="lb_box">可获得SS全明星级别<br />球星体验卡</div>
+		<div class="qx_box"></div>
+		<ul class="dj_list c">
+			<li><img src="ossweb-img/pic_dj1.png" alt="" /><span>钻石×36</span></li>
+			<li><img src="ossweb-img/pic_dj2.png" alt="" /><span>金币×660</span></li>
+			<li><img src="ossweb-img/pic_dj3.png" alt="" /><span>球星升级卡×10</span></li>
+		</ul>
+		<a href="javascript:;" class="btn_order sp" ontouchend="PTTSendClick('btn','order1','立即预约1');">立即预约</a>
+		<h2 class="tit2 sp db">召集兄弟组建NBA梦之队</h2>
+		<p class="txt txt1">成功邀请好友可领取对应奖励</p>
+		<a href="javascript:;" class="btn_yq sp" ontouchend="PTTSendClick('btn','yq','一键邀请好友');">一键邀请好友</a>
+		<a href="javascript:;" class="btn_change pr" ontouchend="PTTSendClick('btn','change','换一批好友');"><em class="icon pa sp"></em>换一批好友</a>
+		<ul class="f_list c">
+			<li><img src="ossweb-img/pic_tx.jpg" alt="" /><em class="select_icon sp"></em></li>
+			<li><img src="ossweb-img/pic_tx.jpg" alt="" /><em class="select_icon sp"></em></li>
+			<li><img src="ossweb-img/pic_tx.jpg" alt="" /><em class="select_icon sp"></em></li>
+			<li><img src="ossweb-img/pic_tx.jpg" alt="" /><em class="select_icon sp"></em></li>
+			<li><img src="ossweb-img/pic_tx.jpg" alt="" /><em class="select_icon sp"></em></li>
+		</ul>
+		<ul class="yq_list c">
+			<li>
+				<p class="yq_txt">成功邀请1名好友</p>
+				<div class="dj_box pr"><img src="ossweb-img/pic_hy1.jpg" alt="" /><span>球星升级卡×5</span></div>
+				<div class="dj_box pr"><img src="ossweb-img/pic_hy2.jpg" alt="" /><span>金币×280</span></div>
+				<a href="javascript:;" class="btn_lq sp" ontouchend="PTTSendClick('btn','lq1','立即领取1');">立即领取</a>
+			</li>
+			<li>
+				<p class="yq_txt">成功邀请3名好友</p>
+				<div class="dj_box pr"><img src="ossweb-img/pic_hy3.jpg" alt="" /><span>球星升级卡×10</span></div>
+				<div class="dj_box pr"><img src="ossweb-img/pic_hy4.jpg" alt="" /><span>金币×380</span></div>
+				<a href="javascript:;" class="btn_lq sp" ontouchend="PTTSendClick('btn','lq2','立即领取2');">立即领取</a>
+			</li>
+			<li>
+				<p class="yq_txt">成功邀请5名好友</p>
+				<div class="dj_box pr"><img src="ossweb-img/pic_hy5.jpg" alt="" /><span>球星兑换卡×2</span></div>
+				<div class="dj_box pr"><img src="ossweb-img/pic_hy6.jpg" alt="" /><span>钻石×48</span></div>
+				<a href="javascript:;" class="btn_lq sp" ontouchend="PTTSendClick('btn','lq3','立即领取3');">立即领取</a>
+			</li>
+		</ul>
+		<h2 class="tit3 sp db">教练我想打球</h2>
+		<ul class="gif_list c">
+			<li><img src="ossweb-img/pic_lq1.jpg" alt=""/></li>
+			<li><img src="ossweb-img/pic_lq2.jpg" alt=""/></li>
+			<li><img src="ossweb-img/pic_lq3.jpg" alt=""/></li>
+			<li><img src="ossweb-img/pic_lq4.jpg" alt=""/></li>
+		</ul>
+		<a href="javascript:;" class="btn_order btn_order1 sp" ontouchend="PTTSendClick('btn','order2','立即预约2');">立即预约</a>
+		<h2 class="tit4 sp db">兄弟，我们都在球场等你</h2>
+		<a href="javascript:;" class="btn_vid db" title="播放视频" ontouchend="PTTSendClick('btn','vid','播放视频');"></a>
+		<ul class="gz_box c">
+			<li class="fl"><img src="ossweb-img/pic_gz1.jpg" alt=""/><span class="gz_txt pa">游戏号</span><a href="javascript:;" class="btn_gz sp" ontouchend="PTTSendClick('btn','gz1','关注游戏号');">关注游戏号</a></li>
+			<li class="fr"><img src="ossweb-img/pic_gz2.jpg" alt=""/><span class="gz_txt pa">游戏部落</span><a href="javascript:;" class="btn_gz sp" ontouchend="PTTSendClick('btn','gz2','前往部落');">前往部落</a></li>
+		</ul>
+		<dl class="rule_list">
+			<dt>活动规则：</dt>
+			<dd>1. 活动时间：即日起至<em>不删档开启</em>。</dd>
+			<dd>2. 活动期间，用户在此页面预约游戏即可<em>获得预约礼包</em>，预约礼包将发放在您的小仓库，待游戏上线后，记得进入小仓库使用哦！</dd>
+			<dd>3. 活动期间，玩家<em>成功邀请好友</em>即可<em>获得对应的礼包</em>，礼包也将发放到您的小仓库，待游戏上线后，进入小仓库使用即可。</dd>
+		</dl>
+	</div>
+</div>
+<div class="wrap2 pr">
+	<div class="jd_bar pa">
+		<em class="num pa"><em>0</em>%</em>
+		<div class="jd_bg pa"><em></em></div>
+		<p class="jd_txt pa">DNA验证中……</p>
+	</div>
+	<div class="jg_con2" style="display:none;">
+		<p class="jg_tit"><span>吃惊 ! ! !</span><span class="span">你与xx球星竟然有xx%的DNA相似 </span></p>
+		<div class="tx_box c">
+			<div class="half fl">
+				<span class="tx_name pa">你的名字<em class="name_bg pa"></em></span>
+				<img id="bgl" src="" alt="" />
+			</div>
+			<div class="qx_tx fr">
+				<span class="tx_name pa">科比<em class="name_bg pa"></em></span>
+				<img src="ossweb-img/qx1.jpg" alt="" />
+			</div>
+		</div>
+		<p class="jg_txt">欢迎加入NBA篮球世界，在这里，你将成为万众瞩目的明日新星！为了这个值得纪念的时刻，小西特别为你准备了各种奖励，快来领取吧！</p>
+		<div class="bc_box c">
+			<p class="bc_tit fl">保存图片，分享到QQ动态</p>
+			<div class="code fr"></div>
+		</div>
+	</div>
+</div>
+<footer>腾讯公司保留在法律规定范围内对上述规则进行解释的权力</footer>
+<!-- 剪裁 -->
+<div class="htmleaf-container">
+	<div id="clipArea"></div>
+	<div class="foot-use">
+		<div class="uploader1 blue">
+			<button class="button">打开</button>
+			<input id="file" type="file" onchange="javascript:setImagePreview();" accept="image/*" multiple  />
+		</div>
+		<button id="clipBtn">截取</button>
+	</div>
+	<div id="view"></div>
+</div>
+<!--视频弹窗-->
+<div class="b_bg" style="display: none;"></div>
+<div class="pop_vid" style="display: none;">
+	<div id="video"></div>
+	<a href="javascript:hidepop('.pop_vid');" class="close">×</a>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/zepto/zepto.modules.min.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script> 
+<script src="http://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2_zepto.js"></script>
+<script src="js/iscroll-zoom.js"></script>
+<script src="js/hammer.js"></script>
+<script src="js/jquery.photoClip.js"></script>
+<script type="text/javascript">
+//选中
+$(".f_list li").click(function(){
+	if($(this).find(".select_icon").hasClass("cur")){
+		$(this).find(".select_icon").removeClass("cur");
+	}else{
+		$(this).find(".select_icon").addClass("cur");
+	}
+})
+//弹窗
+$('.btn_vid').on('click',function(){
+	pop('.pop_vid');
+});
+function pop(e){
+	$(e).show();
+	$(".b_bg").show();
+	playVideo('s05258bi4nj');
+}
+function hidepop(a){
+	$(".video").remove();
+	$(a).hide();
+	$(".b_bg").hide();
+	playVideo('');
+}
+//视频
+function playVideo(vid){
+	var video = new tvp.VideoInfo();
+    video.setVid(vid);
+    var player = new tvp.Player();
+    player.create({
+		video: video,
+		modId: "video",
+		//vodFlashSkin: "http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf", //精简皮肤 
+		autoplay: true //是否自动播放
+	});
+}
+</script>
+<script>
+var obUrl = ''
+$("#clipArea").photoClip({
+	width: 246,
+	height: 355,
+	file: "#file",
+	view: "#view",
+	ok: "#clipBtn",
+	loadStart: function() {
+		console.log("照片读取中");
+	},
+	loadComplete: function() {
+		console.log("照片读取完成");
+	},
+	clipFinish: function(dataURL) {
+		console.log(dataURL);
+	}
+});
+
+$(function(){
+	$("#logox").click(function(){
+		$("#clipArea img").attr("src","");
+		$(".htmleaf-container").show();
+	})
+	$("#clipBtn").click(function(){
+		if($("#clipArea img").length<1){
+			alert("亲，当前没有图片可以裁剪!");
+		}else{
+			
+			setTimeout(function(){
+				$(".jd_bar").hide();
+				$(".jg_con2").fadeIn();
+			},1700)
+			var num=$(".num em").text();
+			var time=setInterval(function (){
+				num++;
+				$(".num em").text(num);
+				if(num==100){
+					clearInterval(time);
+				}
+			},15);
+			var w=0;
+			var tiem2=setInterval(function(){
+				w++;
+				$(".jd_bg em").width(w+"%");
+				if(w==100){
+					clearInterval(tiem2);
+				}
+			},15)
+			
+			$(".wrap").hide();
+			$(".wrap2").show();
+			$('#bgl').attr("src" , imgsource);
+			$(".htmleaf-container").hide();
+		}
+	})
+});
+</script>
+<script src="http://ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script>
+//此段代码不能放到外链JS中，
+var setSite={ //设置网站属性
+ siteType:"a20171010testa", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+ pageType:"index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+ pageName:"首页", //必填项:页面中文名
+ osact:0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+ ingame:0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+ stayTime:0 //选填项:是否需要统计停留时长boolean；默认是0
+}
+if(typeof(pgvMain)=='function')pgvMain();//千万不能忘记！
+</script>
+</body>
+</html>

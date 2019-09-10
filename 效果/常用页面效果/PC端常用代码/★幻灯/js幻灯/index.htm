@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>js幻灯</title>
+<style>
+/* reset */
+*{margin:0;padding:0;border:0;list-style:none;}
+
+.slide {border:3px solid #1f89a3;width:909px;height:245px;overflow:hidden;position:relative;margin:0 auto;}
+	.slide-pic {width:3636px;height:245px;position:absolute;}
+		.slide-pic li {float:left;height:245px;width:909px;}
+			.slide-pic img {display:block;}
+	.slide-num {position:absolute;right:5px;bottom:5px;}
+		.slide-num li {float:left;border:1px solid #183934;background-color:#fff;width:18px;height:8px;overflow:hidden;text-indent:-999em;display:inline;margin-left:5px;}
+		.slide-num .on {background-color:#1c7dcf;}
+</style>
+</head>
+
+<body>
+<div class="slide">
+    <ul class="slide-pic" id="slide-pic" style="left:0;">
+        <li>
+            <a href="###"><img width="909" height="245" src="images/ad1.jpg" alt="" /></a>
+        </li>
+        <li>
+            <a href="###"><img width="909" height="245" src="images/ad2.jpg" alt="" /></a>
+        </li>
+        <li>
+            <a href="###"><img width="909" height="245" src="images/ad3.jpg" alt="" /></a>
+        </li>
+        <li>
+            <a href="###"><img width="909" height="245" src="images/ad4.jpg" alt="" /></a>
+        </li>
+    </ul>
+    <ul class="slide-num" id="slide-num">
+        <li class="on">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+
+<script src="slide.js"></script>
+<script>
+glide.layerGlide(true,'slide-num','slide-pic',909,4,0.1,'left');
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<!--[if lt IE 9]>
+<script src="http://ossweb-img.qq.com/images/js/comm/html5.js"></script>
+<![endif]-->

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+	<title>delayLoad</title>
+	<style>
+*{padding:0;margin:0;}
+img{display:block;}
+.b1{height:119px;}
+.b2{height:144px;}
+.b3{height:137px;}
+.b4{height:137px;}
+.b5{height:253px;}
+.d1{background:url(http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_01.jpg) no-repeat 0 0;}
+.d2{background:url(http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_02.jpg) no-repeat 0 0;}
+.d3{background:url(http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_03.jpg) no-repeat 0 0;}
+.d4{background:url(http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_04.jpg) no-repeat 0 0;}
+.d5{background:url(http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_05.jpg) no-repeat 0 0;}
+</style>
+	<script src="http://ossweb-img.qq.com/images/js/milo/milo.js"></script>
+</head>
+<body>
+<!--the image 图片-->
+<img src="http://ossweb-img.qq.com/images/comm/blank.png" width="1000" height="119" delayLoad="http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_01.jpg" />
+<img src="http://ossweb-img.qq.com/images/comm/blank.png" width="1000" height="144" delayLoad="http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_02.jpg" />
+<img src="http://ossweb-img.qq.com/images/comm/blank.png" width="1000" height="137" delayLoad="http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_03.jpg" />
+<img src="http://ossweb-img.qq.com/images/comm/blank.png" width="1000" height="137" delayLoad="http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_04.jpg" />
+<img src="http://ossweb-img.qq.com/images/comm/blank.png" width="1000" height="253" delayLoad="http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_05.jpg" />
+<img src="http://ossweb-img.qq.com/images/comm/blank.png" width="1000" height="95" delayLoad="http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_06.png" />
+<!--the background-->
+<!-- 背景 -->
+<div class="b1" delayLoad="d1"></div>
+<div class="b2" delayLoad="d2"></div>
+<ul class="b3" delayLoad="d3"></ul>
+<div class="b4" delayLoad="d4"></div>
+<div class="b5" delayLoad="d5"></div>
+<div style="height:119px;" delayLoad="http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_01.jpg"></div>
+<div style="height:144px;" delayLoad="http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_02.jpg"></div>
+<ul style="height:137px;" delayLoad="http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_03.jpg"></ul>
+<div style="height:137px;" delayLoad="http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_04.jpg"></div>
+<div style="height:253px;" delayLoad="http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_05.jpg"></div>
+<div style="height:253px;" delayLoad="test()" id="testIframe"></div>
+<img width="1600" height="92" src="http://ossweb-img.qq.com/images/comm/blank.png"  delayLoad="http://ossweb-img.qq.com/images/cf/act/a2009101national_day/nd_s_top.jpg">
+<img width="1600" height="137" src="http://ossweb-img.qq.com/images/comm/blank.png"  delayLoad="http://ossweb-img.qq.com/images/cf/act/a2009101national_day/nd_s_bg01.jpg">
+<img width="1600" height="115" src="http://ossweb-img.qq.com/images/comm/blank.png"  delayLoad="http://ossweb-img.qq.com/images/cf/act/a2009101national_day/nd_s_bg02.jpg">
+<img width="1600" height="93" src="http://ossweb-img.qq.com/images/comm/blank.png"  delayLoad="http://ossweb-img.qq.com/images/cf/act/a2009101national_day/nd_s_bg03.jpg">
+<img width="1600" height="90" src="http://ossweb-img.qq.com/images/comm/blank.png"  delayLoad="http://ossweb-img.qq.com/images/cf/act/a2009101national_day/nd_s_bg04.jpg">
+<img width="1600" height="118" src="http://ossweb-img.qq.com/images/comm/blank.png"  delayLoad="http://ossweb-img.qq.com/images/cf/act/a2009101national_day/nd_s_bg05.jpg">
+<img width="1600" height="167" src="http://ossweb-img.qq.com/images/comm/blank.png"  delayLoad="http://ossweb-img.qq.com/images/cf/act/a2009101national_day/nd_s_bg06.jpg">
+<img width="1600" height="220" src="http://ossweb-img.qq.com/images/comm/blank.png"  delayLoad="http://ossweb-img.qq.com/images/cf/act/a2009101national_day/nd_s_bg07.jpg">
+<script>
+function test() {
+	var o = document.getElementById('testIframe');
+	o.innerHTML = '<iframe width="202" scrolling="no" height="170" frameborder="0" src="http://cf.qq.com/web200905/inc/ifr_shop_new.htm " allowtransparency="true"></iframe>';
+}
+need(["biz.delayLoad"]);
+</script>
+</body>
+</html>

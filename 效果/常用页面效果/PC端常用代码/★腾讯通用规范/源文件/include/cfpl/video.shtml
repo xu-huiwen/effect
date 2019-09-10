@@ -1,0 +1,1004 @@
+<!doctype html>
+<html>
+<script type="text/javascript">/*tag*/PAGE_SPEED_TIME = [new Date().getTime()];</script>
+<head>
+<meta charset="gb2312" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta name="Copyright" content="Tencent" />
+<meta name="Description" content="腾讯游戏FPS网络游戏 - 穿越火线CrossFire" />
+<meta name="Keywords" content="穿越火线,穿越火线官网,CF官网,穿越火线官方网站,CrossFire,FPS网络游戏,RPK,腾讯游戏" />
+<!-- 设计：zaneye | 重构：nickyxie | 创建： 2012-3-31|  团队博客：http://tgideas.qq.com/ -->
+<title>CFPL总决赛直播-穿越火线官方网站-腾讯游戏</title>
+<link href="http://cf.qq.com/cfpl/common.css" rel="stylesheet" />
+<style>
+#menuListSel03 { background: url(http://ossweb-img.qq.com/images/cf/cfpl/ms/nav_bg.jpg) repeat-x 0px 0px; }
+.content { background-color: #ffffff; padding-top: 20px; line-height: 1.8; width: 1000px; margin: 0px auto; padding-bottom: 20px; }
+.content h3 { border-bottom: 1px solid #008ed8; margin-top: 10px; }
+.content h3 span { color:#464240; font-size: 14px; height: 32px; line-height: 32px; display:inline-block; display:-moz-inline-stack; zoom:1; *display:inline;
+border-bottom: 2px solid #008ed8; font-weight: bold; font-size: 16px; font-family:'Microsoft Yahei' }
+.bd table { width:830px; table-layout:fixed; text-align: left; margin: 20px 0px 0px 20px; }
+caption { font-family:'Microsoft Yahei'; font-weight: bold; font-size: 14px; text-align: left; }
+.bd td { padding: 0px 10px; border: 1px solid #ccc; }
+.col1 { width: 100px; }
+.column { padding:0px 0px 20px 20px }
+.other { width: 1000px; margin: 0px auto; }
+.content .bd { width: 970px; margin: 0px auto; }
+.content h2 { height: 45px; text-indent: -9000em; background: #464240 url(http://ossweb-img.qq.com/images/cf/cfpl/video/video_bg.jpg) no-repeat 50% 50%; }
+.playerwrap { padding:30px 0px 0px 53px; background-color: #e7e7e7; }
+.playbox { width: 685px; height: 416px; background-color: #000; float: left; }
+.playerlist { width: 144px; float: left; padding-left: 33px; }
+.bd .s { width: 685px; float: left; margin-right: 20px; overflow: hidden;}
+.vote { width: 265px; float: left; }
+.playerlist a, .qqvip { display: block; text-indent: -9000em; outline:none; background-image:url(http://ossweb-img.qq.com/images/cf/cfpl/video/playerlist_bg.jpg); background-repeat: no-repeat; width: 144px; height: 90px; }
+.playerlist li { padding-bottom: 19px; }
+.qqvip a { background-position: 0px 0px; }
+.pptvlive a { background-position: -144px 0px; }
+.ppslive a { background-position: -288px 0px; }
+.tgalive a { background-position: -432px 0px; }
+.content .in { border: 1px solid #dcdcdc; background-color: #fefefe; margin-top: 5px; }
+.rule .in { padding:16px 0px 10px 16px; }
+.lottery .in { padding:10px 0px 0px 25px; width: 658px; overflow: hidden; }
+.rule em, .lottery em { color:#bb0000 }
+.rule p { padding-bottom: 20px; }
+.rule img { vertical-align: middle; }
+.lotterybtn { display: block; text-indent: -9000em; outline:none; background: url(http://ossweb-img.qq.com/images/cf/cfpl/video/lotterybtn.jpg) no-repeat 0px 0px; width: 190px; height: 65px; float: left; margin-right: 10px; }
+.lotteryhd .tips { width: 435px; height: 63px; background-color: #ededed; line-height: 63px; text-align: center; float: left; }
+.lotterybd li span { display: block; text-align: center; }
+.lotterybd li { width: 144px; float: left; margin-right: 20px; }
+.lotterybd { padding:10px 0px 20px }
+.giftbagwrap { width: 550px; color:#5d2915; padding:0px 22px; background: #d2c6a4 url(http://ossweb-img.qq.com/images/cf/act/a20110721haier/close.png) no-repeat 100% 0px; position: relative; display: none }
+.giftbagwrap h3 { border-bottom: 1px solid #e6dcbf; }
+.giftbagwrap h3 em { border-bottom: 1px solid #b1a481; display: block; padding:10px 0px; text-align: center; height: 30px; line-height: 30px; font-size: 16px; }
+.giftbagwrap .tips { border-top: 1px solid #b1a481; margin-top: 10px; }
+.giftbagwrap .tips p { border-top: 1px solid #e6dcbf; }
+.gb-list { padding: 10px 20px 0px; }
+.giftbagwrap p { color:#cf4400; padding:10px 0px }
+.giftbagwrap table { width: 100%; table-layout:fixed; }
+.giftbagwrap .close { width: 25px; text-indent:-9000em; outline:none; height: 25px; float: right; cursor:pointer }
+.giftbagwrap th, .giftbagwrap td { border: 1px solid #b89976; text-align: center; padding:5px 0px }
+.giftbagwrap caption { font-weight: bold; font-size: 14px; text-decoration: underline }
+.giftbagwrap td a { color:#000; text-decoration: underline }
+.giftbagwrap .close { position: absolute; right:0px; top:0px; width: 40px; height: 35px }
+#getGiftPageContent a { color:#CF4400 }
+.vote .in { padding:12px 0px 0px 15px; line-height: 1.8; height: 490px; overflow: hidden; }
+.loginbox { padding-bottom: 20px; }
+.loginbtn span { display: block; height: 25px; line-height: 25px; background-color: #008bd6; border: 1px solid #00afe5; text-align: center; font-size: 14px; }
+.loginbtn { display: block; border: 1px solid #0098dc; width: 72px; color:#fff; }
+#logined a { color:#0187ca }
+#spanNotBind a{text-decoration: underline;}
+#unbind span { display: block; width: 95px; border: 1px solid #ae0000; text-align: center; }
+#unbind a { display: block; height: 25px; line-height: 25px; background-color: #ae0000; border: 1px solid #cc0000; color:#fff }
+.votebox { width: 244px; margin: 0px auto; border-top: 1px solid #d8d7d7; }
+.team { width: 122px; text-align: center; }
+.against .l { float: left }
+.against .r { float: right }
+.progressbar { border: 1px solid #f6a915; width: 30px; margin: 0px auto; }
+.filling { border: 1px solid #f8bd20; background-color: #f6a915; }
+.teaminfo span { display: block; padding-bottom: 10px; }
+.schedule { height: 300px; position: relative; }
+.columnwrap { position: absolute; bottom: 10px; width: 122px; ; left:0px }
+.votebtn span { display: block; height: 25px; line-height: 25px; background-color: #008bd6; border: 1px solid #00afe5; text-align: center; font-size: 14px; }
+.votebtn { display: block; border: 1px solid #0098dc; width: 72px; color:#fff; margin: 0px auto; }
+.votes { padding-bottom: 10px; display: block; }
+
+/*relay*/
+.relay-box,.success-box{width: 514px; height: 205px; background: url(http://ossweb-img.qq.com/images/cf/act/common/l_tips_bg.png) no-repeat 0px 0px; text-align: center; color:#3d3232;display: none}
+.relay-box em{color:#843e18;font-weight: normal}
+.relay-txt, .success-box p{height: 92px; padding-top: 40px; }
+.success-box p{line-height: 55px; color:#3D3232}
+.r-btn-box{padding-left: 115px;}
+.r-btn-box a{display: block; width: 112px; height: 36px; float: left; text-indent: -9000em; outline:none}
+.r-btn{margin-right: 40px; background: url(http://ossweb-img.qq.com/images/cf/act/common/l_tips_bg.png) no-repeat  -112px -205px;}
+.r-close, .success-box .close{background: url(http://ossweb-img.qq.com/images/cf/act/common/l_tips_bg.png) no-repeat 0px -205px;}
+#broadcastContent{height:200px; overflow:hidden}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+<!--#include virtual="/cfpl/top.inc"-->
+<div class="content">
+  <div class="bd clearfix">
+    <h2>CFPL总决赛直播</h2>
+    <div class="playerwrap clearfix">
+      <div class="playbox" id="playerBox">
+		<object width="100%" height="416" id="ewaocx" classid="clsid:ef0d1a14-1033-41a2-a589-240c01edc078" CODEBASE="http://dl.pplive.com/PluginSetup.cab">
+			<param name="logourl" value="http://res.pplive.com/ikan/0917/player/ikan_logo.jpg">
+			<param name="dbclicktofullscreen" value="true" />
+			<param name="showcontextmenu" value="true" />
+			<param name="showstateinfo" value="true" />
+			<param name="showchannelname" value="true" />
+			<param name="showplayerbuffer" value="true" />
+			<param name="showdownloadbuffer" value="true" />
+			<param name="showdownloadrate" value="true" />
+			<param name="showplaycontroller" value="true" />
+			<param name="showplayprogress" value="true" />
+			<param name="showloadingad" value="false" />
+			<param name="showadcountdown" value="false" />
+			<param name="adcfgurl" value="true" />
+			<param name="enableupdate" value="true" />
+			<param name="enableupdatetip" value="true" />
+			<param name="updateurl" value="" />
+		</object>
+	  </div>
+      <div class="playerlist">
+        <ul>
+          
+          <li class="pptvlive"><a href="javascript:void(0)" onclick="pptvlive()">CFPL pptv高清直播</a></li>
+          <li class="ppslive"><a href="javascript:void(0)" onclick="ppslive()">CFPL pps高清直播</a></li>
+          <li class="tgalive"><a href="http://tga.qq.com/" target="_blank">CFPL TGA高清直播</a></li>
+		  <li class="qqvip"> <a href="http://pay.qq.com/qqvip/index.shtml?cm=qdqb&pvsrc=0&aid=vip.youxi.act.cfpl" title="QQ会员" onclick='pgvSendClick({hottag:"act.cfpl.qqvip"});' target="_blank">QQ会员</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="s">
+      <div class="rule">
+        <h3><span>活动规则</span></h3>
+        <div class="in">
+          <p>打气、领取礼包：2012年4月7日-4月8日（14：00-17:00）</p>
+          <ul>
+            <li>1、玩家到活动页面登录并绑定大区，绑定后不可更改。</li>
+            <li>2、玩家为页面上两只队伍的其中一只队伍进行打气，每场比赛仅能打气一次。<span style="color:red">(打气结果获取慢，但不影响打气后抽奖)</span></li>
+            <li>3、为战队打气后立刻可参与抽奖，百分之百中奖，每场比赛可多次抽奖，抽奖时间间隔为30分钟(抽奖次数不能累加)。</li>
+            <li>4、请于当日赛事直播时间段进行抽奖，赛事直播结束后无法再抽奖，逾期不予处理。</li>
+            <li>5、每次抽奖时，<em>QQ会员、CF VIP</em>可获得额外最多一次抽奖机会。 <a href="http://pay.qq.com/qqvip/index.shtml?cm=qdqb&pvsrc=0&aid=vip.youxi.act.cfpl" title="开通会员" onclick='pgvSendClick({hottag:"act.cfpl.qqvip"});' target="_blank"><img src="http://ossweb-img.qq.com/images/cf/cfpl/video/qq_vip.jpg" width="91" height="22" alt="开通会员" /></a> <a href="http://pay.qq.com/cf/index.shtml"  onclick='pgvSendClick({hottag:"act.cfpl.cfvip"});' target="_blank" title="开通CF VIP"><img src="http://ossweb-img.qq.com/images/cf/cfpl/video/cf_vip.jpg" width="122" height="22" alt="开通CF VIP" /></a></li>
+            <li>6、本活动解释权归腾讯公司所有。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="lottery">
+        <h3><span>幸运抽奖</span></h3>
+        <div class="in">
+          <div class="lotteryhd clearfix"> <a href="javascript:OnSubmitLottery();" title="抽奖" class="lotterybtn">抽奖</a>
+            <p class="tips" id="LeftTimeTips">本次抽奖时间还剩：<em id="LeftTime">30:00</em>分钟（直播期间每半小时可抽奖一次）</p>
+          </div>
+          <div class="lotterybd clearfix">
+            <ul>
+              <li><img src="http://ossweb-img.qq.com/images/cf/cfpl/video/item01.jpg" width="144" height="93" alt="黄金沙鹰（7天）" /><span>黄金沙鹰（7天）</span></li>
+              <li><img src="http://ossweb-img.qq.com/images/cf/cfpl/video/item02.jpg" width="144" height="93" alt="黄金M4A1（7天）" /><span>黄金M4A1（7天）</span></li>
+              <li><img src="http://ossweb-img.qq.com/images/cf/cfpl/video/item03.jpg" width="144" height="93" alt="黄金AWM（7天）" /><span>黄金AWM（7天）</span></li>
+              <li><img src="http://ossweb-img.qq.com/images/cf/cfpl/video/item04.jpg" width="144" height="93" alt="加特林机关枪（7天）" /><span>加特林机关枪（7天）</span></li>
+              <li><img src="http://ossweb-img.qq.com/images/cf/cfpl/video/item05.jpg" width="144" height="93" alt="毛瑟手枪（7天）" /><span>毛瑟手枪（7天）</span></li>
+              <li><img src="http://ossweb-img.qq.com/images/cf/cfpl/video/item06.jpg" width="144" height="93" alt="M12S（7天）" /><span>M12S（7天）</span></li>
+              <li><img src="http://ossweb-img.qq.com/images/cf/cfpl/video/item07.jpg" width="144" height="93" alt="M14EBR（7天）" /><span>M14EBR（7天）</span></li>
+              <li><img src="http://ossweb-img.qq.com/images/cf/cfpl/video/item08.jpg" width="144" height="93" alt="求虐喷图(7天)" /><span>求虐喷图(7天)</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="vote">
+      <h3><span>打气助威</span></h3>
+      <div class="in">
+        <div class="loginbox">
+          <div id="unlogin"><a href="javascript:LoginManager.login();" class="loginbtn"><span>登录</span></a></div>
+          <div id="logined" style="display: none">
+            <ul>
+              <li><span id='login_qq_span'></span>，您好！<a href="javascript:LoginManager.logout();">【注销】</a> <a href="javascript:void(0)" onclick="javascript:myGiftList_1010.show();"> 【我的礼包】</a></li>
+            </ul>
+            <div id="spanNotBind"> <a href="javascript:sign_755.bind_area()">绑定大区</a> </div>
+            <div id="spanBind" style="display: none">您已绑定： <span id="area_info"></span></div>
+          </div>
+        </div>
+
+           <form id="vote_form_296">
+        <div id="subject_2961" style="">
+        <input type="hidden" value="296" name="iVoteId" />
+        <div id="question_296_1">
+        <div class="against against01 clearfix" id="FistDayMatch">
+
+    <div class="team l">
+        <div class="schedule">
+            <div class="columnwrap">
+                <span id="result_text_296_1_1" class="votes">0</span>
+                <div class="progressbar">
+                    <div class="filling" id="filling1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="teaminfo">
+            <img src="http://ossweb-img.qq.com/images/cf/cfpl/video/team01.jpg" width="45" height="45"
+                alt="AG迅游.时空战线" />
+            <span>AG迅游.时空战线 </span>
+        </div>
+        <a href="javascript:submitVote(1);" class="votebtn" id="item_296_1_1" name="item_296_1[]" 
+            value="1"><span>我要打气</span></a>
+    </div>
+
+    <div class="team r">
+        <div class="schedule">
+            <div class="columnwrap">
+                <span class="votes" id="result_text_296_1_3">0</span>
+                <div class="progressbar">
+                    <div class="filling" id="filling2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="teaminfo">
+            <img src="http://ossweb-img.qq.com/images/cf/cfpl/video/team03.jpg" width="45" height="45" 
+                alt="汉宫Clan.Zz " />
+            <span>汉宫Clan.Zz </span>
+        </div>
+        <a href="javascript:void(0)" class="votebtn" id="item_296_1_3" name="item_296_1[]"  onclick="submitVote(3);"
+            value="3"><span>我要打气</span></a>
+    </div>
+        </div>
+            <div class="against against02 clearfix"  id="SecondDayMatch" style="display:none">
+              <div class="team l">
+                <div class="schedule">
+                  <div class="columnwrap"><span class="votes" id="result_text_296_1_5">0</span>
+                    <div class="progressbar">
+                      <div class="filling" id="filling3"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="teaminfo"> <img src="http://ossweb-img.qq.com/images/cf/cfpl/video/team04.jpg" width="45" height="45" alt="日照陆虎" /> <span>日照陆虎 </span> </div>
+                <a href="javascript:void(0)" class="votebtn" id="item_296_1_5" name="item_296_1[]" value="5" onclick="submitVote(5);"><span>我要打气</span></a> </div>
+              <div class="team r">
+                <div class="schedule">
+                  <div class="columnwrap"><span class="votes" id="result_text_296_1_7">0</span>
+                    <div class="progressbar">
+                      <div class="filling" id="filling4"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="teaminfo"> <img src="http://ossweb-img.qq.com/images/cf/cfpl/video/team02.jpg" width="45" height="45" alt="QQ会员东珈精鹰" /> <span>QQ会员东珈精鹰 </span> </div>
+                <a href="javascript:void(0)" class="votebtn"  id="item_296_1_7" name="item_296_1[]" value="7"  onclick="submitVote(7);"><span>我要打气</span></a> </div>
+            </div>
+                        </div>           
+                    </div>
+          </form>
+      </div>
+    </div>
+    </div>
+</div>
+<div id='pop1' class="relay-box">
+	<div class="relay-txt" >
+	    <p>恭喜您获得 <em><span id="GiftItem"></span></em> ! 快点去试试新装备吧。</p>
+	    <p>现在转播到微博与好友分享喜悦吧！</p>
+         <input id="weiboContent" type="hidden" value=""/>
+	</div>
+	<div class="r-btn-box">
+		<a id='a_zhuanbo'     href="javascript:SubmitWeibo();" title="立即转播" class="r-btn">立即转播</a>
+		<a href="javascript:closeWeiboDlg();" title="关闭" class="r-close" >关闭</a>
+	</div>
+</div>
+
+<div id='pop2' class="relay-box">
+	<div class="relay-txt" >
+	    <p>谢谢您为<em><span id="TeamName"></span></em>打气！用热情鼓励他们吧！</p>
+	    <p>立刻转播带动朋友们一起为他们加油吧！</p>
+         <input id="Hidden1" type="hidden" value=""/>
+	</div>
+	<div class="r-btn-box">
+		<a id='a1'     href="javascript:SubmitWeibo();" title="立即转播" class="r-btn">立即转播</a>
+		<a href="javascript:closeWeiboDlg();" title="关闭" class="r-close" >关闭</a>
+	</div>
+</div>
+
+<div id="pop2" class="success-box">
+	<p>您已经成功转播！感谢您的参与！</p>
+	<a href="javascript:FloaterManager.close();" title="关闭" class="close" >关闭</a>
+</div>
+
+<!--#include virtual="/cfpl/other.inc"-->
+<div class="giftbagwrap" id="showMyGiftContent"> <a onclick="javascript:FloaterManager.close();" title="关闭" class="close">关闭</a>
+  <h3><em>我的奖品</em></h3>
+  <div class="gb-list">
+    <table cellspacing="0" >
+      <thead>
+        <tr>
+          <th>领取时间</th>
+          <th>领取大区</th>
+          <th>领取礼包</th>
+        </tr>
+      </thead>
+      <tbody id="getGiftContent">
+        <!--tr>
+          <td>2011-4-26</td>
+          <td>广东二区</td>
+          <td>礼包礼包</td>
+        </tr>
+        <tr>
+          <td>2011-4-26</td>
+          <td>广东二区</td>
+          <td>礼包礼包</td>
+        </tr>
+        <tr>
+          <td>2011-4-26</td>
+          <td>广东二区</td>
+          <td>礼包礼包</td>
+        </tr>
+        <tr>
+          <td>2011-4-26</td>
+          <td>广东二区</td>
+          <td>礼包礼包</td>
+        </tr>
+        <tr>
+          <td>2011-4-26</td>
+          <td>广东二区</td>
+          <td>礼包礼包</td>
+        </tr-->
+      </tbody>
+       <tfoot>
+        <tr>
+        <td id="getGiftPageContent" align="right" colspan="3"></td>
+        </tr>
+    </tfoot>
+    </table>
+  </div>
+  <div class="tips">
+    <p>温馨提示：虚拟道具奖品将在24小时内发到您的游戏内仓库，请耐心等候，谢谢您的理解与支持！</p>
+  </div>
+</div>
+</div>
+<script type="text/html" id="getGiftTemplate">
+{if MyGiftListObject.retCode!='0'}
+	<tr>
+		<td colspan="3" align="center">${MyGiftListObject.retInfo}</td>
+	</tr>
+{else}
+	{for giftInfo in MyGiftListObject.myGiftList}
+		<tr>
+			<td>${giftInfo.getTime}</td>
+			<td>${giftInfo.areaName}</td>
+			<td>
+			{if giftInfo.sCdkey}
+				${giftInfo.sCdkey}
+			{else}
+				${giftInfo.packageName}
+			{/if}
+			</td>
+		</tr>
+	{forelse}
+		<tr>
+			<td colspan="3" align="center">您尚未获得任何礼包</td>
+		</tr>
+	{/for}
+{/if}
+</script>
+<!-- //个人获奖列表 -->
+
+<script src="http://ossweb-img.qq.com/images/js/login/loginmanagerv2.js" charset="gb2312"></script>
+<script src="http://ossweb-img.qq.com/images/js/comm/showDialog.min.js"></script>
+<script src="http://ossweb-img.qq.com/images/cf/title/cf.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/foot.js"></script>
+<script src="http://pingjs.qq.com/ping_tcss_ied.js"></script>
+<script src="http://cf.qq.com/cfpl/js/floadjs.js"></script>
+<script>
+
+//高清
+var playLink = 'synacast://scSpmqaWopbP0dfT3tXYpvHKoqKlzKqWpZ2lz6qVnaTQz6ySqKXPnaOYpaHRnafJ0aegzKriltPVzbOYpKiin5zT0d3RprmrwLwkSD1KRiEeDjwaJTCmm6aaoquvr8axIBoetiAiLC0swC+pqqGcm66gs7a8tZbR2ebRo6eVo6OS1eXMraGamqSWnqGmobCdltvbpuvJ4OSmmKWXoqCamqyanqGgl6icqqicmaag5dTc3bCUn6GdoqSWpqeam6ednqedo66VoKCn0erZ4OSmmKWWoqWanayTpqaaoa6fqKCn0erZ4OSmmKWboZ6dnquTqJ6eobCdoKvhzebZqp+bm6ednqadl6yToaWgo66VoKCn3trV5KqbmKeXop6em6qTp6KanaafqKCcmbHa1ODgo6WUoaKhl6qbnqail66cqqicmaY=';
+
+//普清
+var playLink01 = 'synacast://scSpmqaWopbP0dfT3tXYpvHKotLNyqjGpp2hotienaSdnaiSqKOcy6OZ06fOma+X1KDNnqziltPVzbOYpKiioJzT0d3RprmrwLwdUz1KRiEeDjwaJTCmm6aaoquvr8axLEAetiAiLC0swC+pqqGcm66gs7a8tZbR2ebRo6eVo6OS1eXMraGamqSWnqGmobCdltvbpuvJ4OSmmKWWoamamqycnqKdoaScoaqkmaaVq+XQ2eqfn5+em6aToaahl6eZnqKjo66VoKCn0erZ4OSmmKWWoqWanayTpqaaoa6fqKCn0erZ4OSmmKWboZ6dnquTqJ6eobCdoKvhzebZqp+bm6ednqadl6yToaWgo66VoKCn3trV5KqbmKeXop6em6qTp6KanaafqKCcmbHa1ODgo6WUoqCel6eWop6emaSWoKSmoaaVoA==';
+
+
+
+function pptvpqinit(){
+	function checkReady(){
+		try{
+			if(document.getElementById('ewaocx').IsReady){
+				document.getElementById('ewaocx').Url = playLink01;
+				return;
+			}
+		}catch(e){}
+		setTimeout(checkReady, 1000);
+	}
+	checkReady();
+};
+
+
+pptvpqinit();
+
+function pptvinit(){
+	function checkReady(){
+		try{
+			if(document.getElementById('ewaocx').IsReady){
+				document.getElementById('ewaocx').Url = playLink;
+				return;
+			}
+		}catch(e){}
+		setTimeout(checkReady, 1000);
+	}
+	checkReady();
+};
+
+
+
+function pptvlive(){
+	var pptvplayer =  "<object width='100%' height='416' id='ewaocx' classid='clsid:ef0d1a14-1033-41a2-a589-240c01edc078' CODEBASE='http://dl.pplive.com/PluginSetup.cab'><param name='logourl' value='http://res.pplive.com/ikan/0917/player/ikan_logo.jpg'><param name='dbclicktofullscreen' value='true' /><param name='showcontextmenu' value='true' /><param name='showstateinfo' value='true' /><param name='showchannelname' value='true' /><param name='showplayerbuffer' value='true' /><param name='showdownloadbuffer' value='true' /><param name='showdownloadrate' value='true' /><param name='showplaycontroller' value='true' /><param name='showplayprogress' value='true' /><param name='showloadingad' value='false' /><param name='showadcountdown' value='false' /><param name='adcfgurl' value='true' /><param name='enableupdate' value='true' /><param name='enableupdatetip' value='true' /><param name='updateurl' value='' /></object>";
+	document.getElementById('playerBox').innerHTML= pptvplayer;
+	pptvinit();
+}
+function ppslive(){
+	var pptvplayer =  "<object width='100%' height='416' id='ewaocx' classid='clsid:ef0d1a14-1033-41a2-a589-240c01edc078' CODEBASE='http://dl.pplive.com/PluginSetup.cab'><param name='logourl' value='http://res.pplive.com/ikan/0917/player/ikan_logo.jpg'><param name='dbclicktofullscreen' value='true' /><param name='showcontextmenu' value='true' /><param name='showstateinfo' value='true' /><param name='showchannelname' value='true' /><param name='showplayerbuffer' value='true' /><param name='showdownloadbuffer' value='true' /><param name='showdownloadrate' value='true' /><param name='showplaycontroller' value='true' /><param name='showplayprogress' value='true' /><param name='showloadingad' value='false' /><param name='showadcountdown' value='false' /><param name='adcfgurl' value='true' /><param name='enableupdate' value='true' /><param name='enableupdatetip' value='true' /><param name='updateurl' value='' /></object>";
+	document.getElementById('playerBox').innerHTML= pptvplayer;
+	pptvpqinit();
+}
+
+
+
+
+
+    LoginManager.checkLogin(function(){
+        document.getElementById("login_qq_span").innerHTML = LoginManager.getUserUin();
+    });
+ 
+
+if(typeof(pgvMain) == 'function') pgvMain();//统计代码
+
+function postToWb(){
+	var _t = encodeURI("CFPL总决赛将于2月24日-4月8日落地北京，全程电视、网络直播，单赛季总奖金100万人民币！谁将会CFPL的第一届冠军？let's fire！点击进入CFPL2012总决赛专题：http://cf.qq.com/cfpl/");
+	var _url = encodeURIComponent('');
+	var _appkey = encodeURI('appkey');
+	var _pic = encodeURI('http://ossweb-img.qq.com/images/cf/cfpl/wbcfpl.jpg');
+	var _site = 'http://cf.qq.com';
+	var _u = 'http://v.t.qq.com/share/share.php?url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic+'&title='+_t;
+	window.open( _u,'', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
+}
+
+function dropDownMenu(x, y, h, n) {
+    this._x = document.getElementById(x);
+    this._y = document.getElementById(y);
+    this._timer = null;
+    this._n = n;
+    this._t = 15;
+    this._h = h
+};
+dropDownMenu.prototype = {
+    init: function() {
+        this._x.onmouseover = this._y.onmouseover = new Function(this._n + '.st(true)');
+        this._x.onmouseout = this._y.onmouseout= new Function(this._n + '.st()')
+    },
+    st: function(f) {
+        clearInterval(this._timer);
+        var z = this._n;
+        if (f) {
+            this._timer = setInterval(z + '.sl(1)', this._t); this._x.className="active";
+        } else{ this._timer = setInterval(z + '.sl(-1)', this._t);this._x.className="";}
+    },
+    sl: function(f) {
+        var c = this._y;
+        var h = c.offsetHeight,
+        s = 6;
+        if ((h <= 0 && f != 1) || (h >= this._h && f == 1)) {
+            if (f == 1) {
+                c.style.filter = '';
+                c.style.opacity = 1
+            }
+            clearInterval(this._timer);
+            return
+        };
+        var d = (f == 1) ? Math.ceil((this._h - h) / s) : Math.ceil(h / s),
+        o = h / this._h;
+        c.style.opacity = o;
+        c.style.filter = 'alpha(opacity=' + (o * 100) + ')';
+        c.style.height = h + (d * f) + 'px'
+    }
+};
+var subMenuList01 = new dropDownMenu('menuListSel01', 'subMenuList01', '90', 'subMenuList01');
+subMenuList01.init();
+
+var subMenuList03 = new dropDownMenu('menuListSel03', 'subMenuList03', '120', 'subMenuList03');
+subMenuList03.init();
+</script>
+<script src="http://apps.game.qq.com/CommArticle/action/755/system/js/bind_area.js"></script>
+<script>
+
+    //初始化
+    var sign_755 = new AMS.Sign({
+        "can_modify": true,  //是否可以更改报名信息
+        "action_id": 755,   //报名活动编号
+        "service_type": 'cf'
+    });
+
+    //提示文字
+    sign_755.sign_out_msg =
+{
+    "sys_error": '很抱歉,系统繁忙,请稍后再试！',
+    "unbind_succ": '取消大区绑定成功！',
+    "reg_succ": '您已经成功绑定大区！',
+    "modify_succ": '大区信息修改成功！',
+    "can_not_change": '您已绑定大区，无需重复绑定'
+};
+
+    //展示:未绑定的展示修改这里
+    sign_755.show_unbind_info = function () {
+        //显示选择
+        if (document.getElementById("spanNotBind")) {
+            document.getElementById("spanNotBind").style.display = "";
+        }
+        if (document.getElementById("spanBind")) {
+            document.getElementById("spanBind").style.display = "none";
+        }
+        return;
+    }
+
+    //展示:绑定后的展示修改这里
+    sign_755.show_bind_info = function (user_reginfo_obj) {
+        //alert(JsonObject.toJsonString(user_reginfo_obj));
+        if (document.getElementById("spanNotBind") != null) {
+            document.getElementById("spanNotBind").style.display = "none";
+        }
+
+        if (document.getElementById("spanBind") != null) {
+            document.getElementById("spanBind").style.display = "";
+        }
+
+        if (document.getElementById("area_info") != null) {
+            document.getElementById("area_info").innerHTML = user_reginfo_obj.FareaName;
+            areaId = user_reginfo_obj.Farea;
+//            $("#item_296_1_1").removeAttr("style"); 
+//            $("#item_296_1_3").removeAttr("style");
+//            $("#item_296_1_5").removeAttr("style");
+//            $("#item_296_1_7").removeAttr("style");           
+        }
+
+        return;
+    }
+
+    //查询用户信息
+    sign_755.get_sign_info();
+
+
+
+    //提交:提交前的检查及赋值
+    sign_755.prec_heck = function () {
+        //页面合法性检查
+        //@to do check
+
+        //赋值(这里对应表描述中“页面名称”,如果增加输入项，表中没有的话，需要添加)
+        this.set_value(
+		{
+		    "user_area": this.role_object.submitData.areaid,
+		    "user_roleId": this.role_object.submitData.roleid,
+		    "user_roleName": encodeURIComponent(this.role_object.submitData.rolename),
+
+		    "user_areaName": this.role_object.submitData.areaname,
+		    "user_roleLevel": this.role_object.submitData.rolelevel,
+		    "user_checkparam": this.role_object.submitData.checkparam,
+		    "user_md5str": this.role_object.submitData.md5str
+		}
+	);
+
+        return true;
+    }
+
+    function succ() {
+    }
+
+    function fail() {
+    }
+
+    var areaId;
+    //提交：报名成功的回调
+    function post_call_back(obj) {
+        //obj 结构 {ret:0,msg:'',action_id:'755'}
+
+        //这里用于区别处理不同的活动
+        if (obj.action_id == 755) {
+            //sign succ
+            if (obj.ret == 0) {
+                if (sign_755.sign_info.ret == null || sign_755.sign_info.ret != 0) {
+                    //如果未绑定,提示绑定成功
+                    alert(sign_755.sign_out_msg["reg_succ"]);
+                }
+                else {
+                    //如果已绑定,提示修改成功
+                    alert(sign_755.sign_out_msg["modify_succ"]);
+                }
+
+                //刷新报名信息
+                sign_755.get_sign_info();
+                var sUrl = "http://apps.game.qq.com/cf/a20120331cfplutil/updateUserVIPInfo.php?action=updateuserinfo";
+                FloadJS(sUrl, succ, fail);	
+            }
+            else
+                if (obj.ret == "-2") {
+                    LoginManager.login();
+                }
+                else {
+                    alert(obj.msg);
+                }
+
+            //避免刷新再次提交
+            sign_755.clean_post();
+        }
+    }
+</script>
+<script type="text/javascript" src="http://gameact.qq.com/act/lottery_ms/1010/js/lotterymanager.js"></script>
+<script type="text/javascript" src="http://gameact.qq.com/act/lottery_ms/1010/js/lotteryconfig.js"></script>
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.5.min.js"></script>
+<script type="text/javascript">
+
+    var iThisDate = 7;
+    var iThisHour = 14;
+    //获得时间
+    function GetNowTime() {
+        var xmlhttp; //= new ActiveXObject("MSXML2.XMLHTTP.3.0");
+        if (window.XMLHttpRequest) {// all modern browsers
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {// for IE5, IE6
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlhttp.open("GET", "http://cf.qq.com", false);
+        xmlhttp.setRequestHeader("If-Modified-Since", "q");
+        xmlhttp.send();
+        var dateStr = xmlhttp.getResponseHeader("Date");
+        var d = new Date(dateStr);
+        return d;
+    }
+    //判断活动时间区间
+    function CheckActTime() {       
+        var d = GetNowTime();
+
+        var iDate = parseInt(d.getDate());
+        iThisDate = iDate;
+
+        var iMin = d.getMinutes();
+        var iHour = d.getHours();
+         iThisHour = iHour;
+        if (iDate >= 7 && iDate <= 8 && iHour >= 14 && iHour < 17) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    //设置剩余时间
+    function SetLeftTime() {       
+        var d = GetNowTime();
+
+        var iDate = parseInt(d.getDate());
+        iThisDate = iDate;
+
+        var iMin = d.getMinutes();
+        var iHour = d.getHours();
+        if (iDate >= 7 && iDate <= 8 && iHour >= 14 && iHour < 17) {
+            var iLeftMin = 30 - (iMin % 30);
+            document.getElementById("LeftTime").innerHTML = iLeftMin;
+        }
+        else {
+            document.getElementById("LeftTimeTips").innerHTML = "不在比赛期间";
+        }
+
+    }
+
+    function setTimer() {
+        var id = window.setInterval(SetLeftTime, 60000);
+    }
+
+    //隐藏第一天比赛队伍
+    function HideFisrtDayMatch() {
+        if (iThisDate >= 8) {
+            $("#FistDayMatch").attr("style", "display:none");
+            $("#SecondDayMatch").removeAttr("style"); 
+        }
+    }
+    SetLeftTime();
+    setTimer();
+
+    HideFisrtDayMatch();
+
+    //获得时间段
+    function GetTimeSpan() {
+//        var sSpan = '1';
+//        var xmlhttp;//= new ActiveXObject("MSXML2.XMLHTTP.3.0");
+//        if (window.XMLHttpRequest) {// all modern browsers
+//            xmlhttp = new XMLHttpRequest();
+//        }
+//        else if (window.ActiveXObject) {// for IE5, IE6
+//            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+//        }
+
+//        xmlhttp.open("GET", "http://cf.qq.com", false);
+//        xmlhttp.setRequestHeader("If-Modified-Since", "q");
+//        xmlhttp.send();
+//        var dateStr = xmlhttp.getResponseHeader("Date");
+        var d = GetNowTime();// new Date(dateStr);
+       
+        var sDate = d.getDate();
+        if (sDate == '7' || sDate == '8') {
+            var iHour = d.getHours();
+            var iMin = d.getMinutes();
+            if (iHour == 14 && iMin < 30) {
+                sSpan = '1';
+            }                       
+            else if (iHour == 14 && iMin >= 30) {
+                sSpan = '2';
+            }
+            else if (iHour == 15 && iMin < 30) {
+                sSpan = '3';
+            }
+            else if (iHour == 15 && iMin >= 30) {
+                sSpan = '4';
+            }
+            else if (iHour == 16 && iMin < 30) {
+                sSpan = '5';
+            }
+            else if (iHour == 16 && iMin >= 30) {
+                sSpan = '6';
+            }
+            else {
+                sSpan = '-1';
+            }
+        }
+        else {
+            sSpan = '-1';
+        }
+        return sSpan;
+    }
+    function getGift() {
+        var sTimeSpan = GetTimeSpan();
+        switch (sTimeSpan) {
+            case '1':
+                javascript: getGiftMain_1010.submit(2837);
+                break;
+            case '2':
+                javascript: getGiftMain_1010.submit(2855);
+                break;
+            case '3':
+                javascript: getGiftMain_1010.submit(2866);
+                break;
+            case '4':
+                javascript: getGiftMain_1010.submit(2867);
+                break;
+            case '5':
+                javascript: getGiftMain_1010.submit(2868);
+                break;
+            case '6':
+                javascript: getGiftMain_1010.submit(2869);
+                break;
+            default:
+                alert("亲，现在不在抽奖时间范围内哦!");
+                break;
+        }
+        return;
+    }
+
+    //抽奖
+    function OnSubmitLottery() {
+        LoginManager.checkLogin(function () {
+            if (!areaId) {
+                alert('请先登录完成绑定大区!');
+                return;
+            }
+
+            //getGiftMain_1010.setOutData({
+            //    'sArea': areaId
+            //});
+            getGift();
+        }, function () {
+            LoginManager.login();
+        });
+    }
+
+</script>
+
+
+    <script type="text/javascript" src="http://gameact.qq.com/vote/js/vote.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // 模板自动生成的投票配置，可以按需改动部分配置
+            var g_vote_config = {
+                VOTE_CONFIG_296: {
+                    id: 296, // 必需，投票活动id
+                    type: Vote.VOTE_TYPES.VOTE, // 必需，投票类型，普通或者打分 Vote.VOTE_TYPES.SCORE
+                    width: 250, // 可按需修改，投票模块宽度，默认150px
+                    needLogin: true,  // 是否需要检查登录，有则会自动弹出登录框
+                    needArea: false,  // 是否需要选择大区，有则会自动弹出大区选择框
+                    serviceCode: "cf", // 如果需要选择大区，则需要指定业务的小写代码
+                    areaType: Vote.AREA_TYPES.LEVEL_TWO, // 如需选择大区，则需指定是一级还是二级大区
+                    needRole: false, // 是否需要选择角色，需要则会有角色选择列表
+                    showResult: false, // 是否需要展示结果，是则会出现显示结果按钮
+                    resultTextFormat: "{count}", // 投票结果显示格式，count为投票数，percent为占总票数的比例，total为总票数，可以自行定义
+                    submitOnSelect: false, // 是否在点击选项时立刻投票
+                    resultWidth: 320, // 结果总宽度，默认320px
+                    resultViewWidth: 85, // 结果百分比线条宽度，默认130px
+                    resultMode: Vote.RESULT_MODE.IN_PLACE, // 显示结果的方式，POP_UP为弹出层，IN_PLACE为就地显示
+                    onVoteComplete: function () {
+                         eval(arguments[0].text); 
+
+                        if (ADD_BALLOT_RES.ret_code == 0) {
+                            OpenWeiboDlg4Vote();
+                        }
+                        else if (ADD_BALLOT_RES.ret_code == -2) {
+                            alert("您已为队伍打过气！");
+                        }
+                        return false;
+                    },
+                    onSetupComplete: function () {
+                                     CheckActTime();
+                                     if(iThisDate == 8 && iThisHour < 14)
+                                      {
+                                      return;
+                                      }
+                                      else
+                                      {
+                                       Vote.ShowResult(296);      
+                                      }                  
+                    },
+                    questions: [
+                  {
+                      id: 1,
+                      needReason: false, // 是否有投票原因，有则会进行检查
+                      items: [
+
+                        { id: 1 },
+
+                        { id: 3 },
+
+                        { id: 5 },
+
+                        { id: 7 }
+
+                    ]
+                  }
+
+                ]
+                }
+            };
+            Vote.Setup(g_vote_config);
+        })();
+
+ function IniBarLength() {
+                CheckActTime();
+                if(iThisDate == 8 && iThisHour < 14)
+                {
+               return;
+               }
+              SetBarLength();
+}
+
+        function SetBarLength() {            
+            //Vote.ShowResult(296);
+            var iVoteCnt1 = parseInt(document.getElementById("result_text_296_1_1").innerHTML);
+            var iVoteCnt2 = parseInt(document.getElementById("result_text_296_1_3").innerHTML);
+            var iVoteCnt3 = parseInt(document.getElementById("result_text_296_1_5").innerHTML);
+            var iVoteCnt4 = parseInt(document.getElementById("result_text_296_1_7").innerHTML);
+
+            var iTotal = iVoteCnt1 + iVoteCnt2;
+            var iPer1 = 0;
+            var iPer2 = 0;
+            var iPer3 = 0;
+            var iPer4 = 0;
+
+            if (iTotal != 0) {
+                iPer1 = iVoteCnt1 / iTotal;
+                iPer2 = iVoteCnt2 / iTotal;
+            }
+            document.getElementById('filling1').style.height = 250 * iPer1 + 'px';
+            document.getElementById('filling2').style.height = 250 * iPer2 + 'px';
+
+            iTotal = iVoteCnt3 + iVoteCnt4;
+            if (iTotal != 0) {
+                iPer3 = iVoteCnt3 / iTotal;
+                iPer4 = iVoteCnt4 / iTotal;
+            }
+            document.getElementById('filling3').style.height = 250 * iPer3 + 'px';
+            document.getElementById('filling4').style.height = 250 * iPer4 + 'px';
+        }
+        
+         
+        function UpdateBarLength() {
+              if (!CheckActTime()) {
+                               return;
+            }
+           Vote.ShowResult(296);
+           SetBarLength();
+        }
+
+        function setVoteResultTimeout() {
+            window.setTimeout(IniBarLength, 2000);
+        }
+        function setVoteResultTimer() {
+            var id = window.setInterval(UpdateBarLength, 600000);
+        }
+
+        setVoteResultTimeout();
+        setVoteResultTimer();
+
+        var voteTeam = '';
+        //提交投票
+        function submitVote(val) {
+            if (!CheckActTime()) {
+                alert("亲，不在比赛区间哦！");
+                return;
+            }
+            if (!areaId) {
+                alert('请先登录完成绑定大区!');
+                return;
+            }
+            switch (val) {
+                case 1:
+                    voteTeam = 'AG迅游.时空战线';
+                    break;
+                case 3:
+                    voteTeam = '汉宫Clan.Zz';
+                    break;
+                case 5:
+                    voteTeam = '日照陆虎';
+                    break;
+                case 7:
+                    voteTeam = 'QQ会员东珈精鹰';
+                    break;
+                default:
+                    break;                    
+            }
+
+            Vote.SubmitItem(296, 1, val);
+        }
+    </script>
+
+
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/milo/milo.js"></script>
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.5.min.js"></script>
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/comm/imageScroll.js"></script>
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/comm/commShare.js"></script>
+<script type="text/javascript">
+    var share = new CommShare({
+        id: 247, // 活动ID，必须指定
+        editor: "editor_microblog" // 用户自定义编辑框，无则可不指定
+    });
+
+    function showWeiboDlg(dlgId) {
+        need("biz.dialog", function (Dialog) {
+            Dialog.show({ id: dlgId, bgcolor: '#e2e2e2' });
+        });
+    }  
+    function closeWeiboDlg() {
+        need("biz.dialog", function (Dialog) {
+            Dialog.hide();
+        });
+    }
+
+    //Open weibo dlg
+    function OpenWeiboDlg(giftName) {
+        document.getElementById("weiboContent").value = '我正在参加CFPL总决赛直播抽奖活动，已入手'
+        + giftName + '，看比赛为喜欢的战队打气就能抽奖，4月7号、8号约定你！活动链接';
+        document.getElementById("GiftItem").innerHTML = giftName;
+        showWeiboDlg('pop1');
+    }
+    function OpenWeiboDlg4Vote() {
+        document.getElementById("weiboContent").value = '万众瞩目的CFPL总决赛进入最后阶段！' + voteTeam
+        + '战队加油，我看好你们的！4月7日、8日14:00看直播看高手看枪法看身法，还能抽取黄金道具！活动链接：';
+        document.getElementById("TeamName").innerHTML = voteTeam;      
+        showWeiboDlg('pop2');
+    }
+
+    //转播微博
+    function SubmitWeibo() {
+        var sWeiBo = document.getElementById("weiboContent").value;
+        share.ShareMicroblog({
+            contentid: 1, // 后台录入的备选内容序号
+            content: sWeiBo, // 手动指定内容，适用于 用户可编辑内容的活动，如此参数已指定，则contentid参数无效
+
+            // 分享结束的回调函数，如返回false，则会阻止默认的处理函数（弹出提示）
+            complete: function (res) {
+                if (res) {
+                    alert(res.msg);
+                    closeWeiboDlg();
+                    if (res.code == 6) {
+                        window.open("http://t.qq.com/reg/index.php");
+                    }
+                } else {
+                    alert("分享失败啦");
+                }
+                return false; // 阻止默认处理函数
+            }
+        });
+    }
+
+</script>
+
+</body>
+<script src="http://ossweb-img.qq.com/images/js/pagespeed/page_speed_v2.js"></script>
+</html>
+<!--[if !IE]>|xGv00|32140fade44ab53022c945d1a1e5857b<![endif]-->

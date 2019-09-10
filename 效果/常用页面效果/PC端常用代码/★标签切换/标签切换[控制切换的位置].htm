@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="robots" content="all" />
+<title>定时切换</title>
+<style>
+
+	/* 页面样式 */
+	.c:before,.c:after {content:"";display:table}
+	.c:after {clear:both}
+	.c {zoom:1}
+	body {font:12px/1.5 tahoma,\5b8b\4f53,sans-serif;padding-top:42px;background-color: #ffffff;}
+	a {text-decoration:none;overflow:hidden;}
+	a:hover {text-decoration:underline}
+	.wrap {}
+	.container {width:1000px;margin:0 auto;}
+	.pr {position:relative;}
+	.pa {position:absolute;}
+	.hide {display:block;width:0;height:0;overflow:hidden;}
+	.db {display:block;text-indent:-999em;}
+
+	/* content */
+	.content {height: 471px;}
+		.tabs {margin: 54px 0 0 43px;padding-left: 47px;}
+			.tabs li {float: left;height: 107px;width:100px;text-align:center;}
+			.tabs li .on{color:red;}
+
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	<div class="container">
+	    <div class="content">
+    		<div class="ct-all">
+    			<div id="ct1" class="ct" style="display: none;">
+    				<h2 class="">周末乐翻天1</h2>
+    			</div>
+    			<div id="ct2" class="ct" style="display: none;">
+    				<h2 class="">周末乐翻天2</h2>
+    			</div>
+    			<div id="ct3" class="ct" style="display: none;">
+    				<h2 class="">暑假进行曲3</h2>
+    			</div>
+    			<div id="ct4" class="ct" style="display: none;">
+    				<h2 class="">周末乐翻天4</h2>
+    			</div>
+    			<div id="ct5" class="ct" style="display: none;">
+    				<h2 class="">周末乐翻天5</h2>
+    			</div>
+    		</div>
+    		<ul class="tabs c" id="tabs">
+    			<li class="t-i1"><a href="javascript:">8月19日</a></li>
+    			<li class="t-i2"><a href="javascript:">8月20日</a></li>
+    			<li class="t-i3"><a href="javascript:">8月21日</a></li>
+    			<li class="t-i4"><a href="javascript:">8月22日</a></li>
+    			<li class="t-i5"><a href="javascript:">8月23日-8月25日</a></li>
+    		</ul>
+	    </div>
+	</div>
+</div>
+    
+
+<script src="http://apps.game.qq.com/CommArticle/app/reg/gdate.php"></script>
+<script>
+var nortag = {
+	g  : function(id){return document.getElementById(id)},
+	ge : function(o,tagname){return o.getElementsByTagName(tagname)},
+	ctn : function(){
+		var tabs = this.g("tabs");
+		var tris = this.ge(tabs,"a");
+		return {o:tabs,tags:tris,len:tris.length}
+	},
+	action : function(){
+		var len=this.ctn().len;
+		for(var i=0;i<len;i++){
+			(function(arg){
+				nortag.ctn().tags[i].onclick=function(){
+					nortag.settag(arg);
+				}
+			})(i)
+		}
+	},
+	settag : function(n){
+		var len=nortag.ctn().len;
+		for(var i=0;i<len;i++){
+			nortag.ctn().tags[i].className="";
+			nortag.g("ct"+(i+1)).style.display="none";
+		}
+		nortag.ctn().tags[n].className="on";
+		this.g("ct"+(n+1)).style.display="block";
+	},
+	init: function(n){
+		nortag.ctn().tags[n].className="on";
+		nortag.action();
+		nortag.settag(n);
+	}
+}
+
+function getT(t) {
+	var time = new Date(Date.parse(t.replace(/-/g,"/")));
+	return time.getTime();
+}
+
+
+var t1 = getT('2013-08-19 00:00:00'),
+	t2 = getT('2013-08-20 00:00:00'),
+	t3 = getT('2013-08-21 00:00:00'),
+	t4 = getT('2013-08-22 00:00:00'),
+	t5 = getT('2013-08-23 00:00:00'),
+	t6 = getT('2013-08-26 00:00:00')
+	nowTime = getT(json_curdate);
+
+	if ( (nowTime>t1) && (nowTime<t2)  ) {
+		nortag.init(0);//显示19号内容
+	}
+	if ( (nowTime>t2) && (nowTime<t3)  ) {
+		nortag.init(1);//显示20号内容
+	}
+	if ( (nowTime>t3) && (nowTime<t4)  ) {
+		nortag.init(2);//显示21号内容
+	}
+	if ( (nowTime>t4) && (nowTime<t5)  ) {
+		nortag.init(3);//显示22号内容
+	}
+	if ( (nowTime>t5) && (nowTime<t6)  ) {
+		nortag.init(4);//显示23号-25号内容
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+<title>css3动画摇晃</title>
+<style type="text/css">
+* {margin: 0;padding: 0;border: 0;}
+.box {width: 200px;height: 400px;background-color: #ccc;position: relative;border-radius: 30%;
+	-webkit-animation: shake .5s ease-out 1s;
+}
+.icon {width: 50px;height: 50px;position: absolute;left: 50%;top: 50%;margin: -25px 0 0 -25px;opacity: 0;}
+.icon1 {
+	-webkit-animation: fadeIn 1s ease-in;
+}
+.icon2 {
+	-webkit-animation: fadeIn 0.5s ease-in 1.5s forwards;
+}
+@-webkit-keyframes fadeIn {
+0%{opacity:0}
+100%{opacity:1}
+}
+@-webkit-keyframes shake {
+0%,28.6%,57.2%,100%{-webkit-transform: rotate(0);}
+14.3%{-webkit-transform: rotate(-30deg);}
+42.9%{-webkit-transform: rotate(30deg);}
+71.5%{-webkit-transform: rotate(-15deg);}
+85.8%{-webkit-transform: rotate(15deg);}
+}
+</style>
+</head>
+<body>
+	<div class="box">
+		<div class="icon1 icon">?</div>
+		<div class="icon2 icon">炫舞梦工厂</div>
+	</div>
+</body>
+</html>

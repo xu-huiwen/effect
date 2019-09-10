@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>jQuery标签切换</title>
+	<style type="text/css">
+		* {margin:0;padding:0;}
+		.on {background-color:#000;color:#fff;}
+		ul{list-style:none;width:200px;}
+		ul.hd li {float:left;}
+	</style>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		(function($){
+			$(function() {
+				$("ul.hd li:first-child").addClass("on");
+				$("ul.bd li:not(:first)").hide();
+				$("ul.hd li").each(function(index) {
+					$(this).mouseover(function() {
+						$("ul.hd li.on").removeClass("on");
+						$(this).addClass("on");
+						$("ul.bd li:visible").hide();
+						$("ul.bd li:eq(" + index + ")").show();
+					})
+				})
+			})
+		})(jQuery);
+	</script>
+</head>
+<body>
+	<ul class="hd">
+		<li>标签一</li>
+		<li>标签二</li>
+		<li>标签三</li>
+		<li>标签四</li>
+	</ul>
+	<ul class="bd">
+		<li>内容一</li>
+		<li>内容二</li>
+		<li>内容三</li>
+		<li>内容四</li>
+	</ul>
+</body>
+</html>

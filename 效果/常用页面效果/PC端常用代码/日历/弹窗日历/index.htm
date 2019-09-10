@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=gb2312" />
+	<title></title>
+	<style type="text/css">
+		* {margin:0;padding:0;border:0;}
+		#pop {width:500px;height:500px;background-color:#ccc;display:none;position:relative;}
+		.one1 {position:absolute;}
+		.one2 {position:absolute;left:160px;}
+	</style>
+</head>
+<body>
+<a href="###" onclick="TGDialogS('pop')">弹窗</a>
+<div id="pop">
+	<p><input id="one1" class="Wdate" type="text" onClick="show();one1();"> <input id="one2" class="Wdate" type="text" onClick="show();one2();"></p>
+	<div id="box">&nbsp;</div>
+	<a href="javascript:showDialog.hide();">&times;</a>
+</div>
+
+<script type="text/javascript" src="js/WdatePicker.js"></script>
+<script type="text/javascript">
+function one1() {
+	$dp.$('box').className = "one1";
+	WdatePicker({
+			eCont:'box',
+			onpicked:function(dp){
+				$dp.$('one1').value=dp.cal.getDateStr();
+				$dp.$('box').style.display= "none";
+			}
+		})
+}
+function one2() {
+	$dp.$('box').className = "one2";
+	WdatePicker({
+			eCont:'box',
+			onpicked:function(dp){
+				$dp.$('one2').value=dp.cal.getDateStr();
+				$dp.$('box').style.display= "none";
+			}
+		})
+}
+
+function show() {
+	$dp.$('box').style.display= "block";
+}
+</script>
+<script src="http://ossweb-img.qq.com/images/js/comm/showDialog.min.js"></script>
+<script type="text/javascript">function TGDialogS(e){showDialog.show({id:e,bgcolor:"#000",opacity:70});}</script>
+</body>
+</html>

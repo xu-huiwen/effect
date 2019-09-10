@@ -1,0 +1,77 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+<title>弹出层</title>
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif;line-height:22px;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{}
+ol{margin:0;padding:0;}
+li{margin-left:40px;}
+
+.dia{width:400px;height:90px;overflow:hidden;}
+.dia-close{float:left;padding:5px 10px;color:#fff;text-decoration:none;display:inline;overflow:hidden;text-align:center;background:#841495;}
+.dia-con{width:290px;height:60px;float:left;line-height:60px;text-align:center;clear:both;background:#e9cded;border:5px solid #841495;}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>弹出层使用规范</h1>
+	</div>
+	<div id="main">
+		<h2>一、使用说明：</h2>
+		<ol>
+			<li>在页面底部引入脚本：http://ossweb-img.qq.com/images/js/milo/milo-min.js（必须放在页面底部，禁止放在head里面）</li>
+			<li>配置弹出层背景颜色和透明度，即：function TGDialogS(e){showDialog.show({id:e,bgcolor:"这里填写背景颜色",opacity:这里填写透明度（0-100）});}，例如：bgcolor:"#000",opacity:70</li>
+			<li>弹出id为test的div：TGDialogS("test");只要将GDialogS("test")中的test改为相应id即可</li>
+			<li>关闭弹出层：closeDialog();</li>
+		</ol>
+		<h2>二、实例演示：</h2>
+		<p>弹出id为test1的div：<button onClick="TGDialogS('test1')">点击弹出</button></p>
+        <p>弹出id为test2的div：<button onClick="TGDialogS('test2')">点击弹出</button></p>
+	</div>
+</div>
+<!-- 弹出层test1 Start-->
+<div class="dialog" id="test1" style="display:none">
+    <div class="dia-con">我是弹出层test1</div>
+    <a class="dia-close" href="javascript:showDialog.hide()" title="关闭">&times;</a>
+</div>
+<!-- 弹出层test1 End-->
+<!-- 弹出层test2 Start-->
+<div class="dialog" id="test2" style="display:none">
+    <div class="dia-con">我是弹出层test2</div>
+    <a class="dia-close" href="javascript:showDialog.hide()" title="关闭">&times;</a>
+</div>
+<!-- 弹出层test2 End-->
+<script src="http://ossweb-img.qq.com/images/js/milo/milo-min.js"></script>
+<script>
+function TGDialogS(e){
+	need("biz.dialog-min",function(Dialog){
+		Dialog.show({
+			id:e,
+			bgcolor:'#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+			opacity:70      //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+		});
+	});
+}
+function closeDialog(){
+	need("biz.dialog-min",function(Dialog){
+		Dialog.hide();
+	});
+}
+</script>
+</body>
+</html>

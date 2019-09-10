@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>整屏切换</title>
+<style>
+html,body,ul,h1,h2,h3,p,input,img,figure{margin:0;padding:0}
+ul,ol{list-style:none}
+html,body,.content{width:100%;height:100%;overflow: hidden;}
+body{-webkit-user-select:none;font:12px/21px \5FAE\8F6F\96C5\9ED1}
+.content{position:relative;}
+.slide{width:100%;height:1000%}
+.slide .item{height:10%;position: relative;}
+header{display:block;position:relative;height:0;-webkit-backface-visibility:hidden}
+nav{position:absolute;bottom:0;left:0}
+.progress-bar{position:absolute;width:100%;height:20px;left:0;top:20px;text-align:center}
+.progress-bar li{display:inline-block;width:20px;height:20px;border-radius:50%;background-color:#00f;margin-right:5px}
+.progress-bar .current{background-color:red}
+nav {text-align: center;width: 100%;padding-bottom: 20px;}
+nav a {display: inline-block;width: 20px;height: 20px;text-align: center;line-height: 20px;}
+nav .current{background-color:red;color:#fff}
+.list{width:1000%;height:100%}
+.list li{float:left;width:10%;height:100%;background-color:#ccc}
+.animate{display:block;width:100px;height:100px;background-color:red;left:50%;top:50%;margin-left:-50px;margin-top:-50px;position:absolute;border-radius:50%;opacity: 0;}
+.play .animate{-webkit-animation:xz 1.5s ease-in-out forwards;}
+@-webkit-keyframes xz {
+0%{opacity:0;border-radius:0;-webkit-transform:rotate(0deg) scale(0.1)}
+100%{opacity:1;-webkit-transform:rotate(360deg) scale(1);border-radius:50%}
+}
+.box-btn {position: absolute;text-align: center;left: 0;bottom: 100px;width: 100%;}
+</style>
+</head>
+<body>
+<div class="content">
+	<div class="slide">
+		<div class="item">
+			
+		</div>
+		<div class="item item2">
+			<ul class="list c">
+				<li>1</li>
+				<li>
+					<img class="lazy2" src="http://ossweb-img.qq.com/images/comm/blank.png" width="200" height="100" data-url="http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_01.jpg" />
+				</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+			<p class="box-btn">
+				<a href="javascript:" class="btn-prev">上一个</a>
+				<a href="javascript:" class="btn-next">下一个</a>
+			</p>
+		</div>
+		<div class="item">3<span class="animate"></span>
+			<a href="javascript:" class="btn-test">跳转到第4屏</a>
+		</div>
+		<div class="item">
+			<img class="lazy1" src="http://ossweb-img.qq.com/images/comm/blank.png" width="200" height="100" data-url="http://ossweb-img.qq.com/images/qqgame/act/20100827seventh/i_pic_02.jpg" />
+		</div>
+	</div>
+</div>
+<header>
+	<nav>
+		<a href="javascript:">1</a>
+		<a href="javascript:">2</a>
+		<a href="javascript:">3</a>
+		<a href="javascript:">4</a>
+	</nav>
+</header>
+<script src="global.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+	//页面100%高度包含地址栏高度，当地址栏存在时，会有部分内容被隐藏,重置html高度
+	document.documentElement.style.height = window.innerHeight + 'px';
+	
+	slide1 = new m.Tab({
+		target: document.querySelectorAll('.slide .item'),//滚动块
+		trigger: document.querySelectorAll('nav a'),//导航条，导航可以控制滚动
+		touchMove: true,//是否允许手滑滚动
+		direction: 'y',//垂直滚动
+		lazyClass: 'lazy1',//延迟加载类名
+		ontouchmove: function(dis) {
+			if (this.current == 2 && dis < 0) {
+				return false;
+			}
+		},
+		ontouchend: function(dis) {//滚动结束回调函数
+			if (this.current == 2 && dis < 0) {//当前在第三页且向下滚动
+				return false;
+			}
+		},
+		onchangebefore: function(n){//变化之前回调函数
+			
+		},
+		onchange: function(i) {
+			var items = document.querySelectorAll('.slide .item');
+			for (n=0;n<items.length;n++) {
+				items[n].classList.remove('play');
+			}
+			items[i].classList.add('play');
+		}
+	});
+	
+	//按钮控制跳转指定屏幕
+	document.querySelector('.btn-test').addEventListener('touchend',function(){
+		slide1.playTo(3);
+	},false)
+	
+	
+	slide2 = new m.Tab({
+		target: document.querySelectorAll('.list li'),
+		touchMove: true,
+		direction: 'x',//水平滚动
+		lazyClass: 'lazy2',
+		progressBar: true//是否显示导航条，导航不能控制滚动
+	});
+	
+	// 上下箭头控制
+	document.querySelector('.btn-prev').addEventListener('touchend', function() {
+		slide2.prev();
+	});
+	document.querySelector('.btn-next').addEventListener('touchend', function() {
+		slide2.next();
+	});
+});
+
+//默认事件禁止touchmove比touchstart更好，否则还需要单独处理<a><input>等问题
+var defaultEvent = function(e) {
+	e.preventDefault();
+}
+document.documentElement.addEventListener('touchmove', defaultEvent);
+</script>
+</body>
+</html>

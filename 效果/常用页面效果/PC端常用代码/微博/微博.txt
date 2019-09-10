@@ -1,0 +1,57 @@
+
+http://dev.open.t.qq.com/websites/
+
+
+<iframe allowtransparency="true" width="100%" height="500" src="http://wall.v.t.qq.com/index.php?c=wall&a=index&t=QQ%E7%82%AB%E8%88%9E%E5%9B%9B%E5%91%A8%E5%B9%B4&ak=ac324c64d5e04545853e607b58fb7a03&w=0&h=500&o=7&s=4&cs=FFFFFF_8D0050_C04B8E_8D0050_FFA0D6_FFFFFF" frameborder="0"></iframe>
+
+
+标题栏颜色_背景色_分割线色_边框色_超链接色_主字色
+
+接收参数：（大小写敏感，全部以小写）
+ak: appkey，不填则系统默认一个
+t:  话题列表，最多三个话题，多个话题以|链接，然后encodeURIComponent函数编码
+cs: 自定义颜色 以_连接，无#号，依次为：标题栏色_背景色_分割线色_边框色_超链接色_主字色
+fk: 屏蔽关键字，最多三个关键字，多个话题以|链接，然后encodeURIComponent函数编码，含有该关键字的微博将不显示
+fn: 屏蔽名字 最多三个微博帐号，多个帐号以|链接，然后encodeURIComponent函数编码，此帐号发表的微博将不显示
+s:  推荐样式 0-3，当cs有值时该参数无效，超出时为0
+w:  宽度 255-1024，无值时宽度自适应，超出时为距离最近的边界值
+h:  高度 300-800,超出时为距离最近的边界值
+o:  操作数，二进制：00000000，从右往左
+第2位  0:显示图片，1:不显示图片
+第3位：0:不显示发表框，1:显示发表框
+第4位：0:发表框居上，1:发表框居下
+第6位：0:不显示滚动条，1:显示滚动条
+按此规则设定好位值后转成十进制。
+
+
+
+最小255*300
+最大1024*800
+
+微博主题：
+	var _zt="%23"+encodeURI("主题文字")+"%23"
+
+TGA游戏竞技社区
+	appkey：4df3051760024dd6ab9ba2511c022cf2
+
+洛克
+	appkey：fabeaea7c2784d69a9cafd97722b640c
+
+功夫西游
+	appkey：801000300
+
+英雄杀：
+	appkey：a3dce3de60dd400e99e3200c48a07cb5
+
+QQ仙境：
+	appkey：801059594
+
+QQ炫舞：
+	appkey：ac324c64d5e04545853e607b58fb7a03
+
+九界
+	appkey：801127229
+
+
+逆战
+	appkey：800100029

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		.info{overflow:hidden; margin-top:15px; height:100px;width: 210px;}
+		.info span {display: block;}
+	</style>
+</head>
+<body>
+	<div class="info" id="scroll_2_w">
+		<div id="scroll_2_i">
+			<span>双线新服【云顶天】</span>
+			<span>双线新服【尚君香】</span>
+			<span>双线新服【苍云裂】</span>
+			<span>双线新服【虬龙枪】</span>
+			<span>双线新服【云顶天】</span>
+			<span>双线新服【尚君香】</span>
+			<span>双线新服【苍云裂】</span>
+			<span>双线新服【虬龙枪】</span>
+		</div>
+	</div>
+<script>
+	function inMarquee(speed, objwarp, objinner, w) {
+		var objw = document.getElementById(objwarp),
+			obji = document.getElementById(objinner);
+		obji.innerHTML += objw.innerHTML;
+		if (w == 0) {
+			var Marquee = function() {
+				obji.offsetHeight / 2 - objw.scrollTop <= 0 ? objw.scrollTop -= obji.offsetHeight / 2 : objw.scrollTop++;
+			}
+		} else if (w == 1) {
+			var Marquee = function() {
+				if (obji.offsetWidth / 2 - objw.scrollLeft <= 0) {
+					objw.scrollLeft -= obji.offsetWidth / 2
+				} else {
+					objw.scrollLeft++
+				}
+			}
+		}
+		var myMar = setInterval(Marquee, speed);
+		objw.onmouseover = function() {
+			clearInterval(myMar)
+		};
+		objw.onmouseout = function() {
+			myMar = setInterval(Marquee, speed)
+		}
+	}
+	inMarquee(50, "scroll_2_w", "scroll_2_i", 0)
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input {color: #ccc;}
+	</style>
+</head>
+<body>
+	<input type="text" value="请输入CDkey" onfocus="iptFcs(this)"  onblur="iptBlr(this)" />
+<script>
+	function iptFcs(o) {
+		o.style.color = "#000";
+		if (o.value == "请输入CDkey") o.value = "";
+	}
+
+	function iptBlr(o) {
+		if (!o.value) {
+			o.value = "请输入CDkey";
+			o.style.color = "#ccc";
+		}
+	}
+</script>
+</body>
+</html>

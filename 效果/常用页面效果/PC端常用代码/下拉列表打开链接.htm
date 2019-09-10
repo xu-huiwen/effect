@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<div class="old">
+    <form id="form" name="form">
+        <label for="before" class="hidden">往期商品展示</label>
+        <select onchange="jumpMenu(this)" id="before" name="before">
+            <option selected="selected" disabled="disabled">请选择往期时装</option>
+            <option value="http://dnf.qq.com/act/a20110822avatar/">COS达人套装</option>
+            <option value="http://dnf.qq.com/act/a20110219avatar/">暖绒春雪套装</option>
+            <option value="http://dnf.qq.com/act/a20101122avatar/avatar.shtml">古典盛宴套装</option>
+            <option value="http://dnf.qq.com/act/a20101023avatar/avatar.shtml ">个性光芒套装</option>
+            <option value="http://dnf.qq.com/act/a20100607avatar15/avatar.shtml">酷爽清凉套装</option>
+            <option value="http://dnf.qq.com/act/a20100329avatar/avatar.shtml">魔幻城堡套装</option>
+            <option value="http://dnf.qq.com/act/a20100305avatar/avatar.shtml">风尚科幻套装</option>
+            <option value="http://dnf.qq.com/act/a20091001gift/">国庆礼包</option>
+            <option value="http://dnf.qq.com/act/a20090817avatar/">夏之舞套装</option>
+            <option value="http://dnf.qq.com/act/a20090706gift/">海之勇者礼包</option>
+            <option value="http://dnf.qq.com/act/a20090522avatar/">夏季天使套装</option>
+            <option value="http://dnf.qq.com/act/a20090331avatar/">幻想勇士套装</option>
+            <option value="http://dnf.qq.com/act/a20090226avatar/">温馨春季套装</option>
+        </select>
+    </form>
+</div>
+<script type="text/javascript">
+    function jumpMenu(selObj) {
+        window.open(selObj.options[selObj.selectedIndex].value);
+    }
+</script>
+</body>
+</html>

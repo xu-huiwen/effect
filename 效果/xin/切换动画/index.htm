@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="GBK">
+	<title></title>
+	<style type="text/css">
+	.con{text-align:center;width:1092px;margin:0 auto 100px;}
+	.box{width:1092px;height:672px;overflow:hidden;margin-bottom:20px;}
+		.box img{display:none;}
+	.masky{-webkit-mask:url(ossweb-img/masky_745caa9.png);-webkit-mask-size:4000% 100%;}
+	.masky.show{-webkit-mask-position:0 0;-webkit-animation:mask .8s steps(39) forwards;display:block;}
+	@-webkit-keyframes mask{from{-webkit-mask-position:0 0}to{-webkit-mask-position:100% 0}}@keyframes mask{from{-webkit-mask-position:0 0}to{-webkit-mask-position:100% 0}}
+	</style>
+</head>
+<body>
+<div class="con">
+	<div class="box">
+		 <img class="masky show" src="ossweb-img/pic1_27cbf97.jpg" width="1092" height="672" alt="" />
+		 <img class="masky" src="ossweb-img/pic2_f24bb79.jpg" width="1092" height="672" alt="" />
+		 <img class="masky" src="ossweb-img/pic1_27cbf97.jpg" width="1092" height="672" alt="" />
+		 <img class="masky" src="ossweb-img/pic1_27cbf97.jpg" width="1092" height="672" alt="" />
+	</div>
+	<a href="javascript:;" class="prev">上一页</a>
+	<a href="javascript:;" class="next">下一页</a>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script> 
+<script type="text/javascript">
+	//page
+	var tcI = 0;
+	$(".prev").click(function(){
+		tcI--;
+		if(tcI<0){
+			//tcI=$(".masky").length-1;
+			tcI=0;
+		}
+		$(".masky").removeClass("show");
+		$(".masky").eq(tcI).addClass("show");
+	})
+	$(".next").click(function(){
+		tcI++;
+		if(tcI>=$(".masky").length){
+			//tcI=0;
+			tcI=$(".masky").length-1;
+		}
+		$(".masky").removeClass("show");
+		$(".masky").eq(tcI).addClass("show");
+	})
+	
+	$(".btn").click(function(){
+		$(".cic").addClass("xs");
+	})
+</script>
+</body>
+</html>

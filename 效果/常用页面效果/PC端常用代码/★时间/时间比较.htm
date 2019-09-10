@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>无标题文档</title>
+    <style>
+    .box, .gray {
+        width:500px;
+        height:500px;
+        background-color:#F00;
+        margin:0 auto;
+    }
+    .gray {
+        background-color:#ccc;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box"></div>
+
+<script type="text/javascript">
+var box = document.getElementById("box");
+var today = new Date(); //取今天的日期
+var d1 = new Date(Date.parse('2013/8/21'));
+if (today >= d1) {
+    box.className = "box gray";
+}
+</script>
+</body>
+</html>

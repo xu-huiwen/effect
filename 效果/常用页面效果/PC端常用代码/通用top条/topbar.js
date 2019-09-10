@@ -1,0 +1,4 @@
+(function(){
+	document.writeln("<link rel='stylesheet' type='text/css' href='topbar.css' />");
+	document.writeln("<div class='top-bar'><div class='top-bar-i'><ul class='top-bar-list c'><li class='top-bar-list-gy'><a href='###'>中文</a></li><li class='top-bar-list-gj'><a href='###'></a></li><li class='top-bar-list-wb'><a href='###'></a></li><li class='top-bar-list-py'><a href='###'></a></li><li class='top-bar-list-yy'><a href='###'></a></li><li class='top-bar-list-lz'><a href='###'></a></li><li class='top-bar-list-xy'><a href='###'></a></li><li class='top-bar-list-jz'><a href='###'></a></li><li class='top-bar-list-dy'><a href='###'></a></li><li class='top-bar-list-hy'><a href='###'></a></li></ul></div></div>");
+})();

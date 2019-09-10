@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Tencent-CP" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>刮一刮</title>
+	<style>
+		* {margin:0;padding:0;border:0;}
+
+		.scratch {width:200px;height:50px;margin:0 auto;}
+	</style>
+</head>
+<body>
+	<div id="scratch" class="scratch"></div>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.2.min.js"></script>
+<script src="wScratchPad.min.js"></script><!-- 详见https://github.com/websanova/wScratchPad -->
+<script>
+$(function() {
+	$('#scratch').wScratchPad({
+		size : 5,//刮痕大小
+		bg : '#ccc',//背景（也可以是图片）刮开的奖品
+		fg : '#6699ff',//前景（也可以是图片）
+		cursor : 'default',//鼠标样式
+		scratchMove: function (e, percent) {
+            if (percent > 10) {
+              this.clear();
+            }
+          }
+	});
+})
+</script>
+</body>
+</html>

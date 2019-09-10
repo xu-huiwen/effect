@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>手风琴</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+		table{border-collapse:collapse;border-spacing:0}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+		ol,ul{list-style:none}
+		caption,th{text-align:left}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+		q:before,q:after{content:''}
+		fieldset,img,abbr,acronym{border:0}
+
+		.main {width: 1000px;margin: 0 auto}
+			.tit {width: 100%;line-height: 30px;background-color: #bee5f0;}
+			.con {width: 100%;height: 100px;background-color: #ccc;display: none;}
+			.on {color: #f00;}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<h3 class="tit on">标题1</h3>
+		<div class="con">内容1</div>
+		<h3 class="tit">标题2</h3>
+		<div class="con">内容2</div>
+		<h3 class="tit">标题3</h3>
+		<div class="con">内容3</div>
+	</div>
+
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.3.2.min.js"></script>
+<script>
+(function($){
+	$(function(){
+		$('.tit').click(function(){
+			var thisCon = $(this).next();
+			$('.tit').removeClass('on');
+			$(this).addClass('on');
+			$('.con').not(thisCon).slideUp();
+			thisCon.stop(true,true).slideToggle();
+			return false;
+		})
+	})
+})(jQuery);
+</script>
+</body>
+</html>

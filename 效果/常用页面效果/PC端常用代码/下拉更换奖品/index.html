@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk">
+<meta name="robots" content="all">
+<meta name="author" content="Tencent-TGideas">
+<meta name="Copyright" content="Tencent">
+<meta name="Description" content="QQ炫舞马年新春,马年有福之马年如意篇,新年马到成功,豪华大礼等着你!">
+<meta name="Keywords" content="马年新春,马年如意,马到功成,QQ炫舞">
+<title>马年新春-QQ炫舞官方网站-腾讯游戏</title>
+<link type="text/css" rel="stylesheet" href="style.css">
+<!-- 页面设计：sayonkang | 页面制作：yaoqli | 创建：2013-11-25|  团队博客：http://tgideas.qq.com/ -->
+</head>
+<body>
+<div class="prop">
+	<ul class="clearfix">
+		<li class="import">
+			<span class="p_dj"><img id="p_dj0" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131125newyear/d_01.jpg" width="104" height="75" alt="馨羽单骑"></span>
+			<p id="p_dec0" class="p_dec"><b>馨羽单骑</b><span>（永久/30天）</span></p>
+			<a id="p_btn0" href="javascript:;" class="p_list_btn"></a>
+			<ol id="p_list0" class="p_list">
+				<li>
+					<span class="p_dj2"><img src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131125newyear/l_01.jpg" width="104" height="75" alt="粉色专宠"></span>
+					<p class="p_dec2"><b>粉色专宠</b><span>（永久/30天）</span></p>
+				</li>
+			</ol>
+		</li>
+		<li class="import">
+			<span class="p_dj"><img id="p_dj1" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131125newyear/d_02.jpg" width="104" height="75" alt="梦蝶棉云"></span>
+			<p id="p_dec1" class="p_dec"><b>梦蝶棉云</b><span>（永久/30天）</span></p>
+			<a id="p_btn1" href="javascript:;" class="p_list_btn"></a>
+			<ol id="p_list1" class="p_list">
+				<li>
+					<span class="p_dj2"><img src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131125newyear/l_02.jpg" width="104" height="75" alt="传说中的浮云"></span>
+					<p class="p_dec2"><b>传说中的浮云</b><span>（永久/30天）</span></p>
+				</li>
+				<li class="odd">
+					<span class="p_dj2"><img src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131125newyear/l_03.jpg" width="104" height="75" alt="霹雳浮云"></span>
+					<p class="p_dec2"><b>霹雳浮云</b><span>（永久/30天）</span></p>
+				</li>
+				<li>
+					<span class="p_dj2"><img src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131125newyear/l_04.jpg" width="104" height="75" alt="冰洁蓬云"></span>
+					<p class="p_dec2"><b>冰洁蓬云</b><span>（永久/30天）</span></p>
+				</li>
+			</ol>
+		</li>
+	</ul>
+</div>
+
+<script>
+	//下拉列表
+	function g(id) {
+		return document.getElementById(id);
+	}
+	for (var i = 0; i < 2; i++) {
+		(function(i) {
+			g("p_btn" + i).onclick = function() {
+				var pb = g("p_list" + i).style.display;
+				if (pb == "block") {
+					g("p_list" + i).style.display = "none";
+				} else {
+					g("p_list" + i).style.display = "block";
+				}
+			}
+		})(i);
+		changeAtrr(i);
+	}
+
+	function changeAtrr(index) {
+		var p_arr = g("p_list" + index).getElementsByTagName("li"),
+			p_len = p_arr.length;
+		for (var i = 0; i < p_len; i++) {
+			(function(i) {
+				p_arr[i].onclick = function() {
+					g("p_list" + index).style.display = "none";
+					var p_src = g("p_dj" + index).getAttribute("src"),
+						p_alt = g("p_dj" + index).getAttribute("alt"),
+						p_b = g("p_dec" + index).getElementsByTagName("b")[0].innerHTML,
+						p_span = g("p_dec" + index).getElementsByTagName("span")[0].innerHTML;
+					g("p_dj" + index).setAttribute("src", this.getElementsByTagName("img")[0].getAttribute("src"));
+					g("p_dj" + index).setAttribute("alt", this.getElementsByTagName("img")[0].getAttribute("alt"));
+					g("p_dec" + index).getElementsByTagName("b")[0].innerHTML = this.getElementsByTagName("img")[0].getAttribute("alt");
+					g("p_dec" + index).getElementsByTagName("span")[0].innerHTML = this.getElementsByTagName("span")[1].innerHTML;
+					p_arr[i].getElementsByTagName("img")[0].setAttribute("src", p_src);
+					p_arr[i].getElementsByTagName("img")[0].setAttribute("alt", p_alt);
+					p_arr[i].getElementsByTagName("b")[0].innerHTML = p_b;
+					p_arr[i].getElementsByTagName("span")[1].innerHTML = p_span;
+				}
+			})(i);
+		}
+	}
+</script>
+</body>
+</html>

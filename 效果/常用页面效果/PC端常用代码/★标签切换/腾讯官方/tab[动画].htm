@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>tab[动画]</title>
+<style type="text/css">
+
+* {margin:0; padding:0; list-style:none;font-family:'Microsoft Yahei'}
+
+.tab{width: 350px; padding-top: 10px; border: 1px solid #527CC9; background-color: #527CC9; margin: 50px auto; height: 180px; }
+.tab .bd{background-color: #fff; height: 150px;}
+.tab .hd a{display: block;  height: 25px; line-height: 25px; color:#000; text-align: center; text-decoration: none;}
+.tab .hd li{float: left; width: 70px; background-color: #A2C8F4;}
+.tab .hd{height: 25px; }
+.tab .hd .on{background-color: #fff;}
+.tab .bd p{padding:20px 5px; text-indent: 2em;}
+
+/* 显示/隐藏 */
+.tab .tab-panel{display: none }
+.tab .dis{display: block }
+
+/* 滚动效果 */
+.slide{overflow: hidden;  position: relative }
+.slide .tab-panel{float: left; width: 350px; display: block }
+.slide .bd{width: 1750px; position: absolute;left:0px }
+
+/* 淡入淡出 */
+.fade .bd{overflow: hidden; position: relative }
+.fade .tab-panel{display: block; position: absolute; left:0px; top:0px; background-color: #fff; z-index:1; opacity:0; filter:alpha(opacity=0) }
+.fade .dis{opacity:1; filter:alpha(opacity=100)}
+</style>
+</head>
+
+<body>
+<div class="tab" id="tab">	
+	<div class="hd">
+		<ul>
+			<li><a href="###">综合</a></li>
+			<li><a href="###">公告</a></li>
+			<li><a href="###">活动</a></li>
+			<li><a href="###">赛事</a></li>
+			<li><a href="###">其他</a></li>
+		</ul>
+	</div>
+	<div class="bd">
+			<div class="tab-panel">
+				<p>综合综合综合综合综合综合综合综合综合综合综合综合综合综合综合综合</p>
+			</div>
+			<div class="tab-panel">
+				<p>公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</p>
+			</div>
+			<div class="tab-panel">
+				<p>活动活动活动活动活动活动活动活动活动活动活动活动活动活动活动活动</p>
+			</div>
+			<div class="tab-panel">
+				<p>赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事</p>
+			</div>
+			<div class="tab-panel">
+				<p>其他其他其他其他其他其他其他其他其他其他其他其他其他其他其他其他</p>
+			</div>
+
+	</div>
+</div>
+
+<script type="text/javascript">
+
+var Extend = function(destination, source) {
+    for (var property in source) {
+        destination[property] = source[property]
+    }
+    return destination
+};
+function contains(root, el) {
+    if (root.compareDocumentPosition) return root === el || !!(root.compareDocumentPosition(el) & 16);
+    if (root.contains && el.nodeType === 1) {
+        return root.contains(el) && root !== el
+    }
+    while ((el = el.parentNode)) if (el === root) return true;
+    return false
+};
+function getElementsByClassName(id, className) {
+    var all = document.getElementById(id).getElementsByTagName("div");
+    var elements = new Array();
+    for (var i = 0; i < all.length; i++) {
+        if (all[i].className != className) continue;
+        elements[elements.length] = all[i]
+    }
+    return elements
+};
+function addEventSimple(obj, evt, fn) {
+    if (obj.addEventListener) obj.addEventListener(evt, fn, false);
+    else if (obj.attachEvent) obj.attachEvent("on" + evt, fn)
+};
+var Bind = function(object, fun) {
+    var args = Array.prototype.slice.call(arguments).slice(2);
+    return function() {
+        return fun.apply(object, args.concat(Array.prototype.slice.call(arguments)))
+    }
+};
+var Tween = {
+    Quart: {
+        easeOut: function(t, b, c, d) {
+            return - c * (t /= d) * (t - 2) + b
+        }
+    }
+};
+var CurrentStyle = function(element) {
+    return element.currentStyle || document.defaultView.getComputedStyle(element, null)
+};
+var tabs = function(id, cls, options) {
+    this.container = document.getElementById(id);
+    this.trigger = document.getElementById(id).getElementsByTagName("ul")[0].getElementsByTagName("li");
+    this.count = this.trigger.length;
+    this.panel = getElementsByClassName(id, cls);
+    this.slider = getElementsByClassName(id, "bd")[0];
+    this.Tween = Tween.Quart.easeOut;
+    this.t = this.b = this.c = 0;
+    this.timer = null;
+    this.index = 0;
+    this.setOptions(options);
+    this.onStart = this.options.onStart;
+    this.event = this.options.event;
+    this.timeout = this.options.timeout;
+    this.onFinish = this.options.onFinish;
+    this.change = this.options.change;
+    this.duration = this.options.duration;
+    this.auto = this.options.auto;
+    this.pause = this.options.pause;
+    this.init()
+};
+tabs.prototype = {
+    init: function() {
+        this.trigger[0].className += " " + this.options.currCls;
+        this.panel[0].className += " " + this.options.disCls;
+        if (this.options.animation) {
+            this.container.className += " " + this.options.animation
+        }
+        if (this.options.animatio && this.options.animation == "fade") {
+            this.switchTo(0)
+        }
+        for (var i = 0; i < this.count; i++) { (function(index, that) {
+                addEventSimple(that.trigger[index], that.options.event,
+                function() {
+                    clearTimeout(that.timer);
+                    that.timer = setTimeout(function() {
+                        that.switchTo(index)
+                    },
+                    that.timeout)
+                })
+            })(i, this)
+        }
+        if (this.options.auto) { (function(that) {
+                addEventSimple(that.container, "mouseout",
+                function(e) {
+                    clearTimeout(that.timer);
+                    evt = e || window.event;
+                    relateNode = evt.relatedTarget || evt.toElement;
+                    if (!contains(that.container, relateNode)) {
+                        that.auto = true;
+                        that.timer = setTimeout(Bind(that, that.next), that.pause)
+                    }
+                });
+                addEventSimple(that.container, "mouseover",
+                function() {
+                    if (that.auto) {
+                        clearTimeout(that.timer);
+                        that.auto = false
+                    }
+                })
+            })(this)
+        }
+        if (this.auto) {
+            this.timer = setTimeout(Bind(this, this.next), this.pause)
+        }
+    },
+    setOptions: function(options) {
+        this.options = {
+            timeout: 100,
+            currCls: "on",
+            disCls: "dis",
+            event: "mouseover",
+            duration: 25,
+            change: 350,
+            auto: false,
+            onFinish: function() {},
+            animation: null,
+            pause: 3000
+        };
+        Extend(this.options, options || {})
+    },
+    switchTo: function(n) {
+        clearTimeout(this.timer);
+        n < 0 && (n = this.count - 1) || n >= this.count && (n = 0);
+        if (this.index == n) {
+            return
+        }
+        this.trigger[this.index].className = this.trigger[this.index].className.replace(this.options.currCls, "");
+        if (!this.options.animation) {
+            this.panel[this.index].className = this.panel[this.index].className.replace(this.options.disCls, "")
+        };
+        this.trigger[n].className += " " + this.options.currCls;
+        if (this.options.animation && (this.options.animation == "slide")) {
+            this.target = -Math.abs(this.change) * n;
+            this.t = 0;
+            this.b = parseInt(CurrentStyle(this.slider)["left"]);
+            this.c = this.target - this.b;
+            this.slide()
+        } else if (this.options.animation && (this.options.animation == "fade")) {
+            this.panel[n].style.zIndex = 2;
+            this.fade(this.panel[this.index], 0, 3);
+            this.panel[this.index].style.zIndex = 1;
+            this.fade(this.panel[n], 100, 3);
+            this.panel[n].style.zIndex = 3
+        } else {
+            this.panel[n].className += " " + this.options.disCls;
+            if (this.auto) {
+                this.timer = setTimeout(Bind(this, this.next), this.pause)
+            }
+        }
+        this.onFinish(this.index, n, this.panel[n]);
+        this.index = n
+    },
+    next: function() {
+        var n = this.index + 1;
+        this.switchTo(n)
+    },
+    prev: function() {
+        var n = this.index - 1;
+        this.switchTo(n)
+    },
+    slide: function() {
+        if (this.c && this.t < this.duration) {
+            this.slider.style.left = Math.round(this.Tween(this.t++, this.b, this.c, this.duration)) + 'px';
+            setTimeout(Bind(this, this.slide), 10)
+        } else {
+            this.slider.style.left = this.target + 'px';
+            if (this.auto) {
+                this.timer = setTimeout(Bind(this, this.next), this.pause)
+            }
+        }
+    },
+    fade: function(element, transparency, speed, callback) {
+        if (typeof(element) == 'string') element = document.getElementById(element);
+        if (!element.effect) {
+            element.effect = {};
+            element.effect.fade = 0
+        }
+        clearInterval(element.effect.fade);
+        var speed = speed || 1;
+        var start = (function(elem) {
+            var alpha;
+            if (navigator.userAgent.toLowerCase().indexOf('msie') != -1) {
+                alpha = elem.currentStyle.filter.indexOf("opacity=") >= 0 ? (parseFloat(elem.currentStyle.filter.match(/opacity=([^)]*)/)[1])) + '': '100'
+            } else {
+                alpha = 100 * elem.ownerDocument.defaultView.getComputedStyle(elem, null)['opacity']
+            }
+            return alpha
+        })(element);
+        var self = this;
+        element.effect.fade = setInterval(function() {
+            start = start < transparency ? Math.min(start + speed, transparency) : Math.max(start - speed, transparency);
+            element.style.opacity = start / 100;
+            element.style.filter = 'alpha(opacity=' + start + ')';
+            if (Math.round(start) == transparency) {
+                element.style.opacity = transparency / 100;
+                element.style.filter = 'alpha(opacity=' + transparency + ')';
+                clearInterval(element.effect.fade);
+                if (self.auto && transparency == 100) {
+                    self.timer = setTimeout(Bind(self, self.next), self.pause)
+                }
+            }
+        },
+        20)
+    }
+};
+
+
+
+
+
+var tabs01 = new tabs("tab", "tab-panel", {
+    timeout: 80,//延迟切换时间。默认参数为60;
+    currCls: "on",//设置当前标签（li）class 名。默认参数为"on";
+    disCls: "dis",//控制显示class名。默认参数为"dis";
+    event: "mouseover",//事件类型。默认为"mouseover";
+    onFinish: callback,//回调函数。需要定义callback函数;
+	animation: "slide",//有动画效果设置此参数。参数可选slide/fade (滚动/渐入)
+	auto: true,//是否自动切换。默认为false
+    Pause: 300 //每次自动停顿时间(auto为true时有效)
+});
+
+//回调函数接口
+function callback(n, index, panel) { //切换完成回调函。数参数为：上一个索引值,当前索引值,当前显示块
+    // dosomething
+}
+
+
+</script>
+</body>
+</html>

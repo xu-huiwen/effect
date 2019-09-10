@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>汽车尾气</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		.box {width:500px;height:500px;background:url(bg.png) no-repeat;margin: 0 auto;position:relative;}
+		.wq {
+			background:url(wq.png) no-repeat;position:absolute;
+			-webkit-background-size:100% 100%;
+			background-size:100% 100%;
+		}
+		.wq1 {
+			width:55px;height:39px;top: 185px;left: 310px;
+			-webkit-animation: bubblemove1 2s infinite ease-out;
+			-moz-animation: bubblemove1 2s infinite ease-out;
+			-ms-animation: bubblemove1 2s infinite ease-out;
+			animation: bubblemove1 2s infinite ease-out;
+		}
+		.wq2 {
+			width:31px;height:22px;top: 191px;left: 268px;
+			-webkit-animation: bubblemove2 2s infinite ease-out -1s;
+			-moz-animation: bubblemove2 2s infinite ease-out -1s;
+			-ms-animation: bubblemove2 2s infinite ease-out -1s;
+			animation: bubblemove2 2s infinite ease-out -1s;
+		}
+		/*尾气1*/
+		@-webkit-keyframes bubblemove1 {
+		    0% {
+		    	width:31px;
+		    	height:22px;
+		        left: 310px;
+		        opacity:0;
+		    }
+		    100% {
+		    	width:55px;height:39px;
+		        left: 370px;
+		        opacity: 1;
+		    }
+		}
+		@-moz-keyframes bubblemove1 {
+		    0% {
+		    	width:31px;
+		    	height:22px;
+		        left: 310px;
+		        opacity:0;
+		    }
+		    100% {
+		    	width:55px;height:39px;
+		        left: 370px;
+		        opacity: 1;
+		    }
+		}
+		@-ms-keyframes bubblemove1 {
+		    0% {
+		    	width:31px;
+		    	height:22px;
+		        left: 310px;
+		        opacity:0;
+		    }
+		    100% {
+		    	width:55px;height:39px;
+		        left: 370px;
+		        opacity: 1;
+		    }
+		}
+		@keyframes bubblemove1 {
+		    0% {
+		    	width:31px;
+		    	height:22px;
+		        left: 310px;
+		        opacity:0;
+		    }
+		    100% {
+		    	width:55px;height:39px;
+		        left: 370px;
+		        opacity: 1;
+		    }
+		}
+		/*尾气2*/
+		@-webkit-keyframes bubblemove2 {
+		    0% {
+		    	width:20px;
+		    	height:14px;
+		        left: 268px;
+		        opacity:0;
+		    }
+		    100% {
+		    	width:31px;height:22px;
+		        left: 300px;
+		        top:185px;
+		        opacity: 1
+		    }
+		}
+		@-moz-keyframes bubblemove2 {
+		    0% {
+		    	width:20px;
+		    	height:14px;
+		        left: 268px;
+		        opacity:0;
+		    }
+		    100% {
+		    	width:31px;height:22px;
+		        left: 300px;
+		        top:185px;
+		        opacity: 1
+		    }
+		}
+		@-ms-keyframes bubblemove2 {
+		    0% {
+		    	width:20px;
+		    	height:14px;
+		        left: 268px;
+		        opacity:0;
+		    }
+		    100% {
+		    	width:31px;height:22px;
+		        left: 300px;
+		        top:185px;
+		        opacity: 1
+		    }
+		}
+		@keyframes bubblemove2 {
+		    0% {
+		    	width:20px;
+		    	height:14px;
+		        left: 268px;
+		        opacity:0;
+		    }
+		    100% {
+		    	width:31px;height:22px;
+		        left: 300px;
+		        top:185px;
+		        opacity: 1
+		    }
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<span class="wq wq1"></span>
+		<span class="wq wq2"></span>
+	</div>
+</body>
+</html>

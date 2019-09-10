@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>面包菜单</title>
+<style type="text/css">
+* {margin: 0;padding: 0;border: 0;}
+.icon-btn {width: 45px;height: 40px;position: absolute;right: 0;top: 60px;z-index: 1000;}
+.line-mid,.line-top,.line-bottom {position: absolute;width: 25px;height: 2px;background-color: #000;-webkit-transition: all 0.5s ease;transition: all 0.5s ease;}
+.line-mid {left: 10px;top: 19px;}
+.line-top {content: '';top: -7px;}
+.line-bottom {content: '';top: 7px;}
+
+.icon-close .line-mid {background-color: transparent;}
+.icon-close .line-top,.icon-close .line-bottom {top: 0;background-color: #0091de;}
+.icon-close .line-top {-webkit-transform: rotate(45deg);transform: rotate(45deg);}
+.icon-close .line-bottom {-webkit-transform: rotate(-45deg);transform: rotate(-45deg);}
+
+.nav-bg {background-color: rgba(0,0,0, 0.5);position: absolute;right: 0;top: 60px;width: 0;height: 0;opacity: 0;z-index: 999;-webkit-transition: all 0.5s ease;transition: all 0.5s ease;text-align: center;color: #fff;
+
+	/*开启硬件加速*/
+	-webkit-transform: translate3d(0, 0, 0);;
+	transform: translate3d(0, 0, 0);
+}
+.nav-bg-expand {width: 100%;height: 100%;opacity: 1;top: 0;}
+</style>
+</head>
+<body style="height: 1000px;">
+	<div class="icon-btn">
+		<div class="line-mid">
+			<i class="line-top"></i>
+			<i class="line-bottom"></i>
+		</div>
+	</div>
+	<div class="nav-bg">
+		内容
+	</div>
+<script type="text/javascript">
+function gE(e) {
+	return document.querySelector(e);
+}
+var defaultEvent = function(event) {
+		event = event ? event : window.event;
+		if (event.preventDefault) {
+			event.preventDefault()
+		} else {
+			event.returnValue = false
+		}
+	}
+var iconBtn = gE('.icon-btn'),
+	navBg = gE('.nav-bg');
+iconBtn.addEventListener('touchend', function(e){
+	if (this.classList.contains('icon-close')) {
+		this.classList.remove('icon-close');
+		navBg.classList.remove('nav-bg-expand');
+		document.documentElement.removeEventListener('touchmove', defaultEvent);
+	}
+	else {
+		this.classList.add('icon-close');
+		navBg.classList.add('nav-bg-expand');
+		document.documentElement.addEventListener('touchmove', defaultEvent);
+	}
+})
+</script>
+</body>
+</html>

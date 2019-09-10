@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"> 
+<meta name="robots" content="all" />
+</head>
+
+<body>
+
+<!--控制swf 如无需要可以不加-->
+<a href="javascript:" onClick="changeMusic('swfContent1',1);">换音乐1</a>
+<a href="javascript:" onClick="changeMusic('swfContent1',2);">换音乐2</a>
+<a href="javascript:" onClick="closeMusic('swfContent1');">关闭播发器</a>
+<a href="javascript:" onClick="pauseMusic('swfContent1');">暂停/播发播发器</a>
+<a href="javascript:" onClick="clearMusicBar('swfContent1');">清除播放条</a>
+<a href="javascript:" onClick="reCreateMusic('swfContent1');">刷新播放条</a>
+
+<div id="swfContent1">
+		<h1>audiotg</h1>
+		<p>Alternative content</p>
+		<p>
+			<a href="http://www.adobe.com/go/getflashplayer">
+				<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+			</a>
+		</p>
+	</div>
+</body>
+<script type="text/javascript"  src="tgswfobj_s.js"></script>
+<script language="javascript">
+//关闭声音
+function closeMusic(id) {
+	getSwfObj(id).closeAudio()
+}
+
+//暂停播放声音
+function pauseMusic(id) {
+	getSwfObj(id).pauseAudio()
+}
+
+//切换播放 参数true为false时候切换后不播放
+function changeMusic(id, v) {
+	getSwfObj(id).changeAudio("http://ossweb-img.qq.com/images/audio/music/m" + v + ".mp3", true)
+}
+
+// 动态创建swf 如无需要可以不加
+function clearMusicBar(id) {
+	document.getElementById(id).innerHTML = ""
+}
+
+function reCreateMusic(id) {
+	clearMusicBar(id);
+	insertSwfV2(id, "audiotg.swf?v=" + Math.random(), "400", '30', {
+		autoplay: "false",
+		audio: "http://ossweb-img.qq.com/images/audio/music/m1.mp3"
+	}, {}, "10.0");
+}
+
+// 生成swf
+insertSwfV2("swfContent1", "audiotg.swf?v=" + Math.random(), "400", '30', {
+	autoplay: "false",
+	audio: "http://ossweb-img.qq.com/images/audio/music/m1.mp3"
+}, {}, "10.0");
+</script>
+</html>

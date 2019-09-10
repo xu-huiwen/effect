@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>等比缩放</title>
+<style>
+html,body,ul,h1,h2,h3,p,input,img,figure{margin:0;padding:0;}
+ul,ol{list-style:none;}
+html,body,.content{width:100%;height:100%;overflow: hidden;}
+body{-webkit-user-select:none;font:12px/21px \5FAE\8F6F\96C5\9ED1;}
+.content{position:absolute;width: 320px;left: 0;top: 0;}
+</style>
+</head>
+<body>
+<div class="content">
+	<img width="320" src="test.png" alt="">
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+	var autoScale = function() {
+		setTimeout(function() {
+			var winW = document.documentElement.clientWidth,
+				content = document.querySelector('.content'),
+				scale = (winW / 320).toString().substring(0, 6),
+				cssText = '-webkit-transform: scale(' + scale + ');-webkit-transform-origin: 0 0;';
+			content.style.cssText = cssText;
+		}, 300);
+	};
+	if (document.documentElement.clientWidth > 320) {
+		autoScale();
+	}
+	window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale, false);
+});
+
+</script>
+</body>
+</html>

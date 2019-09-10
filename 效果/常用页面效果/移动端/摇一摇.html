@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>摇一摇功能</title>
+</head>
+<body onload="init()">
+	<p>用力摇一摇你手机</p>
+	<audio class="music" controls="controls">
+	    <source src="http://qjwh.qiniudn.com/music.mp3" type="audio/mpeg">
+	</audio>
+<script>
+var SHAKE_THRESHOLD = 1000;
+var last_update = 0;
+var x = y = z = last_x = last_y = last_z = 0;
+var meta = document.querySelector('.music');
+
+function init() {
+	if (window.DeviceMotionEvent) {
+		window.addEventListener('devicemotion', deviceMotionHandler, false);
+	} else {
+		alert('你的手机不支持摇一摇哦~');
+	}
+}
+function deviceMotionHandler(eventData) {
+	var acceleration = eventData.accelerationIncludingGravity;
+	var curTime = new Date().getTime();
+	if ((curTime - last_update) > 100) {
+		var diffTime = curTime - last_update;
+		last_update = curTime;
+		x = acceleration.x;
+		y = acceleration.y;
+		z = acceleration.z;
+		var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+
+		if (speed > SHAKE_THRESHOLD) {
+			meta.play();
+			alert("摇动了");
+		}
+		last_x = x;
+		last_y = y;
+		last_z = z;
+	}
+}
+</script>
+</body>
+</html>

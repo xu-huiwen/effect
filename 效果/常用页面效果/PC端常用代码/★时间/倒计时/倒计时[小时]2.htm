@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk" />
+    <meta name="robots" content="all" />
+    <meta name="Copyright" content="TENCNET" />
+    <meta name="author" content="Tencent-TGideas" />
+    <title>倒计时</title>
+</head>
+<body>
+    <div class="c">
+        <span class="yh fl">距离世界末日还有</span> <em id="c1_1" class="fl ml5">00</em>
+        <span class="yh fl ml5">天</span> <em id="c1_2" class="fl ml5">00</em>
+        <span class="yh fl ml5">时</span>
+        <em id="c1_3" class="fl ml5">00</em>
+        <span class="yh fl ml5">分</span>
+        <em id="c1_4" class="fl ml5">00</em>
+        <span class="yh fl ml5">秒</span>
+    </div>
+
+    <script type="text/javascript" src="http://apps.game.qq.com/CommArticle/app/reg/gdate.php"></script>
+    <script type="text/javascript">
+    function g(id) {
+        return document.getElementById(id)
+    }
+//单数前面加0
+function zero(s){return s.length==1?"0"+new String(s):s}
+//倒计时 deadline：截止日期，要求格式为：yyyy-MM-dd 或者 yyyy-MM-dd HH:mm:ss或者 yyyy-MM-dd HH:mm:ss.ms
+var now=new   Date(Date.parse(json_curdate.replace(/-/g,   "/")));
+function ShowCountDown(deadline, divname) {
+    var endDate = new   Date(Date.parse(deadline.replace(/-/g,   "/")));
+    if (endDate != null) {
+        leftTime = endDate.getTime() - now.getTime();
+        if (leftTime > 0) {
+            var leftsecond = parseInt(leftTime / 1000);
+            // var day = new String(Math.floor(leftsecond / (60 * 60 * 24)));
+            var hour = new String(Math.floor(leftsecond  / 3600));
+            var minute = new String(Math.floor((leftsecond  - hour * 3600) / 60));
+            var second = new String(Math.floor(leftsecond - hour * 3600 - minute * 60));
+             // g(divname+'_1').innerHTML=zero(day);
+             g(divname+'_2').innerHTML=zero(hour);
+             g(divname+'_3').innerHTML=zero(minute);
+             g(divname+'_4').innerHTML=zero(second);
+        }
+
+    }
+}
+var interval = 1000;
+ window.setInterval(function() {
+    ShowCountDown('2017-12-14 22:22:22', 'c1');
+    now.setSeconds(now.getSeconds() + 1);
+}, interval);
+</script>
+</body>
+</html>

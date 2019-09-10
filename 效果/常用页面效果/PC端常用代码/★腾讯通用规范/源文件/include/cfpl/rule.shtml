@@ -1,0 +1,317 @@
+<!doctype html> 
+<html><script type="text/javascript">/*tag*/PAGE_SPEED_TIME = [new Date().getTime()];</script><head>
+<meta charset="gb2312" /> 
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta name="Copyright" content="Tencent" />
+<meta name="Description" content="腾讯游戏FPS网络游戏 - 穿越火线CrossFire" />
+<meta name="Keywords" content="穿越火线,穿越火线官网,CF官网,穿越火线官方网站,CrossFire,FPS网络游戏,RPK,腾讯游戏" />
+<!-- 设计：zaneye | 重构：nickyxie | 创建： 2012-2-17|  团队博客：http://tgideas.qq.com/ -->
+<title>CFPL官网-穿越火线官方网站-腾讯游戏</title>
+<link href="http://cf.qq.com/cfpl/common.css" rel="stylesheet" /> 
+<style>
+
+#menuListSel01{background: url(http://ossweb-img.qq.com/images/cf/cfpl/ms/nav_bg.jpg) repeat-x 0px 0px;}
+.content { background-color: #f7f7f7; padding-top: 20px; line-height: 1.8;width: 1000px; margin: 0px auto; }
+.content h2 { background-color: #E2E2E2; color:#ffffff; }
+.content ul { padding:10px 20px 30px 20px }
+.toptxt { padding:30px 20px 0px 20px }
+.content h2 span { color:#fff; padding-left: 10px; width: 160px; background-color: #015D6E; height: 30px; line-height: 30px; font-family:'Microsoft Yahei'; font-size: 16px; display: block; }
+.content p { text-indent: 2em; }
+.content li { zoom:1 }
+.index_num { float: left; background: url(http://ossweb-img.qq.com/images/cf/act/a20111102tga/index_icon.png) no-repeat 0px 50%; color:#fff; padding:0px 7px 0px 1px }
+.txt { display: block; overflow: hidden; zoom:1; }
+.content h3 { border-bottom: 1px solid #3176BC; margin-top: 10px; }
+.content h3 span { color:#3176bc; font-size: 14px; height: 32px; line-height: 32px; display:inline-block; display:-moz-inline-stack; zoom:1; *display:inline;
+border-bottom: 2px solid #3176bc }
+.bd table{width:830px; table-layout:fixed; text-align: left; margin: 20px 0px 0px 20px;}
+caption{font-family:'Microsoft Yahei'; font-weight: bold; font-size: 14px; text-align: left;}
+.bd td{padding: 0px 10px; border: 1px solid #ccc;}
+.col1{width: 100px;}
+.column{padding:0px 0px 20px 20px}
+.other{width: 1000px; margin: 0px auto;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<!--#include virtual="/cfpl/top.inc"-->
+  <div class="content">
+    <div class="bd">
+      <h2><span>流程规则</span></h2>
+	  <div class="column">
+		  <h3><span>比赛流程图：</span></h3>
+		  <p>抽签选边->爆破模式->团队竞技->爆破模式</p>
+		  <p>每个模式积1分，先积2分的队伍获胜。</p>
+		  <h3><span>抽签流程图：</span></h3>
+		  <p>裁判指定两队所属的硬币面（正/反）->裁判进行投掷硬币->获胜队伍优先选边</p>
+		  <p>抽签说明：裁判指定两队所属的硬币正反面，裁判进行硬币投掷，猜中队伍获胜，优先选择第一局比赛的潜伏者或保卫者。</p>
+		  <h3><span>选边流程：</span></h3>
+		  <p>爆破模式（投币获胜方选边）->团队竞技-（第一局失败方选边）->爆破模式（第二局失败方选边）</p>
+		  <p>第一局选边由投掷硬币的胜利方优先选择，第二局选边由第一局的失败方优先选择，第三局选边由第二局的失败方优先选择。</p>
+		  <p>注意：出现加赛的情况不需重新抽边。</p>
+		  <table cellspacing="0" >
+			<caption>
+			比赛模式：团队竞技
+			</caption>
+			<tbody>
+			  <tr>
+				<td class="col1">地图：</td>
+				<td>沙漠-1</td>
+			  </tr>
+			  <tr>
+				<td>杀敌数：</td>
+				<td>150</td>
+			  </tr>
+                           <tr>
+				<td>复活时间：</td>
+				<td>3秒</td>
+			  </tr>
+			  <tr>
+				<td>视角：</td>
+				<td>第一人称</td>
+			  </tr>
+			  <tr>
+				<td>胜利条件：</td>
+				<td>优先获得150分队伍胜利。如果比赛中出现自杀或友杀的情况，进行自杀/友杀处罚后，根据分数最高队伍获胜，如果出现两队分数相同，进行加赛</td>
+			  </tr>
+			  <tr>
+				<td>加赛：</td>
+				<td>歼灭模式 巷战 （详见加赛规则）</td>
+			  </tr>
+			  <tr>
+				<td>自杀/友杀处罚：</td>
+				<td>每出现自杀/友杀1次，扣除自杀方/友杀1个分，并给对方加1个人
+				  如出现自杀情况，那么将比赛结束后对自杀方进行人数处罚，然后根据处罚后的比分判出最后的优胜者，如果出现平分状况，进行加赛 </td>
+			  </tr>
+			  <tr>
+				<td>自杀/友杀处罚案例1：</td>
+				<td>最终比分A队150分，B队140分，A队在比赛中出现了3次自杀，在进行自杀处罚后的比分是A队147分（减去3分），B队143分（加3分），最终比分147：143，A队获胜</td>
+			  </tr>
+                          <tr>
+				<td>自杀/友杀处罚案例2：</td>
+				<td>最终比分A队150分，B队149分，A队在比赛中出现了3次自杀，在进行自杀处罚后的比分是A队147分（减去3分），B队152分（加3分），最终比分147：152，B队获胜</td>
+			  </tr>
+			  <tr>
+				<td>自杀/友杀处罚案例3：</td>
+				<td>最终比分A队150分，B队140分，A队在比赛中出现了5次自杀，在进行自杀处罚后的比分是A队145分（减去5分），B队145分（加5分），最终比分145：145，两队平局进行加赛</td>
+			  </tr>
+			  <tr>
+				<td>非人为掉线、死机和退出游戏：</td>
+				<td>如果掉线或退出游戏，比赛不做暂停，选手应快速重新进入游戏继续比赛。如死机或其它不可控原因导致选手长时间（时间大于1分钟）无法进入游戏，裁判应立即暂停比赛并记录好比分，待选手机器恢复后继续进行比赛。</td>
+			  </tr>
+			</tbody>
+		  </table>
+		  <table cellspacing="0" >
+			<caption>
+			比赛模式：爆破模式
+			</caption>
+			<tbody>
+			  <tr>
+				<td class="col1">地图：</td>
+				<td>鹰眼，异域小城，卫星基地，黑色城镇</td>
+			  </tr>
+			  <tr>
+				<td>地图使用规则：</td>
+				<td>每周比赛的地图官方会提前一周公布，便于选手提前准备</td>
+			  </tr>
+			  <tr>
+				<td>回合数：</td>
+				<td>7</td>
+			  </tr>
+			  <tr>
+				<td>队友伤害：</td>
+				<td>开启</td>
+			  </tr>
+			  <tr>
+				<td>视角：</td>
+				<td>第一人称</td>
+			  </tr>
+			  <tr>
+				<td>换边：</td>
+				<td>在结束上半场比赛后，双方换边</td>
+			  </tr>
+			  <tr>
+				<td>胜利条件：</td>
+				<td>根据上下半场各队所获得小分进行相加，分数最高的一队获胜，如果出现平分进行加赛</td>
+			  </tr>
+			  <tr>
+				<td>加赛：</td>
+				<td>歼灭模式 巷战 （详见加赛规则）</td>
+			  </tr>
+			  <tr>
+				<td>自杀/友杀处罚：</td>
+				<td>无</td>
+			  </tr>
+			  <tr>
+				<td>非人为掉线、死机和退出游戏：</td>
+				<td>一回合比赛内非人为引起的掉线、死机或退出游戏超过1人（此处指生还的选手），本回合比赛不算分，重赛本回合。如果非人为引起的掉线、死机或退出游戏不超过1人（此处指生还的选手），本回合比赛继续并算分，掉线选手等待下回合进入游戏。</td>
+			  </tr
+						>
+			</tbody>
+		  </table>
+		  <table cellspacing="0" >
+			<caption>
+			加赛规则：
+			</caption>
+			<tbody>
+			  <tr>
+				<td class="col1">比赛模式：</td>
+				<td>歼灭模式</td>
+			  </tr>
+			  <tr>
+				<td>地图：</td>
+				<td>巷战</td>
+			  </tr>
+			  <tr>
+				<td>回合数：</td>
+				<td>5</td>
+			  </tr>
+			  <tr>
+				<td>队友伤害：</td>
+				<td>开启</td>
+			  </tr>
+			  <tr>
+				<td>换边：</td>
+				<td>根据上一场比赛的选边，进行互换</td>
+			  </tr>
+			  <tr>
+				<td>视角：</td>
+				<td>第一人称</td>
+			  </tr>
+			  <tr>
+				<td>胜利条件：</td>
+				<td>优先获得5分的队伍获胜</td>
+			  </tr>
+			  <tr>
+				<td>自杀/友杀处罚：</td>
+				<td>无</td>
+			  </tr>
+			  <tr>
+				<td>非人为掉线、死机和退出游戏：</td>
+				<td>一回合比赛内非人为引起的掉线、死机或退出游戏超过1人（此处指生还的选手），本回合比赛不算分，重赛本回合。如果非人为引起的掉线、死机或退出游戏不超过1人（此处指生还的选手），本回合比赛继续并算分，掉线选手等待下回合进入游戏。</td>
+			  </tr>
+			</tbody>
+		  </table>
+	  </div>
+      <h2><span>比赛规则</span></h2>
+	  <div class="column">
+		  <h3><span>游戏设置规则</span></h3>
+		  <ul>
+			<li><span class="index_num">01</span><span class="txt">选择分辨率：无限制，但不能使用窗口模式进行比赛。</span></li>
+			<li><span class="index_num">02</span><span class="txt">色彩深度：只可使用32BIT。如有选手违反，一律视作违反比赛规则，取消团队比赛资格。</span></li>
+			<li><span class="index_num">03</span><span class="txt">贴图质量：无限制</span></li>
+			<li><span class="index_num">04</span><span class="txt">弹痕：无限制</span></li>
+			<li><span class="index_num">05</span><span class="txt">弹痕灰尘：无限制</span></li>
+			<li><span class="index_num">06</span><span class="txt">击中效果：无限制</span></li>
+			<li><span class="index_num">07</span><span class="txt">子弹轨迹：无限制</span></li>
+			<li><span class="index_num">08</span><span class="txt">天气效果：无限制</span></li>
+			<li><span class="index_num">09</span><span class="txt">亮度调整：无限制</span></li>
+		  </ul>
+		  <h3><span>比赛规则</span></h3>
+		  <ul>
+			<li><span class="index_num">01</span><span class="txt">参赛人数，5人一队,可添加1位候补选手，1位领队。</span></li>
+			<li><span class="index_num">02</span><span class="txt">选手可自带或使用比赛组织方所提供的鼠标，键盘，耳机和鼠标垫，赛前选手有责任调试好比赛用机，确保鼠标、耳机、键盘在比赛过程中正常使用。</span></li>
+			<li><span class="index_num">03</span><span class="txt">比赛禁止使用任何第三方辅助软件，修改游戏内部内容，如：窗口模式，准心，游戏界面，音效等。如有选手违反此项规则，一律按照使用外挂处理，团队将被取消比赛资格，个人将被禁赛。</span></li>
+			<li><span class="index_num">04</span><span class="txt">比赛中除急救包外，可以使用任何GP点和CF点道具。</span></li>
+			<li><span class="index_num">05</span><span class="txt">比赛过程中禁止使用非CF游戏内正规渠道获取的道具（官方奖励道具除外），或官方未正式发布的道具。</span></li>
+			<li><span class="index_num">06</span><span class="txt">比赛中除队长外禁止使用“全部消息”聊天频道。如果队员使用“全部消息”聊天频道聊天，第一次将被警告，第二次将被判犯规，本局比赛判负1分。</span></li>
+			<li><span class="index_num">07</span><span class="txt">本方选手在比赛进程中，互相之间可以进行口头上或使用“团队信息”聊天频道进行语言沟通。当1名选手不再参与到游戏中（游戏中的角色被消灭）时，则不被允许再和其他队友进行口头或使用“团队信息”聊天频道进行语言沟通。如果队员违反，第一次将被警告，第二次将被判犯规，本局比赛判负1分（只限爆破和歼灭模式）。</span></li>
+			<li><span class="index_num">08</span><span class="txt">比赛地图可使用双穿透点，但不可使用单穿透点。如有选手违反，第一次将被警告，第二次将被判犯规，取消团队比赛资格。</span></li>
+			<li><span class="index_num">09</span><span class="txt">比赛过程中故意使用地图BUG时，第一次将被警告，第二次将被判犯规，取消团队比赛资格。如比赛过程因地图BUG被挤出地图或无法比赛的，该回合继续，不做重赛。</span></li>
+			<li><span class="index_num">10</span><span class="txt">在比赛过程中如果出现由于组织者提供的硬件设备引起的特殊情况，导致比赛不能正常进行，选手应立刻告知裁判人员暂停比赛，由裁判根据当时具体情况进行裁决。</span></li>
+			<li><span class="index_num">11</span><span class="txt">比赛过程中由于选手个人因素（如身体条件）引起的比赛无法正常进行，组委会将不对此负责，选手将以弃权论处。</span></li>
+			<li><span class="index_num">12</span><span class="txt">比赛中战队如果受到两次犯规警告后将失去比赛资格。</span></li>
+			<li><span class="index_num">13</span><span class="txt">比赛过程中对于使用作弊器进行比赛的队伍，一经发现当场取消比赛资格，永久禁赛并取消发放该队应得的奖金和报销费用。</span></li>
+			<li><span class="index_num">14</span><span class="txt">选手参与穿越火线赛事所产生的照片、影像、Replay等资源使用权归腾讯所有，所有参赛选手必须接受后方可参赛。</span></li>
+			<li><span class="index_num">15</span><span class="txt">大赛的最终解释权归腾讯公司所有。</span></li>
+			<li><span class="index_num">16</span><span class="txt">受邀请的6支种子队伍，不得与任何理由参与海选赛。如违反此项规则，组委会将取消该团队的比赛资格，并有权对其做出永久禁赛处罚！</span></li>
+			<li><span class="index_num">17</span><span class="txt">进入全国16强队伍，不得与任何理由参与同届的百城联赛，男女混合赛，全民星赛。如违反此项规则，组委会将取消该团队的比赛资格，并有权对其做出永久禁赛处罚！</span></li>
+			<li><span class="index_num">18</span><span class="txt">已经在海选赛中，获得该赛区前四名的战队成员，不允许再参加其他赛区的海选赛，特殊情况没有取得前四名的战队且战队赛后解散，则战队成员在换人规则和官方公布的其他规则允许的情况下，提前联系当地组委会，经过当地组委会同意后，可代表其他战队参赛。</span></li>
+			<li><span class="index_num">19</span><span class="txt">当比赛过程中出现争议时，战队队长和选手应无条件服从裁判判罚。如果该队对裁判所提出判决有异议，可以通过腾讯客服热线进行投诉，相关的工作人员会跟进处理。</span></li>
+		  </ul>
+	  </div>
+      <h2><span>选手参赛须知</span></h2>
+	  <div class="column">
+		  <ul>
+			<li><span class="index_num">01</span><span class="txt">参赛选手必须年满18周岁，出示身份证件必须出示原件，复印件无效！如无法出示本人有效身份证件的原件，工作人员有权拒绝该选手参赛。</span></li>
+			<li><span class="index_num">02</span><span class="txt">选手有责任确认他们知道，了解并遵守所有的守则，公平竞赛。</span></li>
+			<li><span class="index_num">03</span><span class="txt">选手要求具有职业素养．并表现出良好的体育精神．严禁在比赛过程中以任何理由辱骂对手，辱骂裁判。一旦发生辱骂行为，当值裁判有权将辱骂他人者所在的战队直接取消比赛之歌，事后还要由组委会根据事件的严重程度，考虑是对造事者进行禁赛处罚。</span></li>
+			<li><span class="index_num">04</span><span class="txt">一些有争议的，过激的语言禁止出现，一旦有选手违反，第一次将被警告，第二次将被判犯规，取消团队比赛资格。</span></li>
+			<li><span class="index_num">05</span><span class="txt">若选手发生赛场暴力行为，组委会将取消该选手团队的比赛资格，并有权对其做出永久禁赛处罚！</span></li>
+			<li><span class="index_num">06</span><span class="txt">不能使用的队伍名称包括，但不限于以下的名称：亵渎，伤害任何种族，性，宗教组织，非法毒品使用，或者粗俗的用语。</span></li>
+			<li><span class="index_num">07</span><span class="txt">每支队伍最少需要5名选手，最多可报名6人．指定其中一名场上队员为队长，一名指定为替补，若不报替补人员，则视为没有替补人员，在审核换人名额时 将只按5人计算。大型赛事每支队伍最多更换1名队员。</span></li>
+			<li><span class="index_num">08</span><span class="txt">队长即为队伍的联系人，队长的决定代表整只队伍，有任何问题组委会也只会与队长协调，其他队员与组委会和裁判之间进行的任何商议均被视为无效。</span></li>
+			<li><span class="index_num">09</span><span class="txt">赛前如果对对方战队及对方比赛用机有异议，请赛前提出，赛后裁判和组委会不接受对对方选手身份及比赛用机的投诉。</span></li>
+			<li>大赛赛后双方队长签字，签字后不接受任何对比赛过程和比分相关的投诉。</li>
+		  </ul>
+	  </div>
+    </div>
+  </div>
+		<!--#include virtual="/cfpl/other.inc"-->
+	</div>
+</div>
+
+<script src="http://ossweb-img.qq.com/images/cf/title/cf.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/foot.js"></script>
+<script src="http://pingjs.qq.com/ping_tcss_ied.js"></script>
+<script>
+
+if(typeof(pgvMain) == 'function') pgvMain();//统计代码
+
+function postToWb(){
+	var _t = encodeURI("CFPL总决赛将于2月24日-4月8日落地北京，全程电视、网络直播，单赛季总奖金100万人民币！谁将会CFPL的第一届冠军？let's fire！点击进入CFPL2012总决赛专题：http://cf.qq.com/cfpl/");
+	var _url = encodeURIComponent('');
+	var _appkey = encodeURI('appkey');
+	var _pic = encodeURI('http://ossweb-img.qq.com/images/cf/cfpl/wbcfpl.jpg');
+	var _site = 'http://cf.qq.com';
+	var _u = 'http://v.t.qq.com/share/share.php?url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic+'&title='+_t;
+	window.open( _u,'', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
+}
+
+function dropDownMenu(x, y, h, n) {
+    this._x = document.getElementById(x);
+    this._y = document.getElementById(y);
+    this._timer = null;
+    this._n = n;
+    this._t = 15;
+    this._h = h
+};
+dropDownMenu.prototype = {
+    init: function() {
+        this._x.onmouseover = this._y.onmouseover = new Function(this._n + '.st(true)');
+        this._x.onmouseout = this._y.onmouseout= new Function(this._n + '.st()')
+    },
+    st: function(f) {
+        clearInterval(this._timer);
+        var z = this._n;
+        if (f) {
+            this._timer = setInterval(z + '.sl(1)', this._t); this._x.className="active";
+        } else{ this._timer = setInterval(z + '.sl(-1)', this._t);this._x.className="";}
+    },
+    sl: function(f) {
+        var c = this._y;
+        var h = c.offsetHeight,
+        s = 6;
+        if ((h <= 0 && f != 1) || (h >= this._h && f == 1)) {
+            if (f == 1) {
+                c.style.filter = '';
+                c.style.opacity = 1
+            }
+            clearInterval(this._timer);
+            return
+        };
+        var d = (f == 1) ? Math.ceil((this._h - h) / s) : Math.ceil(h / s),
+        o = h / this._h;
+        c.style.opacity = o;
+        c.style.filter = 'alpha(opacity=' + (o * 100) + ')';
+        c.style.height = h + (d * f) + 'px'
+    }
+};
+var subMenuList01 = new dropDownMenu('menuListSel01', 'subMenuList01', '90', 'subMenuList01');
+subMenuList01.init();
+
+var subMenuList03 = new dropDownMenu('menuListSel03', 'subMenuList03', '120', 'subMenuList03');
+subMenuList03.init();
+</script>
+</body>
+<script src="http://ossweb-img.qq.com/images/js/pagespeed/page_speed_v2.js"></script></html><!--[if !IE]>|xGv00|e76f2f8bed670c9c95b27276a9c9761c<![endif]-->

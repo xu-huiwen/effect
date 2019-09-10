@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>倒计时</title>
+<style type="text/css">
+	* {margin:0;padding:0;border:0;}
+</style>
+</head>
+
+<body>
+<span id="year"></span>年
+<span id="month"></span>月
+<span id="day"></span>天
+<span id="hour"></span>小时
+<span id="minute"></span>分
+<span id="second"></span>秒
+
+
+<script type="text/javascript" src="timeCountDown.js"></script>
+<script type="text/javascript">
+var zxx = {
+    $: function(id){
+        return document.getElementById(id);    
+    },
+    futureDate: Date.UTC(2017, 12, 31, 12),
+    obj: function(){
+        return {
+            sec: zxx.$("second"),
+            mini: zxx.$("minute"),
+            hour: zxx.$("hour"),
+            day: zxx.$("day"),
+            month: zxx.$("month"),
+            year: zxx.$("year")
+        }
+    }
+};
+fnTimeCountDown(zxx.futureDate, zxx.obj());
+</script>
+</body>
+</html>

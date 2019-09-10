@@ -1,0 +1,6 @@
+<public:attach event="onfocus" onevent="sqjd()" />
+<script>
+function sqjd(){
+this.blur();
+}
+</script>

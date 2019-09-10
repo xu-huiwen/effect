@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="GB18030">
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="robots" content="all" />
+	<meta name="author" content="Tencent-TGideas" />
+	<meta name="Copyright" content="Tencent" />
+	<meta http-equiv="Cache-Control" content="max-age=3600" />
+	<style>
+	body, button, input, select, textarea {font: 12px/1.5 tahoma,arial,宋体;}
+	*{margin: 0;padding: 0;}
+	ol, ul {list-style: none;}
+	a {text-decoration: none;}
+	.c:before,.c:after {content:"";display:table}
+.c:after {clear:both}
+.c {zoom:1}
+.pr {position:relative;}
+.pa {position:absolute;}
+.fl {float:left;}
+.fr {float:right;}
+.db {display:block;text-indent:-999em;}
+	a:hover {text-decoration: underline;}
+	.honor-coverflow-showcase {position: relative;}
+	.honor-coverflow-showcase a.controls {color: #999999;font-family: "宋体";font-size: 44px;font-weight: bold;height: 42px;line-height: 1em;position: absolute;text-decoration: none;width: 24px;z-index: 999;}
+	.honor-coverflow-showcase a.previous {padding-bottom: 4px;}
+	.honor-coverflow-showcase ul li {float: left; height: 232px;list-style-type: none;position: relative;width: 168px;}
+	.honor-coverflow-showcase ul li a {display: block;}
+	.honor-coverflow-showcase li a img { border: 0 none;height: 100%;width: 100%;display:block;}
+	.honor-coverflow-showcase {height: 240px;margin: 0 auto;width: 760px;}
+	.honor-coverflow-showcase a.controls {margin-top: -21px;top: 50%;}
+	.honor-coverflow-showcase a.next {padding-top: 4px;right: 0;}
+	.honor-coverflow-showcase a.controls:hover {border-color: #2097FA;}
+	.honor-coverflow-showcase ul {height: 240px;margin: 0 auto;position: relative; width: 680px;}
+	.honor-coverflow-showcase .honor-card-item-get {bottom: 12%;height: 13%;left: 15%;position: absolute;width: 70%;z-index: 1000;}
+	.honor-coverflow-showcase .honor-card-item-get .btn {box-shadow: none;display: block;line-height: 1.8em; padding: 3% 0;vertical-align: middle;white-space: nowrap; width: 100%;}
+	.bx li{ float: left;width: 80px; height: 40px;}
+	.bx{ padding-left: 50px;position: relative;width: 2000px;}
+	.bx a{ display: block;width: 80px; height: 40px;background: #000;border: 1px solid #fff;}
+	.previous1{color: #999999;font-family: "宋体";font-size: 44px;font-weight: bold;height: 42px; top: 230px; left: 0;}
+	.next1{color: #999999;font-family: "宋体";font-size: 44px;font-weight: bold;height: 42px; top: 230px;right: 0;}
+	.w_bx{ width: 670px;overflow: hidden;}
+	</style>
+</head>
+<body>
+<!-- 卡片coverflow (找了好几个插件，这个IE兼容性最好，但这个组件要用到 prototype.js ) -->
+<!-- 插件地址DEMO：http://dev.victorstanciu.ro/experimente/prototype-showcase/#examples -->
+<div class="honor-coverflow-showcase" id="horizontal" style="display:none">
+	<a href="#previous" class="controls previous" rel="previous">&lt;</a>
+	<a href="#next" class="controls next" rel="next">&gt;</a>
+	<!-- [注意：卡片的数量必须是奇数，如：1、3、5、7、9、11、13，否则此插件会报错，略坑！下面是7个] -->
+	<ul>
+		<li>
+			<a href="javascript:;" title="勋爵封臣">
+				<img src="http://ossweb-img.qq.com/images/igame/card/80/800001_b.png" alt="勋爵封臣" />
+			</a>
+			<div class="honor-card-item-get" style="display:none">
+				<a href="javascript:alert('可以点哦');" class="link">一键领取</a>
+			</div>
+		</li>
+		<li>
+			<a href="javascript:;" title="男爵封臣">
+				<img src="http://ossweb-img.qq.com/images/igame/card/80/800002_b.png" alt="男爵封臣" />
+			</a>
+			<div class="honor-card-item-locked" title="男爵封臣">
+				<span class="icon-locked"></span>
+			</div>
+			<div class="honor-card-item-get" style="display:none">
+				<a href="javascript:alert('可以点哦');" class="link">一键领取</a>
+			</div>
+		</li>
+		<li>
+			<a href="javascript:;" title="子爵封臣">
+				<img src="http://ossweb-img.qq.com/images/igame/card/80/800003_b.png" alt="子爵封臣" />
+			</a>
+			<div class="honor-card-item-get" style="display:none">
+				<a href="javascript:alert('可以点哦');" class="link">一键领取</a>
+			</div>
+		</li>
+		<li>
+			<a href="javascript:;" title="伯爵封臣">
+				<img src="http://ossweb-img.qq.com/images/igame/card/80/800004_b.png" alt="伯爵封臣" />
+			</a>
+			<div class="honor-card-item-get" style="display:none">
+				<a href="javascript:alert('可以点哦');" class="link">一键领取</a>
+			</div>
+		</li>
+		<li>
+			<a href="javascript:;" title="我爱我家">
+				<img src="http://ossweb-img.qq.com/images/igame/card/80/800005_b.png" alt="我爱我家" />
+			</a>
+			<div class="honor-card-item-get" style="display:none">
+				<a href="javascript:alert('可以点哦');" class="link">一键领取</a>
+			</div>
+		</li>
+		<li>
+			<a href="javascript:;" title="加入舞团">
+				<img src="http://ossweb-img.qq.com/images/igame/card/80/800006_b.png" alt="加入舞团" />
+			</a>
+			<div class="honor-card-item-get" style="display:none">
+				<a href="javascript:alert('可以点哦');" class="link">一键领取</a>
+			</div>
+		</li>
+		<li>
+			<a href="javascript:;" title="呼朋引伴">
+				<img src="http://ossweb-img.qq.com/images/igame/card/80/800007_b.png" alt="呼朋引伴" />
+			</a>
+			<div class="honor-card-item-get" style="display:none">
+				<a href="javascript:alert('可以点哦');" class="link">一键领取</a>
+			</div>
+		</li>
+	</ul>
+	<div  class="w_bx pr">
+		<ol class="bx c">
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+		</ol>
+	</div>
+	<a href="#" class=" previous1 pa" >&lt;</a>
+	<a href="#" class=" next1 pa" >&gt;</a>
+</div>
+ <script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+<script src="js/min/prototype-min.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/min/showcase-min.js"></script>
+
+<script>
+function domReady(fn) {
+	if (document.addEventListener) { //兼容非IE
+		document.addEventListener("DOMContentLoaded", function() {
+			//注销事件，避免反复触发
+			document.removeEventListener("DOMContentLoaded", arguments.callee, false);
+			fn(); //调用参数函数
+		}, false);
+	} else if (document.attachEvent) { //兼容IE
+		document.attachEvent("onreadystatechange", function() {
+			if (document.readyState === "complete") {
+				document.detachEvent("onreadystatechange", arguments.callee);
+				fn();
+			}
+		});
+	}
+}
+
+domReady(function() {
+	new Showcase.Horizontal(
+		$$("#horizontal ul li"),
+		$$("#horizontal a.controls"), {
+			duration: 0.3,
+			size: 5, //显示个数
+			divId: "horizontal"
+		}
+	);
+});
+
+</script>
+<script>
+var pioI = 0;
+var pioL =$(".bx").find('li').length;
+$(".bx").css("width",$(".bx li").length*40+"px");
+$(".previous1").click(function(){
+	pioI--;
+	if(pioI<0){
+		pioI = 0;
+	}
+	pioShow();
+})
+$(".next1").click(function(){
+	pioI++;
+	if(pioI>pioL-1){
+		pioI = pioL-1;
+	}
+	pioShow();
+})
+function pioShow(){
+	$(".bx").stop(true).animate({
+		"left": "-"+pioI*40+"px"
+	})
+}
+</script>
+</body>
+</html>

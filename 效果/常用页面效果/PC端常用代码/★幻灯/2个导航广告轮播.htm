@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>轮播</title>
+    <style>
+		/*reset*/
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		/*轮播*/
+		.ibanner{height:176px;width:718px;}
+		.ibannerBox{height:176px;overflow:hidden;position:relative;width:718px;}
+		.ibannerHand{bottom:-2px;height:20px;overflow:hidden;right:221px;position:absolute;}
+		.ibannerHand li{background:none repeat scroll 0 0 #2e3546;cursor:pointer;float:left;height:8px;line-height:8px;margin-right:5px;text-indent:-9999px;width:30px;}
+		.ibannerHand .on{background:none repeat scroll 0 0 #972516;}
+		.ibannerImg{height:176px;left:0;position:absolute;top:0;width:503px;}
+		.ibannerImg li{background:url(http://image.sq.wan.com/sq/load.gif) no-repeat scroll center center rgba(0,0,0,0);display:inline;float:left;height:176px;overflow:hidden;width:503px;}
+		.ibannerImg li a{display:block;height:176px;overflow:hidden;}
+		.ibannerImg img{display:block;height:176px;width:100%;}
+		.ibannerList{background:none repeat scroll 0 0 #2e3546;height:176px;position:absolute;right:0;top:0;width:216px;}
+		.ibannerList li{height:35px;overflow:hidden;}
+		.ibannerList .ieven{background:none repeat scroll 0 0 #292f3f;}
+		.ibannerList .ibannerInd{background:none repeat scroll 0 0 #404d6f;}
+		.ibannerList li span{display:inline;float:left;font-size:0;height:0;line-height:0;visibility:hidden;width:0;border-color:#404d6f #cacdd8 #404d6f #404d6f;border-style:solid;border-width:5px;margin:12px 0 0 10px;}
+		.ibannerList .ibannerInd span{visibility:visible;}
+		.ibannerList li a{color:#959dae;display:inline;float:left;height:35px;line-height:35px;margin-left:5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:180px;word-break:keep-all;}
+		.ibannerList .ibannerInd a,.ibannerList li a:hover{color:#d2dbee;}
+    </style>
+</head>
+
+<body>
+    <div class="ibanner">
+        <div class="ibannerBox">
+            <ul class="ibannerImg">
+                <li>
+                    <a href="http://sq.wan.com/activity/garden/" target="_blank">
+                        <img src="http://image5.sq.wan.com/1403857349002.jpg" alt="神曲V3.5版本 神秘家园全新上线" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://sq.wan.com/activity/profession/" target="_blank">
+                        <img src="http://image5.sq.wan.com/1403856395988.jpg" alt="称霸神曲，领主必看！" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://sq.wan.com/news/detail/3_2114.html" target="_blank">
+                        <img src="http://image5.sq.wan.com/1407225930431.jpg" alt="一次性充值 厚“惠”无期" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://sq.wan.com/news/detail/1_2110.html" target="_blank">
+                        <img src="http://image5.sq.wan.com/1407224461564.jpg" alt="双线768服  魔甲铁犀  即将开启" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://sq.wan.com/news/detail/1_2106.html" target="_blank">
+                        <img src="http://image5.sq.wan.com/1407118901406.jpg" alt="双线767服  惊涛龙兽   已开启" />
+                    </a>
+                </li>
+            </ul>
+            <ul class="ibannerHand">
+                <li class="on">
+                    1
+                </li>
+                <li>
+                    2
+                </li>
+                <li>
+                    3
+                </li>
+                <li>
+                    4
+                </li>
+                <li>
+                    5
+                </li>
+            </ul>
+            <ul class="ibannerList">
+                <li>
+                    <span></span><a href="http://sq.wan.com/activity/garden/" target="_blank" title="神曲V3.5版本 神秘家园全新上线">神曲V3.5版本 神秘家园全新上线</a>
+                </li>
+                <li class="ieven">
+                    <span></span><a href="http://sq.wan.com/activity/profession/" target="_blank" title="称霸神曲，领主必看！">称霸神曲，领主必看！</a>
+                </li>
+                <li>
+                    <span></span><a href="http://sq.wan.com/news/detail/3_2114.html" target="_blank" title="一次性充值 厚“惠”无期">一次性充值 厚“惠”无期</a>
+                </li>
+                <li class="ieven">
+                    <span></span><a href="http://sq.wan.com/news/detail/1_2110.html" target="_blank" title="双线768服  魔甲铁犀  即将开启">双线768服  魔甲铁犀  即将开启</a>
+                </li>
+                <li>
+                    <span></span><a href="http://sq.wan.com/news/detail/1_2106.html" target="_blank" title="双线767服  惊涛龙兽   已开启">双线767服  惊涛龙兽   已开启</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.1.min.js"></script>
+<script>
+;(function() {
+	var ibannerList = $(".ibannerList"),
+		ibannerListLi = ibannerList.find("li"),
+		ibannerHand = $(".ibannerHand li"),
+		ibannerImg = $(".ibannerImg");
+
+	if (ibannerListLi.size() > 0) {
+		var mtms, tindex = 0;
+
+		ibannerListLi.eq(0).addClass("ibannerInd");
+
+		ibannerListLi.on("mouseenter", function() {
+			var $this = $(this),
+				index = $this.index();
+
+			ibannerImg.stop().animate({
+				"top": index * -176
+			}, "slow");
+			$this.addClass("ibannerInd").siblings().removeClass("ibannerInd");
+			ibannerHand.eq(index).addClass("on").siblings().removeClass("on");
+			clearTimeout(mtms);
+		}).on("mouseleave", function() {
+			turnPlay();
+		});
+
+		ibannerHand.on("mouseenter", function() {
+			var $this = $(this),
+				index = $this.index(),
+				topVal = 0;
+
+			clearTimeout(mtms);
+
+			$this.addClass("on").siblings().removeClass("on");
+			if (index > 4) {
+				topVal = (index - 4) * -35;
+			} else {
+				topVal = 0;
+			}
+			ibannerList.stop().animate({
+				"top": topVal
+			});
+			ibannerListLi.eq(index).mouseenter();
+			tindex = index;
+		}).on("mouseleave", function() {
+			turnPlay();
+		});
+
+		/* 自动播放 */
+		function turnPlay() {
+			mtms = setTimeout(function() {
+				ibannerHand.eq(tindex).mouseenter();
+				tindex++;
+				if (tindex > ibannerHand.size() - 1) {
+					tindex = 0;
+				}
+				turnPlay();
+			}, 3500);
+		}
+		turnPlay();
+	}
+})();
+</script>
+</body>
+</html>

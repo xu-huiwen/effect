@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图标字体使用</title>
+	<style>
+		body {font-size:100px;text-align:center;}
+		@font-face {
+		    font-family:'icon';
+		    src: url('icon.eot');/* ie6-ie8 */
+		}
+		@font-face {
+		    font-family:'icon';
+		    src: url('icon.ttf');
+		}
+		.icon {
+			font-family: 'icon' !important;
+			-webkit-font-smoothing: antialiased;
+			-webkit-text-stroke-width: 0.2px;
+			-moz-osx-font-smoothing: grayscale;
+		}
+	</style>
+</head>
+<body>
+	<span class="icon">&#x73;</span>
+	<span class="icon">&#x67;</span>
+	<span class="icon">&#x65;</span><br>
+	<a href="http://www.iconfont.cn/" target="_blank" style="color:#00f;font-size:14px;">图标在线制作</a>
+</body>
+</html>

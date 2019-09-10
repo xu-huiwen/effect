@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta content="Tencent" name="Copyright" />
+<title>弹出框内嵌视频</title>
+<style type="text/css"> 
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif;line-height:22px;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{}
+ol{margin:0;padding:0;}
+li{margin-left:40px;}
+
+.videoLay {display: none; height: auto;width: 442px;}
+.close{ color: #E9D6D1;display: block; height: 25px; line-height: 25px; overflow: hidden; text-align: center;text-decoration: none; width: 69px;background: url(http://ossweb-img.qq.com/images/x5/act/a20110509newversion/closebtn.png) no-repeat right bottom transparent; float: right; overflow: hidden; text-indent: -9999px;}
+.swfLay {border: 5px solid #841495; clear: both;width: 442px;} 
+</style>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>弹出框内嵌视频</h1>
+	</div>
+	<div id="main">
+		<h2>一、使用说明</h2>
+		<ol>
+			<li>在页面/body前调用脚本：http://ossweb-img.qq.com/images/js/comm/showDialog.min.js；</li>
+			<li>视频的vid码作为参数调用，以实现不同视频的切换；</li>
+			<li>如果只有一个视频，则视频代码直接写在页面上，不要在js中构建。</li>
+		</ol>
+		<h2>二、实例演示</h2>
+		<a title="播放视频1" onclick="DivShow('8yuoCMirCbC');" href="javascript:void(0)" class="btnPlay">播放视频1</a> 
+		<a title="播放视频2" onclick="DivShow('8VjrRJ5VhEJ');" href="javascript:void(0)" class="btnPlay">播放视频2</a> 
+		<a title="播放视频3" onclick="DivShow('7TBN5QuOrCD');" href="javascript:void(0)" class="btnPlay">播放视频3</a>
+		<div class="videoLay" id="videoLay">
+			<a title="点击关闭" class="close" onclick="DivHide()"href="javascript:void(0)">关闭</a>
+			<p id="swfLay" class="swfLay"></p >
+		</div>
+	</div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/comm/showDialog.min.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript"> 
+//弹出层
+function DivHide(){
+	var flv_s = document.getElementById("swfLay");
+		if (flv_s){flv_s.innerHTML= "";}
+		showDialog.hide('layer');
+}
+
+function DivShow(videoID){
+	if (!videoID) return;
+	var htmls= "<object id=\"flashplayer\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" width=\"443\" height=\"365\">" +
+    				"<param name=\"movie\" value=\"http://cache.tv.qq.com/qqplayerout.swf?v=" + videoID + "&autoplay=1\" />" +
+                    "<param name=\"allowFullScreen\" value=\"true\" />" +
+                    "<param name=\"quality\" value=\"high\" />" +
+                    "<param name=\"wmode\" value=\"transparent\" />" +
+                    "<param name=\"flashvars\" value=\"vid=" + videoID + "&cgi=http%3A//video.qq.com/bin/vrank%3Ftype%3D8%26start%3D49%26end%3D56\">" +
+                    "<embed type=\"application/x-shockwave-flash\" src=\"http://cache.tv.qq.com/qqplayerout.swf?v=" + videoID + "&autoplay=1\" width=\"443\" height=\"365\" wmode=\"transparent\" id=\"flashplayer\" name=\"flashplayer\" quality=\"high\" allowScriptAccess=\"sameDomain\" allowFullScreen=\"true\" flashvars=\"vid=" + videoID + "&cgi=http%3A//video.qq.com/bin/vrank%3Ftype%3D8%26start%3D49%26end%3D56\"></embed>" +
+                    "</object>";  
+	var flv_s = document.getElementById("swfLay");
+		if (flv_s){flv_s.innerHTML=htmls}
+		showDialog.show({  
+			id:"videoLay",
+			bgcolor:"#000",
+			opacity:60
+			});  
+}
+//切换视频
+</script>
+</body>
+</html>

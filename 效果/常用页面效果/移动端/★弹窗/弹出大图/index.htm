@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Document</title>
+	<style>
+		* {margin:0;padding:0;border:0;}
+		.wrap {/*height:2000px;*/}
+		#pop-mask {position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.7);}
+		.pop {position:fixed;left:50%;top:50%;display:none;z-index:999;overflow:auto;
+			width:300px;height:300px;margin-left:-150px;margin-top:-150px;background-color:#00f;border-radius:10px;
+		}
+		.pop-close {color:#fff;}
+	</style>
+</head>
+<body>
+		<div class="wrap">
+			<a href="javascript:showPic('pic1-big.jpg')"><img src="pic1.jpg" alt=""></a>
+			<a href="javascript:showPic('pic2-big.jpg')"><img src="pic2.jpg" alt=""></a>
+		</div>
+		<div class="pop" id="pop1">
+			<div class="pop-pic"></div>
+		</div>
+<script>
+	function gE(e) {
+	    return (typeof (e) == "object") ? e : document.getElementById(e)
+	}
+	function pop(id) {
+		if(!gE('#pop-mask')) {
+			gE(id).style.display = "block";
+			var bgObj = document.createElement("div");
+			bgObj.setAttribute('id', 'pop-mask');
+			document.body.appendChild(bgObj);
+			var conH = document.body.scrollHeight,
+				viewH = document.documentElement.clientHeight;
+			if (conH>viewH) {
+				gE('pop-mask').style.height=conH+"px";
+			}
+			else {
+				gE('pop-mask').style.height=viewH+"px";
+			}
+			hidePop(id);
+		}
+	}
+	function hidePop(id) {
+		gE('pop-mask').addEventListener('click', function(){
+			gE(id).style.display = "none";
+			var bgObj = document.getElementById("pop-mask");
+			document.body.removeChild(bgObj);
+		});
+	}
+	function showPic(pic){
+		document.querySelector('.pop-pic').innerHTML = '<img src="'+pic+'" alt="">'
+		pop('pop1');
+	}
+</script>
+</body>
+</html>

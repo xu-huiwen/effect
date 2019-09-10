@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><script type="text/javascript">/*tag*/PAGE_SPEED_TIME = [new Date().getTime()];</script>
+<head>
+<meta content="text/html; charset=gb2312" http-equiv="Content-Type"><meta name="robots" content="all">
+<meta name="author" content="Tencent-TGideas">
+<meta name="Copyright" content="Tencent">
+<title>浪漫四周年-QQ炫舞官方网站-腾讯游戏</title>
+<meta content="《QQ炫舞》官方网站&mdash;&mdash;最浪漫的舞蹈游戏" name="Description">
+<meta content="QQ炫舞,炫舞,浪漫,四周年,5月,版本专题" name="Keywords">
+<link href="css/comm.css" rel="stylesheet" type="text/css" />
+<script src="http://x5.qq.com/act/a20110706newversion/jscss/newversion.js?d=0401"></script>
+</head>
+<body>
+<div class="wrapper">
+	<!--#include file="head.inc" -->
+	<div class="content">
+        <h2 class="h2_3">03 贴心优化</h2>
+        <ul class="sub_nav" id="tabs">
+				<li><a class="on" title="商城优化" href="javascript:setTabs(0,2)">商城优化</a></li>
+				<li class="last"><a title="漂流瓶优化" href="javascript:setTabs(1,2)">漂流瓶优化</a></li>
+			</ul>
+        <div id="tabs0">
+            <h3>商城优化</h3>
+			<p>● 试穿衣服可以脱下</p>
+			<p>在商城挑选YY时，试穿的服饰不能脱下是不是给您的购物带来很多不便呢？</p>
+			<p>五月新版本给力优化，给您不一样的购物体验！试穿的YY随时可以脱下，挑选时更加随心所欲！</p>
+			<p><span class="font_a">对于一件商城YY，第一次点击，你的人物将试穿该YY</span></p>
+			<p><span class="font_a">第二次点击同一件YY，你的人物将脱下此YY，显示此部件的原始YY</span></p>
+			<p>● 购物车中的物品在玩家余额不足和切换性别时<span class="font_a">不再消失/清空</span></p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+        </div>
+        <div id="tabs1" style="display:none;">
+			<h3>漂流瓶优化</h3>
+			<p>● 提示优化：</p>
+			<p>未参与传递的玩家，系统提示文字改为<span class="font_a">“奖励发放完毕”</span></p>
+			<p>● 投票瓶优化</p>
+			<p>&middot; 投票瓶可以不投票只回复，也可以只投票不回复</p>
+			<p>&middot; 默认状态下不会选中任何选项</p>
+			<p>&middot; 玩家在选中选项后并再次点击后，也可以取消该选项的选中状态。</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+        </div>
+    </div>
+</div>
+<!--#include file="foot.inc" -->
+<script type="text/javascript">function setTabs(tabsCur,total){var a = document.getElementById("tabs").getElementsByTagName("a");document.getElementById("tabs"+tabsCur).style.display="block";a[tabsCur].className="on";for (var j=0;j<total;j++){if (j!=tabsCur) {a[j].className="";document.getElementById("tabs"+j).style.display="none";}}return;}</script>
+</body></html><!--[if !IE]>|xGv00|dc3a4e66beca233dcf8d44f1b2dd28ef<![endif]-->

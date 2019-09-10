@@ -1,0 +1,164 @@
+@charset "gb2312";
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+ol,ul{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+q:before,q:after{content:'';}
+fieldset,img,abbr,acronym{border:0;}
+
+/* footer */
+#footer_ied{text-align:center;line-height:19px;color:#342945;background-color:#000;}
+.wrap_ied{ margin:0 auto;padding:30px;width:940px;}
+.wrap_ied a{color:#342945;}
+#footer_ied p.e{font-size:10px;}
+
+/* basic */
+.cf:before,.cf:after{content:"";display:table;}
+.cf:after{clear:both;}
+.cf{zoom:1;}
+body {font:12px/1.5 tahoma,\5b8b\4f53,sans-serif;padding-top:42px;-webkit-text-size-adjust:none;color:#807dca;}
+a {text-decoration:none;overflow:hidden;}
+a:hover {text-decoration:underline;}
+.wrap {background-repeat:no-repeat;background-position:50% 0;min-width:1000px;}
+.container {width:1000px;margin:0 auto;}
+.hide {display:block;width:0;height:0;overflow:hidden;}
+.pos-r {position:relative;}
+.pos-a,.i-nav a {position:absolute;}
+.fl {float:left;}
+.fr {float:right;}
+.fw-b {font-weight:bold;}
+.db,.i-nav a,.nav a,.tab-a a,.tab-i a,.icon-n {display:block;text-indent:-999em;}
+.sp1,.tab-a .on,.pic-w,.tit-w,.txt1,.ad-image-bg,.tab-i .on,.icon-n,.txt2 {background-image:url(images/sp1.png);background-repeat:no-repeat;}
+
+.w1 {width:795px;}
+.mt1 {margin-top:30px;}
+.mt2 {margin-top:5px;}
+.mt3 {margin-top:10px;}
+.c1 {color:#784aaa;}
+.c2 {color:#c9c8e6;}
+.fz1 {font-size:14px;}
+
+/* 首页 */
+#index .wrap {background-image:url(images/i-rp.jpg);background-color:#000;}
+#index .container {background:url(images/i-bg1.jpg) no-repeat;}
+.i-nav {height:838px;background:url(images/i-bg2.jpg) no-repeat 0 100%;}
+	.i-nav li {width:0;}
+		.i-nav1 {width:224px;height:141px;left:49px;top:489px;}
+		.i-nav2 {width:227px;height:152px;left:201px;top:632px;}
+		.i-nav3 {width:194px;height:216px;left:478px;top:532px;}
+		.i-nav4 {width:229px;height:228px;left:691px;top:464px;}
+
+/* 子页 */
+.sub {background:url(images/body.jpg);}
+.sub .wrap {background-image:url(images/rp.jpg);}
+.sub .container {background:url(images/hd-b.jpg) no-repeat 0 220px;}
+
+.head {background:url(images/hd-t.jpg) no-repeat;height:442px;}
+	.logo {width:192px;height:103px;left:428px;top:0;}
+	.btn-wb {width:109px;height:42px;left:878px;top:1px;}
+	.nav {left:0;top:321px;}
+		.nav li {float:left;height:110px;}
+		.nav1,.nav4 {width:260px;}
+		.nav2,.nav3 {width:240px;}
+		    .nav .on {cursor:default;}
+			.nav a {width:100%;height:100%;}
+			.nav .on,.nav a:hover {background-image:url(images/nav.jpg);background-repeat:no-repeat;}
+			.nav2 .on,.nav2 a:hover {background-position:-260px 0;}
+			.nav3 .on,.nav3 a:hover {background-position:-500px 0;}
+			.nav4 .on,.nav4 a:hover {background-position:-740px 0;}
+.content {padding:30px 0;}
+.box1 {width:945px;border:1px solid #14143c;padding:7px;margin:0 auto;}
+	.box1-i {background-color:#141337;}
+	
+/* 武器篇 */
+.tab-a li {float:left;width:157px;height:37px;}
+.tab-a .tab-a6 {width:160px;}
+	.tab-a a {width:100%;height:100%;}
+	.tab-a .on {cursor:default;}
+	.tab-a1 .on {background-position:0 -37px;}
+	.tab-a2 .on {background-position:-157px -37px;}
+	.tab-a3 .on {background-position:-314px -37px;}
+	.tab-a4 .on {background-position:-471px -37px;}
+	.tab-a5 .on {background-position:-628px -37px;}
+	.tab-a6 .on {background-position:-785px -37px;}
+.list-w {padding:0 0 37px 37px;}
+	.list-w-i {float:left;margin:37px 37px 0 0;display:inline;padding:10px;width:394px;background-color:#111030;border:1px solid #201f41;}
+	.pic-w {padding:10px;width:212px;height:293px;background-position:0 -75px;}
+		.pic-w img {display:block;}
+	.txt-w {width:154px;}
+		.tit-w {width:154px;height:27px;line-height:26px;text-align:center;background-position:-233px -75px;color:#cfc4ff;}
+.list1 li {float:left;width:100%;line-height:16px;margin-top:15px;}
+	.txt1 {display:block;width:46px;height:17px;line-height:16px;text-align:center;background-position:-233px -103px;color:#d7adff;float:left;margin-right:10px;}
+.txt-sm {padding:37px 0 0 37px;}
+
+/* 技能篇 */
+.tb1 {padding:37px;}
+	.tb1 table {width:100%;}
+		.tb1 th,.tb1 td {height:35px;border:1px solid #141337;text-align:center;}
+		.tb1 th {background-color:#050515;}
+		.tb1 td {background-color:#211843;}
+		.tb1 .txt-jnms {text-align:left;width:600px;padding:10px 20px;text-align:justify;line-height:22px;}
+
+/* 装备篇 */
+.ad-preloads {position: absolute;left: -9000px;top: -9000px;}
+.ad-gallery {padding:27px;}
+	.ad-image-bg {width:871px;height:633px;padding:10px;background-position:0 -390px;}
+		.ad-image-wrapper {position:relative;width:100%;height:100%;overflow:hidden;}
+			.ad-loader {position:absolute;z-index:10;left:48%;top:48%;}
+			.ad-image {position:absolute;z-index:9;}
+				.ad-image img {display:block;}
+				.ad-image-description {position:absolute;left:0;bottom:0;font-family:Microsoft Yahei;font-size:18px;color:#5560c8;padding:0 0 20px 20px;}
+			.ad-next,.ad-prev {display:none;}
+	.ad-nav {margin-top:15px;padding:0 26px;width:839px;position:relative;}
+		.ad-back,.ad-forward {width:26px;height:85px;position:absolute;top:0;cursor:pointer;}
+		.ad-back {background:url(images/prev.png) no-repeat 0 50%;left:0;}
+		.ad-forward {background:url(images/next.png) no-repeat 100% 50%;right:0;}
+		.ad-thumbs {width:100%;overflow:hidden;}
+			.ad-thumb-list {width:9999px;}
+				.ad-thumb-list li {float:left;padding-right:13px;display:inline;}
+					.ad-thumb-list img {display:block;border:5px solid #080722;}
+
+/* 副本篇 */
+.tab-i {background-position:0 -1045px;}
+.tab-i li {float:left;width:315px;height:66px;}
+	.tab-i a {width:100%;height:100%;}
+	.tab-i .on {cursor:default;}
+	.tab-i1 .on {background-position:0 -1112px;}
+	.tab-i2 .on {background-position:-315px -1112px;}
+	.tab-i3 .on {background-position:-630px -1112px;}
+.ct-i {padding:35px;line-height:20px;}
+	.icon-n {width:65px;height:59px;margin-right:5px;}
+	.icon-n1 {background-position:-388px -75px;}
+	.icon-n2 {background-position:-454px -75px;}
+	.icon-n3 {background-position:-520px -75px;}
+.line1 {border-bottom:1px solid #1d1c50;padding-bottom:20px;}
+.txt-fbjj {width:91px;height:24px;background-position:-586px -75px;margin-bottom:5px;}
+.txt-fbbo {width:104px;height:24px;background-position:-586px -100px;margin-bottom:5px;}
+.txt-fbjt {width:90px;height:24px;background-position:-691px -75px;margin-bottom:5px;}
+	
+	/* 副本BOSS */
+	.slide {padding:0 30px;width:735px;height:272px;overflow:hidden;margin-top:15px;}
+		.slide-i {width:713px;border:1px solid #070617;background-color:#100f2b;padding:20px 10px;height:230px;overflow:auto;}
+		.slide-t {width:500px;text-align:justify;}
+		.slide-p {width:193px;}
+			.slide-p img {display:block;}
+		.slide .jcarousel-prev,.slide .jcarousel-next {height:200px;margin-top:-100px;}
+	.jcarousel-container {width:735px;}
+	.jcarousel-clip {width:735px;}
+	.jcarousel-prev,.jcarousel-next {width:30px;position:absolute;top:50%;cursor:pointer;}
+	.jcarousel-prev {left:0;background:url(images/prev.png) no-repeat 0 50%;}
+	.jcarousel-next {right:0;background:url(images/next.png) no-repeat 100% 50%;}
+	.jcarousel-prev-disabled,.jcarousel-next-disabled {display:none !important;}
+	
+	.txt2 {display:block;width:76px;height:17px;line-height:16px;text-align:center;color:#d7adff;float:left;background-position:-280px -103px;margin:2px 5px 0 0;}
+	
+	/* 副本截图 */
+	.list-fbjt {padding:0 30px;margin-top:20px;width:735px;overflow:hidden;}
+		.list-fbjt ul {width:750px;}
+			.list-fbjt li {float:left;width:235px;margin-right:15px;display:inline;}
+	
+		.list-fbjt .jcarousel-prev,.list-fbjt .jcarousel-next {height:155px;margin-top:-77px;}
+
+

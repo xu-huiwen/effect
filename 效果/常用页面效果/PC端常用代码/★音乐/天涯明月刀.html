@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="all" />
+<title></title>
+<link rel="stylesheet" href="http://ossweb-img.qq.com/images/wuxia/web201308/web201308.css?v=1.4" />
+</head>
+
+<body class="pmedia">
+
+
+<div id="wrapper">
+	<div class="main">
+
+	
+
+
+		<div class="acontent">
+			<div class="alist">
+				<ul id="awrap">
+					<li id="awrap0" onclick="aplay(this,0)"><span class="alnum">01</span> <span class="altit">创角景</span> <span class="altim">03:03</span> <a href="###" class="abtnp" id="aBtn0">播放/暂停</a><a href="#" target="_blank" class="abtnd" title="下载" id="adtd0">下载</a> </li>
+					<li id="awrap1" onclick="aplay(this,1)"><span class="alnum">02</span> <span class="altit">重归九华</span> <span class="altim">01:49</span> <a href="###" class="abtnp" id="aBtn1">播放/暂停</a><a href="#" target="_blank" class="abtnd" title="下载" id="adtd1">下载</a>
+					</li>
+					<li id="awrap2" onclick="aplay(this,2)"><span class="alnum">03</span> <span class="altit">江南</span> <span class="altim">01:22</span> <a href="###" class="abtnp" id="aBtn2">播放/暂停</a><a href="#" target="_blank" class="abtnd" title="下载" id="adtd2">下载</a> </li>
+					<li id="awrap3" onclick="aplay(this,3)"><span class="alnum">04</span> <span class="altit">夜闯郡王府</span> <span class="altim">02:03</span> <a href="###" class="abtnp" id="aBtn3">播放/暂停</a><a href="#" target="_blank" class="abtnd" title="下载" id="adtd3">下载</a>
+					</li>
+					<li id="awrap4" onclick="aplay(this,4)"><span class="alnum">05</span> <span class="altit">审问江风</span> <span class="altim">02:58</span> <a href="###" class="abtnp" id="aBtn4">播放/暂停</a><a href="#" target="_blank" class="abtnd" title="下载" id="adtd4">下载</a> </li>
+					<li id="awrap5" onclick="aplay(this,5)"><span class="alnum">06</span> <span class="altit">时光</span> <span class="altim">04:08</span> <a href="###" class="abtnp" id="aBtn5">播放/暂停</a><a href="#" target="_blank" class="abtnd" title="下载" id="adtd5">下载</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="dpeoson"></div>
+	</div>
+</div>
+
+<div id="audioWrap" style="position:absolute;left:-1000px;">
+	<p>请安装flash播放器</p>
+	<p>
+		<a href="http://www.adobe.com/go/getflashplayer">
+			<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+		</a>
+	</p>
+</div>
+
+<input id='hidSafeHost' type="hidden" name='hidSafeHost' value='http://wuxia.qq.com'></input>
+
+<script src="http://ossweb-img.qq.com/images/js/basic/tgswfobj_s.js"></script>
+<script>
+function _g(id) {
+	return document.getElementById(id);
+}
+function addEventSimple(obj, evt, fn) {
+	if (obj.addEventListener) obj.addEventListener(evt, fn, false);
+	else if (obj.attachEvent) obj.attachEvent('on' + evt, fn)
+}
+	var _adata = ["1.mp3", "2.mp3", "3.mp3", "4.mp3", "5.mp3", "6.mp3"],
+		_rUrl = "http://ossweb-img.qq.com/images/wuxia/web201308/audio/";
+	for (var _i = 0, _len = _adata.length; _i < _len; _i++) {
+		_g("adtd" + _i).href = _rUrl + _adata[_i]
+	}
+	var _curAudio = 0,
+		_curState = 0;
+
+	function pauseMusic() {
+		getSwfObj("audioWrap").pauseAudio()
+	}
+
+	function changeMusic(v) {
+		getSwfObj("audioWrap").changeAudio(_rUrl + v, true)
+	}
+
+	function addAudio(aurl) {
+		insertSwfV2("audioWrap", "http://ossweb-img.qq.com/images/audio/audiotg.swf?v=" + Math.random(), "10", '10', {
+			autoplay: "false",
+			audio: aurl
+		}, {}, "10.0");
+	}
+
+	function aplay(node, id) {
+		_g("awrap" + _curAudio).className = "";
+		node.className = "cur";
+		if (id === _curAudio) {
+			if (_curState === 1) {
+				_curState = 0;
+				_g("aBtn" + id).className = "abtnp";
+				_g("awrap" + id).className = "";
+			} else {
+				_curState = 1;
+				_g("aBtn" + id).className = "abtns";
+				pgvSendClick({
+					hottag: 'media.audio.' + id
+				});
+			}
+			pauseMusic();
+		} else {
+			_curState = 1;
+			_g("aBtn" + _curAudio).className = "abtnp";
+			_g("aBtn" + id).className = "abtns";
+			changeMusic(_adata[id]);
+			_curAudio = id;
+			pgvSendClick({
+				hottag: 'media.audio.' + id
+			});
+		}
+	}
+
+	addEventSimple(window, "load", function() {
+		_g("wrapper").className = "wrapper";
+		addAudio(_rUrl + _adata[0]);
+	})
+</script>
+
+</body>
+
+</html>

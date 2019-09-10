@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{height:200px;}
+ol{margin:0;padding:0;}
+li{margin-left:40px;}
+.unlogin{padding-left:26px;}
+</style>
+<title>登录示例</title>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>登录示例</h1>
+	</div>
+	<div id="main">
+		<h2>一、使用说明</h2>
+		<ol>
+			<li>在页面尾部，'/body'前调用：http://ossweb-img.qq.com/images/js/login/loginmanagerv2_min.js 、定义“LoginManager.checkLogin()”；</li>
+			<li>登录前的ID名为：unlogin、登录后的ID名：logined；</li>
+			<li>请充分测试登录前、后的页面效果，预留足够的位置。</li>
+		</ol>
+	　　<h2>二、实例演示（示例本地无法运行，具体使用方法请查看页面源文件；）</h2>
+		<div id="unlogin" class="unlogin">
+			<a href="javascript:LoginManager.login();">登录</a>
+		</div>
+		<!--unlogin：登录前状态-->
+		<div id="logined" style="display:none;">
+			<p><span id='login_nickname_span'></span>（<span id='login_qq_span'></span>）您好！</p>
+			<p><a href="javascript:LoginManager.logout();">注销</a></p>
+		</div>
+		<!--logined：登录状态-->
+		
+	</div>
+</div>
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/login/loginmanagerv2_min.js" charset="gb2312"></script>
+<script type="text/javascript">
+    LoginManager.checkLogin(function(){
+        $E("#login_qq_span").innerHTML = LoginManager.getUserUin();//获取qq号码       
+    });
+</script>
+<!--登录js-->
+</body>
+</html>

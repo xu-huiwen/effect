@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style type="text/css">
+@charset "gb2312";
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{height:500px;}
+
+/*reset*/
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif}h1,h2,h3,h4,h5,h6{font-size:100%}address,em,i,b{font-style:normal}small{font-size:12px}ul,ol{list-style:none}a{text-decoration:none}a:hover{text-decoration:underline}sup{vertical-align:text-top}sub{vertical-align:text-bottom}legend{color:#000}fieldset,img{border:0}button,input,select,textarea{font-size:100%;outline:none}textarea{resize:none}table{border-collapse:collapse;border-spacing:0}
+/*love wall*/
+#love-wall-wrap{position:relative;border:4px solid #f60;height:400px;margin:20px auto;overflow:hidden;background-color:#000	-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);-moz-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);box-shadow: 4px 4px 4px rgba(0,0,0,0.2);}
+.love-walls{width:100px;height:50px;background-color:#f60;border:2px solid #fff}
+/*css3根据实际设计效果修改*/
+.love-walls{
+	-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+	-moz-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+	box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+}
+
+</style>
+<title>爱墙示例 - 腾讯游戏</title>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>爱墙示例</h1>
+	</div>
+	<div id="main">
+		<p>1、引入统一脚本：http://ossweb-img.qq.com/images/js/comm/loveWall.min.js；</p>
+		<p>2、初始化： loveWall.init("爱墙容器ID",宽度,高度)； </p>
+		<p>3、样式要求：love-wall-wrap为容器id，可以自定义；爱墙显示的class名必须为love-walls，关闭的样式名为close-walls，样式的内容根据稿调整；</p>
+		<p>4、详情请查看源文件，一般情况下爱墙个数不能小于3个，大于12个（即“div class="love-walls"”的个数）。</p>
+		<!--爱墙结构开始-->
+		<div id="love-wall-wrap">
+			<div class="love-walls"><a href="#" class="close-walls">×</a></div>
+			<div class="love-walls"><a href="#" class="close-walls">×</a></div>
+			<div class="love-walls"><a href="#" class="close-walls">×</a></div>
+			<div class="love-walls"><a href="#" class="close-walls">×</a></div>
+			<div class="love-walls"><a href="#" class="close-walls">×</a></div>
+			<div class="love-walls"><a href="#" class="close-walls">×</a></div>
+			<div class="love-walls"><a href="#" class="close-walls">×</a></div>
+			<div class="love-walls"><a href="#" class="close-walls">×</a></div>
+			<div class="love-walls"><a href="#" class="close-walls">×</a></div>
+		</div>
+		<!--爱墙结构结束-->
+	</div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/comm/loveWall.min.js"></script>
+<script> 
+	loveWall.addListener(window,"load",function(){
+	loveWall.init("love-wall-wrap",800,400);
+	});
+</script>
+</body>
+</html>

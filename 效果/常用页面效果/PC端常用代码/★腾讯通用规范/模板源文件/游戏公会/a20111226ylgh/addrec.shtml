@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-CP" />
+<meta name="Description" content="御龙在天官方网站" />
+<meta name="Keywords" content="御龙在天" />
+<title>御龙在天-腾讯游戏公会-腾讯游戏</title>
+<link href="commen.css" type="text/css" rel="stylesheet" />
+<style type="text/css">
+.sub_titlelnk{color:#ff8a00; float:right;}
+.sub_cnt{background-position:-770px 0; background-repeat:repeat-y; padding:13px 12px 0 11px;}
+	.sub_box{border:1px solid #000000; background:#ffffff; height:742px;}
+		.publish{padding:40px 85px 0 85px;}
+			.publish_list{padding:0 0 40px 90px; position:relative; overflow:hidden; _zoom:1;}
+				.publish_bdr{border:1px solid #c7dbe6; float:left; margin:0 20px 0 0;}
+				.publish_title{position:absolute; font-size:14px; color:#515151; left:0; top:5px; font-weight:normal;}
+					.publish_str{color:#b00000; padding:0 5px 0 0;}
+				.publish_input{width:375px; height:32px; line-height:32px; text-indent:5px;}
+				.publish_chk{display:block; width:81px; height:26px; line-height:26px; text-align:center; background-position:-2595px -36px; color:#4a789f; float:left; margin:4px 0 0 0;}
+				.publish_text{width:370px; height:90px; padding:5px; font-size:12px; overflow:auto;}
+				.publish_ltd{padding:10px 0 0 0; color:#9b9b9b; float:left; width:200px;}
+			.publish_submit{display:block; width:85px; height:30px; text-indent:-9999px; overflow:hidden; background-position:-2676px -36px; margin:0 auto;}
+.pops_bg { background: url(http://ossweb-img.qq.com/images/gh/web2011/lol/pops_bg.png) no-repeat;}
+.pops { width: 358px; height: 188px; overflow: hidden; position: absolute;}
+	.pops_cnt { width: 338px; height: 168px; background-position: -358px 0; position: absolute; top: 10px; left: 10px; z-index: 10;}
+	.pops_deco { width: 100%; height: 100%; filter: alpha(opacity=50); opacity: 0.5;}
+		.pops_para { height: 125px; text-align: center; overflow: hidden;}
+			.para_lnk { color: #FF6000;}
+		.pops_suc { font-size: 14px; color: #5A9A00; line-height: 180px;}
+		.pops_normal { line-height: 125px; background: #FFFFFF; color: #4C4C4C;}
+		.pops_cls { display: block; width: 81px; height: 26px; line-height: 26px; text-align: center; color: #FFFFFF; margin: 0 auto; font-size: 14px;}
+</style>
+</head>
+<body id="recruit">
+<div class="banner shadow" id="banner">
+	<ul class="banner_box">
+		<li class="banner_left">
+			<h2 class="hidden">加入腾讯公会的三大优势</h2>
+			<ol>
+				<li>结交志同道合的朋友</li>
+				<li>参与活动，获得公会独有的丰富奖励</li>
+				<li>游戏激活码轻松拿</li>
+			</ol>
+		</li>
+		<li class="banner_right">
+			<h2 class="hidden">入驻腾讯公会的四大优势</h2>
+			<ol>
+				<li>年度明星公会评选，入驻终极荣誉殿堂</li>
+				<li>海量特权和激活码</li>
+				<li>最即时的官方活动通知和最丰富的活动奖励</li>
+				<li>实用的公会管理工具</li>
+			</ol>
+		</li>
+		<li><a href="#" class="banner_close spr" id="banner_close"><strong class="hidden">关闭</strong></a></li>
+	</ul>
+</div>
+<div class="wrap">
+<div class="header">
+	<h1 class="hidden">英雄联盟公会系统</h1>
+	<div class="nav">
+		<a href="index.shtml" class="nav_lnk lnk1 spr"><strong class="hidden">首页</strong></a>
+		<a href="news.shtml" class="nav_lnk lnk2 spr"><strong class="hidden">新闻公告</strong></a>
+		<a href="list.shtml" class="nav_lnk lnk3 spr"><strong class="hidden">公会列表</strong></a>
+		<a href="sort.shtml" class="nav_lnk lnk4 spr"><strong class="hidden">排行榜</strong></a>
+		<a href="recruit.shtml" class="nav_lnk lnk5 spr"><strong class="hidden">招聘信息</strong></a>
+	</div>
+	<div class="search">
+		<input class="search_input" />
+		<a href="search.shtml" class="search_submit"><strong class="hidden">搜索</strong></a>
+	</div>
+</div>
+<div class="content">
+	<div class="side_left">
+		<div class="log has_ass spr">
+			<p class="log_line">欢迎您，<strong class="str_person">miumiu</strong></p>
+			<p class="log_line">您是<strong class="str_ass">迪洛电竞AVA分会</strong>的会长/副会长/成员</p>
+			<p class="log_line"><a class="log_go" href="#"><strong class="hidden"></strong></a></p>
+			<ul class="ass_info">
+				<li>已入驻公会：<strong class="str_num">464654</strong>个</li>
+				<li>已加入公会：<strong class="str_num">464654</strong>个</li>
+			</ul>
+		</div>
+		<div class="log no_ass spr" style="display:none;">
+			<p class="log_line"><span class="str_unlogin">你尚未加入任何公会</span></p>
+			<p class="log_line"><a class="log_go" href="#"><strong class="hidden"></strong></a></p>
+			<p class="log_line"><a class="log_go" href="#"><strong class="hidden"></strong></a></p>
+			<ul class="ass_info">
+				<li>已入驻公会：<strong class="str_num">464654</strong>个</li>
+				<li>已加入公会：<strong class="str_num">464654</strong>个</li>
+			</ul>
+		</div>
+		<div class="help side_box spr">
+			<h2 class="side_title">帮助信息</h2>
+			<ul class="help_box">
+				<li><span class="side_dot">·</span><a href="#" class="help_lnk">哈哈哈哈哈</a></li>
+				<li><span class="side_dot">·</span><a href="#" class="help_lnk">哈哈哈哈哈</a></li>
+				<li><span class="side_dot">·</span><a href="#" class="help_lnk">哈哈哈哈哈</a></li>
+				<li><span class="side_dot">·</span><a href="#" class="help_lnk">哈哈哈哈哈</a></li>
+				<li><span class="side_dot">·</span><a href="#" class="help_lnk">哈哈哈哈哈</a></li>
+			</ul>
+		</div>
+		<div class="flink side_box spr">
+			<h2 class="side_title">友情链接</h2>
+			<ul>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="sub sub_spr">
+		<h2 class="sub_title">招聘信息 > 发布招聘信息</h2>
+		<div class="sub_cnt sub_spr">
+			<div class="sub_box">
+				<ul class="publish">
+					<li class="publish_list">
+						<strong class="publish_title"><span class="publish_str">*</span>公会地址：</strong>
+						<input type="text" class="publish_input publish_bdr" />
+						<a href="#" class="publish_chk sub_spr">检测</a>
+					</li>
+					<li class="publish_list">
+						<strong class="publish_title"><span class="publish_str">*</span>公会logo：</strong>
+						<a href="#" class="publish_bdr"><img src="img/pic.jpg" width="100" height="100" alt="" /></a>
+					</li>
+					<li class="publish_list">
+						<strong class="publish_title"><span class="publish_str">*</span>公会地址：</strong>
+						<textarea class="publish_text publish_bdr"></textarea>
+						<p class="publish_ltd">90/100</p>
+					</li>
+				</ul>
+				<a href="#" class="publish_submit sub_spr">发布</a>
+			</div>
+		</div>
+		<div class="pager sub_spr"></div>
+	</div>
+</div>
+<div class="footer">
+	<div class="footer_box">
+		<a href="http://game.qq.com/" target="_blank" title="腾讯游戏" class="tg"><strong class="hidden">腾讯游戏</strong></a>
+		<div class="footer_detail">
+			<p><a class="footer_lnk" href="http://game.qq.com/portal2010/about.htm" target="_blank">关于腾讯游戏</a><span class="footer_div">|</span><a class="footer_lnk" href="http://www.qq.com/contract.shtml" target="_blank">服务条款</a><span class="footer_div">|</span><a class="footer_lnk" href="http://adver.qq.com/" target="_blank">广告服务</a><span class="footer_div">|</span><a class="footer_lnk" href="http://game.qq.com/hr/" target="_blank">腾讯游戏招聘</a><span class="footer_div">|</span><a class="footer_lnk" href="http://service.qq.com/" target="_blank">腾讯游戏客服</a><span class="footer_div">|</span><a class="footer_lnk" href="http://game.qq.com/portal2010/business.htm" target="_blank">商务合作</a><span class="footer_div">|</span><a class="footer_lnk" href="http://www.qq.com/map/" target="_blank">网站导航</a></p>
+			<p class="footer_small">COPYRIGHT &copy; 1998 – 2011 TENCENT. ALL RIGHTS RESERVED.</p>
+			<p class="footer_right"><a class="footer_lnk" href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank">腾讯公司版权所有</a></p>
+			<p class="footer_small">2011 Riot Games Inc. ALL RIGHTS RESERVED.</p>
+		</div>
+	</div>
+</div>
+</div>
+<script type="text/javascript" src="http://pingjs.qq.com/ping_tcss_ied.js"></script>
+<script type="text/javascript">
+if(typeof(pgvMain) == 'function') pgvMain();
+(function(){
+	var $=function(o){return document.getElementById(o);}
+	$("banner_close").onclick=function(){
+		$("banner").style.display="none";
+		return false;
+	}
+})();
+</script>
+</body>
+</html>

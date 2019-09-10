@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>滚动到一定区域固定js</title>
+	<style>
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		.head,.main {background-color:#ccc;width:1000px;margin: 0 auto;}
+		.head {height:300px;}
+		.main {margin-top:30px;height:3500px;}
+
+		.float-ct {width:100px;height:100px;background-color:#f00;}
+		.float,.fixed {left: 50%;margin-left:505px;}
+		.float {position:absolute;top:330px !important;}/* important必须有，兼容ie6 */
+		.fixed {
+			position:fixed;top:0;
+			_position:absolute;_top:expression(eval(document.documentElement.scrollTop));_bottom:auto;/*ie6 fixed*/
+		}
+		* html {background-image:url(about:blank);background-attachment:fixed;}/*解决 ie6 Fixed闪动问题*/
+	</style>
+</head>
+<body>
+	<div class="head"></div>
+	<div class="main"></div>
+	<div class="float" id="float">
+		<div class="float-ct"></div>
+	</div>
+<script>
+	function addEventSimple(obj, evt, fn) {
+		if (obj.addEventListener) obj.addEventListener(evt, fn, false);
+		else if (obj.attachEvent) obj.attachEvent('on' + evt, fn)
+	}
+
+	function fix() {
+		var fixE = document.getElementById("float");
+		var autoheight = document.body.scrollTop || document.documentElement.scrollTop;
+		if (autoheight < 330) {
+			fixE.className = "float"
+		} else {
+			fixE.className = "fixed";
+		}
+	}
+	addEventSimple(window, "load", fix);
+	addEventSimple(window, "scroll", fix);
+</script>
+</body>
+</html>

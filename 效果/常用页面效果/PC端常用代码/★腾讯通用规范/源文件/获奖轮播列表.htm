@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+ul{list-style:none;}
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;line-height:22px;}
+#header{height:30px;}
+#main{height:200px;}
+ol.regCP{margin:0;padding:0;}
+ol.regCP li{margin-left:40px;}
+
+.carouselContent{width:400px;height:100px;border:1px #000 solid;}
+</style>
+<title>获奖轮播列表示例 - 腾讯游戏</title>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>获奖轮播列表示例</h1>
+	</div>
+	<div id="main">
+    	<h2>一、使用说明：</h2>
+		<ol class="regCP">
+			<li>列表滚动效果由开发实现；</li>
+			<li>滚动信息中内容用无序列表ul、li构建，根据实际情况定好css，id＝”carouselContent”不要改动。</li>
+		</ol>
+		<h2>二、实例演示：(详情请点击源代码查看)</h2>
+			<!-- 获奖轮播开始 -->
+			<ul>
+				<li>
+					<span>获奖日期</span>
+					<span>获奖QQ</span>
+					<span>所获奖品</span>
+				</li>
+			</ul>
+			<ul id="carouselContent" class="carouselContent">
+				<li><span>2011-08-02 20:04:17</span> <span>90759***</span> <span>1万欢乐豆</span></li>
+				<li><span>2011-07-23 01:19:44</span> <span>51244***</span> <span>qq公仔</span></li>
+				<li><span>2011-08-03 18:33:19</span> <span>37954***</span> <span>1万欢乐豆</span></li>
+			</ul>
+			<!-- //获奖轮播结束 -->
+		</div>
+	</div>
+<script src="http://ossweb-img.qq.com/images/script/bootmanager.js"></script>
+<script language="javascript">
+	$import('com.qq.basic.*');
+	//下面代码仅仅为测试代码而已，正式的时候，不用提供。
+	ScrollMarqueeUP.init({
+		'contentId' : 'carouselContent', //容器ID
+		'scrollstep' : 1, //每次移动的像素
+		'scrollstoptime' : 20 //间断时间(毫秒)
+	});
+</script>
+</body>
+</html>

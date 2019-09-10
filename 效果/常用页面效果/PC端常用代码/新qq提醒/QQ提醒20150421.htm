@@ -1,0 +1,30 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gbk">
+<meta name="robots" content="all">
+<meta name="author" content="Tencent-TGideas">
+<meta name="Copyright" content="Tencent">
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+<title>QQ提醒</title>
+</head>
+<body>
+<a href="javascript:remain_me();">QQ提醒我</a>
+<script src="http://ossweb-img.qq.com/images/js/milo/milo-min.js"></script>
+<script>
+function remain_me(){
+  var __qqClockShare = {
+     content: "QQ飞车大事件 11月29日震撼揭晓",//提醒的内容
+     time: "2014-11-29 09:30",//提醒时间，都以双数为准，单数前面加0（例：06）
+     advance: 15,//提醒时间，一般无需修改
+     url: "http://speed.qq.com/act/a20141114big/",//提醒跳转链接
+     icon: ""
+  };
+  var links = 'http://qzs.qq.com/snsapp/app/bee/widget/open.htm#content=' + encodeURIComponent(__qqClockShare.content) +'&time=' + encodeURIComponent(__qqClockShare.time) +'&advance=' + __qqClockShare.advance +'&url=' + encodeURIComponent(__qqClockShare.url); 
+window.open(links, '', 'width=582,height=480,top=0,left=0,toolbar=no,menubar=no,scrollbars=no,location=yes,resizable=no,status=no,overflow=hidden');
+}
+</script>
+</body>
+</html>

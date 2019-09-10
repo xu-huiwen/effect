@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>整屏切换</title>
+<style>
+html,body,ul,h1,h2,h3,p,input,img,figure{margin:0;padding:0;}
+ul,ol{list-style:none;}
+html,body,.content{width:100%;height:100%;overflow: hidden;}
+body{-webkit-user-select:none;font:12px/21px \5FAE\8F6F\96C5\9ED1;}
+.content{position:absolute;width: 320px;left: 0;top: 0;}
+.slide{width:100%;height:1000%;}
+.slide .item{height:10%;position: relative;}
+.slide .item:nth-child(1),.slide .item:nth-child(3) {background-color: #ccc;}
+</style>
+</head>
+<body>
+<div class="content">
+	<div class="slide">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+	</div>
+</div>
+<script src="global.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+	//页面100%高度包含地址栏高度，当地址栏存在时，会有部分内容被隐藏,重置html高度
+	document.documentElement.style.height = window.innerHeight + 'px';
+	
+	slide1 = new m.Tab({
+		target: document.querySelectorAll('.slide .item'),//滚动块
+		touchMove: true,//是否允许手滑滚动
+		direction: 'y',
+	});
+
+	
+	
+	var autoScale = function() {
+		setTimeout(function() {
+			var winW = document.documentElement.clientWidth,
+				content = document.querySelector('.content'),
+				scale = (winW / 320).toString().substring(0, 6),
+				cssText = '-webkit-transform: scale(' + scale + ');-webkit-transform-origin: 0 0;';
+			content.style.cssText = cssText;
+		}, 300);
+	};
+	if (document.documentElement.clientWidth > 320) {
+		autoScale();
+	}
+	window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", autoScale, false); //切换横竖屏
+});
+
+//默认事件禁止touchmove比touchstart更好，否则还需要单独处理<a><input>等问题
+document.documentElement.addEventListener('touchmove', function(e){
+	e.preventDefault();
+});
+</script>
+</body>
+</html>

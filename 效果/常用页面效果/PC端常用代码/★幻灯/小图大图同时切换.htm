@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<meta name="robots" content="all" />
+	<meta name="author" content="Tencent-CP" />
+	<meta name="Description" content="《枪神纪》是腾讯游戏旗下琳琅天上工作室历时数年，采用虚幻3引擎自主研发的首款第三人称时尚动作射击网游，游戏以创新和人性化为开发理念，首次在射击网游中加入了动作元素，在爽快射击的体验上，增加让玩家体会到飞檐走壁的自有操作感和近身格斗的爽快感。" />
+	<meta name="Keywords" content="枪神纪,刀锋,双枪,烈焰,导弹,机枪,狙击,医生,榴弹,工程师,暮光模式,审判模式,爆破模式,团队竞技模式,骇客模式,时尚动作射击网游" />
+	<!-- 设计：cp | 重构：cp | 创建：2013/4/16 | 更新：| 团队博客：http://tgideas.qq.com/ -->
+	<title>枪神剧场第一期 每日FUN享 转载有惊喜-枪神纪官方网站-腾讯游戏</title>
+	<style>
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+q:before,q:after{content:''}
+fieldset,img,abbr,acronym{border:0}
+.c:before,.c:after {content:"";display:table}
+.c:after {clear:both}
+.c {zoom:1}
+body {font:12px/1.5 tahoma,\5b8b\4f53,sans-serif;padding-top:42px;background-color:#aacbd2;}
+a {text-decoration:none;overflow:hidden;}
+a:hover {text-decoration:underline}
+
+
+    /*焦点图*/
+        .mod{width:445px;height:630px;margin:0 auto;position:relative;}
+        .btn{position:absolute;width:11px; height:22px;cursor:pointer;z-index:99;background:url(http://ossweb-img.qq.com/images/chanpin/tps/public/a20130416theatre/sp.png) no-repeat;display:none;}
+         .prev,.prevTop{left:-11px;background-position:-94px -40px;top:675px;}
+         .next,.nextTop{right:-11px;background-position:-108px -40px;top:675px;}
+         .prevTop,.nextTop {top:70px;}
+        .mod li{float:left;}
+        .mod .pb-u li{position:relative;color:#fff;}
+        .mod .pb-u a{display:block;width:445px;position:absolute;color:#fff;}
+        .mod .picBox{height:630px;position:relative;overflow:hidden;width:440px;background-color:#000000;}
+        .mod .picBox ul{height:330px;position:absolute;}
+        .mod .picBox li{width:445px;height:630px;}
+        .mod .listBox{height:100px;margin:15px auto;position:relative;overflow:hidden;width:395px;}
+        .mod .listBox ul{height:100px;position:absolute;}
+        .mod .listBox li{width:132px;height:110px;cursor:pointer;position:relative;float:left;display:inline;text-align:center;font-size:20px;color:#0094b4;overflow:hidden;line-height:24px;}
+        .mod .listBox li i{display:none;}
+        .mod .listBox li a{display:block;width:124px;height:70px;}
+        .mod .listBox li img{width:128px;height:74px;display: block;margin:0px auto;}
+        .mod .listBox .on img{width:124px;height:70px;border:2px solid #00aeff;}
+        .mod .listBox .on i{display:block;}
+</style>
+</head>
+
+<body>
+<div class="mod">
+    <span class="btn prev" id="prev"></span>
+    <span class="btn next" id="next"></span>
+    <span class="btn prevTop" id="prevTop"></span>
+    <span class="btn nextTop" id="nextTop"></span>
+    <div class="picBox" id="picBox">
+        <ul class="pb-u" style="width: 4005px;">
+            <li>
+                <a target="_blank" href="http://ossweb-img.qq.com/images/chanpin/tps/public/a20130416theatre/pic-df.jpg?2013-04-28">
+                    <img width="445px" alt="刀锋" src="http://ossweb-img.qq.com/images/chanpin/tps/public/a20130416theatre/pic-df.jpg?2013-04-28">
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="http://ossweb-img.qq.com/images/chanpin/tps/public/a20130416theatre/pic-sq.jpg?2013-04-28">
+                    <img width="445px" alt="双枪" src="http://ossweb-img.qq.com/images/chanpin/tps/public/a20130416theatre/pic-sq.jpg?2013-04-28">
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="http://ossweb-img.qq.com/images/chanpin/tps/public/a20130416theatre/pic-ly.jpg?2013-04-28">
+                    <img width="445px" alt="烈焰" src="http://ossweb-img.qq.com/images/chanpin/tps/public/a20130416theatre/pic-ly.jpg?2013-04-28">
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="http://ossweb-img.qq.com/images/chanpin/tps/public/a20130416theatre/pic-ly.jpg?2013-04-28">
+                    <img width="445px" alt="烈焰" src="http://ossweb-img.qq.com/images/chanpin/tps/public/a20130416theatre/pic-ly.jpg?2013-04-28">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="listBox" id="listBox">
+        <ul class="pb-u" style="width: 1188px;">
+            <li class="on"><i class="arr2"></i>
+                <img width="132px" height="74px" alt="刀锋" src="http://ossweb-img.qq.com/images/chanpin/tps/public/a20130416theatre/pic-df-s.jpg">
+                <span>4月28日</span>
+            </li>
+            <li><i class="arr2"></i>
+                <img width="132px" height="74px" alt="双枪" src="http://ossweb-img.qq.com/images/chanpin/tps/public/a20130416theatre/pic-sq-s.jpg">
+                <span>4月29日</span>
+            </li>
+            <li><i class="arr2"></i>
+                <img width="132px" height="74px" alt="烈焰" src="http://ossweb-img.qq.com/images/chanpin/tps/public/a20130416theatre/pic-ly-s.jpg">
+                <span>4月30日</span>
+            </li>
+            <li><i class="arr2"></i>
+                <img width="132px" height="74px" alt="烈焰" src="http://ossweb-img.qq.com/images/chanpin/tps/public/a20130416theatre/pic-ly-s.jpg">
+                <span>4月30日</span>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<script>
+
+
+function changComicPic() {
+
+    function G(s) {
+        return document.getElementById(s);
+    }
+
+    function getStyle(obj, attr) {
+        if (obj.currentStyle) {
+            return obj.currentStyle[attr];
+        } else {
+            return getComputedStyle(obj, false)[attr];
+        }
+    }
+
+    function Animate(obj, json) {
+        if (obj.timer) {
+            clearInterval(obj.timer);
+        }
+        obj.timer = setInterval(function() {
+            for (var attr in json) {
+                var iCur = parseInt(getStyle(obj, attr));
+                iCur = iCur ? iCur : 0;
+                var iSpeed = (json[attr] - iCur) / 3;
+                iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+                obj.style[attr] = iCur + iSpeed + 'px';
+                if (iCur == json[attr]) {
+                    clearInterval(obj.timer);
+                }
+            }
+        }, 30);
+    }
+
+    var oPic = G("picBox");
+    var oList = G("listBox");
+
+    var oPrev = G("prev");
+    var oNext = G("next");
+    var oPrevTop = G("prevTop");
+    var oNextTop = G("nextTop");
+
+    var oPicLi = oPic.getElementsByTagName("li");
+    var oListLi = oList.getElementsByTagName("li");
+    var len1 = oPicLi.length;
+    var len2 = oListLi.length;
+    if(len1>3) {
+    	oPrev.style.display = "block";
+    	oNext.style.display = "block";
+    	oPrevTop.style.display = "block";
+    	oNextTop.style.display = "block";
+    }
+
+    var oPicUl = oPic.getElementsByTagName("ul")[0];
+    var oListUl = oList.getElementsByTagName("ul")[0];
+    var w1 = oPicLi[0].offsetWidth;
+    var w2 = oListLi[0].offsetWidth;
+
+    oPicUl.style.width = w1 * len1 + "px";
+    oListUl.style.width = w2 * len2 + "px";
+
+    var index = 0;
+
+    var num = 3;
+    var num2 = Math.ceil(num / 2);
+
+    function Change() {
+
+        Animate(oPicUl, {
+            left: -index * w1
+        });
+
+        if (index < num2) {
+            Animate(oListUl, {
+                left: 0
+            });
+        } else if (index + num2 <= len2) {
+            Animate(oListUl, {
+                left: -(index - num2 + 1) * w2
+            });
+        } else {
+            Animate(oListUl, {
+                left: -(len2 - num) * w2
+            });
+        }
+
+        for (var i = 0; i < len2; i++) {
+            oListLi[i].className = "";
+            if (i == index) {
+                oListLi[i].className = "on";
+            }
+        }
+    }
+
+if(oNextTop && oNext) {
+	oNextTop.onclick = oNext.onclick = function() {
+	    index++;
+	    index = index == len2 ? 0 : index;
+	    Change();
+	}
+
+	oPrevTop.onclick = oPrev.onclick = function() {
+	    index--;
+	    index = index == -1 ? len2 - 1 : index;
+	    Change();
+	}
+}
+
+    for (var i = 0; i < len2; i++) {
+        oListLi[i].index = i;
+        oListLi[i].onclick = function() {
+            index = this.index;
+            Change();
+        }
+    }
+
+}
+changComicPic();
+</script>
+</body>
+</html>

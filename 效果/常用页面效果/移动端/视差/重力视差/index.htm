@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>视差</title>
+	<style>
+		*{margin:0;padding:0;border:0;}
+		.box {width:500px;height:500px;margin:0 auto;background-color:#ccc;position:relative;}
+		.icon1 {width:134px;height:148px;background:url(images/icon1.png) no-repeat;left:240px;top:200px;position:absolute;}
+		.icon2 {width:82px;height:70px;background:url(images/icon2.png) no-repeat;left:50px;top:100px;position:absolute;}
+		.icon3 {width:98px;height:88px;background:url(images/icon3.png) no-repeat;position:absolute;left:100px;top:290px;}
+	</style>
+</head>
+<body>
+<div id="scene" class="box">
+	<div class="layer" data-depth="0.8">
+		<div class="icon1"></div>
+	</div>
+	<div class="layer" data-depth="0.4">
+		<div class="icon2"></div>
+	</div>
+	<div class="layer" data-depth="0.6">
+		<div class="icon3"></div>
+	</div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/parallax/parallax.min.js"></script>
+<script>
+var scene = document.getElementById('scene');
+var parallax = new Parallax(scene);
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.tab-con{overflow:hidden;}
+.accept-pic p{background:none;line-height:12px;}
+
+.tab-col1 ul{width:100%;margin:0 auto;}
+.tab-col1 li{width:100%;}
+.tab-col1 li .accept-pic img{width:100%;}
+
+.tab-col1 li .accept-btn{width:100px;}
+
+
+.popup-red h2{background:#14252c;font-size:20px;font-weight:bold;}
+.popup-red .accept-btn{background:#14252c;border:2px solid #ffa902;}
+.col-5 li .accept-btn{width:64px;}
+.lottery-status b,.login-box a{color:#14252c;}
+.accept-tit{padding: 0;}
+.col-2 ul li:first-child .accept-intro {margin-top: -18px;}
+.exchange-list img{margin-top: 3px;}
+.btn-look{background-color: #14252c;width: 142px;height: 30px;display: block;color: #fff;font-size: 14px;text-align: center;line-height: 30px;text-decoration: none;margin: 0 auto 10px;}
+

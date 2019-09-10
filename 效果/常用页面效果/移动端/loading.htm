@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loading</title>
+	<style>
+		* {margin:0;padding:0;border:0;}
+		.main {width:1000px;padding-top:200px;}
+		.loading1{width:47px;height:47px;position:relative;transform:rotate(45deg);-webkit-transform:rotate(45deg);margin:0 auto;}
+		.loading1 i{width:24px;height:24px;background:#00aacf;position:absolute;}
+		.loading1 i:nth-child(1){left:0;top:0;animation:loading1-ani1 1.2s ease-in-out infinite;-webkit-animation:loading1-ani1 1.2s ease-in-out infinite;}
+		.loading1 i:nth-child(2){right:0;top:0;animation:loading1-ani2 1.2s ease-in-out infinite;-webkit-animation:loading1-ani2 1.2s ease-in-out infinite;}
+		.loading1 i:nth-child(3){right:0;bottom:0;animation:loading1-ani3 1.2s ease-in-out infinite;-webkit-animation:loading1-ani3 1.2s ease-in-out infinite;}
+		.loading1 i:nth-child(4){left:0;bottom:0;animation:loading1-ani4 1.2s ease-in-out infinite;-webkit-animation:loading1-ani4 1.2s ease-in-out infinite;}
+		@keyframes loading1-ani1 {
+		33%{transform:translate(-10px,-10px);}
+		66%{transform:translate(-10px,-10px) rotate(90deg);}
+		100%{transform:translate(0,0) rotate(90deg);}
+		}
+		@keyframes loading1-ani2 {
+		33%{transform:translate(10px,-10px);}
+		66%{transform:translate(10px,-10px) rotate(90deg);}
+		100%{transform:translate(0,0) rotate(90deg);}
+		}
+		@keyframes loading1-ani3 {
+		33%{transform:translate(10px,10px);}
+		66%{transform:translate(10px,10px) rotate(90deg);}
+		100%{transform:translate(0,0) rotate(90deg);}
+		}
+		@keyframes loading1-ani4 {
+		33%{transform:translate(-10px,10px);}
+		66%{transform:translate(-10px,10px) rotate(90deg);}
+		100%{transform:translate(0,0) rotate(90deg);}
+		}
+		@-webkit-keyframes loading1-ani1 {
+		33%{-webkit-transform:translate(-10px,-10px);}
+		66%{-webkit-transform:translate(-10px,-10px) rotate(90deg);}
+		100%{-webkit-transform:translate(0,0) rotate(90deg);}
+		}
+		@-webkit-keyframes loading1-ani2 {
+		33%{-webkit-transform:translate(10px,-10px);}
+		66%{-webkit-transform:translate(10px,-10px) rotate(90deg);}
+		100%{-webkit-transform:translate(0,0) rotate(90deg);}
+		}
+		@-webkit-keyframes loading1-ani3 {
+		33%{-webkit-transform:translate(10px,10px);}
+		66%{-webkit-transform:translate(10px,10px) rotate(90deg);}
+		100%{-webkit-transform:translate(0,0) rotate(90deg);}
+		}
+		@-webkit-keyframes loading1-ani4 {
+		33%{-webkit-transform:translate(-10px,10px);}
+		66%{-webkit-transform:translate(-10px,10px) rotate(90deg);}
+		100%{-webkit-transform:translate(0,0) rotate(90deg);}
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="loading1">
+			<i></i>
+			<i></i>
+			<i></i>
+			<i></i>
+		</div>
+	</div>
+</body>
+</html>

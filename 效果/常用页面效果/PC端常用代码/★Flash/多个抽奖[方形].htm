@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<meta charset="gbk">
+<meta name="robots" content="all">
+<meta name="author" content="Tencent-CP">
+<meta name="Copyright" content="Tencent">
+<title>多个抽奖[方形]</title>
+<style>
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form{margin:0;}
+body,button,input,select,textarea{font:14px/1.5 \5FAE\8F6F\96C5\9ED1,sans-serif;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+a{text-decoration:none;outline:none;cursor:pointer;}
+a:hover{text-decoration:underline;}
+img,object,embed{border:0;outline:none;display:block;vertical-align:baseline;}
+button,input,select,textarea{font-size:100%;outline:none;vertical-align:middle;}
+em,i{font-style:normal;}
+table{border-collapse:collapse;border-spacing:0;}
+td,th,ul,ol{list-style:none;padding:0;}
+.c:after,.clearfix:after{content:"\0020";height:0;display:block;clear:both;}
+.c,.clearfix{zoom:1;}
+.hd{font-size:0;height:0;line-height:0;visibility:hidden;display:none;}
+.th,.ta a,.b,.btn a{display:block;overflow:hidden;text-indent:-9999px;}
+.fl,.fr,.ll li,.la a{float:left;_display:inline;}
+.fr{float:right;}
+a.u,.u a{text-decoration:underline;}
+a.u:hover,.u a:hover,a.un:hover,.un a:hover{text-decoration:none;}
+.pz{position:relative;z-index:1;}
+body{background:#c20509;min-width:1000px;padding-top:42px;}
+.b{background:url(http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/comm.png) no-repeat;}
+.lott{width:752px;margin:11px 0 40px 127px;}
+.lott_swf{width:744px;height:475px;position:absolute;top:8px;left:0;}
+.lott li{width:180px;height:153px;line-height:30px;margin:8px 8px 0 0;text-align:center;background-color:#d1bdb0;}
+.lott li img{margin:2px;}
+.lott li.lott_bn1,.lott li.lott_bn2{width:368px;background-color:transparent;}
+.lott li.lott_bn2{background-position:0 -154px;}
+</style>
+</head>
+
+<body>
+<div class="lott pz">
+    <ul class="ll c">
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li class="lott_bn1 b"></li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+    </ul>
+    <div class="lott_swf" id="J_lott1">
+    </div>
+</div>
+<div class="lott pz">
+    <ul class="ll c">
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li class="lott_bn2 b"></li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+    </ul>
+    <div class="lott_swf" id="J_lott2">
+    </div>
+</div>
+<div class="lott pz">
+    <ul class="ll c">
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li class="lott_bn2 b"></li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+        <li>
+            <img width="176" height="119" src="http://ossweb-img.qq.com/images/chanpin/x5/public/a20131217cust/pic_176x119.jpg" />奖励道具</li>
+    </ul>
+    <div class="lott_swf" id="J_lott3">
+    </div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/basic/flashmanagerv5.js"></script>
+<script>
+function callJsToComplete() {
+    //LotteryManager.alert(Lottert_str);
+}
+
+function callJsToComplete2() {
+    //LotteryManager.alert(Lottert_str);
+}
+
+function callJsToComplete3() {
+    //LotteryManager.alert(Lottert_str);
+}
+
+function callJsToStart() {
+    callFlashToRoll(1);
+}
+
+function callFlashToRoll(id) {
+    if (SWFOBJ) SWFOBJ.stopRoll(id);
+}
+//flash_2
+function callJsToStart2() {
+    callFlashToRoll2(1);
+}
+
+function callFlashToRoll2(id) {
+    if (SWFOBJ2) SWFOBJ2.stopRoll(id);
+}
+//flash_3
+function callJsToStart3() {
+    callFlashToRoll3(1);
+}
+
+function callFlashToRoll3(id) {
+    if (SWFOBJ3) SWFOBJ3.stopRoll(id);
+}
+var SWFOBJ = getSwfObj(0),
+    SWFOBJ2 = getSwfObj(1),
+    SWFOBJ3 = getSwfObj(2);
+
+function getSwfObj(e) {
+    var postr = '0_0,188_0,376_0,564_0,';
+    var sett = {
+        h: [314, 475, 636],
+        count: [6, 10, 14],
+        y: [161, 161, 322],
+        cid: ['J_lott1', 'J_lott2', 'J_lott3'],
+        rollEvent: [callJsToStart, callJsToStart2, callJsToStart3],
+        completeEvent: [callJsToComplete, callJsToComplete2, callJsToComplete3],
+        pos: [postr + '564_161,0_161', postr + '564_161,564_322,376_322,188_322,0_322,0_161', postr + '188_161,376_161,564_161,564_322,564_483,376_483,188_483,0_483,0_322,0_161']
+    };
+    //初始化抽奖的swf 可以不知道内部
+    return FlashManager.init({
+        'flashUrl': 'http://ossweb-img.qq.com/images/flash/lottery/lotterybox_2013_v1.swf',
+        'total': sett.count[e],
+        'width': 744,
+        'height': sett.h[e],
+        'sbtnx': 188,
+        'sbtny': sett.y[e],
+        'sbtnw': 368,
+        'sbtnh': 153,
+        'boxw': 180,
+        'boxh': 153,
+        'alpha': 1,
+        'position': sett.pos[e],
+        'contentId': sett.cid[e],
+        'onClickRollEvent': sett.rollEvent[e],
+        'onCompleteRollEvent': sett.completeEvent[e]
+    });
+}
+</script>
+</body>
+
+</html>

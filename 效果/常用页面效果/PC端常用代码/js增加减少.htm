@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style type="text/css">
+	* {margin:0;padding:0;border:0;}
+</style>
+</head>
+
+<body>
+<a href="javascript:subtract();">-</a><span id="num">0个</span><a href="javascript:add();">+</a>
+
+<script type="text/javascript">
+var num = 0;
+function g(e){return document.getElementById(e)}
+function subtract(){
+	num -= 1;
+	if (num < 0) num = 0;
+	g('num').innerHTML = num + '个';
+}
+function add(){
+	num += 1;
+	g('num').innerHTML = num + '个';
+}
+</script>
+</body>
+</html>

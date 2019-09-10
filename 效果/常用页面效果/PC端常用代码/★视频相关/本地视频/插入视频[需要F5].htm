@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>本地视频</title>
+	<style>
+		* {margin:0;padding:0;border:0;}
+		.video {width:800px;height:600px;margin:0 auto;}
+	</style>
+</head>
+<body>
+<div class="video">
+	<div id="video"></div>
+</div>
+
+<script src="http://ossweb-img.qq.com/images/js/swfobject.js"></script>
+<script>
+var info="&path=http://ossweb-img.qq.com/images/chanpin/cf/public/a20141127ver/judge/2-10.flv&autoplay=false",
+	params = {
+		menu: "false",
+		scale: "noScale",
+		salign:"T",
+		wmode:"transparent",
+		allowFullscreen: "true",
+		allowScriptAccess: "always"
+	};
+swfobject.embedSWF("http://ossweb-img.qq.com/images/video/videotg_2.swf?mg="+Math.random()+""+info, "video", "100%", "100%", "10.0.0", "http://ossweb-img.qq.com/images/swf/expressInstall.swf", "", params, "");
+</script>
+</body>
+</html>

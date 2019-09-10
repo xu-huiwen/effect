@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+
+.flash{width:100%;height:100%;margin:0 auto;}
+body,html{width:100%;height:100%;}
+
+
+</style>
+ </head>
+ <body>
+	<div class="flash">
+		<div id="flash"></div>
+	</div>
+	<script type="text/javascript"  src="http://ossweb-img.qq.com/images/js/swfobject.js"></script>
+    <script>
+	
+	
+
+	//swfObject
+	var params = { scale:"noscale", wmode:"transparent",align: "middle",allowFullscreen: "true",allowScriptAccess: "always"}
+    swfobject.embedSWF("flash.swf", "flash", "100%", "100%", "8.0.0","http://ossweb-img.qq.com/images/swf/expressInstall.swf", null, params); 
+   
+	//获取flash
+	function thisMovie(movieName) {
+         if (navigator.appName.indexOf("Microsoft") != -1) {
+             return window[movieName];
+         } else {
+             return document[movieName];
+         }
+     }
+
+	 //由于flash在加载时需要时间，所以在flash加载完成后flash会调用页面中的函数，告知flash内部函数已经就绪。此时才可调用flash内部函数。如果直接调用则可能会报错。flash加载完成调用
+     function swfIsReady() {
+		thisMovie("flash").xxxx(nn,mmm,);
+     }
+    </script>
+ </body>
+</html>

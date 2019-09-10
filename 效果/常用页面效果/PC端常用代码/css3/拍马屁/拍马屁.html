@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>排马屁</title>
+	<style>
+	/* reset */
+	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+	table{border-collapse:collapse;border-spacing:0;}
+	address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+	ol,ul{list-style:none;}
+	h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+	q:before,q:after{content:'';}
+	fieldset,img,abbr,acronym{border:0;}
+
+	.box-pmp {width:168px;height:158px;background:url(bg.jpg) no-repeat;position:relative;margin: 0 auto
+			-webkit-perspective: 800px;
+			   -moz-perspective: 800px;
+			     -o-perspective: 800px;
+			        perspective: 800px;
+	}
+	.hand {position:absolute;width:67px;height:62px;background:url(hand.png) no-repeat;left: 95px;top:80px;
+		-webkit-transform-style: preserve-3d;
+		   -moz-transform-style: preserve-3d;
+		     -o-transform-style: preserve-3d;
+		        transform-style: preserve-3d;
+	}
+	.flip {
+		-webkit-animation: pmp 2s infinite ease-in;
+		   -moz-animation: pmp 2s infinite ease-in;
+		   	 -o-animation: pmp 2s infinite ease-in;
+		        animation: pmp 2s infinite ease-in;
+	}
+	@-webkit-keyframes pmp {
+	    0% {
+	    	-webkit-transform: rotateY( 0deg );
+			   -moz-transform: rotateY( 0deg );
+			     -o-transform: rotateY( 0deg );
+			        transform: rotateY( 0deg );
+	    }
+	    100% {
+	    	-webkit-transform: rotateY( 45deg );
+			   -moz-transform: rotateY( 45deg );
+			     -o-transform: rotateY( 45deg );
+			        transform: rotateY( 45deg );
+	    }
+	}
+	@-moz-keyframes pmp {
+	    0% {
+	    	-webkit-transform: rotateY( 0deg );
+			   -moz-transform: rotateY( 0deg );
+			     -o-transform: rotateY( 0deg );
+			        transform: rotateY( 0deg );
+	    }
+	    100% {
+	    	-webkit-transform: rotateY( 45deg );
+			   -moz-transform: rotateY( 45deg );
+			     -o-transform: rotateY( 45deg );
+			        transform: rotateY( 45deg );
+	    }
+	}
+	@-o-keyframes pmp {
+	    0% {
+	    	-webkit-transform: rotateY( 0deg );
+			   -moz-transform: rotateY( 0deg );
+			     -o-transform: rotateY( 0deg );
+			        transform: rotateY( 0deg );
+	    }
+	    100% {
+	    	-webkit-transform: rotateY( 45deg );
+			   -moz-transform: rotateY( 45deg );
+			     -o-transform: rotateY( 45deg );
+			        transform: rotateY( 45deg );
+	    }
+	}
+	@keyframes pmp {
+	    0% {
+	    	-webkit-transform: rotateY( 0deg );
+			   -moz-transform: rotateY( 0deg );
+			     -o-transform: rotateY( 0deg );
+			        transform: rotateY( 0deg );
+	    }
+	    100% {
+	    	-webkit-transform: rotateY( 45deg );
+			   -moz-transform: rotateY( 45deg );
+			     -o-transform: rotateY( 45deg );
+			        transform: rotateY( 45deg );
+	    }
+	}
+	</style>
+</head>
+<body>
+<div class="box-pmp">
+	<span class="hand flip"></span>
+</div>
+</body>
+</html>

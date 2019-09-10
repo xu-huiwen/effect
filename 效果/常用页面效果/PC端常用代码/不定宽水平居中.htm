@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>不定宽水平居中</title>
+	<style>
+		*{margin:0;padding:0;border:0;}
+		.c:before,.c:after {content:"";display:table;}
+		.c:after {clear:both;}
+		.c {zoom:1;}
+
+		.box-o {float:left;position:relative;left:50%;}
+		.box-i {float:left;position:relative;right:50%;}
+	</style>
+</head>
+<body>
+	<div class="c">
+		<div class="box-o">
+			<div class="box-i">
+				<p>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+				<div style="width:50px;height:50px;background-color:#f00;margin:0 auto;"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

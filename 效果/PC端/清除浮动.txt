@@ -1,0 +1,3 @@
+.c:before,.c:after{content:"";display:table}
+.c:after{clear:both}
+.c{zoom:1}

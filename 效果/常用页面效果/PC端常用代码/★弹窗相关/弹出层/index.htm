@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="gb2312" />
+	<meta name="robots" content="all" />
+	<meta name="author" content="Tencent-TGideas" />
+	<meta name="Copyright" content="Copyright (c) 2006-2011 TENCNET" />
+	<title>弹出层使用规范 - 腾讯游戏</title>
+	<style>
+    #test {
+        display:none;
+        width:400px;
+        height:200px;
+        font-size:14px;
+        border:2px solid #000;
+        background-color:#fff;
+        text-align:center;
+        padding-top:40px
+    }
+    #test2 {
+        display:none;
+        width:400px;
+        height:200px;
+        font-size:14px;
+        border:2px solid #f00;
+        background-color:#fff;
+        text-align:center;
+        padding-top:40px
+    }
+    </style>
+</head>
+
+<body>
+	<h1>弹出层使用规范（简） v1.0</h1>
+	<h2>使用说明：</h2>
+	<ol>
+		<li>
+			在页面底部引入脚本：http://ossweb-img.qq.com/images/js/comm/showDialog.min.js（必须放在页面底部，禁止放在head里面）
+		</li>
+		<li>
+			配置弹出层背景颜色和透明度，即：function TGDialogS(e){showDialog.show({id:e,bgcolor:"这里填写背景颜色",opacity:这里填写透明度（0-100）});}，例如：bgcolor:"#000",opacity:70
+		</li>
+		<li>弹出id为test的div：TGDialogS("test");</li>
+		<li>关闭弹出层：showDialog.hide();</li>
+		<li>高级功能见文件夹“showDialog扩展功能”里面的demo</li>
+	</ol>
+	<h2>使用实例：</h2>
+	<p>
+		弹出id为test的div：
+		<a href="javascript:TGDialogS('test');">点击弹出</a>
+	</p>
+
+	<h2>代码分离使用：</h2>
+	<p>
+		弹出id为test2的div：
+		<a href="#" id="btn-test">点击弹窗</a>
+	</p>
+
+	<div id="test">
+		<a href="javascript:showDialog.hide();">点击关闭</a>
+	</div>
+
+	<div id="pop-test">
+		<a href="#" id="btn2">点击关闭</a>
+	</div>
+
+	<!-- 弹窗 -->
+	<script src="http://ossweb-img.qq.com/images/js/comm/showDialog.min.js"></script>
+	<script>
+    function TGDialogS(e) {
+        showDialog.show({
+            id: e,
+            bgcolor: "#000",
+            opacity: 70
+        });
+    }
+
+    function gEl(e) {
+        return (typeof(e) == "object") ? e : document.getElementById(e)
+    }
+
+    gEl("btn-test").onclick = function() {
+        TGDialogS('pop-test');
+        return false;
+    };
+    gEl("btn2").onclick = function() {
+        showDialog.hide();
+        return false;
+    };
+    </script>
+</body>
+
+</html>

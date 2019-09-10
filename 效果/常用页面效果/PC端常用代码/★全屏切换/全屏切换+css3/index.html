@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gbk" />
+<meta name="robots" content="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style type="text/css">
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+q:before,q:after{content:''}
+fieldset,img,abbr,acronym{border:0}
+a{text-decoration: none;}
+
+/*fullPage*/
+html,body {width: 100%;height: 100%;overflow: hidden;}
+.fp-section{position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.fp-section.fp-table,.fp-slide.fp-table{display:table;width:100%}
+.fp-tableCell{display:table-cell;width:100%;height:100%}
+
+/*页面样式*/
+.nav {position: fixed;right: 0;top: 20px;}
+.nav a {color: #fff;display: block;width: 50px;height: 50px;text-align: center;line-height: 50px;background-color: #000;}
+.nav .active a {background-color: #f00;}
+.section1 {background-color: #aaa;}
+.section2 {background-color: #bbb;}
+.section3 {background-color: #ccc;}
+.content {width: 1000px;margin: 0 auto;position: relative;}
+.box,.list {width: 400px;height: 400px;position: absolute;left: 50%;margin-left: -200px;top: 100px;}
+.box {background-color: #00f;z-index: 20;}
+.list {z-index: 10;}
+.list li {width: 100px;height: 100px;background-color: #fff;position: absolute;top: 430px;
+-webkit-transform:scale(0);-moz-transform:scale(0);-ms-transform:scale(0);transform:scale(0)
+}
+.list .item1 {left: 10px;}
+.list .item2 {left: 120px;}
+.list .item3 {left: 230px;}
+.active .list li {-webkit-animation:icon 0.5s linear 1s forwards;-moz-animation:icon 0.5s linear 1s forwards;-ms-animation:icon 0.5s linear 1s forwards;animation:icon 0.5s linear 1s forwards;}
+
+/*摇动动画*/
+.active .giftshake{-webkit-animation:giftshake .5s linear .5s;-moz-animation:giftshake .5s linear .5s;-ms-animation:giftshake .5s linear .5s;animation:giftshake .5s linear .5s}
+@-webkit-keyframes giftshake {
+0%{-webkit-transform:translateX(0)}
+15%{-webkit-transform:translateX(-5px) rotate(-3deg)}
+30%{-webkit-transform:translateX(4px) rotate(2deg)}
+45%{-webkit-transform:translateX(-3.5px) rotate(-2deg)}
+60%{-webkit-transform:translateX(2px) rotate(2deg)}
+75%{-webkit-transform:translateX(-1px) rotate(-1deg)}
+100%{-webkit-transform:translateX(0)}
+}
+@-moz-keyframes giftshake {
+0%{-moz-transform:translateX(0)}
+15%{-moz-transform:translateX(-5px) rotate(-3deg)}
+30%{-moz-transform:translateX(4px) rotate(2deg)}
+45%{-moz-transform:translateX(-3.5px) rotate(-2deg)}
+60%{-moz-transform:translateX(2px) rotate(2deg)}
+75%{-moz-transform:translateX(-1px) rotate(-1deg)}
+100%{-moz-transform:translateX(0)}
+}
+@-ms-keyframes giftshake {
+0%{-ms-transform:translateX(0)}
+15%{-ms-transform:translateX(-5px) rotate(-3deg)}
+30%{-ms-transform:translateX(4px) rotate(2deg)}
+45%{-ms-transform:translateX(-3.5px) rotate(-2deg)}
+60%{-ms-transform:translateX(2px) rotate(2deg)}
+75%{-ms-transform:translateX(-1px) rotate(-1deg)}
+100%{-ms-transform:translateX(0)}
+}
+@keyframes giftshake {
+0%{transform:translateX(0)}
+15%{transform:translateX(-5px) rotate(-3deg)}
+30%{transform:translateX(4px) rotate(2deg)}
+45%{transform:translateX(-3.5px) rotate(-2deg)}
+60%{transform:translateX(2px) rotate(2deg)}
+75%{transform:translateX(-1px) rotate(-1deg)}
+100%{transform:translateX(0)}
+}
+
+/*图标动画*/
+@-webkit-keyframes icon {
+from{-webkit-transform:scale(0) rotate(0deg);left:0px;top: 0px;}
+to{-webkit-transform:scale(1) rotate(720deg);}
+}
+@-moz-keyframes icon {
+from{-moz-transform:scale(0) rotate(0deg);left:0px;top: 0px;}
+to{-moz-transform:scale(1) rotate(720deg);}
+}
+@-ms-keyframes icon {
+from{-ms-transform:scale(0) rotate(0deg);left:0px;top: 0px;}
+to{-ms-transform:scale(1) rotate(720deg);}
+}
+@keyframes icon {
+from{transform:scale(0) rotate(0deg);left:0px;top: 0px;}
+to{transform:scale(1) rotate(720deg);}
+}
+</style>
+<title></title>
+</head>
+
+<body>
+<div id="fullpage">
+	<div class="section section1">1</div>
+	<div class="section section2">
+		<div class="content">
+			<div class="box giftshake"></div>
+			<ul class="list">
+				<li class="item1"></li>
+				<li class="item2"></li>
+				<li class="item3"></li>
+			</ul>
+		</div>
+	</div>
+	<div class="section section3">3</div>
+</div>
+<ul id="nav" class="nav">
+    <li data-menuanchor="page1" class="active"><a href="#page1">1</a></li>
+    <li data-menuanchor="page2"><a href="#page2">2</a></li>
+    <li data-menuanchor="page3"><a href="#page3">3</a></li>
+</ul>
+
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.easings.min.js"></script>
+<script src="js/jquery.fullPage.js"></script>
+<script>
+var scrollPage = function(){
+	$('#fullpage').fullpage({
+		anchors: ['page1', 'page2', 'page3'],
+		menu: '#nav',
+		scrollingSpeed: 1000,
+		easing: "easeOutExpo"
+	});
+}
+scrollPage();
+</script>
+</body>
+</html>

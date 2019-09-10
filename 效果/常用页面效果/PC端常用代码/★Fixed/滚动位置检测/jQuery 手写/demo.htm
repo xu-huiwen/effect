@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery滚动位置检测</title>
+<style>
+	* {margin:0;padding:0;border:0;}
+	* html { background-image:url(about:blank); background-attachment:fixed;}/*解决ie6闪动*/
+	.ct {height:950px;margin-bottom:50px;background-color:#ccc;}
+	.list {position:fixed;top:50px;right:40px;_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop));list-style:none;_margin-top: 50px;}
+	.list li {background-color:#00f;height:20px;width:100px;cursor:pointer;color:#fff;margin-bottom:10px;text-align:center;}
+	.list .on {color:red;background-color:#ff0;}
+	.next-btn {display:block;width:100px;height:20px;line-height:20px;text-align:center;color:#fff;background-color:#000;position:fixed;left:50%;margin-left:-50px;bottom:100px;_margin-bottom:100px;_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));}
+
+	/*滚轮控制 隐藏滚动条*/
+	html,body {overflow-y:hidden;}
+</style>
+</head>
+<body>
+<ul class="list">
+    <li onclick="pos(1)" class="on">div1</li>
+    <li onclick="pos(2)">div2</li>
+    <li onclick="pos(3)">div3</li>
+    <li onclick="gotop()">返回顶部</li>
+</ul>
+<div class="ct" id="ct1">div 1</div>
+<div class="ct" id="ct2">div 2</div>
+<div class="ct" id="ct3">div 3</div>
+<a href="javascript:void(0)" class="next-btn">下一块</a>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.2.min.js"></script>
+<script src="jquery.mousewheel.min.js"></script>
+<script>
+jQuery.extend(jQuery.easing, {
+	def: 'easeInOutQuint',
+	easeInOutQuint: function(x, t, b, c, d) {
+		if ((t /= d / 2) < 1) return c / 2 * t * t * t * t * t + b;
+		return c / 2 * ((t -= 2) * t * t * t * t + 2) + b;
+	}
+});
+
+var index = 0;
+// 跳转指定位置
+function pos(num) {
+	$('html, body').stop(true, false).animate({
+			scrollTop: $("#ct" + num).offset().top
+		}, 1000, 'easeInOutQuint');
+}
+//返回顶部
+function gotop() {
+	$('body,html').animate({
+		scrollTop: 0
+	}, 1000, 'easeInOutQuint');
+}
+// 下一页
+$(".next-btn").click(function() {
+	index++;
+	pos(index);
+});
+
+$(window).bind('load scroll', function() {
+	var sTop = $(document).scrollTop();
+	if (sTop >= 1900) {
+		$(".next-btn").fadeOut("slow");
+	} else {
+		$(".next-btn").fadeIn("slow");
+	}
+	if (sTop < 1000) {
+		index = 1;
+	}
+	if (sTop >= 1000 && sTop < 1950) {
+		index = 2;
+	}
+	if (sTop >= 1950) {
+		index = 3;
+	}
+	setCurr(index);
+})
+
+function setCurr(index) {
+	$('.list li').removeClass();
+	var num = index -1;
+	$('.list li:eq(' + num + ')').addClass('on');
+}
+
+// 滚轮控制
+$('html, body').on('mousewheel', function(event) {
+	if (!$('html, body').is(':animated')) {
+		index -= event.deltaY;
+		if (index < 0) {
+			index = 0;
+			return;
+		}
+		if (index > 3) {
+			index = 3;
+			return;
+		}
+		pos(index);
+	}
+});
+</script>
+</body>
+</html>

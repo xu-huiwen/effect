@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><script type="text/javascript">/*tag*/PAGE_SPEED_TIME = [new Date().getTime()];</script>
+<head>
+<meta content="text/html; charset=gb2312" http-equiv="Content-Type"><meta name="robots" content="all">
+<meta name="author" content="Tencent-TGideas">
+<meta name="Copyright" content="Tencent">
+<title>浪漫四周年-QQ炫舞官方网站-腾讯游戏</title>
+<meta content="《QQ炫舞》官方网站&mdash;&mdash;最浪漫的舞蹈游戏" name="Description">
+<meta content="QQ炫舞,炫舞,浪漫,四周年,5月,版本专题" name="Keywords">
+<link href="css/comm.css" rel="stylesheet" type="text/css" />
+<script src="http://x5.qq.com/act/a20110706newversion/jscss/newversion.js?d=0401"></script>
+</head>
+<body>
+<div class="wrapper">
+	<!--#include file="head.inc" -->
+	<div class="content">
+        <h2 class="h2_2">02 乐队团队模式</h2>
+        <ul class="sub_nav" id="tabs">
+				<li><a class="on" title="概述" href="javascript:setTabs(0,3)">概述</a></li>
+				<li><a title="如何开局" href="javascript:setTabs(1,3)">如何开局</a></li>
+				<li class="last"><a title="对抗特色" href="javascript:setTabs(2,3)">对抗特色</a></li>
+			</ul>
+        <div id="tabs0">
+            <h3>概述</h3>
+			<p>● 在四月新版本【疯狂的乐队】中，您有没有大过一把乐队瘾呢？</p>
+			<p>● 传统、节奏、动感，QQ炫舞三大主流模式同台竞技</p>
+			<p>● 以控制乐器的表现扮演乐队角色进行表演</p>
+			<p>● 不论是桀骜不驯的爵士鼓、彰显个性的贝司和电子琴、还是让人惊艳的吉他与麦克风、都能带给您不同于以往的劲爆感受！</p>
+			<p>● 而五月的新版本在承袭四月版本的基础上，还加入了新鲜的元素━乐队对抗模式！</p>
+			<p>● 想知道这个新模式有什么神奇的地方吗？想不想知道它和乐队演奏个人模式最大的区别在哪里？</p>
+			<p>● 没问题，一起来看看吧！</p>
+            <p><img src="images/p2_1.jpg" alt="" width="400" height="290" /></p>
+        </div>
+        <div id="tabs1" style="display:none;">
+            <h3>如何开局</h3>
+            <h4>● 创建房间</h4>
+            <p><img src="images/p2_2.png" alt="" width="349" height="343" /></p>
+            <h4>● 选择乐器</h4>
+            <p><img src="images/p2_3.jpg" alt="" width="246" height="170" /></p>
+            <h4>● 开局</h4>
+            <p><img src="images/p2_4.jpg" alt="" width="400" height="310" /></p>
+            <h4>● 计分&奖励</h4>
+			<p>&middot; 乐队对抗模式的计分规则大体上和个人模式相同</p>
+			<p>&middot; 对局结束后，系统会根据队伍人数计算队伍平均分，平均分做为队伍得分</p>
+			<p>&middot; 队伍得分高的获胜，反之失败，平分为平局</p>
+			<p>&middot; 根据得分，队伍还能获得排名评价</p>
+			<p>&middot; 排名评价为6级，由低到高依次为D、C、B、A、S、SS</p>
+			<p>&middot; 对局结束后，<span class="font_a">大家同样可以获得一定的经验和GB的奖励</span></p>
+			<p>&middot; 对局奖励多少由对局参与人数、个人的排名和歌曲难度决定。</p>
+        </div>
+        <div id="tabs2" style="display:none;">
+            <h3>对抗特色</h3>
+            <h4>● 对局人数</h4>
+			<p>&middot; 四月的乐队演奏模式，玩家可以通过个人选择乐器，无论人数多少都可以开始对局</p>
+			<p>&middot; 而五月的乐队对抗模式则需要玩家分成红蓝两组对抗，2v2、3v3进行对抗</p>
+			<p>&middot; 玩家还可以自由选择自己所擅长模式对应的乐器，打破了团队模式传统、节奏的局限，一定基础上实现了同一对局却不同模式的比拼。</p>
+            <h4>● 特色爆气</h4>
+			<p>&middot; 团队对抗模式下，爆气分为1级、2级、3级爆气。</p>
+			<p>&middot; <span class="font_a">1级爆气：</span>1级爆气即单人爆气。当玩家气槽积攒满，可触发个人爆气</p>
+			<p>&middot; <span class="font_a">2级爆气：</span>当有2个人同时处于爆气状态，第3个人不处于爆气状态时，爆气的两个人同时进入2级爆气状态，此时每个人的1级爆气状态自动结束</p>
+			<p>说明：3v3对局中才会有2级爆气状态，2v2对局中不会出现</p>
+			<p>&middot; <span class="font_a">3级爆气：</span>3v3对局中，当第3个人在前2个人的2级爆气状态结束之前爆气，3个人即同时进入3级爆气状态，同时2级爆气状态自动结束</p>
+			<p>2v2对局中，只要2个人同时处于爆气状态，即进入3级爆气</p>
+			<p>1级、2级、3级爆气时间都持续8小节的时间长度</p>
+			<p>1级、2级、3级爆气时间内，有参与爆气的各个人的得分都有一定加成</p>
+			<h4>● 无双转转</h4>
+			<p>爆气情况下，可以激活无双转转。无双转转与对局转转乐类似，有3列图标滚动，通过图标组合的结果，确定这本次无双攻击给对方造成的效果。</p>
+			<p><img src="images/p2_5.jpg" alt="" width="537" height="320" /></p>
+			<p>当该队伍里没人爆气的情况下，第1个达到爆气条件的队友发动爆气，此时激活自己团队的无双转转</p>
+			<p>在3v3对局中，激活转转的玩家会使第1列图标停下来，而2v2对局中，激活转转的玩家会使前2列都停下来。</p>
+			<p>每当有一个队员爆气，转转的下一列图标减速，并在1小节的时间内停下来，获得图标。</p>
+			<h4>● 无双攻击</h4>
+			<p>成功发动三级爆气，会产生一个无双攻击效果，对对方团队全体队员造成干扰效果无双攻击效果有多种，产生的效果与无双转转的图标组合形式相对应。</p>
+			<table cellspacing="1" cellpadding="0" border="0" width="100%" class="t_a">
+                <tr>
+					<th width="20%">名称</th>
+					<th width="70%">描述</th>
+					<th width="10%">图标组合</th>
+				</tr>
+                <tr>
+					<td>魔法变变变</td>
+					<td>从神兽、火鸡、小猪、企鹅中随机挑一个效果，给对方全队变身，全队一致</td>
+					<td><img src="images/lightning.png" width="20" height="43" alt="" title="" />×2</td>
+				</tr>
+				<tr>
+					<td>丑八怪出没</td>
+					<td>对方队员全员都上被一个特效遮挡，特效为一个禁止标记的牌子</td>
+					<td><img src="images/pig.png" width="31" height="35" alt="" title="" />×2</td>
+				</tr>
+				<tr>
+					<td>乐器震荡波</td>
+					<td>对方全队乐器变形，吉他变成扫把，贝斯变成拖把，架子鼓变成倒扣着的桶，键盘变成熨衣板，立麦变成导演喊话器</td>
+					<td><img src="images/bb.png" width="29" height="33" alt="" title="" />×2</td>
+				</tr>
+				<tr>
+					<td>烟雾风暴</td>
+					<td>随机一种颜色的烟雾弹道具效果</td>
+					<td><img src="images/pig.png" width="31" height="35" alt="" title="" />×3</td>
+				</tr>
+				<tr>
+					<td>停拍袭扰</td>
+					<td>停拍器道具效果</td>
+					<td><img src="images/lightning.png" width="20" height="43" alt="" title="" />×3</td>
+				</tr>
+				<tr>
+					<td>混乱声波</td>
+					<td>所有非miss操作都向下降低一个档次(动感模式只对每个音符的操作生效)</td>
+					<td><img src="images/bb.png" width="29" height="33" alt="" title="" />×3</td>
+				</tr>
+				<tr>
+					<td>攻击失败</td>
+					<td>无攻击效果</td>
+					<td><img src="images/pig.png" width="31" height="35" alt="" title="" />×1<br /><img src="images/lightning.png" width="20" height="43" alt="" title="" />×1<br /><img src="images/bb.png" width="29" height="33" alt="" title="" />×1</td>
+				</tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!--#include file="foot.inc" -->
+<script type="text/javascript">function setTabs(tabsCur,total){var a = document.getElementById("tabs").getElementsByTagName("a");document.getElementById("tabs"+tabsCur).style.display="block";a[tabsCur].className="on";for (var j=0;j<total;j++){if (j!=tabsCur) {a[j].className="";document.getElementById("tabs"+j).style.display="none";}}return;}
+var str=location.href.split("#")[1];
+if (str!=null) setTabs(4,5);
+</script>
+</body></html><!--[if !IE]>|xGv00|dc3a4e66beca233dcf8d44f1b2dd28ef<![endif]-->

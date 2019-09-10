@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>下拉切换内容</title>
+<style>
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+ol,ul{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+q:before,q:after{content:'';}
+fieldset,img,abbr,acronym{border:0;}
+.c:before,.c:after {content:"";display:table;}
+.c:after {clear:both;}
+.c {zoom:1;}
+
+.selected {cursor: pointer;border:1px solid #ccc;width: 200px;background-color: #eee;}
+.select-list {width: 200px;border: 1px solid #ccc;}
+.select-list li {cursor: pointer;width: 100%;float: left;}
+.select-list .on,.select-list .hover {background-color: #aaa;}
+.select-list {display: none;}
+</style>
+</head>
+<body>
+<div class="content">内容一</div>
+<div class="content" style="display:none">内容二</div>
+<div class="content" style="display:none">内容三</div>
+<div class="selected">选项一</div>
+<ul class="select-list c">
+	<li class="on">选项一</li>
+	<li>选项二</li>
+	<li>选项三</li>
+</ul>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.2.min.js"></script>
+<script>
+$(function(){
+	var $selected = $('.selected'),
+		$selectList = $('.select-list'),
+		$selectListLi = $selectList.find('li'),
+		$content = $('.content'),
+		selectedText;
+	$selected.hover(function(){
+		if ($selectList.is(':hidden')) {
+			$selectList.show();
+		}
+	},function(){
+		$selectList.hide();
+	});
+	$selectList.hover(function(){
+		$selectList.show();
+	},function(){
+		$selectList.hide();
+	});
+	$selectListLi.hover(function(){
+		$(this).addClass('hover');
+	},function(){
+		$(this).removeClass('hover');
+	}).each(function(i){
+		$(this).click(function(){
+			if(!$(this).hasClass('on')) {
+				$selectListLi.removeClass('on');
+				$(this).addClass('on');
+				selectedText = $(this).html();
+			}
+			$selectList.hide();
+			$selected.html(selectedText);
+			$content.hide();
+			$content.eq(i).show();
+		})
+	})
+})
+</script>
+</body>
+</html>

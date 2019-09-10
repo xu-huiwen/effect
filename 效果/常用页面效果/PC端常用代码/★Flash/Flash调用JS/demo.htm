@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flash调用js</title>
+	<style>
+		*{margin:0;padding:0;border:0;}
+
+		.flash {width:100%;height:834px;}
+	</style>
+</head>
+<body>
+<div class="flash">
+	<div id="flash"></div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/swfobject.js"></script>
+<script>
+var params = {
+	scale:"noscale",
+	wmode: "transparent",
+	align: "middle",
+	allowFullscreen: "true",
+	allowScriptAccess: "always"
+}
+swfobject.embedSWF("flash.swf", "flash", "100%", "100%", "9.0.0","http://ossweb-img.qq.com/images/swf/expressInstall.swf",null,params);
+
+function gotoPage(n) {
+	switch (n) {
+		case "1":
+			window.open('http://www.baidu.com', '_self'); //当前窗口
+			break;
+		case "2":
+			window.open('http://www.baidu.com'); //新窗口
+			break;
+		default:
+			alert(n);
+	}
+}
+</script>
+</body>
+</html>

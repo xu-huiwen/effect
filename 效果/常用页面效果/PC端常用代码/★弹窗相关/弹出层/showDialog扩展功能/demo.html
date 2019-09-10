@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>SHOW DIALOG</title>
+<style type="text/css">
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:30px;
+	background-color:#fff
+}
+#wrapper{width:1000px}
+.w{width:800px; margin:20px auto; padding-bottom:30px}
+#wrap {
+	display:block;
+	position:relative;
+}
+#wrap img {
+	border:4px solid #dedede;
+	padding:2px;
+}
+.pop{color:#f00;font-size:14px}
+.pop h1{font-size:14px;border-bottom:1px solid #dedede}
+a#close {
+	padding:0 5px;
+	background:#fff;
+	filter:Alpha(opacity=40);
+	opacity:0.4;
+	right:6px;
+	top:6px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#ccc;
+	font-size:18px;
+	text-align:center;
+	position:absolute;
+	text-decoration:none;
+}
+a#close:hover {
+	color:#000;
+}
+.tips{color:#666;padding-left:20px}
+.code{padding:10px;font-family:Arial, Helvetica, sans-serif;font-size:14px;background-color:#fff;display:block;border:1px solid #dedede;width:700px;height:100px}
+</style>
+<script language="JavaScript">
+<!--
+		function hello(){
+		alert("hello")
+	}
+//-->
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+</div>
+<div class="w">
+<h1>弹出框showDialog 1.0</h1>
+<h2>一、showDialog1.0更新内容：</h2>
+<ul>
+<li>支持弹出框背景颜色、背景透明度可自定义</li>
+<li>支持弹出前、后CallBack操作</li>
+<li>支持弹出iframe高度自适应</li>
+<li>支持自定义消息弹出</li>
+<li>其他优化</li>
+</ul>
+</div>
+<div class="w">
+<h2>二、使用说明</h2>
+<h3>1、自定义弹出框颜色、背景透明度</h3>
+<strong>参数：</strong>
+<div>showDialog.show({<br />
+	id:"pic",<span class="tips">//需要弹出的id，如果是弹出页面上的div，则该选项为必选</span><br />
+	bgcolor:"#000",<span class="tips">//弹出“遮罩”的颜色，格式为"#FF6600"，可选，默认为"#fff"</span><br />
+	opacity:60<span class="tips">//弹出“遮罩”的透明度，格式为｛10-100｝，可选</span><br />
+	});
+</div>
+<strong>demo：</strong>
+<div>弹出一个id为“error”的box：
+<textarea class="code"><a href="#" onclick="showDialog.show({id:'error'});">demo</a></textarea>
+<a href="#" onclick="showDialog.show({id:'error'});">demo</a></div>
+<div>弹出一个颜色为橙色，id为“error”的box：
+<textarea class="code"><a href="#" onclick="showDialog.show({id:'error',bgcolor:'#f60'});">demo</a></textarea>
+<a href="#" onclick="showDialog.show({id:'error',bgcolor:'#f60'});" title="如果点了其他弹出框，先刷下页面，在点击">demo</a>
+</div>
+<div>弹出一个透明度为60，id为“error”的box：
+<textarea class="code"><a href="#" onclick="showDialog.show({id:'error',opacity:60});">demo</a></textarea>
+<a href="#" onclick="showDialog.show({id:'error',opacity:60});" title="如果点了其他弹出框，先刷下页面，在点击">demo</a>
+</div>
+<div>弹出一个颜色为橙色，透明度为60，id为“error”的box：
+<textarea class="code"><a href="#" onclick="showDialog.show({id:'error',bgcolor:'#f60',opacity:60});">demo</a></textarea>
+<a href="#" onclick="showDialog.show({id:'error',bgcolor:'#f60',opacity:60});" title="如果点了其他弹出框，先刷下页面，在点击">demo</a>
+</div>
+ </div>
+ <div class="w">
+ <h3>2、支持弹出前、后CallBack操作</h3>
+ <strong>参数：</strong>
+<div>showDialog.show({<br />
+	id:"pic",<span class="tips">//需要弹出的id，如果是弹出页面上的div，则该选项为必选</span><br />
+	onPopupCallback:function(){alert("在弹出框弹出前运行这个函数")},<span class="tips">//函数名，或者是匿名函数，可选</span><br />
+	onCloseCallback:function(){alert("在弹出框关闭后运行这个函数")}<span class="tips">//函数名，或者是匿名函数，可选</span><br />
+	});
+</div>
+<div>弹出前弹出“hello Word”：
+<textarea class="code"><a href="#" onclick="showDialog.show({id:'error',onPopupCallback:function(){alert('在弹出框弹出前运行这个函数')}});">demo</a></textarea>
+<a href="#" onclick="showDialog.show({id:'error',onPopupCallback:function(){alert('在弹出框弹出前运行这个函数')}});">demo</a></div>
+<div>弹出框关闭时弹出“hello Word”：
+<textarea class="code"><a href="#" onclick="showDialog.show({id:'error',onCloseCallback:function(){alert('在弹出框弹出前运行这个函数')}});">demo</a></textarea>
+<a href="#" onclick="showDialog.show({id:'error',onCloseCallback:function(){alert('在弹出框弹出前运行这个函数')}});">demo</a>
+<br />
+或者：
+<textarea class="code">
+<script language="JavaScript">
+function hello(){alert("hello")}
+</script>
+<a href="#" onclick="showDialog.show({id:'error',onCloseCallback:hello});">demo</a>
+</textarea>
+<a href="#" onclick="showDialog.show({id:'error',onCloseCallback:hello});">demo</a>
+</div>
+</div>
+ <div class="w">
+ <h3>3、弹出iframe高度自适应</h3>
+ <strong>参数：</strong>
+<div>showDialog.show({<br />
+	src:"ifram.html",<span class="tips">//需要弹出的iframe的路径，必选</span><br />
+	iWidth:512,<span class="tips">//iframe的宽度，必选</span><br />
+	iHeight:"auto"<span class="tips">//如果要求iframe自适应，值为"auto"，如果不要自适应，则直接为需要设定的高度，如314，必选</span><br />
+	});
+</div>
+<div>自适应弹出：
+<textarea class="code"><a href="#" onclick="showDialog.show({src:'ifram.html',iWidth:512,iHeight:'auto'});">demo</a></textarea>
+<a href="#" onclick="showDialog.show({src:'ifram.html',iWidth:512,iHeight:'auto'});">demo</a></div>
+</div>
+
+ <div class="w">
+ <h3>4、自定义消息弹出</h3>
+ <strong>参数：</strong>
+<div>showDialog.show({<br />
+	sMsg:"Hello...",<span class="tips">//必选。内容可以为文本，也可以为html结构</span><br />
+	sStyle:"width:500px;border:4px solid #ccc;padding:10px;background-color:#fff",<span class="tips">//可选，自定义消息框的样式</span><br />
+	sClass:"pop"<span class="tips">//可选，自定义消息框的样式类名</span><br />
+	sTime:3000<span class="tips">//可选，多少秒后自动关闭，默认为点击弹出框以外的“遮罩”关闭</span><br />
+	});
+</div>
+<div>默认弹出一个消息，3秒后自动关闭：
+<textarea class="code"><a href="#" onclick="showDialog.show({sMsg:'弹出框showDialog 1.0试用版本发布.....'});">demo</a></textarea>
+<a href="#" onclick="showDialog.show({sMsg:'弹出框showDialog 1.0试用版本发布.....',sTime:3000});">demo</a></div>
+<div>自定义弹出一个消息：
+<textarea class="code"><a href="#" onclick='showDialog.show({sMsg:"<h1>你好</h1><p>时间过的真TMD快...</p>",bgcolor:"#111",sStyle:"width:500px;border:4px solid #ccc;padding:10px;background-color:#fff",sClass:"pop"});'>demo</a></textarea>
+<a href="#" onclick='showDialog.show({sMsg:"<h1>你好</h1><p>时间过的真TMD快...</p>",bgcolor:"#111",sStyle:"width:500px;border:4px solid #ccc;padding:10px;background-color:#fff",sClass:"pop"});'>demo</a></div>
+
+</div>
+ <div class="w">
+ <h3>5、其他</h3>
+<ul>
+<li>在打开一个弹出框后，在弹出另一个弹出框时，不需要关闭前一个，如<a href="#" onclick="showError();return false;">demo</a></li>
+<li>兼容旧版本，如弹出框showDialog.show('error')：<a href="#" onclick="showDialog.show('error');return false">demo</a>，弹出iframe：showDialog.show('ifram.html','512','314','no')<a href="#" onclick="showDialog.show('ifram.html','512','314','no');return false">demo</a></li>
+<li>在iframe里面，如果父页面有showDialog脚本，则iframe不需要在引入该脚本，只需要：var showDialog=parent.showDialog;	showDialog.show({/*......*/});</li>
+<li>参数过多，不方便写调用的话，可以这样：function p1(){showDialog.show({id:'error',bgcolor:'#f60',opacity:30,onPopupCallback:function(){alert('在弹出框弹出前运行这个函数')}});}然后直接使用 onclick="p1()"</li>
+</ul>
+ </div>
+<div id="error" style="display:none;">
+    <div style="width:400px; height:100px;border:4px solid #ccc; padding:10px; background:#fff;"> <a href="#error" title="点击关闭" onclick="showDialog.hide()" style="color:#f00;float:right;height:20px; line-height:20px; text-align:center;">关闭</a> 自定义内容，样式等等。<a href="#" onclick="showDialog.show({id:'pic'});">打开另一个弹出框</a>
+      <select name="select">
+        <option>SHOW DIALOG</option>
+        <option>SHOW DIALOG</option>
+        <option>SHOW DIALOG</option>
+        <option>SHOW DIALOG</option>
+      </select>
+    </div>
+  </div>
+  <div id="pic" style="display:none">
+    <div id="wrap"><a id="close" title="点击关闭" href="#pic" onclick="showDialog.hide();">×</a><img  src="wall235.jpg" border="0" alt="这张图片在本页上" /></div>
+  </div>
+    
+<script src="http://ossweb-img.qq.com/images/js/comm/showDialog.min.js"></script>
+  <script>
+function showIfr(){
+	showDialog.show({
+	src:"ifram.html",
+	bgcolor:"#000",
+	opacity:60,
+	iWidth:512,
+	iHeight:"auto"
+	});
+}
+  function showPic(){
+	showDialog.show({
+	id:"pic",
+	bgcolor:"#000",
+	opacity:60,
+	//onPopupCallback:function(){alert('popup callback')},
+
+	onCloseCallback:showError
+	});
+	}
+ function showError(){
+	showDialog.show({
+	id:"error",
+	bgcolor:"#f60",
+	opacity:60
+	//onPopupCallback:function(){alert('popup callback')},
+	//onCloseCallback:function(){alert('close callback')}
+	});
+	}
+  </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="GBK">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<style>
+*{margin: 0;padding: 0;}
+ul,li{list-style: none;}
+img{display: block}
+body{width: 100%;overflow-x: hidden;font-size: 0.24rem}
+.c:before,.c:after {content:"";display:table;}
+.c:after {clear:both;}
+.box{padding: 0.4rem 0 0 0;height: 4.52rem;width: 100%;}
+.list{width: 100%;height: 100%;position: relative;}
+.list li{width: 1.5rem;display: block;height: 2.11rem;position: absolute;}
+.list li:nth-child(1){top: 0;left: 0.4rem;}
+.list li:nth-child(2){top: 0;left: 2.4rem;}
+.list li:nth-child(3){top: 0;left: 4.4rem;}
+.list li:nth-child(4){top: 2.41rem;left: 0.4rem;}
+.list li:nth-child(5){top: 2.41rem;left: 2.4rem;}
+.list li:nth-child(6){top: 2.41rem;left: 4.4rem;}
+.box .list li.fuse{left: 50%;top: 50%;margin: -1.06rem 0 0 -0.75rem;}
+
+.jitter{-webkit-animation: jitter 0.8s linear both infinite;animation: jitter 0.8s linear both infinite;}
+@-webkit-keyframes jitter{
+	50%{-webkit-transform: scale(1.05);}
+}
+@keyframes jitter{
+	50%{transform: scale(1.05);}
+}
+
+
+.list img{display: block;width: 100%;}
+/*.list .front{display: none;}*/
+
+/**/
+.front,.back{display: block;width: 100%;position: absolute;left: 0;top: 0;-webkit-backface-visibility: hidden;backface-visibility: hidden;}
+.back {-webkit-transform: rotateY(-180deg);transform: rotateY(-180deg);}
+.flip .front{-webkit-transform: rotateY(180deg);transform: rotateY(180deg);}
+.flip .back {-webkit-transform: rotateY(0);transform: rotateY(0);}
+.btn{display: block;width: 2rem;height: 0.6rem;border:0.01rem solid #000;border-radius: 0.05rem;margin: 0.5rem auto 0;text-align: center;line-height: 0.6rem;color: #000;text-decoration: none;}	
+</style>
+</head>
+<body>
+<div class="box">
+	<ul class="list c">
+		<li>
+			<a href="javascript:;" class="front">
+				<img src="ossweb-img/pic_dj1.png"/>
+			</a>
+			<a href="javascript:;" class="back">
+				<img src="ossweb-img/red_bag.png"/>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;" class="front">
+				<img src="ossweb-img/pic_dj2.png"/>
+			</a>
+			<a href="javascript:;" class="back">
+				<img src="ossweb-img/red_bag.png"/>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;" class="front">
+				<img src="ossweb-img/pic_dj3.png"/>
+			</a>
+			<a href="javascript:;" class="back">
+				<img src="ossweb-img/red_bag.png"/>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;" class="front">
+				<img src="ossweb-img/pic_dj4.png"/>
+			</a>
+			<a href="javascript:;" class="back">
+				<img src="ossweb-img/red_bag.png"/>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;" class="front">
+				<img src="ossweb-img/pic_dj5.png"/>
+			</a>
+			<a href="javascript:;" class="back">
+				<img src="ossweb-img/red_bag.png"/>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;" class="front">
+				<img src="ossweb-img/pic_dj6.png"/>
+			</a>
+			<a href="javascript:;" class="back">
+				<img src="ossweb-img/red_bag.png"/>
+			</a>
+		</li>
+	</ul>
+</div>
+<a href="javascript:;" class="btn">拆红包</a>
+<script src="//ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script>
+<script>
+//REM自适应
+function AutoPage(){ 
+	document.documentElement.style.fontSize = document.documentElement.clientWidth * 100 / 640 + 'px';
+ } ;
+AutoPage();
+window.addEventListener('resize',AutoPage,false)		
+//拆红包
+var ObjLi=$('.list li')  
+var random_old=[];   //每次拆红包的到随机数的数组
+var random_now=0;
+var n_index=0;
+var ObjLen=ObjLi.length;
+var b=false;
+var OneClick=0;
+function usual_search(key){
+	for(var i=0,j=random_old.length;i<j;i++){
+		if(random_old[i]==key){
+			break;
+		}else{
+			if(i==(j-1)){
+				return true;
+			}else{
+				continue;
+			}
+		}
+	}
+}
+function getNums(){
+	random_now=Math.floor(Math.random()*ObjLen+1);
+	if(random_old.length==0){
+		random_old.push(random_now);
+	}else{
+		if(usual_search(random_now)){
+			random_old.push(random_now);
+			
+		}
+	}
+}
+function getRandom(){
+	for(var l=0;l<100;l++){
+		if(random_old.length==9){
+			break;
+		}
+		getNums();
+		
+	};
+};
+$('.btn').on('touchstart',function(){
+	getRandom();
+	ObjLi.addClass('flip');
+	ObjLi.find('.front,.back').css({
+		'-webkit-transition': '1s ease-in-out',
+		'transition':' 1s ease-in-out'
+	});
+	setTimeout(function(){
+		ObjLi.addClass('fuse jitter');
+		ObjLi.css({
+			'-webkit-transition': '1s ease-in-out',
+			'transition':' 1s ease-in-out'
+		});
+		setTimeout(function(){
+			ObjLi.each(function(i){
+				var newIndex=random_old[i];
+				$('.front').eq(i).find('img').attr('src','ossweb-img/pic_dj'+newIndex+'.png'+'?'+Date.now());//随机图片的路径
+				setTimeout(function(){
+					ObjLi.removeClass('fuse jitter');
+					b=true;   
+					OneClick=0;
+					random_old=[];  //清空原数组再次得到新的随机数组
+				},1000)
+			})
+		},1000);
+		
+	},1000);
+});
+ObjLi.each(function(i){
+	$(this).on('click',function(){
+		var _this=$(this);
+		if (b!==false&&OneClick==0){
+			OneClick=1;
+			_this.toggleClass('flip');
+			_this.find('.front,.back').css({
+				'-webkit-transition': '1s ease-in-out',
+				'transition':' 1s ease-in-out'
+			});
+		};
+		return false;
+	});
+});
+</script>										
+</body>
+</html>

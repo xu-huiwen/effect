@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {margin: 0;padding: 0;border: 0;}
+		.c:before,.c:after{content:"";display: table;}
+		.c:after{clear:both;}
+		.c{*zoom:1;}
+
+		#tab li {width: 100px;height: 20px;background-color: #ccc;float: left;list-style-type: none;}
+		#tab .on {background-color: #f00;}
+	</style>
+</head>
+<body>
+	<ul id="tab" class="c">
+		<li class="on">标签1</li>
+		<li class="ss">标签2</li>
+		<li>标签3</li>
+	</ul>
+	<div id="ct1">内容1</div>
+	<div id="ct2" class="s" style="display: none;">内容2</div>
+	<div id="ct3" style="display: none;">内容3</div>
+
+<script>
+	function g(e) {
+		return (typeof e == 'object') ? e : document.getElementById(e)
+	}
+	function hasClass(o,c) {
+		var regexp = new RegExp("(^|\\s)" + c + "(\\s|$)", "g");
+		return regexp.test(o.className)
+	}
+	function setTab(a,b) {
+		var tabs = g(a).getElementsByTagName('li'),
+			cts = []
+		for (var i = 1; i <= tabs.length; i++) {
+			cts.push(g(b+i));
+		};
+		for (var i = 0; i < tabs.length; i++) {
+			tabs[i].n = i;
+			tabs[i].onclick = function() {
+				if (!hasClass(this,'on')) {
+					for (var j = 0; j < tabs.length; j++) {
+						tabs[j].className = tabs[j].className.replace(RegExp("(^|\\s)" + 'on' + "(\\s|$)", "g"), "");
+						cts[j].style.display = 'none'
+					};
+					this.className += (this.className ? " " : "") + 'on';
+					cts[this.n].style.display = 'block'
+				}
+			}
+		};
+	}
+	setTab('tab','ct');
+</script>
+</body>
+</html>

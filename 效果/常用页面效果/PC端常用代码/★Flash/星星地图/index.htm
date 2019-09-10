@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>星星地图</title>
+	<style>
+		* {margin:0;padding:0;border:0;}
+		body {background-color:#000;}
+	</style>
+</head>
+<body>
+<div id="swfcontent"></div>
+
+<script src="http://ossweb-img.qq.com/images/js/basic/tgswfobj_s.js" charset="gbk"></script>
+<script>
+/*
+【东 北】  黑龙江省 吉林省 辽宁省   0-2
+【华 北】  北京市 天津市 河北省 山西省 内蒙古自治区 3-7
+【西 北】  陕西省 甘肃省 青海省 宁夏回族自治区 新疆维吾尔自治区 8-12
+【华 东】  上海市 江苏省 浙江省 安徽省 福建省 江西省 山东省 13-19
+【中 南】  河南省 湖北省 湖南省 广东省 广西壮族自治区 海南省 20-25
+【西 南】  重庆市 四川省 贵州省 云南省 西藏自治区 26-30
+【港澳台】 台湾省 31 澳门 32 香港 33
+*/
+//点击省,对应的ID值;
+function selectItem(v)
+{
+	alert(v)
+}
+
+//flash加载完成之后调用数据;
+function getData(){
+	return testData();
+}
+function testData(){
+	var data=[];
+	for(var i=0;i<34;i++){
+		data.push([Math.random()*100,i]);//['星星数量','人气值'];
+	}
+	console.log(data);
+	return data;
+}
+
+insertSwfV2("swfcontent","StarShow.swf?v="+Math.random(),"819",'654',{},{},"10.0");
+</script>
+</body>
+</html>

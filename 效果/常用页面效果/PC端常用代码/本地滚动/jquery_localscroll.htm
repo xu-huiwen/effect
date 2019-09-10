@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="localscroll-style.css" />
+<script src="jquery-1.6.1.min.js"></script>
+<script src="jquery-scrollTo-min.js"></script>
+<script src="jquery-localscroll-1.2.7-min.js"></script>
+<script src="localscroll-init.js"></script>
+</head>
+
+<body>
+	<div id="demo">
+		<ul id="navigation">
+			<li class="sup">
+				<a href="#section1">Section 1</a>
+				<ul>
+					<li><a href="#section1b">Section 1-b</a></li>
+					<li><a href="#section1c">Section 1-c</a></li>
+				</ul>					
+			</li>
+			<li class="sup">
+				<a href="#section2">Section 2</a>
+				<ul>
+					<li><a href="#section2b">Section 2-b</a></li>
+					<li><a href="#section2c">Section 2-c</a></li>
+				</ul>	
+			</li>
+			<li class="sup">
+				<a href="#section3">Section 3</a>
+				<ul>
+					<li><a href="#section3b">Section 3-b</a></li>
+					<li><a href="#section3c">Section 3-c</a></li>
+				</ul>
+			</li>
+			<li class="sup">
+				<a href="#section4">Section 4</a>
+				<ul>
+					<li><a href="#section4b">Section 4-b</a></li>
+					<li><a href="#section4c">Section 4-c</a></li>
+				</ul>
+			</li>
+			<li class="sup">
+				<a href="#section5">Section 5</a>
+				<ul>
+					<li><a href="#section5b">Section 5-b</a></li>
+					<li><a href="#section5c">Section 5-c</a></li>
+				</ul>
+			</li>
+		</ul>															
+
+		<div id="content">
+			<div class="section">
+				<ul>
+					<li class="sub" id="section1">
+						<h2>Section 1</h2>
+						<p><img src="http://www.nep-hk.com/taitung_travel/photos/1-002.jpg" width="450" height="300"></p>
+						<a href="#section1b" class="next">&gt;&gt;</a>
+					</li>
+					<li class="sub" id="section1b">
+						<h2>Section 1-b</h2>
+						<p><img src="http://www.nep-hk.com/taitung_travel/photos/1-003.jpg" width="450" height="300"></p>
+						<a href="#section1" class="prev">&lt;&lt;</a>
+						<a href="#section1c" class="next">&gt;&gt;</a>					
+					</li>
+					<li class="sub" id="section1c">
+						<h2>Section 1-c</h2>
+						<p><img src="http://www.nep-hk.com/taitung_travel/photos/1-004.jpg" width="450" height="300"></p>
+						<a href="#section1b" class="prev">&lt;&lt;</a>
+					</li>				
+				</ul>
+			</div>
+			<div class="section">
+				<ul>
+					<li class="sub" id="section2" >
+						<h2>Section 2</h2>
+						<p><img src="http://www.nep-hk.com/taitung_travel/photos/1-007.jpg" width="450" height="300"></p>
+						<a href="#section2b" class="next">&gt;&gt;</a>	
+					</li>
+					<li class="sub" id="section2b">
+						<h2>Section 2-b</h2>
+						<p><img src="http://www.nep-hk.com/taitung_travel/photos/1-008.jpg" width="450" height="300"></p>
+						<a href="#section2" class="prev">&lt;&lt;</a>
+						<a href="#section2c" class="next">&gt;&gt;</a>	
+					</li>
+					<li class="sub" id="section2c">
+						<h2>Section 2-c</h2>
+						<p><img src="http://www.nep-hk.com/taitung_travel/photos/1-009.jpg" width="450" height="300"></p>
+						<a href="#section2b" class="prev">&lt;&lt;</a>
+					</li>
+				</ul>
+			</div>
+			<div class="section">
+				<ul>
+					<li class="sub" id="section3">
+						<h2>Section 3</h2>
+						<p><img src="http://www.nep-hk.com/taitung_travel/photos/1-011.jpg" width="450" height="300"></p>
+						<a href="#section3b" class="next">&gt;&gt;</a>	
+					</li>
+					<li class="sub" id="section3b">
+						<h2>Section 3-b</h2>
+						<p><img src="http://www.nep-hk.com/taitung_travel/photos/1-012.jpg" width="450" height="300"></p>
+						<a href="#section3" class="prev">&lt;&lt;</a>
+						<a href="#section3c" class="next">&gt;&gt;</a>	
+					</li>
+					<li class="sub" id="section3c">
+						<h2>Section 3-c</h2>
+						<p><img src="http://www.nep-hk.com/taitung_travel/photos/1-013.jpg" width="450" height="300"></p>
+						<a href="#section3b" class="prev">&lt;&lt;</a>
+					</li>
+				</ul>
+			</div>
+			<div class="section">
+				<ul>
+					<li class="sub" id="section4">
+						<h2>Section 4</h2>
+						<p><img src="http://www.nep-hk.com/taitung_travel/photos/1-014.jpg" width="450" height="300"></p>
+						<a href="#section4b" class="next">&gt;&gt;</a>	
+					</li>
+					<li class="sub" id="section4b">
+						<h2>Section 4-b</h2>
+						<p><img src="http://www.nep-hk.com/taitung_travel/photos/1-015.jpg" width="450" height="300"></p>
+						<a href="#section4" class="prev">&lt;&lt;</a>
+						<a href="#section4c" class="next">&gt;&gt;</a>	
+					</li>
+					<li class="sub" id="section4c">
+
+						<h2>Section 4-c</h2>
+						<p><img src="http://www.nep-hk.com/taitung_travel/photos/1-016.jpg" width="450" height="300"></p>
+						<a href="#section4b" class="prev">&lt;&lt;</a>
+					</li>
+				</ul>
+			</div>
+			<div class="section">
+				<ul>
+					<li class="sub" id="section5">
+						<h2>Section 5</h2>
+						<p><img src="http://www.nep-hk.com/taitung_travel/photos/1-017.jpg" width="450" height="300"></p>
+						<a href="#section5b" class="next">&gt;&gt;</a>	
+					</li>
+					<li class="sub" id="section5b">
+						<h2>Section 5-b</h2>
+						<p><img src="http://www.nep-hk.com/taitung_travel/photos/1-018.jpg" width="450" height="300"></p>
+						<a href="#section5" class="prev">&lt;&lt;</a>
+						<a href="#section5c" class="next">&gt;&gt;</a>	
+					</li>
+					<li class="sub" id="section5c">
+						<h2>Section 5-c</h2>
+						<p><img src="http://www.nep-hk.com/taitung_travel/photos/1-019.jpg" width="450" height="300"></p>
+						<a href="#section5b" class="prev">&lt;&lt;</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

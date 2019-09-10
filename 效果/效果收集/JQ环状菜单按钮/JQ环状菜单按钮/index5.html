@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>超酷jQuery环状菜单按钮 Demo 5: Custom Angle Settings</title>
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="css/elusive-webfont.css" rel="stylesheet" type="text/css">
+</head>
+<body id="demo5">
+
+<div class="menu">
+	<a href="index.html">Demo 1</a>
+	<a href="index2.html">Demo 2</a>
+	<a href="index3.html">Demo 3</a>
+	<a href="index4.html">Demo 4</a>
+	<a class="active" href="index5.html">Demo 5</a>
+</div>
+
+<div class="main">
+	<a href="#wheel" class="wheel-button" style="opacity: 1;"><i class="customicon-plus"></i></a>
+	<div class="pointer">Hover me</div>
+	<ul id="wheel" class="wheel">
+		<li class="item"><a href="#home"><i class="customicon-user"></i></a></li>
+		<li class="item"><a href="#home"><i class="customicon-video"></i></a></li>
+		<li class="item"><a href="#home"><i class="customicon-home"></i></a></li>
+		<li class="item"><a href="#home"><i class="customicon-picture"></i></a></li>
+		<li class="item"><a href="#home"><i class="customicon-camera"></i></a></li>
+		<li class="item"><a href="#home"><i class="customicon-video"></i></a></li>
+		<li class="item"><a href="#home"><i class="customicon-home"></i></a></li>
+		<li class="item"><a href="#home"><i class="customicon-picture"></i></a></li>
+		<li class="item"><a href="#home"><i class="customicon-camera"></i></a></li>
+	</ul>
+</div>
+</body>
+<!-- Edit Below -->
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/wheelmenu.js"></script>
+<script type="text/javascript">
+$(".wheel-button").wheelmenu({
+	trigger: "hover",
+	animation: "fly",
+	angle: [0, 270]
+});
+</script>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gbk" />
+<meta name="robots" content="all" />
+<meta name="Copyright" content="TENCNET" />
+<meta name="author" content="Tencent-TGideas" />
+<link href="../../comm.css" rel="stylesheet" />
+<link href="../../core/style.css" rel="stylesheet" type="text/css" />
+<title>倒计时</title>
+</head>
+<body>
+<div class="ctn">
+<h2>获取服务器时间倒计时</h2>
+<p>之前在一个专题里面用到了这个，线上版本可以看 <a class="c1" href="http://x5.qq.com/act/a20120719reward/index.htm" target="_blank">X5一个专题例子</a> </p>
+<h3 class="mt10">DEMO</h3>
+<div class="c"><span class="yh fl">距离世界末日还有</span><em id="c1_1" class="fl ml5">00</em><span class="yh fl ml5">天</span><em id="c1_2" class="fl ml5">00</em><span class="yh fl ml5">时</span><em id="c1_3" class="fl ml5">00</em><span class="yh fl ml5">分</span><em id="c1_4" class="fl ml5">00</em><span class="yh fl ml5">秒</span></div>
+
+<h3 class="mt30">服务器时间</h3>
+<p style="color:red">下方JS中的用到了milo的g()方法，所以要载入MILO，可以根据自己需求修改哈</p>
+<div>
+<pre name="code" class="html">
+&lt;script type="text/javascript" src="http://apps.game.qq.com/CommArticle/app/reg/gdate.php"&gt;&lt;/script&gt;
+&lt;script src="http://ossweb-img.qq.com/images/js/milo/milo-min.js"&gt;&lt;/script&gt;
+</pre>
+ </div>
+
+ <h3 class="mt30">HTML代码</h3>
+<p style="color:red">这个例子是将天、时、分、秒单独出来，这样是为了预防倒计时数字后面有华丽丽的背景。上面<a class="c1" href="http://x5.qq.com/act/a20120719reward/index.htm" target="_blank">X5这个例子就是</a></p>
+<div>
+<pre name="code" class="html">
+&lt;div class="c"&gt;&lt;span class="yh fl"&gt;距离世界末日还有&lt;/span&gt;&lt;em id="c1_1" class="fl ml5"&gt;00&lt;/em&gt;&lt;span class="yh fl ml5"&gt;天&lt;/span&gt;&lt;em id="c1_2" class="fl ml5"&gt;00&lt;/em&gt;&lt;span class="yh fl ml5"&gt;时&lt;/span&gt;&lt;em id="c1_3" class="fl ml5"&gt;00&lt;/em&gt;&lt;span class="yh fl ml5"&gt;分&lt;/span&gt;&lt;em id="c1_4" class="fl ml5"&gt;00&lt;/em&gt;&lt;span class="yh fl ml5"&gt;秒&lt;/span&gt;&lt;/div&gt;
+</pre>
+ </div>
+
+<h3 class="mt30">JS代码</h3>
+<p style="color:red">代码有待优化中。。。</p>
+<div>
+<pre name="code" class="js">
+//单数前面加0组成新数组
+function zero(s){return s.length==1?"0"+new String(s):s}
+//转换服务器时间
+var now=new   Date(Date.parse(json_curdate.replace(/-/g,   "/")));
+//倒计时
+function ShowCountDown(deadline, divname) {
+    var endDate = new   Date(Date.parse(deadline.replace(/-/g,   "/")));
+    if (endDate != null) {
+        leftTime = endDate.getTime() - now.getTime();
+        if (leftTime > 0) {
+            var leftsecond = parseInt(leftTime / 1000);
+            var day = new String(Math.floor(leftsecond / (60 * 60 * 24)));
+            var hour = new String(Math.floor((leftsecond - day * 24 * 60 * 60) / 3600));
+            var minute = new String(Math.floor((leftsecond - day * 24 * 60 * 60 - hour * 3600) / 60));
+            var second = new String(Math.floor(leftsecond - day * 24 * 60 * 60 - hour * 3600 - minute * 60));
+             g(divname+'_1').innerHTML=zero(day);
+             g(divname+'_2').innerHTML=zero(hour);
+             g(divname+'_3').innerHTML=zero(minute);
+             g(divname+'_4').innerHTML=zero(second);
+        }
+
+    }
+}
+</pre>
+ </div>
+
+<h3 class="mt30">调用方法</h3>
+<div>
+<pre name="code" class="js">
+var interval = 1000;
+ window.setInterval(function() {
+ 	//c1是容器编号
+    ShowCountDown('2012-07-29 12:00:00', 'c1');
+    //关键是这句，本地模拟服务器时间递减
+	now.setSeconds(now.getSeconds() + 1);
+}, interval);
+</pre>
+ </div>
+
+</div>
+
+
+<script src="http://ossweb-img.qq.com/images/js/milo/milo-min.js"></script>
+<script type="text/javascript" src="http://apps.game.qq.com/CommArticle/app/reg/gdate.php"></script>
+<script type="text/javascript">
+//单数前面加0
+function zero(s){return s.length==1?"0"+new String(s):s}
+//倒计时 deadline：截止日期，要求格式为：yyyy-MM-dd 或者 yyyy-MM-dd HH:mm:ss或者 yyyy-MM-dd HH:mm:ss.ms
+var now=new   Date(Date.parse(json_curdate.replace(/-/g,   "/")));
+function ShowCountDown(deadline, divname) {
+    var endDate = new   Date(Date.parse(deadline.replace(/-/g,   "/")));
+    if (endDate != null) {
+        leftTime = endDate.getTime() - now.getTime();
+        if (leftTime > 0) {
+            var leftsecond = parseInt(leftTime / 1000);
+            var day = new String(Math.floor(leftsecond / (60 * 60 * 24)));
+            var hour = new String(Math.floor((leftsecond - day * 24 * 60 * 60) / 3600));
+            var minute = new String(Math.floor((leftsecond - day * 24 * 60 * 60 - hour * 3600) / 60));
+            var second = new String(Math.floor(leftsecond - day * 24 * 60 * 60 - hour * 3600 - minute * 60));
+             g(divname+'_1').innerHTML=zero(day);
+             g(divname+'_2').innerHTML=zero(hour);
+             g(divname+'_3').innerHTML=zero(minute);
+             g(divname+'_4').innerHTML=zero(second);
+        }
+
+    }
+}
+var interval = 1000;
+ window.setInterval(function() {
+    ShowCountDown('2014-11-02 22:22:22', 'c1');
+	now.setSeconds(now.getSeconds() + 1);
+}, interval);
+</script>
+</body>
+</html>

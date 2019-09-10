@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*Reset*/
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		.list {width: 1000px;margin: 0 auto}
+		.list li {width: 20px;height: 20px;border: 1px solid #ccc; margin: 10px;cursor: pointer;overflow: hidden;}
+		.list .on {background-color: #f00;}
+	</style>
+</head>
+<body>
+	<ul class="list" id="list">
+		<li class="on"></li>
+		<li class="xxx"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<script>
+		function gE(e) {
+			return (typeof(e) == "object") ? e : document.getElementById(e)
+		}
+		function hasClass(o, c) {
+			var regexp = new RegExp("(^|\\s)" + c + "(\\s|$)", "g");
+			return regexp.test(o.className)
+		}
+		var objs = gE('list').getElementsByTagName('li')
+		 for (var i = 0; i < objs.length; i++) {
+			objs[i].n = i;
+			objs[i].onclick = function() {
+				if (!hasClass(this, 'on')) {
+					for (var j = 0; j < objs.length; j++) {
+						objs[j].className = objs[j].className.replace(RegExp("(^|\\s)" + 'on' + "(\\s|$)", "g"), "");
+					}
+					objs[this.n].className += (objs[this.n].className ? " " : "") + 'on';
+				}
+			}
+		}
+	</script>
+</body>
+</html>

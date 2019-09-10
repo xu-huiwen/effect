@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<meta name="viewport" content="width=640, user-scalable=no" />
+<meta charset="gb2312">
+<style>
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+ul,li,div,p,body{margin:0;padding:0;-webkit-user-select: none;-moz-user-select: none;-khtml-user-select: none;user-select: none;text-align:left;}
+input{-webkit-appearance:button;}
+li{list-style:none;}
+a{text-decoration:none;}
+.hide{display:none;}
+body, html {background:#384773;text-align: left;height: 100%;width: 100%;font-family: "Microsoft YaHei","Helvetica Neue",Arial, HelveticaNeue, "Helvetica-Neue", Helvetica, "BBAlpha Sans", sans-serif;font-size: 24px;font-weight: normal;display: -webkit-box;-webkit-box-orient: vertical; -webkit-box-align: center;}
+*{-webkit-tap-highlight-color:rgba(14,159,111,0.5);-webkit-touch-callout:none;}
+#pop2{position:absolute;width:640px;height:100%;left:0;top:0;background:#6265c8;overflow:hidden;z-index:1;}
+#p2bg{position:absolute;width:640px;height:1136px;background:url('images/bg2.jpg') no-repeat;background-size:100%;left:0px;top:0px;}
+#p2con{position:absolute;width:640px;height:100%;left:0px;top:0px;}
+#p2bot{position:absolute;width:640px;height:640px;left:0;top:0;pointer-events:none;}
+#p2bot1{position:absolute;width:103px;height:73px;background:url('images/p2obj2_1.png') no-repeat;background-size:100%;left:116px;top:400px;}
+#p2bot2{position:absolute;width:96px;height:100px;background:url('images/p2obj2_2.png') no-repeat;background-size:100%;left:394px;top:952px;}
+#p2bot3{position:absolute;width:62px;height:66px;background:url('images/p2obj2_3.png') no-repeat;background-size:100%;left:116px;top:1252px;}
+#p2bot4{position:absolute;width:59px;height:72px;background:url('images/p2obj2_4.png') no-repeat;background-size:100%;left:394px;top:1652px;}
+#p2top{position:absolute;width:640px;height:640px;left:0;top:0;}
+#p2top1{position:absolute;width:115px;height:131px;background:url('images/p2obj1.png') no-repeat;background-size:100%;left:424px;top:330px;}
+#p2top2{position:absolute;width:138px;height:189px;background:url('images/p2obj2.png') no-repeat;background-size:100%;left:70px;top:650px;}
+#p2top3{position:absolute;width:129px;height:147px;background:url('images/p2obj3.png') no-repeat;background-size:100%;left:74px;top:1194px;}
+#p2top4{position:absolute;width:96px;height:105px;background:url('images/p2obj4.png') no-repeat;background-size:100%;left:430px;top:1592px;}
+#p2top5{position:absolute;width:137px;height:124px;background:url('images/p2obj5.png') no-repeat;background-size:100%;left:64px;top:1892px;}
+#p2top6{position:absolute;width:147px;height:116px;background:url('images/p2obj6.png') no-repeat;background-size:100%;left:420px;top:2042px;}
+#p2top7{position:absolute;width:80px;height:140px;background:url('images/p2obj7.png') no-repeat;background-size:100%;left:94px;top:2392px;}
+#p2top8{position:absolute;width:106px;height:106px;background:url('images/p2obj8.png') no-repeat;background-size:100%;left:430px;top:2900px;}
+#p2top9{position:absolute;width:118px;height:172px;background:url('images/p2obj9.png') no-repeat;background-size:100%;left:40px;top:3192px;}
+#p2title{position:absolute;width:232px;height:63px;background:url('images/p2title.png') no-repeat;background-size:100%;left:206px;top:84px;}
+.ctitle{position:absolute;width:264px;text-align:center;font-size:36px;color:#5a5cc0;font-weight:bold;left:0;top:64px;pointer-events:none;}
+.ccon{position:absolute;width:264px;text-align:center;color:#ffffff;left:0;top:127px;}
+.ctime{position:absolute;width:264px;text-align:center;color:#5a5cc0;font-weight:bold;left:0;top:170px;}
+.p2dot{position:absolute;width:13px;height:47px;background:url('images/dots.png') no-repeat;background-size:100%;left:314px;pointer-events:none;}
+#p2dot1{top:154px;}
+#p2dot2{top:490px;}
+#p2dot3{top:826px;}
+#p2dot4{top:1162px;}
+#p2dot5{top:1498px;}
+#p2dot6{top:1834px;}
+#p2dot7{top:2170px;}
+#p2dot8{top:2506px;}
+#p2dot9{top:2842px;}
+.p2c{position:absolute;width:264px;height:264px;background:url('images/p2dotbg.png') no-repeat;background-size:100%;left:188px;pointer-events:none;}
+#p2c1{top:216px;}
+#p2c2{top:550px;}
+#p2c3{top:886px;}
+#p2c4{top:1222px;}
+#p2c5{top:1558px;}
+#p2c6{top:1894px;}
+#p2c7{top:2230px;}
+#p2c8{top:2566px;}
+</style>
+</head>
+<body>
+	<div id="main">
+		<div id="pop2">
+			<div id="p2bg"></div>
+			<div id="p2bot">
+				<div id="p2botCon">
+					<div id="p2bot1"></div>
+					<div id="p2bot2"></div>
+					<div id="p2bot3"></div>
+					<div id="p2bot4"></div>
+				</div>
+			</div>
+			<div id="p2con">
+				<div id="p2title"></div>
+				<div id="p2dot1" class="p2dot"></div>
+				<div id="p2c1" class="p2c">
+					<span class="ctitle">第一幕</span>
+					<span class="ccon">来宾观礼签到</span>
+					<span class="ctime"></span>
+				</div>
+				<div id="p2dot2" class="p2dot"></div>
+				<div id="p2c2" class="p2c">
+					<span class="ctitle">第二幕</span>
+					<span class="ccon">名嘴华少登场</span>
+					<span class="ctime"></span>
+				</div>
+				<div id="p2dot3" class="p2dot"></div>
+				<div id="p2c3" class="p2c">
+					<span class="ctitle">第三幕</span>
+					<span class="ccon">动画片声音解密</span>
+					<span class="ctime"></span>
+				</div>
+				<div id="p2dot4" class="p2dot"></div>
+				<div id="p2c4" class="p2c">
+					<span class="ctitle">第四幕</span>
+					<span class="ccon">全新TVC首发</span>
+					<span class="ctime"></span>
+				</div>
+				<div id="p2dot5" class="p2dot"></div>
+				<div id="p2c5" class="p2c">
+					<span class="ctitle">第五幕</span>
+					<span class="ccon">动画片画面解密</span>
+					<span class="ctime"></span>
+				</div>
+				<div id="p2dot6" class="p2dot"></div>
+				<div id="p2c6" class="p2c">
+					<span class="ctitle">第六幕</span>
+					<span class="ccon">动画片剧情解密</span>
+					<span class="ctime"></span>
+				</div>
+				<div id="p2dot7" class="p2dot"></div>
+				<div id="p2c7" class="p2c">
+					<span class="ctitle">第七幕</span>
+					<span class="ccon">动画片全球首映</span>
+					<span class="ctime"></span>
+				</div>
+				<div id="p2dot8" class="p2dot"></div>
+				<div id="p2c8" class="p2c">
+					<span class="ctitle">谢  幕</span>
+					<span class="ccon">媒体采访</span>
+					<span class="ctime"></span>
+				</div>
+				<div id="p2dot9" class="p2dot"></div>
+				<div id="shareBtn"></div>
+			</div>
+			<div id="p2top">
+				<div id="p2topCon">
+					<div id="p2top1"></div>
+					<div id="p2top2"></div>
+					<div id="p2top3"></div>
+					<div id="p2top4"></div>
+					<div id="p2top5"></div>
+					<div id="p2top6"></div>
+					<div id="p2top7"></div>
+					<div id="p2top8"></div>
+					<div id="p2top9"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script charset="gb2312" src="js/index_m6.js"></script>
+</body>
+</html>

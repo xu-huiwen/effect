@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+	<title>逐帧动画</title>
+	<style>
+		/* reset */
+		body,div,p,ul,li,table,tbody,tr,td,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,iframe,header,nav,section,article,footer,figure,figcaption,menu{margin:0;padding:0;}
+		body{font-family:"\5FAE\8F6F\96C5\9ED1",Helvetica;-webkit-user-select:none;-webkit-text-size-adjust:none;font-size:12px;}
+		header,nav,section,article,footer,figure,figcaption{display:block;}
+		ol,ul{margin:0;padding:0;list-style:none;}
+		fieldset{border:none;margin:0;padding:0;}
+		a,li,ul,[onclick]{-webkit-tap-highlight-color:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+		table{border-collapse:collapse;border-spacing:0;}
+		em,strong{font-weight:normal;font-style:normal;}
+		a {text-decoration:none;}
+		.c:before,.c:after{content:"";display:table;}
+		.c:after{clear:both;}
+		.hide {display:block;width:0;height:0;overflow:hidden;}
+		html,body {height: 100%;overflow: hidden;background-color: #000;}
+		
+		.people-bg {width: 236px;height: 233px;position: absolute;left: 50%;margin-left: -78px;top: 50%;margin-top: -78px;}
+		.people {width: 147px;height: 172px;position: absolute;margin: -23px 0 0 14px;-webkit-background-size: 1764px 172px;background-size: 1764px 172px;background-repeat: no-repeat;background-image: url(images/people-sp.png);-webkit-animation: people 1s steps(12) infinite;}
+		/*小人动画*/
+		@-webkit-keyframes people {
+			0% {background-position:0 0;}
+  			100% {background-position:-1764px 0;}
+		}
+		
+		.water {width: 69px;height: 86px;background-image: url(images/water-sp.png);background-repeat: no-repeat;-webkit-background-size: 207px 86px;background-size: 207px 86px;-webkit-animation: water 1s steps(3) infinite;}
+		
+		/*水动画*/
+		@-webkit-keyframes water {
+			0% {background-position:0 0;}
+  			100% {background-position:-207px 0;}
+		}
+	</style>
+</head>
+<body>
+	<div class="people-bg">
+		<div class="people"></div>
+	</div>
+	<div class="water">
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹出大图</title>
+	<style>
+		/*Reset*/
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		.c:before,.c:after{content:"";display:table}
+		.c:after{clear:both}
+		.c{zoom:1}
+
+		.list {width: 1000px;margin: 0 auto}
+		.list  li {float: left;}
+
+		.pop {width: 800px;height: 450px;border: 5px solid #f00;display: none;}
+	</style>
+</head>
+<body>
+	<ul class="list c">
+		<li id="btn1">
+			<img src="http://ossweb-img.qq.com/images/lol/act/a20120829malphite/pic1s.jpg" alt="">
+		</li>
+		<li id="btn2">
+			<img src="http://ossweb-img.qq.com/images/lol/act/a20120829malphite/pic2s.jpg" alt="">
+		</li>
+		<li id="btn3">
+			<img src="http://ossweb-img.qq.com/images/lol/act/a20120829malphite/pic3s.jpg" alt="">
+		</li>
+		<li id="btn4">
+			<img src="http://ossweb-img.qq.com/images/lol/act/a20120829malphite/pic4s.jpg" alt="">
+		</li>
+	</ul>
+
+	<div class="pop" id="pop">
+		<div id="pic-b"></div>
+		<a href="javascript:showDialog.hide();">关闭</a>
+	</div>
+
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/comm/showDialog.min.js"></script>
+<script type="text/javascript">
+	function TGDialogS(e){showDialog.show({id:e,bgcolor:"#000",opacity:70});}
+	function gEl(e){return (typeof(e) == "object") ? e : document.getElementById(e)}
+
+	function show(i) {
+		gEl("btn"+i).onclick=function(){
+			TGDialogS('pop');
+			gEl("pic-b").innerHTML='<img src="http://ossweb-img.qq.com/images/lol/act/a20120829malphite/pic'+i+'.jpg" alt="" />'
+			return false;
+		};
+	}
+	for(var i=1;i<5;i++) {
+		show(i);
+	}
+</script>
+</body>
+</html>

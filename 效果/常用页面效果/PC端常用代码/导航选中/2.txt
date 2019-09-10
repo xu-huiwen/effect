@@ -1,0 +1,2 @@
+navs=document.getElementById("nav").getElementsByTagName('a');
+navs[0].className="on";

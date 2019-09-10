@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>首期展开音乐播放</title>
+<style>
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+q:before,q:after{content:''}
+fieldset,img,abbr,acronym{border:0}
+
+/* footer */
+#footer_ied {text-align:center;font-size:12px;line-height:19px;min-width:1000px;background-color:#1a191e;color:#b3b1b2;}
+.wrap_ied {margin:0 auto;padding:30px;width:940px}
+.wrap_ied a {color:#b3b1b2}
+#footer_ied .e {font-size:10px;-webkit-text-size-adjust:none;}
+
+/* basic */
+.c:before,.c:after {content:"";display:table}
+.c:after {clear:both}
+.c {zoom:1}
+body {font:12px/1.5 Microsoft Yahei,tahoma,\5b8b\4f53,sans-serif;padding-top:42px;}
+a {text-decoration:none;overflow:hidden;}
+a:hover {text-decoration:underline}
+.wrap {background:url(http://ossweb-img.qq.com/images/xunxian/act/a20121128music/rp.jpg?d=1) no-repeat 50% 0 #f4f2f2;min-width:1000px;}
+.container {width:1000px;margin:0 auto;background:url(http://ossweb-img.qq.com/images/xunxian/act/a20121128music/bg2.jpg?d=1) no-repeat 0 420px;}
+.hide {display:block;width:0;height:0;overflow:hidden;}
+.pr {position:relative;}
+.pa {position:absolute;}
+.fl {float:left;}
+.fr,.btn-off,.btn-on {float:right;}
+.db,.play,.pause {display:block;text-indent:-999em;}
+.sp,.btn-off,.btn-on,.play,.pause {background-image:url(http://ossweb-img.qq.com/images/xunxian/act/a20121128music/sp.png?d=1);background-repeat:no-repeat;}
+.c1 {color:#af053e;}
+.w1 {width:420px;}
+.mt20 {margin-top:20px;}
+.mt40 {margin-top:40px;}
+
+/* head */
+.head {background:url(http://ossweb-img.qq.com/images/xunxian/act/a20121128music/bg1.jpg?d=1) no-repeat;height:832px;}
+	.time {font-size:18px;color:#922096;left:70px;top:352px;}
+	.logo1 {width:129px;height:77px;left:59px;top:22px;}
+	.logo2 {width:146px;height:52px;left:215px;top:30px;}
+	.share {left:531px;top:353px;}
+		.share-wb,.share-qz {width:24px;height:24px;float:left;}
+		.share-wb {margin-right:15px;}
+	.login {left:69px;top:392px;color:#3b63d2;}
+		.btn-login {width:81px;height:28px;}
+	.video {left:69px;top:434px;width:640px;height:360px;}
+		.btn-video {width:100%;height:100%;}
+
+/* content */
+.content {padding:35px 60px 70px;}
+	.tit1 {border-bottom:1px dashed #a4a4a4;padding-bottom:9px;}
+		.tit-gqjs {width:87px;height:23px;background-position:-177px -29px;}
+		.btn-off,.btn-on {width:78px;height:26px;line-height:26px;text-align:center;font-size:14px;color:#fff;padding-right:15px;position:relative;z-index:20;}
+		.btn-off:hover,.btn-on:hover {text-decoration:none;}
+		.btn-off {background-position:-82px 0;}
+		.btn-on {background-position:-176px 0;color:#e48331;}
+		.box-gc {width:388px;background-color:#fff;border:1px solid #a4a4a4;top:25px;z-index:10;padding:5px 10px 20px 20px;color:#333D49;left:0; visibility:hidden}
+			.tit-gc {font-size:24px;font-weight:bold;}
+			.info-gc {font-size:14px;}
+			.list-gc {margin-top:5px;font-size:16px;line-height:30px;height:132px;overflow:hidden;}
+	.txt1,.txt2 {color:#2c3133;line-height:32px;text-align:justify;padding:10px 0;}
+	.txt2 {font-weight:bold;}
+		.tit-gqlb {background-position:-270px 0;width:88px;height:22px;}
+		.tit-xxmx {background-position:0 -29px;width:176px;height:22px;}
+	.tb1 {width:100%;border:1px solid #d2d5d8;margin-top:15px;}
+		.tb1 th,.tb1 td {text-align:center;border-bottom:1px solid #d2d5d8;height:32px;}
+		.tb1 th {font-weight:bold;background-color:#cdcfd0;color:#2c3133;}
+		.tb1 td {background-color:#fff;color:#2c3133;}
+		.tb1 .odd td {background-color:#efecec;}
+			.play,.pause {width:20px;height:20px;margin:0 auto;position:relative;cursor:pointer;}
+			.play {background-position:-269px -23px;}
+			.pause {background-position:-291px -23px;}
+		.list-star {width:880px;overflow:hidden;}
+			.list-star ul {margin-right:-16px;}
+				.list-star li {float:left;width:96px;margin:16px 16px 0 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="container">
+	    <div class="head pr">
+	        <h1 class="hide">《新寻仙》主题曲发布，梦千年之恋，寻万里仙途</h1>
+            <h2 class="time pa">&emsp;</h2>
+	        <a class="logo1 db pa" href="http://xx.qq.com/" title="寻仙" target="_blank">寻仙</a>
+	        <a class="logo2 db pa" href="http://y.qq.com/" title="QQ音乐" target="_blank">QQ音乐</a>
+            <p class="share pa c">
+                <a href="javascript:share('qqwb')" class="share-wb db" title="分享到腾讯微博">分享到腾讯微博</a>
+                <a href="javascript:share('qqzone')" class="share-qz db" title="分享到QQ空间">QQ空间</a>
+            </p>
+            <div class="login pa">
+            	<p id="unlogin"><a href="javascript:LoginManager.login();" class="btn-login db sp">登录</a></p>
+                <p id="logined" style="display:none;">欢迎您，<span id="login-qq"></span><span class="c1">【<a class="c1" href="javascript:LoginManager.logout();">注销</a>】</span></p>
+            </div>
+            <div class="video pa">
+                <div id="video" class="video">
+                	<a href="javascript:video();" class="btn-video db" title="点击播放">点击播放</a>
+                </div>
+            </div>
+	    </div>
+	    <div class="content">
+        	<div class="c">
+            	<div class="w1 fl">
+            		<div class="tit1 c w1 pr">
+            			<h3 class="tit-gqjs db sp fl">歌曲介绍</h3>
+            		    <a id="btn-gc" href="###" class="btn-off">欣赏歌词</a>
+                        <div class="box-gc pa">
+                        	<h4 class="tit-gc">梦千年之恋</h4>
+                            <p class="info-gc">词曲:金莎&emsp;演唱:金莎</p>
+                            <ul class="list-gc">
+                            	<li>早就遗失了你  却没遗忘</li>
+                                <li>最初的 最美的 心跳脉搏</li>
+                                <li>你微笑的眼眸</li>
+                                <li>像梦境中的萤火</li>
+                                <li>写满了有多爱我</li>
+                                <li class="mt20">可惜时光河流冲散你我</li>
+                                <li>离别时连背影都觉淡漠</li>
+                                <li>你说过的承诺</li>
+                                <li>都变成海市蜃楼</li>
+                                <li>越曾繁华越寂寞</li>
+                                <li class="mt20">等千年之后</li>
+                                <li>他亲吻住我的手</li>
+                                <li>在夜色中又耳鬓厮磨</li>
+                                <li>同样的温柔</li>
+                                <li>同样的依依不舍</li>
+                                <li>回头又见你眼眸</li>
+                                <li class="mt20">只有在梦中</li>
+                                <li>我和你终于重逢</li>
+                                <li>一寸寸的沁在空气中</li>
+                                <li>满脸的温柔</li>
+                                <li>满眼的依依不舍</li>
+                                <li>梦醒请你忘了我</li>
+                                <li class="mt20">来生别将我错过</li>
+                            </ul>
+                        </div>
+            		</div>
+                    <p class="txt1">守不住时光，握不住爱恋，只能流连繁华与寂寞，千年之后再续温柔…… <br />由大陆甜歌玉女小天后“金莎”在2012年冬季特别为国内大型中国风3D网游《新寻仙》撰写并演唱的主题曲——《梦千年之恋》在QQ音乐首发，继《星月神话》之后又一首紧扣中国风韵的旷世情歌，讲述梦醒之间的千年缠绵。</p>
+                    <p class="txt2">该歌曲已收录到游戏中，请在角色登录画面欣赏</p>
+            	</div>
+                <div class="w1 fr">
+                	<div class="tit1">
+                    	<h3 class="tit-gqlb db sp">歌曲列表</h3>
+                    </div>
+                    <table class="tb1" id="music">
+                        <thead>
+                            <tr>
+                                <th>歌曲名称</th>
+                                <th>歌曲来源</th>
+                                <th width="95">播放</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd">
+                                <td>梦千年之恋</td>
+                                <td>新寻仙主题曲</td>
+                                <td><a href="###" onclick="javascript:play('1',this)" class="play">播放</a></td>
+                            </tr>
+                            <tr>
+                                <td>如梦令</td>
+                                <td>寻仙插曲</td>
+                                <td><a href="###" onclick="javascript:play('2',this)" class="play">播放</a></td>
+                            </tr>
+                            <tr class="odd">
+                                <td>再逢明月照九州</td>
+                                <td>寻仙插曲</td>
+                                <td><a href="###" onclick="javascript:play('3',this)" class="play">播放</a></td>
+                            </tr>
+                            <tr>
+                                <td>相忘于江湖</td>
+                                <td>寻仙、狄仁杰双重主题曲</td>
+                                <td><a href="###" onclick="javascript:play('4',this)" class="play">播放</a></td>
+                            </tr>
+                            <tr class="odd">
+                                <td>风</td>
+                                <td>寻仙、战国双重主题曲</td>
+                                <td><a href="###" onclick="javascript:play('5',this)" class="play">播放</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tit1 mt40">
+            	<h3 class="tit-xxmx db sp">寻仙明星合作阵容</h3>
+            </div>
+            <div class="list-star">
+            	<ul class="c">
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star1.jpg?d=1" alt=""></li>
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star2.jpg?d=1" alt=""></li>
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star3.jpg?d=1" alt=""></li>
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star4.jpg?d=1" alt=""></li>
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star5.jpg?d=1" alt=""></li>
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star6.jpg?d=1" alt=""></li>
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star7.jpg?d=1" alt=""></li>
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star8.jpg?d=1" alt=""></li>
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star9.jpg?d=1" alt=""></li>
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star10.jpg?d=1" alt=""></li>
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star11.jpg?d=1" alt=""></li>
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star12.jpg?d=1" alt=""></li>
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star13.jpg?d=1" alt=""></li>
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star14.jpg?d=1" alt=""></li>
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star15.jpg?d=1" alt=""></li>
+            		<li><img width="96" height="96" src="http://ossweb-img.qq.com/images/xunxian/act/a20121128music/star16.jpg?d=1" alt=""></li>
+            	</ul>
+            </div>
+        </div>
+	</div>
+</div>
+<!-- 音乐 -->
+<script src="http://imgcache.qq.com/music/miniplayer/music_player.js" charset="gb2312"></script>
+<script>
+//获取ID
+function gE(e) {
+    return (typeof (e) == "object") ? e : document.getElementById(e)
+}
+
+//获取类名
+var GLOBAL = {};
+GLOBAL.namespace = function (str) {
+    var arr = str.split('.'),
+        o = GLOBAL;
+    for (i = (arr[0] == "GLOBAL") ? 1 : 0; i < arr.length; i++) {
+        o[arr[i]] = o[arr[i]] || {};
+        o = o[arr[i]];
+    }
+};
+GLOBAL.namespace("Dom");
+GLOBAL.Dom.getElementsByClassName = function (str, root, tag) {
+    if (root) {
+        root = (typeof root == "string") ? document.getElementById(root) : root;
+    } else {
+        root = document.body;
+    }
+    tag = tag || '*';
+    var els = root.getElementsByTagName(tag),
+        arr = [];
+    for (var i = 0, leng = els.length; i < leng; i++) {
+        var k = els[i].className.split(' ');
+        for (j = 0, len = k.length; j < len; j++) {
+            if (k[j] == str) {
+                arr.push(els[i]);
+                break;
+            }
+        }
+    }
+    return arr;
+}
+
+//切换类
+function playClass() {
+	var pause = GLOBAL.Dom.getElementsByClassName('pause','music');
+	for ( var i=0; i<pause.length; i++ ) {
+		pause[i].className = "play";
+		pause[i].innerHTML = "播放";
+	}
+}
+
+//切换类
+function pauseClass(o) {
+	o.className = "pause";
+	o.innerHTML = "暂停";
+}
+
+//播放
+function play(num,selfObj) {
+	if (selfObj.className == 'pause') {
+		playClass();
+		try {
+			pausePlayer();
+		} catch (e) {}
+	} else {
+		playClass()
+		pauseClass(selfObj);
+		if (num == '1') {
+            try {
+                Qstop();
+                playSong('梦千年之恋', 'http://stream7.qqmusic.qq.com/14636420.wma', 14636420);
+            } catch (e) {}
+        }
+        if (num == '2') {
+            try {
+                Qstop();
+                playSong('如梦令','http://stream7.qqmusic.qq.com/13707956.wma',13707956);
+            } catch (e) {}
+        }
+        if (num == '3') {
+            try {
+                Qstop();
+                playSong('再逢明月照九州','http://stream7.qqmusic.qq.com/13707955.wma',13707955);
+            } catch (e) {}
+        }
+        if (num == '4') {
+            try {
+                Qstop();
+                playSong('相忘于江湖','http://stream7.qqmusic.qq.com/13841025.wma',13841025);
+            } catch (e) {}
+        }
+        if (num == '5') {
+            try {
+                Qstop();
+                playSong('风','http://stream7.qqmusic.qq.com/13841026.wma',13841026);
+            } catch (e) {}
+        }
+	}
+}
+</script>
+
+<!-- 滚动条样式 -->
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="jscroll.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.list-gc').jscroll({ W:"10px"//设置滚动条宽度
+			,BgUrl:""//设置滚动条背景图片地址
+			,Bg:"#f1f1f1"//设置滚动条背景图片position,颜色等
+			,Bar:{  Pos:""//设置滚动条初始化位置在底部
+					,Bd:{Out:"#e48331",Hover:"#e48331"}//设置滚动滚轴边框颜色：鼠标离开(默认)，经过
+					,Bg:{Out:"#e48331",Hover:"#e48331",Focus:"#e48331"}}//设置滚动条滚轴背景：鼠标离开(默认)，经过，点击
+			,Btn:{  btn:false//是否显示上下按钮 false为不显示
+					,uBg:{Out:"#232323",Hover:"#232323",Focus:"#232323"}//设置上按钮背景：鼠标离开(默认)，经过，点击
+					,dBg:{Out:"#232323",Hover:"#232323",Focus:"#232323"}}//设置下按钮背景：鼠标离开(默认)，经过，点击
+			,Fn:function(){}//滚动时候触发的方法
+		});
+
+		var $gc = $('.box-gc');
+		$gc.hide();
+		$('#btn-gc').click(function(){
+			if ($gc.is(":visible")) {
+				$(this).removeClass('btn-on').addClass('btn-off').text('欣赏歌词');
+				$gc.slideUp();
+			}
+			else {
+				$gc.css('visibility','visible').slideDown();
+				$(this).removeClass('btn-off').addClass('btn-on').text('收起歌词');
+			}
+
+		});
+	})
+</script>
+</body>
+</html>

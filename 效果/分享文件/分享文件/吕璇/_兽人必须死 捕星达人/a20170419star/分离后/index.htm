@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="robots" content="all">
+<meta name="author" content="Tencent-TGideas">
+<meta name="Copyright" content="Tencent">
+<meta name="Description" content="腾讯游戏《兽人必须死》是由Robot Entertainment工作室出品的3D对战塔防。《兽人必须死》颠覆传统塔防单机化纯PVE的特点，拓展合作防守+团队PK的玩法，让玩家沉浸于无限创造地击杀呆萌兽人的游戏乐趣中，更多资讯尽在兽人必须死官网。" />
+<meta name="Keywords" content="兽人必须死,OMD,兽人必须死ol,兽人必须死网络版,TOBA,OMDU,orcsmustdie,兽人,OMD官网,OMD下载,兽人官网,orc,兽人必须死客户端下载,兽人必须死无限,兽人必须死激活码,兽人必须死公测,兽人必须死测试,兽人必须死资格,兽人必须死视频,兽人必须死攻略,卡组,orcs_must_die,orcs_must_die_unchained,裂隙,战法师,兽人制造,箭墙,地刺,陷阱塔防,3D游戏,塔防,策略游戏,竞技游戏 " />
+<title>捕星达人-OMD-官方网站-腾讯游戏</title>
+<!-- 设计：cp  | 重构：cp | 创建：2017/4/19  -->
+<style>
+/*reset*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+q:before,q:after{content:'';}
+fieldset,img,abbr,acronym{border:0;}
+
+/*页面样式*/
+.c:before,.c:after {content:"";display:table;}
+.c:after {clear:both;}
+.c {zoom:1;}
+body {font:12px/1.5 '\5FAE\8F6F\96C5\9ED1';padding-top:42px;text-align:justify;background-color: #090a15;}
+a {text-decoration:none;overflow:hidden;}
+a:hover {text-decoration:underline;}
+.wrap,.footer_ied,.ost{min-width:1000px;width:100%;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1002?'1000px':'');}
+.wrap {background:url(//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/rp.jpg) no-repeat 50% 0;min-width:1000px;}
+.container {width:1000px;margin:0 auto;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.hide {display:block;width:0;height:0;overflow:hidden;}
+.db{display:block;text-indent:-999em;}
+.content img{display: block;}
+.content .last{margin-right: 0;}
+.sp{background: url(//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/sp.png) no-repeat;}
+
+/*head*/
+.head{background: url(//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/hd.jpg) no-repeat 50%;height: 737px;}
+	.logo{width: 127px;height: 74px;background: url(//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/logo.png) no-repeat;top: 21px;left: 48px;z-index: 3;}
+	.light{right: 251px;top: 42px;animation: light1 1.4s ease-in-out infinite;-mo-animation: light1 1.4s ease-in-out infinite;-webkit-animation: light1 1.4s ease-in-out infinite;}
+		@keyframes light1{
+			0%{opacity: 0;}
+			100%{opacity: 1;}
+		}
+		@-mo-keyframes light1{
+			0%{opacity: 0;}
+			100%{opacity: 1;}
+		}
+		@-webkit-keyframes light1{
+			0%{opacity: 0;}
+			100%{opacity: 1;}
+		}
+	.slogan{width: 916px;height: 443px;background: url(//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/slogan.png) no-repeat center center;left: -171px;top: 59px;z-index: 2;animation: tada 1.4s ease both;-mo-animation: tada 1.4s ease both;-webkit-animation: tada 1.4s ease both;}
+		@-webkit-keyframes tada{
+			0%{opacity:0;-webkit-transform:scale(1)}
+			10%,20%{opacity:1;-webkit-transform:scale(0.9) rotate(-3deg)}
+			30%,50%,70%,90%{opacity:1;-webkit-transform:scale(1.1) rotate(3deg)}
+			40%,60%,80%{opacity:1;-webkit-transform:scale(1.1) rotate(-3deg)}
+			100%{opacity:1;-webkit-transform:scale(1) rotate(0)}
+		}
+	.star{width: 127px;height: 117px;background: url(//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/star.png) no-repeat center center;left: 155px;top: 160px;z-index: 3;animation: bounceInDown_s 3s 1.6s ease both;-mo-animation: bounceInDown_s 3s 1.6s ease both;-webkit-animation: bounceInDown_s 3s 1.6s ease both;}
+		@-webkit-keyframes bounceInDown_s{
+			80%,85%,90%,95%,100%{-webkit-transform-origin:bottom center}
+			0%{opacity:0;-webkit-transform:translateY(-2000px) translateX(-1000px) }
+			7%{opacity:1;-webkit-transform:translateY(-40px) translateX(-220px) }
+			15%{opacity:1;-webkit-transform:translateY(-160px) translateX(-190px) }
+			22%{opacity:1;-webkit-transform:translateY(-60px) translateX(-110px) }
+			35%{opacity:1;-webkit-transform:translateY(-80px) translateX(-70px) }
+			42%{-webkit-transform:translateY(0px) translateX(0px) scale(0.6)}
+			60%{-webkit-transform:rotate(-30deg) scale(0.7)}
+			70%{-webkit-transform:rotate(30deg) scale(0.8)}
+			80%{-webkit-transform:rotate(-15deg) scale(0.9)}
+			90%{-webkit-transform:rotate(15deg) scale(1)}
+			100%{-webkit-transform:rotate(0deg) scale(1)}
+		}
+		@keyframes bounceInDown_s{
+			80%,85%,90%,95%,100%{transform-origin:bottom center}
+			0%{opacity:0;transform:translateY(-2000px) translateX(-1000px) }
+			7%{opacity:1;transform:translateY(-40px) translateX(-220px) }
+			15%{opacity:1;transform:translateY(-160px) translateX(-190px) }
+			22%{opacity:1;transform:translateY(-60px) translateX(-110px) }
+			35%{opacity:1;transform:translateY(-80px) translateX(-70px) }
+			42%{transform:translateY(0px) translateX(0px) scale(0.6)}
+			60%{transform:rotate(-30deg) scale(0.7)}
+			70%{transform:rotate(30deg) scale(0.8)}
+			80%{transform:rotate(-15deg) scale(0.9)}
+			90%{transform:rotate(15deg) scale(1)}
+			100%{transform:rotate(0deg) scale(1)}
+		}
+	.time{color: #fff870;font-size: 22px;width: 346px;height: 26px;line-height: 26px;text-align: center;left: 109px;top: 373px;}
+		.time strong{font-weight: bold;}
+	.s_num{color: #ffffff;font-size: 20px;font-weight: bold;left: 201px;top: 546px;line-height: 42px;}
+		.s_num span.num_cn{font-size: 40px;}	
+		.refrash{display: inline-block;width: 37px;height: 20px;text-align: center;background-color: #18ba59;line-height: 20px;color: #222539;font-size: 12px;margin-bottom: -4px;}
+			.refrash:hover{text-decoration: none;background-color: #1fd463;}
+	
+	/*登录*/
+	.login{right: 75px;top: 29px;z-index: 3;height: 39px;line-height: 39px;color: #ffffff;font-size: 14px;}
+		.login p{height: 39px;line-height: 39px;}
+		.login a{color: #ffffff;}
+		.btn_logoin{display: inline-block;width: 99px;height: 39px;background-position: -5px -388px;text-align: center;line-height: 39px;color: #ffffff;font-size: 14px;font-weight: bold;vertical-align: middle;}
+		.btn_logout{display: inline-block;width: 99px;height: 39px;background-position: -111px -388px;text-align: center;line-height: 39px;color: #cbd3cd;font-size: 14px;font-weight: bold;vertical-align: middle;margin-top: -2px;}
+		.btn_logoin:hover,.btn_logout:hover{text-decoration: none;}
+/*content*/
+.content{background: url(//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/ct.jpg) no-repeat 50%;height: 1405px;padding-top: 36px;}
+	
+	/*part1*/
+	.part1{padding-left: 7px;float: left;width: 460px;}
+		.p1_tit{width: 459px;height: 99px;background-position: 0 0;}
+		.p1_txt{color: #627aa4;font-size: 12px;text-align: center;line-height: 18px;padding: 12px 0 22px;}
+			.p1_txt em{color: #36955a;}
+		.jl_list{width: 420px;height: 126px;border: 1px solid #151829;margin: 0 auto;padding: 0 17px;background: url(//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pic_bg.png) repeat;}
+			.jl_list li{float: left;width: 100px;margin-right: 6px;display: inline;}
+				.jl_list img{margin: 0 auto;}
+				.dj_name{color: #abaeb6;font-size: 12px;text-align: center;line-height: 18px;}
+		.btn_lq{display: block;color: #4e1f06;font-size: 28px;font-weight: bold;text-align: center;width: 203px;height: 73px;background-position: -1px -308px;line-height: 60px;margin: 28px auto 0;text-shadow: 1px 1px #ffe747;}
+			.btn_lq:hover{text-decoration: none;background-position: -226px -307px;}
+	/*part2*/
+	.part2{padding-right: 7px;float: right;width: 460px;}
+		.p2_tit{width: 459px;height: 99px;background-position: 0 -102px;}
+		.p2_txt em{color: #958f36;}
+	
+	/*part3*/
+	.part3{padding: 85px 0 96px;}
+		.p3_tit{width: 564px;height: 99px;background-position: 0 -203px;margin: 0 auto;}
+		.jl_list1{width: 524px;}
+	
+	/*rule*/
+	.rule{width: 948px;height: 261px;background: url(//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pic_bg.png) repeat;border: 1px solid #151829;padding: 33px 0 0 40px;}
+		.rule dt{color: #16b351;font-size: 36px;font-weight: bold;}
+		.rule dd{width: 100%;color: #abaeb6;font-size: 14px;padding-top: 18px;line-height: 16px;}
+			.rule dd em{float: left;}
+			.rule dd span{float: left;width: 918px;}
+
+/*弹窗*/
+.pop{width: 483px;height: 229px;background: url(//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pop_bg.png) no-repeat;display: none;}
+	.btn_close{width: 55px;height: 50px;background-position: -460px -313px;right: -53px;top: 1px;}
+	.pop_tit{color: #f5ed68;font-size: 48px;text-align: center;line-height: 50px;font-weight: bold;padding: 38px 0 42px;}
+	.pop_tit1{padding: 36px 0 18px;}
+	.pop_txt{color: #c9c79f;font-size: 16px;text-align: center;line-height: 22px;}
+		.pop_txt em{color: #f5ed68;}
+:focus{outline: none;}		
+</style>
+</head>
+<body>
+<div class="wrap pr">
+	<a href="http://omd.qq.com/" class="logo pa db" title="兽人必须死" target="_blank">兽人必须死</a>
+	<!--用户登录-->
+	<div class="login pa">
+		<!--登录前状态 Start-->
+		 <p id="unlogin">
+		 	<a href="javascript:LoginManager.login();" class="btn_logoin sp">用户登录</a>
+		 </p>
+		<!--登录前状态 End-->
+		<!--登录后状态 Start-->					
+		 <p id="logined" style="display:none;">
+		 	欢迎您，<span id='login_qq_span'></span>，
+		 	<span>
+				【<a href="javascript:;">绑定大区</a>】
+			</span>
+			<span style="display:none">
+				【<a href="javascript:;">更改绑定</a>】
+			</span>
+		 	<a href="javascript:LoginManager.logout();" class="btn_logout sp">注销</a>
+		 </p>			 
+		<!--登录后状态 End-->
+	</div>
+	<div class="container">
+		<div class="head pr">
+			<h1 class="hide">捕星达人</h1>
+			
+			<!--闪闪发光-->
+			<img src="//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/light.png" alt="" width="76" height="92" class="light pa" />
+			<!--slogah+星星-->
+			<p class="slogan db pa">捕星达人</p>
+			<em class="star pa"></em>
+			<!--时间-->
+			<p class="time pa">活动时间：<strong>5月9日-5月22日</strong></p>
+			<!--捕星数量-->
+			<p class="s_num pa">
+				我已捕星<span class="num_cn">88</span>颗
+				<a href="javascript:;" class="refrash">刷新</a>
+			</p>
+		</div>
+		<div class="content">
+			<div class="c">
+				<div class="part1">
+					<h2 class="p1_tit db sp">event1 捕星30颗</h2>
+					<p class="p1_txt">在学徒、猎手、大师、宗师战役中累积获得30颗星可以领取礼包，<br /><em>同一地图以活动时间内，获得的最高星数计</em>，每日10：00可刷新截至前一日的数据。</p>
+					<ul class="jl_list c">
+						<li>
+							<img src="//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pic_jl1.jpg" alt="" width="100" height="90" />
+							<p class="dj_name">粘滞沥青*30</p>
+						</li>
+						<li>
+							<img src="//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pic_jl2.jpg" alt="" width="100" height="90" />
+							<p class="dj_name">粘滞沥青*30</p>
+						</li>
+						<li>
+							<img src="//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pic_jl3.jpg" alt="" width="100" height="90" />
+							<p class="dj_name">粘滞沥青*30</p>
+						</li>
+						<li class="last">
+							<img src="//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pic_jl4.jpg" alt="" width="100" height="90" />
+							<p class="dj_name">粘滞沥青*30</p>
+						</li>
+					</ul>
+					<a href="javascript:;" class="btn_lq sp">立即领取</a>
+				</div>
+				<div class="part2">
+					<h2 class="p2_tit db sp">event1 捕星60颗</h2>
+					<p class="p1_txt p2_txt">在学徒、猎手、大师、宗师战役中累积获得30颗星可以领取礼包，<br /><em>同一地图以活动时间内，获得的最高星数计</em>，每日10：00可刷新截至前一日的数据。</p>
+					<ul class="jl_list c">
+						<li>
+							<img src="//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pic_jl1.jpg" alt="" width="100" height="90" />
+							<p class="dj_name">粘滞沥青*30</p>
+						</li>
+						<li>
+							<img src="//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pic_jl2.jpg" alt="" width="100" height="90" />
+							<p class="dj_name">粘滞沥青*30</p>
+						</li>
+						<li>
+							<img src="//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pic_jl3.jpg" alt="" width="100" height="90" />
+							<p class="dj_name">粘滞沥青*30</p>
+						</li>
+						<li class="last">
+							<img src="//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pic_jl4.jpg" alt="" width="100" height="90" />
+							<p class="dj_name">粘滞沥青*30</p>
+						</li>
+					</ul>
+					<a href="javascript:;" class="btn_lq sp">立即领取</a>
+				</div>
+			</div>
+			<div class="part3">
+				<h2 class="p3_tit db sp">event1 捕星100颗</h2>
+				<p class="p1_txt">在学徒、猎手、大师、宗师战役中累积获得30颗星可以领取礼包，<br /><em>同一地图以活动时间内，获得的最高星数计</em>，每日10：00可刷新截至前一日的数据。</p>
+				<ul class="jl_list jl_list1 c">
+						<li>
+							<img src="//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pic_jl1.jpg" alt="" width="100" height="90" />
+							<p class="dj_name">粘滞沥青*30</p>
+						</li>
+						<li>
+							<img src="//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pic_jl2.jpg" alt="" width="100" height="90" />
+							<p class="dj_name">粘滞沥青*30</p>
+						</li>
+						<li>
+							<img src="//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pic_jl3.jpg" alt="" width="100" height="90" />
+							<p class="dj_name">粘滞沥青*30</p>
+						</li>
+						<li>
+							<img src="//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pic_jl4.jpg" alt="" width="100" height="90" />
+							<p class="dj_name">粘滞沥青*30</p>
+						</li>
+						<li class="last">
+							<img src="//ossweb-img.qq.com/images/chanpin/omd/public/a20170419star/pic_jl3.jpg" alt="" width="100" height="90" />
+							<p class="dj_name">粘滞沥青*30</p>
+						</li>
+					</ul>
+					<a href="javascript:;" class="btn_lq sp">立即领取</a>
+			</div>
+			<dl class="rule">
+				<dt>活动说明</dt>
+				<dd class="c">
+					<em>1、</em>
+					<span>活动时间为2017年5月9日-2017年5月22日；</span>
+				</dd>
+				<dd class="c">
+					<em>2、</em>
+					<span>本活动只统计在活动时间内获得的星星数，每张地图计获得的最高星星数（同一地图不同难度分别计算）；</span>
+				</dd>
+				<dd class="c">
+					<em>3、</em>
+					<span>活动数据每天10点刷新截止至前一日的数据；</span>
+				</dd>
+				<dd class="c">
+					<em>4、</em>
+					<span>活动获得的游戏道具、点券请重新登录游戏查看；</span>
+				</dd>
+				<dd class="c">
+					<em>5、</em>
+					<span>兽人必须死项目组在法律允许范围内对本次活动持有最终解释权，如遇问题请联系在线客服。</span>
+				</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<!--弹窗-->
+<div class="pop pr" id="pop1">
+	<a href="javascript:closeDialog();" class="btn_close pa db sp">关闭</a>
+	<h3 class="pop_tit">领取失败 !</h3>
+	<p class="pop_txt">你的捕星数不足，请先<em>刷新</em>捕星数再领奖！<br />数据每日10点更新哟~~</p>
+</div>
+
+<div class="pop pr" id="pop2">
+	<a href="javascript:closeDialog();" class="btn_close pa db sp">关闭</a>
+	<h3 class="pop_tit">领取失败 !</h3>
+	<p class="pop_txt">报告大人，您已经领过这个大奖了！</p>
+</div>
+
+<div class="pop pr" id="pop3">
+	<a href="javascript:closeDialog();" class="btn_close pa db sp">关闭</a>
+	<h3 class="pop_tit">恭喜您获得</h3>
+	<p class="pop_txt">xxxxxxxxxxxxxxxx</p>
+</div>
+
+<script src="//ossweb-img.qq.com/images/omd/comm/omd.js"></script>
+<script src="//ossweb-img.qq.com/images/js/milo/milo.js"></script>
+<script src="//ossweb-img.qq.com/images/js/login/loginmanagerv3.js" charset="gb2312"></script>
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js" type="text/javascript"></script> 
+<script>
+//弹窗加载-遮罩
+	function TGDialogS(e){
+		need("biz.dialog-min",function(Dialog){
+			Dialog.show({
+				id:e,
+				bgcolor:'#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+				opacity:50      //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+			});
+		});
+	}
+	function closeDialog(){
+		need("biz.dialog-min",function(Dialog){
+			Dialog.hide();
+		});
+	}
+//登录
+	//检查是否已登录，已登录则获取QQ号显示已登录状态
+	LoginManager.checkLogin(function(){
+		document.getElementById("login_qq_span").innerHTML = LoginManager.getUserUin();//获取QQ号
+	});
+</script>
+<!--统计代码-->
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script>
+//此段代码不能放到外链JS中，
+	var setSite={ //设置网站属性
+	 siteType:"a20170419star", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+	 pageType:"index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+	 pageName:"首页", //必填项:页面中文名
+	 osact:0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+	 ingame:0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+	 stayTime:0 //选填项:是否需要统计停留时长boolean；默认是0
+	}
+	if(typeof(pgvMain)=='function')pgvMain();//千万不能忘记！
+</script>
+</body>
+</html>

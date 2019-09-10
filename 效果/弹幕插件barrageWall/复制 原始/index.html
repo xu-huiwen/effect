@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>弹幕</title>
+    <link rel="stylesheet" href="wall.css"/>
+</head>
+<body>
+<div id="container" class="container">
+</div>
+<div class="input-box">
+    <input type="text" maxlength="20" placeholder="说点什么吧~">
+    <button id="btn" class="btn">发送</button>
+</div>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="barrageWall.js"></script>
+<script>
+	$("#btn").click(function () {
+	    var vla=$(this).prev().val().replace(/(^\s*)|(\s*$)/g, "");
+	    if(vla){
+	      barrageWall.upWall("images/aq.png","我是说话人",vla);//初始化弹幕墙
+	    }
+	})
+	$(function () {
+	    var option={
+	      container:"#container",//弹幕墙的id
+	      barrageLen:15//弹幕的行数
+	    }
+	    barrageWall.init(option);//初始化弹幕墙
+		barrageWall.upWall("images/aq.png","我是说话人","我说的话");//初始化弹幕墙 
+	})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手风琴</title>
+	<style>
+		/*reset*/
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		.c:before,.c:after {content:"";display:table;}
+		.c:after {clear:both;}
+		.c {zoom:1;}
+
+		/*手风琴*/
+		.iinterBox{height:172px;overflow:hidden;}
+		.iinterBox .iinterBoxList{background:url(http://image.sq.wan.com/sq/index/interbg.jpg) no-repeat scroll right -3px #181c25;float:left;}
+		.iinterBox .interbg02{background-position:right -259px;}
+		.iinterBox .interbg03{background-position:right -565px;}
+		.iinterBox .interbg04{background-position:right -876px;}
+		.iinterBox .iinterBand{background:url(http://image.sq.wan.com/sq/index/inter.jpg) no-repeat scroll 0 0 #252c3b;display:inline;float:left;height:172px;text-indent:-9999px;width:91px;}
+		.iinterBox .inter01{background-position:0 -173px;}
+		.iinterBox .ints .inter01{background-position:0 0;}
+		.iinterBox .inter02{background-position:-93px -173px;}
+		.iinterBox .ints .inter02{background-position:-93px 0;}
+		.iinterBox .inter03{background-position:-187px -173px;}
+		.iinterBox .ints .inter03{background-position:-187px 0;}
+		.iinterBox .inter04{background-position:-280px -173px;}
+		.iinterBox .ints .inter04{background-position:-280px 0;}
+		.iinterBox .iinterList{display:inline;float:left;overflow:hidden;}
+		.iinterList .iinterListBox{overflow:hidden;text-align:center;width:200px;margin:30px 169px 6px 20px;}
+		.iinterList a{color:#949cae;display:inline;float:left;margin-bottom:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:80px;word-break:keep-all;}
+		.iinterList a:hover{color:#949cae;}
+		.iinterList span{display:inline;float:left;margin:0 10px 10px;}
+	</style>
+</head>
+<body>
+	<div class="iinterBox c">
+	    <div class="iinterBoxList c ints interbg01" style="width: 441px;">
+	        <a href="http://sq.wan.com/gamedata/dataList.html" target="_blank" class="iinterBand inter01">入门</a>
+	        <div class="iinterList">
+	            <div class="iinterListBox">
+	                <a href="http://sq.wan.com/gamedata/14.html" title="世界观" target="_blank">
+	                        世界观
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/18.html" title="背景故事" target="_blank">
+	                        背景故事
+	                    </a>
+
+	                <a href="http://sq.wan.com/gamedata/28.html" title="创建角色" target="_blank">
+	                        创建角色
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/34.html" title="基本操作" target="_blank">
+	                        基本操作
+	                    </a>
+
+	                <a href="http://sq.wan.com/gamedata/39.html" title="职业介绍" target="_blank">
+	                        职业介绍
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/43.html" title="跳过新手" target="_blank">
+	                        跳过新手
+	                    </a>
+
+	                <a href="http://sq.wan.com/gamedata/48.html" title="兵种介绍" target="_blank">
+	                        兵种介绍
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/103.html" title="基础资源" target="_blank">
+	                        基础资源
+	                    </a>
+
+	            </div>
+	        </div>
+	    </div>
+	    <div class="iinterBoxList clearfix interbg02">
+	        <a href="http://sq.wan.com/gamedata/dataList.html" target="_blank" class="iinterBand inter02">进阶</a>
+	        <div class="iinterList">
+	            <div class="iinterListBox">
+	                <a href="http://sq.wan.com/gamedata/46.html" title="兵营" target="_blank">
+	                        兵营
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/47.html" title="仓库" target="_blank">
+	                        仓库
+	                    </a>
+
+	                <a href="http://sq.wan.com/gamedata/49.html" title="精炼炉" target="_blank">
+	                        精炼炉
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/50.html" title="民居" target="_blank">
+	                        民居
+	                    </a>
+
+	                <a href="http://sq.wan.com/gamedata/54.html" title="内政厅" target="_blank">
+	                        内政厅
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/63.html" title="神学院" target="_blank">
+	                        神学院
+	                    </a>
+
+	                <a href="http://sq.wan.com/gamedata/84.html" title="地下迷宫" target="_blank">
+	                        地下迷宫
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/86.html" title="传送阵" target="_blank">
+	                        传送阵
+	                    </a>
+
+	            </div>
+	        </div>
+	    </div>
+	    <div class="iinterBoxList clearfix interbg03">
+	        <a href="http://sq.wan.com/gamedata/dataList.html" target="_blank" class="iinterBand inter03">特色</a>
+	        <div class="iinterList">
+	            <div class="iinterListBox">
+	                <a href="http://sq.wan.com/gamedata/71.html" title="宝箱系统" target="_blank">
+	                        宝箱系统
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/74.html" title="连续登陆" target="_blank">
+	                        连续登陆
+	                    </a>
+
+	                <a href="http://sq.wan.com/gamedata/79.html" title="签到" target="_blank">
+	                        签到
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/68.html" title="钻石" target="_blank">
+	                        钻石
+	                    </a>
+
+	                <a href="http://sq.wan.com/gamedata/44.html" title="科技系统" target="_blank">
+	                        科技系统
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/58.html" title="占星系统" target="_blank">
+	                        占星系统
+	                    </a>
+
+	                <a href="http://sq.wan.com/gamedata/62.html" title="荣誉/装备" target="_blank">
+	                        荣誉/装备
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/67.html" title="灵魂刻印" target="_blank">
+	                        灵魂刻印
+	                    </a>
+
+	            </div>
+	        </div>
+	    </div>
+	    <div class="iinterBoxList clearfix interbg04">
+	        <a href="http://sq.wan.com/gamedata/dataList.html" target="_blank" class="iinterBand inter04">套装</a>
+	        <div class="iinterList">
+	            <div class="iinterListBox">
+	                <a href="http://sq.wan.com/gamedata/11.html" title="资源采集" target="_blank">
+	                        资源采集
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/59.html" title="农场收获" target="_blank">
+	                        农场收获
+	                    </a>
+
+	                <a href="http://sq.wan.com/gamedata/13.html" title="新手时间宝箱" target="_blank">
+	                        新手时间宝箱
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/20.html" title="连续登陆奖励" target="_blank">
+	                        连续登陆奖励
+	                    </a>
+
+	                <a href="http://sq.wan.com/gamedata/30.html" title="VIP周礼包" target="_blank">
+	                        VIP周礼包
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/36.html" title="活跃奖励" target="_blank">
+	                        活跃奖励
+	                    </a>
+
+	                <a href="http://sq.wan.com/gamedata/42.html" title="新手等级礼包" target="_blank">
+	                        新手等级礼包
+	                    </a>
+	                <span>|</span>
+	                <a href="http://sq.wan.com/gamedata/45.html" title="充值礼包" target="_blank">
+	                        充值礼包
+	                    </a>
+
+	            </div>
+	        </div>
+	    </div>
+	</div>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.1.min.js"></script>
+<script>
+$(".iinterBand").on("mouseenter", function() {
+	var $this = $(this);
+
+	$this.parent().stop().animate({
+		"width": 441
+	}, "slow");
+	$this.parent().siblings().find(".iinterList").stop().animate({
+		"width": 0
+	}, "slow");
+	$this.parent().siblings().stop().animate({
+		"width": 91
+	}, "slow");
+	$this.next().stop().animate({
+		"width": 350
+	}, "slow");
+	$this.parent().addClass("ints").siblings().removeClass("ints");
+});
+$(".iinterBand").eq(0).mouseenter();
+</script>
+</body>
+</html>

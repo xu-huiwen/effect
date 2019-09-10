@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{}
+ol{margin:0;padding:0;}
+li{margin-left:40px;}
+.hd {text-align:left;}
+body,td,th {
+	font-family: tahoma, arial, \5b8b\4f53, sans-serif;
+}
+</style>
+<title>视频播放</title>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>视频播放</h1>
+	</div>
+	<div id="main">
+		<h2>一、使用说明</h2>
+		<ol>
+			<li>引入js： http://apps.game.qq.com/CommArticle/time/gen_js/sign.js</li>
+			<li>由于接口编码跟管家页面编码不同，需要重写doReg(action_id)函数，详细见源文件</li>
+            <li>action_id由产品方提供</li>
+		</ol>
+	　　<h2>二、实例演示（示例需要登录态，本地无法运行，具体使用方法请查看页面源文件；）</h2>
+		<div class="hd">
+			<a href="javascript:doReg(1481)">订阅活动</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="http://pc1.gtimg.com/act/title/js/mgrTitle.js"></script> 
+<script type="text/javascript" src="http://apps.game.qq.com/CommArticle/time/gen_js/sign.js"></script>
+<script type="text/javascript">
+//重写doReg
+function doReg(action_id){
+	if(MGR.checkLogin()){
+		init();
+		document.getElementById("action_id").value = action_id;
+		do_submit();
+	}else{
+		MGR.login();	
+	}
+}
+function ShowMessageBox(a,b){
+	if(a==0){
+		alert("您已成功报名。");
+	}
+}
+</script>
+</body>
+</html>

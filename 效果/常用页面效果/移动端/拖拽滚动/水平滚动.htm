@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta name="format-detection" content="telephone=no, email=no">
+<title>iscroll水平滚动</title>
+<link rel="stylesheet" href="reset.css" media="all">
+<style>
+.header,.footer{height:44px;background-color:#fff;text-align:center;line-height:44px;}
+.header{border-bottom:1px solid red;}
+.footer{border-top:1px solid red;}
+#carousel{margin:10px 0;width:100%;height:125px;overflow:hidden;}
+#carousel ul{position:relative;}
+#carousel li{float:left;margin-left:10px;width:93px;height:125px;}
+.content{padding:10px;}
+.content p{margin-bottom:10px;line-height:1.5;}
+</style>
+</head>
+<body>
+<header class="header">header</header>
+<div class="wrap-page" id="main">
+    <div class="page">
+        <div id="carousel">
+            <ul>
+                <li>
+                    <img src="http://placehold.it/93x125" alt="">
+                </li>
+                <li>
+                    <img src="http://placehold.it/93x125" alt="">
+                </li>
+                <li>
+                    <img src="http://placehold.it/93x125" alt="">
+                </li>
+                <li>
+                    <img src="http://placehold.it/93x125" alt="">
+                </li>
+                <li>
+                    <img src="http://placehold.it/93x125" alt="">
+                </li>
+                <li>
+                    <img src="http://placehold.it/93x125" alt="">
+                </li>
+                <li>
+                    <img src="http://placehold.it/93x125" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="content" id="content">
+            <p>君子曰：学不可以已。</p>
+            <p>青，取之于蓝，而青于蓝；冰，水为之，而寒于水。木直中绳，輮以为轮，其曲中规。虽有槁暴（pù），不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
+            <p>故不登高山，不知天之高也；不临深溪，不知地之厚也；不闻先王之遗言，不知学问之大也。干、越、夷、貉之子，生而同声，长而异俗，教使之然也。诗曰：“嗟尔君子，无恒安息。靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。</p>
+            <p>吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
+            <p>君子曰：学不可以已。</p>
+            <p>青，取之于蓝，而青于蓝；冰，水为之，而寒于水。木直中绳，輮以为轮，其曲中规。虽有槁暴（pù），不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
+            <p>故不登高山，不知天之高也；不临深溪，不知地之厚也；不闻先王之遗言，不知学问之大也。干、越、夷、貉之子，生而同声，长而异俗，教使之然也。诗曰：“嗟尔君子，无恒安息。靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。</p>
+            <p>吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
+            <p>君子曰：学不可以已。</p>
+            <p>青，取之于蓝，而青于蓝；冰，水为之，而寒于水。木直中绳，輮以为轮，其曲中规。虽有槁暴（pù），不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
+            <p>故不登高山，不知天之高也；不临深溪，不知地之厚也；不闻先王之遗言，不知学问之大也。干、越、夷、貉之子，生而同声，长而异俗，教使之然也。诗曰：“嗟尔君子，无恒安息。靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。</p>
+            <p>吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
+        </div>
+    </div>
+</div>
+<footer class="footer">footer</footer>
+<script src="iscroll.js"></script>
+<script>
+window.addEventListener('load', function() {
+  var $carousel = document.getElementById('carousel'),
+    $ul = $carousel.querySelector('ul'),
+    liArray = $carousel.querySelectorAll('li'),
+    liNum = liArray.length;
+  $ul.style.width = (liArray[0].clientWidth + 10) * 7 + "px";
+
+  var carousel = new IScroll('#carousel', {
+    eventPassthrough: true,
+    scrollX: true,
+    scrollY: false,
+    preventDefault: false
+  });
+});
+</script>
+</body>
+</html>

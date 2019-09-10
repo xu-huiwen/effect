@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-CP" />
+<meta name="Description" content="御龙在天官方网站" />
+<meta name="Keywords" content="御龙在天" />
+<title>御龙在天-腾讯游戏公会-腾讯游戏</title>
+<link href="commen.css" type="text/css" rel="stylesheet" />
+<style type="text/css">
+.newslist{padding:10px 16px 30px 16px; *padding:10px 16px 35px 16px;}
+	.news_lst{height:32px; line-height:32px;color:#515151; border-bottom:1px dotted #919191;}
+		.news_date{float:right;}
+		.news_lnk{color:#515151;}
+		.news_lnk:hover{color:#ff6000;}
+</style>
+</head>
+<body id="news">
+<div class="banner shadow" id="banner">
+	<ul class="banner_box">
+		<li class="banner_left">
+			<h2 class="hidden">加入腾讯公会的三大优势</h2>
+			<ol>
+				<li>结交志同道合的朋友</li>
+				<li>参与活动，获得公会独有的丰富奖励</li>
+				<li>游戏激活码轻松拿</li>
+			</ol>
+		</li>
+		<li class="banner_right">
+			<h2 class="hidden">入驻腾讯公会的四大优势</h2>
+			<ol>
+				<li>年度明星公会评选，入驻终极荣誉殿堂</li>
+				<li>海量特权和激活码</li>
+				<li>最即时的官方活动通知和最丰富的活动奖励</li>
+				<li>实用的公会管理工具</li>
+			</ol>
+		</li>
+		<li><a href="#" class="banner_close spr" id="banner_close"><strong class="hidden">关闭</strong></a></li>
+	</ul>
+</div>
+<div class="wrap">
+<div class="header">
+	<h1 class="hidden">英雄联盟公会系统</h1>
+	<div class="nav">
+		<a href="index.shtml" class="nav_lnk lnk1 spr"><strong class="hidden">首页</strong></a>
+		<a href="news.shtml" class="nav_lnk lnk2 spr"><strong class="hidden">新闻公告</strong></a>
+		<a href="list.shtml" class="nav_lnk lnk3 spr"><strong class="hidden">公会列表</strong></a>
+		<a href="sort.shtml" class="nav_lnk lnk4 spr"><strong class="hidden">排行榜</strong></a>
+		<a href="recruit.shtml" class="nav_lnk lnk5 spr"><strong class="hidden">招聘信息</strong></a>
+	</div>
+	<div class="search">
+		<input class="search_input" />
+		<a href="search.shtml" class="search_submit"><strong class="hidden">搜索</strong></a>
+	</div>
+</div>
+<div class="content">
+	<div class="side_left">
+		<div class="log has_ass spr">
+			<p class="log_line">欢迎您，<strong class="str_person">miumiu</strong></p>
+			<p class="log_line">您是<strong class="str_ass">迪洛电竞AVA分会</strong>的会长/副会长/成员</p>
+			<p class="log_line"><a class="log_go" href="#"><strong class="hidden"></strong></a></p>
+			<ul class="ass_info">
+				<li>已入驻公会：<strong class="str_num">464654</strong>个</li>
+				<li>已加入公会：<strong class="str_num">464654</strong>个</li>
+			</ul>
+		</div>
+		<div class="log no_ass spr" style="display:none;">
+			<p class="log_line"><span class="str_unlogin">你尚未加入任何公会</span></p>
+			<p class="log_line"><a class="log_go" href="#"><strong class="hidden"></strong></a></p>
+			<p class="log_line"><a class="log_go" href="#"><strong class="hidden"></strong></a></p>
+			<ul class="ass_info">
+				<li>已入驻公会：<strong class="str_num">464654</strong>个</li>
+				<li>已加入公会：<strong class="str_num">464654</strong>个</li>
+			</ul>
+		</div>
+		<div class="help side_box spr">
+			<h2 class="side_title">帮助信息</h2>
+			<ul class="help_box">
+				<li><span class="side_dot">·</span><a href="#" class="help_lnk">哈哈哈哈哈</a></li>
+				<li><span class="side_dot">·</span><a href="#" class="help_lnk">哈哈哈哈哈</a></li>
+				<li><span class="side_dot">·</span><a href="#" class="help_lnk">哈哈哈哈哈</a></li>
+				<li><span class="side_dot">·</span><a href="#" class="help_lnk">哈哈哈哈哈</a></li>
+				<li><span class="side_dot">·</span><a href="#" class="help_lnk">哈哈哈哈哈</a></li>
+			</ul>
+		</div>
+		<div class="flink side_box spr">
+			<h2 class="side_title">友情链接</h2>
+			<ul>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="sub sub_spr">
+		<h2 class="sub_title">新闻公告列表</h2>
+		<div class="sub_cnt sub_spr">
+			<div class="sub_box">
+				<ul class="newslist">
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+					<li class="news_lst"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[哈哈]</a> <a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈啊哈哈啊啊哈哈</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="pager sub_spr">
+			<span class="pager_div">
+				<a href="#" class="pager_lnk">上一页</a>
+			</span>
+			<span class="pager_div">
+				<a href="#" class="pager_lnk">1</a>
+				<a href="#" class="pager_lnk">2</a>
+				<a href="#" class="pager_lnk">3</a>
+				<a href="#" class="pager_lnk">4</a>
+				<a href="#" class="pager_lnk">5</a>
+				<a href="#" class="pager_lnk">6</a>
+				<a href="#" class="pager_lnk">7</a>
+				<a href="#" class="pager_lnk">8</a>
+				<a href="#" class="pager_lnk">...</a>
+				<a href="#" class="pager_lnk">31</a>
+				<a href="#" class="pager_lnk">32</a>
+			</span>
+			<span class="pager_div">
+				<a href="#" class="pager_lnk">下一页</a>
+			</span>
+			<span class="pager_div">
+				到第<input type="text" class="pager_input" />页
+				<a href="#" class="pager_go">GO</a>
+			</span>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="footer_box">
+		<a href="http://game.qq.com/" target="_blank" title="腾讯游戏" class="tg"><strong class="hidden">腾讯游戏</strong></a>
+		<div class="footer_detail">
+			<p><a class="footer_lnk" href="http://game.qq.com/portal2010/about.htm" target="_blank">关于腾讯游戏</a><span class="footer_div">|</span><a class="footer_lnk" href="http://www.qq.com/contract.shtml" target="_blank">服务条款</a><span class="footer_div">|</span><a class="footer_lnk" href="http://adver.qq.com/" target="_blank">广告服务</a><span class="footer_div">|</span><a class="footer_lnk" href="http://game.qq.com/hr/" target="_blank">腾讯游戏招聘</a><span class="footer_div">|</span><a class="footer_lnk" href="http://service.qq.com/" target="_blank">腾讯游戏客服</a><span class="footer_div">|</span><a class="footer_lnk" href="http://game.qq.com/portal2010/business.htm" target="_blank">商务合作</a><span class="footer_div">|</span><a class="footer_lnk" href="http://www.qq.com/map/" target="_blank">网站导航</a></p>
+			<p class="footer_small">COPYRIGHT &copy; 1998 – 2011 TENCENT. ALL RIGHTS RESERVED.</p>
+			<p class="footer_right"><a class="footer_lnk" href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank">腾讯公司版权所有</a></p>
+			<p class="footer_small">2011 Riot Games Inc. ALL RIGHTS RESERVED.</p>
+		</div>
+	</div>
+</div>
+</div>
+<script type="text/javascript" src="http://pingjs.qq.com/ping_tcss_ied.js"></script>
+<script type="text/javascript">
+if(typeof(pgvMain) == 'function') pgvMain();
+(function(){
+	var $=function(o){return document.getElementById(o);}
+	$("banner_close").onclick=function(){
+		$("banner").style.display="none";
+		return false;
+	}
+})();
+</script>
+</body>
+</html>

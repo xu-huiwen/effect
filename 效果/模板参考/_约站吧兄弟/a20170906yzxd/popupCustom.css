@@ -1,0 +1,26 @@
+body{background:none;}
+.pr{position: relative;}
+.pa{position: absolute;}
+.popup{background:url(//game.gtimg.cn/images/cf/cp/a20170906yzxd/pop-bg.png) no-repeat;width:970px!important;height:543px!important;padding-top:20px!important;}
+.tab-bd{background:none;}
+.login-box{color:#fff;}
+	.login-box a{color:#6f1212;line-height: 2.5;}
+.lottery-status,.accept-intro{color:#fff;font-size: 14px;}
+	.lottery-status b{color:#fff;font-weight:normal;}
+.lottery-trend{color:#fff;}
+	.lottery-trend b{color:#fff;font-weight:normal;font-weight: bold;}
+.tab-hd{margin:0 auto;width: 772px;}
+.tab-hd ul{background: url(//game.gtimg.cn/images/cf/cp/a20170906yzxd/tab.png) no-repeat;}
+.popup-red .tab-hd li{width: 193px;height: 44px;background: none;font-weight: normal;}
+.tab-hd li span{padding: 0 15px 0 30px;line-height: 44px;}
+.tab-hd li{bottom:0;color:#c4b4a3;font-size:18px;margin: 0;}
+.popup-red .tab-hd .cur{color:#6f1212;background:none;height:44px;font-size:18px;}
+.popup-red .tab-hd .cur span{line-height:44px;background-color:#ffdfad;}
+.popup-red .tab-hd li i{display:none;}
+.popup-red .tab-hd li b{display:none;}
+
+.popup-close{width:38px;height:38px;text-indent:-999px;overflow:hidden;top: 9px;right: 3px;}
+.accept-btn .d1,.accept-btn .d2{display:none;}
+.popup-red .accept-btn{font-size:26px;background: url(//game.gtimg.cn/images/cf/cp/a20170906yzxd/btn.png) no-repeat;width: 249px;height: 60px;font-size: 22px;color: #7b4b00;}
+.tab-focus{padding-top: 10%;}
+.btn-look{background: url(//game.gtimg.cn/images/cf/cp/a20170906yzxd/btn-look.png) no-repeat;width: 142px;height: 30px;display: block;color: #fff;font-size: 14px;text-align: center;line-height: 30px;text-decoration: none;top: -5px;right: 130px;}

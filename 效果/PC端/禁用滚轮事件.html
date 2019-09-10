@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>禁用滚轮事件</title>
+</head>
+<body>
+<div style="height: 1000px;"></div>
+<script>
+	function disabledMouseWheel() {
+	  if (document.addEventListener) {
+	    document.addEventListener('DOMMouseScroll', scrollFunc, false);
+	  }//W3C
+	  window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome
+	}
+	function scrollFunc(evt) {
+	  evt = evt || window.event;
+	    if(evt.preventDefault) {
+	    // Firefox
+	      evt.preventDefault();
+	      evt.stopPropagation();
+	    } else {
+	      // IE
+	      evt.cancelBubble=true;
+	      evt.returnValue = false;
+	  }
+	  return false;
+	}
+	window.onload=disabledMouseWheel;
+</script>
+</body>
+</html>

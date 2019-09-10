@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-CP" />
+<meta name="Description" content="《QQ仙侠传》是腾讯游戏历时五年研发的3D MMORPG。以“爱在仙侠浪漫时”为主题，人、仙、魔三族的千年战争为背景，设计了四大门派、十二流派、上万种装备、上千类宠物，给予玩家独树一帜的游戏体验！" />
+<meta name="Keywords" content="仙侠,仙侠传,时尚仙侠,仙侠宝典,大逃杀,天降魔兵,群雄逐鹿,桃之夭夭,仙侠无双,门派闯关,仙侠猜猜猜,熊猫快跑,拜火圣地,万魔门,仙侠精灵,任桓之,澹台名,慕容,红线儿,天道盟,逍遥派,九重天,星华宫,大漠雪,天地劫,龙战之野,广陵,星界,窥天洞,莲池,影狐" />
+<!-- 设计：cp  | 重构：cp | 创建：2013/12/05 | 更新：| 团队博客：http://tgideas.qq.com/ -->
+<title>新仙侠 依然爱-QQ仙侠传官方网站-腾讯游戏</title>
+<style>
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+q:before,q:after{content:''}
+fieldset,img,abbr,acronym{border:0}
+
+/* footer */
+#footer_ied {text-align:center;line-height:19px;color:#898989;}
+.wrap_ied {margin:0 auto;padding:30px;width:940px}
+.wrap_ied a {color:#898989}
+#footer_ied .e {font-size:10px;-webkit-text-size-adjust:none;}
+
+/* 页面样式 */
+.c:before,.c:after {content:"";display:table}
+.c:after {clear:both}
+.c {zoom:1}
+body {font:12px/1.5 tahoma,\5b8b\4f53,sans-serif;padding-top:42px;background-color:#000;}
+a {text-decoration:none;overflow:hidden;}
+a:hover {text-decoration:underline}
+.wrap,#footer_ied {min-width:1000px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1002?'1000px':'');}
+.wrap {background:url(images/rp.jpg) no-repeat 50% 0;}
+.container {width:1000px;margin:0 auto;}
+.hide {display:block;width:0;height:0;overflow:hidden;}
+.pr {position:relative;}
+.pa {position:absolute;}
+.db,.btn-yl,.btn-fs{display:block;text-indent:-999em;}
+.list-process li,.btn-yl,.btn-fs{background:url(images/sp.jpg) no-repeat;}
+/*head*/
+.head{background:url(images/hd.jpg) no-repeat;height:388px;}
+.logo{width:160px;height:85px;top:15px;left:131px;}
+.top-link{top:0;left:762px;}
+	.top-link li{float:left;height:26px;line-height:26px;color:#fff;}
+	.top-link a{margin:0 10px;color:#fff;}
+/*content*/
+.content{background:url(images/ct.jpg) no-repeat;padding:0 0 46px 138px;}
+.list-process{padding-top:96px;}
+	.list-process li{float:left;width:92px;margin-right:20px;display:inline;height:41px;text-align:center;color:#a7abf3;}
+	.lp-i1,.lp-i3,.lp-i4{line-height:41px;}
+	.lp-i2{line-height:20px;}
+.list-template{margin-top:31px;width:450px;}
+	.list-template li{float:left;width:196px;height:103px;border:1px solid #817aca;margin:15px 25px 0 0;display:inline;cursor: pointer;overflow: hidden;}
+		.list-template img{display:block;}
+	.list-template .on{border:1px solid #fff;}
+.box-b{margin-top:21px;}
+	.boxl{float:left;width:245px;padding:5px 0 0 10px;margin-right:10px;display:inline;}
+		.named,.signature span{font-size:16px;color:#b8bbdf;font-family:Microsoft Yahei;}
+		.tarea1{background-color:transparent;border:none;width:245px;height:140px;overflow-y:auto;resize:none;color:#55587c;font-size:12px;line-height:20px;}
+		.signature{margin:5px 0 0 81px;}
+			.signature span{float:left;width:65px;line-height:27px;}
+			.signature-i{float:left;width:90px;height:25px;padding-left:7px;}
+				.inp{width:90px;height:25px;background-color:transparent;border:none;color:#b8bbdf;line-height:25px;}
+	.boxr{float:left;width:157px;}
+		.email{width:120px;height:26px;line-height:26px;padding-left:7px;background-color:transparent;border:none;color:#b8bbdf;}
+		.btn-yl{background-position:0 -41px;width:156px;height:66px;margin-top:11px;}
+		.btn-fs{background-position:0 -107px;width:158px;height:88px;margin-top:12px;}
+/*弹窗*/
+.cover { width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: #000000; filter: alpha(opacity=75); opacity: 0.75; z-index: 50;}
+.pop { width:705px; height: 450px;position: absolute; top: 100px; left: -999em; margin: 0 0 0 -350px; z-index: 100;}
+.pop-close{background:url(images/pop-sp.png) no-repeat 0 -36px;display: block;text-indent:-999em; width:34px; height:34px;position:absolute; top:0; right:-34px;}
+.none {position:absolute !important;left:-999em !important;top:0 !important;}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	<div class="container">
+	    <div class="head pr">
+	        <h1 class="hide">新仙侠 依然爱</h1>
+	        <a href="http://xxz.qq.com/" title="QQ仙侠传" class="logo db pa" target="_blank">QQ仙侠传</a>
+			<ul class="top-link pa c">
+	            <li><a href="http://xxz.qq.com/" title="进入官网" target="_blank">进入官网</a>|</li>
+	            <li><a href="http://xxz.qq.com/down.shtml" title="游戏下载" target="_blank">游戏下载</a>|</li>
+	            <li><a href="http://xxz.gamebbs.qq.com/forum.php" title="官方论坛" target="_blank">官方论坛</a></li>
+	        </ul>
+	        <p class="hide">唯美仙侠，挚爱一生。繁华的广陵城依旧喧闹非凡，但与你共乘锦鳞时的招摇过市依旧历历在目。我们嬉笑着完成九转，互相吐槽对方的开宝箱时的RP。我们并肩作战，笑称自己是行侠仗义的侠侣。时过境迁，可能很久未与你联系，但我们的感情依然不变……<br>就趁现在，把埋藏在你心底的爱大胆的说出来。给思念一个出口，给爱慕一个机会，别让迟疑阻止幸福的拜访。<br>就是现在，把爱说出来！写上自己的心情与思念，送给那个Ta！发送成功的童鞋，还有机会抽中绝版仙侠浪漫组合杯一件！</p>
+	    </div>
+	    <div class="content">
+	    	<ul class="list-process c">
+	    		<li class="lp-i1">选择模版</li>
+	    		<li class="lp-i2">输入你的感情<br>寄语</li>
+	    		<li class="lp-i3">预览效果</li>
+	    		<li class="lp-i4">发送邮件</li>
+	    	</ul>
+	    	<ul class="list-template c" id="template">
+	    		<li class="on"><img src="images/pic-x.jpg" width="196" height="103" alt="心"></li>
+	    		<li><img src="images/pic-yjcx.jpg" width="196" height="103" alt="一箭穿心"></li>
+	    		<li><img src="images/pic-xx.jpg" width="196" height="103" alt="星星"></li>
+	    		<li><img src="images/pic-yl.jpg" width="196" height="103" alt="月亮"></li>
+	    	</ul>
+			<div class="box-b c">
+				<div class="boxl">
+					<h3 class="named">亲爱的<span class="name">xxx</span>:</h3>
+					<textarea name="" id="" class="tarea1">输入你的感情寄语... </textarea>
+					<div class="signature c">
+						<span>爱你的：</span>
+						<span class="signature-i"><input type="text" class="inp"></span>
+					</div>
+				</div>
+				<div class="boxr">
+					<input type="text" class="email">
+					<a href="###" class="btn-yl" title="预览效果"onClick="show();previewWord(0);">预览效果</a>
+					<a href="###" class="btn-fs" title="点击发送">点击发送</a>
+				</div>
+			</div>
+	    </div>
+	</div>
+</div>
+<div class="pop" id="pop">
+	<div id="swfcontent"></div>
+	<a href="javascript:hide()" class="pop-close">&times;</a>
+</div>
+<div class="cover" id="cover" style="display:none"></div>
+<script src="http://ossweb-img.qq.com/images/js/foot.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/milo/milo-min.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/basic/flashmanagerv2.js"></script>
+
+<script>
+function gE(e) {
+			return (typeof(e) == "object") ? e : document.getElementById(e)
+}
+function hasClass(o, c) {
+	var regexp = new RegExp("(^|\\s)" + c + "(\\s|$)", "g");
+	return regexp.test(o.className)
+}
+var objs = gE('template').getElementsByTagName('li')
+ for (var i = 0; i < objs.length; i++) {
+	objs[i].n = i;
+	objs[i].onclick = function() {
+		if (!hasClass(this, 'on')) {
+			for (var j = 0; j < objs.length; j++) {
+				objs[j].className = objs[j].className.replace(RegExp("(^|\\s)" + 'on' + "(\\s|$)", "g"), "");
+			}
+			objs[this.n].className += (objs[this.n].className ? " " : "") + 'on';
+		}
+	}
+}
+function show() {
+	var a=gE("pop"),
+	b=gE("cover"),
+	c=document.body.offsetHeight;
+	d=document.documentElement.scrollTop||document.body.scrollTop;
+	a.style.left="50%";
+	b.style.display="block";
+	a.style.top=d+100+"px";
+	b.style.height=c+"px";
+}
+function hide() {
+	gE("pop").style.left="-999em";
+	gE("cover").style.display="none";
+}
+
+var swf={}
+//如果要隐藏swf,动态将swf的宽和高设置成0即可;
+
+//flash初始化完成 flash->js
+function flashInitComplete(){}
+//开始抽奖,点击我要竞猜,flash->js
+function callJsToStart(){}
+//flash动画完成通知js  flash->js
+function callJsToComplete(){}
+
+//预览flash
+//type:对应的模版类型,0:爱心桃 1:箭头 2:五角星 3:月亮;
+function previewWord(type)
+{
+	var str='测试字符串五六七八九十十一十二';
+	var swfInstance = swf.getFlashInstance();
+	//调用flash里面的预览函数;
+	//type:对应的模版类型,0:爱心桃 1:箭头 2:五角星 3:月亮;
+	//str:用户输入的祝福语句;
+	if(swfInstance) swfInstance.previewWord(type,str);
+}
+//生成图片 js->flash;
+function sendWord(type)
+{
+	var str='测试字符串五六七八九十十一十二';
+	var swfInstance = swf.getFlashInstance();
+	//调用flash里面的预览函数;
+	//type:对应的模版类型,0:爱心桃 1:箭头 2:五角星 3:月亮;
+	//str:用户输入的祝福语句;
+	//参数3:生成图片的质量 0-100 之间,默认90,可根据不同需求来调整,数字越大,图片质量越好,体积越大;
+	if(swfInstance) swfInstance.sendWord(type,str,90);
+}
+
+//flash内部将图片转换成 二进制字符串 flash->js;
+function sendPic(str)
+{
+	alert(str);
+}
+
+//初始化抽奖对象的SWFOBJ
+function setSwf(){
+	//初始化抽奖的swf 可以不知道内部
+	swf= FlashManager.init({
+		'flashUrl' : 'images/page.swf',
+		'width':704,
+		'height':573,
+		'contentId' : 'swfcontent',
+		'onClickRollEvent' : callJsToStart,
+		'onCompleteRollEvent':callJsToComplete 
+	});
+}
+setSwf()
+// 统计
+milo.addEvent(window,'load',function(){
+	loadScript("http://ossweb-img.qq.com/images/js/title.js",function(){ostb_int()},"");
+	loadScript("http://pingjs.qq.com/ping_tcss_ied.js",function(){if(typeof(pgvMain) == 'function')pgvMain();});
+});
+</script>
+</body>
+</html>

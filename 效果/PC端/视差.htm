@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>视差</title>
+	<style>
+		*{margin:0;padding:0;border:0;}
+		.content { width:1000px; margin:0 auto; position:relative; height:880px; z-index:1; cursor:default;background-color:#000;}
+		.icon1,.icon2,.icon3,.icon4 { display:block; position:absolute; background:url(http://ossweb-img.qq.com/images/age/act/a20130614weixin/sprites.png) no-repeat;}
+		.icon1 { width:41px; height:41px; background-position:0 0; top:8px; left:523px;}
+		.icon2 { width:7px; height:11px; background-position:0 -94px; top:194px; left:722px;}
+		.icon3 { width:40px; height:53px; background-position:0 -41px; top:290px; left:672px;}
+		.icon4 { width:59px; height:38px; background-position:0 -105px; top:336px; left:295px;}
+		.icon5 { left:-50px; top:100px;}
+		.icon6 { left:150px; top:230px;;}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<span class="icon1" id="icon1"></span>
+		<span class="icon2" id="icon2"></span>
+		<span class="icon3" id="icon3"></span>
+		<span class="icon4" id="icon4"></span>
+		<span class="icon5" id="icon5"></span>
+		<span class="icon6" id="icon6"></span>
+	</div>
+<script>
+var d3 = function(d3Info) {
+	var middleX = 650,
+		middleY = 350;
+	var iconsE = [],
+		ls = [],
+		ts = [],
+		sXs = [],
+		sYs = [];
+	for (var i = 0; i < d3Info.length; i++) {
+		iconsE.push(document.getElementById(d3Info[i].id));
+		ls.push(d3Info[i].l);
+		ts.push(d3Info[i].t);
+		sXs.push(d3Info[i].sX);
+		sYs.push(d3Info[i].sY);
+	}
+	document.onmousemove = function(evt) {
+		evt = evt || window.event;
+		showP(evt.clientX, evt.clientY);
+	}
+
+	function showP(x, y) {
+		if (y > 700) y = 700;
+		xP = (x - middleX) / middleX;
+		yP = (y - middleY) / middleY;
+		for (var i = 0; i < iconsE.length; i++) {
+			iconsE[i].style.left = (ls[i] + xP * sXs[i]) + "px";
+			iconsE[i].style.top = (ts[i] + xP * sYs[i]) + "px";
+		}
+	}
+}
+//{id:挂件ID,l:left(css),t:top(css),sX:移动距离X范围,sY:移动距离Y范围}
+var d3Info = [{
+	id: 'icon1',
+	l: 532,
+	t: 8,
+	sX: 17,
+	sY: 14
+}, {
+	id: 'icon2',
+	l: 722,
+	t: 194,
+	sX: 13,
+	sY: 10
+}, {
+	id: 'icon3',
+	l: 672,
+	t: 290,
+	sX: 19,
+	sY: 16
+}, {
+	id: 'icon4',
+	l: 295,
+	t: 336,
+	sX: 15,
+	sY: 12
+}, {
+	id: 'icon5',
+	l: -50,
+	t: 100,
+	sX: 15,
+	sY: 12
+}, {
+	id: 'icon6',
+	l: 150,
+	t: 230,
+	sX: 15,
+	sY: 12
+}];
+d3(d3Info);
+</script>
+</body>
+</html>

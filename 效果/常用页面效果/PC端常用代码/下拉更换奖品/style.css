@@ -1,0 +1,28 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,th,td,p,pre,form,input,textarea{padding: 0;margin: 0;}
+table{border-collapse: collapse;border-spacing: 0;}
+ol,ul{list-style:none;}
+img{border:0 none;display:block;}
+a{outline: none;outline:none;}
+a:focus{outline:none;-moz-outline:none;}
+em,strong{font-weight: normal;font-style: normal;}
+html,body{font: 12px/20px "5B8B4F53";_overflow-x: hidden;}
+body{background:#901309;padding-top: 42px;}
+.hide{width: 0;height: 0;line-height:0;font-size: 0;visibility: hidden;text-indent: -9999px;display: block;}
+.clearfix:after{content:"."; height:0; line-height:0;display:block; clear:both;overflow: hidden;}
+.clearfix{display: inline-block;}
+.clearfix{display: block;}
+.prop li,.p_list_btn,.p_list li{background:url(http://ossweb-img.qq.com/images/chanpin/x5/public/a20131125newyear/sprite.png) no-repeat 0 0;}
+.prop{padding: 30px 0 0 12px;}
+.prop li{float: left;width: 124px;height: 140px;background-position:-371px 0;margin: 13px 0 0 13px;position: relative;z-index: 1;}
+.prop .import{z-index: 2;}
+.p_dj,.p_dj2{display: block;width: 104px;height: 75px;margin: 15px auto 0;}
+.p_dj2{margin-top: 7px;}
+.p_dec,.p_dec2{text-align: center;line-height: 17px;color: #fffbea;padding-top: 5px;}
+.p_dec span{color: #ff7112;display: block;}
+.p_dec2,.p_dec2 span{color: #6b0f11;display: block;}
+.p_dec b,.p_dec2 b{font-weight: normal;}
+.p_list_btn{width:27px;height:22px;background-position:-214px -43px;display: block;margin: -12px 0 0 97px;overflow: hidden;}
+.p_list{position: absolute;display: none;}
+.p_list li{width:124px;height:123px;background-position:-246px 0;margin: 0;cursor: pointer;float:right;}
+.p_list .odd{width:124px;height:123px;background-position:-246px -123px;}
+

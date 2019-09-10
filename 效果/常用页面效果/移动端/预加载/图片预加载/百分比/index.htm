@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片预加载</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+	<style>
+		*{margin:0;padding:0;border:0;}
+		.num {width:200px;text-align:center;margin:0 auto;font-size:30px;}
+	</style>
+</head>
+<body>
+<div class="num">
+	<span></span>%
+</div>
+
+<script>
+var rateNum = document.querySelector('.num span'),
+	imgPath = "images/",
+	sourceArr = ['b1.png', 'b2.png', 'b3.png', 'b4.png', 'b5.png', 'b6.png', 'b7.png', 'b8.png', 'b9.png', 'b10.png'];
+for (var i = 0; i < sourceArr.length; i++) {
+	sourceArr[i] = imgPath + sourceArr[i] ;
+};
+var loadImage = function(path, callback) {
+	var img = new Image();
+	img.onload = function() {
+		img.onload = null;
+		callback(path);
+	}
+	img.src = path;
+}
+var imgLoader = function(imgs, callback) {
+	var len = imgs.length,
+		i = 0;
+	while (imgs.length) {
+		loadImage(imgs.shift(), function(path) {
+			callback(path, ++i, len);
+		});
+	}
+}
+imgLoader(sourceArr, function(path, curNum, total) {
+	var percent = curNum / total
+	rateNum.innerHTML = Math.floor(percent * 100);
+	if (percent == 1) {
+		setTimeout(showPage, 500);
+	}
+});
+var showPage = function() {
+	document.querySelector('.num').innerHTML = "加载完成"
+}
+</script>
+</body>
+</html>

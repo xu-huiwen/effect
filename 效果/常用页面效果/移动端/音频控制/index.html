@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>音频控制</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+	<style>
+		*{margin:0;padding:0;border:0;}
+		.audio-control {margin-top: 100px;}
+		.audio-control::before {content:"播放";}
+		.audio-control.play::before {content:"暂停";}
+	</style>
+</head>
+<body>
+	<audio loop="loop" controls="controls">
+	    <source src="music.mp3" type="audio/mpeg">
+	</audio>
+	<div class="audio-control"></div>
+<script>
+function gE(selector) {
+  return document.querySelector(selector)
+}
+var audio = gE('audio'),
+	audioContorl = gE('.audio-control');
+audioContorl.addEventListener('click', function() {
+	if (audioContorl.classList.contains('play')) {
+		audioContorl.classList.remove('play');
+		audio.pause();
+	} else {
+		audioContorl.classList.add('play');
+		//audio.currentTime = 0;//从头播放，iphone4不支持
+		audio.setAttribute('src', 'music.mp3');//从头播放
+		audio.play();
+	}
+})
+</script>
+</body>
+</html>

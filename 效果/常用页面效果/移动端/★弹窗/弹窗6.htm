@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Document</title>
+	<style>
+		* {margin:0;padding:0;border:0;}
+		.wrap {height:2000px;}
+		#pop-mask {position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.7);}
+		.pop {
+			width:300px;background-color:#00f;border-radius:10px;
+		}
+		.pop-close {color:#fff;}
+
+		.pop1 {height:500px;}
+		
+	</style>
+</head>
+<body>
+		<div class="wrap">
+			<a href="javascript:pop('.pop1')">弹窗1</a>
+			<a href="javascript:pop('.pop2')">弹窗2</a>
+		</div>
+		<div class="pop pop1">内容1</div>
+		<div class="pop pop2">内容2 <a class="pop-close" href="javascript:hidePopOk('.pop2')">确定</a></div>
+<script>
+function gE(e) {
+	return document.querySelector(e)
+}
+
+function pop(e) {
+	if (!gE('#pop-mask')) {
+		gE(e).style.display = "block";
+		var popH = gE(e).offsetHeight,
+			popW = gE(e).offsetWidth;
+		gE(e).style.cssText = "position:fixed;left:50%;display:block;top:50%;z-index:999;"+"margin-left:-"+popW/2+"px;"+"margin-top:-"+popH/2+"px;"
+		var bgObj = document.createElement("div");
+		bgObj.setAttribute('id', 'pop-mask');
+		document.body.appendChild(bgObj);
+		var conH = document.body.scrollHeight,
+			viewH = document.documentElement.clientHeight;
+		if (conH > viewH) {
+			gE('#pop-mask').style.height = conH + "px";
+		} else {
+			gE('#pop-mask').style.height = viewH + "px";
+		}
+		hidePop(e);
+	}
+}
+
+function hidePop(e) {
+	gE('#pop-mask').addEventListener('click', function() {
+		gE(e).style.display = "none";
+		var bgObj = gE("#pop-mask");
+		document.body.removeChild(bgObj);
+	});
+}
+
+function hidePopOk(e) {
+	gE(e).style.display = "none";
+	var bgObj = gE("#pop-mask");
+	document.body.removeChild(bgObj);
+}
+
+//窗口改变时修改遮罩高度
+window.addEventListener('resize', function() {
+	var conH = document.body.scrollHeight,
+		viewH = document.documentElement.clientHeight;
+	if (conH > viewH) {
+			gE('#pop-mask').style.height = conH + "px";
+	} else {
+		gE('#pop-mask').style.height = viewH + "px";
+	}
+})
+</script>
+</body>
+</html>

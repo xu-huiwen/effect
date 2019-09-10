@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Tencent-CP" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>slidejs</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <style>
+    	.slide {padding:0 35px;width:166px;margin:10px auto 0;position:relative;}
+    	.slide > div {background-color:#ccc;}
+		.slidesjs-pagination-item .active {color:#f00;}
+    </style>
+</head>
+
+<body>
+<div class="slide">
+    <div>1玩家通过历练中的全民推塔参与，副本中有多波战斗，每10波有一轮BOSS战。</div>
+    <div>2每个关卡对应有指定英雄属性、及力敏智英雄分类加成。阵营随心变化！</div>
+    <div>3在战斗过程中，每战斗击败5波野怪会获得一次奖励。</div>
+    <div>4活动以每天为单位，排名靠前的玩家可以在消息盒子中领取昨日的排名奖励。</div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.1.min.js"></script>
+<!-- 插件官网http://www.slidesjs.com/ -->
+<script src="slides.js"></script>
+<script>
+	$(function() {
+		$('.slide').slidesjs({
+			width: 166,
+			height: 307,
+			navigation: {
+				active: false,//是否显示左右箭头
+				effect: "fade"//淡隐淡出
+			},
+			pagination: {
+				active: true,//是否显示导航
+				effect: 'slide'//左右滑动
+			},
+			effect: {
+				fade: {
+					speed: 400
+				}
+			},
+			play: {
+				interval: 2000,//自动播放时间间隔2S
+     			auto: true//是否自动播放
+			}
+		});
+	});
+</script>
+</body>
+</html>

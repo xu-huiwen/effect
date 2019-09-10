@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>音频</title>
+</head>
+<style>
+* {margin:0;padding:0;}
+body {background-color:#ccc;}
+.box {width:1000px;margin:0 auto;}
+.player {width:400px;height:30px;}
+</style>
+</head>
+
+<body>
+<div class="box">
+	<div class="player">
+		<div id="player"></div>
+	</div>
+</div>
+<script  src="http://ossweb-img.qq.com/images/js/swfobject.js"></script>
+<script>
+    var info="audio=http://ossweb-img.qq.com/images/audio/music/m1.mp3&autoplay=false"
+	var params = {
+		menu: "false",
+		scale: "noScale",
+		salign:"T",
+		wmode:"transparent",
+		allowFullscreen: "true",
+		allowScriptAccess: "always"
+	};
+    swfobject.embedSWF("http://ossweb-img.qq.com/images/audio/audiotg.swf?"+info, "player", "100%", "100%", "10.0.0", "http://ossweb-img.qq.com/images/swf/expressInstall.swf", "", params, "");
+</script>
+</body>
+</html>

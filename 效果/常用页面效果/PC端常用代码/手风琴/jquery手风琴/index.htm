@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="gbk" />
+	<meta name="robots" content="all" />
+	<meta name="author" content="Tencent-CP" />
+	<meta name="Description" content="" />
+	<meta name="Keywords" content="" />
+	<!-- 设计：cp  | 重构：cp | 创建：2014/5/6 | 更新：| 团队博客：http://tgideas.qq.com/ -->
+	<title>手风琴效果</title>
+	<style type="text/css">
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+q:before,q:after{content:''}
+fieldset,img,abbr,acronym{border:0}
+
+/* 页面样式 */
+.c:before,.c:after {content:"";display:table;}
+.c:after {clear:both;}
+.c {zoom:1;}
+body {font-family:"\5FAE\8F6F\96C5\9ED1";font-size: 12px;padding-top:42px;}
+a {text-decoration:none;overflow:hidden;outline: none;}
+a:hover {text-decoration:underline;}
+.container {width:1000px;margin:0 auto;}
+.hide {display:block;width:0;height:0;overflow:hidden;}
+.pr {position:relative;}
+.pa {position:absolute;}
+.db {text-indent:-999em;}
+
+
+#slide{width:1000px;position:relative;overflow:hidden;height:368px;filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#CC1F0708', endColorstr='#CC1F0708');background:rgba(31,7,8,0.8);}
+:root #slide{filter:none;}
+#nav{width:1000px;position:relative;overflow:hidden;height:368px;z-index:10;}
+#nav a{width:83px;height:368px;display:block;background-image:url(images/lr-tit.jpg);background-repeat:no-repeat;text-indent:-999em;position:absolute;top:0;}
+.n1{left:0;}
+.n2{left:585px}
+.n3{left:668px}
+.n4{left:751px}
+.n5{left:834px}
+.n6{left:917px}
+.n1:hover , .active .n1{background-position:-498px 0;}
+.n2{background-position:-83px 0;}
+.n2:hover , .active .n2{background-position:-581px 0;}
+.n3{background-position:-166px 0;}
+.n3:hover , .active .n3{background-position:-664px 0;}
+.n4{background-position:-249px 0;}
+.n4:hover , .active .n4{background-position:-747px 0;}
+.n5{background-position:-332px 0;}
+.n5:hover , .active .n5{background-position:-830px 0;}
+.n6{background-position:-415px 0;}
+.n6:hover , .active .n6{background-position:-913px 0;}
+#evtCon{width:462px;height:348px;padding:10px 20px;font-size:14px;position:absolute;top:0;left:83px;z-index:5;}
+#evtCon h3{font-weight:400;height:40px;line-height:40px;font-size:26px;color:#fedb51;border-bottom:1px solid #6b2f20;margin:0 0 15px;}
+#evtCon p{padding:0 0 10px;font-size: 14px;color: #ffffff;line-height: 20px;}
+#evtCon .evt{display:none;}
+#evtCon .active{display:block;}
+.c-mt1{margin-top: 35px;}
+</style></head>
+
+<body>
+<div id="slide">
+	<ul id="nav">
+		<li class="active">
+			<a href="javascript:;" class="n1">标题1</a>
+		</li>
+		<li>
+			<a href="javascript:;" class="n2">标题2</a>
+		</li>
+		<li>
+			<a href="javascript:;" class="n3">标题3</a>
+		</li>
+		<li>
+			<a href="javascript:;" class="n4">标题4</a>
+		</li>
+		<li>
+			<a href="javascript:;" class="n5">标题5</a>
+		</li>
+		<li>
+			<a href="javascript:;" class="n6">标题6</a>
+		</li>
+	</ul>
+	<div id="evtCon">
+		<div class="evt" style="display:block;">
+			<h3>标题1</h3>
+			<p>内容1</p>
+		</div>
+		<div class="evt">
+			<h3>标题2</h3>
+			<p>内容2</p>
+		</div>
+		<div class="evt">
+			<h3>标题3</h3>
+			<p>内容3</p>
+		</div>
+		<div class="evt">
+			<h3>标题4</h3>
+			<p>内容4</p>
+		</div>
+		<div class="evt">
+			<h3>标题5</h3>
+			<p>内容5</p>
+		</div>
+		<div class="evt">
+			<h3>标题6</h3>
+			<p>内容6</p>
+		</div>
+	</div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.2.min.js"></script>
+<script>
+$(function($) {
+	var a_width = 83; //a标签的宽度
+	var ct_width = 502; //内容的宽度
+	var nums = 6; //a标签的个数
+	$("#nav li").each(function(index) {
+		$(this).click(function() {
+			showEvt(index);
+		})
+	});
+	var cur = 0;
+
+	function showEvt(n) {
+		if (cur == n) return false;
+		cur = n;
+		$("#nav li").removeClass('active');
+		$("#nav li").eq(n).addClass('active');
+		if (1 <= n <= nums - 1) {
+			setTimeout(function() {
+				$("#evtCon").css('left', (n + 1) * a_width + 'px');
+			}, 400);
+		}
+		$(".evt").fadeOut(200);
+		$(".evt").eq(n).delay(500).fadeIn(200);
+		$("#nav li").find("a").each(function(index) {
+			if (index <= n) {
+				$(this).animate({
+					left: index * a_width + "px"
+				}, 300)
+			} else {
+				$(this).animate({
+					left: (index) * a_width + ct_width + "px"
+				}, 300)
+			}
+		});
+	}
+});
+</script>
+</body>
+</html>

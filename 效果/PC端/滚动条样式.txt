@@ -1,0 +1,5 @@
+滚动条样式
+.txt_detail div{height: 135px;margin:0 auto;overflow: auto;}
+.txt_detail div::-webkit-scrollbar{width: 10px;}
+.txt_detail div::-webkit-scrollbar-track{border-radius: 2px;background-color:#331b0d}
+.txt_detail div::-webkit-scrollbar-thumb{border-radius: 2px;background-color:#e89b32}

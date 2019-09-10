@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gbk" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-CP" />
+<meta name="Description" content="英雄联盟官方网站，海量风格各异的英雄，丰富、便捷的物品合成系统，游戏内置的匹配、排行和竞技系统，独创的“召唤师”系统及技能、符文、天赋等系统组合，必将带你进入一个崭新而又丰富多彩的游戏世界。" />
+<meta name="Keywords" content="英雄联盟,lol,league of legends,DOTA,即时战略,MOBA,召唤师,符文,匹配,英雄,技能,团队,Gank,快节奏,Farm,成长" />
+<!-- 设计：cp  | 重构：cp | 创建：2016/9/05 | 更新：| 团队博客：http://tgideas.qq.com/ -->
+<title>夏季赛回顾首页-英雄联盟官方网站-腾讯游戏</title>
+<link href="css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+
+
+<style>
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+q:before,q:after{content:''}
+fieldset,img,abbr,acronym{border:0}
+
+/* footer */
+#footer_ied {text-align:center;font-size:12px;line-height:19px;color:#9f826f; margin-top: -117px;}
+.wrap_ied {margin:0 auto;padding:30px;width:940px}
+.wrap_ied a {color:#9f826f}
+#footer_ied .e {font-size:10px;-webkit-text-size-adjust:none;}
+
+/* 页面样式 */
+.c:before,.c:after {content:"";display:table}
+.c:after {clear:both}
+.c {zoom:1}
+html,body{ width: 100%;overflow-x: hidden;}
+body {font-family:"\5FAE\8F6F\96C5\9ED1";
+padding-top:42px;background: #00ac93;}
+a {text-decoration:none;overflow:hidden;}
+a:hover {text-decoration:none}
+.wrap1,.wrap2,.#footer_ied {width: 100%;min-width: 1000px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1002?'1000px':'');}
+.wrap2 {background:url(ossweb-img/rp1.jpg) no-repeat 50% 0;}
+.wrap1 {background:url(ossweb-img/rp2.jpg) no-repeat 50% 3551px;}
+.container {width:1000px;margin:0 auto;}
+.hide {display:block;width:0;height:0;overflow:hidden;}
+.pr {position:relative;}
+.pa {position:absolute;}
+.fl {float:left;}
+.fr {float:right;}
+.db {display:block;text-indent:-999em;}
+.sp{ background: url(ossweb-img/sp.png) no-repeat;}
+.nav-sp{ background: url(ossweb-img/nav.png) no-repeat;}
+.content .last{margin-right: 0;}
+/**/
+.head{ background: url(ossweb-img/hd.jpg) no-repeat; height: 1076px;}
+.logo1{ display: block;width:200px ; height:100px ; top: 24px; left:-430px ; background-position: -720px -243px;}
+.logo-icon{ display: block;width:111px ; height:112px ;top: 24px; right:-260px; background-position: -296px -5px;cursor: pointer;}
+.logo-icon a{display: block;width:50px ; height: 50px;display: none;}
+.ic_a{ background-position:-5px -5px ;top:0 ; left:0 ;}
+.ic_b{ background-position:  -65px -5px;top: 0; left: 60px;}
+.ic_c{ background-position:-5px -65px ; top: 60px; left: 0;}
+.ic_d{ background-position:-65px -65px ; top:60px ; left: 60px;}
+.ic_a:hover{ background-position:-130px -5px ;}
+.ic_b:hover{ background-position:-190px -5px;}
+.ic_c:hover{ background-position:-130px -65px;}
+.ic_d:hover{ background-position: -190px -65px;}
+.sm-tit{ background-position:-6px -138px ; font-size: 20px; color: #ffe957;line-height:18px ; top:577px ; left:374px ;
+	width: 248px;height: 18px;text-align: center;}
+.guide{display: block;width:180px ; height:157px ; background-position:-23px -185px ; top:625px ; left:414px ;
+		-webkit-animation: buttonToScale 1s infinite linear alternate 0.3s;}
+.dologin{ width: 100%; text-align: center;top:522px ; left: 0;font-size: 14px; color: #f0cd5e;}
+.dologin a{ color: #f0cd5e;}
+/**/
+.content{ background: url(ossweb-img/ct.jpg) no-repeat; /*height: 7524px;*/ height: 6310px; }
+.bx1{ padding-top: 602px;}
+.tit1{ width:458px ; height:100px ; background-position:0 -356px ;padding-left:110px ; font-size:48px ; color: #ffffff;
+		line-height:100px ;font-weight: bold; margin-left:210px;*margin-left:210px;_margin-left:210px;}
+.sm-bx1{padding-top:91px;width: 968px;margin: 0 auto; }
+.bx_l,.bx_r{width:454px ; height:422px ;padding-top: 15px;}
+.itm .bx_l{-webkit-animation: fadeinleft 1s  linear alternate 1s;animation: fadeinleft 1s  linear alternate 1s ; }
+.itm .bx_r{-webkit-animation: fadeinright 1s  linear alternate 1s;animation: fadeinright 1s  linear alternate 1s; }
+.bx_l{ background: url(ossweb-img/bg1.png) no-repeat;}
+.bx_r{ background: url(ossweb-img/bg2.png) no-repeat;}
+.pick{background-position:-279px -141px ;width: 96px; height:35px ; margin: 0 auto; margin: 0 auto 17px;}
+.ban{ background-position:-408px -143px;width:85px ; height: 35px; margin: 0 auto 17px;}
+.sm-tit1{font-size:22px ; color: #000000;line-height: 72px; text-align: center;width: 100%;font-weight: bold;}
+.bg_a{display: block;width:155px ; height:26px ; background-position: -232px -304px ;top:89px ; left:0 ;}
+.dj-bx{ width: 356px;height: 172px;margin: 0 auto;}
+.img{display: block;top: 0; left: 22px ;border: 4px solid #00887b;border-radius:50% ;margin: 0 auto;}
+.dj_a,.dj_b{ width: 156px;height: 142px;}
+.name{width: 123px; text-align: center;font-size:16px ; color: #fce9e9; background: #00ac93;top:94px ; left: 16px;height: 26px;line-height: 26px; }
+.percent{ width: 75px; height:26px ; margin: 0 auto;top:144px ; left: 54px;}
+.percent span{float: left;height:26px ; margin-right: 3px;display: inline;}
+.num-6{ background-position: -421px -254px;width: 16px;}
+.num-0{ width:16px ; background-position:-254px -254px ;}
+.num-a{width:27px ;  background-position: -530px -254px;}
+.num-1{ background-position: -283px -254px;width:11px ;}
+.num-2{ background-position: -309px -254px; width: 16px;}
+.num-3{ background-position:-336px -254px ; width:17px ;}
+.num-4{ background-position: -364px -254px; width: 18px;}
+.num-5{ background-position:-393px -254px ;width: 16px;}
+.num-7{ background-position:-449px -254px ;width:17px ;}
+.num-8{ background-position:-476px -254px ;width: 17px;}
+.num-9{ width:16px ;background-position: -505px -254px;}
+.tit_a{ font-size: 20px; height:84px ; width: 100%; text-align: center;line-height:84px ; color: #ffe6d5;margin-top: 30px;}
+.bx_r .dj-bx{ width: 144px;}
+.bx_r .bg_a{ background-position:-742px -505px;}
+.bx_r .name{ background: #f15102;}
+.bx_r .img{ border: 4px solid #d34012;}
+.num_0{ background-position:-214px -211px ;width:16px ;}
+.num_1{ background-position:-235px -210px ;width: 11px;}
+.num_2{ background-position:-262px -210px ; width:16px ;}
+.num_3{ background-position: -289px -210px; width:17px ;}
+.num_4{ background-position:-317px -210px ;width:18px ;}
+.num_5{ background-position: -346px -210px ;width: 16px;}
+.num_6{ background-position:-374px -210px ; width:17px ;}
+.num_7{ background-position:-402px -210px ; width:17px ;}
+.num_8 { background-position: -428px -210px ;width: 17px;}.
+.num_9{ background-position:-457px -210px ;width: 16px;}
+.num_a{ background-position:-485px -210px ;width: 27px;}
+.bx2{ padding-top: 335px;}
+.tit2{width:690px ; height:100px ; background-position: -2px -463px; font-size:48px ; color: #ffffff;padding-left: 20px;
+		line-height:100px ;font-weight: bold; margin-left:170px;margin-bottom: 94px;*margin-left:170px;_margin-left:170px; }
+.bx2_l,.bx2_r{ background: url(ossweb-img/bg3.png) no-repeat;width: 454px; height: 356px;}
+.sm-bx2{ width: 968px;margin: 0 auto;}
+.tit_bx2{ font-weight: bold;font-size:22px ; color: #ffffff;line-height: 94px;height: 94px;width: 100%;text-align: center;}
+.circle-info,.circle-text{ display: none;}
+.logo-bx{ width:454px;height: 93px;}
+.logo-bx span{display: block;width:33px ; height:19px ; background-position: -412px -304px; }
+.vs{top: 26px; left: 105px;}
+.vs1{top: 26px; left:321px; }
+.logo-bx img{display: block;top: 0;}
+.img1{ left:33px ;}
+.img2{ left: 143px;}
+.img3{ left: 255px;}
+.img4{ left: 363px;}
+.jdt{ width: 454px; height: 192px;}
+.jdt1{ top:0 ;left: 50px;}
+.jdt2{ top:60px ;left: 179px;}
+.jdt3{ top: 0; left: 264px;}
+.time1{ background-position: -478px -317px; width: 84px; height: 35px; top: 49px; left:28px ;}
+.time3{ background-position:-584px -317px ;width: 84px; height: 35px; top: 49px; left:28px ;}
+.time2{ background-position:-570px -271px ; width:52px ; height:20px ; top: 38px; left: 25px;}
+.time-txt{ font-size: 14px; color: #989281; top:18px ; left:0 ;line-height:18px ;width: 100%; text-align: center;}
+.pic_bx{width: 416px; margin: 0 auto; }
+.pic-l,.pic-r{ background: url(ossweb-img/bg4.png) no-repeat;width: 192px;height: 246px;padding-top: 15px; }
+.img_1{ display: block;margin: 0 auto;}
+.pic-sm{ width: 175px; margin: 0 auto;}
+.bx{ background: url(ossweb-img/bg5.png) no-repeat;width: 928px;height: 234px; margin: 26px auto 0;float: left; padding: 20px; }
+.sm-bx{ width: 292px; margin-right: 26px;display: inline;}
+.sm-tit2{ font-size:20px ; color: #fff; font-weight: bold;line-height:72px ; height: 72px;width: 100%;text-align: center;}
+.zd-num{ width: 236px; margin: 0 auto;padding-top: 20px;}
+.zd-num li{ float: left;}
+.list{ margin-left: 6px; margin-right: 6px; display: inline;}
+.bx3{ padding-top: 233px;}
+.tit3{ width:458px ; height:100px ; background-position:-5px -577px;padding-left:110px ; font-size:48px ; color: #ffffff;
+		line-height:100px ;font-weight: bold; margin-left:210px;*margin-left:210px;_margin-left:210px;}
+.player-bx{ width: 100%; height: 714px;margin-top: 74px;}
+.curr .player{-webkit-animation: buttonToScale1 1s linear alternate ;animation: buttonToScale1 1s  linear alternate ;}
+.player{ background: url(ossweb-img/bg6.png) no-repeat;width: 314px;height: 284px; padding-top: 20px;}
+.player1{ top:40px ; left: 0;}
+.sm-tit3{ width: 100%;text-align: center;line-height:52px ;height: 52px;font-size:20px ;color: #65564c;font-weight: bold;}
+.player-a{ width:123px; height: 153px;top:0 ; left: 28px;}
+.player-b{ width:102px; height: 153px;top:0 ; left: 170px;}
+.img_2{display: block;border:4px  solid #e6d0c2; border-radius:50% ;margin: 0 auto;}
+.player-txt{ width: 100%;text-align: center;height:32px ; line-height:32px ;font-size:16px ; color: #cc9b7c;}
+.kda{ background-position:-507px -20px ;width:131px ; height:75px ; top: 28px; left:153px ;display: block;}
+.player-con{width: 314px;height: 153px;}
+.txt_a{ font-size: 18px; color: #ffe6d5; line-height:77px ;width: 100%; height:77px ;text-align: center;}
+.player2{ left: 343px; top: 0;}
+.player2 .kda{ background-position: -668px -25px;}
+.player3{ top:30px ; right: 0px;}
+.player3 .kda{ background-position: -805px -20px;}
+.player4{ top:410px ; left: 0;}
+.num_b{ background-position:-690px -126px ; width:75px ; height: 25px; margin: 0 auto;display: block;}
+.num_c{ background-position: -800px -126px; width: 108px; height: 25px; display: block;margin: 0 auto;}
+.player4 .player-con{ height: 205px; }
+.player5{top:369px ; left: 342px;}
+.player5 .kda{ background-position: -539px -122px;width:153px ; height: 75px;}
+.player6{ top:400px ; left: 686px;}
+.player6 .player-con{ height: 205px; }
+.player6  .sm-tit3{ line-height: 22px;}
+.player6  .sm-tit3 em{line-height: 14px;font-size: 12px;}
+.player6 .player-b { width: 122px;}
+.bx4{ padding-top: 320px;}
+.tit4{  width:458px ; height:100px ; background-position:-5px -681px;padding-left:110px ; font-size:48px ; color: #ffffff;
+		line-height:100px ;font-weight: bold; margin-left:210px;margin-bottom: 106px;*margin-left:210px;_margin-left:210px;}
+.sm-bx4{ width: 968px; margin: 0 auto;}
+.sm-bx4 li{width:454px ; height: 346px; background: url(ossweb-img/bg7.png) no-repeat; margin-bottom: 35px;}		
+.sm-bx4 li h3{ width: 100%; font-size: 22px; color: #193f48; line-height:95px ;text-align: center;font-weight: bold;}		
+.sm-bx4 li img{ display: block;margin: 0 auto;}	
+.sm-bx4 li p{ width: 100%;text-align: center;font-size: 18px; color: #68e4ed;line-height: 30px; padding-top: 20px;}	
+.bx5{ padding-top: 236px;height: 1242px;}
+.tit5{ background-position: -5px -792px;width:458px ; height:100px ; padding-left:110px ; font-size:48px ; color: #ffffff;
+		line-height:100px ;font-weight: bold; margin-left:210px; *margin-left:210px;_margin-left:210px;}
+.txt-bx{ background: url(ossweb-img/bg8.png) no-repeat;width: 979px;height:195px ; margin: 0 auto;font-size:22px ;
+	 color: #00767f;line-height:36px ;padding-top: 58px;text-align: center;}
+.txt-bx em{ color: #f06647;}
+.img_a{ display: block;top:580px; left:50%; margin-left: -525px;}
+.btn{display: block;width:368px; height:93px ; background-position:-624px -604px ; top:1170px;left:315px ;}
+.btn:hover{ background-position:  -616px -711px;}
+.tit6{background-position:-5px -905px;width:458px ; height:100px ; padding-left:110px ; font-size:48px ; color: #ffffff;
+		line-height:100px ;font-weight: bold; margin-left:210px;*margin-left:210px;_margin-left:210px; }
+.f-l,.f-r{ background: url(ossweb-img/bg9.png) no-repeat;width: 480px;height: 550px;
+-webkit-animation: hinge 2s infinite linear alternate 1s;animation: hinge 2s infinite linear alternate ;}
+.f-tit{ font-size:28px ;color: #f9f2c0; text-align: center;text-align: center;padding-top: 22px;}
+.sm-txt1{ background-position: -702px -220px ;width:213px ; height:13px ; margin: 0 auto;display: block;}
+.sm-txt2{ background-position:-749px -186px ; width: 101px; height:13px ; margin: 0 auto;display: block;}
+.foot-txt{ background: url(ossweb-img/f-bg.png) no-repeat;width: 868px; margin:25px auto 0;height: 190px;padding: 30px 50px;}
+.foot_txt{ font-size: 24px; color: #81624d;line-height: 36px;}
+.fx-bx{ background-position:-628px -361px; width:229px ; height:68px ; margin: 15px auto 0; padding-left:140px ;padding-top: 25px;}
+.foot-btn{ display: block;width: ; height: ; margin: 15px auto 0;}
+.fx-bx li { float: left;width:37px ; height:37px ;margin-right: 13px;display: inline;}
+.fx-bx a{ display: block;width: 37px; height: 37px;}
+.f-bx{ margin-top: 65px;}
+
+.float-ct {width:48px;height:362px;background:url(ossweb-img/nav.png) no-repeat left top;  text-align: center;}
+.float,.fixed {left: 50%;margin-left:600px;}
+.float {position:absolute;top:330px !important;}
+.nav li{ width: 48px;height: 53px;}
+.nav li a{ display: block;width: 100%; height: 100%;}
+.fst_1 a:hover,.fst_1 .on{ background:url(ossweb-img/nav.png) no-repeat;background-position: -51px 0; }
+.fst_2 a:hover,.fst_2 .on{ background:url(ossweb-img/nav.png) no-repeat;background-position:-51px -54px; }
+.fst_3 a:hover,.fst_3 .on{ background:url(ossweb-img/nav.png) no-repeat;background-position: -51px -107px; }
+.fst_4 a:hover,.fst_4 .on{ background:url(ossweb-img/nav.png) no-repeat;background-position:-51px -160px; }
+.fst_5 a:hover,.fst_5 .on{ background:url(ossweb-img/nav.png) no-repeat;background-position: -51px -212px; }
+.fst_6 a:hover,.fst_6 .on{ background:url(ossweb-img/nav.png) no-repeat;background-position: -51px -266px; }
+.fst_7 a:hover,.fst_7 .on{ background:url(ossweb-img/nav.png) no-repeat;background-position: -51px -320px; }
+.fixed {
+	position:fixed;top:300px;
+	_position:absolute;_top:expression(eval(document.documentElement.scrollTop));_bottom:auto;/*ie6 fixed*/
+}
+* html {background-image:url(about:blank);background-attachment:fixed;}/*解决 ie6 Fixed闪动问题*/
+:focus{outline: none;}
+@-webkit-keyframes buttonToScale {
+	from{ top:615px;opacity: 1; }
+	to{ top:625px;opacity: 0.6; }
+}
+@keyframes buttonToScale {
+	from{ top:615px;opacity: 1; }
+	to{ top:625px;opacity: 0.6; }
+}
+/*top*/
+.sun{ display: block;width:157px ; height:164px ; top:124px ;right:-140px ; background: url(ossweb-img/ty.png) no-repeat;
+	-webkit-animation: rotateout 8s infinite linear alternate; animation: rotateout 8s infinite linear alternate;}
+@-webkit-keyframes rotateout {
+	0% {
+		-webkit-transform-origin: center center;
+		-webkit-transform: rotate(0);
+		
+	}
+
+	100% {
+		-webkit-transform-origin: center center;
+		-webkit-transform: rotate(360deg);
+		
+	}
+}
+
+@-moz-keyframes rotateout {
+	0% {
+		-moz-transform-origin: center center;
+		-moz-transform: rotate(0);
+		
+	}
+
+	100% {
+		-moz-transform-origin: center center;
+		-moz-transform: rotate(360deg);
+		
+	}
+}
+
+@-o-keyframes rotateout {
+	0% {
+		-o-transform-origin: center center;
+		-o-transform: rotate(0);
+		
+	}
+
+	100% {
+		-o-transform-origin: center center;
+		-o-transform: rotate(360deg);
+		
+	}
+}
+
+@keyframes rotateout {
+	0% {
+		transform-origin: center center;
+		transform: rotate(0);
+		
+	}
+
+	100% {
+		transform-origin: center center;
+		transform: rotate(360deg);
+		
+	}
+}
+.yun1{ background: url(ossweb-img/you-2.png) no-repeat;width: 172px;height: 103px;top:188px ;
+	 right: -210px;display: block;-webkit-animation: shake 18s infinite linear alternate}
+@-webkit-keyframes shake {
+	0%, 100% {-webkit-transform: translatex(0);}
+	10%, 30%, 50%, 70%, 90% {-webkit-transform: translatex(-20px);}
+	20%, 40%, 60%, 80% {-webkit-transform: translatex(20px);}
+}
+
+@-moz-keyframes shake {
+	0%, 100% {-moz-transform: translatex(0);}
+	10%, 30%, 50%, 70%, 90% {-moz-transform: translatex(-20px);}
+	20%, 40%, 60%, 80% {-moz-transform: translatex(20px);}
+}
+
+@-o-keyframes shake {
+	0%, 100% {-o-transform: translatex(0);}
+	10%, 30%, 50%, 70%, 90% {-o-transform: translatex(-20px);}
+	20%, 40%, 60%, 80% {-o-transform: translatex(20px);}
+}
+
+@keyframes shake {
+	0%, 100% {transform: translatex(0);}
+	10%, 30%, 50%, 70%, 90% {transform: translatex(-20px);}
+	20%, 40%, 60%, 80% {transform: translatex(20px);}
+}
+.yz-l{ background: url(ossweb-img/left.png) no-repeat; width: 481px;height: 565px;top: -31px; left: 50%;display: block; margin-left: -960px;
+
+-webkit-animation: rotateinupleft 2s infinite linear alternate 1s;animation: rotateinupleft 2s infinite linear alternate ;}
+.yz-r{ background: url(ossweb-img/right.png) no-repeat; width: 520px;height: 565px;top: -31px; right: 50%;display: block; margin-right: -983px;
+-webkit-animation: rotateinupright 2s infinite linear alternate 1s;animation: rotateinupright 2s infinite linear alternate ;}
+.yun2{display: block;width:182px ; height: 88px; top: 485px ;right:-195px ; background: url(ossweb-img/you-1.png) no-repeat;
+	-webkit-animation: shake 18s infinite linear alternate 1s;animation: shake 18s infinite linear alternate 1s;  }
+.yun3{ display: block;width:172px ; height:103px ; background: url(ossweb-img/z-1.png) no-repeat;top:360px ;left: -210px;
+-webkit-animation: shake 18s infinite linear alternate 1s;animation: shake 18s infinite linear alternate ;}
+@-webkit-keyframes rotateinupleft {
+	0% {
+		-webkit-transform-origin: left bottom;
+		-webkit-transform: rotate(5deg);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform-origin: left bottom;
+		-webkit-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes rotateinupleft {
+	0% {
+		-moz-transform-origin: left top;
+		-moz-transform: rotate(5deg);
+		
+	}
+
+	100% {
+		-moz-transform-origin: left top;
+		-moz-transform: rotate(0);
+		
+	}
+}
+
+@-o-keyframes rotateinupleft {
+	0% {
+		-o-transform-origin: left top;
+		-o-transform: rotate(5deg);
+		
+	}
+
+	100% {
+		-o-transform-origin: left top;
+		-o-transform: rotate(0);
+		
+	}
+}
+
+@keyframes rotateinupleft {
+	0% {
+		transform-origin: left top;
+		transform: rotate(5deg);
+		
+	}
+
+	100% {
+		transform-origin: left top;
+		transform: rotate(0);
+		
+	}
+}
+@-webkit-keyframes rotateinupright {
+	0% {
+		-webkit-transform-origin: right bottom;
+		-webkit-transform: rotate(-5deg);
+	}
+
+	100% {
+		-webkit-transform-origin: right bottom;
+		-webkit-transform: rotate(0);
+	}
+}
+
+@-moz-keyframes rotateinupright {
+	0% {
+		-moz-transform-origin: right bottom;
+		-moz-transform: rotate(-5deg);
+	}
+
+	100% {
+		-moz-transform-origin: right bottom;
+		-moz-transform: rotate(0);
+	}
+}
+
+@-o-keyframes rotateinupright {
+	0% {
+		-o-transform-origin: right bottom;
+		-o-transform: rotate(-5deg);
+	}
+
+	100% {
+		-o-transform-origin: right bottom;
+		-o-transform: rotate(0);
+	}
+}
+
+@keyframes rotateinupright {
+	0% {
+		transform-origin: right bottom;
+		transform: rotate(-5deg);
+	}
+
+	100% {
+		transform-origin: right bottom;
+		transform: rotate(0);
+	}
+}
+@-webkit-keyframes fadeinleft {
+	0% {
+		opacity: 1;
+		-webkit-transform: translatex(-30px);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translatex(0);
+	}
+}
+
+@-moz-keyframes fadeinleft {
+	0% {
+		opacity: 1;
+		-moz-transform: translatex(-30px);
+	}
+
+	100% {
+		opacity: 1;
+		-moz-transform: translatex(0);
+	}
+}
+
+@-o-keyframes fadeinleft {
+	0% {
+		opacity: 1;
+		-o-transform: translatex(-30px);
+	}
+
+	100% {
+		opacity: 1;
+		-o-transform: translatex(0);
+	}
+}
+
+@keyframes fadeinleft {
+	0% {
+		opacity: 1;
+		transform: translatex(-30px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translatex(0);
+	}
+}
+@-webkit-keyframes fadeinright {
+	0% {
+		opacity: 1;
+		-webkit-transform: translatex(30px);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translatex(0);
+	}
+}
+
+@-moz-keyframes fadeinright {
+	0% {
+		opacity: 1;
+		-moz-transform: translatex(30px);
+	}
+
+	100% {
+		opacity: 1;
+		-moz-transform: translatex(0);
+	}
+}
+
+@-o-keyframes fadeinright {
+	0% {
+		opacity: 1;
+		-o-transform: translatex(30px);
+	}
+
+	100% {
+		opacity: 1;
+		-o-transform: translatex(0);
+	}
+}
+
+@keyframes fadeinright {
+	0% {
+		opacity: 1;
+		transform: translatex(30px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translatex(0);
+	}
+}
+@-webkit-keyframes buttonToScale1 {
+	from{ -webkit-transform:scale(0.8);opacity: 1; }
+	to{ -webkit-transform:scale(1);opacity: 1; }
+}
+@keyframes buttonToScale1 {
+	from{ transform:scale(0.8);opacity: 1; }
+	to{ transform:scale(1);opacity: 1; }
+}
+/*弹窗*/
+.dia-con{ width: 482px; height: 182px; background: #19615e; border:  3px solid #33847e;padding: 35px;}
+.select_a{ width:260px;float: left;color: #fcd560;font-size:22px ; line-height:45px ; background-position:-258px -1026px; height: 45px;text-align: center;}
+.f-smbx{ margin-bottom: 20px;}
+.f-smbx span{ float: left;width: 190px; font-size:22px ;color: #fbfff7; line-height:45px ;}
+.fc-ul{ top:45px ; left:190px ;border: 2px solid #33847e; background: #19615e; border-radius:5px ; width: 260px;overflow-y: scroll;height: 220px;}
+.fc-ul li{ width: 100%;text-align: center;font-size: 22px; color: #fcd560;line-height: 44px; border-bottom: 1px solid #33847e;}
+.fc-ul li a{display: block;width: 100%;text-align: center;font-size: 22px; color: #fcd560;line-height: 44px;}
+.btn_s{display: block;width:224px ; height:69px ; background-position: -4px -1007px; margin: 0 auto;}
+.dia-close{display: block;width: 40px ; height: 40px; color: #fff; font-size: 35px; font-weight: bold; top: 0; right: 0;} 
+.tg-sns a{ background: none; margin-right: 14px;}
+.player2 .txt_a{ line-height:34px ;padding-top: 5px;}
+.bx5 .tit2{ margin-bottom: 0; letter-spacing: -1px;}
+</style> 
+
+</head>
+
+<body>
+<div class="wrap1">
+	<div class="wrap2">
+	<div class="container">
+	    <div class="head pr">
+	        <h1 class="hide">夏季赛回顾首页</h1>
+	        <span class="sun pa"></span>
+	        <span class="yun1 pa"></span>
+	         <span class="yun3 pa"></span>
+	        <span class="yz-l pa"></span>
+	         <span class="yz-r pa"></span>
+	         <span class="yun2 pa"></span>
+	        
+	        <a href="http://lol.qq.com/" title="英雄联盟" class="logo1 db pa sp" target="_blank">英雄联盟</a>
+	        <div class="logo-icon pa sp pr">
+	        	<a href="javascript:;" class="pa ic_a sp"></a>
+	        	<a href="javascript:;" class="pa ic_b sp"></a>
+	        	<a href="javascript:;" class="pa ic_c sp"></a>
+	        	<a href="javascript:;" class="pa ic_d sp"></a>
+	        </div>
+	        <h2 class="sm-tit sp pa">回顾2016LPL夏季赛</h2>
+	        <a href="javascript:;" id="dologin" class="sp pa guide"></a>
+	        <div class="dologin pa">
+	        	<!--<p id="unlogin">亲爱的用户，请 <a href="javascript:;" >[登录]</a></p>-->
+				<!--登录前状态 End-->
+				<!--登录后状态 Start-->
+				<p id="logined" style="display:none">欢迎您，<span id='login_qq_span'></span>，<a href="javascript:TGDialogS('test1');" class="select">选择大区</a><a href="javascript:;" id="dologout">[注销]</a></p>
+				<!--登录后状态 End-->
+	        </div>
+	    </div>
+	    <div class="content">
+	    	<div class="bx1">
+	    		<h2 class="tit1 sp">职业赛场上的选择</h2>
+	    		<div class="sm-bx1 c">
+	    			<div class="fl bx_l">
+	    				<h2 class="pick sp"></h2>
+	    				<p class="sm-tit1">夏季赛上出场次数最多的英雄</p>
+	    				<div class="dj-bx c">
+	    					<div class="fl pr dj_a">
+	    						<span class="sp bg_a pa"></span>
+	    						<img src="ossweb-img/v1.jpg" width="106" height="106" alt="弗雷尔卓德之心"  class="img pa"/>
+	    						<p class="pa name">弗雷尔卓德之心</p>
+	    						<div class="pa percent c">
+	    							<span class="num-6 sp"></span>
+	    							<span class="num-0 sp"></span>
+	    							<span class="num-a sp"></span>
+	    						</div>
+	    					</div>
+	    					<div class="fr pr dj_b">
+	    						<span class="sp bg_a pa"></span>
+	    						<img src="ossweb-img/v2.jpg" width="106" height="106" alt="弗雷尔卓德之心"  class="img pa"/>
+	    						<p class="pa name">战争女神</p>
+	    						<div class="pa percent c">
+	    							<span class="num-4 sp"></span>
+	    							<span class="num-8 sp"></span>
+	    							<span class="num-a sp"></span>
+	    						</div>
+	    					</div>
+	    				</div>
+	    				<p class="tit_a">中国好CP ,(*￣3￣)╭ </p>
+	    			</div>
+	    			<div class="fr bx_r">
+	    				<h2 class="ban sp"></h2>
+	    				<p class="sm-tit1">夏季赛上被BAN次数最多的英雄</p>
+	    				<div class="dj-bx c">
+	    					<div class="fl pr dj_a">
+	    						<span class="sp bg_a pa"></span>
+	    						<img src="ossweb-img/v1.jpg" width="106" height="106" alt="弗雷尔卓德之心"  class="img pa"/>
+	    						<p class="pa name">弗雷尔卓德之心</p>
+	    						<div class="pa percent c">
+	    							<span class="num_6 sp"></span>
+	    							<span class="num_0 sp"></span>
+	    							<span class="num_a sp"></span>
+	    						</div>
+	    					</div>
+	    				</div>
+	    				<p class="tit_a">眼角仿佛划过一丝泪</p>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="bx2">
+	    		<h2 class="tit2 sp"> 02&nbsp;&nbsp;LPL那些你不知道的事</h2>
+	    		<div class="sm-bx2 c">
+	    			<div class="fl bx2_l">
+	    				<h3 class="tit_bx2">历时最长&最短的比赛</h3>
+	    				<div class="logo-bx pr">
+	    					<img src="ossweb-img/logo_1.jpg" width="63" height="74" alt="" class="img1 pa" />
+	    					<span class="sp vs pa"></span>
+	    					<img src="ossweb-img/logo_2.jpg" width="63" height="74" alt="" class="img2 pa" />
+	    					<img src="ossweb-img/logo_3.jpg" width="63" height="74" alt="" class="img3 pa" />
+	    					<span class="sp vs1 pa"></span>
+	    					<img src="ossweb-img/logo_4.jpg" width="63" height="74" alt="" class="img4 pa" />
+	    				</div>
+	    				<div class="jdt pr">
+	    					<div id="myStat" data-dimension="140" data-text="67%" data-info="New Clients"
+	    					 data-width="10"  data-percent="67" data-fgcolor="#d34012"
+	    					  data-bgcolor="#504943" data-fill="#433d38" class="jdt1 pa">
+	    					  <span class="pa sp time1"></span>
+	    					</div>
+							<div id="myStat1" data-dimension="100" data-text="67%" data-info="New Clients"
+	    					 data-width="6"  data-percent="67" data-fgcolor="#d34012"
+	    					  data-bgcolor="#504943" data-fill="#433d38" class="jdt2 pa">
+	    					  <span class="pa sp time2"></span>
+	    					</div>
+	    					<div id="myStat2" data-dimension="140" data-text="67%" data-info="New Clients"
+	    					 data-width="10"  data-percent="67" data-fgcolor="#d34012"
+	    					  data-bgcolor="#504943" data-fill="#433d38" class="jdt3 pa">
+	    					  <span class="pa sp time3"></span>
+	    					</div>
+	    					<p class="time-txt pa">夏季赛<br />平均时长</p>
+	    				</div>
+	    			</div>	
+	    			<div class="fr bx2_r">
+	    				<h3 class="tit_bx2">上场选手最多&最少的战队</h3>
+	    				<div class="c pic_bx">
+	    					<div class="pic-l fl">
+	    						<img src="ossweb-img/logo_5.jpg" width="81" height="83" alt="" class="img_1" />
+	    						<img src="ossweb-img/pic1.jpg" width="157" height="135" alt="" class="img_1" />
+	    					</div>
+	    					<div class="pic-r fr">
+	    						<div class="pic-sm">
+	    							<img src="ossweb-img/logo_6.jpg" width="54" height="76" alt="" />
+	    							<img src="ossweb-img/logo_7.jpg" width="54" height="76"  alt="" />
+	    							<img src="ossweb-img/logo_8.jpg" width="54" height="76"  alt="" />
+	    						</div>
+	    						<img src="ossweb-img/pic2.jpg" width="157" height="135" alt=""  class="img_1"/>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="bx c">
+    					<div class="fl sm-bx">
+    						<h3 class="sm-tit2">拆塔最多的战队</h3>
+    						<ul class="c zd-num">
+    							<li><img src="ossweb-img/a1.jpg" width="74" height="133" alt="" /><span></span></li>
+    							<li class="list" ><img src="ossweb-img/a2.jpg" width="74" height="133" alt="" /><span></span></li>
+    							<li><img src="ossweb-img/a3.jpg" width="74" height="133" alt="" /><span></span></li>
+    						</ul>
+    					</div>
+    					<div class="fl sm-bx">
+    						<h3 class="sm-tit2">死亡次数最多的战队</h3>
+    						<ul class="c zd-num">
+    							<li><img src="ossweb-img/a4.jpg" width="74" height="133" alt="" /><span></span></li>
+    							<li class="list" ><img src="ossweb-img/a5.jpg" width="74" height="133" alt="" /><span></span></li>
+    							<li><img src="ossweb-img/a6.jpg" width="74" height="133" alt="" /><span></span></li>
+    						</ul>
+    					</div>
+    					<div class="fl sm-bx last">
+    						<h3 class="sm-tit2">总人头最多的战队</h3>
+    						<ul class="c zd-num">
+    							<li><img src="ossweb-img/a7.jpg" width="74" height="133" alt="" /><span></span></li>
+    							<li class="list" ><img src="ossweb-img/a8.jpg" width="74" height="133" alt="" /><span></span></li>
+    							<li><img src="ossweb-img/a9.jpg" width="74" height="133" alt="" /><span></span></li>
+    						</ul>
+    					</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="bx3">
+	    		<h2 class="sp tit2 "> 03&nbsp;&nbsp;今年夏季赛诞生的传奇</h2>
+	    		<div class="player-bx pr">
+	    			<div class="player1 pa player">
+	    				<h3 class="sm-tit3">场均击杀最多</h3>
+	    				<div class="pr player-con pr">
+	    					<div class="player-a pa">
+	    						<img src="ossweb-img/b1.png" width="102" height="102" alt="" class="img_2" />
+	    						<p class="player-txt">EDG Deft</p>
+	    					</div>
+	    					<span class="sp kda pa"></span>
+	    				</div>
+	    				<p class="txt_a">联盟杀神deft，场均团灭对手一次</p>
+	    			</div>
+	    			<div class="player2 pa player">
+	    				<h3 class="sm-tit3">MVP次数最多</h3>
+	    				<div class="pr player-con pr">
+	    					<div class="player-a pa">
+	    						<img src="ossweb-img/b2.png" width="102" height="102" alt="" class="img_2" />
+	    						<p class="player-txt">RNG MLXG</p>
+	    					</div>
+	    					<span class="sp kda pa"></span>
+	    				</div>
+	    				<p class="txt_a ">你的野区就是我的野区，我的野区还是我的野区</p>
+	    			</div>
+	    			<div class="player3 pa player">
+	    				<h3 class="sm-tit3">拿一血次数最多</h3>
+	    				<div class="pr player-con pr">
+	    					<div class="player-a pa">
+	    						<img src="ossweb-img/b3.png" width="102" height="102" alt="" class="img_2" />
+	    						<p class="player-txt">SS SofM</p>
+	    					</div>
+	    					<span class="sp kda pa"></span>
+	    				</div>
+	    				<p class="txt_a">学会我的挖掘机，玩会我的王者路</p>
+	    			</div>
+	    			<div class="player4 pa player">
+	    				<div class="pr player-con pr">
+	    					<div class="player-a pa">
+	    						<h3 class="sm-tit3">场均输出最高</h3>
+	    						<span class="sp num_b"></span>
+	    						<img src="ossweb-img/b4.png" width="90" height="90" alt="" class="img_2" />
+	    						<p class="player-txt">LGD We1les</p>
+	    					</div>
+	    					<div class="player-b pa">
+	    						<h3 class="sm-tit3">总输出最高</h3>
+	    						<span class="sp num_c"></span>
+	    						<img src="ossweb-img/b5.png" width="90" height="90" alt="" class="img_2" />
+	    						<p class="player-txt">LGD We1les</p>
+	    					</div>
+	    				</div>
+	    				<p class="txt_a">赛场上，他们拼尽输出来换取胜利</p>
+	    			</div>
+	    			<div class="player5 pa player">
+	    				<h3 class="sm-tit3">场均KDA最高</h3>
+	    				<div class="pr player-con pr">
+	    					<div class="player-a pa">
+	    						<img src="ossweb-img/b6.png" width="102" height="102" alt="" class="img_2" />
+	    						<p class="player-txt">EDG Clearlove</p>
+	    					</div>
+	    					<span class="sp kda pa"></span>
+	    				</div>
+	    				<p class="txt_a">杀死厂长的代价就是被团灭1.5次</p>
+	    			</div>
+	    			<div class="player6 pa player">
+	    				<div class="pr player-con pr">
+	    					<div class="player-a pa">
+	    						<h3 class="sm-tit3">击杀野怪最多</h3>
+	    						<span class="sp num_b"></span>
+	    						<img src="ossweb-img/b7.png" width="90" height="90" alt="" class="img_2" />
+	    						<p class="player-txt">WE Condi</p>
+	    					</div>
+	    					<div class="player-b pa">
+	    						<h3 class="sm-tit3">击杀野怪最多 <br /><em>(非打野选手)</em></h3>
+	    						<span class="sp num_c"></span>
+	    						<img src="ossweb-img/b8.png" width="90" height="90" alt="" class="img_2" />
+	    						<p class="player-txt">RNG Uzi</p>
+	    					</div>
+	    				</div>
+	    				<p class="txt_a">一进野区深似海，从此不见打野人</p>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="bx4">
+	    		<h3 class="sp tit2"> 04&nbsp;&nbsp;战队不可告人的小秘密</h3>
+	    		<ul class="c sm-bx4">
+	    			<li class="fl">
+	    				<h3>胜率最高战队</h3>
+	    				<img src="ossweb-img/pic3.jpg" width="324" height="155" alt="" />
+	    				<p>这支法拉利车队在整个夏天没有翻过车<br />
+						</p>
+	    			</li>
+	    			<li class="fr">
+	    				<h3>比赛场次最多的战队</h3>
+	    				<img src="ossweb-img/pic4.jpg" width="324" height="155" alt="" />
+	    				<p>观看WE比赛请常备速效救心丸比赛不到<br />最后一刻永远没有人知道最后结果
+						</p>
+	    			</li>
+	    			<li class="fl">
+	    				<h3>击杀大龙最多战队</h3>
+	    				<img src="ossweb-img/pic5.jpg" width="324" height="155" alt="" />
+	    				<p>他们踩着别人的尸体走向胜利<br />
+						他们踩着大龙的尸体走向胜利</p>
+	    			</li>
+	    			<li class="fr">
+	    				<h3>场均插眼最多</h3>
+	    				<img src="ossweb-img/pic6.jpg" width="324" height="155" alt="" />
+	    				<p>人手一眼是标记点亮召唤师峡谷
+						</p>
+	    			</li>
+	    		</ul>
+	    	</div>
+	    	<div class="bx5 pr">
+	    		<h2 class=" sp tit2" style="letter-spacing: -1px;"> 05&nbsp;&nbsp;你和LPL职业选手差多远？</h2>
+	    		<p class="txt-bx">夏季赛职业联赛厂商一共打了<em>96</em>场比赛，现场观众一共<em>212122</em>人，相当于每场有<br />
+					<em>500</em>个观众为他们喜爱的队伍呐喊助威。</p>
+				<img src="ossweb-img/pic7.jpg" width="1051" height="507" alt="" class="img_a pa" />
+				<a href="javascript:scrollTo(7420);" class="btn pa sp"></a>
+	    	</div>
+	    	<div class="bx6" style="display: none;">
+	    		<h2 class="tit6 sp">职业赛场上的选择</h2>
+	    		<div class="f-bx c">
+	    			<div class="f-l fl">
+	    				<h4 class="f-tit">职业选手们的表现</h4>
+	    				<span class="sp sm-txt1"></span>
+	    				<canvas id="radar" data-type="Radar" width="380" height="375" style=" margin: 65px 0 0 55px;"></canvas>
+	    			</div>
+	    			<div class="f-r fr">
+	    				<h4 class="f-tit">Ta的个人表现</h4><!----改变text属性--->
+	    				<span class="sp sm-txt2"></span>
+	    				<canvas id="radar1" data-type="Radar" width="380" height="375" style=" margin: 65px 0 0 55px;"></canvas>
+	    			</div>
+	    		</div>
+	    		<div class="foot-txt">
+	    			<p class="foot_txt">根据S5赛季夏季赛期间您与职业选手的数据对比表明，您距离职业选手的路还有<br />
+					很长，加油哦召唤师</p>
+	    			<a href="javascript:;" style="display: none;" class="sp foot-btn">查看我的表现</a>
+	    			<div class="fx-bx sp"  >
+	    				<div id="tg-sns"></div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+	</div>
+</div>
+</div>
+<div class="float" id="float">
+	<div class="float-ct">
+		<ul class="nav">
+			<li class="fst_1"><a href="javascript:scrollTo(1440)"></a></li>
+			<li class="fst_2"><a href="javascript:scrollTo(2600)"></a></li>
+			<li class="fst_3"><a href="javascript:scrollTo(3700)"></a></li>
+			<li class="fst_4"><a href="javascript:scrollTo(4900)"></a></li>
+			<li class="fst_5"><a href="javascript:scrollTo(6150)"></a></li>
+			<li class="fst_6"><a href="javascript:scrollTo(7420)"></a></li>
+			<li class="fst_7"><a href="javascript:scrollTo(200)"></a></li>
+		</ul>
+	</div>
+</div>
+<div class="dialog pr" id="test1" style="display:none">
+    <div class="dia-con">
+    	<div class="pr c f-smbx f-smbx1">
+    		<span>请选择大区：</span>
+    		<a href="javascript:;" class="select_a sp select_a1">请选择大区</a>
+    		<div class="pa fc-ul1 fc-ul" style="display: none;">
+    			<ul class="xz-bx" >
+	    			<li><a href="javascript:;">艾欧尼亚  电信1</a></li>
+	    			<li><a href="javascript:;">艾欧尼亚  电信2</a></li>
+	    			<li><a href="javascript:;">艾欧尼亚  电信3</a></li>
+	    			<li><a href="javascript:;">艾欧尼亚  电信4</a></li>
+	    			<li><a href="javascript:;">艾欧尼亚  电信5</a></li>
+	    			<li><a href="javascript:;">艾欧尼亚  电信6</a></li>
+	    			<li><a href="javascript:;">艾欧尼亚  电信7</a></li>
+	    			<li><a href="javascript:;">艾欧尼亚  电信8</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="pr c f-smbx f-smbx2">
+    		<span>请选择角色：</span>
+    		<a href="javascript:;" class="select_a sp select_a2">请选择大区</a>
+    		<div class="pa fc-ul2 fc-ul" style="display: none;">
+    			<ul class="xz-bx1">
+	    			<li><a href="javascript:;">艾欧尼亚  电信</a></li>
+	    			<li><a href="javascript:;">艾欧尼亚  电信</a></li>
+	    			<li><a href="javascript:;">艾欧尼亚  电信</a></li>
+	    			<li><a href="javascript:;">艾欧尼亚  电信</a></li>
+	    			<li><a href="javascript:;">艾欧尼亚  电信</a></li>
+	    			<li><a href="javascript:;">艾欧尼亚  电信</a></li>
+	    			<li><a href="javascript:;">艾欧尼亚  电信</a></li>
+	    			<li><a href="javascript:;">艾欧尼亚  电信</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<a href="javascript:;" class="btn_s sp"></a>
+    </div>
+    <a class="dia-close pa" href="javascript:showDialog.hide()" title="关闭">×</a>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/foot.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/milo/milo-min.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/share/share-min.js" charset="gb2312"></script>
+<!--<script src="js/jquery.circliful.min.js"></script>-->
+<script src="js/Chart.js"></script>
+<script>
+TGshare({
+         iconSize :24,  //分享图标的大小,16为16px X 16px，24为24px X 24px
+        snsModule :['qq','sina','qzone','pengyou'],
+        //分享类型 wechat,qq,qzone,weibo,pengyou,sina,douban,kaixin,renren
+        //默认全部加载
+        title :'腾讯游戏 - 用心创造快乐',
+        //需要自定义标题时才用到，默认拉取页面标题
+        url :'http://game.qq.com/',
+        //需要自定义页面url时才用到，默认拉取页面url
+           picUrl :'http://b.gtimg.com/res/2014/06/13/0/058e8b5f7aa4e83d.jpg',
+        //需要自定义主题图片才用到，默认拉取页面中第一张图片
+            snsID :'tg-sns',//自定义SNS容器ID
+         isWindow :true,     //分享打开类型，true为弹窗打开，false为新页面打开，默认为弹窗打开
+             tcss :true      //是否添加点击流，true为添加，false为不添加，默认添加
+})
+//
+$('.dia-con').find('.f-smbx1').each(function(i){
+	$(this).children('.select_a1').click(function(){
+		$('.fc-ul1').show();
+		$('.f-smbx1').css('z-index','99999');
+		$('.f-smbx2').css('z-index','1');
+		$('.xz-bx').find('a').each(function(j){
+			$(this).click(function(){
+				$('.select_a1').text($(this).text())
+				$('.fc-ul1').hide();
+				
+			})
+		})
+	})
+})
+$('.dia-con').find('.f-smbx2').each(function(i){
+	$(this).children('.select_a2').click(function(){
+		$('.fc-ul2').show();
+		$('.f-smbx2').css('z-index','99999');
+		$('.f-smbx1').css('z-index','1')
+		$('.xz-bx1').find('a').each(function(j){
+			$(this).click(function(){
+				$('.select_a2').text($(this).text())
+				$('.fc-ul2').hide();
+				
+			})
+		})
+	})
+})
+function TGDialogS(e){
+            need("biz.dialog-min",function(Dialog){
+		Dialog.show({
+			id:e,
+			bgcolor:'#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+			opacity:50      //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+		});
+            });
+}
+function closeDialog(){
+            need("biz.dialog-min",function(Dialog){
+		Dialog.hide();
+            });
+}
+</script>
+<script>
+milo.addEvent(g("dologin"), "click", function() {
+            need("biz.login-min",function(LoginManager){
+		LoginManager.init({
+			needReloadPage:true
+            });
+		LoginManager.login();
+            });
+            return false;
+});
+milo.addEvent(g("dologout"), "click", function() {
+            need("biz.login-min",function(LoginManager){
+		LoginManager.logout();
+            });
+            return false;
+});
+milo.ready(function() {
+            need("biz.login-min",function(LoginManager){
+		LoginManager.checkLogin(function(){
+            g("login_qq_span").innerHTML = LoginManager.getUserUin();//获取QQ号
+		});
+            });
+});
+</script>
+<script>
+$('.btn').click(function(){
+	$('.content').css('height','7524px')
+	$('.bx6').show()
+})
+$(function(){
+	 var wid=$(window).width()
+	 if(wid<1600){
+	 	$('.float').hide()
+	 }
+})
+//$(window).bind('load scroll', function() {
+//	var sTop = $(document).scrollTop();
+//	if (sTop < 1400) {
+//		$(".fst_1").siblings().children().removeClass('on')
+//		$(".fst_1 a").addClass('on');
+//		
+//	};
+//	if (sTop < 2000) {
+//		$('.bx1').addClass('itm')
+//	};
+//	if (sTop >= 2600 && sTop < 3700) {
+//		$(".fst_2").siblings().children().removeClass('on')
+//		$(".fst_2 a").addClass('on');
+//	};
+//	if (sTop >= 3500 ) {
+//		$(".bx3").addClass('curr');
+//	};
+//	if (sTop >= 3700 && sTop < 4900) {
+//		$(".fst_3").siblings().children().removeClass('on')
+//		$(".fst_3 a").addClass('on');
+//	};
+//	if (sTop >= 4900 && sTop < 6150) {
+//		$(".fst_4").siblings().children().removeClass('on')
+//		$(".fst_4 a").addClass('on');
+//	}
+//	if (sTop >= 6150 && sTop < 7420) {
+//		$(".fst_5").siblings().children().removeClass('on')
+//		$(".fst_5 a").addClass('on');
+//	}
+//	if (sTop >= 7420 ) {
+//		$(".fst_6").siblings().children().removeClass('on')
+//		$(".fst_6 a").addClass('on');
+//	}
+//
+//})
+
+
+
+window.scrollTo = (function() {
+	var targets = jQuery(document.documentElement).add(document.body);
+	return function(n) {targets.stop().animate({scrollTop: n});
+	}
+})();
+
+
+$(function() {
+	var fixE = $("#float");
+	$(window).bind('scroll.fixed', function() {
+		if ($(window).scrollTop() >=300) {
+			fixE.removeClass("float").addClass('fixed');
+		} else {
+			fixE.removeClass("fixed").addClass('float');
+		}
+	}).trigger('scroll.fixed');
+})
+
+
+//雷达图
+var data = {
+	labels : ["承受伤害","补兵","助攻","输出","金钱"],
+	
+	datasets : [
+		{
+			fillColor : "rgba(167,96,48,1)",
+			strokeColor : "rgba(225,148,46,1)",
+			pointColor : "rgba(225,148,76,1)",//小点点的颜色
+			pointStrokeColor : "#eb8c4c",
+			data : [650,300,400,430,450]
+		}
+	]
+}
+//alert(data.datasets)
+
+	var a=[,300,400,430,450];
+	var ctx = document.getElementById("radar").getContext("2d");
+	var data = {
+		labels : ["承受伤害","补兵","助攻","输出","金钱"],
+		
+		datasets : [
+			{
+				fillColor : "rgba(167,96,48,1)",
+				strokeColor : "rgba(225,148,46,1)",
+				pointColor : "rgba(225,148,76,1)",//小点点的颜色
+				pointStrokeColor : "#eb8c4c",
+				data :a
+			}
+		]
+	};
+	new Chart(ctx).Radar(
+		data, {//Boolean - If we show the scale above the chart data
+		scaleOverlay : false,
+		
+		//String - Colour of the scale line	
+		scaleLineColor : "rgba(160,129,109,1)",//网圈颜色
+		
+		//String - Colour of the angle line
+		angleLineColor : "rgba(160,129,109,1)",
+		
+		//Number - Point label font size in pixels	
+		pointLabelFontSize : 16,
+		
+		//String - Point label font colour	
+		pointLabelFontColor : "#bba577"
+	})
+
+
+
+
+
+
+
+</script>
+<script>
+//雷达图
+var data1 = {
+	labels : ["承受伤害  ","补兵  ","助攻  ","输出 ","金钱 "],
+	
+	datasets : [
+		{
+			fillColor : "rgba(192,154,62,1)",//背景颜色
+			strokeColor : "rgba(255,243,108,1)",//边框颜色
+			pointColor : "rgba(255,243,108,1)",//小点点的颜色
+			pointStrokeColor : "#eb8c4c",
+			data : [65,59,56,55,40]
+		}
+	]
+}
+
+$(function(){
+	var ctx1 = document.getElementById("radar1").getContext("2d");
+	window.myLine = new Chart(ctx1).Radar(data1, {//Boolean - If we show the scale above the chart data			
+	scaleOverlay : false,
+	
+	//String - Colour of the scale line	
+	scaleLineColor : "rgba(160,129,109,1)",//网圈颜色
+	
+	//String - Colour of the angle line
+	angleLineColor : "rgba(160,129,109,1)",
+	
+	//Number - Point label font size in pixels	
+	pointLabelFontSize : 16,
+	
+	//String - Point label font colour	
+	pointLabelFontColor : "#bba577",
+
+	})
+}) 
+</script>
+
+
+<script>
+$( document ).ready(function() {
+		$('#myStat').circliful();
+		$('#myStat1').circliful();
+		$('#myStat2').circliful();
+    });
+
+	$(function(){
+		$('.logo-icon').mouseover(function(){
+			$('.logo-icon a').css('display','block')
+		})
+		$('.logo-icon').mouseout(function(){
+			$('.logo-icon a').css('display','none')
+		})
+	})
+</script>
+<script>
+// 统计和Top条
+milo.ready(function() {
+	loadScript("http://pingjs.qq.com/ping_tcss_ied.js", function() {
+		if (typeof(pgvMain) == 'function') {
+			pgvMain();
+		}
+	});
+	loadScript("http://ossweb-img.qq.com/images/lol/title/lol.js", "");
+});
+</script>
+</body>
+</html>

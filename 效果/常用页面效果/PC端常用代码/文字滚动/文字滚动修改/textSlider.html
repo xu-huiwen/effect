@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery插件-文字滚动</title>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.4.4.min.js"></script>
+<script src="jQuery.textSlider.js"></script>
+<script>
+$(function(){
+    $(".scrollText").textSlider({timer:1000});	
+});
+</script>
+<style>
+ul,li{margin:0;padding:0}
+#scrollDiv{ overflow:auto}
+.scrollText{width:300px;height:125px;min-height:25px;line-height:25px;border:#ccc 1px solid; float:left;overflow:hidden}
+.scrollText li{height:25px;padding-left:10px;}
+.scrollText .on {color: #f00}
+
+.arrow {display: none;}
+</style>
+</head>
+<body>
+<p>一行滚动演示：</p>
+<div class="scrollText">
+  <ul>
+    <li></li>
+    <li></li>
+    <li class="on">这是公告标题的第1行</li>
+    <li>这是公告标题的第2行</li>
+    <li>这是公告标题的第3行</li>
+    <li>这是公告标题的第4行</li>
+    <li>这是公告标题的第5行</li>
+    <li>这是公告标题的第6行</li>
+    <li>这是公告标题的第7行</li>
+    <li>这是公告标题的第8行</li>
+    <li>这是公告标题的第9行</li>
+    <li>这是公告标题的第10行</li>
+  </ul>
+</div>
+<div class="arrow">箭头</div>
+</body>
+</html>

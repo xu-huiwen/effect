@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<title>资源预加载</title>
+<script src="http://ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script>
+<script src="loader.js"></script>
+<style>
+*{margin:0;padding:0;border:0;}
+.num {width:100%;text-align:center;margin:0 auto;height: 40px;line-height: 40px;font-size:14px;color: #fff;background-color:rgba(0,0,0,0.5);}
+</style>
+</head>
+<body>
+<div class="num">
+	<span class="percent">0</span>%
+</div>
+
+</body>
+<script>
+$(function(){
+	var sourceArr = ['http://pingjs.qq.com/ping_tcss_ied.js','http://ossweb-img.qq.com/images/cf/web201105/bc-pic.jpg','http://mobilegame.tencent.com/act/a20140723invite/crack.mp3','http://img0.bdstatic.com/img/image/shouye/dengni63.jpg','http://mat1.gtimg.com/www/mb/images/wrapbg_v0.0.1.jpg'];
+	new mo.Loader(sourceArr,{
+		onLoading : function(count,total){
+			$('.percent').html(Math.floor(count/total*100));
+		},
+		onComplete : function(time){
+			$('.num').html('加载完成,总共耗时:'+time+'ms');
+		}
+	})
+})
+</script>
+</html>

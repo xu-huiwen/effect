@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style type="text/css">
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+ol,ul{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+q:before,q:after{content:'';}
+fieldset,img,abbr,acronym{border:0;}
+
+/* 页面样式 */
+.c:before,.c:after{content:"";display:table;}
+.c:after{clear:both;}
+.c{zoom:1;}
+body {font:12px/1.5 tahoma,arial,\5b8b\4f53,sans-serif;padding-top:42px;color:#630000;}
+a {text-decoration:none;overflow:hidden;}
+a:hover {text-decoration:underline;}
+
+/* 弹窗 */
+.pop-hd,.pop-btn1 {background-image:url(images/pop.png);background-repeat:no-repeat;}
+.pop {width:467px;background-color:#00747c;}
+	.pop-hd {height:35px;padding:0 5px 0 50px;}
+		.pop-tit {font-family:Microsoft Yahei;font-size:16px;font-weight:bold;color:#fff;float:left;line-height:35px;}
+		.pop-close {display:block;text-indent:-999em;width:22px;height:22px;margin-top:5px;float:right;}
+	.pop-bd {border:solid #6ba5a9;border-width:0 1px 1px;padding:25px 10px;color:#e4f4f7;line-height:24px;}
+
+		/* 表格 */
+		.pop-tb1 {width:100%;}
+			.pop-tb1 th,.pop-tb1 td {text-align:center;border:1px solid #00747c;height:30px;}
+			.pop-tb1 th {background-color:#174e65;color:#e2fdff;font-weight:bold;text-align:center;}
+			.pop-tb1 tbody td {background-color:#d7ebff;color:#333333;}
+			.pop-tb1 tfoot td {background-color:#174e65;color:#e2fdff;}
+			.pop-tb1 tfoot a {color:#00747c;margin:0 10px;}
+
+			.mt15 {margin-top:15px;}
+			.pop-em {font-weight:bold;color:#ffcb00;}
+			.pop-c1 {color:#cb6f68;}
+			.tc {text-align:center;}
+
+		/* 表单 */
+		.pop-fm {width:100%;}
+			.pop-fm p {background-color:#d7ebff;border:solid #00747c;border-width:0 1px 1px 0;color:#333;}
+			.pop-fm label {float:left;background-color:#174e65;width:85px;padding:5px 10px;text-align:right;border-right:1px solid #00747c;height:24px;line-height:24px;color:#e2fdff;}
+			.pop-fm input {border:0 none;background-color:transparent;width:315px;height:22px;line-height:22px;padding:5px 10px;color:#333;cursor:text;}
+			.pop-fm select {margin:5px 0 0 10px;}
+
+		/* 按钮1 */
+		.pop-btn1 {display:block;font-size:14px;font-weight:bold;width:68px;height:28px;line-height:28px;text-align:center;color:#522900;background-position:-468px 0;margin:15px auto 0;}
+		.pop-btn1:hover {text-decoration:none;color:#fff;}
+</style>
+</head>
+
+<body>
+<!-- 信息提示 -->
+<div class="pop">
+	<div class="pop-hd c">
+		<h2 class="pop-tit">信息提示</h2>
+		<a class="pop-close" href="###">关闭</a>
+	</div>
+	<div class="pop-bd">
+		<p>本活动仅限蓝钻用户参与，开通蓝钻可每天获得点鞭炮机会，抽取iPad2、 黄钻、绿钻等丰厚奖品</p>
+        <a href="###" class="pop-btn1" title="关闭">关闭</a>
+	</div>
+</div>
+
+<!-- 信息提示 -->
+<div class="pop">
+	<div class="pop-hd c">
+		<h2 class="pop-tit">信息提示</h2>
+		<a class="pop-close" href="###">关闭</a>
+	</div>
+	<div class="pop-bd">
+		<p class="tc">您还有<em class="pop-em">12次</em>抽奖机会机会</p>
+        <a href="###" class="pop-btn1" title="确定">确定</a>
+	</div>
+</div>
+
+<!-- 填写个人实物邮寄信息 -->
+<div class="pop">
+	<div class="pop-hd c">
+		<h2 class="pop-tit">填写个人实物邮寄信息</h2>
+		<a class="pop-close" href="###">关闭</a>
+	</div>
+	<div class="pop-bd">
+		<p><strong class="pop-em">个人信息填写：</strong>为保证实物奖励能准确邮寄，下面所有项目务必详细填写！未获得实物奖励请勿填写。</p>
+		<div class="pop-fm mt15">
+			<p class="c">
+				<label for="name"><span class="pop-c1">*</span> 姓名:</label>
+				<input type="text" name="sName">
+			</p>
+			<p class="c">
+				<label for="idcard"><span class="pop-c1">*</span> 身份证号码:</label>
+				<input type="text" name="sIdentity">
+			</p>
+			<p class="c">
+				<label for="mobile"><span class="pop-c1">*</span> 手机号码:</label>
+				<input type="text" name="sMobile">
+			</p>
+			<p class="c">
+				<label for="address"><span class="pop-c1">*</span> 详细地址:</label>
+				<input type="text" name="sAddress">
+			</p>
+			<p class="c">
+				<label for="postcode"><span class="pop-c1">*</span> 邮编:</label>
+				<input type="text" name="sPostCode">
+			</p>
+			<a href="###" class="pop-btn1" title="确定">确定</a>
+		</div>
+	</div>
+</div>
+
+<!-- 查询中奖纪录 -->
+<div class="pop">
+	<div class="pop-hd c">
+		<h3 class="pop-tit">查询中奖纪录</h3>
+		<a class="pop-close" href="###">关闭</a>
+	</div>
+	<div class="pop-bd">
+		<table class="pop-tb1">
+			<thead>
+				<tr>
+					<th>获奖时间</th>
+					<th>获奖大区</th>
+					<th>所获礼包</th>
+				</tr>
+			</thead>
+			<tbody>
+            	<tr>
+            		<td>2012年9月7日</td>
+            		<td>西北一区</td>
+            		<td>这里是礼包的名字哈</td>
+            	</tr>
+            	<tr>
+            		<td>2012年9月7日</td>
+            		<td>西北一区</td>
+            		<td>这里是礼包的名字哈</td>
+            	</tr>
+            	<tr>
+            		<td>2012年9月7日</td>
+            		<td>西北一区</td>
+            		<td>这里是礼包的名字哈</td>
+            	</tr>
+            	<tr>
+            		<td>2012年9月7日</td>
+            		<td>西北一区</td>
+            		<td>这里是礼包的名字哈</td>
+            	</tr>
+            </tbody>
+			<tfoot>
+				<tr>
+					<td colspan="3"><a href="###">上一页</a><span>1/3</span><a href="###">下一页</a></td>
+				</tr>
+			</tfoot>
+		</table>
+		<p class="mt15"><strong class="pop-em">温馨提示：</strong>虚拟道具奖品将在24小时内发到您的游戏内仓库，请登录游戏查收。实物奖励物品将于活动结束后2个月内发放，认真填写邮寄信息。</p>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+轮播需要接入广告的。请在底部加入JS
+<script src="http://ossweb-img.qq.com/images/js/comm/tgadshow.min.js"></script>
+
+广告代码可找对应接口人获得
+一般格式：
+<li><a href="#" data-TGAD="245,913"></a></li>

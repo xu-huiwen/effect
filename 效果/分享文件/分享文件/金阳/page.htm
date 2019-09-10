@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>页签</title>
+	<style type="text/css">
+		.c:after{content:" "; clear:both; height:0; visibility:hidden; display:block;}
+		.c{*zoom:1;}
+		strong{list-style: none;font-style:normal}
+		body{background-color: #000000;}
+		.pageInput{color: #ffffff;line-height: 30px;}
+		.pageInput input{width: 40px;height: 30px;border: none;margin: 0 5px;text-align: center;color: #514f4f;font-size: 16px;}
+		.pageInput a{width: 40px;height: 30px;text-align: center;line-height: 30px;color: #514f4f;background-color: #ffffff;border-radius: 5px;float: left;margin-right: 5px;text-decoration: none;}
+		.pageInput span,.pageInput em,.pageInput strong{width: 100px;height: 30px;text-align: center;line-height: 30px;color: #514f4f;background-color: #ffffff;border-radius: 5px;float: left;margin-right: 5px;cursor: pointer;font-size: 16px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+		}
+		.pageInput strong{float:none;display: inline-block;margin-left: 5px;width: 60px;}
+		.pageInput em{width: 50px;cursor: default;}
+		.pageInput a.on{background:#cccccc;}
+
+	</style>
+</head>
+<body>
+	<div id="pageInput" class="pageInput c"></div>
+	<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+		function pageInputs(maxPage, callback){
+			var prevBtns = '<span>上一页</span>';
+			var nextBtns = '<span>下一页</span>';
+			var jump = '共'+maxPage+'页&emsp;到第<input type="text"/>页<strong>确定</strong>';
+			var str = '';
+			var frist = true;
+			var clickin = false;
+			var inputs;
+			window.currentPage = 1;
+			function init(){
+				writeHtml();
+				bindfun();
+			}
+			function writeHtml(){
+				var overPage = 0;
+				str = str + prevBtns;
+				if(maxPage<=5){
+					for(var i = currentPage-1;i<maxPage;i++){
+						if(i==currentPage-1){
+							str = str + '<a href="javascript:;" class="on">'+(i+1)+'</a>';
+						}else{
+							str = str + '<a href="javascript:;">'+(i+1)+'</a>';
+						}
+					}
+				}else{
+					for(var i = 0;i<5;i++){
+						if(i==0&&currentPage==1&&currentPage+3<maxPage){
+							str = str + '<a href="javascript:;" class="on">'+currentPage+'</a>';
+						}else if(i==0&&currentPage!=1&&currentPage+3<=maxPage){
+							str = str + '<a href="javascript:;">'+(currentPage-1)+'</a>';
+						}else if(i==0&&currentPage!=1&&currentPage+3>maxPage){
+							str = str + '<a href="javascript:;">'+(currentPage-4)+'</a>';
+						}
+						else if(i==1&&currentPage==1&&currentPage+3<maxPage){
+							str = str + '<a href="javascript:;">'+(currentPage+1)+'</a>';
+						}else if(i==1&&currentPage!=1&&currentPage+3<=maxPage){
+							str = str + '<a href="javascript:;" class="on">'+currentPage+'</a>';
+						}else if(i==1&&currentPage!=1&&currentPage+3>maxPage){
+							str = str + '<a href="javascript:;">'+(currentPage-3)+'</a>';
+						}else if(i==2&&currentPage==1&&currentPage+3<maxPage){
+							str = str + '<a href="javascript:;">'+(currentPage+2)+'</a>';
+						}else if(i==2&&currentPage!=1&&currentPage+3<=maxPage){
+							str = str + '<a href="javascript:;">'+(currentPage+1)+'</a>';
+						}else if(i==2&&currentPage!=1&&currentPage+3>maxPage){
+							str = str + '<a href="javascript:;">'+(currentPage-2)+'</a>';
+						}else if(i==3&&currentPage+3<maxPage){
+							str = str + '<em>...</em>';
+						}else if(i==3&&currentPage+3<=maxPage){
+							str = str + '<a href="javascript:;">'+(currentPage+2)+'</a>';
+						}else if(i==3&&currentPage+3>maxPage){
+							str = str + '<a href="javascript:;">'+(currentPage-1)+'</a>';
+						}else if(i==4&&currentPage+3<=maxPage){
+							str = str + '<a href="javascript:;">'+maxPage+'</a>';
+						}else if(i==4&&currentPage+3>maxPage){
+							str = str + '<a href="javascript:;" class="on">'+maxPage+'</a>';
+						}
+					}
+				}
+				str = str + nextBtns;
+				str = str + jump;
+				$('#pageInput').html(str);
+			}
+			function bindfun(){//绑定事件
+				$('#pageInput').find('span').off('click');
+				$('#pageInput').find('a').off('click');
+				$('#pageInput').find('strong').off('click');
+				$('#pageInput').find('strong').click(function(){
+					var l = $('#pageInput').find('input').val();
+					if(l==''){
+						alert('还没有填写页数！');
+						$('#pageInput').find('input').val('');
+						return;
+					}
+					if(isNaN(l)||l<1||l>maxPage){
+						alert('请填写正确的页码');
+						$('#pageInput').find('input').val('');
+						return;
+					}
+					inputs = parseInt(l);
+					currentPage = inputs;
+					clickin = true;
+					getfun();
+				});
+				$('#pageInput').find('span').eq(0).click(function(){//上一页
+					currentPage--;
+					if(currentPage<=1){
+						currentPage=1;
+					}
+					getfun();
+				});
+				$('#pageInput').find('span').eq(1).click(function(){//下一页
+					currentPage++;
+					if(currentPage>=maxPage){
+						currentPage=maxPage;
+					}
+					getfun();
+				});
+				$('#pageInput').find('a').each(function(i){//点击数字
+					$(this).click(function(){
+						currentPage = parseInt($(this).text());
+						getfun();
+					});
+				});
+				function getfun(){
+					if(clickin){
+						if(currentPage==1){
+							var a = 1;
+						}
+						if(currentPage!=1&&currentPage+2<maxPage){
+							a = 2;
+						}
+						if(currentPage!=1&&currentPage+2>=maxPage){
+							a = 5 - maxPage + currentPage -1;
+							currentPage = maxPage - 5 + 2;
+						}
+						changeHtml();
+						for(var j = 0;j<$('#pageInput').find('a').length;j++){
+							if(parseInt($('#pageInput').find('a').eq(j).text())==inputs){
+								$('#pageInput').find('a').eq(j).addClass('on').siblings().removeClass('on');
+							}
+						}
+					}else{
+						for(var i = 0;i<$('#pageInput').find('a').length;i++){
+							if(parseInt($('#pageInput').find('a').eq(i).text())==currentPage){
+								$('#pageInput').find('a').eq(i).addClass('on').siblings().removeClass('on');
+								if(i==2&&currentPage+3<=maxPage||i==0||i==3&&$('#pageInput').find('a').length==4){
+									changeHtml();
+								}
+							}
+						}
+					}
+					
+					
+					if(callback){
+						callback();
+					}
+				}
+			}
+			init();
+			function changeHtml(){//重写当前页卡
+				str = '';
+				init();
+			}
+		}
+		pageInputs(40,
+			function(){
+				console.log(currentPage);
+			}
+		);
+	</script>
+	
+</body>
+</html>

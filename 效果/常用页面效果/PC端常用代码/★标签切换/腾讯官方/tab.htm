@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>tab</title>
+<style type="text/css">
+* {margin:0; padding:0; list-style:none;font-family:'Microsoft Yahei';}
+.tab{width: 350px; padding-top: 10px; border: 1px solid #527CC9; background-color: #527CC9; margin: 50px auto; height: 180px; }
+.tab .bd{background-color: #fff; height: 150px;}
+.tab .hd a{display: block;  height: 25px; line-height: 25px; color:#000; text-align: center; text-decoration: none;}
+.tab .hd li{float: left; width: 70px; background-color: #A2C8F4;}
+.tab .hd{height: 25px; }
+.tab .hd .on{background-color: #fff;}
+.tab .bd p{padding:20px 5px; text-indent: 2em;}
+
+/* 控制显示/隐藏方式1 display: block/none */
+.tab .tab-panel{display: none;}
+.tab .dis{display: block ;}
+
+/* 控制显示/隐藏方式2 绝对定位  */
+/* .tab{position: relative; overflow: hidden }
+.tab .tab-panel{left:999px; position: absolute }
+.tab .dis{position:static}  */
+</style>
+</head>
+
+<body>
+<div class="tab" id="tab">
+	<div class="hd">
+		<ul>
+			<li><a href="###">综合</a></li>
+			<li><a href="###">公告</a></li>
+			<li><a href="###">活动</a></li>
+			<li><a href="###">赛事</a></li>
+			<li><a href="###">其他</a></li>
+		</ul>
+	</div>
+	<div class="bd">
+		<div class="tab-panel">
+			<p>综合综合综合综合综合综合综合综合综合综合综合综合综合综合综合综合</p>
+		</div>
+		<div class="tab-panel">
+			<p>公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</p>
+		</div>
+		<div class="tab-panel">
+			<p>活动活动活动活动活动活动活动活动活动活动活动活动活动活动活动活动</p>
+		</div>
+		<div class="tab-panel">
+			<p>赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事赛事</p>
+		</div>
+		<div class="tab-panel">
+			<p>其他其他其他其他其他其他其他其他其他其他其他其他其他其他其他其他</p>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+
+var Extend = function(destination, source) {
+    for (var property in source) {
+        destination[property] = source[property]
+    }
+    return destination
+};
+function getElementsByClassName(id, className) {
+    var all = document.getElementById(id).getElementsByTagName("div");
+    var elements = new Array();
+    for (var i = 0; i < all.length; i++) {
+        if (all[i].className != className) continue;
+        elements[elements.length] = all[i]
+    }
+    return elements
+};
+function addEventSimple(obj, evt, fn) {
+    if (obj.addEventListener) obj.addEventListener(evt, fn, false);
+    else if (obj.attachEvent) obj.attachEvent("on" + evt, fn)
+};
+var tabs = function(id, cls, options) {
+    this.trigger = document.getElementById(id).getElementsByTagName("ul")[0].getElementsByTagName("li");
+    this.count = this.trigger.length;
+    this.panel = getElementsByClassName(id, cls);
+    this.slider = getElementsByClassName(id, "bd")[0];
+    this.t = null;
+    this.index = 0;
+    this.setOptions(options);
+    this.onStart = this.options.onStart;
+    this.event = this.options.event;
+    this.timeout = this.options.timeout;
+    this.onFinish = this.options.onFinish;
+    this.init()
+};
+tabs.prototype = {
+    init: function() {
+        this.trigger[0].className += " " + this.options.currCls;
+        this.panel[0].className += " " + this.options.disCls;
+        for (var i = 0; i < this.count; i++) { (function(index, that) {
+                addEventSimple(that.trigger[index], that.options.event,
+                function() {
+                    that.t = setTimeout(function() {
+                        that.switchTo(index)
+                    },
+                    that.timeout)
+                });
+                if (that.options.event == "mouseover") {
+                    addEventSimple(that.trigger[index], "mouseout",
+                    function() {
+                        that.ct(that.t)
+                    })
+                }
+            })(i, this)
+        }
+    },
+    setOptions: function(options) {
+        this.options = {
+            timeout: 60,
+            currCls: "on",
+            disCls: "dis",
+            event: "mouseover",
+            onFinish: function() {},
+            animation: null
+        };
+        Extend(this.options, options || {})
+    },
+    switchTo: function(n) {
+        if (this.index == n) {
+            return
+        } else {
+            this.trigger[this.index].className =this.trigger[this.index].className.replace(this.options.currCls, "");
+            this.panel[this.index].className = this.panel[this.index].className.replace(this.options.disCls, "");
+        };
+        this.trigger[n].className += " " + this.options.currCls;
+        if (this.options.animation) {
+            this.options.animation(n, this.slider)
+        } else {
+            this.panel[n].className += " " + this.options.disCls
+        }
+        this.onFinish(this.index, n, this.panel[n]);
+        this.index = n
+    },
+    ct: function() {
+        clearTimeout(this.t)
+    }
+};
+
+/*
+简单调用
+new tabs("tab", "tab-panel");
+
+多个tab调用
+new tabs("tab01", "tab-panel");
+new tabs("tab02", "tab-panel");
+new tabs("tab03", "tab-panel");
+*/
+
+/* 设置参数调用 */
+var tabs01 = new tabs("tab", "tab-panel", {
+    timeout: 80,    //延迟切换时间。默认参数为60;
+	currCls:"on", //当前标签（li）class 名。默认参数为"on" (不会覆盖之前在HTML中已定义的class);
+	disCls:"dis", //控制显示class名。默认参数为"dis";
+    event: "mouseover",  //事件类型。默认为"mouseover";
+    onFinish: callback //回调函数。需要定义callback函数;
+});
+
+//回调函数接口 回调函数参数为：上一个索引值,当前索引值,当前显示块
+function callback(n,index,panel){
+//dosomething
+}
+</script>
+</body>
+</html>

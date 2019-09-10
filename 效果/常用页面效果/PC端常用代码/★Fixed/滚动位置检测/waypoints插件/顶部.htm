@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>滚动固定跳转</title>
+<style type="text/css">
+* {margin:0;padding:0;border:0;}
+* html { background-image:url(about:blank); background-attachment:fixed;}
+.c:before,.c:after {content:"";display:table}
+.c:after {clear:both}
+.c {zoom:1}
+.ct {width: 100%;}  
+.top {position:fixed;top:0px;left: 0;_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop));width: 100%;}  
+.list {list-style:none;width: 300px;margin: 0 auto}
+.list li {background-color:#00f;cursor:pointer;color:#fff;float: left;width:100px;}
+.ct1,.ct2,.ct3 {height:1000px;}
+.l-i1 .on,.active .ct1 {background-color: #f00;color: #000;}
+.l-i2 .on,.active .ct2 {background-color: #ff0;color: #000;}
+.l-i3 .on,.active .ct3 {background-color: #0f0;color: #000;}
+.list a {color: #fff;text-decoration: none;display: block;height:20px;width:100px;text-align:center;}  
+</style>
+</head>
+
+<body>  
+        <div class="top">
+            <ul class="list c">  
+                <li class="l-i1"><a class="on" href="###">标签一</a></li>
+                <li class="l-i2"><a href="###">标签二</a></li>
+                <li class="l-i3"><a href="###">标签三</a></li>         
+            </ul>
+        </div>
+        <div class="ct active">  
+            <div class="ct1">内容一</div>  
+        </div>  
+        <div class="ct">  
+            <div class="ct2">内容二</div>  
+        </div>  
+        <div class="ct">  
+            <div class="ct3">内容三</div>
+        </div>  
+      
+        <script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.4.4.min.js" type="text/javascript" charset="utf-8"></script>  
+        <script src="waypoints.min.js" type="text/javascript" charset="utf-8"></script>  
+        <script type="text/javascript" charset="utf-8">  
+            jQuery(function($) {  
+                var waypointSelector = '.ct';  
+                var activeClass = 'active';  
+                var linkSelector = '.list li a';  
+                var linkActiveClass = 'on';  
+                  
+                // Register each section as a waypoint.  
+                $(waypointSelector).waypoint();  
+      
+                // The same for all waypoints  
+                $('body').delegate(waypointSelector, 'waypoint.reached', function(event, direction) {  
+                    var $active = $(this);  
+                    var pos = $(waypointSelector).index($active);  
+      
+                    if (direction === "up" && pos != 0) {  
+                        $active = $active.prev();  
+                    }  
+                    if (!$active.length) $active.end();  
+                    var pos = $(waypointSelector).index($active);  
+                      
+                    $(waypointSelector+'.'+activeClass).removeClass(activeClass);  
+                    $active.addClass(activeClass);  
+                      
+                    $(linkSelector+'.'+linkActiveClass).removeClass(linkActiveClass);  
+                    $(linkSelector).eq(pos).addClass(linkActiveClass);  
+                      
+                });  
+                  
+                // Wicked credit to  
+                // http://www.zachstronaut.com/posts/2009/01/18/jquery-smooth-scroll-bugs.html  
+                var scrollElement = 'html, body';  
+                $('html, body').each(function () {  
+                    var initScrollTop = $(this).attr('scrollTop');  
+                    $(this).attr('scrollTop', initScrollTop + 1);  
+                    if ($(this).attr('scrollTop') == initScrollTop + 1) {  
+                        scrollElement = this.nodeName.toLowerCase();  
+                        $(this).attr('scrollTop', initScrollTop);  
+                        return false;  
+                    }      
+                });  
+      
+                // Smooth scrolling for internal links  
+                $(linkSelector).click(function(event) {  
+                    event.preventDefault();  
+                      
+                    var activeWaypoint = $(waypointSelector).eq($(linkSelector).index($(this)))  
+                    $('html, body').stop().animate({  
+                        'scrollTop': activeWaypoint.offset().top  
+                    }, 500, 'swing', function() {  
+                          
+                    });  
+      
+                });  
+              
+            });  
+        </script>  
+    </body>
+</html>

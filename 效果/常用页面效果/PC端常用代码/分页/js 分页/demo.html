@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分页</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+		.main {width:1000px;margin:0 auto;}
+		.list {height:100px;overflow:hidden;}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="list" id="list">
+			<div>这里是一些内容文字1</div>
+			<div>这里是一些内容文字2</div>
+			<div>这里是一些内容文字3</div>
+			<div>这里是一些内容文字4</div>
+			<div>这里是一些内容文字5</div>
+			<div>这里是一些内容文字6</div>
+			<div>这里是一些内容文字7</div>
+			<div>这里是一些内容文字8</div>
+			<div>这里是一些内容文字9</div>
+			<div>这里是一些内容文字10</div>
+			<div>这里是一些内容文字11</div>
+			<div>这里是一些内容文字12</div>
+			<div>这里是一些内容文字13</div>
+			<div>这里是一些内容文字14</div>
+			<div>这里是一些内容文字15</div>
+			<div>这里是一些内容文字16</div>
+			<div>这里是一些内容文字17</div>
+			<div>这里是一些内容文字18</div>
+			<div>这里是一些内容文字19</div>
+			<div>这里是一些内容文字20</div>
+		</div>
+		<div id="pager"></div>
+	</div>
+<script src="ajaxpage.js"></script>
+<script>
+        AjaxPage.StaticPage({
+            'pageSize': 5,//每页数目
+            'contentId': 'list',//内容ID
+            'pageId': 'pager'//分页ID
+        });
+
+</script>
+</body>
+</html>

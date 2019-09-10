@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="robots" content="all" />
+<title>通用弹窗</title>
+<style type="text/css">
+/*rest style*/
+html{-webkit-text-size-adjust:none;}
+body, h1, h2, h3, h4, h5, h6, hr, p, pre, dl, dt, dd, ul, ol, li, th, td, form, fieldset, legend, button, input, textarea { margin:0; padding:0;}
+body{ background: /*根据页面由CP设置*/; font:12px/1.6 Tahoma, simsun, Verdana, Geneva; color:/*根据页面由CP设置*/;min-width:1000px;}
+h1, h2, h3, h4, h5, h6 { font-size:100%;}
+ul, ol { list-style:none;}
+a { text-decoration:none; color:/*根据页面由CP设置*/;}
+a:hover { text-decoration:none;}
+fieldset, img { border:0;}
+table { border-collapse:collapse; border-spacing:0;}
+input,select,form,img { vertical-align:middle; }
+button, input, select, textarea { font-size:100%; outline:none;}
+button{ cursor:pointer;}
+table { border-collapse:collapse; border-spacing:0;}
+
+/*公共弹窗*/
+.pop{width:467px;background-color:#462C15;}
+.pop .hd h2,.pop .hd{background:url(pop_sp.png) no-repeat;}
+.pop .hd{height:35px;}
+.pop .hd h2{float:left;display:inline;height:35px;text-indent:-999em;_font-size:0;}
+.pop .hd .h_a{background-position:0 -39px;width:84px;}
+.pop .hd .h_b{background-position:-83px -39px;width:125px;}
+.pop .hd .h_c{background-position:-222px -39px;width:126px;}
+.pop .hd .h_d{background-position:0 -79px;width:126px;}
+.pop_icon {background:url(pop_icon.png) no-repeat;float:left;display:block;width:69px;height:40px;position:relative;margin:-5px 0 0 6px;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='pop_icon.png',sizingMethod='crop');}
+.pop .hd a{float:right;width:28px;height:30px;display:inline;}
+.pop .box{border:1px solid #6C4419;  border-top:none;}
+.pop .bd{border-bottom:1px solid #553919;padding:26px 24px;}
+.pop .bd p{ color:#CEBF9C;line-height:1.8; font-weight:bold;}
+.pop .bd p span{color:#DD6B4C;}
+.tc{ text-align:center;}
+.pop .bd .s_s{padding-left:65px;}
+.pop .bd textarea{height:74px;width:98%;_width:400px;border:none;padding:2px 4px;font-size:12px;line-height:1.5;background-color:#FFF;margin-top:6px;overflow:hidden; border:1px solid #999;}
+.pop .ft{text-align:center;padding:11px 0 12px;}
+.pop .ft a,.pop .ft a span{background:url(pop_bt.png) no-repeat;}
+.pop .ft a{display:inline-block;margin:0 4px;height:28px;line-height:25px;padding-left:18px;cursor:pointer;text-decoration:none;}
+.pop .ft a span{display:inline-block;height:28px;font-size:14px;color:#FFF;font-weight:bold;padding-right:18px;cursor:pointer;text-shadow:1px 2px 6px #333;}
+.pop .ft .bt{background-position:left 0;}
+.pop .ft .bt span{background-position:right 0;}
+.pop .ft .link{background-position:left -30px;}
+.pop .ft .link span{background-position:right -30px;}
+.pop .user_info_enter{margin-top:10px;border-collapse:collapse;width:100%;border:1px solid #462C15;background-color:#53351A;}
+.pop .user_info_enter td{border-collapse:collapse;border:1px solid #462C15;padding:4px 0;}
+.pop .user_info_enter .td_a{background-color:#3A230F;text-align:right;color:#7E6035;width:24%;} 
+.pop .user_info_enter .td_a span{color:#FF2312;vertical-align:-3px;}
+.pop input{padding:0;}
+.pop .user_info_enter td input{width:280px;margin-left:10px;color:#fff;border:none;background-color:transparent;}
+.pop .record{border-collapse:collapse;width:416px;border:1px solid #462C15;background-color:#797979;}
+.pop .record td,.pop .record th{border-collapse:collapse;border:1px solid #462C15;padding:4px 2px;width:33.3%;text-align:center;color:#7E6035;}
+
+.pop .rec_2 td,.pop .rec_2 th{width:50%;}
+.pop .record td{background-color:#53351A; color:#fff;}
+.pop .record th{background-color:#3A230F; color:#7E6035;}
+.pop .record td a{color:#7E6035;font-weight:bold;text-decoration:none;}
+.pop .record td em{color:#7E6035;font-style:normal;}
+.pop .record .page_num{padding:0 10px;color:#7E6035;}
+.pop .record .page{background-color:#3A230F;}
+</style>
+</head>
+<body>
+
+<!-- 信息提示开始 -->
+<div class="pop" id="promptContent" style="display:">
+	<div class="hd fix">
+    	<span class="pop_icon"></span>
+		<h2 class="h_a">信息提示</h2>
+		<a href="javascript:FloaterManager.close();" title="关闭"></a>
+	</div>
+	<div class="box">
+		<div class="bd">
+			<p class="tc" id="promptTxt">恭喜您点燃一根鞭炮，<span>获得XXXX</span>，再点一根好运会持续哦！</p>
+		</div>
+		<div class="ft" id="promptBtn"><a class="bt" href="javascript:void(0);"><span>立即分享</span></a><a class="bt" href="javascript:void(0);"><span>关&nbsp;闭</span></a></div>
+	</div>
+</div>
+<!-- 信息提示结束 -->
+
+<!-- 查询抽奖记录开始 -->
+<div class="pop">
+	<div class="hd fix">
+		<span class="pop_icon"></span>
+		<h2 class="h_d">查询抽奖次数</h2>
+		<a href="javascript:void(0);" title="关闭"></a>
+	</div>
+	<div class="box">
+		<div class="bd">
+			<p class="tc">您还有<span>12次</span>抽奖机会机会</p>
+		</div>
+		<div class="ft"><a class="bt" href="javascript:void(0);"><span>确&nbsp;定</span></a></div>
+	</div>
+</div>
+<!-- 查询抽奖记录结束 -->
+
+<!-- 信息提示带蓝钻开通按钮开始 -->
+<div class="pop">
+	<div class="hd fix">
+		<span class="pop_icon"></span>
+		<h2 class="h_a">信息提示</h2>
+		<a href="javascript:void(0);" title="关闭"></a>
+	</div>
+	<div class="box">
+		<div class="bd">
+			<p>本活动仅限蓝钻用户参与，开通蓝钻可每天获得点鞭炮机会，抽取iPad2、 黄钻、绿钻等丰厚奖品</p>
+		</div>
+		<div class="ft"><a class="link" title="开通蓝钻" href="#" target="_blank"><span>开通蓝钻</span></a><a class="bt" href="javascript:void(0);"><span>关&nbsp;闭</span></a></div>
+	</div>
+</div>
+<!-- 信息提示带蓝钻开通按钮结束 -->
+
+<!-- 信息提示带蓝钻开通年费按钮开始 -->
+<div class="pop">
+	<div class="hd fix">
+		<span class="pop_icon"></span>
+		<h2 class="h_a">信息提示</h2>
+		<a href="javascript:void(0);" title="关闭"></a>
+	</div>
+	<div class="box">
+		<div class="bd">
+			<p>您的鞭炮已经点完，请明天再来，可重新获得点鞭炮机会<br />开通年费蓝钻每天可获得最多的点鞭炮机会</p>
+		</div>
+		<div class="ft"><a class="link" title="开通年费蓝钻" href="#" target="_blank"><span>开通年费蓝钻</span></a><a class="bt" href="javascript:void(0);"><span>关&nbsp;闭</span></a></div>
+	</div>
+</div>
+<!-- 信息提示带蓝钻开通年费按钮结束 -->
+
+<!-- 填写个人信息开始 -->
+<div id="personInfoContent" class="pop">
+	<div class="hd fix">
+		<span class="pop_icon"></span>
+		<h2 class="h_b">填写个人信息</h2>
+		<a href="javascript:FloaterManager.close();" title="关闭"></a>
+	</div>
+	<div class="box">
+		<div class="bd">
+			<p><span>特别提醒</span>：为保证实物奖励能准确邮寄，下面所有项目务必详细填写！<br /><span class="s_s">未获得实物奖励请勿填写</span></p>
+			<table class="user_info_enter">
+				<tr>
+					<td class="td_a"><span>*&nbsp;</span>姓名：</td>
+					<td><input name="sName" type="text" /></td>
+				</tr>
+				<tr>
+					<td class="td_a"><span>*&nbsp;</span>身份证号码：</td>
+					<td><input name="sIdentity" type="text" /></td>
+				</tr>
+				<tr>
+					<td class="td_a"><span>*&nbsp;</span>手机号码：</td>
+					<td><input name="sMobile" type="text" /></td>
+				</tr>
+				<tr>
+					<td class="td_a"><span>*&nbsp;</span>邮政编码：</td>
+					<td><input name="sPostCode" type="text" /></td>
+				</tr>
+				<tr>
+					<td class="td_a"><span>*&nbsp;</span>详细地址：</td>
+					<td><input name="sAddress" type="text" /></td>
+				</tr>
+			</table>
+		</div>
+		<div class="ft" id="personSubmitBtn"><a href="javascript:void(0);" class="bt"><span>确&nbsp;定</span></a></div>
+	</div>
+</div>
+<!-- 填写个人信息结束 -->
+
+<!-- 查询领取记录开始 -->
+<div class="pop">
+	<div class="hd fix">
+		<span class="pop_icon"></span>
+		<h2 class="h_c">查询领取记录</h2>
+		<a href="javascript:void(0);" title="关闭"></a>
+	</div>
+	<div class="box">
+		<div class="bd">
+			<table class="record">
+				<tr>
+					<th>获奖时间</th>
+					<th>获奖大区</th>
+					<th>所获礼包</th>
+				</tr>
+				<tr>
+					<td>2011-11-03 11:30:45</td>
+					<td>广州电信一区</td>
+					<td>魔幻大礼包</td>
+				</tr>
+				<tr>
+					<td>2011-11-03 11:30:45</td>
+					<td>广州电信一区</td>
+					<td>魔幻大礼包</td>
+				</tr>
+				<tr>
+					<td>2011-11-03 11:30:45</td>
+					<td>广州电信一区</td>
+					<td>魔幻大礼包</td>
+				</tr>
+				<tr>
+					<td class="page" colspan="3"><a href="javascript:void(0);" title="上一页">上一页</a><span class="page_num"><em class="now_page">1</em class="total_page">/<em>3</em></span><a href="javascript:void(0);" title="下一页">下一页</a></td>
+				</tr>
+			</table>
+		</div>
+		<div class="ft"><a class="bt" href="javascript:void(0);"><span>关&nbsp;闭</span></a></div>
+	</div>
+</div>
+<!-- 查询领取记录结束 -->
+</body>
+</html>

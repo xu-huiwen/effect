@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="gbk">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title></title>
+        <script type="text/javascript" src="//ossweb-img.qq.com/images/js/mobile_bundle/util/zepto.js"></script>
+		<script src="//ossweb-img.qq.com/images/js/zepto/zepto-1.1.6.min.js"></script> 
+        <script src="echarts.min.js"></script>
+    </head>
+    <body>
+        <div id="mychart" style="width:300px;height:300px;margin:0 auto;"></div>
+        <script>
+            var arr1 = [60,73,85,40,60];
+            var arr2 = [23,90,23,32,67];
+            var mychart =  echarts.init(document.getElementById('mychart'));
+            var option = {
+                radar: [
+                    {
+                        indicator: [
+                            {text: '品牌', max: 100},
+                            {text: '内容', max: 100},
+                            {text: '可用性', max: 100},
+                            {text: '功能', max: 100},
+                            {text: '屏幕', max: 100}
+                        ],
+                        center: ['50%','54%'],//调整雷达图的位置
+                        radius: 80,//半径，可放大放小雷达图
+                        axisLine: {//坐标轴线相关设置
+                            show: true,
+                            lineStyle: {
+                                color: 'red'
+                            }
+                        },
+                        splitLine : {
+                            show : true,
+                            lineStyle : {
+                                width : 1,
+                                color : 'red' // 图表背景网格线的颜色
+                            }
+                        },
+                        splitArea: {
+                            show: false,
+                        },
+                    },
+                ],
+                series: [
+                    {
+                        type: 'radar',
+                        symbol: 'none',//去掉拐点的圈
+                        data: [
+                            {
+                                value: arr1,
+                                name: '某软件',
+                                areaStyle: {
+                                    normal: {
+                                        color: 'blue'
+                                    }
+                                },
+                                lineStyle: {
+                                    color:"rgba(255,255,255,0)"
+                                },
+                            },{
+                                value: arr2,
+                                name:'jja',
+                                areaStyle: {
+                                    normal: {
+                                        color: 'red' // 图表中各个图区域的颜色
+                                    }
+                                },
+                                lineStyle: {
+                                    color:"rgba(255,255,255,0)" // 图表中各个图区域的边框线颜色
+                                },
+                            }
+                        ]
+                    },
+                ]
+            };
+            mychart.setOption(option);
+            var i = -1;
+            mychart.setOption({
+                  radar: [
+                    {
+                        name: {
+                            rich: {
+                                a: {
+                                    color: 'red',
+                                    lineHeight: 20
+                                },
+                                b: {
+                                    color: '#fff',
+                                    align: 'center',
+                                    backgroundColor: '#666',
+                                    padding: 2,
+                                    borderRadius: 4
+                                }
+                            },
+                            formatter: (a,b)=>{
+                                i++;
+                                return `{a|${a}}\n{b|${arr1[i]}}`
+                            }
+                        }
+                    }
+                ]
+            })
+        </script>
+    </body>
+</html>

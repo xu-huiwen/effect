@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标题震撼</title>
+<style type="text/css">
+* {margin: 0;padding: 0;border: 0;}
+body {overflow: hidden;background: url(http://ossweb-img.qq.com/images/wuxia/act/a20141219sdmh/bg-1.jpg) no-repeat 50% 0}
+.wrap {width: 100%;background: url(http://ossweb-img.qq.com/images/wuxia/act/a20141219sdmh/bg-1.jpg) no-repeat 50% 0;height: 905px;position: relative;}
+.tit {background: url(http://ossweb-img.qq.com/images/wuxia/act/a20141219sdmh/slogn.png) no-repeat 50% -55px;height: 184px;width: 100%;position: absolute;top: 220px;opacity: 0;}
+.loaded .tit {-webkit-animation: scale 1s ease-in both;animation: scale 1s ease-in both;}
+.loaded .wrap {-webkit-animation: shake 0.3s ease-out 0.8s;animation: shake 0.3s ease-out 0.8s;}
+
+/*动画：缩放*/
+@-webkit-keyframes scale {
+0%{opacity:0;-webkit-transform:scale(10,10)}
+80%{-webkit-transform:scale(.9,.9)}
+100%{opacity:1;-webkit-transform:scale(1,1)}
+}
+@keyframes scale {
+0%{opacity:0;transform:scale(10,10)}
+80%{transform:scale(.9,.9)}
+100%{opacity:1;transform:scale(1,1)}
+}
+
+/*动画：震动*/
+@-webkit-keyframes shake {
+0%,100%{-webkit-transform:translate3d(0,0,0)}
+10%,30%,50%,70%,90%{-webkit-transform:translate3d(-10px,0,0)}
+20%,40%,60%,80%{-webkit-transform:translate3d(10px,0,0)}
+}
+@keyframes shake {
+0%,100%{transform:translate3d(0,0,0)}
+30%,50%,70%{transform:translate3d(-10px,0,0)}
+40%,60%{transform:translate3d(10px,0,0)}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="tit"></div>
+</div>
+<script type="text/javascript">
+function addEventSimple(obj, evt, fn) {
+	if (obj.addEventListener) obj.addEventListener(evt, fn, false);
+	else if (obj.attachEvent) obj.attachEvent('on' + evt, fn)
+}
+addEventSimple(window, "load", function(){
+	document.body.className = 'loaded';
+});
+</script>
+</body>
+</html>

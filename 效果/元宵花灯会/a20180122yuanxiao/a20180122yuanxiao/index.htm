@@ -1,0 +1,1510 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gbk">
+<meta name="robots" content="all">
+<meta name="author" content="Tencent-CP" />
+<meta name="Copyright" content="Tencent">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="Description" content="《QQ飞车》是首款腾讯自主研发的竞速类休闲网络游戏，底层架构基于世界领先的物理引擎PhysX，游戏手感全面超越市场同类产品，全力为用户打造逼真的驾驶体验；3D时尚人物造型、古朴潮流幻想的赛道主题、第三人称尾随视角，力求为用户营造身历其境的感觉。在2011年的5月，最高同时在线帐户数突破300万，乃中国网游史上第九款同时在线冲破百万大关的产品，并为全球游戏市场奉献了第一款同时在线破百万的竞速类网络游戏，同时，也使腾讯拥有了第一款同时在线破百万的自主研发产品。" />
+<meta name="Keywords" content="QQ飞车,飞车,QQspeed,QQkart,SSC超级联赛,SSC2010,SSC2011,赛车游戏,赛车,卡丁车,休闲区,同城交友,跑跑,跑跑卡丁车,最好玩,时尚,时尚赛车,剃刀,针尖,针尖杯,腾讯游戏,QQ游戏,视频,WCG,赛道视频,沉睡森林,海滨发夹,海洋公园,漂移,飞车宝贝,宝贝,车队,子弹" />
+<title>元宵花灯会-QQ飞车官方网站-腾讯游戏-竞速网游王者 突破300万同时在线</title>
+<!-- 设计：cp  | 重构：cp | 创建：2018/01/21  -->
+<link href="http://ossweb-img.qq.com/images/speed/comm/act_top/act_top.css" rel="stylesheet">
+<style>
+/*reset*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+q:before,q:after{content:'';}
+fieldset,img,abbr,acronym{border:0;}
+
+/*footer*/
+#footer_ied{text-align:center;font-size:12px;line-height:19px;min-width:1000px;color:#31afc2;background: rgba(20,38,101,0.4);margin-top: -103px;position: relative;z-index: 100;}
+.wrap_ied{margin:0 auto;padding:25px 25px;width:940px;}
+.wrap_ied a{color:#31afc2;}
+#footer_ied .e{font-size:10px;-webkit-text-size-adjust:none;}
+#footer_ied .e{font-size:10px;-webkit-text-size-adjust:none;}
+
+/*页面样式*/
+.c:before,.c:after {content:"";display:table;}
+.c:after {clear:both;}
+.c {zoom:1;}
+body {font:12px/1.5 '\5FAE\8F6F\96C5\9ED1';text-align:justify;padding-top:42px;}
+:focus{outline: none;}
+body,html{overflow-x: hidden;}
+a {text-decoration:none;overflow:hidden;}
+a:hover {text-decoration:none;}
+.wrap,#footer_ied{min-width:1000px;width:100%;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1002?'1000px':'');}
+.wrap {overflow: hidden;background:  url(ossweb-img/rp1.jpg) no-repeat;height: 1076px;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.hide {display:block;width:0;height:0;overflow:hidden;}
+.db{display:block;text-indent:-999em;}
+.sp{background:  url(ossweb-img/sp.png) no-repeat;}
+
+/*导航栏样式*/
+#comm_act_wrap{ z-index:999 !important;top: 0px;}
+.speed_comm_top{top:86px !important;position: absolute;overflow: hidden;}
+.act_comm_box{background:rgba(6,6,6,0.8);}
+
+
+/*查看奖励弹窗*/
+.pop_o{background-color: #5e72b3;border:3px solid #fff;position: relative;display: none;}
+.pop-close_2{display: block;background-color: #fff;width: 40px;height: 40px;text-align: center;line-height: 40px;font-size: 38px;color: #493c5c;position: absolute;top:-3px;right: -40px;}
+.pop-close_2:hover,.pop-btn:hover{text-decoration: none;}
+.pop-w1{width: 614px;padding:20px;}
+.pop-w2{width: 614px;padding:50px 0;}
+.pop-em{width: 100%;text-align: center;font-size: 18px;color: #fff;line-height: 32px;}
+/* 表格 */
+.pop-tb2 {width:100%;margin-top: 20px;}
+.pop-tb2 th,.pop-tb2 td {text-align:center;border:1px solid #4962ad;height:30px;}
+.pop-tb2 th {background-color:#1d2d5c;color:#fff778;font-weight:bold;text-align:center;}
+.pop-tb2 tbody td {background-color:#6e83c1;color:#fff;}
+.pop-tb2 tfoot td {background-color:#1d2d5c;color:#fff778;}
+.pop-tb2 tfoot a {color:#fff778;margin:0 10px;}
+.pop-btn{display: block;background-position: 0 0;width: 191px;height: 58px;text-align: center;line-height: 58px;font-size:20px;font-weight: bold;color: #963c1a;margin: 50px auto 0;}
+
+.masky{-webkit-mask:url(ossweb-img/open.png);-webkit-mask-size:2500% 100%;position: fixed;top: 0;left: 0;
+     z-index: 999;width: 1920px;height: 1080px;background: rgba(36,39,103,0.8);}
+	.show1{-webkit-mask-position:0 0;-webkit-animation:mask 1.8s steps(24) forwards;display:block;}
+	@-webkit-keyframes mask{
+		from{-webkit-mask-position:0 0}
+		to{-webkit-mask-position:100% 0}
+		}
+		@keyframes mask{
+			from{-webkit-mask-position:0 0}
+			to{-webkit-mask-position:100% 0}
+			}
+
+
+
+
+
+
+.vid{top: 86px;left: 50%;margin-left: -960px;}
+/* head */
+.head{width: 1000px;height: 622px;margin: 0 auto;}
+.hdtit{background:  url(ossweb-img/solo.png) no-repeat;width: 278px;height:423px;position: absolute;top: 234px;left: 50%;margin-left: -157px;
+animation: hdtit 1s ease-in forwards;
+-webkit-animation: hdtit 1s ease-in forwards;
+-ms-animation: hdtit 1s ease-in forwards;
+-moz-animation: hdtit 1s ease-in forwards;
+}
+@keyframes hdtit{
+	0%{transform: translateY(-100px) scale(1.08);opacity: 0;}
+	100%{transform: translateY(0) scale(1);opacity: 1;}
+}
+@-webkit-keyframes name{
+	0%{transform: translateY(-100px) scale(1.08);opacity: 0;}
+	100%{transform: translateY(0) scale(1);opacity: 1;}
+}
+@-ms-keyframes name{
+	0%{transform: translateY(-100px) scale(1.08);opacity: 0;}
+	100%{transform: translateY(0) scale(1);opacity: 1;}
+}
+@-moz-keyframes name{
+	0%{transform: translateY(-100px) scale(1.08);opacity: 0;}
+	100%{transform: translateY(0) scale(1);opacity: 1;}
+}
+.renwu{top: 86px;left: 50%;display: block;margin-left: -450px;}
+.renwu img{display: block;}
+
+
+.topdl{position: absolute;width: 1000px;top: 174px;left: 50%;margin-left: -475px;z-index: 99;transform-origin:50% 0;}
+.dengtop{display: block;float: left;margin-right: 21px;}
+.dengl_0{background-position: -1580px -216px;width: 28px;height: 87px;margin: 58px 9px 0 0;opacity: 0;}
+.dengl_1{background-position:-74px -52px;width: 164px;height: 246px;margin-right: 3px;}
+.dengl_2{background-position:  -261px -52px;width: 164px;height: 280px;margin-right: 60px;}
+.dengl_3{background-position: -477px -52px;width: 164px;height: 246px;}
+.dengl_4{background-position: -698px -52px;width: 161px;height: 280px;margin-right: 10px;}
+.dengl_5{background-position: -875px -52px;width: 164px;height: 246px;}
+.dengl_0:hover{background-position: -1626px -216px;}
+.dengl_1:hover{background-position: -27px -1109px;}
+.dengl_2:hover{background-position: -267px -1113px;}
+.dengl_3:hover{background-position:-499px -1113px;}
+.dengl_4:hover{background-position:  -743px -1113px;}
+.dengl_5:hover{background-position: -963px -1128px;}
+
+.hon.dengl_0{background-position: -1626px -216px;}
+.hon.dengl_1{background-position: -27px -1109px;}
+.hon.dengl_2{background-position:  -267px -1113px;}
+.hon.dengl_3{background-position: -499px -1113px;}
+.hon.dengl_4{background-position: -743px -1113px;}
+.hon.dengl_5{background-position:-963px -1128px;}
+
+
+
+
+
+
+
+
+
+
+.btnprv{display: block;position: absolute;background-position:-756px -419px;width: 130px;height: 39px;top: 50%;left: 100px;margin-top:108px;
+        z-index: 99;padding-top: 9px;display: block;}
+.prvlf{display: block;background-position:  -914px -428px;width: 52px;height: 31px;margin: 0 auto;
+animation: prvlf 6s ease-in-out infinite;
+-webkit-animation: prvlf 6s ease-in-out infinite;
+-ms-animation: prvlf 6s ease-in-out infinite;
+-moz-animation: prvlf 6s ease-in-out infinite;
+}
+@keyframes prvlf {
+	0% {transform: translateX(0);}
+	25% {transform: translateX(-18px);}
+	50% {transform: translateX(0);}	
+	75% {transform: translateX(-18px);}	
+	100% {transform: translateX(0);}			
+}
+@-webkit-keyframes name{
+	0% {transform: translateX(0);}
+	25% {transform: translateX(-18px);}
+	50% {transform: translateX(0);}	
+	75% {transform: translateX(-18px);}	
+	100% {transform: translateX(0);}
+}
+@-ms-keyframes name{
+	0% {transform: translateX(0);}
+	25% {transform: translateX(-18px);}
+	50% {transform: translateX(0);}	
+	75% {transform: translateX(-18px);}	
+	100% {transform: translateX(0);}
+}
+@-moz-keyframes name{
+	0% {transform: translateX(0);}
+	25% {transform: translateX(-18px);}
+	50% {transform: translateX(0);}	
+	75% {transform: translateX(-18px);}	
+	100% {transform: translateX(0);}
+}
+.btnnext{display: block;position: absolute;background-position: -756px -419px;width: 130px;height: 39px;top: 50%;
+         right: 100px;margin-top: 108px;z-index: 99;padding-top: 9px;}
+.prvrig{display: block;background-position: -1002px -429px;width: 52px;height: 31px;margin: 0 auto;
+animation: prvrig 6s ease-in-out infinite;
+-webkit-animation: prvrig 6s ease-in-out infinite;
+-ms-animation: prvrig 6s ease-in-out infinite;
+-moz-animation: prvrig 6s ease-in-out infinite;
+}
+@keyframes prvrig {
+	0% {transform: translateX(0);}
+	25% {transform: translateX(18px);}
+	50% {transform: translateX(0);}	
+	75% {transform: translateX(18px);}	
+	100% {transform: translateX(0);}			
+}
+@-webkit-keyframes name{
+	0% {transform: translateX(0);}
+	25% {transform: translateX(18px);}
+	50% {transform: translateX(0);}	
+	75% {transform: translateX(18px);}	
+	100% {transform: translateX(0);}	
+}
+@-ms-keyframes name{
+	0% {transform: translateX(0);}
+	25% {transform: translateX(18px);}
+	50% {transform: translateX(0);}	
+	75% {transform: translateX(18px);}	
+	100% {transform: translateX(0);}	
+}
+@-moz-keyframes name{
+	0% {transform: translateX(0);}
+	25% {transform: translateX(18px);}
+	50% {transform: translateX(0);}	
+	75% {transform: translateX(18px);}	
+	100% {transform: translateX(0);}	
+}
+
+
+.lefta1{background-position: -1098px -974px;width: 111px;height: 42px;}
+.lefta2{background-position: -1247px -974px;width: 134px;height: 42px;}
+.lefta3{background-position:-1247px -974px;width: 134px;height: 42px;}
+.lefta4{background-position:-1247px -974px;width: 134px;height: 42px;}
+.lefta5{background-position:-1098px -1036px;width: 134px;height: 42px;}
+.lefta6{background-position:-1098px -1036px;width: 134px;height: 42px;}
+.right1{background-position: -1098px -974px;width: 111px;height: 42px;}
+.right2{background-position: -1098px -974px;width: 111px;height: 42px;}
+.right3{background-position: -1098px -974px;width: 111px;height: 42px;}
+.right4{background-position: -1098px -974px;width: 111px;height: 42px;}
+.right5{background-position:  -1412px -974px;width: 202px;height: 42px;}
+.right6{background-position:  -1098px -974px;width: 111px;height: 42px;}
+
+.rigfc{position: absolute;top: 50%;z-index: 99;right: 234px;display: none;margin-top: 108px;}
+.lffc{position: absolute;top: 50%;z-index: 99;left: 234px;display: none;margin-top: 108px;}
+.time{display: block;background-position:-113px -392px;width: 46px;height: 174px;position: absolute;top: 490px;left: 50%;margin-left: -101px;
+animation: hdtit 1s ease-in forwards;
+-webkit-animation: hdtit 1s ease-in forwards;
+-ms-animation: hdtit 1s ease-in forwards;
+-moz-animation: hdtit 1s ease-in forwards;
+}
+.btnbx{display: block;position: absolute;top:366px;left: 50%;margin-left: 122px;
+animation: btnbx 1s ease-in forwards;
+-webkit-animation: btnbx 1s ease-in forwards;
+-ms-animation: btnbx 1s ease-in forwards;
+-moz-animation: btnbx 1s ease-in forwards;
+}
+@keyframes btnbx{
+	0%{transform: translateX(100px) scale(1.08);opacity: 0;}
+	100%{transform: translateX(0) scale(1);opacity: 1;}
+}
+@-webkit-keyframes name{
+	0%{transform: translateX(100px) scale(1.08);opacity: 0;}
+	100%{transform: translateX(0) scale(1);opacity: 1;}
+}
+@-ms-keyframes name{
+	0%{transform: translateX(100px) scale(1.08);opacity: 0;}
+	100%{transform: translateX(0) scale(1);opacity: 1;}
+}
+@-moz-keyframes name{
+	0%{transform: translateX(100px) scale(1.08);opacity: 0;}
+	100%{transform: translateX(0) scale(1);opacity: 1;}
+}
+.btnbx a{display: block;width: 30px;height: 84px;}
+.btnhome{background-position: -8px -402px;}
+.btnyyhd{margin: 5px auto;background-position:-8px -489px;}
+.btndown{background-position:-8px -578px;}
+.btnhome:hover{background-position:-60px -402px;}
+.btnyyhd:hover{background-position: -60px -489px;}
+.btndown:hover{background-position: -60px -578px;}
+
+
+
+
+
+
+/*demo-item*/
+.imgbox{width: 1000px;margin: 0 auto;
+animation: p_bxlb 1s ease-in forwards;
+-webkit-animation: p_bxlb 1s ease-in forwards;
+-ms-animation: p_bxlb 1s ease-in forwards;
+-moz-animation: p_bxlb 1s ease-in forwards;
+}
+@keyframes p_bxlb{
+	0%{transform: translateY(100px) scale(1.08);opacity: 0;}
+	100%{transform: translateY(0) scale(1);opacity: 1;}
+}
+@-webkit-keyframes name{
+	0%{transform: translateY(100px) scale(1.08);opacity: 0;}
+	100%{transform: translateY(0) scale(1);opacity: 1;}
+}
+@-ms-keyframes name{
+	0%{transform: translateY(100px) scale(1.08);opacity: 0;}
+	100%{transform: translateY(0) scale(1);opacity: 1;}
+}
+@-moz-keyframes name{
+	0%{transform: translateY(100px) scale(1.08);opacity: 0;}
+	100%{transform: translateY(0) scale(1);opacity: 1;}
+}
+
+.imgbox li{width:228px;float: left;position: relative;margin-left: -35px;height: 268px;}
+.imgbox li.ml{margin-left: 0;margin-top: 16px;}
+.imgbox li.mt37{margin-top: 37px;}
+.imgbox li.mt43{margin-top:43px;}
+.imgbox li img{display: block;margin: 0 auto;}
+
+.txt_lb{font-size: 14px;color: #462878;text-align: center;line-height: 34px;position: absolute;top: 194px;left: 90px;}
+.txt_lba{top: 188px;}
+.txt_lb1{left: 63px;}
+.txt_lb2{left: 82px;}
+.txt_lb3{left: 72px;}
+.txt_lb4{left: 65px;}
+.txt_lb5{left: 106px;}
+.txt_lb6{left: 79px;}
+.txt_lb7{left: 98px;}
+.txt_lb8{left: 88px;}
+.txt_lb10{left: 90px;}
+.txt_lb11{left: 77px;}
+
+/*demo-item*/
+
+.slider{width:1000px;margin: 0 auto 0;position: absolute;top: 650px;left: 0;
+animation: p_bxlb 1s ease-in forwards;
+-webkit-animation: p_bxlb 1s ease-in forwards;
+-ms-animation: p_bxlb 1s ease-in forwards;
+-moz-animation: p_bxlb 1s ease-in forwards;
+}
+.slides_container{width:1000px;height: 304px;overflow:hidden}
+.imgbox1{width: 1000px;float: left;}
+.imgbox1 li{width:258px;float: left;position: relative;margin-left: -73px;height: 268px;}
+.imgbox1 li.ml{margin-left: 0;margin-top: 16px;}
+.imgbox1 li.mt37{margin-top: 37px;}
+.imgbox1 li.mt43{margin-top:43px;}
+.imgbox1 li img{display: block;margin: 0 auto;}
+.slider a{display: none;}
+
+
+.dengtxt{display: block;position: absolute;background-position: -1271px -1045px;width: 77px;height: 28px;font-size: 16px;
+        color: #ff5140;text-align: center;line-height: 28px;top: 150px;left: 80px;font-weight: bold;}
+
+
+
+
+
+
+
+
+
+
+
+/*page2*/
+.p2_head{height: 1212px;position: relative;width: 1000px;margin: 0 auto;
+perspective:1000;
+-webkit-perspective:1000;
+transform-style: preserve-3d;}
+
+.p2_tit2{background-position: -213px -528px;width: 582px;height: 93px;position: absolute;top: 405px;left: 209px;z-index: 99;
+animation: p2_tit2 1s ease-out forwards;
+-webkit-animation: p2_tit2 1s ease-out forwards;
+-ms-animation: p2_tit2 1s ease-out forwards;
+-moz-animation: p2_tit2 1s ease-out forwards;
+}
+@keyframes p2_tit2{
+	0%{transform: translateY(-50px) scale(1.04);opacity: 0;}
+	100%{transform: translateY(0) scale(1);opacity: 1;}
+}
+@-webkit-keyframes name{
+	0%{transform: translateY(-50px) scale(1.04);opacity: 0;}
+	100%{transform: translateY(0) scale(1);opacity: 1;}
+}
+@-ms-keyframes name{
+	0%{transform: translateY(-50px) scale(1.04);opacity: 0;}
+	100%{transform: translateY(0) scale(1);opacity: 1;}
+}
+@-moz-keyframes name{
+	0%{transform: translateY(-50px) scale(1.04);opacity: 0;}
+	100%{transform: translateY(0) scale(1);opacity: 1;}
+}
+.p2_mo{background:  url(ossweb-img/bg.png) no-repeat;width: 1675px;height: 1046px;position: absolute;top: 90px;margin-left: -356px;z-index: 98;opacity: 0;
+animation: mo 5s ease-out forwards;
+-webkit-animation: mo 5s ease-out forwards;
+-ms-animation: mo 5s ease-out forwards;
+-moz-animation: mo 5s ease-out forwards;
+}
+@keyframes mo{
+	from{opacity: 0;}
+	to{opacity:1;}
+}
+@-webkit-keyframes name{
+	from{opacity: 0;}
+	to{opacity:1;}
+}
+@-ms-keyframes name{
+	from{opacity: 0;}
+	to{opacity:1;}
+}
+@-moz-keyframes name{
+	from{opacity: 0;}
+	to{opacity:1;}
+}
+.p2_listdj{position: absolute;top: 560px;left: 50%;margin-left: -607px;width: 1198px;z-index: 99;
+animation: p_bxlb 1s ease-in forwards;
+-webkit-animation: p_bxlb 1s ease-in forwards;
+-ms-animation: p_bxlb 1s ease-in forwards;
+-moz-animation: p_bxlb 1s ease-in forwards;
+}
+
+.p2_listdj li{float: left;width: 470px;position: relative;margin-left: -65px;}
+.p2_listdj li.ml{margin-left: 0;}
+.p2_listdj li.mllast{margin-left: -147px;}
+.p2_listdj li img{display: block;margin: 0 auto;}
+.p2_listdj li span{position: absolute;font-size: 14px;color: #FFFFFF;line-height: 28px;top: 146px;display: block;background-position: -1658px -983px;width: 143px;height: 27px;text-align: center;}
+.p2_txtdj1{left: 76px;}
+.p2_txtdj2{left: 262px;}
+.p2_txtdj3{left: 73px;}
+.p2_txtdj4{left: 262px;}
+.p2_txtdj5{left: 173px;}
+.p2_listdj li p{font-size: 14px;color: #FFFFFF;line-height: 30px;text-align: center;}
+.p2_djtime1{background-position: -858px -518px;width: 470px;height: 31px;}
+.p2_djtime2{background-position: -835px -609px;width: 470px;height: 31px;}
+.p2_djtime3{background-position: -855px -709px;width: 470px;height: 31px;}
+
+/*page3*/
+.p3_tit2{background-position:  -218px -625px;}
+.p3_tabbx{background:  url(ossweb-img/p3_bgtab.png) no-repeat;width: 785px;height: 345px;position: absolute;top: 511px;left: 119px;padding-top: 5px;z-index: 98;
+animation: p_bxlb 1s ease-in forwards;
+-webkit-animation: p_bxlb 1s ease-in forwards;
+-ms-animation: p_bxlb 1s ease-in forwards;
+-moz-animation: p_bxlb 1s ease-in forwards;
+}
+
+.p3_table{width: 775px;margin: 0 auto;height: 340px;}
+.p3_table tr td img{display: block;margin: 0 auto;}
+.p3_date{width: 98px;font-size: 18px;color: #ea4d1c;line-height: 20px;text-align: center;}
+.p3_dq{width: 317px;font-size: 16px;color: #433a75;line-height: 18px;text-align: center;}
+.p3_xfq{width: 360px;font-size: 16px;color: #433a75;line-height: 18px;text-align: center;}
+.p3_date113{height: 113px;}
+.p3_date117{height: 117px;}
+.p3_date110{height: 110px;}
+
+/*page4*/
+.p4_tit2{background-position: -210px -739px;width: 582px;height: 93px;top: 370px;}
+.p4_tabbx{background:  url(ossweb-img/p4_bgtab.png) no-repeat;z-index: 98;}
+.p4_table{width: 775px;margin: 0 auto;}
+.p4_table tr th{height: 66px;font-size: 18px;color: #433A75;line-height: 24px;text-align: center;}
+.p4_table tr th.p4_thred{color: #ea4d1c;}
+.p4_table tr th em{font-size: 16px;}
+.p4_wd179{width: 179px;}
+.p4_wd200{width: 200px;}
+.p4_wd196{width: 196px;}
+.p4_table tr td{font-size: 18px;color: #433A75;line-height: 24px;text-align: center;}
+.p4_table tr td.p4_thred{color: #ea4d1c;}
+.p4_table tr td em{font-size: 16px;}
+.p4_tdhh37{height: 37px;}
+.p4_tdhh44{height: 44px;}
+.p4_tdhh43{height: 43px;}
+.p4_tdhh42{height: 42px;}
+.p4_tdhh68{height: 68px;}
+.p4_tdhh40{height: 40px;}
+
+
+
+/*page5*/
+
+.p5_box{position: absolute;width: 1000px;left: 0;top:403px;z-index: 98;
+animation: p_bxlb 1s ease-in forwards;
+-webkit-animation: p_bxlb 1s ease-in forwards;
+-ms-animation: p_bxlb 1s ease-in forwards;
+-moz-animation: p_bxlb 1s ease-in forwards;
+}
+.p6_tit2{background-position:  -23px -881px;width: 582px;height: 72px;top: 331px;}
+.p5_bxtop{width: 1000px;margin: 0 auto;}
+.p5_list{float: left;width: 537px;}
+.p5_list li{float: left;width: 179px;position: relative;}
+.p5_list li.ml{margin-left: 80px;}
+.p5_list li.mt{margin-top: -15px;}
+.p5_list li img{display: block;}
+.p5_list li p{position: absolute;left: 23px;top: 125px;font-size: 14px;color: #FFFFFF;text-align: center;line-height: 26px;background-position: -1658px -983px;width: 143px;height: 27px;}
+.p5_list li p.txt_t{background-position: -1543px -1028px;width: 170px;height: 23px;left: 9px;}
+
+.p5_chshow{float: left;width: 520px;margin: -62px 0 0 -57px;background:  url(ossweb-img/p5_img6.png) no-repeat;width: 520px;height: 393px;position: relative;}
+.p5_chshow img{display: block;position: absolute;top: 80px;left: 103px;}
+.p5_txtdj{position: absolute;font-size: 14px;color: #2f1765;line-height: 16px;top: 308px;right: 172px;}
+.p5_hy{position: absolute;display: block;background:  url(ossweb-img/heye.png) no-repeat;width: 520px;height: 393px;top: 0;left: 0;}
+.p5_get{display: block;background-position: -1139px 0;width: 156px;height: 201px;position: absolute;top:89px;right: -49px;
+animation: get 0.8s ease-in infinite;
+transform-origin:45px 100px;
+-webkit-animation: get 0.8s ease-in infinite;
+-webkit-transform-origin:45px 100px;
+-ms-animation: get 0.8s ease-in infinite;
+-ms-transform-origin:45px 100px;
+-moz-animation: get 0.8s ease-in infinite;
+-moz-transform-origin:45px 100px;
+}
+@keyframes get{
+	0%{transform:rotateY(0) rotateZ(0);}
+	10%{transform:rotateY(0) rotateZ(8deg);}
+	20%{transform:rotateY(0) rotateZ(0);}
+	30%{transform:rotateY(0) rotateZ(-8deg);}
+	40%{transform:rotateY(0) rotateZ(0);}
+	50%{transform:rotateY(0) rotateZ(0);}
+	60%{transform:rotateY(0) rotateZ(0);}
+	70%{transform:rotateY(0) rotateZ(0);}
+	80%{transform:rotateY(0) rotateZ(0);}
+	90%{transform:rotateY(0) rotateZ(0);}
+	100%{transform:rotateY(0) rotateZ(0);}
+}
+@-webkit-keyframes name{
+	0%{transform:rotateY(0) rotateZ(0);}
+	10%{transform:rotateY(0) rotateZ(8deg);}
+	20%{transform:rotateY(0) rotateZ(0);}
+	30%{transform:rotateY(0) rotateZ(-8deg);}
+	40%{transform:rotateY(0) rotateZ(0);}
+	50%{transform:rotateY(0) rotateZ(0);}
+	60%{transform:rotateY(0) rotateZ(0);}
+	70%{transform:rotateY(0) rotateZ(0);}
+	80%{transform:rotateY(0) rotateZ(0);}
+	90%{transform:rotateY(0) rotateZ(0);}
+	100%{transform:rotateY(0) rotateZ(0);}
+}
+@-ms-keyframes name{
+	0%{transform:rotateY(0) rotateZ(0);}
+	10%{transform:rotateY(0) rotateZ(8deg);}
+	20%{transform:rotateY(0) rotateZ(0);}
+	30%{transform:rotateY(0) rotateZ(-8deg);}
+	40%{transform:rotateY(0) rotateZ(0);}
+	50%{transform:rotateY(0) rotateZ(0);}
+	60%{transform:rotateY(0) rotateZ(0);}
+	70%{transform:rotateY(0) rotateZ(0);}
+	80%{transform:rotateY(0) rotateZ(0);}
+	90%{transform:rotateY(0) rotateZ(0);}
+	100%{transform:rotateY(0) rotateZ(0);}
+}
+@-moz-keyframes name{
+	0%{transform:rotateY(0) rotateZ(0);}
+	10%{transform:rotateY(0) rotateZ(8deg);}
+	20%{transform:rotateY(0) rotateZ(0);}
+	30%{transform:rotateY(0) rotateZ(-8deg);}
+	40%{transform:rotateY(0) rotateZ(0);}
+	50%{transform:rotateY(0) rotateZ(0);}
+	60%{transform:rotateY(0) rotateZ(0);}
+	70%{transform:rotateY(0) rotateZ(0);}
+	80%{transform:rotateY(0) rotateZ(0);}
+	90%{transform:rotateY(0) rotateZ(0);}
+	100%{transform:rotateY(0) rotateZ(0);}
+}
+
+
+
+.yxsl{display: none;position: absolute;background-position: -849px -972px;width: 219px;height: 85px;top: 150px;left: 200px;}
+
+.page{display: none;}
+.show{display: block;}
+
+.boxmap{width: 972px;margin: 0 auto;height: 134px;position: relative;overflow: hidden;}
+.listmap{width: 5832px;height: 134px;position: absolute;top: 0;left: 0;}
+.listmap li{float: left;width: 193px;height: 134px;margin-right:50px;}
+.p5_txtdowm{background-position:  -705px -879px;width: 958px;height: 40px;margin: 12px auto 0;
+            background-position:  -705px -879px;width: 958px;height: 40px;font-size: 16px;color: #FFFFFF;line-height: 40px;text-align: center;}
+/*新加第二内页*/
+.p2_mo1{background: url(ossweb-img/bgpop0.png) no-repeat;width: 1551px;height: 802px;display: block;left:50%;top: 110px;margin-left: -803px;
+        position: absolute;z-index: 100;
+        animation: mo 5s ease-out forwards;
+-webkit-animation: mo 5s ease-out forwards;
+-ms-animation: mo 5s ease-out forwards;
+-moz-animation: mo 5s ease-out forwards;
+        }
+.dialog_1{position: absolute;width: 1551px;margin-left: -803px; height: 581px;left:50%;top: 110px;padding-top:221px;z-index: 100;
+animation: hdtit 1s ease-in forwards;
+-webkit-animation: hdtit 1s ease-in forwards;
+-ms-animation: hdtit 1s ease-in forwards;
+-moz-animation: hdtit 1s ease-in forwards;
+}
+.poptop{width: 880px;margin: 0 auto;}
+.poplh{float: left;background-position:  -1314px -42px;width: 190px;height: 132px;}
+.poprule{float: right;background:  url(ossweb-img/bgpoptxt1.png) no-repeat;width: 653px;height: 101px;font-size: 14px;color: #433A75;line-height: 22px;
+       padding: 15px 0 0 22px;margin-top: 8px;}
+
+.popdowm{padding-top:25px;}
+.poplh1{background-position: -1524px -24px;width: 190px;height: 132px;}
+.listpop1{float: right;width: 677px;}
+.listpop1 li{float: left;position: relative;font-size: 14px;color: #433A75;line-height: 20px;text-align: center;margin-right: 24px;}
+.listpop1 li.lipop2{margin-right: 0;}
+.lipop1{background:  url(ossweb-img/bgpoptxt2.png) no-repeat;width: 189px;height: 73px;padding-top: 35px;}
+.lipop2{background:  url(ossweb-img/bgpoptxt3.png) no-repeat;width: 251px;height: 108px;}
+.lipoptxt{font-size: 14px;color: #433A75;line-height: 20px;text-align: center;width: 100%;padding: 14px 0 7px 0;}
+.lipoptxt a{color: #fb549a;text-decoration: underline;}
+.btn_share{display: block;margin: 0 auto;background-position:  -1322px 0;width: 118px;height: 36px;}
+.lipop1 em{display: block;width: 10px;height: 2px;position: absolute;border-bottom: 2px dashed #5c69bd;right: -17px;top: 50px;}
+.dia_close{display: block;background-position:  -1177px -221px;width: 68px;height: 75px;position: absolute;top:290px;right: 266px;}
+.btnpop1{display: block;background-position: -1114px -356px;width: 327px;height: 145px;margin: -24px 0 0 660px;}
+.ponum{font-size: 14px;color: #726db3;line-height: 20px;position: absolute;top:513px;left: 361px;}
+.ponum0{top: 354px;left: 334px;}
+.imgbox_1{position: absolute;left: 0;top: 628px;z-index: 99;}
+/*弹窗*/
+.dialog{position: relative;background:  url(ossweb-img/bgdialog.png) no-repeat;display: none;}
+
+/*dialog_a*/
+/*第一个弹窗*/
+.dialog_a{width: 614px;height: 404px;}
+.btn_close{display: block;position: absolute;background-position: -1330px -249px;width: 41px;height: 41px;top: 0;right: -50px;}
+
+.popdl{display: block;position: absolute;background-position: -1484px -199px;width: 66px;height: 166px;top: 50px;left: -28px;
+animation: popdl 12s linear infinite;
+transform-origin:50% 0;
+-webkit-animation: popdl 12s linear infinite;
+-webkit-transform-origin:50% 0;
+-ms-animation: popdl 12s linear infinite;
+-ms-transform-origin:50% 0;
+-moz-animation: popdl 12s linear infinite;
+-moz-transform-origin:50% 0;
+}
+@keyframes popdl{
+	0%{transform:rotateY(0) rotateZ(0);}
+	25%{transform:rotateY(0) rotateZ(8deg);}
+	50%{transform:rotateY(0) rotateZ(0);}
+	75%{transform:rotateY(0) rotateZ(-8deg);}
+	100%{transform:rotateY(0) rotateZ(0);}
+	
+}
+@-webkit-keyframes name{
+	0%{transform:rotateY(0) rotateZ(0);}
+	25%{transform:rotateY(0) rotateZ(8deg);}
+	50%{transform:rotateY(0) rotateZ(0);}
+	75%{transform:rotateY(0) rotateZ(-8deg);}
+	100%{transform:rotateY(0) rotateZ(0);}
+}
+@-ms-keyframes name{
+	0%{transform:rotateY(0) rotateZ(0);}
+	25%{transform:rotateY(0) rotateZ(8deg);}
+	50%{transform:rotateY(0) rotateZ(0);}
+	75%{transform:rotateY(0) rotateZ(-8deg);}
+	100%{transform:rotateY(0) rotateZ(0);}
+}
+@-moz-keyframes name{
+	0%{transform:rotateY(0) rotateZ(0);}
+	25%{transform:rotateY(0) rotateZ(8deg);}
+	50%{transform:rotateY(0) rotateZ(0);}
+	75%{transform:rotateY(0) rotateZ(-8deg);}
+	100%{transform:rotateY(0) rotateZ(0);}
+}
+.list_dia{width: 555px;margin: 0 auto;padding: 73px 0 26px 0;}
+.list_dia li{float: left;width: 129px;position: relative;margin-right: 13px;}
+.list_dia li.mr{margin-right: 0;}
+.list_dia li img{display: block;}
+.list_dia li p{font-size: 14px;color: #433A75;line-height: 16px;position: absolute;width: 100%;text-align: center;left: 0;top: 103px;}
+.list_dia li i{display: none;position: absolute;top: 4px;right:4px;background-position: -1399px -252px;width: 54px;height: 54px;}
+.list_dia li i.show_on{display: block;}
+.txt_dia1{display: block;margin: 0 auto;background-position: -132px -996px;width: 542px;height: 43px;text-align: center;
+          font-size: 14px;color: #fefeff;line-height: 18px;padding-top: 10px;}
+
+
+.bxbtnpop{width: 500px;margin: 0 auto;padding-top: 18px;display: block;}
+.btncai{float: left;background-position: -1479px -409px;width: 236px;height: 66px;}
+.btnnocai{float: right;background-position: -1476px -487px;width: 235px;height: 66px;}
+
+
+/*第二个弹窗*/
+.pop2{width: 552px;margin: 0 auto;padding-top: 100px;}
+.diadjx{width: 139px;float: left;}
+.popimg{display: block;margin: 0 auto;}
+.popdjname{display: block;width: 100%;text-align: center;font-size: 14px;color: #433A75;line-height: 16px;padding-top: 8px;}
+
+.popchec{width: 395px;float: right;}
+.poptxt1{font-size: 14px;color: #433A75;line-height: 24px;}
+
+.chbx{display: block;width: 100%;padding: 15px 0 28px 0;}
+
+.chlf{float: left;width: 168px;}
+.chrig{float: right;width: 168px;}
+.btncheck{float: left;width: 15px;height: 15px;margin-top: 4px;}
+.chtxt{float: left;width: 134px;margin-left: 7px;font-size: 14px;color: #433A75;line-height: 24px;}
+
+.btnsure{display: block;margin: 0 auto;background-position: -1489px -612px;width: 244px;height: 66px;}
+
+
+/*第三个弹窗*/
+.dialog_b{width: 614px;height: 351px;padding-top: 56px;}
+.poptxt2{font-size: 20px;color: #433A75;line-height: 22px;width: 100%;text-align: center;padding: 20px 0 15px 0;}
+.btnkonw{display: block;margin: 0 auto;background-position: -1477px -704px;width: 281px;height: 70px;}
+
+/*第四个弹窗*/
+
+.dialog_c{width: 614px;height: 366px;padding-top: 38px;}
+.bgpopimg{display: block;margin: 0 auto;background:  url(ossweb-img/popbgimg.png) no-repeat;width: 143px;height: 123px;padding:46px 0 0 73px;}
+.bgpopimg img{display: block;}
+.popdjname_1{padding-top: 0;margin-top: -6px;}
+
+
+
+</style>
+</head>
+
+<body>
+<span class="masky show1" id="open"></span>
+<!--#include virtual="/act/a20171114top_nav/nav_no_login1.shtml"-->
+<div id="comm_act_wrap">
+    <!-- 专题公用头部Start -->
+    <div class="act_comm_box blue_act_comm_box">
+      <!-- 左侧链接Start -->
+    	<div class="acb_links">
+    	   <a href="http://speed.qq.com/web201008/download.shtml" title="下载QQ飞车客户端" class="acb_big_btn acb_top_ico" target="_blank"><i class="acb_top_ico acb_down_ico "></i>下载游戏</a>
+    	   <a href="http://speed.qq.com/" title="QQ飞车官方网站" class="acb_big_btn acb_top_ico"  target="_blank"><i class="acb_top_ico acb_home_ico "></i>官方网站</a>
+    	   <a href="javascript:share('qqzone')" title="分享到Qzone" class="acb_qq_btn acb_top_ico"></a>
+    	   <a href="javascript:share('qqwb')" title="分享到QQ微博" class="acb_qt_btn acb_top_ico"></a>
+    	</div>	
+      <!-- 左侧链接Start -->
+    	<div class="acb_user">
+          <ul class="user_links">
+           <li id="spanNotBind"><a href="javascript:setType(1);" title="绑定大区" class="l">绑定大区</a><i class="c"></i></li>
+			<li id="spanBind" style="display:none">所绑大区：
+				<span id="area_info"></span>
+			</li>
+           <li><a href="javascript:TGDialogS('showMyGiftContent');" title="查看我的奖励" class="l">查看我的奖励</a></li>
+          </ul>
+        <!-- 用户登录模块Start -->
+    	  <div class="user_login">
+    		   <span id="unlogin">亲爱的用户，请<a href="javascript:;" id="dologin" class="acb_log_btn acb_top_ico">登录</a></span>
+    		   <span id="logined" style="display:none">欢迎您，<span id='login_qq_span'></span>，<a href="javascript:;" id="dologout"  class="acb_log_btn acb_top_ico">注销</a></span>
+          </div>
+
+        </div>
+        <!-- 用户登录模块END -->
+    </div>
+    <!-- 专题公用头部END -->
+    <!-- 这里放页面主要内容 --> 
+ </div>
+<div class="topdl c" id="topdl">
+	<a href="javascript:;" class="dengtop dengl_0 hon sp db">返回首页</a>
+	<a href="javascript:;" class="dengtop dengl_1 sp db">盏盏河灯送极品</a>
+	<a href="javascript:;" class="dengtop dengl_2 sp db">整点在线送绝版</a>
+	<a href="javascript:;" class="dengtop dengl_3 sp db">累计在线送22点券</a>
+	<a href="javascript:;" class="dengtop dengl_4 sp db">8倍闹新年</a>
+	<a href="javascript:;" class="dengtop dengl_5 sp db">元宵限定绝版</a>
+</div>
+<a href="javascript:;" class="btnprv sp" id="prv"><span class="prvlf sp db">左</span></a>
+<a href="javascript:;" class="btnnext sp" id="next"><span class="prvrig sp db">右</span></a>
+<div class="bxjtfc" id="bxjtfc">
+	<!--第一页箭头浮层-->
+	<span class="lffc lefta1 sp db">去别处逛逛</span>
+	<span class="rigfc right1 sp db">去别处逛逛</span>
+	<!--第二页箭头浮层-->
+	<span class="lffc  lefta2 sp db">还是去河灯吧</span>
+	<span class="rigfc  right2 sp db">去别处逛逛</span>
+	<!--第三页，第四页箭头浮层-->
+	<span class="lffc  lefta3 sp db">还是去河灯吧</span>
+	<span class="rigfc  right3  sp db">去别处逛逛</span>
+	<!--第四页箭头浮层-->
+	<span class="lffc  lefta4 sp db">还是去河灯吧</span>
+	<span class="rigfc   right4 sp db">去别处逛逛</span>
+	<!--第五页箭头浮层-->
+	<span class="lffc lefta5 sp db">返回上个河口</span>
+	<span class="rigfc right5 sp db">有位伊人</span>
+	<!--第六页箭头浮层-->
+	<span class="lffc lefta6 sp db">返回上个河口</span>
+	<span class="rigfc right6 sp db">去别处逛逛</span>
+</div>
+
+
+<video  class="vid pa" width="1920" height="1080" autoplay="autoplay" loop="loop">
+	<source src="ossweb-img/video.mp4" type="video/mp4" id="video"></source>
+</video>
+<div class="wrap">
+	<div class="page show" id="page1">
+		<div class="head clear_a pr">
+           <h1 class="hdtit db">元宵花灯会</h1>
+           <span class="renwu" id="ren">
+				<img src="ossweb-img/0.png" width="1920" height="1080" alt="" />
+			</span>
+           <span class="time sp db">活动时间</span>
+            <span class="btnbx">
+            	<a href="//speed.qq.com" target="_blank" class="btnhome db sp" onclick="PTTSendClick('btn','home','进入官网')">进入官网</a>
+            	<a href="javascript:doReg(25957)" class="btnyyhd db sp" onclick="PTTSendClick('btn','yyhd','预约活动')">预约活动</a>
+            	<a href="//speed.qq.com/web201503/page/download.shtml" target="_blank" class="btndown db sp" onclick="PTTSendClick('btn','down','下载游戏')">下载游戏</a>
+            </span>
+        </div>
+        <ul class="imgbox clear_a c">
+			<li class="ml">
+				<img src="ossweb-img/djpic1.png" width="228" height="268" alt="绝尘"/>
+			    <p class="txt_lb sp">绝尘</p>
+			</li>
+			<li>
+				<img src="ossweb-img/djpic4.png"  width="228" height="268" alt="Q币"/>
+			    <p class="txt_lb txt_lb2  sp">10Q币</p>
+			</li>
+			<li class="mt37">
+				<img src="ossweb-img/djpic2.png"  width="228" height="268" alt="暗月幽蝶座椅"/>
+			    <p class="txt_lb txt_lb1 sp">暗月幽蝶座椅</p>
+			</li>
+			<li>
+				<img src="ossweb-img/djpic6.png"  width="228" height="268" alt="点券"/>
+			    <p class="txt_lb txt_lb3 sp">1000点券</p>
+			</li>
+			<li class="mt43">
+				<img src="ossweb-img/djpic3.png" width="228" height="268" alt="黄钻"/>
+			    <p class="txt_lb txt_lb4 sp">黄钻（1个月）</p>
+			</li>
+		</ul>
+	</div>
+	<div class="page" id="page2">
+		<div class="p2_head clear_a  pr">
+			<span class="p2_mo1 clear_a"></span>
+			<div class="dialog_1">
+				<div class="poptop c">
+					<span class="poplh sp db">猜灯谜换极品</span>
+					<span class="poprule">
+						1. 花灯分为三类：极品花灯、钱币花灯、道具花灯。每次捡花灯必然在以上三种花灯中获得1种。<br />
+						2. 猜对灯谜，可在对应的花灯奖励中获得1个，奖励获取不重复。<br />
+						3. 每日只要捡花灯的次数足够，可无限换花灯捡起。<br />
+						4. 活动期间内，最多猜5次灯谜。
+					</span>
+				</div>
+				<div class="poptop popdowm c">
+					<span class="poplh poplh1 sp db">如何获得捡花灯次数</span>
+					<ul class="listpop1 c">
+						<li class="lipop1">
+							1. 活动期间内登录界面<br />可捡1次
+							<em></em>
+						</li>
+						<li class="lipop1">
+							2. 活动期间内登录游戏<br />可捡1次
+							<em></em>
+						</li>
+						<li class="lipop2">
+							<p class="lipoptxt">
+								3. 每邀请5个小伙伴通过你分享的链<br />接进入页面，可捡1次花灯
+								<a href="javascript:;" onclick="PTTSendClick('btn','check','查看详情')">查看详情</a>
+							</p>
+							<a href="javascript:share('qqzone');" class="btn_share sp db" onclick="PTTSendClick('btn','share','分享到空间')">分享到空间</a>
+						</li>
+					</ul>
+				</div>
+				<a href="javascript:;" class="btnpop1 sp db">捡个花灯</a>
+				<span class="ponum ponum0">剩余猜灯谜次数：X次</span>
+				<span class="ponum">还可捡X次花灯<br />已猜灯谜：X次</span>
+			</div>
+			<div class="slider pr" id="slides">
+		 		<div class="slides_container">
+					<ul class="imgbox1 c">
+						<li class="ml">
+							<img src="ossweb-img/djpic9.png" width="220" height="258" alt="绝尘"/>
+						    <span class="dengtxt sp">极品花灯</span>
+						</li>
+						<li>
+							<img src="ossweb-img/djpic1.png"  width="220" height="258" alt="Q币"/>
+						    <p class="txt_lb txt_lba txt_lb5 sp">绝尘</p>
+						</li>
+						<li class="mt37">
+							<img src="ossweb-img/djpic2.png"  width="220" height="258" alt="暗月幽蝶座椅"/>
+						    <p class="txt_lb txt_lba txt_lb6 sp">暗月幽蝶座椅</p>
+						</li>
+						<li>
+							<img src="ossweb-img/djpic10.png"  width="220" height="258" alt="空城银冠手杖"/>
+						    <p class="txt_lb txt_lba txt_lb6 sp">空城银冠手杖</p>
+						</li>
+						<li class="mt43">
+							<img src="ossweb-img/djpic8.png" width="220" height="258" alt="童梦霞光羽翼"/>
+						    <p class="txt_lb txt_lba txt_lb6 sp">童梦霞光羽翼</p>
+						</li>
+					</ul>
+					<ul class="imgbox1 c">
+						<li class="ml">
+							<img src="ossweb-img/djpic9.png" width="220" height="258" alt="绝尘"/>
+						    <span class="dengtxt sp">钱币花灯</span>
+						</li>
+						<li>
+							<img src="ossweb-img/djpic4.png" width="220" height="258" alt="Q币"/>
+						    <p class="txt_lb txt_lba txt_lb7  sp">10Q币</p>
+						</li>
+						<li class="mt37">
+							<img src="ossweb-img/djpic5.png"  width="220" height="258" alt="代金券"/>
+						    <p class="txt_lb txt_lba txt_lb6 sp">2Q币代金券</p>
+						</li>
+						<li>
+							<img src="ossweb-img/djpic6.png"  width="220" height="258" alt="点券"/>
+						    <p class="txt_lb txt_lba txt_lb8 sp">1000点券</p>
+						</li>
+						<li class="mt43">
+							<img src="ossweb-img/djpic11.png" width="220" height="258" alt="消费券"/>
+						    <p class="txt_lb txt_lba txt_lb2 sp">2000消费券</p>
+						</li>
+					</ul>
+					<ul class="imgbox1 c">
+						<li class="ml">
+							<img src="ossweb-img/djpic9.png" width="220" height="258" alt="绝尘"/>
+						   <span class="dengtxt sp">道具花灯</span>
+						</li>
+						<li>
+							<img src="ossweb-img/djpic12.png"  width="220" height="258" alt="神奇水晶"/>
+						    <p class="txt_lb txt_lba txt_lb10  sp">神奇水晶</p>
+						</li>
+						<li class="mt37">
+							<img src="ossweb-img/djpic13.png"  width="220" height="258" alt="菠萝糖"/>
+						    <p class="txt_lb txt_lba txt_lb10 sp">菠萝糖</p>
+						</li>
+						<li>
+							<img src="ossweb-img/djpic14.png"  width="220" height="258" alt="巧克力糖"/>
+						    <p class="txt_lb txt_lba txt_lb10 sp">巧克力糖</p>
+						</li>
+						<li class="mt43">
+							<img src="ossweb-img/djpic3.png" width="220" height="258" alt="黄钻"/>
+						    <p class="txt_lb txt_lba txt_lb11 sp">黄钻（1个月）</p>
+						</li>
+					</ul>
+				</div>
+				<a class="prev pa sp" id="arrowl" href="javascript:;"></a>
+				<a class="next pa sp" id="arrowr" href="javascript:;"></a>
+			</div>
+		</div>
+	</div>
+	<div class="page" id="page3">
+		<div class="p2_head clear_a pr">
+			<span class="p2_mo clear_a db">云</span>
+            <h2 class="p2_tit2 sp db">整点福利</h2>
+            <ul class="p2_listdj c">
+            	<li class="ml">
+            		<img src="ossweb-img/p2_img1.png" width="387" height="182" alt="飞焰/幸运召唤卡" />
+            		<span class="p2_txtdj1 sp">飞焰（3天）</span>
+            		<span class="p2_txtdj2 sp">幸运召唤卡*5</span>
+            		<p class="p2_djtime1 sp">3月2日（元宵节）15：00在线可获以上奖励</p>
+            	</li>
+            	<li>
+            		<img src="ossweb-img/p2_img2.png" width="386" height="182" alt="新春星曜发饰/幸运召唤卡" />
+            		<span class="p2_txtdj3 sp">新春星曜发饰(永久)</span>
+            		<span class="p2_txtdj4 sp">幸运召唤卡*5</span>
+            		<p class="p2_djtime2 sp">3月3日15：00在线可获以上奖励</p>
+            	</li>
+            	<li class="mllast">
+            		<img src="ossweb-img/p2_img3.png" width="204" height="182" alt="幸运召唤卡" />
+            		<span class="p2_txtdj5 sp">幸运召唤卡*5</span>
+            		<p class="p2_djtime3 sp">3月4日15：00在线可获以上奖励</p>
+            	</li>
+            </ul>
+		</div>
+	</div>
+	<div class="page" id="page4">
+		<div class="p2_head clear_a pr">
+			<span class="p2_mo clear_a db">云</span>
+            <h2 class="p2_tit2 p3_tit2 sp db">整点福利</h2>
+            <div class="p3_tabbx">
+            	<table class="p3_table">
+            		<tr>
+            			<td class="p3_date p3_date113">3月2日</td>
+            			<td class="p3_dq">
+            				<img src="ossweb-img/p3_img1.png" width="111" height="82" alt="点券"/>
+            				<span>1200点券</span>
+            			</td>
+            			<td class="p3_xfq">
+            				<img src="ossweb-img/p3_img4.png" width="111" height="82" alt="消费券"/>
+            				<span>800消费券</span>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td class="p3_date p3_date117">3月3日</td>
+            			<td class="p3_dq">
+            				<img src="ossweb-img/p3_img2.png" width="111" height="85" alt="点券"/>
+            				<span>6000点券</span>
+            			</td>
+            			<td class="p3_xfq">
+            				<img src="ossweb-img/p3_img5.png" width="111" height="85" alt="消费券"/>
+            				<span>3300消费券</span>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td class="p3_date p3_date110">3月4日</td>
+            			<td class="p3_dq">
+            				<img src="ossweb-img/p3_img3.png" width="111" height="84" alt="点券"/>
+            				<span>3000点券</span>
+            			</td>
+            			<td class="p3_xfq">
+            				<img src="ossweb-img/p3_img6.png" width="111" height="84" alt="消费券"/>
+            				<span>1000消费券</span>
+            			</td>
+            		</tr>
+            	</table>
+            </div>
+		</div>
+	</div>
+    <div class="page" id="page5">
+    	<div class="p2_head clear_a pr">
+    		<span class="p2_mo clear_a db">云</span>
+            <h2 class="p2_tit2 p4_tit2 sp db">整点福利</h2>
+            <div class="p3_tabbx p4_tabbx">
+            	<table class="p4_table">
+            		<tr>
+            			<th class="p4_wd179">多倍项目</th>
+            			<th class="p4_wd200">3月2日<br /><em>（14-16点）</em></th>
+            			<th class="p4_wd200 p4_thred">3月3日<br /><em>（14-16点）</em></th>
+            			<th class="p4_wd196">3月4日<br /><em>（14-16点）</em></th>
+            		</tr>
+            		<tr>
+            			<td class="p4_tdhh37">车队积分</td>
+            			<td rowspan="4">6倍</td>
+            			<td rowspan="4" class="p4_thred">8倍</td>
+            			<td rowspan="4">4倍</td>
+            		</tr>
+            		<tr>
+            			<td class="p4_tdhh44">角色经验</td>
+            		</tr>
+            		<tr>
+            			<td class="p4_tdhh43">边境荣誉</td>
+            		</tr>
+            		<tr>
+            			<td class="p4_tdhh42">宠物经验</td>
+            		</tr>
+            		<tr>
+            			<td class="p4_tdhh68">亲密度、舞力值</td>
+            			<td>6倍<br /> （其他时间双倍）</td>
+            			<td class="p4_thred">8倍<br /> （其他时间双倍）</td>
+            			<td>4倍<br /> （其他时间双倍）</td>
+            		</tr>
+            		<tr>
+            			<td class="p4_tdhh44">工资</td>
+            			<td>2倍</td>
+            			<td class="p4_thred">2倍</td>
+            			<td>2倍</td>
+            		</tr>
+            	</table>
+            </div>
+    	</div>
+    </div>
+    <div class="page" id="page6">
+    	<div class="p2_head clear_a pr">
+    		<span class="p2_mo clear_a db">云</span>
+            <h2 class="p2_tit2 p6_tit2 sp db">整点福利</h2>
+            <div class="p5_box">
+            	<div class="p5_bxtop c">
+            		<ul class="p5_list c">
+            			<li class="ml">
+            				<img src="ossweb-img/p5_img1.png" width="179" height="159" alt="蓦然回首T恤" />
+            				<p class="txt_t sp">蓦然回首T恤(男/女)</p>
+            			</li>
+            			<li>
+            				<img src="ossweb-img/p5_img2.png" width="179" height="159" alt="一夜鱼龙舞手杖" />
+            				<p class="sp">一夜鱼龙舞手杖</p>
+            			</li>
+            			<li class="mt">
+            				<img src="ossweb-img/p5_img3.png" width="179" height="159" alt="花千树羽翼" />
+            				<p class="sp">花千树羽翼</p>
+            			</li>
+            			<li class="mt">
+            				<img src="ossweb-img/p5_img4.png" width="179" height="159" alt="青玉案背景" />
+            				<p class="sp">青玉案背景</p>
+            			</li>
+            			<li class="mt">
+            				<img src="ossweb-img/p5_img5.png" width="179" height="159" alt="烈焰战魂" />
+            				<p class="sp">烈焰战魂</p>
+            			</li>
+            		</ul>
+            		<div class="p5_chshow c">
+		            	<img src="ossweb-img/yxrw.gif" width="270" height="270" alt="全套穿戴展示" />
+		            	<span class="p5_hy db">荷叶</span>
+		            	<p class="p5_txtdj">全套穿戴展示</p>
+		            	<span class="yxsl sp">元宵赠礼</span>
+		            	<a href="javascript:TGDialogS('dialog_a');" class="p5_get sp db">点击领取</a>
+		            </div>
+            	</div>
+            	<div class="boxmap" id="bxmap">
+            		<ul class="listmap" id="map">
+						<li><img src="ossweb-img/p5_map1.png" width="193" height="134" alt=""/></li>
+						<li><img src="ossweb-img/p5_map2.png" width="193" height="134" alt=""/></li>
+						<li><img src="ossweb-img/p5_map3.png" width="193" height="134" alt=""/></li>
+						<li><img src="ossweb-img/p5_map4.png" width="193" height="134" alt=""/></li>
+						<li><img src="ossweb-img/p5_map5.png" width="193" height="134" alt=""/></li>
+						<li><img src="ossweb-img/p5_map6.png" width="193" height="134" alt=""/></li>
+						<li><img src="ossweb-img/p5_map7.png" width="193" height="134" alt=""/></li>
+						<li><img src="ossweb-img/p5_map8.png" width="193" height="134" alt=""/></li>
+						<li><img src="ossweb-img/p5_map8.png" width="193" height="134" alt=""/></li>
+						<li><img src="ossweb-img/p5_map10.png" width="193" height="134" alt=""/></li>
+						<li><img src="ossweb-img/p5_map11.png" width="193" height="134" alt=""/></li>
+						<li><img src="ossweb-img/p5_map12.png" width="193" height="134" alt=""/></li>
+					</ul>
+            	</div>
+            	<p class="p5_txtdowm sp">2.24~3.6日期间，参与以上地图，有机会获得元宵节系列绝版。</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dialog dialog_a">
+    <span class="popdl sp db">弹窗灯笼</span>
+    <ul class="list_dia c">
+    	<li>
+    		<img src="ossweb-img/popimg1.png" width="129" height="130" alt="" />
+    		<p>XXXXXX（期个）</p>
+    		<i class="show_on sp db">已获得</i><!--已获得添加类名show_on，以下同理-->
+    	</li>
+    	<li>
+    		<img src="ossweb-img/popimg2.png" width="129" height="130" alt="" />
+    		<p>XXXXXX（期个）</p>
+    		<i class="sp db">已获得</i>
+    	</li>
+    	<li>
+    		<img src="ossweb-img/popimg3.png" width="129" height="130" alt="" />
+    		<p>XXXXXX（期个）</p>
+    		<i class="sp db">已获得</i>
+    	</li>
+    	<li class="mr">
+    		<img src="ossweb-img/popimg4.png" width="129" height="130" alt="" />
+    		<p>XXXXXX（期个）</p>
+    		<i class="sp db">已获得</i>
+    	</li>
+    </ul>
+    <span class="txt_dia1 sp">恭喜你，捡起了一个XX花灯！<br />猜灯谜的话将必得以上奖励之一，获得不重复哦！</span>
+    <span class="bxbtnpop c">
+    	<a href="javascript:;" class="btncai sp db"  onclick="PTTSendClick('btn','btncai','猜猜吧')">猜猜吧</a>
+    	<a href="javascript:showDialog.hide();" class="btnnocai sp db">不猜了</a>
+    </span>
+	<a class="btn_close sp db" href="javascript:showDialog.hide();" title="关闭">×</a>
+</div>
+<div class="dialog dialog_a">
+	 <div class="pop2">
+	 	<span class="diadjx">
+		 	<img src="ossweb-img/popimg5.png" width="139" height="139" alt="" class="popimg"/>
+		 	<em class="popdjname">XXXXXX（期限/个数）</em>
+		 </span>
+		 <div class="popchec">
+		 	<p class="poptxt1">问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描述问题描述</p>
+		    <span class="chbx c">
+		    	 <span class="chlf">
+		    	 	<input type="radio" class="btncheck"  />
+		    	    <em class="chtxt">15个字15个字15个字15个字15个字15个字</em>
+		    	 </span>
+		    	 <span class="chrig">
+		    	 	<input type="radio" class="btncheck"  />
+		    	    <em class="chtxt">15个字15个字15个字15个字15个字15个字</em>
+		    	 </span>
+		    </span>
+		    <a href="javscript:;" class="btnsure sp db">选好了</a>
+		 </div>
+	 </div>
+    <span class="popdl sp db">弹窗灯笼</span>
+    <a class="btn_close sp db" href="javascript:showDialog.hide();" title="关闭">×</a>
+</div>
+<div class="dialog dialog_b">
+	<img src="ossweb-img/popimg5.png" width="139" height="139" alt="" class="popimg" />
+	<em class="popdjname">XXXXXX（期限/个数）</em>
+	<p class="poptxt2">真厉害，你答对了灯谜！获得了以上奖励哦！</p>
+    <span class="popdl sp db">弹窗灯笼</span>
+    <a href="javascript:showDialog.hide();" class="btnkonw sp db">知道了</a>
+    <a class="btn_close sp db" href="javascript:showDialog.hide();" title="关闭">×</a>
+</div>
+<div class="dialog dialog_c" id="dialog_a">
+	<span class="bgpopimg">
+		<img src="ossweb-img/popimg7.png" width="93" height="74" alt="" />
+	</span>
+	<em class="popdjname popdjname_1">点券*500</em>
+	<p class="poptxt2">这件物品已经放入你的背包中了！小橘子祝你元宵节快乐！</p>
+    <span class="popdl sp db">弹窗灯笼</span>
+    <a href="javascript:showDialog.hide();" class="btnkonw sp db">知道了</a>
+    <a class="btn_close sp db" href="javascript:showDialog.hide();" title="关闭">×</a>
+</div>
+<!--弹窗2E-->
+<!-- 查看我的奖励弹窗 -->
+<div class="pop_o pop-w1" id="showMyGiftContent">
+  <div class="pop-bd">
+    <p class="pop-em">温馨提示：虚拟道具奖品将在24小时内发到您的游戏仓库，<br>请耐心等候，谢谢您的理解与支持！</p>
+    <table class="pop-tb2">
+      <thead>
+        <tr>
+          <th>获奖时间</th>
+          <th>获奖大区</th>
+          <th>所获礼包</th>
+        </tr>
+      </thead>
+      <tbody id="getGiftContent_179646"></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3" id="getGiftPageContent_179646">
+		  <a href="###">上一页</a><span>1/3</span>
+		  <a href="###">下一页</a>
+		  </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <a href="javascript:showDialog.hide()" class="pop-close_2">&times</a>
+</div>
+<!--查询个人获奖记录-->
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/comm/sign.js "></script>
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js" type="text/javascript"></script> 
+<script src="//ossweb-img.qq.com/images/js/top_js/speed_top_201007.js" type="text/javascript"></script>
+<script src="//ossweb-img.qq.com/images/js/foot.js"></script>
+<script src="js/lbqh.js"></script>
+<script>
+var open=document.getElementById('open');
+var bxjtfc=document.getElementById('bxjtfc');
+var bxjtfc_sp=document.getElementsByTagName('span');
+var prv=document.getElementById('prv');
+var topdl=document.getElementById('topdl');
+var next=document.getElementById('next');
+var p1=document.getElementById('page1');
+var p2=document.getElementById('page2');
+var p3=document.getElementById('page3');
+var p4=document.getElementById('page4');
+var p5=document.getElementById('page5');
+var p6=document.getElementById('page6');
+var Bmap=document.getElementById('bxmap');
+var Omap=document.getElementById('map');
+var topdl_a=topdl.getElementsByTagName('a');
+var arr=[p1,p2,p3,p4,p5,p6];
+var numbe=0;
+var num=0;
+var timer;
+var timer1;
+var time2;
+var time3;
+timer2=setInterval(function(){
+        open.style.display='none'
+        },1800)
+next.onclick=function(){
+	clearInterval(timer);
+	clearInterval(timer1);
+	for (var i=0;i<arr.length;i++) {
+		 arr[i].style.display='none';
+		topdl_a[i].className=' dengtop dengl_'+i+' sp db'; 
+	}
+	num ++;
+	if (num==6) {
+		num=0
+		
+    }
+	timer= setInterval(function(){
+			numbe --
+			if (numbe == -2916) {
+				numbe=0
+			}
+			Omap.style.left=numbe+'px';
+		},15)	
+	if (num==0) {
+		topdl_a[0].style.opacity='0';
+	}else{
+		topdl_a[0].style.opacity='1';
+	}
+	topdl_a[num].className+=' hon';
+	arr[num].style.display='block';
+	$('#bxjtfc span').hide();
+    
+   
+}
+prv.onclick=function(){
+	clearInterval(timer);
+	clearInterval(timer1);
+	for (var i=0;i<arr.length;i++) {
+		arr[i].style.display='none';
+		topdl_a[i].className=' dengtop dengl_'+i+' sp db'; 
+	}
+	num --;
+	if (num==-1) {
+    	num=5
+    	timer1= setInterval(function(){
+			numbe --
+			if (numbe == -2916) {
+				numbe=0
+			}
+			Omap.style.left=numbe+'px';
+		},15)	
+    }
+	if (num==0) {
+		topdl_a[0].style.opacity='0';
+	}else{
+		topdl_a[0].style.opacity='1';
+	}
+	topdl_a[num].className+=' hon';
+   arr[num].style.display='block';
+   $('#bxjtfc span').hide();
+    
+}
+for (var j=0;j<arr.length;j++) {
+	topdl_a[j].index=j;
+	for (var k=0;k<topdl_a.length;k++) {
+		topdl_a[k].onclick=function(){
+			clearInterval(timer);
+			clearInterval(timer1);
+			for (var m=0;m<arr.length;m++) {
+				arr[m].style.display='none'
+			}
+			num=this.index;
+			if (num==0) {
+				topdl_a[0].style.opacity='0';
+			}else{
+				topdl_a[0].style.opacity='1';
+			}
+			arr[this.index].style.display='block';
+			 num=this.index;
+			 if (num==5) {
+			 	timer= setInterval(function(){
+				numbe --
+				if (numbe == -2916) {
+					numbe=0
+				}
+				Omap.style.left=numbe+'px';
+			},15)
+			 }
+		}
+	}
+}
+
+
+
+
+
+Bmap.onmouseover=function(){
+	clearInterval(timer);
+	clearInterval(timer1);
+}
+Bmap.onmouseleave=function(){
+	if (num==5) {
+		timer= setInterval(function(){
+			numbe --
+			if (numbe == -2916) {
+				numbe=0
+			}
+			Omap.style.left=numbe+'px';
+		},15)	
+	};
+	
+	if (num==-1) {
+    	num=5
+    	timer1= setInterval(function(){
+			numbe --
+			if (numbe == -2916) {
+				numbe=0
+			}
+			Omap.style.left=numbe+'px';
+		},15)	
+    }
+}
+
+Omap.innerHTML+=Omap.innerHTML
+
+
+
+$('#next').on({
+	'mouseover':function(){
+		$('.right' + (num+1)).stop(true).show()
+	
+	},
+	'mouseleave':function(){
+		$('.right' + (num+1)).stop(true).hide()
+	}
+})
+$('#prv').on({
+	'mouseover':function(){
+		$('.lefta' + (num+1)).stop(true).show()
+	
+	},
+	'mouseleave':function(){
+		$('.lefta' + (num+1)).stop(true).hide()
+	}
+})
+
+
+
+$('.topdl').find('a').each(function(i){
+		$(this).click(function(){
+			$(this).addClass('hon')
+			$(this).siblings().removeClass('hon')
+			
+		})
+	})
+
+function loopNext(){
+	$('.btnnext').trigger('click');
+};
+var time3 = setInterval(loopNext,5000);
+
+$('.clear_a').on({
+	'mouseover':function(){
+		clearInterval(time3);
+	
+	},
+	'mouseleave':function(){
+		clearInterval(time3);
+		time3 = setInterval(loopNext,5000);
+	}
+})
+
+
+
+
+</script>
+<script>
+	
+/*传图片*/
+var BImg=document.getElementById('ren');
+for(i=1;i<49;i++)
+	{
+	(function (oNewImg){
+		var oImg=new Image();
+		oImg.onload=function ()
+		{
+			oNewImg.src=this.src;
+		};
+		oImg.src='ossweb-img/'+i+'.png';
+		oImg.style.display='none';
+		BImg.appendChild(oNewImg);
+	})(document.createElement('img'));
+}
+/*动画*/
+var  timer;
+	clearInterval(timer);
+var i=0,aImg=$('img');
+var oLastImg=$('.img');
+	timer=setInterval(function(){
+		if(i<48){
+			i++;
+			$('#ren img').css('display','none');
+			$('#ren img').eq(i).css('display','block')
+		}else{
+			i=0;
+		}
+	},80)
+</script>
+<script src="//ossweb-img.qq.com/images/js/milo/milo.js"></script>
+<script>
+$(function(){
+	$('#slides').slides({
+		generatePagination: false,
+		play: 2000,
+		pause: 1500,
+		effect: 'slide',
+		hoverPause: true,
+		animationComplete: function(number){
+			$(".pagination li").eq(number-1).addClass("current").siblings().removeClass("current");
+		}
+	});
+});
+
+
+//	第四页浮层
+$('.p5_get').mouseover(function(){
+	$('.yxsl').show();
+})
+$('.p5_get').mouseleave(function(){
+	$('.yxsl').hide();
+})
+		
+	
+//弹窗加载-遮罩
+function TGDialogS(e){
+	need("biz.dialog",function(Dialog){
+		Dialog.show({
+			id:e,
+			bgcolor:'#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+			opacity:50      //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+		});
+	});
+}
+function closeDialog(){
+	need("biz.dialog",function(Dialog){
+		Dialog.hide();
+	});
+}
+</script>
+<script>
+//获奖浮层
+function showRecord(){
+   var oLi = $('.user_links li');
+   oLi.hover(
+      function()
+      {
+         if ($(this).find('#my_record_box').length > 0) { $('#my_record_box').css('display','block') };
+      },
+      function()
+      {
+        $('#my_record_box').css('display','none') 
+      }
+   )
+}
+showRecord();
+milo.addEvent(g("dologin"), "click", function() {
+  need("biz.login-min",function(LoginManager){
+    LoginManager.init({
+      needReloadPage:true
+    });
+    LoginManager.login();
+  });
+  return false;
+});
+milo.addEvent(g("dologout"), "click", function() {
+  need("biz.login-min",function(LoginManager){
+    LoginManager.logout(function(){window.location.reload()});
+  });
+  return false;
+});
+milo.ready(function() {
+  need("biz.login-min",function(LoginManager){
+    LoginManager.checkLogin(function(){
+      g("login_qq_span").innerHTML = LoginManager.getUserUin();//获取QQ号
+    });
+  });
+});
+</script>
+
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script>
+//此段代码不能放到外链JS中，
+var setSite={ //设置网站属性
+ siteType:"a20180122yuanxiao", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+ pageType:"index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+ pageName:"首页", //必填项:页面中文名
+ osact:0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+ ingame:0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+ stayTime:0 //选填项:是否需要统计停留时长boolean；默认是0
+}
+if(typeof(pgvMain)=='function')pgvMain();//千万不能忘记！
+</script>
+</body>
+</html>

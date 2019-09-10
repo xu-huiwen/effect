@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery 分页</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+		.main {width:1000px;margin:0 auto;}
+		.on {color:#f00;}
+	</style>
+</head>
+<body>
+<div class="main">
+	<div class="list">
+		<div class="ct">内容1</div>
+		<div class="ct">内容2</div>
+		<div class="ct">内容3</div>
+		<div class="ct">内容4</div>
+		<div class="ct">内容5</div>
+	</div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.4.2.min.js"></script>
+<script src="pager.js" charset="uft8"></script>
+<script>
+(function($){
+	$(function(){
+		$('.list').pager('.ct', {
+			navClass: 'pagination'
+		});
+	});
+})(jQuery);
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><script type="text/javascript">/*tag*/PAGE_SPEED_TIME = [new Date().getTime()];</script>
+<head>
+<meta content="text/html; charset=gb2312" http-equiv="Content-Type"><meta name="robots" content="all">
+<meta name="author" content="Tencent-TGideas">
+<meta name="Copyright" content="Tencent">
+<title>浪漫四周年-QQ炫舞官方网站-腾讯游戏</title>
+<meta content="《QQ炫舞》官方网站&mdash;&mdash;最浪漫的舞蹈游戏" name="Description">
+<meta content="QQ炫舞,炫舞,浪漫,四周年,5月,版本专题" name="Keywords">
+<link href="css/comm.css" rel="stylesheet" type="text/css" />
+<script src="http://x5.qq.com/act/a20110706newversion/jscss/newversion.js?d=0401"></script>
+</head>
+<body>
+<div class="wrapper">
+	<!--#include file="head.inc" -->
+	<div class="content">
+		<h2 class="h2_5">05 最新活动</h2>
+		<!-- 样式off为无链接状态，加链接后直接删除即可 -->
+		<ul class="actList">
+            <li><a href="http://x5.qq.com/act/a20120428thankful/" target="_blank">1、迎四周年5月大回馈</a></li>
+            <li><a href="http://x5.qq.com/act/a20120428zhe/index.htm" target="_blank">2、四周年5月精彩活动绚烂开幕</a></li>
+            <li><a href="http://x5.qq.com/act/a20120520thankful/" target="_blank">3、5.20在线赢大奖礼单大曝光</a></li>
+            <li><a href="javascript:alert('暂未开启，敬请期待');" class="off" >4、2012品牌站第二期触动浪漫</a></li>
+            <li><a href="http://x5.qq.com/act/a20120409sign/" target="_blank">5、四周年活跃度大奖励缤纷好礼等你拿</a></li>
+            <li><a href="http://x5.qq.com/act/a20120425cartoon/index.htm" target="_blank">6、四周年漫画微小说作品展</a></li>
+            <li><a href="http://x5.qq.com/act/a20120424gm/">7、5月，和GM一起欢庆四周年</a></li>
+            <li><a href="javascript:alert('暂未开启，敬请期待');" class="off" >8、5月商城献好礼折扣HOLD不住</a></li>
+            <li><a href="javascript:alert('暂未开启，敬请期待');" class="off" >9、5月老友回归共渡四周年</a></li>
+            <li><a href="http://x5.qq.com/act/a20120411by2/index.shtml">10、TA最爱唱歌的你BY2主题曲演唱会</a></li>
+            <li><a href="javascript:alert('暂未开启，敬请期待');" class="off" >11、特权狂欢季齐贺四周年</a></li>
+            <li><a href="javascript:alert('暂未开启，敬请期待');" class="off" >12、5月20日晚8点浪漫盛典直播开启</a></li>
+            <li><a href="http://tga.qq.com/web201103/x5/">13、5月炫●联赛精彩等你来</a></li>
+            <li><a href="javascript:alert('暂未开启，敬请期待');" class="off" >14、六一儿童节童年欢乐汇</a></li>
+            <li><a href="javascript:alert('暂未开启，敬请期待');" class="off" >15、千万人见证爱的告白</a></li>
+		</ul>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+	</div>
+</div>
+<!--#include file="foot.inc" -->
+</body></html>

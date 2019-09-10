@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk">
+<meta name="robots" bgent="all">
+<meta name="author" bgent="Tencent-CP">
+<meta name="Copyright" bgent="Tencent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script> 
+<title>手写签名</title>
+<style type="text/css">
+html,body{width: 100%;}
+*{padding: 0;margin: 0;list-style: none;}
+#canvas{ /*background-color: #f00*/}
+</style>
+</head>
+
+<body id="bb">
+<canvas id="canvas"></canvas>
+<button id="btn_clear">清除</button>
+<button id="btn_submit">提交</button>
+<script>
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext("2d");
+canvas.width = 640;
+canvas.height = 670;
+var click = [0, 0];
+var clickCache = [0, 0];
+var paintFrist = true;
+
+canvas.addEventListener("touchstart", function(e){
+  paintFrist = true;
+  redraw(e.touches[0].pageX - this.offsetLeft, e.touches[0].pageY - this.offsetTop);
+});
+
+canvas.addEventListener("touchend", function(e){
+   paintFrist = false;
+});
+
+canvas.addEventListener("touchmove", function(e){
+  redraw(e.touches[0].pageX - this.offsetLeft, e.touches[0].pageY - this.offsetTop);
+});
+
+function redraw(x,y){
+  context.strokeStyle = "#ff0000";
+  context.lineJoin = "round";
+  context.lineWidth = 10;
+  context.beginPath();
+  if(paintFrist){
+    paintFrist = false;
+    context.moveTo(x, y);
+  }else{
+    context.moveTo(clickCache[0],clickCache[1]);
+  }
+  context.lineTo(x,y);
+  context.closePath();
+  context.stroke();
+  clickCache[0] = x;
+  clickCache[1] = y;
+}
+var clear = document.getElementById("btn_clear");
+var submit = document.getElementById("btn_submit");
+clear.addEventListener("touchend", function(){
+	canvas.width = canvas.width;
+});
+
+submit.addEventListener("click", function(){
+  $("#qmimg").attr("src",canvas.toDataURL("image/png"));       
+});
+
+
+
+</script>
+<img  id="qmimg"  />
+</body>
+</html>
+
+

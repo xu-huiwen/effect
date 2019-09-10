@@ -1,0 +1,6 @@
+<public:attach event="onfocus" onevent="hscfsy()"/>
+<script language="javascript">
+function hscfsy(){
+this.blur();
+}
+</script>

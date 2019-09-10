@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="gbk">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta content="telephone=no" name="format-detection" />
+	<!--#include virtual="/public/meta_seo.inc"-->
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<script src="//js.aq.qq.com/js/aq_common.js"></script>
+	<script type="text/javascript" src="//pub.idqqimg.com/qqmobile/qqapi.js?_bid=152"></script>
+	<title> <!--#include virtual="/public/site_title.inc"--></title>
+	<script>
+        (function (win) {
+            if (!win.addEventListener) return;
+            var html = document.documentElement;
+            function setFont() {
+                function setRem() {
+										var ua = navigator.userAgent.toLowerCase();
+										var is_iPad = ua.match(/(ipad)/i) != null;
+                    var cliWidth = html.clientWidth;
+                    var w = document.documentElement.clientWidth, h = document.documentElement.clientHeight;
+										if(is_iPad){
+	                    var cliWidth = html.clientWidth / 4 * 3;
+										}
+										var val = 750;
+                    html.style.fontSize = 100 * (cliWidth / val) + 'px';
+                }
+                setRem();
+                setTimeout(function () {
+                    setRem();
+                }, 300);
+
+            }
+            win.addEventListener('resize', setFont, false)
+            setFont();
+        })(window);
+	</script>
+	<style>
+		/*---- global.css begin----*/
+		html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dd,dl,dt,li,ol,ul,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;}
+		body{font:normal normal normal .24rem/1.5em "微软雅黑","HelveticaNeue-Light","Helvetica Neue Light","Clockopia";font-weight:300;text-align:center;height:100%;word-break:break-all;}
+		div{text-align:left;}
+		h1,h2,h3,h4,h5,h6{font-size:100%;}
+		a{text-decoration:none;}
+		a:hover{text-decoration:none;}
+		a:active,a:focus{outline:none;}
+		q:before,q:after{content:'';}
+		abbr,acronym{border:0;}
+		::-moz-selection{color:#FFFFFF;background-color:#209EEB;}
+		li{list-style-type:none;}
+		img{border:none;}
+		fieldset{border-style:none}
+		label,button{cursor:pointer;}
+		select,input,textarea{font-size:.24rem;line-height:1.2em;}
+		.clearfix:before,.clearfix:after{clear:both;content:'.';display:block;height:0;visibility:hidden;line-height:0;}
+		.clearfix{*zoom:1;}
+		.fix{word-break:keep-all;overflow:hidden;text-overflow:ellipsis;}
+		.clear{font-size:0;line-height:0;height:0;clear:both;overflow:hidden;display:block;}
+		.none{display:none;}
+		html,body{background:#364864;height:100%;}
+		input[type=text]{outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+		button{appearance:none;-webkit-appearance:none;border:0px solid #ccc;}
+		
+		.mod_1{background:url(ossweb-img/bg_2.jpg) no-repeat 0 0;background-size:100%;height:6.86rem;margin-top: -1px;position: relative;}
+		.chess_box{position:relative;height:4.5rem;overflow:hidden;}
+.pieces{background:url(ossweb-img/pieces.png) no-repeat 0 0;width:0.89rem;height:0.68rem;background-size:100%;position:absolute;}
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- 棋盘 -->
+		<div class="mod_1">
+			<div class="chess_box">
+				<div class="pieces pieces_1" id="carStep"></div>
+			</div>
+		</div>
+		</div>
+
+<script src="//game.gtimg.cn/images/js/jquery/jquery-1.11.3.min.js"></script>
+<script src="index.js"></script>
+<script>
+var positionarr=[
+	[   
+		[0.7,4.06],[0.7,2.56],[0.7,0.93],[2.4,0.93],[4.15,0.93],[5.9,0.93],[5.9,2.56],[5.9,4.06],[4.15,4.06],[2.4,4.06]    //移动的定点位置
+	]
+];
+var piece = {
+	'id':'#carStep',
+	'index':0,       //0-9    //初始位置
+	'num':3,         //前进的步数
+	'userSelect':0,
+	'maxIndex':positionarr[0].length,
+	'special':[2,4,7,9],      //从0开始前进后退的格子的位置
+	'go':[1,2,-1,1]           //前进后退的步数
+}
+updateStep(piece.index)
+
+//shake();    //调用方法执行动画
+
+//piece.index   //结束位置
+
+
+ </script>
+</body>
+</html>
+

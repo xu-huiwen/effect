@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>表格奇偶行</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: normal 12px "Microsoft yahei", Arial, Helvetica, sans-serif;
+}
+ul, li {
+	list-style: none
+}
+a {
+	text-decoration: none;
+}
+.demo {
+	margin: 20px auto;
+	padding: 20px;
+	display: inline-block;
+	width: 300px;
+}
+.demo table {
+	margin-top: 20px;
+	border: 1px solid #eee;
+}
+.demo table td {
+	padding: 10px;
+}
+.demo table .highlight {
+	background: #efefef
+}
+.demo table .hover {
+	background:pink;
+}
+</style>
+</head>
+<body>
+<div class="demo">
+    <table id="tb_javascript">
+        <tr>
+            <td>原生态js实现hover高亮及奇偶行高亮</td>
+        </tr>
+        <tr>
+            <td>原生态js实现hover高亮及奇偶行高亮</td>
+        </tr>
+        <tr>
+            <td>原生态js实现hover高亮及奇偶行高亮</td>
+        </tr>
+        <tr>
+            <td>原生态js实现hover高亮及奇偶行高亮</td>
+        </tr>
+        <tr>
+            <td>原生态js实现hover高亮及奇偶行高亮</td>
+        </tr>
+        <tr>
+            <td>原生态js实现hover高亮及奇偶行高亮</td>
+        </tr>
+    </table>
+</div>
+<script>
+function addLoadEvent(func) {
+    var oldonload = window.onload;
+    if (typeof window.onload != 'function') {
+        window.onload = func;
+    } else {
+        window.onload = function () {
+            oldonload();
+            func();
+        }
+    }
+}
+
+//附加类样式
+function _addClass(elem, value) {
+    if (!elem.className) {
+        elem.className = value;
+    } else {
+        var newClass = elem.className;
+        newClass += ' ';
+        newClass += value;
+        elem.className = newClass;
+    }
+}
+
+//奇偶高亮显示及鼠标滑过效果
+function highLight(elemid, tagName, tagNameHighClass, crossTagClass) {
+    if (!document.getElementsByTagName || !document.getElementById || !document.getElementById(elemid)) return false;
+    var elemid = document.getElementById(elemid);
+    tagNames = elemid.getElementsByTagName(tagName);
+    //奇数行高亮显示
+    var odd = true;
+    for (var i = 0; i < tagNames.length; i++) {
+        if (odd == true) {
+            _addClass(tagNames[i], tagNameHighClass);
+            odd = false;
+        } else {
+            odd = true;
+        }
+    }
+	//鼠标滑过效果
+    for (var m = 0; m < tagNames.length; m++) {
+        tagNames[m].oldClassName = tagNames[m].className;
+        tagNames[m].onmouseover = function () {
+            _addClass(this, crossTagClass);
+        }
+        tagNames[m].onmouseout = function () {
+            this.className = this.oldClassName;
+        }
+    }
+}
+
+function highLightItab() {
+    highLight("tb_javascript", "tr", "highlight", "hover");
+}
+
+addLoadEvent(highLightItab)
+</script>
+</body>
+</html>

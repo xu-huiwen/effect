@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+
+	*{padding: 0;margin: 0;}
+	
+	.s_ifBox{width: 798px;height: 496px;margin:0 auto;overflow: hidden;}
+	.s_ifBox .s_ifb{width: 745px;position: relative;margin: 0 auto;overflow: hidden;height: 496px;}
+	.s_ifBox .s_ifa{position: absolute;left: -212px;top: -167px;width: 930px;height: 900px;overflow: hidden;}
+	.s_ifBox .s_ifa iframe{overflow-x: hidden;}
+	
+	.s_ifBoxb{width: 1000px;margin:0 auto;}
+	.s_ifBoxb .s_ifd{width: 1000px;position: relative;overflow: hidden;height: 450px;}
+	.s_ifBoxb .s_ifc{position: absolute;left: -192px;top: -223px;width: 1193px;height: 690px;overflow: hidden;}
+	.s_ifBoxb .s_ifc iframe{overflow-x: hidden;}
+
+
+	</style>
+</head>
+<body>
+<!-- 紫钻特权 -->
+<div class="s_ifBox">
+	<div class="s_ifb">
+		<div class="s_ifa">
+			<iframe src="http://speed.qq.com/act/a20110609vip/power.shtml" width="960" height="800" frameborder="0" id="iframea" name="iframea"></iframe>
+		</div>
+	</div>
+</div>
+
+<!-- 每月等级礼包 -->
+<div class="s_ifBoxb">
+	<div class="s_ifd">
+		<div class="s_ifc">
+			<iframe src="http://speed.qq.com/act/a20110609vip/month.shtml" width="1400" height="1000" frameborder="0" id="iframea" name="iframea"></iframe>
+		</div>
+	</div>
+</div>
+
+<!-- 紫钻礼包 -->
+<!-- <div class="s_ifBox">
+	<div class="s_ifb">
+		<div class="s_ifa">
+			<iframe src="http://speed.qq.com/act/a20110609vip/gift.shtml" width="960" height="800" frameborder="0" id="iframea" name="iframea"></iframe>
+		</div>
+	</div>
+</div> -->
+
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+<script>
+var tt_sett=setTimeout(function(){
+	$("#iframea").contents().find('.sub_foot').css('display','none');
+	$('#iframea').contents().find('#footer_ied').css('display','none');
+	clearTimeout(tt_sett);
+},1000);
+
+	
+
+</script>
+</body>
+</html>

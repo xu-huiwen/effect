@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta charset="utf-8" />
+        <meta name="robots" content="all" />
+        <meta name="Copyright" content="TENCNET" />
+        <meta name="author" content="Tencent-TGideas" />
+        <meta name="robots" content="noindex,nofollow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>腾讯视频V3</title>
+        <style>
+        *{padding: 0;margin: 0;}
+        /*.IIV::-webkit-media-controls-play-button,
+        .IIV::-webkit-media-controls-start-playback-button {
+            opacity: 0;
+            pointer-events: none;
+            width: 5px;
+        }*/
+            .video {
+                width: 414px;
+                height: 400px;
+                display: block
+            }
+            #container .txp_overlay_loading{display: none;}
+        </style>
+    </head>
+
+    <body>
+        <div class="video">
+            <div id="container"></div>
+        </div>
+        <button id="btns">暂停/开始</button>
+        <!-- 使用相对协议，同时支持http和https -->
+        <script src='//vm.gtimg.cn/tencentvideo/txp/js/txplayer.js'></script>
+        <script>
+        var bt = document.getElementById('btns');
+        var frist = true;
+            var player = new Txplayer({
+                containerId: 'container',
+                vid: 'r0018hmh1pa',
+                width: '600',
+                height: '400',
+                hideControlUI:true,
+                loop:true
+            });
+            player.on('ready', function () {
+                console.log('播放器初始化完成');
+            });
+            player.on('playStateChange', function (state) {
+                console.log(state);
+                if(state===0&&frist){
+                    frist = false;
+                    alert(1);
+                   player.play('r0018hmh1pa');
+                   return;
+                }
+                if(state===3&&!frist){
+                    frist = true;
+                }
+                /*
+                state的状态：
+                    -1（未开始） 
+                    0（已结束）
+                    1（正在播放）
+                    2（已暂停）
+                    3（正在缓冲）
+                */
+            });
+            // 取消volumeChange事件监听
+            //player.off('volumeChange');
+            bt.onclick = function(){
+                player.togglePlayPause();
+            };
+
+
+
+
+
+
+
+// autoplay:!1,
+// playerType:"",
+// enForcePlayerType:!1,
+// videoType:"vod",
+// vid:"",
+// cid:"",
+// columnId:"",
+// containerId:"",
+// width:"0",
+// height:"0",
+// showPoster:!0,
+// isUsePlayinline:!0,
+// isUseWebkitPlayinline:!0,
+// isUseAirplay:!0,
+// isUseCrossOrigin:!1,
+// isUsePreload:function(){return!d.mobile}(),
+// isUseControl:!1,
+// isUseHtml5UI:!0,
+// hideControlUI:!1,
+// isShowDurationLimit:!0,
+// isHtml5UseFakeFullScreen:!0,
+// isContinuePlay:!1,
+// pauseBanner:!1,
+// downloadBanner:!1,
+// recommendBanner:!1,
+// followBanner:!1,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+
+</html>
+
+
+

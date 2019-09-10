@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk">
+<meta name="robots" content="all">
+<meta name="author" content="Tencent-TGideas">
+<meta name="Copyright" content="Tencent">
+<meta name="Description" content="王牌对决是由腾讯游戏代理的一款动作对战游戏，于2014年4月16日首发。集结数百个明星英雄角色，对战模式丰富多样。">
+<meta name="Keywords" content="Kgame,王牌对决,腾讯游戏,动作,对战,格斗,乱斗,全明星,穿越,英雄,英雄大乱斗,遗忘英雄传说,lost saga,八神庵,草雉京,不知火舞,拳皇,KOF,侍魂">
+<title>精英体验 今夏即将开启测试-王牌对决官方网站-腾讯游戏</title>
+<style>
+/* public */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td { margin:0; padding:0; }
+table { border-collapse:collapse;border-spacing:0;}
+fieldset,img { border:0;}
+address,caption,cite,code,dfn,em,strong,th,var { font-style:normal;font-weight:normal;}
+ol,ul { list-style:none;}
+caption,th { text-align:left;}
+h1,h2,h3,h4,h5,h6 { font-size:100%;font-weight:normal;}
+q:before,q:after { content:'';}
+abbr,acronym { border:0;font-variant:normal;}
+sup { vertical-align:text-top;}
+sub { vertical-align:text-bottom;}
+input,textarea,select { font-family:inherit;font-size:inherit;font-weight:inherit;}
+input,textarea,select { *font-size:100%;}
+a { color: #9b9b9b; text-decoration: none;}
+a:hover { color: #9b9b9b; text-decoration: underline;}
+#body { font:14px/180% '\5FAE\8F6F\96C5\9ED1','\5B8B\4F53',tahoma; padding-top: 42px; color: #9b9b9b;}
+/* page */
+.main-wrap { width: 1000px; height: 1230px; margin: 0 auto; position: relative; z-index: 10;}
+
+.bg-wrap { width: 100%; overflow: hidden; position: absolute; top: 42px; z-index: 1;}
+.bg { width: 1920px; height: 1245px; background: url("http://ossweb-img.qq.com/images/k/act/a20140701jycs/bg.jpg") no-repeat center top; position: relative; left: 0; overflow: hidden;}
+.bg-elem { display: block; position: relative;}
+#hero_bg { width: 1076px; height: 842px;background: url("http://ossweb-img.qq.com/images/k/act/a20140701jycs/hero_bg.png") no-repeat 0 0; left: 844px; top: -842px; z-index: 1;}
+#hero_1 { width: 745px; height: 850px; background: url("http://ossweb-img.qq.com/images/k/act/a20140701jycs/hero_2.png") no-repeat 0 0; left: 1175px; top: -842px; z-index: 3; filter:alpha(opacity=0); opacity: 0;}
+#hero_2 { width: 490px; height: 650px; background: url("http://ossweb-img.qq.com/images/k/act/a20140701jycs/hero_5.png") no-repeat 0 0; left: 1300px; top: -1600px; z-index: 2; filter:alpha(opacity=0); opacity: 0;}
+#hero_3 { width: 460px; height: 415px; background: url("http://ossweb-img.qq.com/images/k/act/a20140701jycs/hero_4.png") no-repeat 0 0; left: 1155px; top: -2212px; z-index: 2; filter:alpha(opacity=0); opacity: 0;}
+#hero_4 { width: 510px; height: 628px; background: url("http://ossweb-img.qq.com/images/k/act/a20140701jycs/hero_3.png") no-repeat 0 0; left: 1200px; top: -2390px; z-index: 2; filter:alpha(opacity=0); opacity: 0;}
+#hero_5 { width: 645px; height: 815px; background: url("http://ossweb-img.qq.com/images/k/act/a20140701jycs/hero_1.png") no-repeat 0 0; left: 1200px; top: -3200px; z-index: 4; filter:alpha(opacity=0); opacity: 0;}
+#fire { width: 562px; height: 880px; background: url("http://ossweb-img.qq.com/images/k/act/a20140701jycs/fire.png") no-repeat 0 0; left: 1358px; top: -4000px; z-index: 5; filter:alpha(opacity=0); opacity: 0;}
+</style>
+</head>
+<body id="body">
+	<div class="main-wrap">
+		
+		
+	</div>
+	<div class="bg-wrap">
+		<div id="bg" class="bg">
+			<span id="hero_bg" class="bg-elem"></span>
+			<span id="hero_1" class="bg-elem"></span>
+			<span id="hero_2" class="bg-elem"></span>
+			<span id="hero_3" class="bg-elem"></span>
+			<span id="hero_4" class="bg-elem"></span>
+			<span id="hero_5" class="bg-elem"></span>
+			<span id="fire" class="bg-elem"></span>
+		</div>
+	</div>
+
+	<script src="Rayo.Action.min.js"></script>
+	<script type="text/javascript">
+	//动画
+	function startFilm(){
+		rayo.config.fps = 60;
+		rayo.action({
+			node$1: { id: 'hero_bg', css: 'top: 0;', type: '-+-', start: 0, time: 1000 },
+			node$2: { id: 'hero_1', css: 'left:1070px;top:-767px;opacity:1;', type: '-#', start: 1000, time: 500 },
+			node$3: { id: 'hero_2', css: 'left:1430px;top:-1692px;opacity:1;', type: '-+-', start: 1100, time: 500 },
+			node$4: { id: 'hero_3', css: 'left:1055px;top:-2312px;opacity:1;', type: '-#', start: 1200, time: 500 },
+			node$5: { id: 'hero_4', css: 'left:1350px;top:-2590px;opacity:1;', type: '-#', start: 1300, time: 500 },
+			node$6: { id: 'hero_5', css: 'left:1265px;top:-3040px;opacity:1;', type: '-+-', start: 1400, time: 500 },
+			node$7: {id: 'fire', css: 'opacity:1;', type: '-+', start: 1900, time: 150}
+		});
+
+	}
+	startFilm();
+	</script>
+
+</body>
+</html>

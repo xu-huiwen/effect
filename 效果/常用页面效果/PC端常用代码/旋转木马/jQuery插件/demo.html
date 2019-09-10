@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>旋转木马</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+		.c:before,.c:after {content:"";display:table;}
+		.c:after {clear:both;}
+		.c {zoom:1;}
+		
+		/*水平*/
+		.carousel {width:919px;height:220px;overflow:hidden;padding:0 40px;margin:0 auto;}
+		.carousel ul {width:932px;}
+			.carousel li {margin-right:13px;float:left;width:220px;height:220px;background-color:#ccc;}
+		.carousel .jcarousel-container {width:919px;}
+		.carousel .jcarousel-clip {width:919px;position: relative;}
+		.carousel .jcarousel-prev,.carousel .jcarousel-next {width:40px;height:110px;position:absolute;top:55px;cursor:pointer;background-color:#f00;}
+		.carousel .jcarousel-prev {left:0;}
+		.carousel .jcarousel-next {right:0;}
+
+		/*垂直*/
+		.carousel2 {width: 220px;height: 440px;overflow: hidden;padding: 40px 0;margin: 0 auto;}
+		.carousel2 li {width: 220px;height: 220px;background-color:#ccc;border-bottom: 1px solid #000;}
+		.carousel .jcarousel-container {position: relative;}
+		.carousel2 .jcarousel-clip {height: 440px;overflow: hidden;}
+		.carousel2 .jcarousel-prev,.carousel2 .jcarousel-next {width:220px;height:40px;position:absolute;cursor:pointer;background-color:#f00;}
+		.carousel2 .jcarousel-prev {top: 0;}
+		.carousel2 .jcarousel-next {bottom: 0;}
+	</style>
+</head>
+<body style="height: 2000px;">
+<a href="javascript:" class="btn-test">跳转指定位置</a>
+	<div class="carousel" id="carousel1">
+		<ul class="list c">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+	<div class="carousel" id="carousel2">
+		<ul class="list c">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+		</ul>
+	</div>
+	<div class="carousel" id="carousel3">
+		<ul class="list c">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+		</ul>
+	</div>
+	<div class="carousel2" id="carousel4">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+		</ul>
+	</div>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.4.2.min.js"></script>
+<script src="jcarousel.js"></script>
+<script>
+//自动滚动时，鼠标划上停止滚动，鼠标移除继续滚动
+function auto(carousel) {
+	carousel.clip.hover(function() {
+		carousel.stopAuto();
+	}, function() {
+		carousel.startAuto();
+	});
+
+	//跳转指定位置
+	$('.btn-test').click(function() {
+		carousel.scroll(jQuery.jcarousel.intval(1))
+	})
+};
+$(function() {
+	$('#carousel1').jcarousel({
+		scroll: 1,//每次滚动个数
+		auto: 2,//自动滚动时间
+		wrap: 'circular',//滚动切换方式：首尾连接
+		initCallback: auto
+	});
+	$('#carousel2').jcarousel({
+		scroll: 2,
+		wrap: 'both'//滚动切换方式：首尾跳转
+	});
+	$('#carousel3').jcarousel({
+		scroll: 1,
+		wrap: 'last'//滚动切换方式：末尾跳转
+	});
+	$('#carousel4').jcarousel({
+		scroll: 1,
+		vertical: true,//垂直
+		wrap: 'last'//滚动切换方式：末尾跳转
+	});
+});
+</script>
+</body>
+</html>

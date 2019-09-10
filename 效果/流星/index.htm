@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-CP" />
+<meta name="description" content="腾讯游戏《手工星球》官方网站.端手游数据互通的沙盒创造与冒险游戏.超清画质、多端互通、丰富的游戏玩法、强大的编辑器，带来更精彩的沙盒游戏体验.更多消息请关注手工星球官方网站."/>
+<meta name="keywords" content="手工星球，手工星球官网，手工星球视频，手工星球内测，手工星球预约，手工星球下载，块来了，下一代沙盒，下一代方块创造，沙盒创造，沙盒冒险，无限创造与冒险，多端互通沙盒" />
+<title>即将登录奇异星球  - 手工星球官方网站-腾讯游戏-这是一个无限创造与冒险的星球</title>
+<!-- 设计：cp  | 重构：cp | 创建：2018/8/8  -->
+<style>
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+q:before,q:after{content:''}
+fieldset,img,abbr,acronym{border:0}
+
+/*footer*/
+#afooter{text-align:center; line-height:20px;color: #878787;padding: 20px 0;background: #000;}
+#afooter a{ color: #878787;}
+
+/* 页面样式 */
+.c:before,.c:after {content:"";display:table}
+.c:after {clear:both}
+.c {zoom:1}
+body {font:12px/1.5 '\5FAE\8F6F\96C5\9ED1';padding-top:42px;background: #000;}
+a {text-decoration:none;overflow:hidden;}
+a:hover {text-decoration:none}
+.hide {display:block;width:0;height:0;overflow:hidden;}
+.pr {position:relative;}
+.pa {position:absolute;}
+.db {display:block;text-indent:-999em;}
+.xinxin{background: url(ossweb-img/xinxin.png) no-repeat 50% 0;position: absolute;top:42px;left: 0;width: 100%;height: 801px;z-index: 10;
+-webkit-animation: btnanumi 1.5s linear infinite;-webkit-transform-origin: center center;
+-moz-animation: btnanumi 1.5s linear infinite;-moz-transform-origin: center center;
+animation: btnanumi 1.5s linear infinite;transform-origin: center center;}
+/*背景动画*/
+@-webkit-keyframes btnanumi{
+	0%{opacity: 1;}
+	50%{opacity: 0.1;}
+}
+@-moz-keyframes btnanumi{
+	0%{opacity: 1;}
+	50%{opacity: 0.1;}
+}
+@keyframes btnanumi{
+	0%{opacity: 1;}
+	50%{opacity: 0.1;}
+}
+@-webkit-keyframes btnhover{
+	0%{-webkit-transform: scale(1);}
+	100%{-webkit-transform: scale(1.05);}
+}
+@-moz-keyframes btnhover{
+	0%{-moz-transform: scale(1);}
+	100%{-moz-transform: scale(1.05);}
+}
+@keyframes btnhover{
+	0%{transform: scale(1);}
+	100%{transform: scale(1.05);}
+}
+.div{position: absolute;top: 42px;left: 0;width: 100%;height: 801px;z-index: 9;overflow: hidden;}
+.div>div{position:absolute;top:0px;right:0px;background: url(ossweb-img/liuxin.png) no-repeat;width: 92px;height: 51px;}
+
+
+:focus{outline: none;}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="xinxin"></div>
+	<div class="div"></div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+<script>
+	//流星动画
+	$(function(){
+		function aa(){
+			for(var i=0;i<1;i++){
+				var j2=parseInt(Math.random()*1200+1000);
+				var j=parseInt(Math.random()*1920+0);
+				var j1=parseInt(Math.random()*700+400);
+				var n=parseInt(Math.random()*50+(-10));
+				$('.div').prepend('<div></div>')
+				$('.div').children('div').eq(0).css({
+					'left':j,
+					'top':n,
+					'opacity':0.6
+				})
+				$('.div').children('div').eq(0).animate({
+					'left':j-j1,
+					'top':'400px',
+					'opacity':0
+				},j2)
+			};
+		};
+		aa();
+		setInterval(function(){
+			aa();
+		},500);
+		setInterval(function(){
+			for(var jj=0;jj<$('.div>div').size()/4;jj++){
+				$('.div>div').eq($('.div>div').size()-jj).remove();
+			};
+		},500);
+	});
+	
+	</script>	
+</body>
+</html>

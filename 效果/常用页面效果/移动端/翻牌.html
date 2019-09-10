@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>翻牌</title>
+	<style>
+		*{margin: 0;padding: 0;border: 0;}
+		.main {width: 500px;margin: 0 auto;}
+		.box {position: relative;height: 300px;
+			perspective:900px;
+			-webkit-perspective:900px;
+			transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+		}
+		.front,.back {width: 100px;height: 200px;line-height: 200px;text-align: center;font-size: 20px;background-color: #000;color: #fff;position: absolute;left: 0;top: 0;
+			transition: 1.5s ease-in-out;
+			-webkit-transition: 1.5s ease-in-out;
+			backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+		}
+		.back {
+			transform: rotateY(-180deg);
+			-webkit-transform: rotateY(-180deg);
+		}
+		.flip .front {
+			transform: rotateY(180deg);
+			-webkit-transform: rotateY(180deg);
+		}
+		.flip .back {
+			transform: rotateY(0);
+			-webkit-transform: rotateY(0);
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+	<div class="box">
+		<div class="front">正</div>
+		<div class="back">反</div>
+	</div>
+	<p><a href="javascript:" class="btn-flip">翻转</a>
+	</p>
+</div>
+<script>
+var oBtn = document.querySelector('.btn-flip'),
+	oBox = document.querySelector('.box');
+oBtn.addEventListener('click',function(){
+	if (oBox.classList.contains('flip')) {
+		oBox.classList.remove('flip')
+	}
+	else {
+		oBox.classList.add('flip')
+	}
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*Reset*/
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		.c:before,.c:after{content:"";display:table}
+		.c:after{clear:both}
+		.c{zoom:1}
+
+		.box {width: 996px;height: 400px;position: relative;background-color: #eee;margin: 0 auto;}
+		.float {position: absolute;width: 996px;height: 200px;background-color: #ccc;display: none;}
+		.flash {width: 600px;height: 200px;margin: 0 auto;background-color: #888;}
+		.nav {position: absolute;top: 200px;left: 0;}
+		.nav li {float: left;width: 166px;height: 200px;background-color: #e6e6e6;}
+		.nav0,.nav1,.nav2,.nav3,.nav4,.nav5 {background-color: #f00 !important;}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="float">
+			<div class="flash">
+				<div id="flash0"></div>
+			</div>
+		</div>
+		<div class="float">
+			<div class="flash">
+				<div id="flash1"></div>
+			</div>
+		</div>
+		<div class="float">
+			<div class="flash">
+				<div id="flash2"></div>
+			</div>
+		</div>
+		<div class="float" >
+			<div class="flash">
+				<div id="flash3"></div>
+			</div>
+		</div>
+		<div class="float">
+			<div class="flash">
+				<div id="flash4"></div>
+			</div>
+		</div>
+		<div class="float">
+			<div class="flash">
+				<div id="flash5"></div>
+			</div>
+		</div>
+		<ul class="nav c" id="nav">
+			<li>菜单1</li>
+			<li>菜单2</li>
+			<li>菜单3</li>
+			<li>菜单4</li>
+			<li>菜单5</li>
+			<li>菜单6</li>
+		</ul>
+	</div>
+<script type="text/javascript"  src="http://ossweb-img.qq.com/images/js/swfobject.js"></script>
+<script>
+	(function(){
+		var GLOBAL = {};
+		GLOBAL.namespace = function (str) {
+		    var arr = str.split('.'),
+		        o = GLOBAL;
+		    for (i = (arr[0] == "GLOBAL") ? 1 : 0; i < arr.length; i++) {
+		        o[arr[i]] = o[arr[i]] || {};
+		        o = o[arr[i]];
+		    }
+		};
+		GLOBAL.namespace("Dom");
+		GLOBAL.Dom.getElementsByClassName = function (str, root, tag) {
+		    if (root) {
+		        root = (typeof root == "string") ? document.getElementById(root) : root;
+		    } else {
+		        root = document.body;
+		    }
+		    tag = tag || '*';
+		    var els = root.getElementsByTagName(tag),
+		        arr = [];
+		    for (var i = 0, leng = els.length; i < leng; i++) {
+		        var k = els[i].className.split(' ');
+		        for (j = 0, len = k.length; j < len; j++) {
+		            if (k[j] == str) {
+		                arr.push(els[i]);
+		                break;
+		            }
+		        }
+		    }
+		    return arr;
+		}
+		function gE(e) {
+		    return (typeof (e) == "object") ? e : document.getElementById(e)
+		}
+		var params = { scale:"noscale", wmode:"transparent",align: "middle",allowFullscreen: "true",allowScriptAccess: "always"}
+		function insert (i) {
+			swfobject.embedSWF("flash/flash"+i+".swf", "flash"+i, "600", "200", "8.0.0","http://ossweb-img.qq.com/images/swf/expressInstall.swf", null, params);
+		}
+		var lis = gE("nav").getElementsByTagName("li");
+		var floats = GLOBAL.Dom.getElementsByClassName("float");
+		function show(i) {
+			lis[i].onmouseover = floats[i].onmouseover = function () {
+			    floats[i].style.display = "block";
+			    lis[i].className = "nav"+i;
+			    if (gE('flash'+i).innerHTML==""){
+			    	insert(i);
+			    }
+			}
+			lis[i].onmouseout = floats[i].onmouseout = function () {
+			    floats[i].style.display = "none";
+			    lis[i].className = "";
+			}
+		}
+		for (var i = 0; i < lis.length; i++) {
+		    show(i);
+		}
+	})()
+</script>
+</body>
+</html>

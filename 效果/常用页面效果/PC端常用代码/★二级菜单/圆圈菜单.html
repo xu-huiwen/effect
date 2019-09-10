@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Elastic SVG Elements | Circular Menu</title>
+<style>
+.c:before,.c:after { content: ''; display: table; }
+.c:after { clear: both; }
+.menu{margin-left: 500px;margin-top: 200px;width: 100px;height: 100px;cursor: pointer;position: relative;}
+.morph-shape {
+	width: 100px;
+	height: 100px;
+	display: block;
+	border-radius: 50%;
+	z-index: 100;
+	position: absolute;
+	left: 0;top: 0;
+	background-color: #da7071;
+}
+.menu__items {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	z-index: 5;
+}
+
+.menu__items li {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	top: 10%;
+	left: 10%;
+	position: absolute;
+	z-index: -1;
+	background: #272c2c;
+	-webkit-transform: scale3d(0.5, 0.5, 1);
+	transform: scale3d(0.5, 0.5, 1);
+	-webkit-transition: all 0.25s ease-out;
+	transition: all 0.25s ease-out;
+}
+
+.menu_open li:first-child{
+	-webkit-transform: scale3d(1, 1, 1) translate3d(0, -160px, 0);
+	transform: scale3d(1, 1, 1) translate3d(0, -160px, 0);
+}
+
+.menu_open li:nth-child(2) {
+	-webkit-transform: scale3d(1, 1, 1) translate3d(113.14px, -113.14px, 0);
+	transform: scale3d(1, 1, 1) translate3d(113.14px, -113.14px, 0);
+}
+
+.menu_open li:nth-child(3) {
+	-webkit-transform: scale3d(1, 1, 1) translate3d(160px, 0, 0);
+	transform: scale3d(1, 1, 1) translate3d(160px, 0, 0);
+}
+
+.menu_open li:nth-child(4) {
+	-webkit-transform: scale3d(1, 1, 1) translate3d(113.14px, 113.14px, 0);
+	transform: scale3d(1, 1, 1) translate3d(113.14px, 113.14px, 0);
+}
+
+.menu_open li:nth-child(5) {
+	-webkit-transform: scale3d(1, 1, 1) translate3d(0, 160px, 0);
+	transform: scale3d(1, 1, 1) translate3d(0, 160px, 0);
+}
+
+.menu_open li:nth-child(6) {
+	-webkit-transform: scale3d(1, 1, 1) translate3d(-113.14px, 113.14px, 0);
+	transform: scale3d(1, 1, 1) translate3d(-113.14px, 113.14px, 0);
+}
+
+.menu_open li:nth-child(7) {
+	-webkit-transform: scale3d(1, 1, 1) translate3d(-160px, 0, 0);
+	transform: scale3d(1, 1, 1) translate3d(-160px, 0, 0);
+}
+
+.menu_open li:nth-child(8) {
+	-webkit-transform: scale3d(1, 1, 1) translate3d(-113.14px, -113.14px, 0);
+	transform: scale3d(1, 1, 1) translate3d(-113.14px, -113.14px, 0);
+}
+@-webkit-keyframes bounceIn {
+	0%,20%,40%,60%,80%,100%{-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);}
+	0%{opacity: 0;-webkit-transform: scale3d(.3, .3, .3);}
+	20%{-webkit-transform: scale3d(1.1, 1.1, 1.1);}
+	40%{-webkit-transform: scale3d(.9, .9, .9);}
+	60%{opacity: 1;-webkit-transform: scale3d(1.03, 1.03, 1.03);}
+	80%{-webkit-transform: scale3d(.97, .97, .97);}
+	100%{opacity: 1;-webkit-transform: scale3d(1, 1, 1);}
+}
+@keyframes bounceIn {
+	0%,20%,40%,60%,80%,100%{transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);}
+	0%{opacity: 0;transform: scale3d(.3, .3, .3);}
+	20%{transform: scale3d(1.1, 1.1, 1.1);}
+	40%{transform: scale3d(.9, .9, .9);}
+	60%{opacity: 1;transform: scale3d(1.03, 1.03, 1.03);}
+	80%{transform: scale3d(.97, .97, .97);}
+	100%{opacity: 1;transform: scale3d(1, 1, 1);}
+}
+
+
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+          animation-name: bounceIn;
+  -webkit-animation-duration: .75s;
+          animation-duration: .75s;
+}
+</style>
+</head>
+<body>
+<div class="menu">
+	<span class="morph-shape" id="menu"></span>
+	<ul class="menu__items" id="menu_ul">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.2.min.js"></script>
+<script>
+	$(function(){
+		var num=0;
+		$('.morph-shape').click(function(){
+			if(num==0){
+				$('#menu_ul').addClass('menu_open');
+				$('#menu').addClass('bounceIn');
+				setTimeout(function(){
+					$('#menu').removeClass('bounceIn');
+				},500);
+			}
+			if(num==1){
+				$('#menu_ul').removeClass('menu_open');
+				$('#menu').addClass('bounceIn');
+				setTimeout(function(){
+					$('#menu').removeClass('bounceIn');
+				},500);
+			}
+			num++;
+			if(num>=2){
+				num=0;
+			}
+			
+		});
+	});
+</script>
+</body>
+</html>

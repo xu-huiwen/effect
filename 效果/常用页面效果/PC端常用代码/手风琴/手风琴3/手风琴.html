@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手风琴</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+		.c:before,.c:after {content:"";display:table}
+		.c:after {clear:both}
+		.c {zoom:1}
+
+		.main {width:1000px;margin: 0 auto;background-color:#ccc;}
+		.accordion {width:200px;height:90px;overflow:hidden;margin:0 auto;position:relative;}
+			.accordion li {width:100px;height:90px;position:absolute;}
+			.ac1 {left:0;background-color:#fff;}
+			.ac2 {left:40px;background-color:#f00;}
+			.ac3 {left:80px;background-color:#f0f;}
+			.ac4 {left:120px;background-color:#ff0;}
+			.ac5 {left:160px;background-color:#0ff;}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<ul id="accordion" class="accordion c">
+			<li class="ac1">1</li>
+			<li class="ac2">2</li>
+			<li class="ac3">3</li>
+			<li class="ac4">4</li>
+			<li class="ac5">5</li>
+		</ul>
+	</div>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.1.min.js"></script>
+<script src="accordion.js"></script>
+<script>
+	(function($){
+		$(function(){
+			$('#accordion').accordion();
+		})
+	})(jQuery)
+</script>
+</body>
+</html>

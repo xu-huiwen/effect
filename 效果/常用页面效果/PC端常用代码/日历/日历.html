@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset=gb2312 />
+<link href="cal.css" rel="stylesheet" />
+<script src="http://ossweb-img.qq.com/images/js/milo/milo.js"></script>
+
+</head>
+<body>
+<div id="cal" class="calendar"></div>
+
+<div >
+	<!--<h4>实现这个基本日历，只需要写如下代码：</h4>
+	
+	<h5>1、定义一个安置日历的容器，只要定个id即可</h5>
+	<xmp>-->
+		<!--<div id="cal" class="calendar"></div>-->
+	<!--</xmp>
+	
+	<h5>2、调用日历类</h5>
+	<xmp>-->
+	<script>
+	need("biz.calendar",function(calendar){
+		var cal1 = cloneClass(calendar);//继承一个新类，如果你页面上需要显示多个日历的话
+		cal1.init({
+			specialday : ["2018-02-28","2018-03-10"],
+			container : "cal",
+			onCreateDay : function(day,type,y,m,d){
+					day.innerHTML = "<b>" + d + "</b>"; 
+			}
+		});
+		cal1.gotoMonth(2018,01);
+	});
+	</script>
+	<!--</xmp>-->
+	
+</div>
+
+<!--<script>
+need("biz.calendar",function(calendar){
+	var cal1 = cloneClass(calendar);  //继承一个新类，如果你页面上需要显示多个日历的话
+	cal1.init({
+		specialday : ["2011-03-02","2011-03-11"],
+		container : "cal",
+		MAIN_CLS : "table",
+		onCreateDay : function(day,type,y,m,d){
+				day.innerHTML = "<b>" + d + "</b>"; 
+		}
+	});
+	cal1.gotoMonth(2011,03);
+});
+</script>-->
+</body>
+</html>

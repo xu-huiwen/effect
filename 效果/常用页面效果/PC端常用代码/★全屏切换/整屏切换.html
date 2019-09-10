@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>整屏切换</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+		table{border-collapse:collapse;border-spacing:0}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+		ol,ul{list-style:none}
+		caption,th{text-align:left}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+		q:before,q:after{content:''}
+		fieldset,img,abbr,acronym{border:0}
+		.c:before,.c:after {content:;display:table}
+		.c:after {clear:both}
+		.c {zoom:1}
+		body {font:12px/1.5 tahoma,\5b8b\4f53,sans-serif;}
+		a {text-decoration:none;overflow:hidden;}
+		a:hover {text-decoration:underline}
+		html,body,.main,.item {width: 100%;height: 100%;overflow-y: hidden;}
+		.item {display: none;}
+		.item1 {display: block;background-color: #ff0;}
+		.item2 {background-color: #f0f;}
+		.item3 {background-color: #0ff;}
+		.inner {width: 1000px;height: 100%;margin: 0 auto;position: relative;overflow: hidden;}
+		.con-a,.con-b {position: absolute;width: 100px;height: 150px;border: 1px solid #000;}
+		.con-a {left: 0;top: -200px;}
+		.con-b {right: 0;bottom: -200px;}
+		.item1 .con-a {top: 200px;}
+		.item1 .con-b {bottom: 0;}
+		.nav {position: fixed;left: 50%;margin-left: -10px;width: 20px;height: 500px;background-color: #ccc;bottom: -500px;
+			_position:absolute;
+			_bottom:auto;
+			_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+		}
+		.nav li {margin-top: 20px;}
+		.nav li a {display: block;width: 20px;height: 20px;background-color: #fff;}
+		.nav .on a {background-color: #f00;}
+	</style>
+</head>
+<body>
+<div class="main">
+	<div class="item item1">
+		<div class="inner">
+			<div id="con-a1" class="con-a">文字1</div>
+			<div id="con-b1" class="con-b">图片1</div>
+		</div>
+	</div>
+	<div class="item item2">
+		<div class="inner">
+			<div id="con-a2" class="con-a">文字2</div>
+			<div id="con-b2" class="con-b">图片2</div>
+		</div>
+	</div>
+	<div class="item item3">
+		<div class="inner">
+			<div id="con-a3" class="con-a">文字3</div>
+			<div id="con-b3" class="con-b">图片3</div>
+		</div>
+	</div>
+	<ul class="nav">
+		<li><a href="javascript:">2</a></li>
+		<li><a href="javascript:">3</a></li>
+	</ul>
+<script src="http://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
+<script>
+(function($){
+	$(function(){
+		var $inner = $('.inner'),
+			index = 1;
+		$inner.height($(window).height());
+		$(window).on({
+            resize: function() {
+                $inner.height($(window).height());
+            }
+        });
+        
+        var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel";
+		$("html").bind(mousewheelevt, function(event) {
+			var n = $(":animated").length;
+			if (n == 0) {
+				var wheelSet = false;
+                if (/Firefox/i.test(navigator.userAgent)) {
+                    if (event.originalEvent.detail < 0) {
+                        wheelSet = true;
+                    }
+                } else {
+                    if (event.originalEvent.wheelDelta >= 0) {
+                        wheelSet = true;
+                    }
+                }
+                //向上
+                if (wheelSet) {
+                	if (index != 0) {
+                        index--;
+                    }
+	                if (index == 1) {
+	                	$("#con-a2").animate({
+                            top: "-200px"
+                        }, 1000);
+                        $("#con-b2").animate({
+                            bottom: "-200px"
+                        }, 1000);
+                        $(".item2").delay(1000).fadeOut();
+                        $(".item1").delay(1000).fadeIn();
+                        $("#con-a1").delay(1000).animate({
+                            top: "200px"
+                        }, 1000);
+                        $("#con-b1").delay(1000).animate({
+                            bottom: 0
+                        }, 1000);
+                        $('.nav').animate({
+                        	bottom: '-500px'
+                        }, 1000);
+                        $(".nav li").removeClass("on");
+	                }
+	                if (index == 2) {
+	                	$("#con-a3").animate({
+                            top: "-200px"
+                        }, 1000);
+                        $("#con-b3").animate({
+                            bottom: "-200px"
+                        }, 1000);
+                        $(".item3").delay(1000).fadeOut();
+                        $(".item2").delay(1000).fadeIn();
+                        $("#con-a2").delay(1000).animate({
+                            top: "200px"
+                        }, 1000);
+                        $("#con-b2").delay(1000).animate({
+                            bottom: 0
+                        }, 1000);
+                        $(".nav li").eq(0).addClass("on").siblings().removeClass("on");
+	                }
+                }
+                //向下
+                else {
+                	if (index == 1) {
+	                	$("#con-a1").animate({
+                            top: "-200px"
+                        }, 1000);
+                        $("#con-b1").animate({
+                            bottom: "-200px"
+                        }, 1000);
+                        $(".item1").delay(1000).fadeOut();
+                        $(".item2").delay(1000).fadeIn();
+                        $("#con-a2").delay(1000).animate({
+                            top: "200px"
+                        }, 1000);
+                        $("#con-b2").delay(1000).animate({
+                            bottom: 0
+                        }, 1000);
+                        $('.nav').delay(1000).animate({
+                        	bottom: 0
+                        }, 1000);
+                        $(".nav li").eq(0).addClass("on").siblings().removeClass("on");
+	                }
+	                if (index == 2) {
+	                	$("#con-a2").animate({
+                            top: "-200px"
+                        }, 1000);
+                        $("#con-b2").animate({
+                            bottom: "-200px"
+                        }, 1000);
+                        $(".item2").delay(1000).fadeOut();
+                        $(".item3").delay(1000).fadeIn();
+                        $("#con-a3").delay(1000).animate({
+                            top: "200px"
+                        }, 1000);
+                        $("#con-b3").delay(1000).animate({
+                            bottom: 0
+                        }, 1000);
+                        $(".nav li").eq(1).addClass("on").siblings().removeClass("on");
+	                }	                
+	                if (index != 3) {
+                        index++;
+                    }
+                }
+			}
+		});	
+		
+		//导航
+		$(".nav a").click(function() {
+			var idx = $(this).parent().index();
+			if (idx == 0 && index != 2) {
+				$("#con-a3").animate({
+                    top: "-200px"
+                }, 1000);
+                $("#con-b3").animate({
+                    bottom: "-200px"
+                }, 1000);
+                $(".item3").delay(1000).fadeOut();
+                $(".item2").delay(1000).fadeIn();
+                $("#con-a2").delay(1000).animate({
+                    top: "200px"
+                }, 1000);
+                $("#con-b2").delay(1000).animate({
+                    bottom: 0
+                }, 1000);
+                $(".nav li").eq(0).addClass("on").siblings().removeClass("on");
+                index = 2;
+			}
+			else if (idx == 1 && index != 3) {
+				$("#con-a2").animate({
+                    top: "-200px"
+                }, 1000);
+                $("#con-b2").animate({
+                    bottom: "-200px"
+                }, 1000);
+                $(".item2").delay(1000).fadeOut();
+                $(".item3").delay(1000).fadeIn();
+                $("#con-a3").delay(1000).animate({
+                    top: "200px"
+                }, 1000);
+                $("#con-b3").delay(1000).animate({
+                    bottom: 0
+                }, 1000);
+                $(".nav li").eq(1).addClass("on").siblings().removeClass("on");
+                index =3;
+			}
+		})
+	})
+})(jQuery)</script>
+</div>
+</body>
+</html>

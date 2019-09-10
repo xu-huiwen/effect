@@ -1,0 +1,94 @@
+/* CSS Document */
+body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p {margin:0;padding:0;}
+body{background:#fff;font: normal 12px/1.6 Tahoma, Geneva, sans-serif;padding-top:42px;font-size:14px;color:#333d49;line-height:25px;font-family:"微软雅黑", "宋体";}
+table {border-collapse: collapse; border-spacing: 0; empty-cells: show; text-align: left;}
+th,td {border-collapse: collapse;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{zoom:1}
+ol,ul {list-style: none;}
+a {text-decoration: none; overflow:hidden}
+a:hover {text-decoration: underline;}
+input,select,form img,button {vertical-align:middle;}
+button {cursor:pointer;}
+img{border:0;vertical-align:middle}
+.hidden{height:0;line-height:0;font-size:0;overflow:hidden;float:left}
+.fl{float:left;_display:inline;}
+.tint{text-indent:-999em;}
+.none{display:none}
+.blk{display:block;}
+.top{width:1000px;font-size:12px;}
+.topnav{width:980px;height:80px;padding:12px 0 0 20px;margin:0 0 276px 0;}
+.logo_btn{width:120px;height:80px;margin-right:45px;}
+.logo_btn1{width:300px;height:80px;margin-right:119px;}
+.nav_btn{color:#5b5755;font-size:14px;}
+.sc{margin-left:135px;}
+.line{color:#ddd7d5;margin:0 5px;}
+.content{width:1000px; position:relative}
+.topinfo{width:1000px;color:#9f9e9e;font-size:14px;}
+.logo{margin-bottom:184px;}
+.share{background:url(http://ossweb-img.qq.com/images/yl/act/a20120831star/sprite.jpg) 60px -48px no-repeat;width:300px;height:24px;line-height:24px;font-size:14px;margin:15px 0 0 64px;}
+.share a{width:25px;height:24px;margin-left:5px;}
+.leftbtn,.rightbtn{background:url(_blank);width:95px;height:160px;position:absolute;top:418px;}
+.leftbtn{left:-107px;}
+.rightbtn{left:1011px;}
+.vid{width:642px;height:362px;margin:0 0 0 41px;}
+.play{width:642px;height:362px;}
+.flt,.nflt{width:72px;height:67px;margin:0 0 0 20px;filter:alpha(opacity=60);-moz-opacity:.60;opacity:0.6;text-align:center;padding-top:5px;}
+.flt:hover,.nflt{background:#b3adaf;filter:none;-moz-opacity:1;opacity:1}
+.close_btn,.mplay,.look_btn,.scroll_up,.scroll_down{background:url(http://ossweb-img.qq.com/images/yl/act/a20120831star/sprite.jpg) no-repeat;}
+.star{height:84px;margin:118px 0 0 20px;}
+.content{width:980px;padding-left:20px;}
+.l{width:565px;margin-right:20px;padding-top:49px;}
+.bl{height:35px;border-bottom:1px dashed #bfbfbf;}
+.m_n{color:#474747;font-size:24px;font-weight:100;}
+.e_n{color:#cfcfcf;font-size:30px;margin:0 131px 0 10px;}
+.look_btn{background-position:0 -73px;width:77px;height:23px;line-height:23px;color:#fff;padding-left:10px;font-size:14px;margin-top:6px;}
+.txt,.info{font-size:14px;}
+.info{color:#968072;padding-top:60px;margin-bottom:49px;}
+.org{color:#ff6600;}
+.yel{color:#c98457;}
+.go_btn{ background:#958d8d;width:143px;height:23px;color:#fff;text-align:center;font-size:14px;}
+.r{padding-top:49px;}
+.songlist{width:320px;height:443px;border:1px solid #c9c9c9;padding:0 19px;}
+.ptxt_lxj{height:60px;line-height:60px;padding-left:40px;font-size:20px;color:#992f00;}
+.ptxt_zbc{height:60px;line-height:30px;padding-left:40px;font-size:20px;color:#ffcebf;}
+.ptxt_fhcq{height:60px;line-height:30px;padding-left:40px;font-size:20px;color:#9596ff;}
+.pspan_zbc{color:#f46b43;font-size:16px;}
+.pspan_fhcq{color:#00aeff;font-size:16px;}
+.push{width:560px;position:absolute;top:82px;left:20px;overflow:hidden;font-size:16px;}
+.push_id{width:135px;height:27px;margin:0 auto;}
+.bodyone,.border{background:#fff;border:solid 1px #fff; height:0;overflow:hidden;}
+.border{border:solid 1px #cfcfcf;}
+.bodyone div{width:560px;margin:0 auto;padding-top:5px;}
+.close_btn{background-position:-87px -73px;width:77px;height:24px;line-height:24px;color:#ff0000;font-size:14px; padding-left:10px;font-family:"微软雅黑","宋体"; position:absolute; z-index:88;top:59px;left:494px;}
+.songname{font-size:24px;padding:20px 0 0 20px;}
+.songinfo{font-size:14px;padding:10px 0 0 20px;} 
+.scrollbox{width:560px; height:372px;position:relative;}
+.scroll_c{width:560px; height:330px;overflow:hidden; position:absolute; left:0; top:80px; word-wrap:break-word;}
+.name_ul{width:510px;position:absolute;top:0;left:20px;}
+.name_li{width:510px;}
+.ins_scroller{position:absolute; left:0; top:0; width:20px; height:300px; -moz-user-focus:ignore;-moz-user-input:disabled;-moz-user-select:none;}
+
+.scroll,.scroll_up,.scroll_down,.scroll_bar{position:absolute;width:12px;}
+.scroll{left:536px; top:50px;height:360px; -moz-user-focus:ignore;-moz-user-input:disabled;-moz-user-select:none;}
+.scroll_up{background-position:-196px -77px;height:12px; left:0; top:0;}
+.scroll_down{background-position:-209px -77px;height:12px; left:0; bottom:0;}
+.scroll_bar{background:#747474;height:35px; left:0; top:20px;}
+.name{width:140px;height:20px;font-size:14px;color:#232221; text-align:center;margin:0 auto;}
+.name:hover{background:url(http://ossweb-img.qq.com/images/yl/act/a20120831star/vid_sprite.jpg) -117px -164px no-repeat;color:#631e1e}
+
+.tab{width:320px;border-collapse:collapse; text-align:center}
+.tab th{background:#b6b6b6;height:24px;line-height:24px;color:#fff;}
+.tab td{height:34px;line-height:34px;border-bottom:1px solid #d8d8d8;}
+.songtit{padding:20px 0 10px 0;font-size:24px;font-weight:100;}
+.mplay{ background-position:-174px -77px;width:21px;height:20px;}
+.allstar{height:195px;}
+.flt1{margin:15px 15px 0 0;}
+.nr{margin-right:0;}
+.fy{text-align:center;line-height:25px;}
+.fy a{color:#795f4b;margin:0 5px;line-height:25px;}
+#footer_ied{height:80px;text-align:center;font-size:12px; line-height:19px; color:#a1877f;padding-top:20px;}
+.wrap_ied{margin:0 auto;width:1000px;}
+.wrap_ied a{color:#a1877f}
+#footer_ied p.e{ margin-top:-4px; font-size:10px;}
+/*  |xGv00|980325e67af18fd8f4135ea9b7801825 */

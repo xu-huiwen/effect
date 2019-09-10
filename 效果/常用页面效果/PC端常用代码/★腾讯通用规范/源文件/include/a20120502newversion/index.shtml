@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><script type="text/javascript">/*tag*/PAGE_SPEED_TIME = [new Date().getTime()];</script>
+<head>
+<meta content="text/html;charset=gb2312" http-equiv="Content-Type"><meta name="robots" content="all">
+<meta name="author" content="Tencent-TGideas">
+<meta name="Copyright" content="Tencent">
+<title>浪漫四周年-QQ炫舞官方网站-腾讯游戏</title>
+<meta content="《QQ炫舞》官方网站&mdash;&mdash;最浪漫的舞蹈游戏" name="Description">
+<meta content="QQ炫舞,炫舞,浪漫,四周年,5月,版本专题" name="Keywords">
+
+<link href="css/comm.css" rel="stylesheet" type="text/css" />
+<style>
+body,p{margin:0; padding:0;}
+body{font:12px/1.5 \5b8b\4f53,tahoma,arial,sans-serif;}
+.hidden{display:none;}.ht{text-indent:-9999px; overflow:hidden;}
+.wrapBg{background:url(images/wrap.jpg) no-repeat 50% 44px; min-width:1000px;}
+.content_index{position:relative; z-index:9; height:130px; width:1000px; margin:0 auto; z-index:9;}
+.flash{margin-top:-130px; background:url(images/head.jpg) no-repeat 50% 0; height:1000px; text-align:center;}
+.logo, .logo4,.logoC{position:absolute; background:url(about:blank);}
+.logo{ height:68px; top:21px; left:10px; width:100px;}.logo4{width:82px; height:72px; top:17px; left:132px;}.logoC{ width:160px; height:50px; left:230px; top:30px;}
+.header_a{width:180px; height:60px; display:block; position:absolute; top:300px; right:55px;}
+.top_nav{margin-left:460px; color:#fefefe; height:30px; position:absolute;}
+.ico_qt, .ico_qz, .top_link, .top_link2{float:left;}
+.ico_qt, .ico_qz{width:16px; height:16px; margin-top:10px;}
+.ico_qz{margin-right:16px;}
+.ico_qt{margin-right:7px;}
+.top_link{margin-right:3px; width:88px; height:30px;}
+.top_link2{margin-right:3px; width:108px; height:30px;}
+.select{width:270px; margin-left:10px; float:left;}
+.select h3{width:270px; height:30px; overflow:hidden; text-indent:-999em; cursor:pointer; margin:0;}
+.select ul{background-color:#000; position:absolute; z-index:20; padding:5px; margin-left:6px; width:240px; display:none; opacity:0.8; filter:alpha(opacity=80);}
+.select li{border-bottom:1px dotted #37323e; height:22px; line-height:22px; margin:1px;}
+.select li a{color:#f5f7f8; display:block; text-decoration:none; padding-left:10px; height:22px; font-size:12px;}
+.select li a:hover{color:#fff; background-color:#e25a5d; text-decoration:none;}
+.ost{border-bottom:2px solid #000;}
+#footer_ied{background:url(images/foot_index.jpg) no-repeat center top; padding:24px 0 0 0; height:126px; color:#ff78b7; text-align:center; line-height:19px; font-family:Tahoma; font-size:12px;}
+.wrap_ied{width:1000px; margin:0 auto;}
+#footer_ied .e{font-size:10px; -webkit-text-size-adjust:none;}
+#footer_ied a{color:#ff78b7;}
+/*pop*/
+.layer{display:none; height:auto; width:500px;}
+.link{background-color:#141213; height:15px; padding:8px 6px;}
+.link .a2{color:#fff; display:block; height:14px; line-height:14px; overflow:hidden; text-align:center; text-decoration:none; width:15px; background:#ed0082 url(http://ossweb-img.qq.com/images/x5/web201011/closebtn.png) no-repeat 50% 50%; float:right; overflow:hidden; text-indent:-999em;}
+.layers{background-color:#000; height:408px;}
+</style>
+<script src="http://x5.qq.com/act/a20110706newversion/jscss/newversion.js?d=0401"></script>
+</head>
+<body class="wrapBg">
+<div class="content_index">
+		<a href="http://x5.qq.com/main.shtml" class="logo ht" target="_blank" title="QQ炫舞">QQ炫舞</a>
+		<a href="http://x5.qq.com/act/a201200428zhe/" class="logo4 ht" target="_blank" title="4周年">4周年</a>
+		<a href="http://x5.qq.com/act/a20120520love/" class="logoC ht" target="_blank" title="触动心&middot;触动爱">触动心&middot;触动爱</a>
+		<h1 class="hidden" id="h1">浪漫四周年 小镇游园狂欢季开启</h1>
+		<p class="hidden">2012年5月9日</p>
+		<div class="top_nav">
+			<span class="hidden">分享到：</span><a href="javascript:postToWb();" class="ico_qt ht" title="分享到腾讯微博">分享到腾讯微博</a><a href="#" onclick="javascript:window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + tloca);return false;" class="ico_qz ht" title="分享到QQ空间">分享到QQ空间</a><a href="http://x5.qq.com/main.shtml" class="top_link ht" target="_blank" title="炫舞官网">炫舞官网</a><a href="http://x5.qq.com/web201011/download.shtml" class="top_link2 ht" target="_blank" title="下载炫舞">下载炫舞</a>
+		<script type="text/javascript">edit();</script>
+		</div>
+</div>
+<div class="flash">
+	<div id="flashbox">
+		<p><a href="http://get.adobe.com/flashplayer/" target="_blank" title="下载最新的Flash插件">请下载最新的Flash插件</a></p>
+		<ul>
+			<li><a href="index.shtml" class="no_index" title="首页" name="mainNav">首页</a></li>
+			<li><a href="page01.shtml" class="no1" title="小镇游园指南" name="mainNav">小镇游园指南</a></li>
+			<li><a href="page02.shtml" class="no2" title="乐队团队模式" name="mainNav">乐队团队模式</a></li>
+			<li><a href="page03.shtml" class="no3" title="贴心优化" name="mainNav">贴心优化</a></li>
+			<li><a href="page04.shtml" class="no4" title="新品上市" name="mainNav">新品上市</a></li>
+			<li><a href="page05.shtml" class="no5" title="最新活动" name="mainNav">最新活动</a></li>
+		</ul>
+	</div>
+</div>
+<!--#include file="foot.inc" -->
+<div id="layer" class="layer">
+    <div class="link"><a href="javascript:DivHide();" title="点击关闭" class="a2">关闭</a> </div>
+    <div class="layers" id="flv_div"></div>
+</div>
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/comm/showDialog.min.js"></script>
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/swfobject.js"></script>
+<script type="text/javascript">
+var flashvars = {};
+var params = {menu:"true",allowfullscreen:"false",wmode:"transparent",allowScriptAccess:"always",align:"T",base:"http://x5.qq.com/act/a20120411newversion/"};
+var attributes = {id:  "versionFlash",name:"version-flash"};
+swfobject.embedSWF("index.swf", "flashbox", "100%", "870", "10.0.0", null, flashvars, params, attributes);
+//弹出层
+function DivHide(){var flv_s = document.getElementById("flv_div");if (flv_s){flv_s.innerHTML= ""}showDialog.hide('layer')}
+function DivShow1(){DivShow()}
+function DivShow(){
+var htmls = '<object width="500" height="408" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codeBase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab#version=10,0,0,0"><param name="movie" value="http://static.video.qq.com/TencentPlayer.swf?vid=s0100468wf2&amp;autoplay=1&amp;pic=http://lol.qq.com/web201101/flash/index_noplay.jpg&amp;loadingswf=http://imgcache.qq.com/minivideo_v1/vd/res/skins/web_small_loading.swf&amp;skin=http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf" /><param name="wmode" value="opaque" /><param name="quality" value="High" /><param name="allowFullScreen" value="always" /><param name="allowNetworking" value="all" /><param name="allowFullScreen" value="true" /><embed width="500" height="408" align="middle" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" id="_playerswf" name="_playerswf" quality="high" src="http://static.video.qq.com/TencentPlayer.swf?vid=s0100468wf2&amp;autoplay=1&amp;pic=http://lol.qq.com/web201101/flash/index_noplay.jpg&amp;loadingswf=http://imgcache.qq.com/minivideo_v1/vd/res/skins/web_small_loading.swf&amp;skin=http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf" wmode="opaque"></embed></object>';
+	var flv_s = document.getElementById("flv_div");
+	if (flv_s){flv_s.innerHTML=htmls;showDialog.show({  id:"layer",bgcolor:"#000",opacity:60})}
+}
+function gotoPage(num){
+	if(num<6){window.location.href = 'page0' + num + '.shtml'}
+	else if(num==6){DivShow1()}
+	else{window.location.href = 'page01.shtml#' + num}
+}//链接
+</script>
+</body>
+</html>

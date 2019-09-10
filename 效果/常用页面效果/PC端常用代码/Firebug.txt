@@ -1,0 +1,1 @@
+<script type="text/javascript" src="https://getfirebug.com/firebug-lite-debug.js"></script>

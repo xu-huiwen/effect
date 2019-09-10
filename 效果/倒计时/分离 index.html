@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="author" content="Tencent-CP" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="Description" content="QQ飞车原班人马倾情打造，十年经典巅峰再现，来吧，一起感受最原汁原味的《QQ飞车手游》！" />
+<meta name="Keywords" content="QQ飞车手游,飞车手游,QQspeedm,speedm" />
+<!-- 设计：cp  | 重构：cp | 创建：2017/11/30| 更新：| 团队博客：http://tgideas.qq.com/ -->
+<title>双旦回归-QQ飞车手游</title>
+<style>
+/* reset */
+body,div,p,ul,li,table,tbody,tr,td,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,iframe,header,nav,section,article,footer,figure,figcaption,menu{margin:0;padding:0;list-style:none;}
+body{font-family:"\5FAE\8F6F\96C5\9ED1",Helvetica;-webkit-text-size-adjust:none;font-size:12px;}
+header,nav,section,article,footer,figure,figcaption{display:block;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+ol,ul{margin:0;padding:0;}
+fieldset{border:none;margin:0;padding:0;}
+a,li,ul,[onclick]{-webkit-tap-highlight-color:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+table{border-collapse:collapse;border-spacing:0;}
+em,strong{font-weight:normal;font-style:normal;}
+a{text-decoration:none;}
+.hide{display:none;}
+.c:before,.c:after{content:"";display:table;}
+.c:after{clear:both;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.db{display:block;text-indent:-999em;}
+html,body,.wrap{background: #193632;width: 100%;}
+a,em,i,b{color: inherit;font-style: inherit;font-weight: inherit;_font-style: normal;_font-weight: normal;}
+.fl{float: left;}
+.fr{float: right;}
+.mc{margin: 0 auto;}
+.ls{ letter-spacing: -1px;}
+.sp{background: url(ossweb-img/sp.png) no-repeat;background-size:375px 400px ;}
+.bx1{ background: url(ossweb-img/hd1.jpg) no-repeat;width: 375px; height: 228px; background-size: 100% 100%;transform: all 1s;}
+.bx1{-webkit-animation:flash 1.5s  infinite linear;}
+@-webkit-keyframes flash{
+0%{background: url(ossweb-img/hd1.jpg) no-repeat;background-size: 100% 100%;}
+50%{background: url(ossweb-img/hd2.jpg) no-repeat;background-size: 100% 100%;}
+100%{background: url(ossweb-img/hd1.jpg) no-repeat;background-size: 100% 100%;}
+}
+@-moz-keyframes flash{
+0%,50%,100%{opacity: 1;}
+25%,75%{opacity: 0;}
+}
+.content{overflow: hidden;position: absolute;top: 0;left: 0;z-index: 99999;}
+.top_ic{display: block;top:30px ;right:10px ;}
+.top_ic{
+-webkit-animation:wobble 3.5s .2s ease infinite;}
+@-webkit-keyframes wobble{
+0%,15%,	30%,45%,60%,60%,75%,100%{transform-origin: center bottom; }
+0%{-webkit-transform:translateX(0%)}
+15%{-webkit-transform:translateX(-10%) rotate(-5deg)}
+30%{-webkit-transform:translateX(8%) rotate(3deg)}
+45%{-webkit-transform:translateX(-6%) rotate(-3deg)}
+60%{-webkit-transform:translateX(4%) rotate(2deg)}
+75%{-webkit-transform:translateX(-2%) rotate(-1deg)}
+100%{-webkit-transform:translateX(0%)}
+}
+.qq1{display: block;width: 17px;height:38px ;background-position: -2px -2px;top: 192px;left:20px ;}
+.qq2{display: block;width: 20px;height:46px ;background-position:-22px -2px;top: 150px;right:20px ;}
+.qq1,.icon_a{
+-webkit-animation:swing 3s .2s linear infinite;}
+@-webkit-keyframes swing{
+20%,40%,60%,80%,100%{-webkit-transform-origin:top center}
+20%{-webkit-transform:rotate(15deg)}
+40%{-webkit-transform:rotate(-10deg)}
+60%{-webkit-transform:rotate(5deg)}
+80%{-webkit-transform:rotate(-5deg)}
+100%{-webkit-transform:rotate(0deg)}
+}
+.qq2,.icon_b{
+-webkit-animation:swing_r 3s .2s linear infinite;}
+@-webkit-keyframes swing_r{
+20%,40%,60%,80%,100%{-webkit-transform-origin:top center}
+20%{-webkit-transform:rotate(-15deg)}
+40%{-webkit-transform:rotate(10deg)}
+60%{-webkit-transform:rotate(-5deg)}
+80%{-webkit-transform:rotate(5deg)}
+100%{-webkit-transform:rotate(0deg)}
+}
+.btn_go,.btn_down{display: block;width:166px ;height:49px ;background-position:-62px -5px ;top: 169px;padding-top: 18px;}
+.btn_down{right:27px ;}
+.btn_go{left:27px ;}
+.home_txt{display: block;width:84px ;height: 20px;background-position:-238px -2px ;margin: 0 auto 0;}
+.down_txt{display: block;width:84px ;height: 20px;background-position:-239px -27px;margin: 0 auto 0;}
+.time{ font-size: 10px;color: #ffffff;line-height:11px ;top:150px ;left:188px ;}
+
+.bx2{ background: url(ossweb-img/ct.jpg) no-repeat;width: 375px;  background-size: 375px 2292px;} 
+.dogin{ width:237px ; height:28px ; background-position:-2px -79px; margin: 0 auto 0;font-size:10px ;color: #fff;text-align: center;line-height: 28px;}
+.login{ color: #ffd941;}
+.btn_bx{ width: 356px;height: 121px;background: url(ossweb-img/top_bg.png) no-repeat;background-size: 356px 121px;margin: 0 auto 0;}
+.btn_new{ display: block;}
+.btn_bx .on_btn_old{ text-shadow: 1px 1px 1px #ffcc9b;background-position: -133px -169px;width: 166px;height: 49px;left:15px ;}
+.btn_bx .on_btn_new{ text-shadow: 1px 1px 1px #ffcc9b;background-position: -133px -169px;width: 166px;height: 49px;right: 15px;}
+.btn_old{ display: block;width:151px ;height:44px ;top: 9px;left: 28px;background-position: 0 -245px;font-weight: bold;
+	font-size:12px ;color: #451b04;line-height: 15px;text-align: center;text-shadow: 1px 1px 1px #ffed9b;padding-top: 15px;}
+.btn_new{ display: block;width:151px ;height:44px ;top: 9px;right: 28px;background-position: 0 -245px;font-size:12px ;font-weight: bold;
+	color: #451b04;line-height: 15px;text-align: center;text-shadow: 1px 1px 1px #ffed9b;padding-top: 15px;}
+.sm_bx1{width: 100%;}
+.tit1{ background: url(ossweb-img/tit1.png) no-repeat;width: 278px; height: 89px; background-size: 100% 100%;margin: 0 auto 0;}
+.txt{ font-size: 10px;width: 100%;color: #ffffff;line-height:13px ;text-align: center;margin-top: 8px;}
+.share{ display: block;width:57px ; height:18px ;background: #e7403b;border-radius: 6px;font-size: 10px;color: #ffd4d3;text-align: center;line-height: 18px;top:106px ;right:10px ;}
+.pic_bx{ background: url(ossweb-img/bg.png) no-repeat;width: 354px; height: 335px; margin: 0 auto 0;padding-top: 23px;background-size: 100% 100%}
+.zh_num{ width: 100%;text-align: center;line-height: 20px;height: 20px;font-size: 12px;color: #5a3505;font-weight: bold;}
+.txt1{ width: 100%;font-size:10px ;color: #663908;line-height:13px ;padding-top:3px ;text-align: center;}
+.list_ul{width: 335px;margin: 0 auto 0;padding-top: 3px;height: 125px;}
+.list_ul1{width: 335px;margin: 0 auto 0;padding-top: 3px;height: 125px;}
+.list_ul li,.list_ul1 li{ width: 101px;padding: 0 5px;height: 100%;}
+.recall_txt{ font-size:10px ;color: #193632;line-height: 20px;text-align: center;display: block;}
+.bx{width: 100%;}
+.pic_sm{ width: 50%;}
+.pic{ display: block;margin: 0 auto 0;}
+.pic_name{ display: block;width: 100%;text-align: center;line-height: 19px;font-size:10px ;color: #663908;}
+.btn_Pick{ display: block;width:75px ;height: 20px;background: #e73e39;font-size:12px ;color: #e7d8b9;line-height: 20px;margin: 0 auto 0;
+	text-align: center;font-weight: bold;border-radius: 5px;}
+.btn_ylq{ display: block;width:75px ;height: 20px;background: #ff7571;font-size:12px ;color: #e7d8b9;line-height: 20px;margin: 0 auto 0;
+	text-align: center;font-weight: bold;border-radius: 5px;}
+.list_ul1 .recall_txt{line-height: 13px;}
+.raffle_bx{width:100% ;height:190px ;background: url(ossweb-img/bg_sm.png) no-repeat;background-size: 375px 241px;margin-top: 14px;padding-top: 51px;}
+.fp_txt{ font-size:10px ;color: #ffd833;text-align: center;line-height:20px;}
+.list_ul2{width:345px ;margin: 0 auto 0;}
+.list1,.list3{width: 110px;height: 84px;}
+.list2{ width: 125px;height: 84px;}
+.list5,.list4{ width:172px ;height:106px;}
+.pic1{ display: block;margin: 18px auto 0;}
+.raffle_bx .pic_name{ color: #fff;line-height: 12px;}
+.cj_bx{ width:355px ; margin: 0 auto 0;height: 435px;}
+.cj_bx li{ width:71px ;height: 83px;float: left;position: relative;overflow: hidden;}
+.front{width: 100%;display: block;z-index: 2;}
+.cj_ul a{display: block;width:71px ;height: 83px;}
+.cj_ul{width: 100%;height: 375px;}
+.cj_ul li{ margin-bottom: 3px;}
+.front, .back {  width: 100%;height: 100%;backface-visibility: hidden;-webkit-backface-visibility: hidden;position: absolute;top: 0;left: 0;}
+/**/
+.back {
+	transform:  rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+}
+.flip .front {-webkit-animation:rotateY1 1s  linear both;}
+@-webkit-keyframes rotateY1{
+0%{	transform:  rotateY(0deg);
+	-webkit-transform: rotateY(0deg);}
+100%{	transform:  rotateY(180deg);
+	-webkit-transform: rotateY(180deg);}
+}
+
+.flip .back {-webkit-animation:rotateY 1s  linear both;}
+@-webkit-keyframes rotateY{
+0%{	transform:  rotateY(-180deg);}
+100%{	transform: rotateY(0);
+	z-index: 2;}
+}
+.cardjap{animation: cardjap 0.6s linear both infinite;}
+@keyframes cardjap{50%{transform: scale(1.1) translateY(6px);}}
+.btn_cj{width:126px ; height:28px ;background-position: 0 -113px;margin: 0 auto 0;display: block;}
+.sx_txt{ width: 100%;text-align: center;font-size:10px ;color: #eafcfa;line-height:20px ;display: block;}
+.sx_txt em{ color: #dd4b3c;}
+.bx3{ width: 100%;height:635px ;background: url(ossweb-img/pu_bg.jpg) repeat;background-size: 375px auto;padding-top: 15px;}
+.tit2{ display: block;width:292px ; height:44px ;background: url(ossweb-img/tit2.png) no-repeat;margin: 0 auto 0;background-size: 100% 100%}
+.txt2{ font-size: 10px;color: #fff;line-height:13px ;width: 100%;text-align: center;padding-top:7px;}
+.djs_txt{font-size:12px ;color: #ffd833;line-height:30px ;text-align: center;}
+.s_time{ width: 320px;margin:  0 auto 0;margin-bottom: 24px;}
+.time_1{ display: inline-block;width: 44px; height: 46px;background-position: -133px -113px;vertical-align: middle;
+	font-size:32px ;color: #4f2f20;line-height: 46px;text-align: center;margin: 0 6px;}
+.unit{ width:29px ;height: 46px;text-align: center;vertical-align: bottom;font-size: 16px;color: #fff;}
+.props_bx{ width: 330px; height:160px ;margin:0 auto;}
+.btn_lq{ display: block;width:126px ; height: 25px;background-position: -2px -146px;margin: 13px auto 20px;}
+.prizes_bx{background: url(ossweb-img/bg.jpg) no-repeat;width: 375px;height: 171px;background-size: 100% 100%;}
+.tit3{ width: 100%;text-align: center;line-height: 20px;font-size: 10px;color: #ffd833;}
+.prizes{padding-top: 3px;width: 347px;margin: 0 auto 0;}
+.prizes li{ float: left;}
+.travel_to{ display: block;width:126px ; height:26px ;background-position: -2px -174px;margin: 12px auto 0;}
+.foot{ width: 100%;padding-top: 16px}
+.tit4{background:url(ossweb-img/tit3.png) no-repeat;width: 302px;height: 47px;background-size: 100% 100%;margin: 0 auto 8px;}
+.li_icon{display: block;width:13px ;height:15px ;background-position:-331px -2px ;top:89px ;left:204px ;}
+.li_icon{
+-webkit-animation:scale 1s  ease infinite;
+-moz-animation:scale 1s  ease infinite;}
+@-webkit-keyframes scale{
+0%{-webkit-transform:scale(1)}
+50%{-webkit-transform:scale(1.2)}
+100%{-webkit-transform:scale(1)}
+}
+.tit5{ width:265px ;height:58px ;background: url(ossweb-img/tit4.png) no-repeat;background-size: 100% 100%;margin: -10px auto 0;}
+.regression_bx{ display: block;width:330px ;height:176px ;background: url(ossweb-img/foot_bg.png) no-repeat;background-size: 100% 100%;margin: 10px auto 20px;
+	padding: 8px 12px;}
+.sm_tit1{ display: block;width:157px ;height:32px ;background-position:-150px -233px ;margin: 0 auto 0;font-size:12px ;
+	color: #fff;text-align: center;font-weight: bold;}
+.login_lj{ width: 100%;padding-top: 17px;}
+.icon_a{ display: block;width: 15px;height:33px ;background-position:-186px -113px ;top: 0;left: 18px;}
+.icon_b{ display: block;width: 26px;height:59px ;background-position: -217px -113px ;top: 0;right: 18px;}
+.tit6{width:265px ;height: 48px;background:url(ossweb-img/tit4.png) no-repeat ;margin: 0 auto 47px;background-size: 100% 100%;}
+.pic_bx1{ background: url(ossweb-img/bg.png) no-repeat;width: 302px;height: 328px;background-size: 100% 100%;padding: 30px 26px 0;margin: 0 auto 20px;}
+.list{ padding: 0 18px;width: 64px;float: left;}
+.txt_n{display: block;width: 100%;text-align: center;line-height: 22px;font-size:10px ;color: #322a53;height: 22px;}
+.txt_n1{display: block;width: 100%;text-align: center;line-height: 13px;font-size:10px ;color: #322a53;height: 34px;padding-top: 3px;}
+.lc{ letter-spacing:-1px;}
+.cj_ul img{display: block;margin: 0 auto;}
+.txt_xz{ font-size:10px ;color: #fff;top:117px ;left: 0;display: block;width: 146px;text-align: center;}
+.txt_xz1{ font-size:10px ;color: #fff;top:117px ;right: 0;display: block;width: 146px;text-align: center;}
+.prizes .pic1{ margin: 10px auto 0;}
+.prizes .pic_name{ color: #fff;line-height: 12px;}
+.pic_l{ width: 117px;}
+.zmhy{ font-size:10px;color: #5d4c0c;line-height:19px ;text-align: center;width: 100%;text-align: center;display: block;}
+.pic_r{ width:202px ;margin-left: 10px;}
+.dj_f{ width: 202px;}
+.pic_1{ width: 50%;}
+.pic_1 img{display: block;margin: 20px auto 20px;}
+.btn_qw{display: block;width: 126px;height: 26px;margin: 16px auto 0;background-position: -1px -202px;}
+.content_s{ top: 0;left: 0;width: 100%;height: 1000px;overflow: hidden;z-index: 1;}
+.tit7{background:url(ossweb-img/tit5.png) no-repeat;width: 302px;height: 47px;background-size: 100% 100%;margin: 0 auto 8px;}
+.bzd{background: url(ossweb-img/bzd1.png) no-repeat;width: 104px;height: 167px;background-size: 100% 100%;margin-right: 5px;margin-top: 9px;}
+.regression_bx1{ display: block;width:354px ;height:204px ;background: url(ossweb-img/foot_bg.png) no-repeat;background-size: 100% 100%;margin: 10px auto 20px;
+	padding: 8px 0;}
+.link_a{display: block;width: 117px;height: 143px;}
+/*弹窗*/
+.dia-con1{ background: #4c2e1f;border: 2px solid #794e38;width:316px ;padding: 17px;top: 50%;margin-top: -100px;left: 50%;margin-left: -177px;}
+.txt_tit1{font-size:18px ;color: #ffffff;line-height: 25px;text-align: center;font-weight: bold;width: 100%;}
+.tips{ font-size:10px ;color: #ffd941;line-height:14px ;width: 100%;text-align: center;padding-top: 11px;border-bottom: 1px solid #794e38;padding-bottom: 12px;}
+.tab{ width: 320px;text-align: center;border: 1px solid #794e38;margin-top: 12px;}
+.th th,.tb td{ line-height:16px ;font-size:10px ;color: #fff;}
+.dialog{background: rgba(0,0,0,0.6);width: 100%;height: 100%;position: fixed;top: 0;left: 0;}
+.tf a{ display: inline-block;width:75px ;height:16px ;}
+.tf td{ line-height:22px ;font-size:10px ;color: #fff;}
+.dia-close{display: block;width: 20px;height: 20px;font-size: 20px;text-align: center;line-height: 20px;top: 0;right: 0;color: #fff;}
+.btn_bx1{ width: 160px;margin: 0 auto 0;padding-top: 10px;}
+.prev,.next{ display: block;width: 60px;background: #451B04;text-align: center;line-height: 20px;font-size: 11px;color: #fff;border-radius:3px ;}
+.btn_xz{display: block;width: 126px;height:26px ;background-position: -1px -202px;margin: 8px auto 0;}
+</style>
+</head>
+<body>
+<div class="wrap pr">
+	<h1 class="hide">双旦回归-QQ飞车手游</h1>
+	<div class="contenner">
+		<div class="content_s pr"></div>
+		<div class="content">
+			<div class="bx1 pr">
+				<img src="ossweb-img/top_jl.png" class="top_ic pa" width="65" height="74" alt="" />
+				<span class="qq1 sp pa"></span>
+				<span class="qq2 sp pa"></span>
+				<a href="http://speed.qq.com/web201503/page/download.shtml" class="btn_go sp pa">
+					<span class="sp down_txt"></span>
+				</a>
+				<a href="http://speed.qq.com/" class="btn_down sp pa">
+					<span class="sp home_txt"></span>
+				</a>
+				<span class="time pa">活动时间：12月13日-1月9日</span>
+			</div>
+			<div class="bx2">
+				<div class="dogin sp"  id="unlogin">您还没有登录，请先<a href="javascript:login();" class="login">【登录】</a>绑定大区后再来参与</div>
+				<div id="logined" style="display:none;">hi，<span id='login_nickname_span'></span><span id='login_qq_span'></span><a href="javascript:logout();">注销</a></div>
+				<div class="btn_bx pr">
+				 	<a href="javascript:;" class="btn_old pa sp on_btn_old">
+				 		邀请回归领奖<br />活跃玩家特权
+				 	</a>
+				 	<a href="javascript:;" class="btn_new pa sp">
+				 		老玩家回归即送<br />回归玩家特权
+				 	</a>
+				 	<span class="li_icon pa sp"></span>
+				 </div>
+				<div class="swc_bx" >
+					 <div class="sm_bx1 pr">
+					 	<h2 class="tit1"></h2>
+					 	<p class="txt">满足14天及以上未登录的用户<br />点击分享人的链接进入活动页面并绑定大区。</p>
+					 	<a href="javascript:;" class="share pa" >分享召回</a>
+					 	<div class="pic_bx">
+					 		<h3 class="zh_num">我已成功召回玩家：<span>X</span>个</h3>
+					 		<p class="txt1">活动期间内，玩家分享本活动至QQ空间，成功召回满14天<br />未登录游戏的回归用户可获得召唤奖励和圣诞卡牌（可进行圣诞翻牌）</p>
+					 		<ul class="list_ul c">
+					 			<li class="fl"> 
+									<span class=" recall_txt">成功召回1个玩家</span>	
+									<img src="ossweb-img/pic1.png" width="49" height="47" class="pic"  alt="" />
+									<span class="pic_name">圣诞卡牌*1</span>
+									<a href="javascript:;" class="btn_ylq ">领 取</a>
+					 			</li>
+					 			<li class="fl"> 
+									<span class=" recall_txt">成功召回1个玩家</span>	
+									<img src="ossweb-img/pic1.png" width="49" height="47" class="pic"  alt="" />
+									<span class="pic_name">圣诞卡牌*3</span>
+									<a href="javascript:;" class="btn_Pick ">领 取</a>
+					 			</li>
+					 			<li class="fl"> 
+									<span class=" recall_txt">成功召回1个玩家</span>	
+									<img src="ossweb-img/pic1.png" width="49" height="47" class="pic"  alt="" />
+									<span class="pic_name">圣诞卡牌*5</span>
+									<a href="javascript:;" class="btn_Pick ">领 取</a>
+					 			</li>
+					 		</ul>
+					 		<p class="txt1">活动期间内，成功召回满14天未登录游戏的回归用户中<br />至少有1人登录达到指定天数，分享人还可以获得额外奖励！</p>
+					 		<ul class="list_ul1 c">
+					 			<li class="fl"> 
+									<span class=" recall_txt">成功召回的玩家累计<br />登录天数达到1天</span>	
+									<div class="c bx">
+										<div class=" fl pic_sm">
+											<img src="ossweb-img/pic2.png" width="49" height="47" class="pic"  alt="" />
+											<span class="pic_name">点券*500</span>
+										</div>
+										<div class=" fl pic_sm">
+											<img src="ossweb-img/pic1.png" width="49" height="47" class="pic"  alt="" />
+											<span class="pic_name lc">圣诞卡牌*2</span>
+										</div>
+									</div>
+									<a href="javascript:;" class="btn_Pick ">领 取</a>
+					 			</li>
+					 			<li class="fl"> 
+									<span class=" recall_txt">成功召回的玩家累计<br />登录天数达到1天</span>	
+									<div class="c bx">
+										<div class=" fl pic_sm">
+											<img src="ossweb-img/pic2.png" width="49" height="47" class="pic"  alt="" />
+											<span class="pic_name">点券*700</span>
+										</div>
+										<div class=" fl pic_sm">
+											<img src="ossweb-img/pic1.png" width="49" height="47" class="pic"  alt="" />
+											<span class="pic_name lc">圣诞卡牌*3</span>
+										</div>
+									</div>
+									<a href="javascript:;" class="btn_Pick ">领 取</a>
+					 			</li>
+					 			<li class="fl"> 
+									<span class=" recall_txt">成功召回的玩家累计<br />登录天数达到1天</span>	
+									<div class="c bx">
+										<div class=" fl pic_sm">
+											<img src="ossweb-img/pic2.png" width="49" height="47" class="pic"  alt="" />
+											<span class="pic_name">点券*1000</span>
+										</div>
+										<div class=" fl pic_sm">
+											<img src="ossweb-img/pic1.png" width="49" height="47" class="pic"  alt="" />
+											<span class="pic_name lc">圣诞卡牌*6</span>
+										</div>
+									</div>
+									<a href="javascript:;" class="btn_Pick ">领 取</a>
+					 			</li>
+					 		</ul>
+					 	</div>
+					 	<div class="raffle_bx">
+					 		<p class="fp_txt">翻牌部分奖励展示</p>
+					 		<ul class="c list_ul2">
+					 			<li class="list1 fl">
+					 				<img src="ossweb-img/pic3.png"width="79" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">紫钻<br />（7天/15天/30天）</span>
+					 			</li>
+					 			<li class="list2 fl">
+					 				<img src="ossweb-img/pic4.png"width="79" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">A车-荣耀伯爵<br />（15天/30天/永久）</span>
+					 			</li>
+					 			<li class="list3 fl">
+					 				<img src="ossweb-img/pic5.png"width="79" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">紫霞之韵礼服<br />（15天/30天/永久）</span>
+					 			</li>
+					 			<li class="list4 fl">
+					 				<img src="ossweb-img/pic6.png"width="83" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">紫霞之韵发饰<br />（15天/30天/永久）</span>
+					 			</li>
+					 			<li class="list5 fl">
+					 				<img src="ossweb-img/pic7.png"width="83" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">宠物强化卡</span>
+					 			</li>
+					 		</ul>
+					 	</div>
+					 	<div class="cj_bx pr" id="box">
+					 		<ul class="cj_ul" id="list">
+					 			<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png" width="62" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/1.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/2.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/3.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/4.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/5.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/6.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/7.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/8.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/9.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/10.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/11.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/12.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/13.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/14.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/15.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/16.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/17.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/18.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/19.png"  width="62" height="84">
+										
+									</a>
+								</li>
+								<li>
+						 			<a href="javascript:;" class="front">
+										<img src="ossweb-img/card-bm.png"  width="65" height="84">
+									</a>
+									<a href="javascript:;" class="back">
+										<img src="ossweb-img/20.png"  width="62" height="84">
+										
+									</a>
+								</li>
+					 		</ul>
+					 		<a href="javascript:;" class="btn_cj sp" id="start"></a>
+					 		<span class="sx_txt">剩余圣诞卡牌：<em>12</em></span>
+					 	</div>
+					 </div>
+					 <div class="bx3">
+						<h2 class="tit2"></h2>
+						<p class="txt2">活动期间内，所有成功进行召回的用户，在12月23日<br />和1月1日当天登录游戏还可以领取小橘子的双“蛋”专属礼！</p>
+						<h3 class="djs_txt">距离12月23日/1月1日 还剩：</h3>
+						<p class="s_time">
+							<span class="sp time_1  days" >00</span>
+							<span class="unit">天</span>
+							<span  class="sp time_1 hour"> 00</span>
+							<span class="unit">时</span>
+							<span class="sp time_1 minutes" >00</span>
+							<span class="unit">分</span>
+							<span class="sp time_1 second" >00</span>
+							<span class="unit">秒</span>
+						</p>
+						<div class="c props_bx pr">
+							<img src="ossweb-img/pic8.png" width="146" height="158" alt="" class="fl" />
+							<img src="ossweb-img/pic9.png" width="146" height="158" alt="" class="fr" />
+							<span class="pa txt_xz">点券*1223</span>
+							<span class="pa txt_xz1">点券*1223</span>
+						</div>
+						<a href="javascript:;" class="btn_lq sp"></a>
+						<div class="prizes_bx">
+							<h3 class="tit3">12月23日/1月1日还有更多奖励等你来拿</h3>
+							<ul class="c prizes">
+								<li class="list1">
+									<img src="ossweb-img/pic10.png"width="79" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">1224Q币</span>
+								</li>
+								<li class="list2">
+									<img src="ossweb-img/pic11.png"width="79" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">A车-浴火凤凰 <br /> （永久）</span>
+								</li>
+								<li class="list3">
+									<img src="ossweb-img/pic12.png"width="79" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">A车-黑魔爵士<br />（永久）</span>
+								</li>
+								<li class="list1">
+									<img src="ossweb-img/pic13.png"width="79" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">花海连城花环<br />（永久）</span>
+								</li>
+								<li class="list2">
+									<img src="ossweb-img/pic14.png"width="93" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">圣诞雪人套装 <br />（永久）</span>
+								</li>
+								<li class="list3">
+									<img src="ossweb-img/pic15.png"width="79" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">圣诞雪花羽翼<br />（永久）</span>
+								</li>
+							</ul>
+							<a href="javascript:;" class="travel_to sp"></a>
+						</div>
+					</div>
+					<div class="foot">
+					<h2 class="tit4"></h2>
+					<p class="txt2">活动期间，玩家可以每天在游戏内招募幸运好友，获取海量点券和永久<br />
+						套装。每日一点，轻松获得250点券和随机实用改装包！每成功招募一名<br />
+						幸运玩家回归游戏，必得150点券，更有永久套装等你拿！获得点券无上限！</p>
+					<div class="regression_bx c">
+						<div class="fl pic_l">
+							<span class="zmhy">招募幸运好友</span>
+							<a href="http://speed.qq.com/cp/a20171129christmas/index.htm" class="link_a" >
+								<img src="ossweb-img/bzd.png" width="117" height="143" alt="" />
+							</a>
+						</div>
+						<div class="pic_r fr">
+							<span class="zmhy">招募幸运好友</span>
+							<div class="c dj_f">
+								<div class="fl pic_1">
+									<img src="ossweb-img/pic16.png" width="79" height="53" alt="" />
+									<span class="pic_name">点券*1225</span>
+								</div>
+								<div class="fr pic_1">
+									<img src="ossweb-img/pic17.png" width="79" height="53" alt="" />
+									<span class="pic_name">点券*1225</span>
+								</div>
+							</div>
+							<a href="javascript:;" class="sp btn_qw"></a>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="swc_bx" style="display: none;">
+					<h2 class="tit5"></h2>
+					<p class="txt2">活动期间内，所有满14天未登录游戏的回归<br />用户，回归游戏即可在3种回归大礼包中选择1份进行领取。</p>
+					<div class="regression_bx1 c">
+						<div class="fl reg_bx">
+							<span class="sm_tit1 sp">圣诞回归大礼包</span>
+							<img src="ossweb-img/pic_z.png" width="237" height="134" alt="" />
+							<a href="javascript:;" class="btn_xz sp"></a>
+						</div>
+						<a href="http://speed.qq.com/cp/a20171129christmas/index.htm" class="fr bzd">
+						</a>
+					</div>
+					<div class="bx3">
+						<h2 class="tit2"></h2>
+						<p class="txt2">活动期间内，所有成功进行召回的用户，在12月23日<br />和1月1日当天登录游戏还可以领取小橘子的双“蛋”专属礼！</p>
+						<h3 class="djs_txt">距离12月23日/1月1日 还剩：</h3>
+						<p class="s_time">
+							<span class="sp time_1  days" >00</span>
+							<span class="unit">天</span>
+							<span  class="sp time_1 hour"> 00</span>
+							<span class="unit">时</span>
+							<span class="sp time_1 minutes" >00</span>
+							<span class="unit">分</span>
+							<span class="sp time_1 second" >00</span>
+							<span class="unit">秒</span>
+						</p>
+						<div class="c props_bx pr">
+							<img src="ossweb-img/pic8.png" width="146" height="158" alt="" class="fl" />
+							<img src="ossweb-img/pic9.png" width="146" height="158" alt="" class="fr" />
+							<span class="pa txt_xz">点券*1223</span>
+							<span class="pa txt_xz1">点券*1223</span>
+						</div>
+						<a href="javascript:;" class="btn_lq sp"></a>
+						<div class="prizes_bx">
+							<h3 class="tit3">12月23日/1月1日还有更多奖励等你来拿</h3>
+							<ul class="c prizes">
+								<li class="list1">
+									<img src="ossweb-img/pic10.png"width="79" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">1225Q币</span>
+								</li>
+								<li class="list2">
+									<img src="ossweb-img/pic11.png"width="79" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">A车-浴火凤凰 <br /> （永久）</span>
+								</li>
+								<li class="list3">
+									<img src="ossweb-img/pic12.png"width="79" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">A车-黑魔爵士<br />（永久）</span>
+								</li>
+								<li class="list1">
+									<img src="ossweb-img/pic24.png"width="79" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">花样交响乐<br />（永久）</span>
+								</li>
+								<li class="list2">
+									<img src="ossweb-img/pic14.png"width="93" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">圣诞雪人套装 <br />（永久）</span>
+								</li>
+								<li class="list3">
+									<img src="ossweb-img/pic15.png"width="79" height="53" class="pic1" alt="" />
+					 				<span class="pic_name">圣诞雪花羽翼<br />（永久）</span>
+								</li>
+							</ul>
+							<a href="javascript:;" class="travel_to sp"></a>
+						</div>
+					</div>
+					<div class="login_lj pr">
+						<div id="timer"></div>
+						<span class="icon_a sp pa"></span>
+						<span class="icon_b sp pa"></span>
+						<h2 class="tit7"></h2>
+						<ul class="pic_bx1">
+					 		<li class="list">
+					 			<span class="txt_n">累计登录2天</span>
+					 			<img src="ossweb-img/pic18.png" width="73" height="70" alt="" class="pic" />
+					 			<span class="txt_n1">糖果礼包</span>
+					 			<a href="javascript:;" class="btn_Pick ">领 取</a>
+					 		</li>
+					 		<li class="list">
+					 			<span class="txt_n">累计登录3天</span>
+					 			<img src="ossweb-img/pic19.png" width="73" height="70" alt="" class="pic" />
+					 			<span class="txt_n1">改装礼包</span>
+					 			<a href="javascript:;" class="btn_Pick ">领 取</a>
+					 		</li>
+					 		<li class="list">
+					 			<span class="txt_n">累计登录4天</span>
+					 			<img src="ossweb-img/pic20.png" width="73" height="70" alt="" class="pic" />
+					 			<span class="txt_n1">金盾紫霞羽翼（30天）</span>
+					 			<a href="javascript:;" class="btn_Pick ">领 取</a>
+					 		</li>
+					 		<li class="list">
+					 			<span class="txt_n">累计登录5天</span>
+					 			<img src="ossweb-img/pic21.png" width="73" height="70" alt="" class="pic" />
+					 			<span class="txt_n1">A车-幻橙荣耀（15天）</span>
+					 			<a href="javascript:;" class="btn_Pick ">领 取</a>
+					 		</li>
+					 		<li class="list">
+					 			<span class="txt_n">累计登录6天</span>
+					 			<img src="ossweb-img/pic22.png" width="73" height="70" alt="" class="pic" />
+					 			<span class="txt_n1">紫霞之韵发饰（永久）</span>
+					 			<a href="javascript:;" class="btn_Pick ">领 取</a>
+					 		</li>
+					 		<li class="list">
+					 			<span class="txt_n">累计登录7天</span>
+					 			<img src="ossweb-img/pic23.png" width="73" height="70" alt="" class="pic" />
+					 			<span class="txt_n1">紫霞之韵礼服(永久)</span>
+					 			<a href="javascript:;" class="btn_Pick ">领 取</a>
+					 		</li>
+					 	</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="dialog pr" id="test1" style="display:none">
+    <div class="dia-con1 pa">
+    	<h3 class="txt_tit1">我的奖品</h3>
+    	<p class="tips">温馨提示：虚拟道具奖品将在24小时内发到您的游戏仓库，
+请耐心等候，谢谢您的理解与支持！</p>
+		<table class="tab" border="1">
+			<thead class="th">
+				<tr>
+					<th>获奖时间</th>
+					<th>获奖大区</th>
+					<th>所获奖励</th>
+				</tr>
+			</thead>
+			<tbody class="tb">
+				<tr>
+					<td>2017 11 20</td>
+					<td>陕西一区</td>
+					<td>神秘礼包</td>
+				</tr>
+				<tr>
+					<td>2017 11 20</td>
+					<td>陕西一区</td>
+					<td>神秘礼包</td>
+				</tr>
+				<tr>
+					<td>2017 11 20</td>
+					<td>陕西一区</td>
+					<td>神秘礼包</td>
+				</tr>
+				<tr>
+					<td>2017 11 20</td>
+					<td>陕西一区</td>
+					<td>神秘礼包</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="btn_bx1 c">
+			<a href="javascript:;" class="prev fl">上一页</a>
+			<a href="javascript:;" class="next fr">下一页</a>
+		</p>
+		<a class="dia-close pa " href="javascript:" title="关闭">&times;</a>
+    </div>
+</div>
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script> 
+<script src="//ossweb-img.qq.com/images/js/login/loginmanagerv3.js" charset="gb2312"></script>
+<script src="//ossweb-img.qq.com/images/js/mobile_build/milo.js"></script>
+<script src="snowfall.jquery.js"></script>
+<script>
+$('.share').click(function(){
+	$('.dialog').show()
+})
+$('.dia-close,.dialog').click(function(){
+	$('.dialog').hide()
+})
+$('.btn_old').click(function(){
+	$(this).addClass('on_btn_old').siblings().removeClass('on_btn_new')
+	$('.swc_bx').eq(0).show().siblings('.swc_bx').hide()
+})
+$('.btn_new').click(function(){
+	$(this).addClass('on_btn_new').siblings().removeClass('on_btn_old')
+	$('.swc_bx').eq(1).show().siblings('.swc_bx').hide()
+})
+</script>
+<script>
+	var random_old=[];   //随机生成不重复1-20数组 图片名
+	var random_now=0;
+	var restSum=1;  //图片文件夹名
+	var $ul=$('#list');
+	var $card=$ul.children('li');
+	var $start=$('#start');
+	var $rest=$('#rest');
+	var one=true; //在动画和自动抽奖后不可鼠标点击抽奖
+	$start.on('click',function(){
+		animatefun(true);
+		return false;
+	});
+	var animatefun=function(b){
+		one=false;   //动画开始后用户不可自己选
+		$card.removeClass('flip cardjap');
+		$card.addClass('cardjap');
+		setTimeout(function(){
+			$card.removeClass('cardjap');
+			var r=Math.floor(Math.random()*20);
+				if(b!==false){
+					$card.removeClass('flip');
+					$card.eq(r).addClass('flip');//展示得到的道具
+				}else{
+					one=true; //更换奖励后用户可以自己选、、重置
+				}
+		},1200)
+	};
+</script>
+<script>
+	
+	var time_r = setInterval(function(){
+		var Date_t = new Date(2017,11,25,00,00,00);
+	    Date_a = new Date(),
+	  	g_time = Date_a.getTime()/1000,
+	  	t_time = Date_t.getTime()/1000;
+		s_time = t_time-g_time,
+	  	day_on = Math.floor(s_time/3600/24),
+	  	hours_on = Math.floor(s_time/3600%24),
+	  	minutes_on = Math.floor(s_time/60%60),
+	  	seconds_on = Math.floor(s_time%60)
+	  	if(s_time <= 0){
+			return 0;
+		}
+	  	if(seconds_on<=0){
+	  		clearInterval(time_r)
+	  	}
+	  	if(day_on<10){
+	  		$('.days').html('0'+day_on)
+	  	}else{
+	  		$('.days').html(day_on)
+	  	}
+	  	if(hours_on<10){
+	  		$('.hour').html('0'+hours_on)
+	  	}else{
+	  		$('.hour').html(hours_on)
+	  	}
+	  	if(minutes_on<10){
+	  		$('.minutes').html('0'+minutes_on)
+	  	}else{
+	  		$('.minutes').html(minutes_on)
+	  	}
+	  	if(seconds_on<10){
+	  		$('.second').html('0'+seconds_on)
+	  	}else{
+	  		$('.second').html(seconds_on)
+	  	}
+	},1000)
+
+
+
+/*飘雪*/
+$(document).snowfall('clear');
+$('.content').snowfall({
+	image: "//game.gtimg.cn/images/speedm/act/a20171130sdhd/xh.png",
+	maxSpeed : 1,
+	flakeCount:10,
+	minSize: 5,
+	maxSize: 14
+});
+</script>
+
+<script>
+var winw=$(window).width(),
+winh=$(window).height(),
+scale=winw/375;
+autoScale(scale);
+$(window).resize(function(){
+	winw=$(window).width();
+	winh=$(window).height();
+	scale=winw/375;
+	autoScale(scale);
+});
+function autoScale(is){
+	$('.wrap').css({
+		'width':'375px',
+//		'overflow':'hidden',
+		'-webkit-transform':'scale('+is+')',
+		'transform':'scale('+is+')',
+		'-webkit-transform-origin':'0px 0px 0px',
+		'transform-origin':'0px 0px 0px'
+	});
+	
+}	
+          //登陆
+        function login() {
+            parent.need("biz.login", function (LoginManager) {
+                LoginManager.login();
+            });
+
+        };
+        function logout() {
+            parent.need("biz.login", function (LoginManager) {
+                LoginManager.logout();
+            });
+        };
+        LoginManager.checkLogin(function () {
+            if ($E("#login_nickname_span")) {
+                LoginManager.getNickName(function (loginInfo) {
+                    if (loginInfo.isLogin) {
+                        $E("#login_nickname_span").innerHTML = loginInfo.nickName;
+                    }
+                });
+            }
+
+        });
+</script>
+
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/TGMobileShare/TGMobileShare.min.js"></script>
+<script>
+   TGMobileShare({
+   shareTitle:'【QQ飞车】圣诞壕礼派送中！', //不设置或设置为空时，页面有title，则调取title
+   shareDesc:'【QQ飞车】圣诞壕礼派送中！', //不设置或设置为空时，页面有Description，则调取Description
+   shareImgUrl:'http://game.gtimg.cn/images/speedm/act/a20171130sdhd/share.jpg', //分享图片尺寸200*200，且填写绝对路径
+   shareLink:'', //分享链接要跟当前页面同域名(手Q分享有这个要求) ,不设置或设置为空时，默认调取当前URL
+   actName:'a20171130sdhd' //点击流命名，用于统计分享量，专题一般采用目录名称如a20151029demo
+   });
+//此段代码不能放到外链JS中，
+var setSite={ //设置网站属性
+ siteType:"a20171130sdhd", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+ pageType:"index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+ pageName:"首页", //必填项:页面中文名
+ osact:0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+ ingame:0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+ stayTime:0 //选填项:是否需要统计停留时长boolean；默认是0
+}
+if(typeof(pgvMain)=='function')pgvMain();//千万不能忘记！
+</script>
+</body>
+</html>

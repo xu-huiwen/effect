@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>IE6复制字</title>
+<style type="text/css">
+* {margin:0;padding:0;border:0;}
+.c:before,.c:after{content:"";display:table}
+.c:after{clear:both}
+.c{zoom:1}
+.main {width:1000px;margin:0 auto;}
+.mt20 {margin-top:20px;}
+
+.box {width:600px;height:200px;border:1px solid #f00;}
+	.box a {float:left;display:block;width:200px;height:100px;background-color:#ff0;text-decoration:none;color:#f00;}
+.fix {width:603px;}
+</style>
+</head>
+
+<body>
+<div class="main">
+	<div class="box c">
+		<a href="###">这里是一些文字</a>
+		<a href="###">这里是一些文字</a>
+		<a href="###">这里是一些文字</a>
+	</div>
+	<h2 class="mt20">解决方法</h2>
+	<p>父元素宽度-浮动元素总宽度>=3px</p>
+	<div class="box c fix mt20">
+		<a href="###">这里是一些文字</a>
+		<a href="###">这里是一些文字</a>
+		<a href="###">这里是一些文字</a>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>classie.js</title>
+</head>
+<body>
+	<div id="box1">box1</div>
+	<div id="box2" class="box2"></div>
+<script src="classie.js"></script>
+<script src="mini.js"></script>
+<script>
+var elem1 = mini('#box1')[0],
+	elem2 = mini('#box2')[0]
+classie.add(elem1,'box1');
+console.log(classie.has(elem2,'box2'));
+classie.remove(elem2,'box2');
+document.getElementById('box1').onclick = function() {
+	classie.toggle(elem1,'box1');
+}
+</script>
+</body>
+</html>

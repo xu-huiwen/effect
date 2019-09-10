@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="gb2312">
+	<title>水平滚动</title>
+	<style>
+		/*Reset*/
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		.wrap {width: 100%;height: 600px;position: relative;overflow: hidden;min-width: 1000px;margin: 0 auto}
+		.box {width: 1600px;height: 600px;position: absolute;}
+			.box1 {background-color: #fecfcf;}
+			.box2 {background-color: #feebcf;}
+			.box3 {background-color: #eafecf;}
+			.box4 {background-color: #cffef2;}
+			.box5 {background-color: #cfd5fe;}
+			.box6 {background-color: #e9cffe;}
+			.box7 {background-color: #fecfd9;}
+
+		.nav {width: 1000px;margin: 0 auto;}
+		.on1,.on2,.on3,.on4,.on5,.on6,.on7 {color: #f00;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div id="box1" class="box1 box"></div>
+		<div id="box2" class="box2 box"></div>
+		<div id="box3" class="box3 box"></div>
+		<div id="box4" class="box4 box"></div>
+		<div id="box5" class="box5 box"></div>
+		<div id="box6" class="box6 box"></div>
+		<div id="box7" class="box7 box"></div>
+	</div>
+	<div class="nav" id="nav">
+	    <div class="nav_box">
+	        <a class="a1 on1" name="1" href="javascript:" onclick="mover.move('box1',0,this)">1</a>
+	        <a class="a2" name="2" href="javascript:" onclick="mover.move('box2',100,this)">2</a>
+	        <a class="a3" name="3" href="javascript:" onclick="mover.move('box3',200,this)">3</a>
+	        <a class="a4" name="4" href="javascript:" onclick="mover.move('box4',300,this)">4</a>
+	        <a class="a5" name="5" href="javascript:" onclick="mover.move('box5',400,this)">5</a>
+	        <a class="a6" name="6" href="javascript:" onclick="mover.move('box6',500,this)">6</a>
+	        <a class="a7" name="7" href="javascript:" onclick="mover.move('box7',600,this)">7</a>
+	        <span id="span"></span>
+	        <div class="sign" id="sign" style="left:0"></div>
+	    </div>
+		<a class="left" id="left" href="javascript:" onclick="mover.arrow(-1)">&laquo;</a>
+		<a class="right" id="right" href="javascript:" onclick="mover.arrow(1)">&raquo;</a>
+	</div>
+<script>
+	var boxs = [],
+	    as = document.getElementById("nav").getElementsByTagName("a"),
+	    per = 32,
+	    per2 = 20,
+	    per_r = 5,
+	    cliHeight, cliWidth, divn = 1600 / 100,
+	    ostart, page_start, page, cs2, 
+	    sign = document.getElementById("sign"),
+	    left = document.getElementById("left"),
+	    right = document.getElementById("right");
+	for(var ii = 1; ii < 8; ii++) {
+	    boxs.push(document.getElementById("box" + ii));
+	}
+	var mover = {
+	    where: function() {},
+	    oxystart: function() {},
+	    oxy: function() {},
+	    move: function() {},
+	    ff: function() {},
+	    ff2: function() {},
+	    pages: function() {},
+	    nav_on: function() {},
+	    arrow: function() {}
+	}
+	mover.where = function(e) {
+	    return e.style.cssText.split(" ")[1].replace(new RegExp("px", "g"), "").replace(new RegExp(";", "g"), "") - 0
+	};
+	mover.oxystart = function() {
+	    cliHeight = document.documentElement.clientHeight || document.body.clientHeight;
+	    cliWidth = document.documentElement.clientWidth || document.body.clientWidth;
+	    ostart = (cliWidth / 2 - 800);
+	    for(var i = 0; i < boxs.length; i++) {
+	        boxs[i].style.left = ostart + 1600 * i + "px";
+	    }
+	}
+	mover.oxy = function(n) {
+	    cliHeight = document.documentElement.clientHeight || document.body.clientHeight;
+	    cliWidth = document.documentElement.clientWidth || document.body.clientWidth;
+	    onow = (cliWidth / 2 - 800);
+	    re_n = Math.floor(onow - ostart);
+	    ostart = onow;
+	    for(var i = 0; i < boxs.length; i++) {
+	        boxs[i].style.left = mover.where(boxs[i]) + re_n + "px"
+	    }
+	}
+	mover.oxystart();
+	window.onresize = mover.oxy;
+	mover.move = function(e, ox, self) {
+	    if(typeof e == "string") e = document.getElementById(e);
+	    move_l = ostart - mover.where(e);
+	    per_l = Math.floor(move_l / per);
+	    other = -(per_l * per - move_l);
+	    for(var i = 0; i < boxs.length; i++) {
+	        mover.ff(boxs[i], per_l, other, per);
+	        as[i].className = as[i].className.replace(new RegExp("\\b\\s*" + "on" + as[i].name + "\\b\\s*", "g"), "");
+	    }
+	    move_n = ox - mover.where(sign);
+	    per_n = Math.floor(move_n / per2);
+	    other2 = move_n - per_n * per2;
+	    mover.ff(sign, per_n, other2, per2);
+	    self.className += " on" + self.name
+	}
+	mover.ff = function(e, per_w, other, ts) {
+	    var times = ts;
+	    (function() {
+	        e.style.left = mover.where(e) + per_w + "px";
+	        times--;
+	        if(times > 8) setTimeout(arguments.callee, 10);
+	        else if(times > 5) setTimeout(arguments.callee, 20);
+	        else if(times > 2) setTimeout(arguments.callee, 30);
+	        else if(times > 0) setTimeout(arguments.callee, 40);
+	        else if(!other == 0) {
+	            setTimeout(function() {
+	                e.style.left = mover.where(e) + other + "px";
+	            }, 50)
+	        } else return;
+	    })();
+	}
+	mover.ff2 = function(e, per_w, ts) {
+	    var times = ts;
+	    (function() {
+	        e.style.left = mover.where(e) + per_w + "px";
+	        times--;
+	        if(times > 0) setTimeout(arguments.callee, 20);
+	        else return;
+	    })();
+	}
+	mover.pages = function() {
+	    page_start = (1600 - mover.where(boxs[0])) / 1600 - 0.5;
+	    page = Math.abs(page_start);
+	    return nav_cs = Math.floor(page_start)
+	}
+	mover.nav_on = function() {
+	    for(var i = 0; i < as.length; i++) {
+	        as[i].className = as[i].className.replace(new RegExp("\\b" + "on" + as[i].name + "\\b\\s*", "g"), "");
+	    }
+	    as[mover.pages()].className += " on" + as[mover.pages()].name;
+	}
+	mover.arrow = function(n) {
+	    mover.pages();
+	    cs2 = page - nav_cs;
+	    if(cs2 < 0.2) {
+	        if(n < 0) arow(nav_cs - 1);
+	        else arow(nav_cs);
+	    } else if(cs2 > 0.7) {
+	        if(n < 0) arow(nav_cs);
+	        else arow(nav_cs + 1);
+	    } else arow(nav_cs + n);
+
+	    function arow(cs) {
+	        if(cs < 0) cs = 0;
+	        else if(cs > 6) cs = 6;
+	        mover.move(boxs[cs], 100 * cs, as[cs])
+	    }
+	}
+	var scrollFunc = function(e) {
+	        e = e || window.event;
+	        if(e.wheelDelta) {
+	            if(e.wheelDelta > 0) roll(false);
+	            else roll(true)
+	        } else if(e.detail) {
+	            if(e.detail > 0) roll(false);
+	            else roll(true)
+	        }
+	        if(e.preventDefault) e.preventDefault();
+	        else return false;
+
+	        function roll(br) {
+	            if(!br) {
+	                if(mover.where(sign) < 10) return;
+	            } else {
+	                if(mover.where(sign) > 590) return;
+	            }
+	            if(br) {
+	                roll_m_d = -10 * divn;
+	                roll_m_n = 10;
+	            } else {
+	                roll_m_d = 10 * divn;
+	                roll_m_n = -10;
+	            }
+	            for(var i = 0; i < boxs.length; i++) {
+	                mover.ff2(boxs[i], Math.floor(roll_m_d / per_r), per_r)
+	            };
+	            mover.ff2(sign, Math.floor(roll_m_n / per_r), per_r);
+	            mover.nav_on()
+	        }
+	    }
+	// 鼠标滚轮触发
+	// if(document.addEventListener) {
+	//     document.addEventListener('DOMMouseScroll', scrollFunc, false);
+	// }
+	// window.onmousewheel = document.onmousewheel = scrollFunc;
+</script>
+</body>
+</html>

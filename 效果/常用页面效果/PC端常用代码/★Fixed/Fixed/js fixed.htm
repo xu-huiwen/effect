@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js fixed</title>
+	<style>
+		.float{ width:100px;height:100px;background-color:#f00;position:fixed;right:0;top:150px;_position:absolute;}
+		* html {background-image:url(about:blank);background-attachment:fixed;}/*解决 ie6 Fixed闪动问题*/
+	</style>
+</head>
+<body>
+	<div style="height:2000px;"></div>
+	<div class="float" id="float"></div>
+<script>
+	function gE(e) {
+	    return (typeof (e) == "object") ? e : document.getElementById(e)
+	}
+	function addEventSimple(obj, evt, fn) {
+		if (obj.addEventListener) obj.addEventListener(evt, fn, false);
+		else if (obj.attachEvent) obj.attachEvent('on' + evt, fn)
+	}
+	function fix() {
+		if (!-[1, ] && !window.XMLHttpRequest) {
+			var fixE = gE("float"),
+				sTop = document.body.scrollTop || document.documentElement.scrollTop,
+				top = (sTop + 150) + "px";
+			fixE.style.cssText = "position:absolute;top:" + top;
+		}
+	}
+	addEventSimple(window, "load", fix);
+	addEventSimple(window, "scroll", fix);
+</script>
+</body>
+</html>

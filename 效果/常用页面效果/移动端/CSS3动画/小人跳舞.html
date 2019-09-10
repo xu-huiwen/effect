@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>小人跳舞</title>
+<style type="text/css">
+*{padding:0;margin:0;}
+body{background-color:#FDFDFD;}
+
+.dikamon, .dikamon-coat{width:82px;height:102px;}
+.dikamon {margin: 100px auto;position: relative;background:url(http://tid.tenpay.com/labs/dikamon/dikamon.png) no-repeat;}
+.dikamon-coat {position:absolute;}
+.dikamon-hand-l, .dikamon-hand-r{position:absolute;width:16px;height:16px;border:4px solid #333333;background-color:#CCCCCC;
+	-webkit-border-radius:16px;-moz-border-radius:16px;border-radius:16px;
+}
+.dikamon-hand-l{left:-29px;top:54px;}
+.dikamon-hand-r{right:-29px;top:54px;}
+.dikamon-leg-l, .dikamon-leg-r{z-index:3;position:absolute;width:4px;height:11px;bottom:-10px;background-color:#333333;
+	-webkit-transform-origin:center top;
+}
+.dikamon-leg-l{left:28px;}
+.dikamon-leg-r{right:28px;}
+.dikamon-foot-l, .dikamon-foot-r{position:absolute;width:100%;height:11px;bottom:-10px;background-color:#333333;
+	-webkit-transform-origin:center top;
+}
+
+.dikamon2{
+	-webkit-animation:dikamon2-body 2s linear infinite;
+}
+.dikamon2 .dikamon-hand-l{
+	-webkit-animation:dikamon2-hand-l 2s linear infinite;
+}
+.dikamon2 .dikamon-hand-r{
+	-webkit-animation:dikamon2-hand-r 2s linear infinite;
+}
+.dikamon2 .dikamon-leg-l{
+	-webkit-animation:dikamon2-leg-l 2s linear infinite;
+}
+.dikamon2 .dikamon-foot-l{
+	-webkit-animation:dikamon2-foot-l 2s linear infinite;
+}
+.dikamon2 .dikamon-leg-r{
+	-webkit-animation:dikamon2-leg-r 2s linear infinite;
+}
+.dikamon2 .dikamon-foot-r{
+	-webkit-animation:dikamon2-foot-r 2s linear infinite;
+}
+
+@-webkit-keyframes dikamon2-hand-l {
+0%,10%,40%,60%,90%,100%{top:38px;left:-29px}
+15%,35%,65%,85%{top:54px;left:-24px}
+}
+@-webkit-keyframes dikamon2-hand-r {
+0%,10%,40%,60%,90%,100%{top:38px;right:-29px}
+15%,35%,65%,85%{top:54px;right:-24px}
+}
+@-webkit-keyframes dikamon2-leg-l {
+0%,10%,40%,60%,90%,100%{height:11px;bottom:-10px;-webkit-transform:rotate(0)}
+15%,35%{height:14px;bottom:-12px;-webkit-transform:rotate(28deg)}
+}
+@-webkit-keyframes dikamon2-foot-l {
+0%,10%,40%,60%,65%,85%,90%,100%{height:11px;bottom:-10px;-webkit-transform:rotate(0)}
+15%,35%{height:14px;bottom:-12px;-webkit-transform:rotate(90deg)}
+}
+@-webkit-keyframes dikamon2-leg-r {
+0%,10%,15%,35%,40%,60%,90%,100%{height:11px;bottom:-10px;-webkit-transform:rotate(0)}
+65%,85%{height:14px;bottom:-12px;-webkit-transform:rotate(-28deg)}
+}
+@-webkit-keyframes dikamon2-foot-r {
+0%,10%,15%,35%,40%,60%,90%,100%{height:11px;bottom:-10px;-webkit-transform:rotate(0)}
+65%,85%{height:14px;bottom:-12px;-webkit-transform:rotate(-90deg)}
+}
+@-webkit-keyframes dikamon2-body {
+0%,10%,40%,60%,90%,100%{bottom:20px}
+15%,35%,65%,85%{bottom:15px}
+}
+</style>
+</head>
+<body>
+<div class="dikamon dikamon2">
+	<div class="dikamon-hand-l"></div>
+	<div class="dikamon-hand-r"></div>
+	<div class="dikamon-leg-l">
+		<div class="dikamon-foot-l"></div>
+	</div>
+	<div class="dikamon-leg-r">
+		<div class="dikamon-foot-r"></div>
+	</div>
+</div>
+</body>
+</html>

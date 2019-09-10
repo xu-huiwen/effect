@@ -1,0 +1,6 @@
+ .类名 {
+        background: url(png图片名.png);
+        _background-image:none;
+        _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='png图片名.png',sizingMethod='crop');
+    }
+

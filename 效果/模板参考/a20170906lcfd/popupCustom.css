@@ -1,0 +1,27 @@
+body{background: none}
+.popupred{background: url(ossweb-img/bgpop.png) no-repeat;width: 970px;height: 586px;}
+.popupclose{text-indent: 999em;right: 2px;}
+.tabbd{background-color: transparent}
+.navli{background: url(//game.gtimg.cn/images/cf/cp/a20170906lcfd/bgnav.jpg) no-repeat;width: 726px;height: 44px;margin: 0 auto;}
+.navli li{width: 240px;}
+.tabhd{padding-top: 20px;}
+.popupred .tabhd li b{border-top-color:#6f1212}
+.popup-red .tabhd .cur b+b{border-top-color:#ffd271}
+.popupred .tabhd .cur b{border-top-color:#ffd271}
+.popupred .tabhd li b+b{border-top-color:#6f1212}
+.popupred .tabhd li i{border-top-color:#ffd271}
+.popupred .tabhd li{background-color: #6f1212;}
+.popupred .tabhd .cur{border-top-color:#ffd271;background-color: #FFD271}
+.tabhd .cur{height: 44px;}
+.tabhd li{height: 44px;color: #c0a7a7;bottom: 0;font-weight: normal;font-size: 18px;}
+.loginbox{color: #fff;}
+.loginbox a{color: #ffd271;}
+#logined{color:white !important;}
+.acceptintro{color: #FFFFFF;}
+.popupred .acceptbtn{background: linear-gradient(to bottom,  #febd4d 0%,#fdce6d 100%);}
+.popupred .acceptbtn {filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#febd4d', endColorstr='#fdce6d',GradientType=0 )}
+.acceptbtn{width: 249px;height: 60px;border-radius:5px;color: #6F1212;}
+.acceptbtn .d1{width: 0;height: 0;}
+.acceptbtn .d1 b{border: none;}
+.acceptbtn .d2 i{border: none;}
+.acceptbtn .d2 b{border: none;}

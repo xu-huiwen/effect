@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="gbk">
+	<title>弹窗视频</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		/* 视频弹窗 */
+		.pop {display:none;width:800px;height:500px;border:5px solid #1d1c1a;position:relative;background-color:#1d1c1a;}
+			.pop-close {display:block;width:40px;height:40px;text-align:center;line-height:40px;background-color:#1d1c1a;position:absolute;right:-45px;top:-5px;font-family:Tahoma;font-size:30px;color:#aaa;text-decoration: none;}
+			.pop-close:hover {color:#fff;text-decoration:none;}
+			.cd {left:0;top:0;z-index:20;position:absolute;width: 800px;height: 500px;}
+			.ts {text-align:center;width:100%;top:50%;margin-top:-9px;color:#fff;z-index:10;position:absolute;}
+	</style>
+</head>
+<body>
+<a href="javascript:popVideo('q0011iyvdam')">点击弹出视频</a>
+
+<!-- 视频弹窗 -->
+<div class="pop" id="pop-video">
+    <div id="cd" class="cd">
+    </div>
+    <p class="ts">稍等片刻，载入中…</p>
+    <a href="javascript:hideVideo();" class="pop-close" title="关闭">&times;</a>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/milo/milo.js"></script>
+<script src="http://qzs.qq.com/tencentvideo_v1/js/tvp/tvp.player.js" charset="utf-8"></script>
+<script>
+	function TGDialogS(e){
+	    need("biz.dialog-min",function(Dialog){
+	        Dialog.show({
+	            id:e,
+	            bgcolor:'#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+	            opacity:70      //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+	        });
+	    });
+	}
+	function closeDialog(){
+	    need("biz.dialog-min",function(Dialog){
+	        Dialog.hide();
+	    });
+	}
+	function playVideo(vid) {
+		var video = new tvp.VideoInfo();
+		video.setVid(vid);
+		var player = new tvp.Player('100%', '100%');
+		player.setCurVideo(video);
+		player.addParam("autoplay","1");
+		player.addParam("wmode","opaque");
+		player.addParam("flashskin", "http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf");
+		player.write("cd");
+	}
+	function popVideo(vid) {
+		TGDialogS('pop-video')
+		playVideo(vid);
+	}
+	function hideVideo() {
+		var flv_s = document.getElementById("video");
+		if (flv_s){flv_s.innerHTML= "";}
+		closeDialog();
+	}
+</script>
+</body>
+</html>

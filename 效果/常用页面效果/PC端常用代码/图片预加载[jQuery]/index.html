@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery图片预加载</title>
+<style type="text/css">
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+q:before,q:after{content:'';}
+fieldset,img,abbr,acronym{border:0;}
+
+body {font:12px/1.5 \5FAE\8F6F\96C5\9ED1,tahoma,\5b8b\4f53,sans-serif;}
+a {text-decoration:none;overflow:hidden;}
+a:hover {text-decoration:underline;}
+html,body,.wrap,.container,.loading,.footer{width:100%;height:100%;overflow:hidden;min-width:1000px;}
+.loading {position:absolute;left:0;top:0;filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#7F000000', endColorstr='#7F000000');background:rgba(0,0,0,0.5);z-index:9999;}
+:root .loading{filter:none;}
+.loading-ct {float:left;width:200px;height:30px;line-height:30px;text-align:center;color:#fff;position:absolute;left:50%;top:50%;margin-left:-100px;margin-top:-15px;font-size:14px;}
+.loading-ct img {display:inline-block;vertical-align:middle;margin-right:10px;}
+
+.main {display: none;text-align: center;font-size: 100px;}
+</style>
+</head>
+<body>
+<div class="loading">
+	<div class="loading-ct">
+		<img src="images/load.gif" alt="">
+		<span id="percentShow">0</span>%
+	</div>
+</div>
+<div class="main">
+	内容
+</div>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.imgpreload.min.js"></script>
+<script type="text/javascript">
+	preLoadImg();
+
+	function preLoadImg() {
+		var imgNum = 0,
+			imgPath = "http://ossweb-img.qq.com/images/chanpin/ava/public/a20140805mrlc/",
+			images = ['bg01.jpg', 'bg02.jpg', 'bg03.jpg', 'bg04.jpg', 'bg05.jpg'];
+		for (var i = 0; i < images.length; i++) {
+			images[i] = imgPath + images[i];
+		};
+
+
+		$.imgpreload(images, {
+			each: function() {
+				var status = $(this).data('loaded') ? 'success' : 'error';
+				if (status == "success") {
+					var v = (parseFloat(++imgNum) / images.length).toFixed(2);
+					$("#percentShow").html(Math.round(v * 100));
+				}
+			},
+			all: function() {
+				$("#percentShow").html("100");
+
+				$(".loading").fadeOut(1000);
+				$(".main").show();
+			}
+		});
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="author" content="Tencent-CP" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="Description" content="腾讯游戏《天天酷跑》轻松好玩、简单时尚。《天天酷跑》时尚Q版角色与酷炫道具的完美结合！滑行玩法让跑酷与众不同！" />
+<meta name="Keywords" content="天天酷跑，天天酷跑官网，天天酷跑游戏，天天酷跑官方，酷跑，天天酷跑手机游戏，天天酷跑手机版" />
+<!-- 设计：cp  | 重构：cp | 创建：2018/08/09 | 更新：| 团队博客：http://tgideas.qq.com/ -->
+<title>全民狂欢 旅信寄情</title>
+<script>
+	function AutoPage(){ 
+		document.documentElement.style.fontSize = document.documentElement.clientWidth * 100 / 640 + 'px';
+	 } ;
+	AutoPage();
+	window.addEventListener('resize',AutoPage,false)  
+</script>
+<link rel="stylesheet" type="text/css" href="//game.gtimg.cn/images/pao/cp/a20180809cardm/comm.css"/>
+</head>
+<body>
+<!--竖屏提示-->
+<div class="w_pop">
+    <div class="w_pop_img"></div>
+    <p class="w_tips">为了更好的体验，请将手机/平板竖起</p>
+</div>
+<!-- 信纸-->
+<div class="letter" id="letter">
+	<img src="//game.gtimg.cn/images/pao/cp/a20180809cardm/end.png" alt="" style="opacity: 0;width: 0;height: 0;" />
+	<div class="letter_cn">
+		<em class="l_icon1"></em>
+		<em class="l_icon2"></em>
+		<em class="l_icon3"></em>
+		<p class="l_txt">“你累不累啊？”<br />“不累。”<br />“可是你都在我心里跑了一天了。”</p>
+	</div>
+</div>
+<div class="wrap">
+	<canvas id="canvas" class="canvas" width="640" height="2000"></canvas>
+	<div class="head">
+		<h1 class="hide">全民狂欢 旅信寄情</h1>
+		<a href="//pao.qq.com" class="logo sp db" ontouchend="PTTSendClick('link','logo','天天酷跑');">天天酷跑</a>
+		<!--小帅图片-->
+		<p class="hd_rw"></p>
+		<!--蝴蝶-->
+		<div class="fly">
+			<em class="fly1"></em>
+			<em class="fly2"></em>
+			<em class="fly3"></em>
+		</div>
+		<!--
+			logo 控制显示隐藏，
+			QQ：q_logo
+			微信：w_logo
+		-->
+		<em class="q_logo sp db" style="display: none;">QQ专属</em>
+		<em class="w_logo sp db">微信专属</em>
+		<!--
+			slogan 控制显示隐藏，
+			QQ：q_slogan
+			微信：w_slogan
+		-->
+		<p class="q_slogan db" style="display: none;">全民狂欢 旅信寄情 Q币天天赢</p>
+		<p class="w_slogan db">全民狂欢 旅信寄情 现金币天天赢</p>
+		<!--瓶子-->
+		<div class="talk_box">
+			<em class="fly4"></em>
+			<em class="fly5"></em>
+			<em class="talk_img"></em>
+			<a href="javascript:pop('#pop_letter');" class="btn_get db" ontouchend="PTTSendClick('btn','btnGet','查看我今日收到的情话');">查看我今日收到的情话</a>
+			<p class="talk_info sp db">查看我今日 收到的情话</p>			
+		</div>
+	</div>
+	<div class="main">
+        <div class="part1">
+        	<h2 class="pr1_tit sp db">稀有奖励</h2>
+        	<ul class="pr1_list c">
+        		<!--手Q奖励 start-->
+        		<li class="li1" style="display: none;">
+        			<img src="//game.gtimg.cn/images/pao/cp/a20180809cardm/pic_gift1_q.png" alt="Q币" />
+        			<p class="gift_name">18Q币</p>
+        		</li>
+        		<!--手Q奖励 end-->
+        		<!--微信奖励 start-->
+        		<li class="li1">
+        			<img src="//game.gtimg.cn/images/pao/cp/a20180809cardm/pic_gift1_w.png" alt="现金" />
+        			<p class="gift_name">18现金</p>
+        		</li>
+        		<!--微信奖励 end-->
+        		<li class="li2">
+        			<em class="l2_icon"></em>
+        			<img src="//game.gtimg.cn/images/pao/cp/a20180809cardm/pic_gift2.png" alt="酷跑明信片" />
+        			<p class="gift_name1">酷跑明信片×1</p>
+        		</li>
+        		<li class="li3">
+        			<img src="//game.gtimg.cn/images/pao/cp/a20180809cardm/pic_gift3.png" alt="钻石" />
+        			<p class="gift_name">钻石×3888</p>
+        		</li>
+        	</ul>
+        	<a href="javascript:;" class="btn_game sp" ontouchend="PTTSendClick('btn','btnGame','下载游戏');">下载游戏</a>
+        </div>
+        <div class="part2">
+        	<h2 class="pr2_tit sp db">小帅心意  轻松领</h2>
+        	<p class="num"><a href="javascript:;">查看我的小帅心意数</a></p>
+        	<ul class="mask_list c">
+        		<li class="mask1">
+        			<h3 class="hide">每日分享好友</h3>
+        			<p class="mask_btn">
+        				<a href="javascript:pop('#share_img');" class="sp" ontouchend="PTTSendClick('btn','btnShare','分享');">分享</a>
+        				<a href="javascript:;" class="sp" ontouchend="PTTSendClick('btn','btnLq1','领取');">领取</a>
+        			</p>
+        		</li>
+        		<li class="mask2">
+        			<h3 class="hide">每日跑局1场</h3>
+        			<p class="mask_btn">
+        				<a href="javascript:;" class="sp" ontouchend="PTTSendClick('btn','btnLq2','领取');">领取</a>
+        			</p>
+        		</li>
+        	</ul>
+        </div>
+        <div class="part3">
+        	<h2 class="pr3_tit sp db">小帅藏宝屋 欢迎你的来临</h2>
+        	<p class="num">消耗小帅心意*2可进行一次抽奖哦</p>
+        	<!--
+        		抽奖 控制显示隐藏，
+        		微信抽奖 class 为 lottery_w
+        		手Q抽奖 class  为 lottery_q
+        	-->
+        	<div id="lottery" class="lottery_w"></div>
+        </div>
+        <a href="javascript:pop('#pop_rule');" class="btn_rule sp" ontouchend="PTTSendClick('btn','btnRule','活动规则');">活动规则</a>
+	</div>
+</div>
+<!--情话弹窗-->
+<div class="pop p_letter" id="pop_letter">
+	<a href="javascript:hidePopOk('#pop_letter');" class="pop_close">×</a>
+	<p class="p_l_txt">“你累不累啊？”<br />“不累。”<br />“可是你都在我心里跑了一天了。”</p>
+</div>
+<!--弹窗 分享浮层 pop('#share_img')-->
+<div class="pop share_img" id="share_img">
+	<p class="share_pic"></p>
+</div>
+<!--QQ/微信登录弹窗 pop('#pop_login')-->
+<div class="pop pop1" id="pop_login">
+	<p class="pop_h">您还没有登录哦~<br />使用手机打开此页面并选择登录平台</p>
+	<div class="login_btn">
+		<a href="javascript:;" class="sp" ontouchend="PTTSendClick('btn','btnQQ','QQ登录');"><em class="q_icon sp"></em>QQ登录</a>
+		<a href="javascript:;" class="sp" ontouchend="PTTSendClick('btn','btnWeixin','微信登录');"><em class="w_icon sp"></em>微信登录</a>
+	</div>
+</div>
+<!--活动规则 pop('#pop_rule')-->
+<div class="pop pop1" id="pop_rule">
+	<a href="javascript:hidePopOk('#pop_rule');" class="pop_close">×</a>
+	<p class="pop_h">活动规则</p>
+	<ul class="rule_cn">
+		<li>1.XXXXXXX</li>
+		<li>1.XXXXXXX</li>
+		<li>1.XXXXXXX</li>
+		<li>1.XXXXXXX</li>
+		<li>1.XXXXXXX</li>
+		<li>1.XXXXXXX</li>
+		<li>1.XXXXXXX</li>
+		<li>1.XXXXXXX</li>
+	</ul>
+</div>
+<!--中奖内容 pop('#pop_jl')-->
+<div class="pop pop1" id="pop_jl">
+	<a href="javascript:hidePopOk('#pop_jl');" class="pop_close">×</a>
+	<p class="pop_h1">中奖内容</p>
+	<ul class="gift_cn">
+		<li>1.【游戏物品】x【数量】</li>
+		<li>1.【游戏物品】x【数量】</li>
+		<li>1.【游戏物品】x【数量】</li>
+		<li>1.【游戏物品】x【数量】</li>
+	</ul>
+	<a href="javascript:;" class="btn_sure sp" ontouchend="PTTSendClick('btn','btnQr1','确认');">确认</a>
+</div>
+<!--中奖内容 调用 pop('#pop_gift')-->
+<div class="pop pop1" id="pop_gift">
+	<a href="javascript:hidePopOk('#pop_gift');" class="pop_close">×</a>
+	<p class="pop_h">恭喜您获得[游戏物品]x[数量]~</p>
+	<a href="javascript:;" class="btn_sure sp" ontouchend="PTTSendClick('btn','btnQr2','确认');">确认</a>
+</div>
+<script src="//ossweb-img.qq.com/images/js/mobile_build/util/zepto.js"></script>
+<script src="//game.gtimg.cn/images/js/2018foot/foot.js"></script>
+<script src="//game.gtimg.cn/images/pao/cp/a20180809cardm/particleCanvas.js" type="text/javascript" charset="UTF-8"></script>
+<script src="//game.gtimg.cn/images/js/loteryround/ossweb-img/loteryround.min.js"></script>
+<script type="text/javascript">
+//信纸
+	function lh(){
+		var posy=0;
+		var timer=setInterval(function(){
+			if(Math.abs(posy)>=115.2){
+				posy=-115.20;
+				$('.l_txt').show();
+				$('.letter_cn').css('opacity','1');
+				return;
+			}else{
+				posy-=6.40;
+			}
+			$(".letter").css("background-position",posy+"rem"+" 0");
+		},100)
+	}
+	function lh1(){
+		var posy=0;
+		var timer=setInterval(function(){
+			if(Math.abs(posy)>=253.50){
+				posy=253.50;
+				$('.letter').hide();
+				return;
+			}else{
+				posy-=9.75;
+			}
+			$(".letter.end").css("background-position","0 "+posy+"rem");
+		},100)
+	}
+	lh();
+	setTimeout(function(){
+		
+	},1950);
+	//时间计算,点击任意地方，信纸跑到瓶子里面
+	setTimeout(function(){
+		$('body,#letter').on('touchstart',function(){
+			$('.letter_cn').css('opacity','0 !important');
+			$('.letter').addClass('end');
+			lh1();
+			return;
+		});
+	},1950);
+//抽奖
+	// 转盘初始化
+	// 第一个参数是奖品的个数
+	// 第二个是用来旋转的圆盘（指针不动）
+	var panel=new PanelLotery({
+	    length:8,
+	    el:'#lottery'
+	});
+	$('.panel-btn').on('click', function(event) {
+		PTTSendClick('btn','lottery','抽奖');
+	    event.preventDefault();
+	    if(panel.playing) return;
+	    // 演示用，随机转到奖品n
+	    // 初始的指针右侧开始
+	    // 顺时针方向开始算
+	    // 第一个奖品是n=0
+	    var n=Math.floor(Math.random()*8);
+	    panel.playto(n,function(){
+	        pop('#pop_gift');
+	    });
+	});
+//触碰分享图片隐藏
+	$('#share_img').click(function(){
+		this.style.display = "none";
+		var bgObj = gE("#pop-mask");
+		document.body.removeChild(bgObj);
+	});
+//萤火虫
+	var cimi = {
+	    init: function () {
+	    new particleCanvas("canvas",               [{"type":{"typeName":"image","url":"//game.gtimg.cn/images/pao/cp/a20180809cardm/feather.png"},"number":15,"op":{"min":0.2,"max":0.3},"size":{"min":20,"max":40},"speed":{"min":1,"max":1},"angle":{"value":30,"float":360},"rota":{"value":80,"speed":null,"floatValue":null,"floatSpeed":null},"reIn":"reverseDirection"}]);
+	    }
+	};
+	$(function () {
+	    cimi.init();
+	});
+//弹窗
+	function gE(e) {
+		return document.querySelector(e)
+	}
+	function pop(e) {
+		if (!gE('#pop-mask')) {
+			gE(e).style.display = "block";
+			var popH = gE(e).offsetHeight,
+				popW = gE(e).offsetWidth;
+			gE(e).style.cssText = "position:fixed;left:50%;display:block;top:50%;z-index:999;"+"margin-left:-"+popW/2+"px;"+"margin-top:-"+popH/2+"px;"
+			var bgObj = document.createElement("div");
+			bgObj.setAttribute('id', 'pop-mask');
+			document.body.appendChild(bgObj);
+			var conH = document.body.scrollHeight,
+				viewH = document.documentElement.clientHeight;
+			if (conH > viewH) {
+				gE('#pop-mask').style.height = conH + "px";
+			} else {
+				gE('#pop-mask').style.height = viewH + "px";
+			}
+//			hidePop(e);
+		}
+	}
+	function hidePop(e) {
+		gE('#pop-mask').addEventListener('click', function() {
+			gE(e).style.display = "none";
+			var bgObj = gE("#pop-mask");
+			document.body.removeChild(bgObj);
+		});
+	}
+	function hidePopOk(e) {
+		gE(e).style.display = "none";
+		var bgObj = gE("#pop-mask");
+		document.body.removeChild(bgObj);
+	}
+</script>
+<!--统计代码-->
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script>
+	//此段代码不能放到外链JS中，
+	var setSite={ //设置网站属性 
+	    siteType:"a20180809cardm", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx 
+	    pageType:"index_w", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN 
+	    pageName:"游戏外", //必填项:页面中文名 
+	    project:"other", //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;原生官网base;微社区ingame;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;默认other;
+	    osact:0 //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+	};
+	if(typeof(pgvMain)=='function')pgvMain();//千万不能忘记！
+</script>
+</body>
+</html>

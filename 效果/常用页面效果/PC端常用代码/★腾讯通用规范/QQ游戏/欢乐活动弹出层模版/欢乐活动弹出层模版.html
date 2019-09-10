@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>欢乐活动弹出层模版</title>
+<style>
+/*与提示框无关代码*/
+*{margin:0;padding:0}
+body{font-size:12px}
+.c_popup{margin-top:40px}
+/*//与提示框无关代码*/
+
+/*弹出框*/
+.c_popup{width:490px;line-height:2; position:relative}
+.c_popup em{font-style:normal}
+.c_popup .i_tls_ico{width:57px;height:58px;position:absolute;top:-26px;left:0;background:url(images/act_pp_sp.png) no-repeat 0 0;_background:url(images/act_pp_sp_ie6.png) no-repeat 0 0}
+.c_popup .c_pp_tls{height:32px;margin:0 10px;background:url(images/act_pp_sp.png) repeat-x 0 -59px}
+.c_popup .c_pp_tls h3{height:32px;line-height:32px;padding-left:55px;font-size: 12px;color: white;_position:relative}
+.c_popup .c_pp_tls h3 em{font-weight:normal;font-style:normal;color:#fff}
+.c_popup .c_pp_tls .c_pp_cls{width:34px;height:37px;background:url(images/act_pp_sp.png) no-repeat -61px -21px;_background:url(images/act_pp_sp_ie6.png) no-repeat -61px -21px;position:absolute;right:-5px;top:-5px;_right:0;text-indent:-9999em;overflow:hidden}
+.c_popup .c_pp_tls .c_pp_cls:hover{background-position:-98px -21px}
+.c_popup .c_pp_cnts{color:#747474;border:1px solid #d2d2d2;background:#fff;}
+.c_popup .c_pp_cnts a{color:#de4a2d}
+.c_popup .c_pp_cnts em{color:#DE4A2D;font-weight:bold}
+.c_popup button{text-indent:-9999em;*text-indent:0;line-height:9999em;border:none; cursor:pointer;overflow:hidden}
+/*提示框*/
+.c_popup_msg .c_pp_cnts{padding:30px 80px 30px 140px;}
+.c_popup_msg .c_pp_i_succ{width: 46px;height: 48px;left: 75px;top:70px;position: absolute;background: url(images/act_pp_sp.png) no-repeat 0px -92px;_background: url(images/act_pp_sp_ie6.png) no-repeat 0px -92px;}
+.c_popup_msg .c_pp_i_error{width: 46px;height: 48px;left: 80px;top:70px;position: absolute;background: url(images/act_pp_sp.png) no-repeat -46px -92px;_background: url(images/act_pp_sp_ie6.png) no-repeat -46px -92px;}
+.c_popup_msg .c_pp_i_abnl{width: 46px;height: 48px;left: 75px;top:70px;position: absolute;background: url(images/act_pp_sp.png) no-repeat -86px -92px;_background: url(images/act_pp_sp_ie6.png) no-repeat -86px -92px;}
+.c_popup_msg .c_pp_cnts h4{font-size:14px;color:#de4a2d;}
+.c_popup_msg  .c_pp_btn_c{width: 62px;height: 27px;display:block;margin:15px 0 0 60px;background:url(images/act_pp_sp.png) no-repeat 0 -141px;_background:url(images/act_pp_sp_ie6.png) no-repeat 0 -141px;text-indent:-9999em;overflow:hidden}
+.c_popup_msg  .c_pp_btn_c:hover{background-position:-65px -141px}
+/*个人信息填写*/
+.c_popup_info .c_pp_cnts{padding:40px 90px 40px 150px}
+.c_popup_info .c_pp_cnts p{padding:5px 0}
+.c_popup_info .c_pp_cnts span{width:60px;position:absolute;left:90px;text-align:right;}
+.c_popup_info .c_pp_cnts input{width:100%;border:none;border-bottom:1px solid #c9bda9;outline:none;margin-top:5px}
+.c_popup_info .c_pp_btn_sm{width:83px;height:31px;display:block;margin:10px 0 0 50px;background:url(images/act_pp_sp.png) no-repeat 0 -170px;_background:url(images/act_pp_sp_ie6.png) no-repeat 0 -170px;text-indent:-9999em;overflow:hidden}
+.c_popup_info .c_pp_btn_sm:hover{background-position:0 -202px}
+/*个人获奖列表*/
+.c_popup_history .c_pp_cnts{padding:25px 30px}
+.c_popup_history table{width:100%;border-collapse:collapse;border:1px solid #ebe2d3}
+.c_popup_history th{height:31px;background:#f4eee4;color:#de4a2d;text-align:left}
+.c_popup_history th,.c_popup_history td{border-bottom:1px solid #ebe2d3;}
+.c_popup_history td{height:28px}
+.c_popup_history .t1{padding-left:25px}
+.c_popup_history .pagination a{margin-left:10px}
+.c_popup_history .tips{line-height:24px}
+.c_popup_history .tips .tls{color:#de4a2d}
+
+</style>
+</head>
+
+<body>
+<!-- 提示框 -->	
+<div class="c_popup c_popup_msg">
+	<div class="c_pp_tls">
+		<i class="i_tls_ico"></i>
+    	<h3>提示</h3>
+        <a class="c_pp_cls" href="javascript:FloaterManager.close();">关闭</a>
+    </div>
+	<div class="c_pp_cnts">
+    	<!--正确状态 - 根据实际情况使用-->
+    	<i class="c_pp_i_succ"></i>
+        <!--//正确状态-->
+        <!--错误状态 - 根据实际情况使用-->
+        <i class="c_pp_i_error" style="display:none"></i>
+        <!--//错误状态-->
+        <!--异常状态 - 根据实际情况使用-->
+         <i class="c_pp_i_abnl" style="display:none"></i>
+        <!--//异常状态-->
+		<div><h4>恭喜您</h4><p class="pop_cxt">根据您的成绩已经给你颁发了<em>1小时双倍积分卡</em>奖品！！</p></div>
+    	<div class="btn_bar"><a class="c_pp_btn_c" href="javascript:FloaterManager.close();">确定</a></div>
+    </div>
+</div>
+
+<!-- 个人信息填写 -->
+<div class="c_popup c_popup_info">
+	<div class="c_pp_tls">
+		<i class="i_tls_ico"></i>
+    	<h3>填写个人资料<em>(未获实物奖品填写无效)</em></h3>
+        <a class="c_pp_cls" href="javascript:FloaterManager.close();">关闭</a>
+    </div>
+	<div class="c_pp_cnts">
+    	<p><span>姓名：</span><input name="sName" type="text" style="width:110px" /></p>
+        <p><span>身份证号：</span><input name="sIdentity" type="text" /></p>
+        <p><span>联系电话：</span><input name="sMobile" type="text" /></p>
+        <p><span>邮政编码：</span><input name="sPostCode" type="text" /></p>
+        <p><span>收货地址：</span><input name="sAddress" type="text" style="width:80px" />省<input name="sAddress" type="text" style="width:125px" />市/县</p>
+        <p><input name="sAddress" type="text" /></p>
+        <p><a class="c_pp_btn_sm" href="javascript:void(0)">确定提交</a></p>
+    </div>
+</div>
+<!-- 个人获奖列表-->
+<div class="c_popup c_popup_history">
+	<div class="c_pp_tls">
+		<i class="i_tls_ico"></i>
+    	<h3>我获得的奖品</h3>
+        <a class="c_pp_cls"  href="javascript:FloaterManager.close();">关闭</a>
+    </div>
+	<div class="c_pp_cnts">
+    	<table cellspacing="1">
+        	<tbody><tr>
+            	<th width="140" class="t1">奖品名称</th>
+                <th width="130">获得时间</th>
+            </tr>
+			<tbody>
+            	<tr>
+                	<td class="t1"></td>
+                    <td></td>
+                </tr>
+            </tbody>
+			<tfoot>
+				<tr>
+				<td align="center" class="pagination" colspan="2"> <span class="c3">1/1页</span> <a href="javascript:void(0);" class="pageprenone">上一页</a><a href="javascript:void(0);" class="pagenextnone">下一页</a></td>
+				</tr>
+			</tfoot>		
+        </tbody></table>       
+        <div class="tips">
+        	<p class="tls">请注意</p>
+            <p>实物奖品将在获得后的15个工作日之内发放，对于奖品地址详导致无法收取的
+损失由用户自行承担损失。</p>
+			<p>虚拟奖品将及时发放，请注意登录各入口查看。</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

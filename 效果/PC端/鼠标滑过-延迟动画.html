@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>鼠标滑过-延迟动画</title>
+<style>
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu,i{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body,textarea,input,button,select,keygen,legend{font:14px/1.14  "Microsoft YaHei";color:#333;outline:0;}
+
+/* 动画 */
+.m-gameCh .line,.m-gameCh .title{
+    -webkit-transition: all 0.3s  ease-in;
+    -moz-transition: all 0.3s  ease-in;
+    -ms-transition: all 0.3s  ease-in;
+    -o-transition: all 0.3s  ease-in;
+    transition: all 0.3s  ease-in;}
+/* M-游戏特色单元 */
+.m-gameCh{ display: block; float: left; position: relative; width: 315px; height: 265px;overflow: hidden;}
+.m-gameCh .bgimg{ position: absolute; top:0; left:0; z-index: 1; width: 315px; height: 265px;}
+.m-gameCh .title{position: absolute; bottom: 15px; z-index: 2; display:block; width:270px; height: 55px; padding: 0 22px; overflow: hidden; }
+.m-gameCh .entitle,.m-gameCh .cntitle,.m-gameCh .line,.m-gameCh .more{ display: block; font-weight: normal}
+.m-gameCh .entitle{ display: block; width: 279px; height: 18px; font-size: 12px;color: #c4b5aa; text-transform: uppercase}
+.m-gameCh .cntitle{ font-size: 28px; color: #fff}
+.m-gameCh .cntitle i{ color: #ecd07c}
+.m-gameCh .line{ width: 1px; height: 1px; margin: 10px 0; font-size: 1px; background-color: rgba(255,255,255,0.3); }
+.m-gameCh .more{ height: 16px; line-height: 16px; color:#FFF; }
+.m-gameCh:hover .title{ height: 85px;}
+.m-gameCh:hover .line{ width: 270px;
+    -webkit-transition-delay: 0.15s;
+    -moz-transition-delay: 0.15s;
+    -ms-transition-delay: 0.15s;
+    -o-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+</style>
+</head>
+<body>
+
+
+<div class="g-container">
+        <a class="m-gameCh" init="false" href="###" target="_blank">
+            <img class="bgimg" src="http://res.nie.netease.com/tianyu/gw/14v4/index/images/files/gf-1.jpg">
+            <span class="title">
+                <b class="entitle">the world</b>
+                <b class="cntitle">无束缚<i>题材</i></b>
+                <b class="line"></b>
+                <b class="more">了解更多&gt;</b>
+            </span>
+        </a>
+        <a class="m-gameCh" init="false" href="###" target="_blank">
+            <img class="bgimg" src="http://res.nie.netease.com/tianyu/gw/14v4/index/images/files/gf-2.jpg">
+            <span class="title">
+                <b class="entitle">the world</b>
+                <b class="cntitle">无束缚<i>题材</i></b>
+                <b class="line"></b>
+                <b class="more">了解更多&gt;</b>
+            </span>
+        </a>
+        <a class="m-gameCh" init="false" href="###" target="_blank">
+            <img class="bgimg" src="http://res.nie.netease.com/tianyu/gw/14v4/index/images/files/gf-3.jpg">
+            <span class="title">
+                <b class="entitle">the world</b>
+                <b class="cntitle">无束缚<i>题材</i></b>
+                <b class="line"></b>
+                <b class="more">了解更多&gt;</b>
+            </span>
+        </a>
+        <a class="m-gameCh" init="false" href="###" target="_blank">
+            <img class="bgimg" src="http://res.nie.netease.com/tianyu/gw/14v4/index/images/files/gf-4.jpg">
+            <span class="title">
+                <b class="entitle">the world</b>
+                <b class="cntitle">无束缚<i>题材</i></b>
+                <b class="line"></b>
+                <b class="more">了解更多&gt;</b>
+            </span>
+        </a>
+</div>
+
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.2.min.js"></script>
+<script src="http://res.nie.netease.com/tianyu/gw/14v4/index/js/TweenMax.min.js"></script>
+<script>
+$(function(){
+	function isScrolledIntoView(elem) {
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
+        
+        var elemTop = $(elem).offset().top;
+        if (elemTop -50 < docViewBottom) {
+            return true
+        } else {
+            return false
+        }
+    }
+    var boxElemets=$(".rollItem1");
+    function animateInit(){
+        $.each(boxElemets, function () {
+            if ($(this).attr('init') == 'false') {
+                $(this).attr('init', 'true');
+                TweenMax.to($(this), .5, {top:1,delay:$(this).index()*.1,opacity:1})
+
+            }
+        });
+        $.each($(".m-gameCh"), function () {
+            if ($(this).attr('init') == 'false' && isScrolledIntoView($(this))) {
+                $(this).attr('init', 'true');
+                TweenMax.to($(this), .5, {bottom:0,delay:$(this).index()*.1,opacity:1})
+
+            }
+        });
+    }
+    animateInit();
+    $(window).scroll(function () {
+        animateInit();
+    });
+    
+   $(".m-gameCh").hover(function(){
+   		TweenMax.to($(this).find(".bgimg"), 3, {scale:1.1,ease:Expo.easeOut})
+   	},function(){
+   		TweenMax.to($(this).find(".bgimg"), 3, {scale:1,ease:Expo.easeOut})
+   	})       
+})
+</script>
+</body>
+</html>		

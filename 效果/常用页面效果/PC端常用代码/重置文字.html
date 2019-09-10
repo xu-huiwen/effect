@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="gb2312">
+	<title>重置文字</title>
+</head>
+<body>
+	<textarea name="" id="tarea1">文字文字</textarea>
+	<a href="###" onclick="clearText();">重置文字</a>
+
+	<script type="text/javascript">
+
+		function gE(e) {
+		    return (typeof (e) == "object") ? e : document.getElementById(e)
+		}
+		function clearText() {
+			gE("tarea1").focus();
+			gE("tarea1").value = "";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{height:800px;}
+ol{margin:0;padding:0;}
+li{margin-left:40px;}
+.vidCont,h3{margin-left:24px;}
+</style>
+<title>视频嵌入示例</title>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>视频嵌入示例</h1>
+	</div>
+	<div id="main">
+		<h2>一、使用说明</h2>
+		<ol>
+			<li>请产品接口人把视频上传至QQ播客，提供vid参数；</li>
+			<li>参数中，vid为视频ID；autoplay值1为自动播放，0为手动播放；</li>
+			<li>重构人员替换vid参数，设置视频的宽、高。</li>
+			<li>为了保证视频界面效果，网页上视频的尺寸请根据视频具体情况按4:3或16:9等比缩放。</li>
+		</ol>
+		<h2>二、实例演示（详情请查看源代码）</h2>
+		<h3 class="m01">mini版皮肤</h3>
+		<div class="vidCont">
+			<object width="400" height="300" id="_playerswf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codeBase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab#version=10,0,0,0" >
+				<param name="movie" value="http://static.video.qq.com/TencentPlayer.swf?vid=8bZWTYfqHUB&amp;autoplay=0&amp;loadingswf=http://imgcache.qq.com/minivideo_v1/vd/res/skins/web_small_loading.swf&amp;skin=http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf" />
+				<param name="wmode" value="opaque" />
+				<param name="quality" value="High" />
+				<param name="allowScriptAccess" value="always" />
+				<param name="allowNetworking" value="all" />
+				<param name="allowFullScreen" value="true" />
+				<embed width="400" height="300" align="middle" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" id="_playerswf" name="_playerswf" quality="high" src="http://static.video.qq.com/TencentPlayer.swf?vid=8bZWTYfqHUB&amp;autoplay=0&amp;loadingswf=http://imgcache.qq.com/minivideo_v1/vd/res/skins/web_small_loading.swf&amp;skin=http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf" wmode="opaque"></embed>
+			</object>
+		</div>
+	</div>
+</div>
+</body>
+</html>

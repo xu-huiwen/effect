@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="GBK">
+<title></title>
+<style type="text/css">
+	body{background:#000;}
+	.startBtn{width: 137px;height: 137px;background: url(ossweb-img/btn.png) no-repeat;display: block;margin-left: -68px;left: 50%;position: absolute;top: 654px;}
+	.startBtn:hover{background: url(ossweb-img/btn_hover.png) no-repeat;}
+	.startBtn .l{position: absolute;top: 50%;left: -24px;}
+	.startBtn .l .ln{width: 10px;height: 19px;background: url(ossweb-img/an-1.png) no-repeat;display: block;position: absolute;margin-top: -9px;left: -20px;}
+	.startBtn .l .ln-1{-webkit-animation-name: borderAnimation; -webkit-animation-duration: 1s; -webkit-animation-iteration-count: infinite;-webkit-animation-delay:0s; animation-name: borderAnimation; animation-duration: 1s; animation-iteration-count: infinite;animation-delay:0s;}
+	.startBtn .l .ln-2{ -webkit-animation-name: borderAnimation; -webkit-animation-duration: 1s; -webkit-animation-iteration-count: infinite;-webkit-animation-delay:.3s;animation-name: borderAnimation; animation-duration: 1s; animation-iteration-count: infinite;animation-delay:.3s;}
+	.startBtn .l .ln-3{ -webkit-animation-name: borderAnimation; -webkit-animation-duration: 1s; -webkit-animation-iteration-count: infinite;-webkit-animation-delay:.6s; animation-name: borderAnimation; animation-duration: 1s; animation-iteration-count: infinite;animation-delay:.6s;}	
+	@-webkit-keyframes borderAnimation {0% {opacity: 0,left:-40px; } 100% {opacity: 0;left: 0;}}
+	@-moz-keyframes borderAnimation {0% {opacity: 0,left:-40px; } 100% {opacity: 0;left: 0;}}
+	@keyframes borderAnimation {0% {opacity: 0,left:-40px; } 100% {opacity: 0;left: 0;}}
+	.startBtn .r{position: absolute;top: 50%;right: -24px;}
+	.startBtn .r .ln{width: 10px;height: 19px;background: url(ossweb-img/an-2.png) no-repeat;display: block;position: absolute;margin-top: -9px;right: -20px;}
+	.startBtn .r .ln-1{-webkit-animation-name: borderAnimation2; -webkit-animation-duration: 1s; -webkit-animation-iteration-count: infinite;-webkit-animation-delay:0s;animation-name: borderAnimation2; animation-duration: 1s; animation-iteration-count: infinite;animation-delay:0s;}
+	.startBtn .r .ln-2{ -webkit-animation-name: borderAnimation2; -webkit-animation-duration: 1s; -webkit-animation-iteration-count: infinite;-webkit-animation-delay:.3s;animation-name: borderAnimation2; animation-duration: 1s; animation-iteration-count: infinite;animation-delay:.3s;}
+	.startBtn .r .ln-3{-webkit-animation-name: borderAnimation2rAnimation-2; -webkit-animation-duration: 1s; -webkit-animation-iteration-count: infinite;-webkit-animation-delay:.6s;animation-name: borderAnimation2; animation-duration: 1s; animation-iteration-count: infinite;animation-delay:.6s;}
+	@-webkit-keyframes borderAnimation2 {0%{opacity: 0,right:-20px; } 100%{opacity: 0;right: 0;}}
+	@-moz-keyframes borderAnimation2 {0%{opacity: 0,right:-20px; } 100%{opacity: 0;right: 0;}}
+	@keyframes borderAnimation2 {0%{opacity: 0,right:-20px; } 100%{opacity: 0;right: 0;}}
+</style>
+</head>
+<body>
+	<a href="javascript:;" class="startBtn">
+        <span class="l">
+            <span class="ln ln-1"></span>
+            <span class="ln ln-2"></span>
+            <span class="ln ln-3"></span>
+        </span>
+        <span class="r">
+            <span class="ln ln-1"></span>
+            <span class="ln ln-2"></span>
+            <span class="ln ln-3"></span>
+        </span>
+   </a>
+</body>
+</html>

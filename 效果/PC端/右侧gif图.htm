@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-CP" />
+<meta name="Description" content="《逆战》作为腾讯首款自研枪战网游，采用虚幻3引擎打造，取得多项技术突破。画面华丽精美，上手简单，支持爽快淋漓的多人对战，在独特PVE模式中，玩家可操控机甲战士，驾驶武装直升机，使用电锯、火焰喷射器、激光枪等与巨型BOSS展开厮杀，全新玩法不容错过！" />
+<meta name="Keywords" content="逆战,逆战官网,逆战游戏下载,逆战下载,逆战官方下载,QQ逆战,QQNZ,NZ下载,NZ,NZ,NZ网站,逆战官方网站,FPS网络游戏,腾讯游戏,QQ游戏,免费,爆破,夺点,浩南,金在云,肖恩,尤里,猎鹰,部哥,伊本,李兆龙,次世代,虚幻3,UE3,FPS,自主研发,自研" />
+<!-- 设计：cp  | 重构：cp | 创建：2016/12/30 | 更新：| 团队博客：http://tgideas.qq.com/ -->
+<title>新年送永久黄金枪-逆战官方网站-腾讯游戏</title>
+<style>
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+q:before,q:after{content:'';}
+fieldset,img,abbr,acronym{border:0;}
+
+/* footer */
+#footer_ied {text-align:center;font-size:12px;line-height:19px;color:#bea389;background-color:#970f18;}
+.wrap_ied {margin:0 auto;padding:30px;width:940px}
+.wrap_ied a {color:#bea389;}
+#footer_ied .e {font-size:10px;-webkit-text-size-adjust:none;}
+
+/* basic */
+.c:before,.c:after {content:"";display:table}
+.c:after {clear:both;}
+.c {zoom:1;}
+body {font:12px/1.5 tahoma,sans-serif;font-family:'\5FAE\8F6F\96C5\9ED1';padding-top:42px;background-color:#bd1822;}
+a {text-decoration:none;overflow:hidden;outline:none;}
+a:hover {text-decoration:underline;}
+.wrap,#footer_ied {width: 100%;min-width:1000px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1002?'1000px':'');}
+.wrap {background:url(ossweb-img/rp.jpg) no-repeat 50% 0;}
+.container {width:1000px;margin:0 auto}
+.hide {display:block;width:0;height:0;overflow:hidden;}
+.pr {position:relative;}
+.pa {position:absolute;}
+.db{display:block;text-indent:-999em;}
+.sp{background:url(ossweb-img/sp.png) no-repeat;}
+.fl{float:left;}
+.fr{float:right;}
+
+/* content */
+.content{height:3000px;}
+
+/* 侧导航 */
+.float{ width:398px;height:431px;position:fixed;left:50%;margin-left:600px;top:700px;_position:absolute;}
+* html {background-image:url(about:blank);background-attachment:fixed;}/*解决 ie6 Fixed闪动问题*/
+
+</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="container">
+	    <div class="head pr">
+	        <h1 class="hide"></h1>
+	        <a class="logo1 db pa" href="http://nz.qq.com/" title="逆战" target="_blank">逆战</a>
+	    </div>
+	    <div class="content">
+	    	
+	    </div>
+	</div>
+</div>
+<!-- 侧导航 -->
+<div class="float" id="float">
+	<a href="javascript:alert('敬请期待');" target="_blank"><img src="ossweb-img/btn_link.gif" width="200" height="217" /></a>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/top_js/nz/title.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/foot.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/milo/milo.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+<script>
+//右侧gif图
+function gE(e) {
+	    return (typeof (e) == "object") ? e : document.getElementById(e)
+	}
+	function addEventSimple(obj, evt, fn) {
+		if (obj.addEventListener) obj.addEventListener(evt, fn, false);
+		else if (obj.attachEvent) obj.attachEvent('on' + evt, fn)
+	}
+	function fix() {
+		if (!-[1, ] && !window.XMLHttpRequest) {
+			var fixE = gE("float"),
+				sTop = document.body.scrollTop || document.documentElement.scrollTop,
+				top = (sTop + 150) + "px";
+			fixE.style.cssText = "position:absolute;top:" + top;
+		}
+	}
+	addEventSimple(window, "load", fix);
+	addEventSimple(window, "scroll", fix);
+
+//检查是否已登录，已登录则获取QQ号显示已登录状态
+LoginManager.checkLogin(function(){
+    document.getElementById("login_qq_span").innerHTML = LoginManager.getUserUin();//获取QQ号
+});
+// 统计
+milo.addEvent(window,'load',function(){
+	loadScript("http://pingjs.qq.com/ping_tcss_ied.js",function(){if(typeof(pgvMain) == 'function')pgvMain();});
+});
+</script>
+</body>
+</html>

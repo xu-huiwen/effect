@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>雪</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		body {background-color:#000;}
+		.snow {width:100%;height:800px;}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" class="snow"></canvas>
+<script>
+	function canvasSupport() {
+	    return !!document.createElement('canvas').getContext;
+	}
+
+	(function canvasApp() {
+	    if (canvasSupport()) {
+	       addEventSimple(window,"load",snow);
+	    }
+	})()
+
+	function addEventSimple(obj,evt,fn) {
+		if (obj.addEventListener)
+		obj.addEventListener(evt,fn,false);
+		else if (obj.attachEvent)
+		obj.attachEvent('on'+evt,fn);
+	}
+
+	function snow() {
+	    var canvas = document.getElementById("canvas");
+	    var ctx = canvas.getContext("2d");
+	    var W = window.innerWidth;
+	    var H = 800;
+	    canvas.width = W;
+	    canvas.height = H;
+	    var mp = 150;//数量
+	    var particles = [];
+	    for (var i = 0; i < mp; i++) {
+	        particles.push({
+	            x: Math.random() * W,
+	            y: Math.random() * H,
+	            r: Math.random() * 4 + 1,
+	            d: Math.random() * mp
+	        })
+	    }
+	    function draw() {
+	        ctx.clearRect(0, 0, W, H);
+	        ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+	        ctx.beginPath();
+	        for (var i = 0; i < mp; i++) {
+	            var p = particles[i];
+	            ctx.moveTo(p.x, p.y);
+	            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true)
+	        }
+	        ctx.fill();
+	        update()
+	    }
+	    var angle = 0;
+	    function update() {
+	        angle += 0.01;
+	        for (var i = 0; i < mp; i++) {
+	            var p = particles[i];
+	            p.y += Math.cos(angle + p.d) + 1 + p.r / 2;
+	            p.x += Math.sin(angle) * 2;
+	            if (p.x > W + 5 || p.x < -5 || p.y > H) {
+	                if (i % 3 > 0) {
+	                    particles[i] = {
+	                        x: Math.random() * W,
+	                        y: -10,
+	                        r: p.r,
+	                        d: p.d
+	                    }
+	                } else {
+	                    if (Math.sin(angle) > 0) {
+	                        particles[i] = {
+	                            x: -5,
+	                            y: Math.random() * H,
+	                            r: p.r,
+	                            d: p.d
+	                        }
+	                    } else {
+	                        particles[i] = {
+	                            x: W + 5,
+	                            y: Math.random() * H,
+	                            r: p.r,
+	                            d: p.d
+	                        }
+	                    }
+	                }
+	            }
+	        }
+	    }
+	    setInterval(draw, 33)
+	}
+</script>
+</body>
+</html>

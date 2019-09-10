@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<style>
+/* ===== reset ===== */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+body{font:12px/1.5 Tahoma,Helvetica,simsun,sans-serif;color:#666666;word-wrap:break-word;word-break:break-all;}
+table{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,strong,th,var,i,b{font-style:normal;font-weight:normal;}
+pre,code,kbd,samp,tt{font-family:"courier new",courier,monospace;font-size:100%;line-height:100%;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+blockquote:before,blockquote:after,q:before,q:after{content:"";}
+fieldset,img{border:0;}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+legend{color:#000000;}
+button,input,select,textarea{font-size:100%;}
+a{text-decoration:none;color:#FF6600;}
+a:hover{text-decoration:underline;}
+img{vertical-align:middle;}
+.clearfix:after{content:".";height:0;visibility:hidden;display:block;clear:both;font-size:0;line-height:0;}
+.clearfix{*zoom:1;}
+
+ul{margin-bottom:20px;}
+li{cursor:pointer;}
+li.cur{background-color:#ccc;color:#000;}
+
+.page-tab-panel-content .page-tab-panel{display:none;}
+</style>
+</head>
+<body>
+
+<ul class="side-nav">
+	<li class="cur"><a href="javascript:void(0)">我是侧栏二级导航1</a></li>
+	<li><a href="javascript:void(0)">我是侧栏二级导航2</a></li>
+	<li><a href="javascript:void(0)">我是侧栏二级导航3</a></li>
+</ul>
+<ul class="page-tab-trigger">
+	<li class="cur">我是选项卡标题1</li>
+	<li>我是选项卡标题2</li>
+	<li>我是选项卡标题3</li>
+</ul>
+<div class="page-tab-panel-content">
+	<div class="page-tab-panel" style="display:block;">我是选项卡内容1</div>
+	<div class="page-tab-panel">我是选项卡内容2</div>
+	<div class="page-tab-panel">我是选项卡内容3</div>
+</div>
+
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+<script>
+(function($) {
+	var sideNavTrigger = $('.side-nav li');
+	var pageTabTrigger = $('.page-tab-trigger li');
+	var pageTabPanel = $('.page-tab-panel');
+
+	var gotoPanel = function(index) {
+		sideNavTrigger.eq(index).addClass('cur').siblings().removeClass('cur');
+		pageTabTrigger.eq(index).addClass('cur').siblings().removeClass('cur');
+		pageTabPanel.eq(index).show().siblings().hide();
+	};
+	sideNavTrigger.click(function() {
+		var _this = $(this);
+		var index = _this.index();
+		gotoPanel(index);
+	});
+	pageTabTrigger.click(function() {
+		var _this = $(this);
+		var index = _this.index();
+		gotoPanel(index);
+	});
+})(jQuery);
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>视频弹窗</title>
+<style>
+* {margin:0;padding:0;border:0;}
+.video {width: 400px;height: 300px;margin: 0 auto;}
+</style>
+</head>
+<body>
+
+<div class="video">
+	<a class="btn-video" href="javascript:">插入视频</a>
+</div>
+<script>
+function gE(e) {
+	return document.querySelector(e)
+}
+
+function insertVideo(v) {
+	gE('.video').innerHTML = '<video autoplay="autoplay" width="100%" height="100%" loop="loop" src='+v+' controls="controls"></video>';
+}
+gE('.btn-video').addEventListener('click', function() {
+	insertVideo('http://xaqj.qiniudn.com/v%2Fv.mp4')
+});
+</script>
+</body>
+</html>

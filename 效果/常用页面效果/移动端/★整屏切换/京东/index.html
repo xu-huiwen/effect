@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">   
+<head>  
+  <meta charset="gbk">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <title>拍拍活动模板</title>
+  <meta content="telephone=no" name="format-detection">
+<script type="text/javascript">
+! function(x) {
+    function w() {
+         var v, u, t, tes, 
+                s = x.document,
+                r = s.documentElement,
+                a = r.getBoundingClientRect().width;
+            
+        if (!v && !u) {
+                var n = !!x.navigator.appVersion.match(/AppleWebKit.*Mobile.*/);
+                v = x.devicePixelRatio;
+                tes = x.devicePixelRatio;
+                v = n ? v : 1, u = 1 / v;
+        }
+        
+        if(v<=2 && a>=960){
+            r.style.fontSize = "40px";
+        }else{
+            r.style.fontSize = a / 320 * 20 + "px";
+        }
+    }
+
+    x.addEventListener("resize", function() {
+       w();
+    });
+    w();
+}(window);
+</script>
+
+  <style type="text/css">
+  html,body{margin:0;padding:0;width:100%;min-width:320px;height:100%;overflow:hidden;font:14px/1.2em Helvetica,STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial;color:#000;background-color:#2D3132}
+  .wrapper{position:relative;width:100%;height:100%;min-width:320px;overflow:hidden;background-color:#2D3132;}
+  .wrapper .page{position:relative;width:100%;height:100%;overflow:hidden;background-color:#fff;color:#fff;}
+  /*每页的背景*/
+  .page:nth-child(1){
+      background-color:#330000;
+  }
+  .page:nth-child(2){
+      background-color:green;
+  }
+  .page:nth-child(3){
+      background-color:blue;
+  }
+  .page:nth-child(4){
+      background-color:yellow;
+      color:#333;
+  }
+.act_logo {position:absolute;top:0.75rem;left:0.5rem;width:2.8rem;height:1.4rem;background:url(http://static.paipaiimg.com/js/act/3cyuyue/img/logo_red.png) no-repeat 0 0;background-size:56px 28px;}
+.arrow_next {position:absolute;bottom:10px;z-index:4;left:50%; width:22px;height:12px;margin-left:-11px;background:url(http://static.paipaiimg.com/fd/paipai/act/20141222_pinzhitaidu/img/arrow2.png) no-repeat;background-size:22px 12px;-webkit-animation:start 1.2s infinite linear; animation:start 1.2s infinite linear;}
+@-webkit-keyframes start{
+    0%{ -webkit-transform:translate(0,-3px);}
+    30%{-webkit-transform:translate(0,-8px);}
+    100%{-webkit-transform:translate(0,-3px);}
+}
+  </style>
+</head>
+<body>
+<div class="wrapper" id="wrap">
+    <section class="page">
+        <div class="act_logo"></div><!-- logo -->
+        <br/> 
+        <br/> 
+        <br/> 
+        第一页
+        <span class="goto arrow_next"></span> <!-- 翻页提示 -->
+    </section>
+    <section class="page">
+        第二页
+    </section>
+    <section class="page">
+        第三页
+    </section>
+    <section class="page">
+        第四页
+        <br />
+        <!--<a href="javascript:;" id="jump">点击跳转到第二页</a>-->
+    </section>
+</div>
+
+<!-- 如需要zepto可以引入 -->
+<!--<script src="http://static.paipaiimg.com/js/m2/index/js/kit/zepto.min.js"></script>-->
+
+<!-- halo.js文档地址:http://jdc.jd.com/halo/ 相关功能可以查阅 -->
+<script src="http://static.paipaiimg.com/wx/js/halo.14.05.js"></script>
+<script type="text/javascript">
+/* 引入ui组件，翻页组件，微信分享组件，qq分享组件 */
+halo.use('uievent','pageinvite','weixinshare','qqshare','loader',function(m){
+
+    var wrap=document.getElementById("wrap");
+    var pager=m.pageinvite.bind(wrap);
+
+    /*每当翻页时执行，cur是当前页面页码，next是下一页的页码*/
+    pager.page_change=function(cur,next){
+    	
+    	//michael
+        var pages = document.querySelectorAll('#wrap .page');
+        for (var i = pages.length - 1; i >= 0; i--) {
+        	pages[i].classList.remove('play');
+        	pages[next].classList.add('play');
+        }
+        
+        
+    }
+
+    /* 翻页是否循环 */
+    pager.infinite=false;
+
+    /* 点击跳转 */
+    /*var jump=document.getElementById("jump");
+    m.on(jump,'flick',function(){
+       pager.move(1);//转到第一页
+    });*/
+
+    // loader 加载器，会显示加载百分比，使用的时，需填入需要加载的图片地址为img/template.jpg或绝对地址
+   halo.use('loader', function(m){
+        var loader =
+        m.loadermsk(['http://pics2.paipaiimg.com/update/20150227/3c_145707629.jpg','http://pics2.paipaiimg.com/update/20150302/pcd_600-345.jpg','http://pics0.paipaiimg.com/update/20150302/3c_114703668.jpg'],'#00ff00',function(){
+            //michael
+            var pages = document.querySelectorAll('#wrap .page');
+            pages[0].classList.add('play');
+        });
+    });
+
+    /* 微信分享 */
+    _url = window.location.href;
+    m.weixinshare({
+        url:_url,
+        img:'http://static.paipaiimg.com/fd/paipai/base/img/logo.png',//分享的图片，大小为100*100
+        title:'分享的文案标题',// 分享方案的标题（分享到朋友圈时没有此信息）
+        desc:'分享的文案描述'// 分享方案的描述（分享到朋友圈的文案）
+    });
+
+    /* 手机QQ分享 */
+    m.qqshare({
+        url:_url,
+        img:'http://static.paipaiimg.com/fd/paipai/base/img/logo.png',//分享的图片，大小为100*100
+        title:'分享的文案标题',// 分享方案的标题
+        desc:'分享的文案描述'// 分享方案的描述
+    });
+
+});
+</script>
+
+<!-- 点击统计代码 -->
+<script type="text/javascript" src="http://static.gtimg.com/js/version/2014/09/ecc.cloud.ppmobilereport.20140905.js?t=201409091150"></script>
+</body>
+</html>

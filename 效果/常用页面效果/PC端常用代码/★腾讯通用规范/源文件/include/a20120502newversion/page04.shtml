@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><script type="text/javascript">/*tag*/PAGE_SPEED_TIME = [new Date().getTime()];</script>
+<head>
+<meta content="text/html; charset=gb2312" http-equiv="Content-Type"><meta name="robots" content="all">
+<meta name="author" content="Tencent-TGideas">
+<meta name="Copyright" content="Tencent">
+<title>浪漫四周年-QQ炫舞官方网站-腾讯游戏</title>
+<meta content="《QQ炫舞》官方网站&mdash;&mdash;最浪漫的舞蹈游戏" name="Description">
+<meta content="QQ炫舞,炫舞,浪漫,四周年,5月,版本专题" name="Keywords">
+<link href="css/comm.css" rel="stylesheet" type="text/css" />
+<script src="http://x5.qq.com/act/a20110706newversion/jscss/newversion.js?d=0401"></script>
+</head>
+<body>
+<div class="wrapper">
+	<!--#include file="head.inc" -->
+	<div class="content">
+        <h2 class="h2_4">04 新品上市</h2>
+        <ul class="sub_nav" id="tabs">
+				<li><a class="on" title="宠来宠趣" href="javascript:setTabs(0,4)">宠来宠趣</a></li>
+				<li><a title="道具服饰" href="http://x5.qq.com/webplat/info/50/146/295/201204/126132.shtml" target="_blank">道具服饰</a></li>
+				<li><a title="新歌抢鲜" href="javascript:setTabs(2,4)">新歌抢鲜</a></li>
+				<li><a title="全新成就" href="javascript:setTabs(3,4)">全新成就</a></li>
+			</ul>
+        <div id="tabs0">
+            <h3>宠来宠趣</h3>
+            <h4>● 梦幻精灵</h4>
+            <p><img src="images/pet1.jpg" alt="梦幻精灵" width="200" height="200" /></p>
+            <p>看着她是否觉得有些眼熟呢？没错，我们的小妖长大了！出落得越来越标志的小妖如今叫梦幻精灵，这次来到炫舞小镇是渴望邂逅一份属于自己的缘分。</p>
+            <h4>● 兔蓝精</h4>
+            <p><img src="images/pet2.jpg" alt="兔蓝精" width="200" height="250" /></p>
+            <p>蓝色的皮肤，大大的眼睛，可爱的蝴蝶结，它就是我们的新伙伴兔蓝精。虽然兔蓝精比较害羞不善于言辞，但是它对主人的忠心绝对不输给任何宠物。</p>
+            <h4>● 帅酷阿狸</h4>
+            <p><img src="images/pet3.jpg" alt="帅酷阿狸 " width="200" height="200" /></p>
+            <p>“哟哟切克闹”哼唱着小曲的它虽然换上了一身崭新的行头，但还是被人们一眼就认出这是一只可爱的小狐狸。它觉得每只宠物都在卖萌，所以它决定不随波逐流，自己走帅酷路线！ </p>
+        </div>
+        <div id="tabs1" style="display:none;"><h3>道具服饰</h3>
+        </div>
+        <div id="tabs2" style="display:none;"><h3 style="display:none">新歌抢鲜</h3>
+        <h3>华语歌曲</h3>
+        <ul class="music_list">
+          <li><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music1.jpg">
+            <p class="music_txt">萧亚轩<br />100分的吻</p>
+          </li>
+          <li><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music2.jpg" />
+              <p class="music_txt">Ella<br />坏女孩</p>
+          </li>
+          <li><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music3.jpg" />
+              <p class="music_txt">五月天<br />我不愿 让你一个人</p>
+          </li>
+          <li><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music4.jpg" />
+              <p class="music_txt">弦子<br />我要去旅行</p>
+          </li>
+          <li class="last"><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music5.jpg" />
+              <p class="music_txt">罗志祥<br />有我在</p>
+          </li>
+          <li><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music3.jpg">
+            <p class="music_txt">五月天<br />有些事现在不做 一辈子都不会做了</p>
+          </li>
+      </ul>
+        <h3>日韩欧美</h3>
+        <ul class="music_list">
+          <li><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music21.jpg">
+            <p class="music_txt">Jason Chen<br />Best Friend</p>
+          </li>
+          <li><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music22.jpg" />
+              <p class="music_txt">Bigbang<br />BLUE</p>
+          </li>
+          <li><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music23.jpg" />
+              <p class="music_txt">Jennifer Lopez<br />Brave</p>
+          </li>
+          <li><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music24.jpg" />
+              <p class="music_txt">AKB48<br />GIVE ME FIVE!</p>
+          </li>
+          <li class="last"><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music25.jpg" />
+              <p class="music_txt">The Wanted<br />Glad You Came</p>
+          </li>
+          <li><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music26.jpg">
+            <p class="music_txt">Madonna<br />I Don't Give A</p>
+          </li>
+          <li><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music27.jpg" />
+              <p class="music_txt">B1A4<br />THIS TIME IS OVER</p>
+          </li>
+          <li><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music28.jpg" />
+              <p class="music_txt">Chris Brown<br/>Turn Up The Music</p>
+          </li>
+          <li><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music30.jpg" />
+              <p class="music_txt long_txt">Kelly Clarkson<br/>What Doesn't Kill You</p>
+          </li>
+          <li><img height="125" width="125" alt="新歌抢鲜" src="http://ossweb-img.qq.com/images/x5/act/a20120411newversion/music29.jpg" />
+              <p class="music_txt">Greyson Chance<br/>Waiting Outside The Lines</p>
+          </li>
+      </ul>
+        </div>
+        <div id="tabs3" style="display:none;">
+			<h3>全新成就</h3>
+			<p>● 在炫舞中，每完成一项成就和称号不但能获得丰厚的经验、G币以及各类道具，挑战成功后所获得的成就积分与称号徽章更是元老级玩家们身份的象征。</p>
+			<p>● 在即将到来的“浪漫”版本中，我们为大家准备了众多全新成就和称号，一起来抢鲜看看吧！</p>
+			<table cellspacing="1" cellpadding="0" border="0" width="100%" class="t_a">
+				<tr>
+					<th>分类</th>
+					<th>成就</th>
+					<th>领取条件</th>
+				</tr>
+				<tr>
+					<td rowspan="16">乐队模式</td>
+					<td>职业乐队</td>
+					<td>乐队对抗模式下，战胜对手5次</td>
+				</tr>
+				<tr>
+					<td>著名乐队</td>
+					<td>乐队对抗模式下，战胜对手15次</td>
+				</tr>
+				<tr>
+					<td>皇家乐队</td>
+					<td>乐队对抗模式下，战胜对手30次</td>
+				</tr>
+				<tr>
+					<td>神之乐章</td>
+					<td>乐队对抗模式下，战胜对手50次</td>
+				</tr>
+				<tr>
+					<td>弹唱新星</td>
+					<td>乐队演奏模式下，使用吉他或麦克风完成10次演奏</td>
+				</tr>
+				<tr>
+					<td>我为乐狂</td>
+					<td>乐队演奏模式下，使用吉他或麦克风完成40次演奏</td>
+				</tr>
+				<tr>
+					<td>巨星闪耀</td>
+					<td>乐队演奏模式下，使用吉他或麦克风完成100次演奏</td>
+				</tr>
+				<tr>
+					<td>电音魔王</td>
+					<td>乐队演奏模式下，使用吉他或麦克风完成200次演奏</td>
+				</tr>
+				<tr>
+					<td>节奏跳跃者</td>
+					<td>乐队演奏模式下，使用鼓或电子琴完成10次演奏</td>
+				</tr>
+				<tr>
+					<td>双踏撕裂者</td>
+					<td>乐队演奏模式下，使用鼓或电子琴完成40次演奏</td>
+				</tr>
+				<tr>
+					<td>爵士鼓王</td>
+					<td>乐队演奏模式下，使用鼓或电子琴完成100次演奏</td>
+				</tr>
+				<tr>
+					<td>朋克大师</td>
+					<td>乐队演奏模式下，使用鼓或电子琴完成200次演奏</td>
+				</tr>
+				<tr>
+					<td>低调之音</td>
+					<td>乐队演奏模式下，使用贝斯完成10次演奏</td>
+				</tr>
+				<tr>
+					<td>灵魂乐者</td>
+					<td>乐队演奏模式下，使用贝斯完成40次演奏</td>
+				</tr>
+				<tr>
+					<td>击勾王者</td>
+					<td>乐队演奏模式下，使用贝斯完成100次演奏</td>
+				</tr>
+				<tr>
+					<td>神之手指</td>
+					<td>乐队演奏模式下，使用贝斯完成200次演奏</td>
+				</tr>
+				<tr>
+					<td>活动</td>
+					<td>我们的一年之约</td>
+					<td>在2012.5.20~2.13.6.20之前，与同一个人结婚满一年（365天）即可完成</td>
+				</tr>
+				<tr>
+					<td>活动</td>
+					<td>我们的一年之约</td>
+					<td>在2012.5.20~2.13.6.20之前，与同一个人结婚满一年（365天）即可完成</td>
+				</tr>
+			</table>
+        </div>
+    </div>
+</div>
+<!--#include file="foot.inc" -->
+<script type="text/javascript">function setTabs(tabsCur,total){var a = document.getElementById("tabs").getElementsByTagName("a");document.getElementById("tabs"+tabsCur).style.display="block";a[tabsCur].className="on";for (var j=0;j<total;j++){if (j!=tabsCur) {a[j].className="";document.getElementById("tabs"+j).style.display="none";}}return;}</script>
+</body></html><!--[if !IE]>|xGv00|dc3a4e66beca233dcf8d44f1b2dd28ef<![endif]-->

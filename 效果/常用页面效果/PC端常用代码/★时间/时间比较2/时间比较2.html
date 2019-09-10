@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时间比较</title>
+</head>
+<body>
+
+<script src="http://apps.game.qq.com/CommArticle/app/reg/gdate.php"></script>
+<script src='time.js'></script>
+<script>
+	var endDate = '2013-08-06 16:46:59';//设置结束时间
+    var dtEnd =  Date.getDateFromDateStr(endDate, 'yyyy-MM-dd hh:mm:ss');//格式化结束时间
+    var dtnow = Date.getDateFromDateStr(json_curdate, 'yyyy-MM-dd hh:mm:ss');//格式化当前时间
+    if ( dtEnd.compare(dtnow) == -1){
+		alert('结束时间 小于 当前时间')
+    }
+    if ( dtEnd.compare(dtnow) == 1){
+		alert('结束时间 大于 当前时间')
+    }
+    if ( dtEnd.compare(dtnow) == 0){
+		alert('结束时间 等于 当前时间')
+    }
+</script>
+</body>
+</html>

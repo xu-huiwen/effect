@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gb2312" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0"/>
+    <meta name="robots" content="all" />
+    <meta name="Copyright" content="Copyright (c) TENCENT" />
+    <meta name="Description" content="世界冠军挑战赛" />
+    <meta name="Keywords" content="COD，CODOL，Call of Duty， Call of Duty Online，现代战争，使命召唤，使命召唤OL" />
+    <title>资料站-使命召唤 Online-官方网站-腾讯游戏</title>
+    <!-- 设计：zaneye | 重构：milesdai | 创建： 2013-09-05 |  团队博客：http://tgideas.qq.com/ -->
+    <style>
+* { margin: 0; padding: 0;}
+body { font: normal 14px/1.6 "Microsoft Yahei","simsun"; color: #fff;}
+ol,ul { list-style: none;}
+img { border: none; display: block;}
+.clearfix:after {content:"."; display:block; height:0; clear:both; visibility:hidden}
+.clearfix{*zoom:1}
+.wap a:link,.wap a:visited{text-decoration: none;color:#e33e04;}.wap a:hover,.wap a:active{text-decoration:none;color:#ff4200;}
+.top-nav a:link,.top-nav a:visited{ color:#fff;}.top-nav a:hover,.top-nav a:active{ color:#95ca07;}
+.none{ display:none;}.dis-il{ display:inline-block;}.p-a{ position:absolute;}.p-r{ position:relative;}.f-l{ float:left;}.f-r{ float:right;}.bg-un{ background:url(about:blank);}.orange{ color:#ff7b41;}.blue{ color:#3194c2;}.red{ color:#e33e04;}.t-r{ text-align:right;}.white{ color:#fff;}.yellow{ color:#dbcda7;}.fs-30{ font-size:30px;}
+.sprite-common{ background-image:url(http://ossweb-img.qq.com/images/codo/act/sprites_common_201401.png); background-repeat:no-repeat;}
+.sprite{background-image:url(images/sprite.png); background-repeat:no-repeat;}.white{ color:#fff;}.red{ color:#ff442c;}a.red:link,a.red:visited{text-decoration: none;color:#eb3535;}a.red:hover,a.red:active{text-decoration:none;color:#eb3535; text-decoration:underline;}
+
+
+body{padding-top: 42px; line-height:24px;font-size:14px; text-align:center; background:#000; min-width:1000px;}
+.wap{width:100%;min-width:1000px; height:auto;background-color:#06090f;}
+.top{width:1000px;height:30px; top:0; right:2%;}
+.top-bar{ width:970px; padding-right:30px; margin:0 auto; text-align:right; height:38px; position:relative; z-index:100; background-position:380px 0;}
+.top-bar a{ width:150px; height:35px; text-indent:58px; text-align:left; font-size:14px;font-weight:bold; line-height:32px; }.top-bar a.wb{ width:137px;}
+
+.top-bar a:link,.top-bar a:visited{ color:#fff;}.top-bar a:hover,.top-bar a:active{ color:#109ddf;}
+
+.left-bar{ float:left; width:244px; height:100%; padding-bottom:20px;}
+h1{ width:248px; height:90px; left:0; top:0;}
+.logo{display:inline-block;width:157px;height:71px;background-position:0 -38px;left:10px;top:10px;z-index:200; margin:20px; padding:0;}
+.nav{ margin-top:10px;}.nav a:link,.nav a:visited{color:#4179b8;}.nav a:hover,.nav a:active{color:#ff7b41;}
+.nav dt{ width:239px; height:49px; margin:2px auto; background-position:-253px 0; line-height:49px; font-size:18px;}.nav dt a{ display:block; height:100%;}
+.nav ul{ padding-left:2px;}.nav li{ float:left; padding:1px 0 0 1px}.nav li a{ display:inline-block; width:119px; height:35px; background-color:#0f141a; line-height:35px;}
+.nav dd a:link,.nav dd a:visited{color:#667485;}.nav dd a:hover,.nav dd a:active{color:#ff7b41;}
+.right-bar{ background:url(images/bg.jpg) no-repeat right top #17425d; margin-left:244px;}
+.main{ float:left; width:730px; padding-left:22px;color:#a7c8db; padding-bottom:30px;}
+.main h2{ font-size:42px; text-align:left; margin:30px 0;}.main h3{ text-align:left; padding-bottom:10px;}.main h4{ margin-top:10px; height:60px; line-height:58px; font-size:24px; color:#FFF; text-align:left; background-position:0 -96px; font-weight:normal;}.main h4 span{ display:inline-block; width:60px; height:60px; text-align:center; font-weight:bold; margin-right:10px;}
+.main-tab{ width:100%; border:1px solid #102d40; border-width:1px 0 2px 0; background-color:#194159; overflow:hidden;}.main-tab ul{ width:750px;}
+.main-tab li{ float:left;  height:44px; line-height:44px; font-size:16px;}
+.main-tab a{ display:block; border-right:1px solid #102d40; height:44px;}
+.main-tab a:link,.main-tab a:visited{color:#fff;}.main-tab a:hover,.main-tab a:active{color:#102d40; background-color:#fc8652;}
+.main-tab .now a:link,.main-tab .now a:visited,.main-tab .now a:hover,.main-tab .now a:active{color:#102d40; background-color:#ff7b41;}
+.page-bar{ padding:30px 0;}
+.btn-1{ display:inline-block; width:82px; height:28px; padding-right:15px; background-position:-253px -54px; text-align:center; line-height:28px;}
+a.btn-1:link,a.btn-1:visited{ color:#ff7b41}a.btn-1:hover,a.btn-1:active{ color:#ff4e00}
+.btn-1-s{ width:82px; height:28px; padding-left:15px; background-position:-355px -54px;}
+/*公共弹窗*/
+.act_pop{width:800px;background-color:#000;position:relative;border:1px solid #086685; text-align:center; font-size:14px; color:#7c95b8;}
+.act_pop .act_pop_sprite{ height:37px;background-image:url(http://ossweb-img.qq.com/images/codo/act/pop.png); background-repeat:no-repeat;}
+.act_pop .act_pop_none{ display:none;}.act_pop .act_pop_orange{ color:#ff6c00;}.act_pop .text_l{ text-align:left; line-height:22px;}.act_pop .text_c{ text-align:center;}.act_pop .font_s12{ font-size:12px;}.act_pop .text_r{ text-align:right;}
+.act_pop h2{background-color:#0a617d; background-position:-414px 9px;font-size:24px;line-height:36px; text-align:left; text-indent:40px; color:#fff}
+.act_pop p{ margin:10px 0;text-align:left; line-height:22px;}
+.act_pop a:link,.act_pop a:visited{ color:#ab5a22; text-decoration:none;}.act_pop a:hover,.act_pop a:active{ color:#fe6800; text-decoration:underline;}
+.act_pop .act_pop_close{width:55px;height:55px;right:0;top:-59px;position:absolute;background-position:0 0;}
+.act_pop .act_pop_main{ padding:20px;}
+.act_pop .text_wb{ border:1px solid #086685; background-color:#FFF; padding:5px;}
+.act_pop .act_pop_btn{ margin:20px 10px 10px 10px; display:inline-block; width:107px; padding-right:35px; height:44px; line-height:44px; background-position:-60px 0; font-weight:bold; font-size:16px;}
+.act_pop .act_pop_btn2{width:156px;background-position:-205px 0;}
+.act_pop a.act_pop_btn:link,.act_pop a.act_pop_btn:visited,.act_pop .cdkey a:link,.act_pop .cdkey a:visited{ color:#039dd0;}.act_pop a.act_pop_btn:hover,.act_pop a.act_pop_btn:active,.act_pop .cdkey a:hover,.act_pop .cdkey a:active{ color:#1fbcef; text-decoration:none;}
+
+.act_pop .act_pop_table{ width:100%; font-size:12px; line-height:24px;}
+.act_pop .act_pop_table th{ color:#d9d5d0; background-color:#3f3f3f; height:28px;line-height:28px;}
+.act_pop .act_pop_table td{background-color:#fff; height:24px;padding: 4px 2px;}.act_pop .act_pop_table tfoot span,.act_pop .act_pop_table tfoot a{ display:inline-block; margin:0 5px;}
+
+.act_pop .cdkey span{ display:inline-block; width:260px;height:36px; border:2px solid #086685; background-color:#FFF; line-height:36px; padding:0 5px; font-size:20px;vertical-align:middle; margin-right:3px;}
+.act_pop .cdkey a{display:inline-block; width:60px;height:39px; background-position:-60px 0; line-height:39px; padding:0 5px; vertical-align:middle;border-right:1px solid #2f404c;border-bottom:1px solid #2f404c;}
+.act_pop .adr{border-collapse:collapse;width:90%; margin:0 auto;}
+.act_pop .adr td{height:22px; padding:5px; text-align:left;}.act_pop .adr input,.act_pop .adr textarea{ background-color:#4a4a4a; border:#4a4a4a 1px solid; height:22px; text-align:left; color:#fff; width:180px; padding-left:3px;}.act_pop .adr textarea{ height:66px; width:400px;}.act_pop td.ta-r{ text-align:right;}.act_pop .adr .radio{ width:20px; background:none; vertical-align:middle;}.act_pop .adr .btn_upload{ background-color:#c2361e; color:#FFF; font-weight:bold; width:72px; text-align:center; padding:0; border:none; height:22px; margin-left:5px;}
+
+.box-1{padding:15px 0; width:670px; display:inline-block;margin-left:60px;}.box-3{ padding:25px 0; display:inline-block; width:670px; overflow:hidden; margin-left:60px; position:relative;}
+.btn-video{  display:inline-block; margin-top:20px; padding:10px; width:258px; height:145px; background:url(images/video.png);}.btn-video a{ display:block; height:145px;}
+.box-1 p{  text-indent:2em; line-height:22px; text-align:left;}
+.box-2{padding:25px 0; display:inline-block; margin-left:60px; width:670px;}.box-2 img{ display:inline-block; float:left; margin-right:20px;}.box-2 p{ text-align:left;}
+.box-3{ height:560px;}.box-3 ul{ background-color:#092638; left:0; top:25px; width:20000px;}.box-3 li{ float:left; width:670px;}.box-3 p{ padding:10px; text-align:left;}.box-3 a{ display:inline-block; width:39px; height:39px; top:220px}
+.box-3 a.prev{ left:3px; background-position:-497px -8px;}.box-3 a.next{ right:3px; background-position:-549px -8px;}
+</style>
+</head>
+<body>
+    <div class="wap clearfix p-r">
+        <div class="top p-a">
+            <div class="top-bar sprite-common">
+                <a class="dis-il gw" href="/main.shtml" target="_blank" title="官网首页">官网首页</a>
+                <a class="dis-il wb" href="http://e.t.qq.com/txcodo" title="官方微博" target="_blank">官方微博</a>
+                <a class="dis-il xz" href="/download.shtml" title="下载中心" target="_blank">下载中心</a>
+            </div>
+        </div>
+        <div class="left-bar" id="leftBar">
+            <a class="logo sprite-common" href="/main.shtml" title="官网首页" target="_blank">
+                <span class="none">官网首页</span>
+            </a>
+            <h1 class="sprite p-r">
+                <span class="none">使命召唤Online 资料站</span>
+            </h1>
+            <div class="nav">
+                <dl>
+                    <dt class="sprite">
+                        <a href="#" title="首页">首页</a>
+                    </dt>
+                    <dt class="sprite">
+                        <a href="#" title="游戏介绍">游戏介绍</a>
+                    </dt>
+                    <dt class="sprite">
+                        <a href="#" title="入门指导">入门指导</a>
+                    </dt>
+                    <dd>
+                        <ul class="clearfix">
+                            <li>
+                                <a href="#" title="激活下载">激活下载</a>
+                            </li>
+                            <li>
+                                <a href="#" title="操作说明">操作说明</a>
+                            </li>
+                            <li>
+                                <a href="#" title="游戏设置">游戏设置</a>
+                            </li>
+                        </ul>
+                    </dd>
+                    <dt class="sprite">
+                        <a href="#" title="剧情介绍">剧情介绍</a>
+                    </dt>
+                    <dt class="sprite">
+                        <a href="#" title="角色介绍">角色介绍</a>
+                    </dt>
+                    <dd>
+                        <ul class="clearfix">
+                            <li>
+                                <a href="#" title="阵营角色">阵营角色</a>
+                            </li>
+                            <li>
+                                <a href="#" title="人物换装">人物换装</a>
+                            </li>
+                            <li>
+                                <a href="#" title="头盔">头盔</a>
+                            </li>
+                            <li>
+                                <a href="#" title="眼部装备">眼部装备</a>
+                            </li>
+                            <li>
+                                <a href="#" title="纹身">纹身</a>
+                            </li>
+                            <li>
+                                <a href="#" title="上装">上装</a>
+                            </li>
+                            <li>
+                                <a href="#" title="手表">手表</a>
+                            </li>
+                            <li>
+                                <a href="#" title="战术背心">战术背心</a>
+                            </li>
+                            <li>
+                                <a href="#" title="裤装">裤装</a>
+                            </li>
+                            <li>
+                                <a href="#" title="战靴">战靴</a>
+                            </li>
+                        </ul>
+                    </dd>
+                    <dt class="sprite">
+                        <a href="#" title="地图介绍">地图介绍</a>
+                    </dt>
+                    <dt class="sprite">
+                        <a href="#" title="模式介绍">模式介绍</a>
+                    </dt>
+                    <dd>
+                        <ul class="clearfix">
+                            <li>
+                                <a href="#" title="模式介绍">模式介绍</a>
+                            </li>
+                            <li>
+                                <a href="#" title="模式策略">模式策略</a>
+                            </li>
+                        </ul>
+                    </dd>
+                    <dt class="sprite">
+                        <a href="#" title="武器介绍">武器介绍</a>
+                    </dt>
+                    <dd>
+                        <ul class="clearfix">
+                            <li>
+                                <a href="#" title="主武器">主武器</a>
+                            </li>
+                            <li>
+                                <a href="#" title="副武器">副武器</a>
+                            </li>
+                            <li>
+                                <a href="#" title="投掷武器">投掷武器</a>
+                            </li>
+                            <li>
+                                <a href="#" title="战术装备">战术装备</a>
+                            </li>
+                            <li>
+                                <a href="#" title="武器配件">武器配件</a>
+                            </li>
+                        </ul>
+                    </dd>
+                    <dt class="sprite">
+                        <a href="#" title="特色系统">特色系统</a>
+                    </dt>
+                    <dd>
+                        <ul class="clearfix">
+                            <li>
+                                <a href="#" title="连杀奖励">连杀奖励</a>
+                            </li>
+                            <li>
+                                <a href="#" title="连死补偿">连死补偿</a>
+                            </li>
+                            <li>
+                                <a href="#" title="战术技能">战术技能</a>
+                            </li>
+                            <li>
+                                <a href="#" title="玩家名片">玩家名片</a>
+                            </li>
+                            <li>
+                                <a href="#" title="武器解锁">武器解锁</a>
+                            </li>
+                            <li>
+                                <a href="#" title="生涯解锁">生涯解锁</a>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="right-bar clearfix" id="rightBar">
+            <div class="main">
+                <h2>CODOL地图介绍</h2>
+                <a href="#" class="sprite btn-1 f-r" title="返回列表">返回列表</a>
+                <h3 class="orange fs-30">遗忘之城</h3>
+                <div class="info">
+                    <h4 class="sprite">
+                        <span>01</span>
+                        地图简介
+                    </h4>
+                    <div class="box-1 clearfix">
+
+                        <p>
+                            作为一张经典的《使命召唤》地图，『遗忘之城』是FPS游戏史上最好的狙击图之一。这张地图的对称布局将双方置于对峙状态，你可以展示自己精准的远射能力，或可以发挥通过战术策略反制敌方狙击手的能力。
+                        </p>
+                        <p>
+                            在『遗忘之城』里，两栋公寓大楼在一片开阔庭院的两旁各据一方，面对面矗立。公寓二楼提供良好的狙击视野，既可俯瞰庭院亦可监视对面公寓。喜爱潜行风格的玩家拥有无数可以包抄敌人的出口与入口，喜爱正面冲锋的玩家可战术性冲击庭院，出奇制胜。
+                        </p>
+                        <p>
+                            『遗忘之城』的构造为每一种风格的玩家都提供了对抗敌人策略的创意空间。充分利用地图中的每一条路线来获得最好的战果。记住，要随机应变。
+                        </p>
+                        <div class="btn-video">
+                            <a title="观看地图视频" href="#">
+                                <span class="none">观看地图视频</span>
+                            </a>
+                        </div>
+                    </div>
+                    <h4 class="sprite">
+                        <span>02</span>
+                        地图标注
+                    </h4>
+                    <div class="box-2 clearfix">
+                        <img src="images/map/map_1_bz.jpg" width="324" height="323">
+                        <p>
+                            地图大小：中型
+                            <br/>
+                            推荐战术背包：狙击，潜行
+                            <br/>
+                            推荐装备：战术标识棒，贝蒂跳雷
+                            <br/>
+                            战斗距离：近-远
+                            <br/>
+                            空中连杀奖励：中度
+                            <br/>
+                            视线：所有距离
+                        </p>
+                    </div>
+                    <h4 class="sprite">
+                        <span>03</span>
+                        地图截图欣赏
+                    </h4>
+                    <div class="box-3">
+                        <ul class="clearfix p-a" id="mapList" style="left:0px">
+                            <li>
+                                <img src="images/map/map_1_1.jpg" width="670" height="419">
+                                <p>
+                                    1.东区与西区
+                                    <br/>
+                                    遗忘之城地图的主要组成部分是两座面对面的公寓楼。它们各自拥有一些开放窗口，提供极佳视野的同时，也提供了少量的掩体，虽然掩体较少，玩家仍有不少地方可以潜伏，地图色调与满地残骸也能帮忙欺骗敌人的眼睛。虽然这些建筑对狙击手和神射手很有利，但事实上所有流派的打法都能够利用这些建筑获取优势。潜行风格和奔跑流的玩家可以抄小路快进快出，喜爱强攻的玩家可以占据这里，防止敌方狙击手安营扎寨。
+                                </p>
+                            </li>
+                            <li>
+                                <img src="images/map/map_1_2.jpg" width="670" height="419">
+                                <p>
+                                    2.庭院
+                                    <br/>
+                                    庭院是遗忘之城地图中大部分战斗发生的地方，敌人可以出现在任何区域，面对连杀奖励也是无处可遁，这是一个死亡地带, 穿过这里时务必极端小心。在庭院中使用下蹲与卧倒来寻求掩护, 这会让你在这个危险地带的存活率增加。记住，在庭院中要保持极高的警惕——快速定位敌人并有策略的反应是在此地生存的最重要一点。
+                                </p>
+                            </li>
+                            <li>
+                                <img src="images/map/map_1_3.jpg" width="670" height="419">
+                                <p>
+                                    3.北区
+                                    <br/>
+                                    这个马蹄状的区域是遗忘之城地图中两个主要重生点中的一个。从这里可以直接通往东区和西区，除此之外还有两条通往庭院的路，和一个能隐蔽射击庭院里敌人的楼梯。
+                                </p>
+                            </li>
+                            <li>
+                                <img src="images/map/map_1_4.jpg" width="670" height="419">
+                                <p>
+                                    4.南区
+                                    <br/>
+                                    这个区域是遗忘之城的另一个主要重生点，就如北区重生点一样，这里也有可以通往东区和西区的入口，和两个可进入庭院战场的通道。虽然南区不像另一个重生点那样拥有制高点，但是这个区域的后侧有一个泳池设施可当作掩护或让你重整队伍。在这个区域遭遇战较少，是安全呼叫空投补给箱或使用需要操控的连杀奖励的好地方。
+                                </p>
+                            </li>
+                        </ul>
+                        <a class="p-a sprite prev" href="javascript:prev()" title="上一张" id="btnPrev">
+                            <span class="none">上一张</span>
+                        </a>
+                        <a class="p-a sprite next" href="javascript:next()" title="下一张" id="btnNext">
+                            <span class="none">下一张</span>
+                        </a>
+                    </div>
+                    <a href="#" class="sprite btn-1 f-r" title="返回列表">返回列表</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://codol.qq.com/act/js/foot.js"></script>
+    <!--[if IE 6]>
+    <script src="http://ossweb-img.qq.com/images/js/comm/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script type="text/javascript">DD_belatedPNG.fix('.sprite-common,.sprite');</script>
+    <![endif]-->
+    <script>
+function g(obj) {
+    return (typeof obj == 'object') ? obj : document.getElementById(obj);
+}
+//执行ping函数
+function pings() {
+    if (typeof(pgvMain) == 'function') pgvMain();
+};
+//动态生成JS或CSS;
+function delay_js(url) {
+    var type = url.split("."),
+        file = type[type.length - 1];
+    if (file == "css") {
+        var obj = document.createElement("link"),
+            lnk = "href",
+            tp = "text/css";
+        obj.setAttribute("rel", "stylesheet");
+    } else var obj = document.createElement("script"),
+    lnk = "src", tp = "text/javascript";
+    obj.setAttribute(lnk, url);
+    obj.setAttribute("type", tp);
+    file == "css" ? document.getElementsByTagName("head")[0].appendChild(obj) : document.body.appendChild(obj);
+    return obj;
+};
+//延迟加载
+function addload(func) {
+    var old = window.onload;
+    if (typeof window.onload != "function") {
+        window.onload = func;
+    } else {
+        window.onload = function() {
+            old();
+            func();
+        }
+    }
+};
+//延时加载并判断是否加载完毕
+function loadjs(url, succ, v) {
+    var elem = delay_js(url);
+    if ((navigator.userAgent.indexOf('MSIE') == -1) ? false : true) {
+        elem.onreadystatechange = function() {
+            if (this.readyState && this.readyState == "loading") return;
+            else succ(v);
+        };
+    } else elem.onload = function() {
+        succ(v);
+    };
+    elem.onerror = function() {};
+};
+
+function run() {
+    loadjs("http://ossweb-img.qq.com/images/js/title.js", function() {
+        ostb_int()
+    }, "");
+    loadjs("http://pingjs.qq.com/ping_tcss_ied.js", pings, "");
+}
+addload(run)
+var f = 0,
+    d = 8,
+    t = 0,
+    _onMove = true,
+    _BtnPrev = g("btnPrev"),
+    _BtnNext = g("btnNext"),
+    _list = g("mapList"),
+    _bList = g("mapList").getElementsByTagName("li");
+//-------翻页------//
+function prev() {
+    if (_onMove) {
+        t--
+        if (t == 0) {
+            _BtnPrev.style.display = "none";
+            _BtnNext.style.display = "inline-block";
+        } else {
+            _BtnPrev.style.display = "inline-block";
+            _BtnNext.style.display = "inline-block";
+        }
+        _onMove = false;
+        f = 0
+        listMove([
+            [_list, -t * 670, "left"]
+        ])
+
+    }
+}
+
+function next() {
+    if (_onMove) {
+        t++
+        if (t == (_bList.length - 1)) {
+            _BtnPrev.style.display = "inline-block";
+            _BtnNext.style.display = "none";
+        } else {
+            _BtnPrev.style.display = "inline-block";
+            _BtnNext.style.display = "inline-block";
+        }
+        _onMove = false;
+        f = 0
+        listMove([
+            [_list, -t * 670, "left"]
+        ])
+
+    }
+}
+//------移动组件-------//
+var Tween = {
+    Quart: {
+        easeOut: function(t, b, c, d) {
+            return -c * (t /= d) * (t - 2) + b
+        }
+    }
+};
+
+function listMove(obj, func, v) {
+    for (i = 0; i < obj.length; i++) {
+        var n2 = Number(obj[i][0].style[obj[i][2]].split("px")[0]);
+        obj[i][0].style[obj[i][2]] = Tween.Quart.easeOut(f, n2, (obj[i][1] - n2), d) + "px"
+    }
+    if (f == d) {
+        _onMove = true;
+        if (arguments.length > 1) {
+            func(v)
+        }
+    } else {
+        f++
+        var _listTime = setTimeout(function() {
+            if (arguments.length > 1) {
+                listMove(obj, func, v)
+            } else(
+                listMove(obj)
+            )
+
+        }, 100)
+    }
+}
+</script>
+</body>
+</html>
+<!--[if !IE]>
+|xGv00|94c14a0f592aaad94d13a9a8febdd769
+<![endif]-->

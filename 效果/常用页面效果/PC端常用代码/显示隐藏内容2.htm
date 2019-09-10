@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>显示隐藏内容</title>
+<style type="text/css">
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+q:before,q:after{content:'';}
+fieldset,img,abbr,acronym{border:0;}
+</style>
+</head>
+
+<body>
+	<div class="ct" id="ct1">
+    	<p>内容一</p>
+        <a href="javascript:" id="close1">关闭</a>
+    </div>
+	<div class="ct" id="ct2">
+    	<p>内容二</p>
+        <a href="javascript:" id="close2">关闭</a>
+    </div>
+    <a href="javascript:" class="btn" id="btn1">按钮一</a>
+    <a href="javascript:" class="btn" id="btn2">按钮二</a>
+
+<script type="text/javascript">
+function gE(e) {
+    return (typeof (e) == "object") ? e : document.getElementById(e)
+}
+function showE(o) {
+	gE(o).style.display = "block";
+}
+function hideE(o) {
+	gE(o).style.display = "none";
+}
+function float(i) {
+    gE("btn"+i).onclick=function() {
+        showE("ct"+i);
+    }
+    gE("close"+i).onclick=function() {
+        hideE("ct"+i);
+    }
+}
+for(var i=1;i<3;i++) {
+        float(i);
+    }
+</script>
+</body>
+</html>

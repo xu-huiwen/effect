@@ -1,0 +1,74 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+<title>登录</title>
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif;line-height:22px;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+ol{margin:0;padding:0;}
+li{margin-left:40px;}
+.login{padding:5px 0 0 25px;height:20px; line-height:20px; overflow:hidden;}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>登录</h1>
+	</div>
+	<div id="main">
+		<h2>一、使用说明</h2>
+		<ol>
+			<li>在页面尾部，在页面/body前调用脚本：http://ossweb-img.qq.com/images/js/milo/milo-min.js；</li>
+			<li>登录前的ID名为：unlogin、登录后的ID名：logined，登录按钮ID名为：dologin，注销按钮ID名为：dologout；</li>
+			<li>请充分测试登录前、后的页面效果，预留足够的位置。</li>
+		</ol>
+        <p>&nbsp;</p>
+		<h2>二、实例演示（示例本地无法运行，具体使用方法请查看页面源文件；）</h2>
+        <div class="login">
+            <p id="unlogin">亲爱的用户，请 <a href="javascript:;" id="dologin">[登录]</a></p>
+            <p id="logined" style="display:none">欢迎您，<span id='login-qq'></span>，<a href="javascript:;" id="dologout">[注销]</a></p>
+        </div>
+        <p>&nbsp;</p>
+        <h2>三、专题使用示例</h2>
+        <p><a href="http://roco.qq.com/act/a20120710activities/index.htm" target="_blank">洛克王国两周年线上活动介绍</a></p>
+	</div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/milo/milo-min.js"></script>
+<script>
+milo.addEvent(g("dologin"), "click", function() {
+	need("biz.login-min",function(LoginManager){
+		LoginManager.init({
+			needReloadPage:true
+		});
+		LoginManager.login();
+	});
+	return false;
+});
+milo.addEvent(g("dologout"), "click", function() {
+	need("biz.login-min",function(LoginManager){
+		LoginManager.logout();
+	});
+	return false;
+});
+milo.ready(function() {
+	need("biz.login-min",function(LoginManager){
+		LoginManager.checkLogin(function(){
+			g("login-qq").innerHTML = LoginManager.getUserUin();
+		});
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery鼠标悬停到图片时浮动高亮透明层滑动到当前图片高亮</title>
+<meta name="description" content="jquery鼠标悬停到图片时，浮动高亮透明层随着鼠标悬停的图片相应滑动到当前图片高亮显示。" />
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{background:#eee;font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+
+.demo{width:490px;margin:30px auto;}
+.box{float:left;width:100px;height:100px;border:1px solid white;background:#EEE;margin:10px;position:relative;display:inline;}
+.box a{display:block;width:100px;height:100px;overflow:hidden;position:absolute;left:0;top:0;z-index:9;}
+.boxBor{
+	position:absolute;left:0;top:0;display:none;border:1px solid white;z-index:4;
+	background:#fff;
+	background:-moz-linear-gradient(top,rgba(255,255,255,0.25),rgba(255,255,255,0.77));
+	background:-webkit-linear-gradient(top,rgba(255,255,255,0.25),rgba(255,255,255,0.77));
+	background:-o-linear-gradient(top,rgba(255,255,255,0.25),rgba(255,255,255,0.77));
+	background:-ms-linear-gradient(top,rgba(255,255,255,0.25),rgba(255,255,255,0.77));
+}
+</style>
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.4.2.min.js"></script>
+</head>
+<body>
+
+<div class="boxBor"></div>
+
+<div class="demo">
+	<div class="box"><a href="http://www.17sucai.com/"></a><img width="100" height="100" src="images/girl.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.17sucai.com/"></a><img width="100" height="100" src="images/girl2.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.17sucai.com/"></a><img width="100" height="100" src="images/girl3.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.17sucai.com/"></a><img width="100" height="100" src="images/girl4.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.17sucai.com/"></a><img width="100" height="100" src="images/girl5.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.17sucai.com/"></a><img width="100" height="100" src="images/girl.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.17sucai.com/"></a><img width="100" height="100" src="images/girl2.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.17sucai.com/"></a><img width="100" height="100" src="images/girl3.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.17sucai.com/"></a><img width="100" height="100" src="images/girl4.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.17sucai.com/"></a><img width="100" height="100" src="images/girl5.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.17sucai.com/"></a><img width="100" height="100" src="images/girl.jpg" alt="" /></div>
+	<div class="box"><a href="http://www.17sucai.com/"></a><img width="100" height="100" src="images/girl2.jpg" alt="" /></div>
+	<div style="clear:both;"></div>
+</div>
+
+
+<script type="text/javascript">
+$(function(){
+	$('.box').bind('mouseover',function(){
+		var oPosition=$(this).position();
+		var oThis=$(this);		
+		$('.boxBor').queue('fnHide');		
+		if($(".boxBor").attr('deta-switch')!=='true'){
+			$(".boxBor").attr('deta-switch','true');
+			$(".boxBor").css({
+				width:'100%',
+				height:$(window).height(),
+				left:'0px',
+				top:'0px',
+				opacity:0,
+				display:'block'
+			})
+		}
+		$(".boxBor").stop(false,false).animate({
+			opacity:0.8,
+			left:oPosition.left+10,
+			top:oPosition.top+10,
+			width:oThis.width(),
+			height:oThis.height()
+		},250)
+	});
+})
+</script>
+
+
+</body>
+</html>

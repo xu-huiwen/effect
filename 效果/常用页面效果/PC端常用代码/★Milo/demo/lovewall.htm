@@ -1,0 +1,94 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+<title>爱墙</title>
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif;line-height:22px;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{}
+ol{margin:0;padding:0;}
+ol li{margin-left:40px;}
+
+
+ul{list-style:none;}
+h3{text-align: center;font-size: 14px; color:#F60;}
+.demo-box{overflow:hidden;padding-top:10px;}
+.demo-item{float:left;display:inline;margin-right:20px;}
+
+/*love wall*/
+#love-wall-wrap{position:relative;border:4px solid #f60;height:400px;margin:20px auto;overflow:hidden;background-color:#000	-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);-moz-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);box-shadow: 4px 4px 4px rgba(0,0,0,0.2);}
+.love-walls{width:100px;height:50px;background-color:#f60;border:2px solid #fff;}
+/*css3*/
+.love-walls{
+	-webkit-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+	-moz-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+	box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>爱墙</h1>
+	</div>
+	<div id="main">
+		<h2>一、使用说明</h2>
+		<ol>
+			<li>在页面/body前调用脚本：http://ossweb-img.qq.com/images/js/milo/milo-min.js；</li>
+			<li>need("biz.loveWall-min",function(loveWall){})中调用爱墙js；</li>
+            <li>样式要求：love-wall-wrap为容器id，可以自定义；爱墙显示的class名必须为love-walls，关闭的样式名为close-walls，样式的内容根据稿调整；</li>
+            <li>详情请查看源文件，一般情况下爱墙个数不能小于3个，大于12个（即“div class="love-walls"”的个数）。</li>
+		</ol>
+		<h2>二、实例演示</h2>
+		<div class="demo-box">
+        	<!-- 示例 S-->
+            <div id="love-wall-wrap">
+                <div class="love-walls"><a href="#" class="close-walls">×</a></div>
+                <div class="love-walls"><a href="#" class="close-walls">×</a></div>
+                <div class="love-walls"><a href="#" class="close-walls">×</a></div>
+            </div>
+			<button id="add-love-wall" style="display:block;margin:0 auto;padding:5px;font-size:14px">再增加5个,Chrome下效果更佳</button>
+            <!-- 示例 E-->
+        </div>
+	</div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/milo/milo-min.js"></script>
+<script>
+need("biz.loveWall-min",function(loveWall){
+	loveWall.init("love-wall-wrap",790,400);//"love-wall-wrap"为爱墙容器ID，可自定义，"790,400"分别为容器宽高，可以修改
+	var addIndex=0;
+	milo.addEvent(g("add-love-wall"),'click',function(){
+		if(addIndex<5){
+			var o=g("love-wall-wrap"),a=[];
+			for(var i=0;i<5;i++){
+				a.push('<div class="love-walls"><a href="#" class="close-walls">×</a></div>');
+			}
+
+			o.innerHTML=o.innerHTML+a.join('');
+			setTimeout(function(){
+				loveWall.init("love-wall-wrap",790,400);//"love-wall-wrap"为爱墙容器ID，可自定义，"790,400"分别为容器宽高，可以修改
+				addIndex++;
+			},0);
+		}else{
+			alert("可以了小朋友，多了会卡滴~~");
+		}
+	});
+})
+</script>
+</body>
+</html>

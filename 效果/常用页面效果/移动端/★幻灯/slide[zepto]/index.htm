@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<head>
+	<meta charset="gbk">
+	<meta name="author" content="Tencent-TGideas">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>炫舞app</title>
+	<style type="text/css">
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,th,td,p,pre,form,input,textarea{padding: 0;margin: 0;}
+		table{border-collapse: collapse;border-spacing: 0;}
+		ol,ul{list-style:none;}
+		img{border:0 none;display:block;}
+		a{outline: none;outline:none;text-decoration: none;}
+		a:focus{outline:none;-moz-outline:none;}
+		em,strong{font-weight: normal;font-style: normal;}
+		html,body{font: 12px/20px "5B8B4F53";height: 100%;overflow:hidden;-webkit-backface-visibility: hidden;}
+		body{background:#151416;overflow-y: hidden;}
+		.banner ul{position: absolute;width: 1000%;height: 100%;left: 0;-webkit-transition:all 0.3s linear;-webkit-transform:translateX(0px);transition:all 0.3s linear;transform:translateX(0px);-webkit-backface-visibility:hidden}
+		.banner li{width:100%;left: 0;top: 0;float: left;}
+		.banner a{display: block;width:100%;}
+		.banner a img{width:100%;height: 100%;}
+		/*轮播css*/
+		.swipe{overflow: hidden;visibility: hidden;position: relative;}
+		.swipe_wrap {overflow: hidden;position: relative;}
+		.swipe_wrap > li {float: left;width: 100%;position: relative;}
+		.swipe_wrap a{display: block;width:100%;}
+		.swipe_wrap a img{width:100%;height: 100%;}
+		.swipe_btn{text-align: center;font-size:0;overflow:hidden;width: 100%;height: 8px;position: absolute;bottom: 5px;z-index: 10;}
+		.swipe_btn span{display: inline-block;width: 8px;height: 8px;background: #b9d45b;margin: 0 2px;}
+		.swipe_btn .current{background: #de6308;}
+	</style>
+</head>
+<body>
+<div id="banner" class="swipe">
+	<ul class="swipe_wrap">
+		<li><a href="#" target="_blank" data-TGAD="1268,8177"></a></li>
+		<li><a href="#" target="_blank" data-TGAD="1268,8178"></a></li>
+		<li><a href="#" target="_blank" data-TGAD="1268,8179"></a></li>
+		<li><a href="#" target="_blank" data-TGAD="1268,8180"></a></li>
+		<li><a href="#" target="_blank" data-TGAD="1268,8181"></a></li>
+	</ul>
+	<div id="swipe_btn" class="swipe_btn">
+		<span class="current"></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/zepto/zepto-1.1.3.min.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/comm/tgadshow.min.js"></script>
+<script src="swipe.js"></script>
+<script>
+	var banner = $("#banner"),
+		swipeBtn = $("#swipe_btn"),
+		banList = banner.find("li"),
+		banPicList = banner.find("img"),
+		def_w = 1080,
+		def_h = 302,
+		w = $(window).width(),
+		h = (w * def_h) / def_w;
+	banList.css({
+		"width": w,
+		"height": h
+	});
+	banPicList.css({
+		"width": w,
+		"height": h
+	});
+	swipeBtnList = swipeBtn.find("span");
+	var slider = Swipe(document.getElementById("banner"), {
+		auto: 3000,
+		continuous: true,
+		disableScroll: true,
+		stopPropagation: false,
+		callback: function(pos) { //pos:聚焦下标
+			var len = swipeBtnList.length;
+			while (len--) {
+				swipeBtnList.removeClass();
+			}
+			swipeBtnList.eq(pos).addClass("current");
+		}
+	});
+</script>
+</body>
+</html>

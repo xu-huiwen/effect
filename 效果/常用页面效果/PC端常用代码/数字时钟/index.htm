@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	body{ background:#000; color:white; font-size:30px;}
+	#clock{ width:300px; height:36px; margin: 10px auto}
+	#clock img{ width:25px; height:36px; position:relative;}
+	#clock span{color:white; font-size:30px;font-weight:bold;
+position:relative;top:-10px;}
+</style>
+<body>
+	<div id="clock">
+		<img src="images/0.png" alt="" />
+		<img src="images/0.png" alt="" /><span>:</span>
+		<img src="images/0.png" alt="" />
+		<img src="images/0.png" alt="" /><span>:</span>
+		<img src="images/0.png" alt="" />
+		<img src="images/0.png" alt="" />
+	</div>
+	<script>
+	window.onload = function() {
+		var oClock = document.getElementById("clock");
+		var aImg = oClock.getElementsByTagName("img");
+		var oDate = new Date();
+		var sNow = getDouble(oDate.getHours()) + getDouble(oDate.getMinutes()) + getDouble(oDate.getSeconds());
+
+		var sNext = "";
+		var aNext = [];
+		var timer = null;
+		for (var i = 0; i < aImg.length; i++) {
+			aImg[i].src = "images/" + sNow.charAt(i) + ".png";
+		}
+		setInterval(toChange, 1000);
+		function toChange() {
+			var oDate = new Date();
+			sNext = getDouble(oDate.getHours()) + getDouble(oDate.getMinutes()) + getDouble(oDate.getSeconds());
+			getCom(sNow, sNext);
+			sNow = sNext;
+		}
+		function getCom(str1, str2) {
+			aNext = [];
+			for (var i = 0; i < str1.length; i++) {
+				if (str1.charAt(i) != str2.charAt(i)) {
+					aNext.push(i);
+				}
+			}
+			clearInterval(timer);
+			startMove();
+		}
+		function startMove() {
+			var speed = -4;
+			timer = setInterval(function() {
+				for (var i = 0; i < aNext.length; i++) {
+					if (aImg[aNext[i]].offsetHeight == 0) {
+						speed = 4;
+						aImg[aNext[i]].src = "images/" + sNext.charAt(aNext[i]) + ".png";
+					}
+					aImg[aNext[i]].style.height = aImg[aNext[i]].offsetHeight + speed + "px";
+					aImg[aNext[i]].style.top = aImg[aNext[i]].offsetHeight / 2 - 18 + "px";
+					if (aImg[aNext[i]].offsetHeight == 36) {
+						clearInterval(timer);
+					}
+				}
+			}, 10)
+		}
+		function getDouble(num) {
+			if (num < 10) {
+				return "0" + num;
+			} else {
+				return "" + num;
+			}
+		}
+	}
+	 </script>
+</body>
+</html>

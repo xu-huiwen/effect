@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+	</style>
+</head>
+<body>
+	<div class="cartoon" id="cartoon">
+		<img src="http://ossweb-img.qq.com/images/chanpin/woz/public/a20130401mzwb/pic_1.jpg" width="561" height="756" />
+	</div>
+	<p>
+		<a href="javascript:prev()">上一页</a>
+		<a href="javascript:next()">下一页</a>
+	</p>
+<script>
+	function g(obj) {
+		return (typeof obj == 'object') ? obj : document.getElementById(obj);
+	}
+	var cartoon = g("cartoon")
+	var num = 1
+	var max = 22
+
+	function prev() {
+		if (num !== 1) {
+			num--;
+			cartoon.innerHTML = "<img src='http://ossweb-img.qq.com/images/chanpin/woz/public/a20130401mzwb/pic_" + num + ".jpg'/>"
+		}
+		else {
+			alert("已是首页");
+		}
+	}
+
+	function next() {
+		if (num !== max) {
+			num++;
+			cartoon.innerHTML = "<img src='http://ossweb-img.qq.com/images/chanpin/woz/public/a20130401mzwb/pic_" + num + ".jpg'/>"
+		}
+		else {
+			alert("已是末页");
+		}
+	}
+</script>
+</body>
+</html>

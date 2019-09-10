@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif;line-height:22px;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{}
+#index .n1{background-position:0 -45px;}
+.main{padding-top:2px;}
+.flash{width:765px;height:540px;margin-left:20px;text-align:center;}
+.rule{background-color:#0d0b0d;background-position:0 -200px;padding:20px 16px 0;line-height:22px;color:#7d7c7d;}
+.rule em{color:#e38733;}
+.pt20{padding:20px 0 10px 0;}
+.pt20 a{ margin-right:10px}
+/* 媒体放号活动的css */
+.info_b_r{ padding:10px;}
+.gameshop{ height:40px; width:690px; padding:25px 10px 25px 65px; position:relative; overflow:hidden}
+#m_left,#m_right{ display:block;height:30px; width:20px; position:absolute;top:30px;}
+#m_left{background-position:-600px -90px;left:35px;}
+#m_right{background-position:-780px -90px;right:0;}
+.rollbox{width:700px; height:40px;overflow:hidden;}
+.rollimg{ display:block; float:left;}
+.rollimg li{ float:left; display:inline; margin-right:30px; width:110px; height:41px}
+.s1{background:url(http://ossweb-img.qq.com/images/c9/act/a20110711jhm//sprite.png?d=123) no-repeat;}
+</style>
+<title>带左右箭头图片滚动效果</title>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>带左右箭头图片滚动效果</h1>
+	</div>
+	<div id="main">
+		<div id="gameshop" class="gameshop">
+			<a href="javascript:void(0);" class="s1" id="m_left" onfocus="this.blur();"></a>
+			<div id="rollbox" class="rollbox">
+				<ul id="rollimg" class="rollimg c">
+					<li><a target="_blank" href="http://c9.17173.com/fd/fd.shtml"><img src="http://ossweb-img.qq.com/images/c9/act/a20110402cdkey/17173.jpg" width="109" height="41" border="0" alt="17173" /></a></li>
+					<li><a target="_blank" href="http://c9.duowan.com/zt/fhzt/index.html"><img src="http://ossweb-img.qq.com/images/c9/act/a20110402cdkey/dw.jpg" width="109" height="41" border="0" alt="多玩" /></a></li>
+					<li><a target="_blank" href="http://act3.gamezone.qq.com/6921/"><img src="http://ossweb-img.qq.com/images/c9/act/a20110402cdkey/qgame.jpg" width="109" height="41" border="0" alt="腾讯游戏频道" /></a></li>
+					<li><a target="_blank" href="http://ka.game.163.com/ceshihao/C9/neice.html"><img src="http://ossweb-img.qq.com/images/c9/act/a20110402cdkey/163.jpg" width="109" height="41" border="0" alt="网易" /></a></li>
+					<li><a target="_blank" href="http://ka.sina.com.cn/info/1006.html"><img src="http://ossweb-img.qq.com/images/c9/act/a20110402cdkey/sina.jpg" width="109" height="41" border="0" alt="新浪" /></a></li>
+					<li><a target="_blank" href="http://c9.178.com/201107/t_105924786151.html"><img src="http://ossweb-img.qq.com/images/c9/act/a20110402cdkey/178.jpg" width="109" height="41" border="0" alt="178" /></a></li>
+					<li><a target="_blank" href="http://zt.shiwan.com/C9_2011_3.html"><img src="http://ossweb-img.qq.com/images/c9/act/a20110402cdkey/sww.jpg" width="109" height="41" border="0" alt="试玩网" /></a></li>
+					<li><a target="_blank" href="http://hd.766.com/market/d9dl/"><img src="http://ossweb-img.qq.com/images/c9/act/a20110402cdkey/766.jpg" width="109" height="41" border="0" alt="766" /></a></li>
+					<li><a target="_blank" href="http://c9.uuu9.com/jhm/"><img src="http://ossweb-img.qq.com/images/c9/act/a20110402cdkey/9y.jpg" width="109" height="41" border="0" alt="游久网" /></a></li>
+					<li><a target="_blank" href="http://c9.pcgames.com.cn/zt/c9fh/"><img src="http://ossweb-img.qq.com/images/c9/act/a20110402cdkey/pcgame.jpg" width="109" height="41" border="0" alt="PCG" /></a></li>
+					<li><a target="_blank" href="http://c9.131.com/er/"><img src="http://ossweb-img.qq.com/images/c9/act/a20110402cdkey/131.jpg" width="109" height="41" border="0" alt="131" /></a></li>
+					<li><a target="_blank" href="http://ol.tgbus.com/zt/fhhd/c9hd/index.shtml"><img src="http://ossweb-img.qq.com/images/c9/act/a20110402cdkey/tgbus.jpg" width="109" height="41" border="0" alt="电玩巴士" /></a></li>
+					<li><a target="_blank" href="http://action.52pk.com/70/index"><img src="http://ossweb-img.qq.com/images/c9/act/a20110402cdkey/52pk.jpg" width="109" height="41" border="0" alt="52pk" /></a></li>
+				</ul>
+			</div>
+		<a href="javascript:void(0);" class="s1" id="m_right" onfocus="this.blur();"></a>
+	</div>
+	</div>
+</div>
+<!--<script type="text/javascript" src="http://c9.qq.com/act/a20110402cdkey/js/ScrollPic.js"></script>-->
+
+
+<script>
+var scrollFun = {
+    $: function(objName) {
+        if (document.getElementById) {
+            return eval('document.getElementById("' + objName + '")')
+        } else {
+            return eval('document.all.' + objName)
+        }
+    },
+    isIE: navigator.appVersion.indexOf("MSIE") != -1 ? true: false,
+    addEvent: function(l, i, I) {
+        if (l.attachEvent) {
+            l.attachEvent("on" + i, I)
+        } else {
+            l.addEventListener(i, I, false)
+        }
+    },
+    delEvent: function(l, i, I) {
+        if (l.detachEvent) {
+            l.detachEvent("on" + i, I)
+        } else {
+            l.removeEventListener(i, I, false)
+        }
+    },
+    readCookie: function(O) {
+        var o = "",
+        l = O + "=";
+        if (document.cookie.length > 0) {
+            var i = document.cookie.indexOf(l);
+            if (i != -1) {
+                i += l.length;
+                var I = document.cookie.indexOf(";", i);
+                if (I == -1) I = document.cookie.length;
+                o = unescape(document.cookie.substring(i, I))
+            }
+        };
+        return o
+    },
+    writeCookie: function(i, l, o, c) {
+        var O = "",
+        I = "";
+        if (o != null) {
+            O = new Date((new Date).getTime() + o * 3600000);
+            O = "; expires=" + O.toGMTString()
+        };
+        if (c != null) {
+            I = ";domain=" + c
+        };
+        document.cookie = i + "=" + escape(l) + O + I
+    },
+    readStyle: function(I, l) {
+        if (I.style[l]) {
+            return I.style[l]
+        } else if (I.currentStyle) {
+            return I.currentStyle[l]
+        } else if (document.defaultView && document.defaultView.getComputedStyle) {
+            var i = document.defaultView.getComputedStyle(I, null);
+            return i.getPropertyValue(l)
+        } else {
+            return null
+        }
+    }
+};
+
+function ScrollPic(scrollContId, arrLeftId, arrRightId, dotListId) {
+    this.scrollContId = scrollContId;
+    this.arrLeftId = arrLeftId;
+    this.arrRightId = arrRightId;
+    this.dotListId = dotListId;
+    this.dotClassName = "dotItem";
+    this.dotOnClassName = "dotItemOn";
+    this.dotObjArr = [];
+    this.pageWidth = 0;
+    this.frameWidth = 0;
+    this.speed = 10;
+    this.space = 10;
+    this.pageIndex = 0;
+    this.autoPlay = true;
+    this.autoPlayTime = 5;
+    var _autoTimeObj, _scrollTimeObj, _state = "ready";
+    this.stripDiv = document.createElement("DIV");
+    this.listDiv01 = document.createElement("DIV");
+    this.listDiv02 = document.createElement("DIV");
+    if (!ScrollPic.childs) {
+        ScrollPic.childs = []
+    };
+    this.ID = ScrollPic.childs.length;
+    ScrollPic.childs.push(this);
+    this.initialize = function() {
+        if (!this.scrollContId) {
+            throw new Error("scrollContId.");
+            return
+        };
+        this.scrollContDiv = scrollFun.$(this.scrollContId);
+        if (!this.scrollContDiv) {
+            throw new Error("scrollContId(scrollContId = \"" + this.scrollContId + "\")");
+            return
+        };
+        this.scrollContDiv.style.width = this.frameWidth + "px";
+        this.scrollContDiv.style.overflow = "hidden";
+        this.listDiv01.innerHTML = this.listDiv02.innerHTML = this.scrollContDiv.innerHTML;
+        this.scrollContDiv.innerHTML = "";
+        this.scrollContDiv.appendChild(this.stripDiv);
+        this.stripDiv.appendChild(this.listDiv01);
+        this.stripDiv.appendChild(this.listDiv02);
+        this.stripDiv.style.overflow = "hidden";
+        this.stripDiv.style.zoom = "1";
+        this.stripDiv.style.width = "32766px";
+        this.listDiv01.style.cssFloat = "left";
+        this.listDiv02.style.cssFloat = "left";
+        scrollFun.addEvent(this.scrollContDiv, "mouseover", Function("ScrollPic.childs[" + this.ID + "].stop()"));
+        scrollFun.addEvent(this.scrollContDiv, "mouseout", Function("ScrollPic.childs[" + this.ID + "].play()"));
+        if (this.arrLeftId) {
+            this.arrLeftObj = scrollFun.$(this.arrLeftId);
+            if (this.arrLeftObj) {
+                scrollFun.addEvent(this.arrLeftObj, "mousedown", Function("ScrollPic.childs[" + this.ID + "].rightMouseDown()"));
+                scrollFun.addEvent(this.arrLeftObj, "mouseup", Function("ScrollPic.childs[" + this.ID + "].rightEnd()"));
+                scrollFun.addEvent(this.arrLeftObj, "mouseout", Function("ScrollPic.childs[" + this.ID + "].rightEnd()"))
+            }
+        };
+        if (this.arrRightId) {
+            this.arrRightObj = scrollFun.$(this.arrRightId);
+            if (this.arrRightObj) {
+                scrollFun.addEvent(this.arrRightObj, "mousedown", Function("ScrollPic.childs[" + this.ID + "].leftMouseDown()"));
+                scrollFun.addEvent(this.arrRightObj, "mouseup", Function("ScrollPic.childs[" + this.ID + "].leftEnd()"));
+                scrollFun.addEvent(this.arrRightObj, "mouseout", Function("ScrollPic.childs[" + this.ID + "].leftEnd()"))
+            }
+        };
+        if (this.dotListId) {
+            this.dotListObj = scrollFun.$(this.dotListId);
+            if (this.dotListObj) {
+                var pages = Math.round(this.listDiv01.offsetWidth / this.frameWidth + 0.4),
+                i,
+                tempObj;
+                for (i = 0; i < pages; i++) {
+                    tempObj = document.createElement("span");
+                    this.dotListObj.appendChild(tempObj);
+                    this.dotObjArr.push(tempObj);
+                    if (i == this.pageIndex) {
+                        tempObj.className = this.dotClassName
+                    } else {
+                        tempObj.className = this.dotOnClassName
+                    };
+                    tempObj.title = "" + (i + 1) + "";
+                    scrollFun.addEvent(tempObj, "click", Function("ScrollPic.childs[" + this.ID + "].pageTo(" + i + ")"))
+                }
+            }
+        };
+        if (this.autoPlay) {
+            this.play()
+        }
+    };
+    this.leftMouseDown = function() {
+        if (_state != "ready") {
+            return
+        };
+        _state = "floating";
+        _scrollTimeObj = setInterval("ScrollPic.childs[" + this.ID + "].moveLeft()", this.speed)
+    };
+    this.rightMouseDown = function() {
+        if (_state != "ready") {
+            return
+        };
+        _state = "floating";
+        _scrollTimeObj = setInterval("ScrollPic.childs[" + this.ID + "].moveRight()", this.speed)
+    };
+    this.moveLeft = function() {
+        if (this.scrollContDiv.scrollLeft + this.space >= this.listDiv01.scrollWidth) {
+            this.scrollContDiv.scrollLeft = this.scrollContDiv.scrollLeft + this.space - this.listDiv01.scrollWidth
+        } else {
+            this.scrollContDiv.scrollLeft += this.space
+        };
+        this.accountPageIndex()
+    };
+    this.moveRight = function() {
+        if (this.scrollContDiv.scrollLeft - this.space <= 0) {
+            this.scrollContDiv.scrollLeft = this.listDiv01.scrollWidth + this.scrollContDiv.scrollLeft - this.space
+        } else {
+            this.scrollContDiv.scrollLeft -= this.space
+        };
+        this.accountPageIndex()
+    };
+    this.leftEnd = function() {
+        if (_state != "floating") {
+            return
+        };
+        _state = "stoping";
+        clearInterval(_scrollTimeObj);
+        var fill = this.pageWidth - this.scrollContDiv.scrollLeft % this.pageWidth;
+        this.move(fill)
+    };
+    this.rightEnd = function() {
+        if (_state != "floating") {
+            return
+        };
+        _state = "stoping";
+        clearInterval(_scrollTimeObj);
+        var fill = -this.scrollContDiv.scrollLeft % this.pageWidth;
+        this.move(fill)
+    };
+    this.move = function(num, quick) {
+        var thisMove = num / 5;
+        if (!quick) {
+            if (thisMove > this.space) {
+                thisMove = this.space
+            };
+            if (thisMove < -this.space) {
+                thisMove = -this.space
+            }
+        };
+        if (Math.abs(thisMove) < 1 && thisMove != 0) {
+            thisMove = thisMove >= 0 ? 1 : -1
+        } else {
+            thisMove = Math.round(thisMove)
+        };
+        var temp = this.scrollContDiv.scrollLeft + thisMove;
+        if (thisMove > 0) {
+            if (this.scrollContDiv.scrollLeft + thisMove >= this.listDiv01.scrollWidth) {
+                this.scrollContDiv.scrollLeft = this.scrollContDiv.scrollLeft + thisMove - this.listDiv01.scrollWidth
+            } else {
+                this.scrollContDiv.scrollLeft += thisMove
+            }
+        } else {
+            if (this.scrollContDiv.scrollLeft - thisMove <= 0) {
+                this.scrollContDiv.scrollLeft = this.listDiv01.scrollWidth + this.scrollContDiv.scrollLeft - thisMove
+            } else {
+                this.scrollContDiv.scrollLeft += thisMove
+            }
+        };
+        num -= thisMove;
+        if (Math.abs(num) == 0) {
+            _state = "ready";
+            if (this.autoPlay) {
+                this.play()
+            };
+            this.accountPageIndex();
+            return
+        } else {
+            this.accountPageIndex();
+            setTimeout("ScrollPic.childs[" + this.ID + "].move(" + num + "," + quick + ")", this.speed)
+        }
+    };
+    this.next = function() {
+        if (_state != "ready") {
+            return
+        };
+        _state = "stoping";
+        this.move(this.pageWidth, true)
+    };
+    this.play = function() {
+        if (!this.autoPlay) {
+            return
+        };
+        clearInterval(_autoTimeObj);
+        _autoTimeObj = setInterval("ScrollPic.childs[" + this.ID + "].next()", this.autoPlayTime * 1000)
+    };
+    this.stop = function() {
+        clearInterval(_autoTimeObj)
+    };
+    this.pageTo = function(num) {
+        if (_state != "ready") {
+            return
+        };
+        _state = "stoping";
+        var fill = num * this.frameWidth - this.scrollContDiv.scrollLeft;
+        this.move(fill, true)
+    };
+    this.accountPageIndex = function() {
+        this.pageIndex = Math.round(this.scrollContDiv.scrollLeft / this.frameWidth);
+        if (this.pageIndex > Math.round(this.listDiv01.offsetWidth / this.frameWidth + 0.4) - 1) {
+            this.pageIndex = 0
+        };
+        var i;
+        for (i = 0; i < this.dotObjArr.length; i++) {
+            if (i == this.pageIndex) {
+                this.dotObjArr[i].className = this.dotClassName
+            } else {
+                this.dotObjArr[i].className = this.dotOnClassName
+            }
+        }
+    }
+};
+
+</script>
+
+
+<script>
+//底部滚动链接
+var shopScroll = new ScrollPic();
+	shopScroll.scrollContId   = "rollbox"; //内容容器ID
+	shopScroll.arrLeftId        = "m_right";//左箭头ID
+	shopScroll.arrRightId      = "m_left"; //右箭头ID
+	shopScroll.frameWidth   = 840;//显示框宽度
+	shopScroll.pageWidth     = 840; //翻页宽度
+	shopScroll.speed             = 10; //移动速度(单位毫秒，越小越快)
+	shopScroll.space             = 10; //每次移动像素(单位px，越大越快)
+	shopScroll.autoPlay         = true; //自动播放
+	shopScroll.autoPlayTime  = 3; //自动播放间隔时间(秒)
+	shopScroll.initialize(); //初始化
+</script>
+
+</body>
+</html>

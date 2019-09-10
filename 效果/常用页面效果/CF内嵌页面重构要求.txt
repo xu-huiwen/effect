@@ -1,0 +1,4 @@
+内嵌到客户端的页面，不能用 position: relative; 或者 position: absolute;不然在客户端，滚动就出问题了
+
+在最外层加这个CSS   .wrap{width: 943px; height: 629px; overflow-y:auto;}
+

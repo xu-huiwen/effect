@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery原图对比查看特效在线演示</title>
+
+
+<style type="text/css">
+html{font-family:'Ubuntu Mono' arial, sans-serif;background:#d1d1de;text-align:center;color:white;}
+.page-wrap{margin:0 auto;width:600px;max-width:100%;padding-top:25px;}
+
+.vfx-image-wrap{position:relative;display:inline-block;margin:0 auto;width:600px;height: 248px;margin-bottom:40px;cursor:ew-resize;float: left;}
+.before-image{position:absolute;top:0;left:0;z-index:1;width:50%;overflow:hidden;}
+.after-image{position:absolute;top:0;left:0;z-index:0;}
+.divider-bar{position:absolute;width:2px;left:50%;top:0px;bottom:0px;background:white;height:248px;display:block;z-index:2;box-shadow:0 0 10px 1px rgba(0, 0, 0, 0.4);}
+</style>
+
+</head>
+
+<body>
+
+<div class="page-wrap">
+
+	<div class="vfx-image-wrap">
+		<div class="before-image"><img src="images/VFX-before.jpg" alt="" /></div>
+		<div class="after-image"><img src="images/VFX-after.jpg" alt="" /></div>
+		<div class="divider-bar"></div>
+	</div>
+	
+	<div class="vfx-image-wrap">
+		<div class="before-image"><img src="images/VFX3-before.jpg" alt="" /></div>
+		<div class="after-image"><img src="images/VFX3-after.jpg" alt="" /></div>
+		<div class="divider-bar"></div>
+	</div>
+
+	<div class="vfx-image-wrap">
+		<div class="before-image"><img src="images/VFX2-before.jpg" alt="" /></div>
+		<div class="after-image"><img src="images/VFX2-after.jpg" alt="" /></div>
+		<div class="divider-bar"></div>
+	</div>
+
+</div>
+
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+</body>
+</html>

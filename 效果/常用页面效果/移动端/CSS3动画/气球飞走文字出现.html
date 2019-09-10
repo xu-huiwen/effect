@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>CSS3动画</title>
+<style type="text/css">
+* {margin: 0;padding: 0;border: 0;line-height: 0;}
+/*水平垂直居中*/
+.center {
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:-webkit-flex;
+	display:flex;
+
+	/*水平居中*/
+	-webkit-box-pack:center;
+	-ms-flex-pack:center;
+	-webkit-justify-content:center;
+	justify-content:center;
+
+	/*垂直居中*/
+	-webkit-box-align:center;
+	-ms-flex-align:center;
+	-webkit-align-items:center;
+	align-items:center;
+}
+html,body,.main {width: 100%;height: 100%;overflow: hidden;}
+.main {background-color: #ccc;position: relative;}
+.main-ct {width: 320px;height: 400px;margin: 0 auto;position: relative;-webkit-perspective: 1200px;}
+.balloon {width: 50px;height: 50px;background-color: #00f;position: absolute;border-radius: 50%;-webkit-animation: balloonOut 0.5s ease-in forwards;}
+.balloon1 {left: 135px;top: 25px;-webkit-animation-delay: 0s;}
+.balloon2 {left: 245px;top: 175px;-webkit-animation-delay: 0.5s;}
+.balloon3 {left: 135px;top: 325px;-webkit-animation-delay: 1s;}
+.balloon4 {left: 25px;top: 175px;-webkit-animation-delay: 1.5s;}
+@-webkit-keyframes balloonOut {
+	0% {-webkit-transform:none;}
+	100% {-webkit-transform:translate3d(0,0,2000px)}
+}
+
+.black-bg {background-color: #000;position: absolute;left: 0;top: 0;width: 100%;height: 100%;-webkit-animation: fadeIn 0.5s ease-in 2s forwards;opacity: 0;}
+.txt {width: 100%;position: absolute;text-align: center;left: 0;top: 50%;color: #fff;opacity: 0;-webkit-animation: fadeIn 0.5s ease-in 2.5s forwards;}
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+</style>
+</head>
+<body>
+<div class="main center">
+	<div class="main-ct">
+		<div class="balloon balloon1"></div>
+		<div class="balloon balloon2"></div>
+		<div class="balloon balloon3"></div>
+		<div class="balloon balloon4"></div>
+	</div>
+	<div class="black-bg"></div>
+	<div class="txt">我是一些文字我最后出来</div>
+</div>
+</body>
+</html>

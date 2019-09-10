@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JS返回顶部</title>
+<style type="text/css">
+*{margin:0;padding:0;font-size:12px;}
+* html {background-image:url(about:blank);background-attachment:fixed;}
+#toTop{display:none;position:fixed;bottom:100px;right:100px;_position:absolute;_margin-bottom:100px;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop, 10)||0)-(parseInt(this.currentStyle.marginBottom, 10)||0)));}
+</style>
+</head>
+
+<body>
+    <div style="height:1000px"></div>
+    <a href="#" onclick="scroll(0,0);return false;" title="返回顶部一">返回顶部一</a>
+    <a href="#" title="返回顶部二" id="toTop">返回顶部二</a>
+    
+<!-- 返回顶部二JS -->   
+<script type="text/javascript">
+	window.onscroll=function()
+	   {
+			var top=document.documentElement.scrollTop||document.body.scrollTop;
+			var toTop=document.getElementById("toTop");
+			if(top>10)//可根据需要更改
+			{
+				toTop.style.display="inline";
+			}
+			else
+			{
+				toTop.style.display="none";
+			}
+	   };
+	   var toTop=new function()
+	   {
+			var Timer=null;
+			function $id(id){return typeof id=="string"?document.getElementById(id):id;};
+			this.goto=function(objName)
+			{
+				$id(objName).onclick=function()
+				{
+					var top=document.documentElement.scrollTop||document.body.scrollTop;
+					startNove();
+					return false;
+				};
+				var startNove=function()
+				{
+					if(Timer)clearInterval(Timer);
+					Timer=setInterval(doMove,30);
+				};
+				var doMove=function()
+				{
+					var iSpeed=0;
+					var top=document.documentElement.scrollTop||document.body.scrollTop;
+					iSpeed=(0-top)/5;
+					iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+					if(Math.abs(iSpeed)<1&&Math.abs(0-top)<1)
+					{
+						clearInterval(Timer);
+						Timer=null;
+					}
+					window.scrollTo(0,(top+iSpeed));
+				};
+			};	
+	   };
+	toTop.goto("toTop");
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style type="text/css">
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,\5b8b\4f53,sans-serif;line-height:22px;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+.wrap{margin:0 auto;}
+#header,#main{width:800px;background:#f9f9f9;border:1px solid #ccc;margin:5px auto;padding:30px;}
+#header{height:30px;}
+ol.regList{margin:0;padding:0;}
+ol.regList li{margin-left:40px;}
+.demo{margin-left:22px;}
+</style>
+<title>QQ微博转播和QQ空间转播</title>
+</head>
+<body> 
+<div class="wrap">
+	<div id="header">
+		<h1>QQ微博转播和QQ空间分享</h1>
+	</div>
+	<div id="main">
+		<h2>一、使用说明</h2>
+		<ol class="regList">
+			<li>调用share()方法，通过参数“qqwb”和“qqzone”来调用“QQ微博转播”和“QQ空间分享”功能；</li>
+			<li>相关和源代码请查看源文件；</p>
+		</ol>
+		<h2>二、实例演示</h2>
+			<div class="demo">
+			<a href="javascript:share('qqwb')">QQ微博转播</a>
+			<a href="javascript:share('qqzone')">QQ空间分享</a>
+			<a href="javascript:share('pengyou')">朋友网</a>
+			<a href="javascript:share('sina')">新浪</a>
+			<a href="javascript:share('renren')">人人网</a>
+			</div>
+	</div>
+</div>
+
+<!-- 分享 -->
+<script>
+function share(site) {
+	var _url = encodeURI(document.location);
+	var _title = encodeURI(document.title);
+	var _pic = encodeURI(""); //（例如：var _pic='图片url1|图片url2|图片url3....）
+	var _appkey = encodeURI(""); //你从腾讯获得的appkey
+	var _summary = encodeURIComponent("#分享内容#"); //需要转播的内容
+	if (site == "qqwb") {
+		var _t = _summary + encodeURI("活动地址：");
+		var _u = 'http://v.t.qq.com/share/share.php?title=' + _t + '&url=' + _url + '&appkey=' + _appkey + '&pic=' + _pic;
+	};
+	if (site == "qqzone") {
+		var _u = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + _url + '&title=' + _title + '&pics=' + _pic + '&summary=' + _summary;
+	};
+	if (site == "pengyou") {
+		var _u = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?to=pengyou&url=' + _url;
+	};
+	if (site == "sina") {
+		var _u = "http://v.t.sina.com.cn/share/share.php?title="+_summary+"&url="+_url;
+	};
+	if (site == "renren") {
+		var _u = "http://share.renren.com/share/buttonshare.do?link="+_url;
+	};
+	window.open(_u, '', 'width=700,height=680,top=0,left=0,toolbar=no,menubar=no,scrollbars=no,location=yes,resizable=no,status=no');
+};
+</script>
+</body>
+</html>

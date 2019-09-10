@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+* {margin:0;padding:0;border:0;}
+.box {width:1000px;margin:0 auto;}
+.tip2 {width:200px;border:1px solid #f00;}
+</style>
+<link rel="stylesheet" type="text/css" href="jquery.qtip.css" />
+</head>
+
+<body>
+<div class="box">
+	<a href="###" title="title文字提示">鼠标移动上来</a>
+	<a class="tip1" href="###">鼠标移动上来</a>
+	<div class="tip2">鼠标移动上来</div>
+</div>
+
+
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="jquery.qtip.js"></script>
+<script type="text/javascript">
+
+	$('a[title]').qtip();
+	$('a.tip1').qtip({
+		content:'这里是提示的文字内容'
+	});
+	$('.tip2').qtip({
+		content: {
+			text: '这里是提示的文字内容'
+		},
+		position: {
+			my: 'top center', 
+			at: 'bottom center'
+		},
+		show: {
+			effect: function(offset) {
+				$(this).show(); 
+			}	
+		},
+		hide: 'click',
+		style: {
+			classes: 'ui-tooltip-dark'
+		}
+	});
+
+
+
+</script>
+</body>
+</html>

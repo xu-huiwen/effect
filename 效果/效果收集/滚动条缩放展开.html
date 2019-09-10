@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*reset*/
+			body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+			table{border-collapse:collapse;border-spacing:0;}
+			address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+			ol,ul{list-style:none;}
+			caption,th{text-align:left;}
+			h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+			q:before,q:after{content:'';}
+			fieldset,img,abbr,acronym{border:0;}
+			.c:before,.c:after {content:"";display:table;}
+			.c:after {clear:both;}
+			.c {zoom:1;}
+			body {font:12px/1.5 '\5FAE\8F6F\96C5\9ED1';padding-top:42px;text-align:justify;}
+			a {text-decoration:none;overflow:hidden;}
+			a:hover {text-decoration:none;}
+			/*内容*/
+			.container{width: 100%;height: 2000px;background: red;}
+			.rides-cs{background:#333;position:fixed;top:130px;right:1px;z-index:999;display: none;}
+			.floatL{position: absolute;top: 0;left: -27px;width: 27px;background-color: #a99359;color: #fff;text-align: center;line-height: 1;padding: 10px 0;height: 68px;}
+			.floatR{width:130px;float:left;padding:5px;overflow:hidden;background: #f8f8f8;height: 500px;}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			
+		</div>
+		<div class="rides-cs">
+			<div class="floatL">
+				<a style="display:none" id="Show" class="btnOpen" title="查看在线客服" href="javascript:void(0);">展开</a>
+				<a style="display:block" id="Hide" class="btnCtn" title="关闭在线客服" href="javascript:void(0);">收缩</a>
+			</div>
+			<div id="box" class="floatR"></div>
+		</div>
+		<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			$("#Show").click(function(){
+				$('#box').animate({width: 'show'}, 'normal',function(){
+					$('#box').show();
+				});
+				$('#Show').attr('style','display:none');
+				$('#Hide').attr('style','display:block');
+			});
+			$("#Hide").click(function(){
+				$('#box').animate({width: 'hide'}, 'normal',function(){
+					$('#box').hide();
+				});
+				$('#Show').attr('style','display:block');
+				$('#Hide').attr('style','display:none');
+			});
+			$(window).on("scroll",function(){
+				if($(window).scrollTop()>=600){
+					$(".rides-cs").fadeIn()
+				}
+				if($(window).scrollTop()<=50){
+					$(".rides-cs").fadeOut()
+				}
+			})
+		});
+		</script>
+	</body>
+</html>

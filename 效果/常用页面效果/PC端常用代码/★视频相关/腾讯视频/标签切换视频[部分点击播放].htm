@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>标签切换视频</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		.main {width: 1000px;margin: 0 auto;}
+
+		.tab-i {display: inline;cursor: pointer;}
+		.on {color: #f00;}
+		.video {width: 500px;height: 400px;}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<ul id="tab">
+			<li class="tab-i on">标签一</li>
+			<li class="tab-i">标签二</li>
+			<li class="tab-i">标签三</li>
+		</ul>
+		<div id="con">
+			<div class="con-i">
+				<div id="video0" class="video">
+					<a href="javascript:playVideo('x01047s4j2i','0','1');">播放1</a>
+				</div>
+			</div>
+			<div class="con-i" style="display: none;">
+				<div id="video1" class="video"></div>
+			</div>
+			<div class="con-i" style="display: none;">
+				<div id="video2" class="video"></div>
+			</div>
+		</div>
+	</div>
+
+<script src="http://ossweb-img.qq.com/images/js/comm/showDialog.min.js"></script>
+<script src="http://qzs.qq.com/tencentvideo_v1/js/tvp/tvp.player.js" charset="utf-8"></script>
+<script>
+	// 根据ID获取元素
+	function gE(e) {
+	    return (typeof (e) == "object") ? e : document.getElementById(e)
+	}
+
+	// 根据标签获取元素
+	function gTag(o,t) {
+		return o.getElementsByTagName(t)
+	}
+
+	// 判断是否有类
+	function hasClass(o,c) {
+		var regexp = new RegExp("(^|\\s)" + c + "(\\s|$)", "g");
+	    return regexp.test(o.className)
+	}
+
+	//根据类名获取元素
+	function gClass(o,c) {
+		var e = [],
+	       t = gTag(o, "*");
+	   for (var i = 0; i < t.length; i++) {
+	       if (hasClass(t[i], c)) {
+	           e[e.length] = t[i]
+	       }
+	   }
+	   return e
+	}
+
+	//播放视频
+	function playVideo(vid,i,auto) {
+		var video = new tvp.VideoInfo();
+		video.setVid(vid);
+		var player = new tvp.Player('100%', '100%');
+		player.setCurVideo(video);
+		player.addParam("autoplay",auto);
+		player.addParam("wmode","opaque");
+		player.addParam("flashskin", "http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf");
+		player.write("video"+i);
+	}
+
+	//清除视频
+	function clearVideo(i) {
+	    var v = gE("video"+i);
+	    if (v) {
+	        v.innerHTML = "";
+	    }
+	}
+
+	function setTab() {
+	    var tabs = gClass(gE('tab'),"tab-i");
+	    var cons = gClass(gE('con'),"con-i");
+	    var vid = ["x01047s4j2i","e010401srvz", "b0104ymxo7k"];
+	    for (var i = 0; i < tabs.length; i++) {
+	        tabs[i].n = i;
+	        tabs[i].onclick = function () {
+	            if (!hasClass(this,'on')) {
+	                for (var j = 0; j < cons.length; j++) {
+	                    cons[j].style.display = "none";
+	                    tabs[j].className = tabs[j].className.replace(RegExp("(^|\\s)" + 'on' + "(\\s|$)", "g"), "");
+	                    clearVideo(j);
+	                }
+	                playVideo(vid[this.n], this.n, '1');
+	                this.className += (this.className ? " " : "") + 'on';
+	                cons[this.n].style.display = "block";
+	            }
+
+	        }
+	    }
+	};
+	setTab();
+</script>
+</body>
+</html>

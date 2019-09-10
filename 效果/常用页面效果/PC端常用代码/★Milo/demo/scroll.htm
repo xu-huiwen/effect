@@ -1,0 +1,130 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+<title>图片滚动</title>
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif;line-height:22px;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{}
+ol{margin:0;padding:0;}
+ol li{margin-left:40px;}
+
+
+ul{list-style:none;}
+h3{text-align: left;font-size: 14px; color:#F60;}
+.demo-box{overflow:hidden;padding-top:10px;}
+.demo-item {padding: 20px 40px;width:555px;position: relative; margin:0;}
+.demo-item li{float: left;padding: 0px 3px 0 3px; text-align: center; width: 180px;height:80px; display:inline;overflow:hidden;}
+.arrow{width: 30px;height: 82px; display: block; position: absolute; top:20px; background: url("http://ossweb-img.qq.com/images/dnf/web2011/d_sprites.png?d=20120315") no-repeat ; text-indent: -9000em; outline:none;}
+.arrow1{left:5px; background-position:-507px -135px;}
+.arrow2{right:5px;background-position:-537px -135px;}
+.do{overflow:hidden;zoom:1;padding:10px 0 0 5px;}
+.do span{display:block;width:5px;height:5px;float:left;margin-right:5px;display:inline;background-color:#000;}
+.do span.dotItem{background-color:#f00;}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>tab选项卡切换</h1>
+	</div>
+	<div id="main">
+		<h2>一、使用说明</h2>
+		<ol>
+			<li>
+				在页面/body前调用脚本：http://ossweb-img.qq.com/images/js/milo/milo-min.js；
+			</li>
+			<li>need("biz.scroll",function(s){})中调用相应的滚动js模块，设置相应参数即可；</li>
+		</ol>
+		<h2>二、实例演示</h2>
+		<div class="demo-box">
+			<h3>左右滚动</h3>
+			<div class="demo-item">
+				<div id="rollbox">
+					<ul class="p-show">
+						<li>
+							<img src="http://ossweb-img.qq.com/upload/adw/images/1343346696118359979.jpg" width="180" height="80"  />
+						</li>
+						<li>
+							<img src="http://ossweb-img.qq.com/upload/adw/images/1343087933232120698.jpg" width="180" height="80"  />
+						</li>
+						<li>
+							<img src="http://ossweb-img.qq.com/upload/adw/images/1341273480323387542.jpg" width="180" height="80"  />
+						</li>
+						<li>
+							<img src="http://ossweb-img.qq.com/upload/adw/images/1342405635106682919.jpg" width="180" height="80"  />
+						</li>
+					</ul>
+				</div>
+				<div id="do" class="do"></div>
+				<a href="javascript:void(0)"  id="m_right"  class="arrow arrow1" title="上一页">上一页</a>
+				<a href="javascript:void(0)"  id="m_left"   class="arrow arrow2" title="下一页">下一页</a>
+			</div>
+			<h3>上下滚动</h3>
+			<div class="demo-item">
+				<div id="rollbox2">
+					<ul class="p-show">
+						<li>
+							<img src="http://ossweb-img.qq.com/upload/adw/images/1343346696118359979.jpg" width="180" height="80"  />
+						</li>
+						<li>
+							<img src="http://ossweb-img.qq.com/upload/adw/images/1343087933232120698.jpg" width="180" height="80"  />
+						</li>
+						<li>
+							<img src="http://ossweb-img.qq.com/upload/adw/images/1341273480323387542.jpg" width="180" height="80"  />
+						</li>
+						<li>
+							<img src="http://ossweb-img.qq.com/upload/adw/images/1342405635106682919.jpg" width="180" height="80"  />
+						</li>
+					</ul>
+				</div>
+				<div id="do2" class="do"></div>
+				<a href="javascript:void(0)"  id="m_right2"  class="arrow arrow1" title="上一页">上一页</a>
+				<a href="javascript:void(0)"  id="m_left2"   class="arrow arrow2" title="下一页">下一页</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/milo/milo-min.js"></script>
+<script>
+need("biz.scroll",function(s){
+	//左右滚动js代码
+	s.init({
+		conId:'rollbox',//内容容器ID
+		leftId:'m_right',//左箭头ID
+		rightId:'m_left',//右箭头ID
+		frameWidth:'558',//显示框宽度
+		pageSpace:'186',//翻页宽度或高度
+		autoPlay:true,//true为自动播放、false为不自动播放
+		position:'left',//播放方向 left为向左，up为向上,设置为up时必须加上翻页高度pageHeight值
+		autoPlayTime:'2',//自动播放间隔时间(秒)
+		dotListId:'do'//是否需要分页，不需要则删掉此行，并将页面上相应代码去掉，如此例分页代码为<div id="do" class="do"></div>，删掉即可
+	});
+	//上下滚动js代码
+	s.init({
+		conId:'rollbox2',//内容容器ID
+		leftId:'m_right2',//左箭头ID
+		rightId:'m_left2',//右箭头ID
+		frameWidth:'558',//显示框宽度
+		pageSpace:'80',//翻页宽度或高度
+		autoPlay:false,//true为自动播放、false为不自动播放
+		position:'up',//播放方向 left为向左，up为向上,设置为up时必须加上翻页高度pageHeight值
+		autoPlayTime:'2',//自动播放间隔时间(秒)
+		dotListId:'do2'//是否需要分页，不需要则直接删掉此行即可
+	})
+})
+</script>
+</body>
+</html>

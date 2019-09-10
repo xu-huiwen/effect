@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="gbk">
+	<title>获奖名单</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+		.c:before,.c:after {content:"";display:table;}
+		.c:after {clear:both;}
+		.c {zoom:1;}
+		.main {width: 1000px;margin: 0 auto;}
+
+		.w1{width: 100px;}
+		.w2{width: 145px;text-overflow:ellipsis;}
+		.award {width: 350px;line-height: 30px;text-align: center;}
+			.award-hd li {float: left;}
+			.award-bd li {float: left;width: 100%;}
+				.award-bd li span {float: left;display: block;white-space: nowrap;overflow: hidden;}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="award">
+            <ul class="award-hd c">
+                <li class="w1">QQ号码</li>
+                <li class="w1">时间</li>
+                <li class="w2">奖品</li>
+            </ul>
+            <ul class="award-bd c" id="carouselContent">
+                <li>
+                    <span class="w1">1070457***</span>
+                    <span class="w1">2013-05-31</span>
+                    <span class="w2">苹果iphone4苹果iphone4苹果iphone4苹果iphone4苹果iphone4</span>
+                </li>
+                 <li>
+                    <span class="w1">1070457***</span>
+                    <span class="w1">2013-05-31</span>
+                    <span class="w2">苹果iphone4</span>
+                </li>
+                 <li>
+                    <span class="w1">1070457***</span>
+                    <span class="w1">2013-05-31</span>
+                    <span class="w2">苹果iphone4</span>
+                </li>
+                 <li>
+                    <span class="w1">1070457***</span>
+                    <span class="w1">2013-05-31</span>
+                    <span class="w2">苹果iphone4</span>
+                </li>
+                 <li>
+                    <span class="w1">1070457***</span>
+                    <span class="w1">2013-05-31</span>
+                    <span class="w2">苹果iphone4</span>
+                </li>
+                 <li>
+                    <span class="w1">1070457***</span>
+                    <span class="w1">2013-05-31</span>
+                    <span class="w2">苹果iphone4</span>
+                </li>
+            </ul>
+        </div>
+	</div>
+
+	<script src="http://ossweb-img.qq.com/images/script/bootmanager.js"></script>
+	<script>
+		$import('com.qq.basic.*');
+		//下面代码仅仅为测试代码而已，正式的时候，不用提供。
+		ScrollMarqueeUP.init({
+			'contentId' : 'carouselContent', //容器ID
+			'scrollstep' : 1, //每次移动的像素
+			'scrollstoptime' : 20 //间断时间(毫秒)
+		});
+	</script>
+</body>
+</html>

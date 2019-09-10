@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="gbk">
+	<title>自适应背景</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+		.c:before,.c:after {content:"";display:table}
+		.c:after {clear:both}
+		.c {zoom:1}
+		.main {width: 1000px;margin: 0 auto}
+
+		/*有上下边距，文字无法从头开始排列*/
+		.box1,.box1-o,.box1-i {background-image: url(sp1.png);background-repeat: no-repeat;}
+		.box1 {width: 508px;padding-top: 14px;}
+			.box1-o {background-position: -508px 100%;padding-bottom: 14px;}
+				.box1-i {background-position: -1016px 0;background-repeat: repeat-y;}
+
+		/*文字从头开始排列，但上下图片不能透明*/
+		.box2,.box2-o,.box2-i {background-image: url(sp2.png);background-repeat: no-repeat;}
+		.box2 {width: 508px;background-position: -1016px 0;background-repeat: repeat-y;}
+			.box2-i {background-position: -508px 100%;}
+	</style>
+</head>
+<body>
+	<div class="main">
+
+		<div class="box1">
+			<div class="box1-o">
+				<div class="box1-i">
+					文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容
+				</div>
+			</div>
+		</div>
+
+		<div class="box2">
+			<div class="box2-o">
+				<div class="box2-i">
+					文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

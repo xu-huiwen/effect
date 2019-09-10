@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<a href="javascript:addReminder1();">活动开始时通知我1</a>
+<a href="javascript:addReminder2();">活动开始时通知我2</a>
+<script src="http://qzs.qq.com/snsapp/app/bee/widget/js/qqreminder.js"></script>
+<script>
+function addTips(appid, mid, tik, time, words, url) {
+	QQReminder.dialog.addRemind(appid, mid, tik, 1, {
+		onSuccess: function() {
+			alert('订阅成功');
+		},
+		onClose: function() {
+
+		},
+		params: {
+			begin: time,//开始时间
+			advance: 5,//提前提醒时间，单位（分钟）
+			cycle: 2,
+			editable: 1,//允许用户编辑日期时间
+			bianliangwenzi: words,//内容文字
+			bianliangurl: url//点击日程的跳转地址，依赖业务申请中填写的base地址
+		}
+	}, { //显示参数，包括是否有遮罩层，left和top
+		top: 355,
+		left: 400,
+		hasNoBg: 0 //是否有遮罩层，0有，1没有。
+	});
+}
+
+function addReminder1() {
+	addTips(1500001076, 1001, '33B8D767C1F7C7984D900797E2BB7727', '2014-8-14 20:00', '文字文字1', 'http://www.google.com.hk/');
+	//参数依次为 APPID,MID,TIK,Time,文字
+}
+function addReminder2() {
+	addTips(1500001076, 1001, '33B8D767C1F7C7984D900797E2BB7727', '2014-8-14 20:00', '文字文字2', 'http://www.google.com.hk/');
+
+}
+</script>
+</body>
+</html>

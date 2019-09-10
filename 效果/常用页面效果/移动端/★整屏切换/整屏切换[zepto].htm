@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="author" content="Tencent-CP" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!-- 设计：cp  | 重构：cp | 创建：2014/3/13 | 更新：| 团队博客：http://tgideas.qq.com/ -->
+<title></title>
+<style>
+/* reset */
+html {height:100%;}
+body,div,p,ul,li,table,tbody,tr,td,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,iframe,header,nav,section,article,footer,figure,figcaption,menu{margin:0;padding:0;list-style:none;}
+body{font-family:"\5FAE\8F6F\96C5\9ED1",Helvetica;-webkit-user-select:none;-webkit-text-size-adjust:none;font-size:12px;height:100%;display:block;}
+header,nav,section,article,footer,figure,figcaption{display:block;}
+ol,ul{margin:0;padding:0;}
+fieldset{border:none;margin:0;padding:0;}
+a,li,ul,[onclick]{-webkit-tap-highlight-color:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+table{border-collapse:collapse;border-spacing:0;}
+em,strong{font-weight:normal;font-style:normal;}
+a {text-decoration:none;}
+.drag {
+    -webkit-transition:none;
+    transition:none;
+}
+.wrap {
+    position: relative;
+    height:100%;
+    width: 100%;
+    overflow: hidden;
+}
+.sec {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition:all 0.3s linear;
+    -webkit-transform:translateY(0px);
+    transition:all 0.3s linear;
+    transform:translateY(0px);
+    -webkit-backface-visibility:hidden;
+}
+.sec section {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height:100%;
+    z-index: 3;
+    -webkit-backface-visibility:hidden;
+}
+.sec01 {background-color:#f00;}
+.sec02 {background-color:#0f0;}
+.sec03 {background-color:#00f;}
+
+.animate {display:block;width:100px;height:100px;background-color:#fff;left:50%;top:50%;margin-left:-50px;margin-top:-50px;position:absolute;border-radius:50%;}
+.sec02_show .animate {-webkit-animation: rotation 1.5s ease-in-out;}
+@-webkit-keyframes rotation {
+    0% {
+        opacity:0;
+        border-radius:0;
+        -webkit-transform: rotate(0deg) scale(0.1);
+    }
+    100% {
+        opacity:1;
+        -webkit-transform: rotate(360deg)  scale(1);
+        border-radius:50%;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	<div class="sec">
+		<section class="sec01">1</section>
+		<section class="sec02">
+            <span class="animate"></span>
+        </section>
+		<section class="sec03">3</section>
+	</div>
+</div>
+<script src="http://cdn.staticfile.org/zepto/1.1.3/zepto.min.js"></script>
+<script>
+document.body.addEventListener('touchstart', function(e) {
+    e = e.changedTouches[0];
+    onStart(e);
+});
+
+document.body.addEventListener('touchmove', function(e) {
+    onMove(e.changedTouches[0], e);
+});
+
+document.body.addEventListener('touchend', function(e) {
+    onEnd(e.changedTouches[0]);
+});
+
+// 翻转的绑定
+window.onorientationchange = orientationChange;
+
+function initPage() {
+    pageWidth = $(window).width();
+    pageHeight = $(".wrap").height();
+    pages = $(".wrap section");
+
+    $(".wrap section").css({
+        "width": pageWidth + "px",
+        "height": pageHeight + "px"
+    });
+
+    $(".sec").addClass("drag");
+    animatePage(curPage);
+
+}
+
+function orientationChange() {
+    initPage();
+}
+
+// 以下是拖动效果
+var startX = 0,
+    startY = 0,
+	margin = 0;
+var pages = null;
+var curPage = 0;
+var pageWidth = 0,
+    pageHeight = 0;
+var targetElement = null;
+var scrollPrevent = false,
+    movePrevent = false,
+    touchDown = false;
+
+$(document).ready(function() {
+    initPage();
+});
+
+function onStart(e) {
+    if (movePrevent == true) {
+        event.preventDefault();
+        return false;
+    }
+
+    touchDown = true;
+
+    // 起始点，页面位置
+    startX = e.pageX;
+    startY = e.pageY;
+
+    $(".sec").addClass("drag");
+
+    margin = $(".sec").css("-webkit-transform");
+    margin = margin.replace("matrix(", "");
+    margin = margin.replace(")", "");
+    margin = margin.split(",");
+    margin = parseInt(margin[5]);
+}
+
+function onMove(e, oe) {
+    if (movePrevent == true || touchDown != true) {
+        event.preventDefault();
+        return false;
+    }
+    event.preventDefault();
+    if (scrollPrevent == false && e.pageY != startY) {
+        var temp = margin + e.pageY - startY;
+        $(".sec").css("-webkit-transform", "matrix(1, 0, 0, 1, 0, " + temp + ")");
+    }
+}
+
+function onEnd(e) {
+    if (movePrevent == true) {
+        event.preventDefault();
+        return false;
+    }
+
+    touchDown = false;
+
+    if (scrollPrevent == false) {
+        // 抬起点，页面位置
+        endX = e.pageX;
+        endY = e.pageY;
+        // swip 事件默认大于50px才会触发，小于这个就将页面归回
+        if (Math.abs(endY - startY) <= 50) {
+            animatePage(curPage);
+        } else {
+            if (endY > startY) {
+                prevPage();
+            } else {
+                nextPage();
+            }
+        }
+    }
+
+    $(".sec").removeClass("drag");
+}
+
+function prevPage() {
+    var newPage = curPage - 1;
+    animatePage(newPage);
+
+}
+
+function nextPage() {
+    var newPage = curPage + 1;
+    animatePage(newPage);
+}
+
+function animatePage(newPage) {
+    if (newPage < 0) {
+        newPage = 0;
+    }
+    if (newPage > $(".wrap section").length - 1) {
+        newPage = $(".wrap section").length - 1;
+    }
+
+    curPage = newPage;
+    var newMarginTop = newPage * (-pageHeight);
+    $(".sec").css({
+        "-webkit-transform": "matrix(1, 0, 0, 1, 0, " + newMarginTop + ")"
+    });
+
+    movePrevent = true;
+    setTimeout("movePrevent=false;", 300);
+
+    // 每页动画
+    if (!$(pages[curPage]).hasClass("sec0" + (curPage + 1) + "_show")) {
+        $(pages[curPage]).addClass("sec0" + (curPage + 1) + "_show");
+    }
+    $(pages[curPage - 1]).removeClass("sec0" + (curPage) + "_show");
+    $(pages[curPage + 1]).removeClass("sec0" + (curPage + 2) + "_show");
+}
+</script>
+</body>
+</html>

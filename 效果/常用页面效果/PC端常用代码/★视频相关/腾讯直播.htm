@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>腾讯直播</title>
+</head>
+
+<body>
+
+<div id="mod_player">
+    <!-- 这个div是播放器准备输出的位置 -->
+</div>
+<!-- 引入腾讯视频播放器组件 -->
+<script language="javascript" src="http://imgcache.gtimg.cn/tencentvideo_v1/tvp/js/tvp.player_v2.js" charset="utf-8"></script>
+<script language="javascript">
+var video = new tvp.VideoInfo();
+video.setChannelId("3956944389");
+
+var player = new tvp.Player();
+player.create({
+    width: 640,
+    height: 400,
+    type: 1,
+    video: video,
+    modId: "mod_player",
+    flashWmode: "direct",
+    autoplay: true
+});
+</script>
+</body>
+
+</html>

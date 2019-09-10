@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk">
+<meta name="robots" content="all">
+<meta name="author" content="Tencent-CP">
+<meta name="Copyright" content="Tencent">
+<title>掉落动画</title>
+<style>
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+q:before,q:after{content:''}
+fieldset,img,abbr,acronym{border:0}	
+
+body {background:url(bg.jpg) no-repeat 50% 0;}
+.head{height: 548px;width: 1000px;margin:0 auto;}
+
+.main{width: 1000px;margin:0 auto;height: 1288px;position: relative;}
+.drop{position: absolute;-webkit-transition:all 2s 0.5s;-moz-transition:all 2s 0.5s;}
+
+@keyframes drop
+{0%{opacity:0.2;left:-82px; top:0;}100% {opacity:0.8;left:-82px; top:1150px;}}
+@-moz-keyframes drop /* Firefox */
+{0%{opacity:0.2;left:-82px; top:0;}100% {opacity:0.8;left:-82px; top:1150px;}}
+
+@-webkit-keyframes drop /* Safari and Chrome */
+{0%{opacity:0.2;left:-82px; top:0;}100% {opacity:0.8;left:-82px; top:1150px;}}
+
+@-o-keyframes drop /* Opera */
+{0%{opacity:0.2;left:-82px; top:0;}100% {opacity:0.8;left:-82px; top:1150px;}}
+
+
+@keyframes drop2
+{0%{opacity:0.2;left:-128px; top:0;}100% {opacity:0.8;left:-128px; top:1150px;}}
+
+@-moz-keyframes drop2 /* Firefox */
+{0%{opacity:0.2;left:-128px; top:0;}100% {opacity:0.8;left:-128px; top:1150px;}}
+
+@-webkit-keyframes drop2 /* Safari and Chrome */
+{0%{opacity:0.2;left:-128px; top:0;}100%{ opacity:0.8;left:-128px; top:1150px;}}
+
+@-o-keyframes drop2 /* Opera */
+{0%{opacity:0.2;left:-128px; top:0;}100%{ opacity:0.8;left:-128px; top:1150px;}}
+
+@keyframes drop3
+{0%{opacity:0.2;left:-160px; top:0}100% {opacity:0.8;left:-160px; top:1200px;}}
+
+@-moz-keyframes drop3 /* Firefox */
+{0%{opacity:0.2;left:-160px; top:0}100% {opacity:0.8;left:-160px; top:1200px;}}
+
+@-webkit-keyframes drop3 /* Safari and Chrome */
+{0%{opacity:0.2;left:-160px; top:0}100% {opacity:0.8;left:-160px; top:1200px;}}
+
+@-o-keyframes drop3 /* Opera */
+{0%{opacity:0.2;left:-160px; top:0}100% {opacity:0.8;left:-160px; top:1200px;}}
+
+
+@keyframes drop4
+{0%{opacity:0.2;left:-178px; top:0}100% {opacity:0.8;left:-178px; top:1200px;}}
+
+@-moz-keyframes drop4 /* Firefox */
+{0%{opacity:0.2;left:-178px; top:0}100% {opacity:0.8;left:-178px; top:1200px;}}
+
+@-webkit-keyframes drop4 /* Safari and Chrome */
+{0%{opacity:0.2;left:-178px; top:0}100% {opacity:0.8;left:-178px; top:1200px;}}
+
+@-o-keyframes drop4 /* Opera */
+{0%{opacity:0.2;left:-178px; top:0}100% {opacity:0.8;left:-178px; top:1200px;}}
+
+
+.s1,.s2,.s3,.s4{background: url(icon.png) no-repeat;display: block;text-indent: -9999px;opacity:0;}
+	.s1{width: 96px;height: 58px;background-position: 0 0;left: -82px;top: 0;
+	animation:drop 5s ease-in 2s infinite normal;-moz-animation:drop 5s ease-in 2s infinite normal;-webkit-animation:drop 5s ease-in 2s infinite normal;-o-animation:drop 5s ease-in 2s infinite normal
+	}
+	.s2{width: 91px;height: 53px;background-position: 0 -73px;left: -128px;top: 0;
+animation:drop2 8s ease-in 2s infinite normal;-moz-animation:drop2 8s ease-in 2s infinite normal;-webkit-animation:drop2 8s ease-in 2s infinite normal;-o-animation:drop2 8s ease-in 2s infinite normal
+	}
+	.s3{width:71px;height: 40px;background-position: 0 -135px;left: -160px;top: 0;
+animation:drop3 12s ease-in 2s infinite normal;-moz-animation:drop3 12s ease-in 2s infinite normal;-webkit-animation:drop3 12s ease-in 2s infinite normal;-o-animation:drop3 12s ease-in 2s infinite normal
+	}
+	.s4{width: 73px;height: 29px;background-position: 0 -178px;left: -38px;top: 0;
+animation:drop4 15s ease-in 2s infinite normal;-moz-animation:drop4 15s ease-in 2s infinite normal;-webkit-animation:drop4 15s ease-in 2s infinite normal;-o-animation:drop4 15s ease-in 2s infinite normal
+	}
+</style>
+</head>
+<body>
+	<div class="head">
+		
+	</div>
+	<div class="main">
+		<div class="drop s1"></div>
+		<div class="drop s2"></div>
+		<div class="drop s3"></div>
+		<div class="drop s4"></div>
+	</div>
+</body>
+</html>

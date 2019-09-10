@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery老虎机</title>
+	<style>
+		body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form{margin:0;padding:0;}
+		body,button,input,select,textarea{font:12px/1.5 tahoma, \5b8b\4f53, sans-serif;padding-top:42px;background:#410806;}
+		select{padding-top:0;background:none;}
+		h1,h2,h3,h4,h5,h6{font-size:100%;}
+		em,b{font-style:normal;}
+		a{text-decoration:none;}
+		a:hover{text-decoration:underline;}
+		img{border:0;}
+		button,input,select,textarea{font-size:100%;outline:none;}
+		table{border-collapse:collapse;border-spacing:0;}
+		td,th,ul,ol{list-style-type:none;padding:0;}
+		.hidden{display:block;width:0;height:0;overflow:hidden;}
+		.c1_lhj{width:455px;height:393px;float:left;background:url(http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/lhj_bg.jpg) no-repeat;position:relative;display:inline;margin:16px 0 0 8px;}
+		.c1_lhj_in{width:345px;height:207px;overflow:hidden;position:absolute;margin:29px 0 0 68px;}
+		.jl_box{width:100px;float:left;margin-right:14px;position: relative;display: inline;overflow: hidden;}
+		.jl_p{width:100px;height:69px;text-align:center;float:left;margin-right:14px;position:relative;display:inline;overflow: hidden;}
+		.jl_p em{display:block;width:100px;1line-height:16px;position:absolute;left:0;top:48px;text-align:center;color:#ba4a00;font-family:宋体;}
+		.lhj_yb,.lhj_yj_bt{display:block;text-indent:-9999px;position:absolute;-webkit-transition:-webkit-transform .5s;transition:transform .5s;}
+		.lhj_yb{width:74px;height:97px;left:67px;bottom:60px;background:url(http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/lhj_yb2.png) no-repeat;}
+		.lhj_yj_bt{width:199px;height:67px;left:156px;top:268px;background:url(http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/lhj_yj_bt2.png) no-repeat;}
+		.lhj_yb:hover,.lhj_yj_bt:hover{-webkit-transform:scale(1.1);transform:scale(1.1);}
+	</style>
+</head>
+<body>
+<div class="c1_lhj">
+    <div class="c1_lhj_in">
+        <ul class="jl_box" id="J_lottery_1">
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img1.png" width="66" height="52" alt="100万欢乐豆" /> <em>100万欢乐豆</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img3.png" width="66" height="52" alt="50Q币" /> <em>50Q币</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img4.png" width="66" height="52" alt="1年蓝钻" />
+                <em>1年蓝钻</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img3.png" width="66" height="52" alt="10Q币" />
+                <em>10Q币</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img3.png" width="66" height="52" alt="5Q币" />
+                <em>5Q币</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img4.png" width="66" height="52" alt="1个月蓝钻" />
+                <em>1个月蓝钻</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img4.png" width="66" height="52" alt="蓝钻7天体验" />
+                <em>蓝钻7天体验</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img6.png" width="66" height="52" alt="1万欢乐豆" />
+                <em>1万欢乐豆</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img6.png" width="66" height="52" alt="1000欢乐豆" />
+                <em>1000欢乐豆</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img2.png" width="66" height="52" alt="加倍卡*10" />
+                <em>加倍卡*1</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img5.png" width="66" height="52" alt="抢庄卡*10" />
+                <em>抢庄卡*1</em>
+            </li>
+        </ul>
+        <ul class="jl_box" id="J_lottery_2">
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img1.png" width="66" height="52" alt="100万欢乐豆" />
+                <em>100万欢乐豆</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img3.png" width="66" height="52" alt="50Q币" />
+                <em>50Q币</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img4.png" width="66" height="52" alt="1年蓝钻" />
+                <em>1年蓝钻</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img3.png" width="66" height="52" alt="10Q币" />
+                <em>10Q币</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img3.png" width="66" height="52" alt="5Q币" />
+                <em>5Q币</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img4.png" width="66" height="52" alt="1个月蓝钻" />
+                <em>1个月蓝钻</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img4.png" width="66" height="52" alt="蓝钻7天体验" />
+                <em>蓝钻7天体验</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img6.png" width="66" height="52" alt="1万欢乐豆" />
+                <em>1万欢乐豆</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img6.png" width="66" height="52" alt="1000欢乐豆" />
+                <em>1000欢乐豆</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img2.png" width="66" height="52" alt="加倍卡*10" />
+                <em>加倍卡*1</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img5.png" width="66" height="52" alt="抢庄卡*10" />
+                <em>抢庄卡*1</em>
+            </li>
+        </ul>
+        <ul class="jl_box" id="J_lottery_3">
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img1.png" width="66" height="52" alt="100万欢乐豆" />
+                <em>100万欢乐豆</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img3.png" width="66" height="52" alt="50Q币" />
+                <em>50Q币</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img4.png" width="66" height="52" alt="1年蓝钻" />
+                <em>1年蓝钻</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img3.png" width="66" height="52" alt="10Q币" />
+                <em>10Q币</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img3.png" width="66" height="52" alt="5Q币" />
+                <em>5Q币</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img4.png" width="66" height="52" alt="1个月蓝钻" />
+                <em>1个月蓝钻</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img4.png" width="66" height="52" alt="蓝钻7天体验" />
+                <em>蓝钻7天体验</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img6.png" width="66" height="52" alt="1万欢乐豆" />
+                <em>1万欢乐豆</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img6.png" width="66" height="52" alt="1000欢乐豆" />
+                <em>1000欢乐豆</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img2.png" width="66" height="52" alt="加倍卡*10" />
+                <em>加倍卡*1</em>
+            </li>
+            <li class="jl_p">
+                <img src="http://ossweb-img.qq.com/images/gamevip/act/a20140113ylxnlhj/jl_img5.png" width="66" height="52" alt="抢庄卡*10" />
+                <em>抢庄卡*1</em>
+            </li>
+        </ul>
+    </div>
+    <a href="javascript:void(0);" class="lhj_yj_bt" title="免费摇奖" id="J_begin">免费摇奖</a>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.5.min.js"></script>
+<script>
+$(function() {
+    //以下为抽奖代码
+    var lotteryState = 0;
+    var lotteryTimer1;
+    var lotteryTimer2;
+    var lotteryTimer3;
+    var giftSet = [
+        [7, 11, 10],
+        [6, 11, 10],
+        [3, 11, 10],
+        [4, 11, 10],
+        [2, 11, 10],
+        [5, 11, 10],
+        [11, 11, 10],
+        [11, 10, 10],
+        [8, 11, 10],
+        [9, 11, 10],
+        [11, 11, 10]
+    ];
+    var speed1 = 10; //数值越大，转的越慢
+    var speed2 = 20;
+    var speed3 = 15;
+    $("#J_lottery_1").prepend($("#J_lottery_1 li").clone());
+    $("#J_lottery_2").prepend($("#J_lottery_2 li").clone());
+    $("#J_lottery_3").prepend($("#J_lottery_3 li").clone());
+
+    //lottery
+    window.lottery = function() {
+
+        //以不同速度滚动
+        scroll("#J_lottery_1", 1);
+        scroll("#J_lottery_2", 2);
+        scroll("#J_lottery_3", 3);
+    }
+    // 纯滚动效果 order表示第几列
+
+    function scroll(ele, order) {
+        var top = parseInt($(ele).css('marginTop'));
+        switch (order) {
+            case 1:
+                lotteryTimer1 = setInterval(function() {
+                    top += 5;
+                    if (top > -1) top = -276;
+                    $(ele).css('marginTop', top)
+                }, speed1);
+                break;
+            case 2:
+                lotteryTimer2 = setInterval(function() {
+                    top += 5;
+                    if (top > -1) top = -276;
+                    $(ele).css('marginTop', top)
+                }, speed2);
+                break;
+            case 3:
+                lotteryTimer3 = setInterval(function() {
+                    top += 5;
+                    if (top > -1) top = -276;
+                    $(ele).css('marginTop', top)
+                }, speed3);
+                break;
+        }
+    }
+    //抽奖box
+    window.showResult = function() {
+        var top = [];
+
+        for (var i = 0; i < giftSet.length; i++) {
+            if (giftSet[i] == 1) {
+                top[i] = -69 * 10 + "px";
+            } else {
+                top[i] = -69 * (giftSet[i] - 2) + "px";
+            }
+
+        }
+        if (lotteryState == 1) {
+            lottery_stop();
+            $("#J_lottery_1").css('marginTop', top[0]);
+            $("#J_lottery_2").css('marginTop', top[1]);
+            $("#J_lottery_3").css('marginTop', top[2]);
+        }
+    }
+    window.lottery_start = function(num) {
+        if (lotteryState == 1) {
+            return false;
+        }
+        lotteryState = 1; //正在抽奖中
+        giftSet = giftSet[num];
+        lottery();
+        setTimeout(function() {
+            showResult();
+        }, 3000);
+    }
+
+    function lottery_stop() {
+        lotteryState = 0; //抽奖结束
+        clearInterval(lotteryTimer1);
+        clearInterval(lotteryTimer2);
+        clearInterval(lotteryTimer3);
+    }
+    $("#J_begin").click(function() {
+        lottery_start(3);
+
+    });
+});
+</script>
+</body>
+</html>

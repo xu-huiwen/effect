@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3 翻转</title>
+	<style>
+	/* reset */
+	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+	table{border-collapse:collapse;border-spacing:0;}
+	address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+	ol,ul{list-style:none;}
+	h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+	q:before,q:after{content:'';}
+	fieldset,img,abbr,acronym{border:0;}
+
+	.container {
+	  width: 200px;
+	  height: 260px;
+	  position: relative;
+	  margin: 0 auto 40px;
+	  border: 1px solid #CCC;
+	  -webkit-perspective: 800px;
+	     -moz-perspective: 800px;
+	       -o-perspective: 800px;
+	          perspective: 800px;
+	}
+
+	#card {
+	  width: 100%;
+	  height: 100%;
+	  position: absolute;
+	  -webkit-transition: -webkit-transform 1s;
+	     -moz-transition: -moz-transform 1s;
+	       -o-transition: -o-transform 1s;
+	          transition: transform 1s;
+	  -webkit-transform-style: preserve-3d;
+	     -moz-transform-style: preserve-3d;
+	       -o-transform-style: preserve-3d;
+	          transform-style: preserve-3d;
+	}
+
+	#card.flipped {
+	  -webkit-transform: rotateY( 180deg );
+	     -moz-transform: rotateY( 180deg );
+	       -o-transform: rotateY( 180deg );
+	          transform: rotateY( 180deg );
+	}
+
+	#card div {
+	  display: block;
+	  height: 100%;
+	  width: 100%;
+	  line-height: 260px;
+	  color: white;
+	  text-align: center;
+	  font-weight: bold;
+	  font-size: 140px;
+	  position: absolute;
+	  -webkit-backface-visibility: hidden;
+	     -moz-backface-visibility: hidden;
+	       -o-backface-visibility: hidden;
+	          backface-visibility: hidden;
+	}
+
+	#card .front {
+	  background: red;
+	}
+
+	#card .back {
+	  background: blue;
+	  -webkit-transform: rotateY( 180deg );
+	     -moz-transform: rotateY( 180deg );
+	       -o-transform: rotateY( 180deg );
+	          transform: rotateY( 180deg );
+	}
+	</style>
+</head>
+<body>
+<div class="container">
+  <div id="card">
+    <div class="front">1</div>
+    <div class="back">2</div>
+  </div>
+</div>
+<a id="flip" href="###">翻转</a>
+<script>
+	Element.prototype.hasClassName = function (a) {
+	    return new RegExp("(?:^|\\s+)" + a + "(?:\\s+|$)").test(this.className);
+	};
+
+	Element.prototype.addClassName = function (a) {
+	    if (!this.hasClassName(a)) {
+	        this.className = [this.className, a].join(" ");
+	    }
+	};
+
+	Element.prototype.removeClassName = function (b) {
+	    if (this.hasClassName(b)) {
+	        var a = this.className;
+	        this.className = a.replace(new RegExp("(?:^|\\s+)" + b + "(?:\\s+|$)", "g"), " ");
+	    }
+	};
+
+	Element.prototype.toggleClassName = function (a) {
+	  this[this.hasClassName(a) ? "removeClassName" : "addClassName"](a);
+	};
+
+	function addEventSimple(obj, evt, fn) {
+		if (obj.addEventListener) obj.addEventListener(evt, fn, false);
+		else if (obj.attachEvent) obj.attachEvent('on' + evt, fn)
+	}
+
+	var init = function() {
+	  var card = document.getElementById('card');
+	  addEventSimple(document.getElementById('flip'), "click",function(){
+	  	card.toggleClassName('flipped');
+	  });
+	};
+
+	addEventSimple(window, "load",init);
+</script>
+</body>
+</html>

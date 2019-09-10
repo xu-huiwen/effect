@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>根据窗口宽度改变样式</title>
+	<style>
+		* {margin: 0;padding: 0;border: 0;}
+		.box {background-color: #f00;margin: 0 auto;}
+		.s4 .box {width: 1000px;height: 1000px;}
+		.s3 .box {width: 750px;height: 750px;}
+		.s2 .box {width: 500px;height: 500px;}
+		.s1 .box {width: 250px;height: 250px;}
+	</style>
+</head>
+<body>
+<div id="page-style">
+	<div class="box"></div>
+</div>
+
+<script>
+(function() {
+	var s = [1240, 1560, 1880]
+	var b = document.getElementsByTagName('body')[0];
+	var r = document.getElementById('page-style');
+	var l = s.length;
+	var v;
+
+	function t() {
+		var w = b && b.clientWidth;
+		if (w < s[0]) {
+			u(1);
+		} else if (w > s[l - 1]) {
+			u(l + 1);
+		} else {
+			for (var i = 0; i < l; i++) {
+				if (w >= s[i] && w < s[i + 1]) {
+					u(i + 2);
+					break;
+				}
+			}
+		}
+	};
+
+	function u(n) {
+		if (v == n) return;
+		r.className = 's' + n;
+		v = n;
+	}
+	t();
+	window.setPageStyle = t;
+	window.getPageStyle = function() {
+		return v;
+	};
+
+	function addEventSimple(obj, evt, fn) {
+		if (obj.addEventListener) obj.addEventListener(evt, fn, false);
+		else if (obj.attachEvent) obj.attachEvent('on' + evt, fn)
+	}
+
+	addEventSimple(window, "load", setPageStyle);
+	addEventSimple(window, "resize", setPageStyle);
+})();
+</script>
+</body>
+</html>

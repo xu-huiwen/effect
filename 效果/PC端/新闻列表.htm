@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻列表</title>
+</head>
+<body>
+	<ul id="newsList">
+		
+	</ul>
+
+<script>
+	var gets = {
+		ran: String(new Date()).split(":")[1],
+		ua: navigator.userAgent,
+		id: function(o) {
+			return document.getElementById(o)
+		},
+		tag: function(p, o) {
+			return p.getElementsByTagName(o)
+		},
+		elem: function(o) {
+			return document.createElement(o)
+		}
+	}, browser = {
+		isIE: gets.ua.indexOf("MSIE") != -1,
+		isIE6: gets.ua.indexOf("MSIE 6") != -1,
+		notApple: gets.ua.indexOf("iPhone") == -1 && gets.ua.indexOf("iPad") == -1
+	}, creat = {
+		script: function(u) {
+			var o = gets.elem("script");
+			o.src = u;
+			o.type = "text/javascript";
+			gets.tag(document, "head")[0].appendChild(o);
+			return o
+		}
+	}, chkload = function(u, s, v) {
+		var e = creat.script(u);
+		if (browser.isIE) {
+			e.onreadystatechange = function() {
+				if (this.readyState && this.readyState == "loading") {
+					return
+				} else {
+					s(v)
+				}
+			}
+		} else {
+			e.onload = function() {
+				s(v)
+			}
+		}
+	};
+	loads_newsnav = function(o) {
+	    var news = [],
+	    shownews = function() {
+	        for (var i = 0; i < 10; i++) {
+	            var data = newsIndexData[i],
+	            ntitle = decodeURIComponent(data["sTitle"]),
+	            stitle = decodeURIComponent(data["sTypeName"]),
+				ncolor= decodeURIComponent(data["sTitleIndexColor"]),
+				ntime= decodeURIComponent(data["dtReleaseTime"]),
+	            nurl = function(o) {
+                    return o.indexOf("http") == -1 ? unescape("http://ss.qq.com" + o) : unescape(o);
+                };
+	            news.push('<li class="item"><a class="ntitle" href="' + nurl(data["infoPath"]) + '" target="_blank" title="' + ntitle + '"  style="color:'+ncolor+'">' + ntitle + '<\/a><em>['+ntime+']</em><\/li>');
+	        }
+	        gets.id("newsList").innerHTML = news.join("");
+	    };
+	    if (o == "newsList") {
+	        chkload("http://ba.qq.com/webplat/info/news_version3/1256/1257/m1043/index.js?" + gets.ran, shownews, "");
+	    }
+	}
+	loads_newsnav("newsList");
+</script>
+</body>
+</html>

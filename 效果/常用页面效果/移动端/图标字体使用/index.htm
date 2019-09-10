@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图标字体使用</title>
+	<style>
+		@font-face {
+			font-family: 'icon';
+			src: url('icon.ttf');
+		}
+		[class^="icon-"], [class*=" icon-"] {
+			font-family: 'icon';
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		.icon-r:before {content:'r';font-size:20px;color:#f00;}
+		.icon-s:before {content:'s';font-size:40px;color:#0f0;}
+		.icon-g:before {content:'g';font-size:60px;color:#00f;}
+	</style>
+</head>
+<body>
+	<span class="icon-r">人人r</span>
+	<span class="icon-s">微博s</span>
+	<span class="icon-g">Githubg</span>
+</body>
+</html>

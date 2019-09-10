@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>一键收听</title>
+<style type="text/css">
+/* 重置 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+q:before,q:after{content:''}
+fieldset,img,abbr,acronym{border:0}
+
+/* 页面样式 */
+.selectors{width:322px;height:101px;margin:0 0 0 50px;background:url(http://ossweb-img.qq.com/images/c9/act/a20120821piao/s.jpg) no-repeat -1px 0;}
+.selectors label{float:left;width:100px;height:100px;position:relative;}
+.selector_1,.selector_2{margin-right:0px;}
+.chkers{position:absolute;right:1px;bottom:1px;}
+</style>
+</head>
+
+<body>
+	<div class="selectors" id="vals">
+        <label for="weibo_1" class="selector_1"><input type="checkbox" class="chkers" id="weibo_1" checked="true" value="c9china" /></label>
+        <label for="weibo_2" class="selector_2"><input type="checkbox" class="chkers" id="weibo_2" checked="true" value="qqdianying" /></label>
+        <label for="weibo_3" class="selector_3"><input type="checkbox" class="chkers" id="weibo_3" checked="true" value="msi_mylove" /></label>
+    </div>
+	<a href="javascript:;" title="一键收听" id="foAll">一键收听</a>
+
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/milo/milo.js"></script>
+<script type="text/javascript">
+milo.addEvent(g('foAll'), 'click', function(){
+	var chks = g('vals').getElementsByTagName('input');
+	var chkArr = [];
+	for(var i = 0; i < chks.length; i++){
+		if(chks[i].checked){
+			chkArr.push(chks[i].value);
+		}
+	}
+
+	if(chkArr.length < 1){
+		alert('一个都微博都没有选到哦~');
+		return;
+	}
+	else{
+		checkAll(chkArr);
+	}
+});
+
+function checkAll(arr){
+	need("biz.weiboManager",function(followAll){
+		followAll(arr,function(){
+			alert('收听成功');
+		},function(){
+			alert('收听失败，请刷新后重试~~');
+		})
+	});
+}
+</script>   
+</body>
+</html>

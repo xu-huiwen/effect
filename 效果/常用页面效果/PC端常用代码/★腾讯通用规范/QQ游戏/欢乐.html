@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>欢乐活动页CP规范Demo – QQ欢乐游戏-欢乐游戏，快乐随心</title>
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-QQGame" />
+<meta name="Copyright" content="Copyright (c) 2006-2012 TENCNET" />
+<style>
+/*Start 与组件无关代码*/
+*{margin:0;padding:0}
+body{font-size:12px;padding:0 10px;}
+ul{overflow:hidden;zoom:1;}
+li{list-style:none}
+li{float:left;}
+#hl_glist,#hl_hd_list{margin-bottom:20px}
+#hl_glist{width:770px}
+#hl_glist li{width:110px;margin-bottom:10px;_display:inline;}
+h5{font-size:16px;padding:0 0 10px 10px;margin-bottom:10px;border-bottom:1px solid #bbb}
+code{display:block;padding:10px;border:1px solid #000;margin:10px;background:#999;line-height:1.5}
+img{border:none}
+#hl_glist a{height:85px;display:block;}
+#hl_glist img{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://ossweb-img.qq.com/images/qqgame/huanle/act/g_icon/ico_bg.png", sizingMethod="crop");}
+/*End 与组件无关代码*/
+</style>
+
+</head>
+
+
+
+<body>
+<!--Start与组件无关代码-->
+<h5 style="margin-top:60px">欢乐游戏推荐</h5>
+<!--End-->
+<div id="hl_glist"></div>
+<code>
+&lt;div id="hl_glist"&gt;&lt;/div&gt;<br/>
+&lt;script type="text/javascript" src="http://huanle.qq.com/act/public/pbl_hl_act.js"&gt;&lt;/script&gt;<br/>
+&lt;script type="text/javascript"&gt;pbl_hl_act.game_list();&lt;/script&gt;</code>
+
+<!--Start与组件无关代码-->
+<h5 style="margin-top:35px">欢乐活动推荐</h5>
+<!--End-->
+
+<div id="hl_hd_list"></div>
+<code>
+&lt;div id="hl_hd_list"&gt;&lt;/div&gt;<br/>
+&lt;script type="text/javascript" src="http://huanle.qq.com/act/public/pbl_hl_act.js"&gt;&lt;/script&gt;<br/>
+&lt;script type="text/javascript"&gt;pbl_hl_act.act_list();&lt;/script&gt;</code>
+
+<!--Start与组件无关代码-->
+<h5 style="margin-top:35px">QQ游戏footer</h5>
+<!--End-->
+
+<div id="footer"></div>
+<code>
+&lt;div id="footer"&gt;&lt;/div&gt;<br/>
+白色版本：<br/>
+&lt;script type="text/javascript" src="http://qqgame.qq.com/public/footer_w.js"&gt;&lt;/script&gt;<br/>
+黑色版本：<br/>
+&lt;script type="text/javascript" src="http://qqgame.qq.com/public/footer_b.js"&gt;&lt;/script&gt;
+</code>
+
+
+
+
+<!--Start top条、欢乐游戏推荐、欢乐活动推荐组件都需要用到-->
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/basic.js"></script>
+<!--End -->
+
+<!--Start 通用top条需要用到-->
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/login/loginmanagerv2.js"></script>
+<script type="text/javascript" src="http://huanle.qq.com/act/public/header.js"></script>
+<!--End-->
+
+<!--Start 欢乐游戏推荐、欢乐活动推荐需要用到-->
+<script type="text/javascript" src="http://huanle.qq.com/act/public/pbl_hl_act.js"></script>
+<!--End-->
+
+<!--Start QQ游戏Footer需要用到-->
+<script type="text/javascript" src="http://qqgame.qq.com/public/footer_b.js"></script>
+<!--End-->
+
+<script>
+$$(window).load(function(){
+	//欢乐游戏推荐
+	pbl_hl_act.game_list();
+	//欢乐活动推荐
+	pbl_hl_act.act_list();
+})
+</script>
+</body>
+
+
+</html>

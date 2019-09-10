@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif;line-height:22px;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{}
+.regCP{padding-left:50px;}
+/*微博墙样式开始*/
+.wall{margin:0 auto;width:300;height:550px;overflow:hidden;}
+/*微博墙样式结束*/
+</style>
+<title>腾讯微博话题墙示例</title>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>腾讯微博话题墙示例</h1>
+	</div>
+	<div id="main">
+		<h2>一、使用说明：</h2>
+		<ol class="regCP">
+			<li>话题墙接入地址请为<a href="http://dev.open.t.qq.com/websites/wall?explain=1">http://dev.open.t.qq.com/websites/wall?explain=1</a>，网站名称为专题的"title"、网站地址为专题的完整地址、话题由产品接口人提供，重构师填入相应栏目内；</li>
+			<li>根据设计稿设置样式，通常选择&ldquo;宽度自适应&rdquo;、&ldquo;自定义颜色&rdquo;，颜色选择"自定义"后，标题栏将会有<strong>50px 空白</strong>，可在页面css中用 <strong>margin-top:-50px</strong>隐藏空白；</li>
+			<li>通过设置后，页面会自动生成相应的代码，复制代码至专题页即可。</li> 
+			<li><strong>提示</strong>：需要使用开通了腾讯微博的帐号登录，如未开通，页面有提示并引导。</li> 
+		</ol>
+		
+		<h2>二、实例演示：(详情请查看源文件)</h2>
+		<div class="wall">
+			<iframe frameborder="0" scrolling="no" src="http://wall.v.t.qq.com/index.php?c=wall&a=index&t=a|b|c&ak=801141505&w=500&h=550&o=7&s=0" width="500" height="550"></iframe>
+		</div>
+	</div>
+</div>
+</body>
+</html>

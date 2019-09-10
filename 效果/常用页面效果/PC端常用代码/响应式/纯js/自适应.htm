@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>自适应</title>
+<style id="stylePros">
+.box {width: 500px;height: 500px;margin: 0 auto;border: 1px solid #000;}
+@media screen and (max-width: 600px) {
+	/*mediaMax600*/
+	.box {background-color: #000;}
+	/*mediaMax600*/
+}
+@media screen and (min-width: 600px) {
+	/*mediaMin600*/
+	.box {background-color: #f00;}
+	/*mediaMin600*/
+}
+</style>
+</head>
+<body>
+<div class="box"></div>
+
+<!--[if lt IE 9]>
+<script>
+function g(id) {
+	return (typeof(id) == "string") ? document.getElementById(id) : id;
+}
+var mqs = {};
+
+mqs.org = g("stylePros").innerHTML; /* 包含media query样式的所有规则 */
+mqs.mediaMin600 = mqs.org.split("/*mediaMin600*/")[1];
+mqs.mediaMax600 = mqs.org.split("/*mediaMax600*/")[1];
+mqs.css = document.createElement('style');
+mqs.css.type = 'text/css';
+mqs.css.id = "mediaHook";
+
+document.getElementsByTagName("head")[0].appendChild(mqs.css);
+
+function mediaQue() {
+	var cw = document.documentElement.clientWidth || document.body.clientWidth;
+	if (!mqs.css.styleSheet) return;
+	if (cw > 600) {
+		mqs.css.styleSheet.cssText = mqs.mediaMin600;
+	} else if(cw < 600) {
+		mqs.css.styleSheet.cssText = mqs.mediaMax600;
+	}
+}
+
+mediaQue();
+var resizeTimer;
+window.onresize = function() {
+	clearTimeout(resizeTimer);
+	resizeTimer = setTimeout(mediaQue, 100);
+};
+</script>
+<![endif]-->	
+</body>
+</html>

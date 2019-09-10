@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-CP" />
+<title>QQ提醒（QT）</title>
+<style type="text/css">
+/* Global Style Start */
+*{margin:0; padding:0;}
+ul{list-style:none;}
+a img{border:0;}
+.c{zoom:1;}
+.c::after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.l{float:left;}
+.r{float:right;}
+a{color:#fff; text-decoration:none; outline:none;}
+a:hover{color:#fff; text-decoration:underline;}
+.yh{font-family:"Microsoft Yahei","微软雅黑";}
+.hide{width:0px; height:0px; display:block; text-indent:-9999px; overflow:hidden;}
+.hid{display:block; text-indent:-9999px; overflow:hidden;}
+.rel{position:relative;}
+.abs{position:absolute;}
+/* Global Style End */
+
+/* Frame Style Start */
+body{background:#241d19; color:#fff3b9; font:12px/1.5 tahoma, '\5b8b\4f53', sans-serif; min-width:1000px; padding-top:42px;}
+.wrapper{background:url(http://ossweb-img.qq.com/images/chanpin/qt/public/a20130905shuihu/bg.jpg) center top no-repeat;}
+/* Frame Style End */
+
+/* Footer Style Start */
+#footer_ied{background:none;color:#dc4f35; text-align:center; line-height:19px; font-family:Tahoma; font-size:12px;}
+#footer_ied .wrap_ied{width:1000px; margin:0 auto;}
+#footer_ied p.e{font-size:10px;}
+#footer_ied a{color:#dc4f35; text-decoration:none;}
+#footer_ied a:hover{color:#f1e5c5; text-decoration:underline;}
+/* Footer Style End */
+
+/* Header Style Start */
+.content{width:1000px; margin:0 auto;}
+.header{background:url(http://ossweb-img.qq.com/images/chanpin/qt/public/a20130905shuihu/part_01.jpg) center top no-repeat; height:329px; position:relative;}
+.part01{background:url(http://ossweb-img.qq.com/images/chanpin/qt/public/a20130905shuihu/part_02.jpg) center top no-repeat; height:382px;}
+.part02{background:url(http://ossweb-img.qq.com/images/chanpin/qt/public/a20130905shuihu/part_03.jpg) center top no-repeat; height:323px;}
+.part03{background:url(http://ossweb-img.qq.com/images/chanpin/qt/public/a20130905shuihu/part_04.jpg) center top no-repeat; height:518px;}
+/* Header Style End */
+
+/* part Style Start */
+ .header a{width:95px;height:85px;margin:17px;display:inline-block;}
+ .header p{width:700px;padding:25px 0 0 170px;color:#ed8b00;font-size:16px;}
+ .button_a{width:100%;}
+ .button_a a{height:70px;margin:10px 0 0 25px;display:inline-block;}
+ .button1{width:160px;}
+ .button2{width:180px;}
+ .button3{width:210px;}
+ .part01_left{width:315px;padding:115px 0 0 115px;}
+ .part01_right{width:315px;padding:115px 155px 0 0;}
+ .part01_right a{color:#ffb643;}
+ .part01 h3{color:#ffe154;font-size:16px;padding:0 0 20px 70px;}
+ .weal{width:270px;overflow:hidden;display:inline;}
+ .weal h3{padding-bottom:25px;font-size:16px;color:#832200;}
+ .weal ul{padding-left:155px;line-height:20px;}
+ .weal p{color:#4a1500;}
+ .weal i{font-size:14px;color:#841600;font-style:normal;}
+ .weal1{margin: 5px 15px 0 60px;}
+ .weal1 p,.weal2 p{padding-top:80px;}
+ .weal3{width:320px !important;}
+ .weal3 p{padding-top:40px;}
+ .part03 li{width:230px;height:312px;background:url(http://ossweb-img.qq.com/images/chanpin/qt/public/a20130905shuihu/img_bg.jpg) no-repeat;float:left;text-align:center;margin-right:15px;}
+ .part03 a{color:#5a1700;}
+ .part03 a:hover{text-decoration:none;}
+ .part03 i{width:100%;font-style:normal;font-size:16px;}
+ .part03 img{padding:8px;}
+ .part03 i{color:#ffdb79;}
+ .part03 ul{padding: 0 0 130px 20px;}
+/* part Style End */
+.pop{width:415px;overflow:hidden;background:#fff;}
+ .pop_head{width:395px;height:33px;background:url(http://ossweb-img.qq.com/images/chanpin/qt/public/a20130905shuihu/pop_top.jpg) repeat-x;padding:5px 10px 0 10px;font-size:16px;}
+ .pop_head a{font-size:20px;color:#822c18;font-weight:bold;}
+.pop p{ padding:40px; font-size:16px; color:#7c2900;}
+.pop p a{ color:#d23b2b; text-decoration:underline;}
+</style>
+</head>
+<body>
+ <a title="活动时通知我" href="javascript:addReminder();">活动时通知我</a>
+
+<div class="pop" id="popbox" style="display:none">
+ <div class="pop_head"><span class="l">提示</span> <a href="javascript:showDialog.hide();" class="r">X</a></div>
+ <p> 恭喜你！预定成功，<a target="_blank" href="http://qt.qq.com/go.html?roomid=5299&ADTAG=qtweb.yl.ghd10">马上去会场看看！</a></p>
+</div>
+
+<!--引用需要的js-->
+<script src="http://ossweb-img.qq.com/images/js/comm/showDialog.min.js"></script><!--自定义弹出层效果-->
+<script type="text/javascript" src="http://qt.qq.com/act/CommonWebQuery/js/Common_QT.js"></script><!--QT公共-->
+<script type="text/javascript" src="http://qzs.qq.com/snsapp/app/bee/widget/js/qqreminder.js"></script><!--QQ提醒-->
+<script type="text/javascript">
+//自定义弹出层效果，传入元素ID
+function TGDialogS(e) {
+	showDialog.show({
+		id: e,
+		bgcolor: "#fff",
+		opacity: 70
+	});
+}
+//添加QQ提醒
+function addReminder() {
+
+	Common_QT.AddQQAlertTips(1500001003, 1001, 'E85823B4E7DB1064F4301E1C74978199', '2013-10-01 10', 'popbox');
+	//参数依次为 APPID,MID,TIK,Time,popboxId,如果没有自定义弹出框，popboxId填0
+}
+</script>
+</body>
+</html>

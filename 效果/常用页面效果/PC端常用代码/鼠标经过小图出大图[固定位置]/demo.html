@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="gb2312">
+	<title>Document</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+		table{border-collapse:collapse;border-spacing:0}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+		ol,ul{list-style:none}
+		caption,th{text-align:left}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+		q:before,q:after{content:''}
+		fieldset,img,abbr,acronym{border:0}
+
+		.c:before,.c:after {content:"";display:table}
+		.c:after {clear:both}
+		.c {*zoom:1}
+        
+        .pic-b {display: none;position: absolute;left: 0;top: 100px;}
+		.list li {float: left;width: 50px;height: 50px;}
+			.list a {display: block;width: 100%;height: 100%;}
+				.list img {display: block;}
+	</style>
+</head>
+<body>
+	<div class="pic-b" id="pic-b">
+		<img src="images/pic-b1.jpg" alt="">
+	</div>
+	<ul class="list c">
+		<li><a class="pic-s" href="###"><img src="images/pic-s1.jpg" alt=""></a></li>
+		<li><a class="pic-s" href="###"><img src="images/pic-s2.jpg" alt=""></a></li>
+	</ul>
+
+<script>
+    var obj = document.getElementById("pic-b");
+    //获取id
+    function gE(e) {
+        return (typeof (e) == "object") ? e : document.getElementById(e)
+    }
+
+    var GLOBAL = {};
+    GLOBAL.namespace = function (str) {
+        var arr = str.split('.'),
+            o = GLOBAL;
+        for (i = (arr[0] == "GLOBAL") ? 1 : 0; i < arr.length; i++) {
+            o[arr[i]] = o[arr[i]] || {};
+            o = o[arr[i]];
+        }
+    };
+    GLOBAL.namespace("Dom");
+    GLOBAL.Dom.getElementsByClassName = function (str, root, tag) {
+        if (root) {
+            root = (typeof root == "string") ? document.getElementById(root) : root;
+        } else {
+            root = document.body;
+        }
+        tag = tag || '*';
+        var els = root.getElementsByTagName(tag),
+            arr = [];
+        for (var i = 0, leng = els.length; i < leng; i++) {
+            var k = els[i].className.split(' ');
+            for (j = 0, len = k.length; j < len; j++) {
+                if (k[j] == str) {
+                    arr.push(els[i]);
+                    break;
+                }
+            }
+        }
+        return arr;
+    }
+
+    function show(p) {
+    	gE("pic-b").innerHTML = '<img src="'+p+'" alt="">';
+    }
+
+    
+
+    //标签切换
+    function setTab() {
+        var pic_s = GLOBAL.Dom.getElementsByClassName("pic-s");
+        var pic_b = ["images/pic-b1.jpg","images/pic-b2.jpg"];//大图数组，分离时也需要分离此处
+        var timer = null;
+        for (var i = 0; i < pic_s.length; i++) {
+            pic_s[i]._index = i;
+            pic_s[i].onmouseover = function () {
+                clearTimeout(timer);
+                show(pic_b[this._index]);
+                gE("pic-b").style.display = "block"
+            }
+            pic_s[i].onmouseout = function () {
+                timer = setTimeout(function(){
+                    gE("pic-b").style.display = "none";
+                },350);
+            }
+            obj.onmouseover = function () {
+                clearTimeout(timer);
+                gE("pic-b").style.display = "block";
+            }
+            obj.onmouseout = function () {
+                gE("pic-b").style.display = "none";
+            }
+        }
+    };
+    setTab();
+</script>
+</body>
+</html>

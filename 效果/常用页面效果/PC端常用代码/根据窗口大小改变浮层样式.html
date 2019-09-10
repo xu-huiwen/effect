@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {margin: 0;padding: 0;border: 0;}
+		*html {background-image:url(about:blank); background-attachment:fixed;}
+		.main {width: 1000px;height: 2000px;margin: 0 auto;background-color: #ccc;}
+		.float,.float_small_case {width: 200px;height: 300px;background-color: #f00;position: fixed;_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop));top: 50px;_margin-top: 50px;}
+		.float {left: 50%;margin-left: 500px;}
+		.float_small_case {right: 0;}
+	</style>
+</head>
+<body>
+<div id="float" class="float"></div>
+<div class="main"></div>
+
+<script>
+var resizeTimer = null;
+window.onload = window.onresize = function() {
+	if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout("changeCase()", 100);
+}
+// 控制浮层根据浏览器大小的位置变化
+function changeCase() {
+	var rightFloat = $id("float");
+	var clientWidth = $getWindowWidth();
+	if(clientWidth < 1200) {
+		rightFloat.className = "float_small_case";
+	}else{
+		rightFloat.className = "float";
+	}
+}
+//获取浏览器宽度
+function $getWindowWidth(){
+	var bodyCath=document.body;
+	return (document.compatMode=='BackCompat' ? bodyCath : document.documentElement).clientWidth;
+}
+
+function $id(id){
+    return (typeof(id)=="string") ? document.getElementById(id) : id;
+}
+</script>
+</body>
+</html>

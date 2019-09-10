@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="gbk">
+	<title></title>
+</head>
+
+<body>
+<div class="login">
+	<p id="unlogin">您好，请<a id="ptLoginBtn">【登录】</a></p>
+	<p id="logined" style="display:none;">欢迎您，<span id="userinfo"></span>。<span id="ptLogoutBtn">【注销】</span></p>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/milo_mobile/milo_mobile.js"></script>
+<script>
+need("biz.loginManager", function(LoginManager) {
+    LoginManager.init();
+});
+</script>
+</body>
+
+</html>

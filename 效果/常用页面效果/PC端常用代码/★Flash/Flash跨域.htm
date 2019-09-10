@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flash跨域</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		.flash {width:873px;height:395px;}
+	</style>
+</head>
+<body>
+	<div class="flash">
+		<div id="flash"></div>
+	</div>
+<script  src="http://ossweb-img.qq.com/images/js/swfobject.js"></script>
+<script>
+	var params = {
+		scale: "noscale",
+		wmode: "transparent",
+		align: "middle",
+		allowFullscreen: "true",
+		allowScriptAccess: "always",
+		base: 'http://ossweb-img.qq.com/images/chanpin/fsf/public/a20131111hmsy/'//解决flash调用资源跨域问题，flash和资源放同一文件夹下
+	}
+	swfobject.embedSWF("http://ossweb-img.qq.com/images/chanpin/fsf/public/a20131111hmsy/flash.swf", "flash", "100%", "100%", "8.0.0", "http://ossweb-img.qq.com/images/swf/expressInstall.swf", null, params)
+</script>
+</body>
+</html>

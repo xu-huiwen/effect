@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>官网导航下拉</title>
+	<style>
+		* {margin:0;padding:0;border:0;}
+		ul {list-style-type:none;}
+		.c:before,.c:after {content:"";display:table;}
+		.c:after {clear:both;}
+		.c {zoom:1;}
+		body {font:12px/1.5 \5FAE\8F6F\96C5\9ED1,sans-serif;}
+
+		.wrap-mainNav,.wrap-subNav {width:100%;min-width:1000px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1002?'1000px':'');}
+		.wrap-mainNav {background-color:#25293b;height:70px;}
+		.mainNav,.subNav {padding:0 80px;margin:0 auto;width:840px;}
+		.mainNav li {float:left;width:140px;height:70px;line-height:70px;text-align:center;}
+		.mainNav a {color:#fff;text-decoration:none;}
+		.mainNav .on a {color:#f00;}
+		.wrap-subNav {background-color:#1a202a;display:none;}
+		.subNav-i {float:left;width:140px;text-align:center;color:#fff;padding:10px 0;}
+	</style>
+</head>
+<body>
+	<div class="wrap-mainNav">
+		<ul class="mainNav c" id="mainNav">
+			<li><a href="javascript:">官网首页</a></li>
+			<li><a href="javascript:">攻略中心</a></li>
+			<li><a href="javascript:">资料中心</a></li>
+			<li><a href="javascript:">活动中心</a></li>
+			<li><a href="javascript:">鉴赏中心</a></li>
+			<li><a href="javascript:">游戏论坛</a></li>
+		</ul>
+	</div>
+	<div class="wrap-subNav" id="wrap-subNav">
+		<div class="subNav c" id="subNav">
+			<ul class="subNav-i">
+				<!-- <li>菜单内容</li>
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+				<li>菜单内容</li> -->
+			</ul>
+			<ul class="subNav-i">
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+			</ul>
+			<ul class="subNav-i">
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+			</ul>
+			<ul class="subNav-i">
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+			</ul>
+			<ul class="subNav-i">
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+			</ul>
+			<ul class="subNav-i">
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+				<li>菜单内容</li>
+			</ul>
+		</div>
+	</div>
+<script>
+(function(){
+	function gE(e) {
+	    return (typeof (e) == "object") ? e : document.getElementById(e)
+	}
+	function showE(o) {
+		gE(o).style.display = "block";
+	}
+	function hideE(o) {
+		gE(o).style.display = "none";
+	}
+	var mainNavItems = gE("mainNav").getElementsByTagName("li");
+	var subNavItems = gE("subNav").getElementsByTagName("ul");
+	for(var i = 0; i < mainNavItems.length; i++) {
+		(function(i) {
+			gE("mainNav").onmouseover = gE("wrap-subNav").onmouseover = function() {
+				showE("wrap-subNav");
+			};
+			gE("mainNav").onmouseout = gE("wrap-subNav").onmouseout = function() {
+				hideE("wrap-subNav");
+			};
+			mainNavItems[i].onmouseover = subNavItems[i].onmouseover = function() {
+				mainNavItems[i].className += (mainNavItems[i].className ? " " : "") + 'on';
+			};
+			mainNavItems[i].onmouseout = subNavItems[i].onmouseout = function() {
+				mainNavItems[i].className = "";
+				mainNavItems[i].className = mainNavItems[i].className.replace(RegExp("(^|\\s)" + 'on' + "(\\s|$)", "g"), "");
+			};
+		})(i)
+	}
+})()
+</script>
+</body>
+</html>

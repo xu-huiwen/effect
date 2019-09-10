@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<ul class="list">
+	<li>我是第一条数据哦，哈哈。</li>
+	<li>我是第一条数据哦，哈哈。</li>
+	<li>我是第一条数据哦，哈哈。</li>
+	<li>我是第一条数据哦，哈哈。</li>
+	<li>我是第一条数据哦，哈哈。</li>
+</ul>
+<a href="javascript:" class="btn-more">加载更多</a>
+
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.2.min.js"></script>
+<script>
+$(function(){
+	var $btnMore = $('.btn-more'),
+		$list = $('.list'),
+		listData = '<li>我是第一条数据哦，哈哈。</li><li>我是第一条数据哦，哈哈。</li><li>我是第一条数据哦，哈哈。</li><li>我是第一条数据哦，哈哈。</li><li>我是第一条数据哦，哈哈。</li>'
+	$btnMore.on('click', function(){
+		$list.append(listData);
+	})
+})
+</script>
+</body>
+</html>

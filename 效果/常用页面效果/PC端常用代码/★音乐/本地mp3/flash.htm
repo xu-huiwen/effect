@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+<a herf="#" onclick="setSWF();">开始
+</a>
+<a herf="#" onclick="clearSWF();">关闭
+</a>
+<div id="swfcontent">
+</div>
+</body>
+<script type="text/javascript"  src="http://ossweb-img.qq.com/images/js/basic/tgswfobj_s.js"></script>
+
+<script language="javascript">
+var _data = "复制信息啦啦啦啦啦啦"
+	function SwfCopyData() {
+		return _data;
+	}
+
+	function TGSwfUrlfn() {
+		return ["bgsound.mp3", 1]
+		//以此类推
+	}
+
+	function setSWF() {
+		insertSwfV2("swfcontent", "demo.swf", "1", '1', {}, {}, "9.0"); // 嵌入方式 参数 div 的id   swf的路径  宽度  高度  要传入的参数置  嵌入参数设置 swf允许最低版本号
+	}
+
+	function clearSWF() {
+		document.getElementById("swfcontent").innerHTML = "";
+	}
+</script>
+</html>

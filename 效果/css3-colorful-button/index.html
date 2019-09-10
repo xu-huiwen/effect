@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>HTML5/CSS3悬浮按钮特效 Canvas彩球飞舞效果演示地址</title>
+
+    <style>
+body {
+		margin: 0;
+  overflow: hidden;
+	}
+	#myCanvas {
+		display: block;
+	}
+
+	#button {
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+		position: absolute;
+		font-size: 1.5em;
+		text-transform: uppercase;
+		padding: 7px 20px;
+		left: 50%;
+		width: 200px;
+		margin-left: -100px;
+		top: 50%;
+		border-radius: 10px;
+		color: white;
+		text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+		border: 5px solid transparent;
+		border-bottom-color: rgba(0,0,0,0.35);
+		background: hsla(260, 100%, 50%, 1);
+		cursor: pointer;
+
+		animation: pulse 1s infinite alternate;
+		transition: background 0.4s, border 0.2s, margin 0.2s;
+	}
+
+
+</style>
+
+
+</head>
+
+<body>
+<div style="text-align:center;clear:both;position:absolute;top:20px;left:200px">
+
+</div>
+  <button id="button">click me</button>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+
+
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>

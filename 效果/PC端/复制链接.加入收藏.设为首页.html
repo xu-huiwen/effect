@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>复制链接，加入收藏</title>
+</head>
+
+<body>
+<a href="#" onclick="copyUrl()" title="复制链接" id="tishi">复制链接</a>
+<a href="#" onclick="addFavorite('http://www.google.com.hk/','谷歌')" title="加入收藏">加入收藏</a>
+<a href="#" onclick="setHome(this,window.location)" title="设为主页">设为主页</a>
+
+<script type="text/javascript">
+/* 复制链接 */
+function copyUrl(){
+	var myHref=top.location.href;
+	var title=document.title;
+	if(window.clipboardData){var tempCurLink=title + "\n" + myHref;
+	var ok=window.clipboardData.setData("Text",tempCurLink);
+if(ok)
+	document.getElementById("tishi").innerHTML = "复制成功，粘贴发送";
+}
+else{alert("对不起，目前此功能只支持IE，请直接复制地址栏的地址！");}}
+
+
+
+/**
+ * 加入收藏
+ * @param {} sURL 收藏链接地址
+ * @param {} sTitle 收藏标题
+ */
+function addFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle);
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "");
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加");
+        }
+    }
+}
+/**
+ * 设为首页
+ * @param {} obj 当前对象，一般是使用this引用。
+ * @param {} vrl 主页URL
+ */
+function setHome(obj, vrl) {
+    try {
+        obj.style.behavior = 'url(#default#homepage)';
+        obj.setHomePage(vrl);
+    } catch (e) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager
+                        .enablePrivilege("UniversalXPConnect");
+            } catch (e) {
+                alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入”about:config“并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+            }
+            var prefs = Components.classes['@mozilla.org/preferences-service;1']
+                    .getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref('browser.startup.homepage', vrl);
+        }
+    }
+}
+</script>
+</body>
+</html>

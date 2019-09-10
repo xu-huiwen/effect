@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+ <script type="text/javascript">
+function enableTooltips(id){
+var links,i,h;
+if(!document.getElementById || !document.getElementsByTagName) return;
+AddCss();
+h=document.createElement("span");
+h.id="btc";
+h.setAttribute("id","btc");
+h.style.position="absolute";
+document.getElementsByTagName("body")[0].appendChild(h);
+if(id==null) links=document.getElementsByTagName("a");
+else links=document.getElementById(id).getElementsByTagName("a");
+for(i=0;i<links.length;i++){
+    Prepare(links[i]);
+    }
+}
+function Prepare(el){
+var tooltip,t,b,s,l;
+t=el.getAttribute("title");
+if(t==null || t.length==0) t="link:";
+el.removeAttribute("title");
+tooltip=CreateEl("span","tooltip");
+s=CreateEl("span","top");
+s.appendChild(document.createTextNode(t));
+tooltip.appendChild(s);
+b=CreateEl("b","bottom");
+l=el.getAttribute("href");
+if(l.length>30) l=l.substr(0,27)+"...";
+b.appendChild(document.createTextNode(l));
+tooltip.appendChild(b);
+setOpacity(tooltip);
+el.tooltip=tooltip;
+el.onmouseover=showTooltip;
+el.onmouseout=hideTooltip;
+el.onmousemove=Locate;
+}
+function showTooltip(e){
+document.getElementById("btc").appendChild(this.tooltip);
+Locate(e);
+}
+function hideTooltip(e){
+var d=document.getElementById("btc");
+if(d.childNodes.length>0) d.removeChild(d.firstChild);
+}
+function setOpacity(el){
+el.style.filter="alpha(opacity:95)";
+el.style.KHTMLOpacity="0.95";
+el.style.MozOpacity="0.95";
+el.style.opacity="0.95";
+}
+function CreateEl(t,c){
+var x=document.createElement(t);
+x.className=c;
+x.style.display="block";
+return(x);
+}
+function AddCss(){
+var l=CreateEl("link");
+l.setAttribute("type","text/css");
+l.setAttribute("rel","stylesheet");
+l.setAttribute("href","http://web-graphics.com/mtarchive/bt.css");
+l.setAttribute("media","screen");
+document.getElementsByTagName("head")[0].appendChild(l);
+}
+function Locate(e){
+var posx=0,posy=0;
+if(e==null) e=window.event;
+if(e.pageX || e.pageY){
+    posx=e.pageX; posy=e.pageY;
+    }
+else if(e.clientX || e.clientY){
+    if(document.documentElement.scrollTop){
+        posx=e.clientX+document.documentElement.scrollLeft;
+        posy=e.clientY+document.documentElement.scrollTop;
+        }
+    else{
+        posx=e.clientX+document.body.scrollLeft;
+        posy=e.clientY+document.body.scrollTop;
+        }
+    }
+document.getElementById("btc").style.top=(posy+10)+"px";
+document.getElementById("btc").style.left=(posx-20)+"px";
+}
+</script>
+<script type="text/javascript">
+window.onload=function(){enableTooltips()};
+</script>
+<style type="text/css">
+body{font: 76%/1.5 Arial,sans-serif;background: #FFF;color: #333}
+div#container{width: 500px;margin:0 auto}
+h1{color: #3CA3FF;margin: 1em 0 0;letter-spacing: -2px}
+p{margin: 0 0 1.7em}
+a{color: #F60;font-weight:bold}
+a:hover{color: #F00}
+</style>
+
+<center>
+<div id="container">
+<br><br><br>
+<a href="###" title="午后，侍茶于旁，古书留香。">中文显示正常</a><br><br><br>
+<a href="###" title="为了保证视频界面效果，网页上视频的尺寸请根据视频具体情况按4:3或16:9等比缩放。" >数字字母测试</a><br><br><br>
+<a href="###" title="最期待明星军团TOP10 票选啦！\n名校人气大比拼，票选您最期待出战的明星军团TOP10！哪些军团能获得初赛资格，人气高不代表就能参赛哦，是否有黑马诞生？拭目以待！">名校人气大比拼，票选您最期待出战的明星军团TOP10！</a>
+</div>
+</body>
+</html>

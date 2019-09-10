@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文本溢出显示省略号</title>
+	<style>
+		/*Reset*/
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		.list {width: 500px;margin: 0 auto;}
+			.list li {width: 200px;text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+	</style>
+</head>
+<body>
+	<ul class="list">
+		<li>这里是一些文字很多怎么办呀</li>
+		<li>这里是一些文字很多怎么办呀这里是一些文字很多怎么办呀</li>
+		<li>这里是一些么办呀</li>
+		<li>这里是一些文字很多怎么办呀这里是一些文字很多怎么办呀这里是一些文字很多怎么办呀</li>
+		<li>这多怎么办呀</li>
+	</ul>
+</body>
+</html>

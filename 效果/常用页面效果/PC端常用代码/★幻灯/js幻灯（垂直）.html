@@ -1,0 +1,220 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="robots" content="all" />
+    <meta name="author" content="Tencent-TGideas" />
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="" />
+    <title>图片滚动</title>
+    <style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif;line-height:22px;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{}
+ol{margin:0;padding:0;}
+ol li{margin-left:40px;}
+p{padding-left:30px;}
+li{list-style:none;}
+img{border:none;}
+.c:before,.c:after {content:"";display:table;}
+.c:after {clear:both;}
+.c {zoom:1;}
+
+/*ts*/
+.main img {display:block;}
+.pic-box{position:relative;width:597px;height:394px; overflow:hidden;border:3px solid #246500; overflow:hidden;float:left;}
+.pic-box ul {position:absolute;}
+.pic-box li {float:left;_display:inline;position:relative;width:597px;height:389px;}
+.prev,.next{width:40px;height:70px;display:block;cursor:pointer;background:#179323;color:#fff; position:absolute;top:170px;line-height:67px;text-align:center; font-size:30px;border-radius:10px; opacity:0.8;text-decoration:none;}
+.prev:hover,.next:hover{opacity:1}
+.prev{left:10px;}
+.next{right:10px;}
+
+.rollbox{position:relative;width:135px; margin:0 auto;float:left;height:389px;overflow:hidden;}
+.arr-prev,.arr-next{width:135px;height:30px; background:#3e8c13; color:#fff; position:absolute;left: 0; text-decoration:none; line-height:88px; text-align:center; font-size:30px;}
+.arr-prev{left:0;}
+.arr-next{bottom:0;}
+.roll-list-box{width:135px;position:absolute;top:0px;left:0;}
+.roll-list{width:135px;}
+.roll-list li{width:119px;height:84px;border:2px solid #59b521;margin:0 6px;float:left;}
+.roll-list-box { position:relative;margin:0 0 0 5px;width:531px; }
+.roll-list-box ul { position:absolute; height:88px;}
+.roll-list-box li { position:relative;width: 135px;margin:0; border:0; cursor:pointer;}
+.roll-list-box img{border:2px solid #b0b0b0;width:119px;height:84px;}
+.roll-list-box .on img {border:2px solid #59B521;}
+
+.main {width:1000px;margin:0 auto;position:relative;}
+</style>
+</head>
+
+<body>
+
+    <div class="main c">
+        <div id="picBox" class="pic-box">
+            <ul style="">
+                <li>
+                    <a target="_blank" href="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-25/1366855303_1436653066_18034_sProdImgNo_1.jpg">
+                        <img width="597" height="389" alt="" src="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-25/1366855303_1436653066_18034_sProdImgNo_1.jpg"></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-24/1366801561_1436653066_16834_sProdImgNo_1.jpg">
+                        <img width="597" height="389" alt="" src="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-24/1366801561_1436653066_16834_sProdImgNo_1.jpg"></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-24/1366801546_1436653066_16263_sProdImgNo_1.jpg">
+                        <img width="597" height="389" alt="" src="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-24/1366801546_1436653066_16263_sProdImgNo_1.jpg"></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-24/1366801538_1436653066_16219_sProdImgNo_1.jpg">
+                        <img width="597" height="389" alt="" src="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-24/1366801538_1436653066_16219_sProdImgNo_1.jpg"></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-24/1366801527_1436653066_16119_sProdImgNo_1.jpg">
+                        <img width="597" height="389" alt="" src="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-24/1366801527_1436653066_16119_sProdImgNo_1.jpg"></a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-24/1366801512_1436653066_15875_sProdImgNo_1.jpg">
+                        <img width="597" height="389" alt="" src="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-24/1366801512_1436653066_15875_sProdImgNo_1.jpg"></a>
+                </li>
+            </ul>
+            <a class="prev" id="prevTop" href="javascript:;">&lt;</a>
+            <a class="next" id="nextTop" href="javascript:;">&gt;</a>
+        </div>
+        
+        <div class="rollbox">
+            <div id="listBox" class="roll-list-box ovh">
+                <ul class="roll-list" style="">
+                    <li class="on"> <i class="arr2"></i>
+                        <img width="199" height="84" alt="" src="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-25/1366855303_1436653066_18034_sProdImgNo_2.jpg"></li>
+                    <li class=""> <i class="arr2"></i>
+                        <img width="199" height="84" alt="" src="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-24/1366801561_1436653066_16834_sProdImgNo_2.jpg"></li>
+                    <li class="">
+                        <i class="arr2"></i>
+                        <img width="199" height="84" alt="" src="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-24/1366801547_1436653066_16263_sProdImgNo_2.jpg"></li>
+                    <li class="">
+                        <i class="arr2"></i>
+                        <img width="199" height="84" alt="" src="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-24/1366801538_1436653066_16219_sProdImgNo_2.jpg"></li>
+                    <li class="">
+                        <i class="arr2"></i>
+                        <img width="199" height="84" alt="" src="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-24/1366801527_1436653066_16119_sProdImgNo_2.jpg"></li>
+                    <li class="">
+                        <i class="arr2"></i>
+                        <img width="199" height="84" alt="" src="http://ossweb-img.qq.com/upload/apps/ishow2/370/2013-04-24/1366801512_1436653066_15875_sProdImgNo_2.jpg"></li>
+                </ul>
+            </div>
+            <a id="prev" href="javascript:;" class="arr-prev"></a>
+            <a id="next" href="javascript:;" class="arr-next"></a>
+        </div>
+    </div>
+
+    <script>
+function picroll() {
+    function G(s) {
+        return document.getElementById(s)
+    }
+    function getStyle(obj, attr) {
+        if (obj.currentStyle) {
+            return obj.currentStyle[attr]
+        } else {
+            return getComputedStyle(obj, false)[attr]
+        }
+    }
+    function Animate(obj, json) {
+        if (obj.timer) {
+            clearInterval(obj.timer)
+        }
+        obj.timer = setInterval(function() {
+            for (var attr in json) {
+                var iCur = parseInt(getStyle(obj, attr));
+                iCur = iCur ? iCur: 0;
+                var iSpeed = (json[attr] - iCur) / 5;
+                iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+                obj.style[attr] = iCur + iSpeed + 'px';
+                if (iCur == json[attr]) {
+                    clearInterval(obj.timer)
+                }
+            }
+        },
+        30)
+    }
+    var oPic = G("picBox");//大图列表ID
+    var oList = G("listBox");//小图列表ID
+    var oPrev = G("prev");//小图列表上一页按钮，可修改ID名
+    var oNext = G("next");//小图列表下一页按钮，可修改ID名
+    var oPrevTop = G("prevTop");//大图片上一页按钮，可修改ID名
+    var oNextTop = G("nextTop");//大图片下一页按钮，可修改ID名
+    var oPicLi = oPic.getElementsByTagName("li");
+    var oListLi = oList.getElementsByTagName("li");
+    var len1 = oPicLi.length;
+    var len2 = oListLi.length;
+    var oPicUl = oPic.getElementsByTagName("ul")[0];
+    var oListUl = oList.getElementsByTagName("ul")[0];
+    var h1 = oPicLi[0].offsetHeight;
+    var h2 = oListLi[0].offsetHeight;
+    oPicUl.style.height = h1 * len1 + "px";
+    oListUl.style.height = h2 * len2 + "px";
+    var index = 0;
+    var num = 4;//小图列表显示小图数量，需按设计稿小图列表数量做相应修改
+    var num2 = Math.ceil(num / 2);
+    function Change() {
+        Animate(oPicUl, {
+            top: -index * h1
+        });
+        if (index < num2) {
+            Animate(oListUl, {
+                top: 0
+            })
+        } else if (index + num2 <= len2) {
+            Animate(oListUl, {
+                top: -(index - num2 ) * h2
+            })
+        } else {
+            Animate(oListUl, {
+                top: -(len2 - num) * h2
+            })
+        }
+        for (var i = 0; i < len2; i++) {
+            oListLi[i].className = "";
+            if (i == index) {
+                oListLi[i].className = "on"
+            }
+        }
+    }
+    //执行下一页
+    function nextPic(){
+        index++;
+        index = index == len2 ? 0 : index;
+        Change()
+    }
+    //执行上一页
+    function prevPic(){
+        index--;
+        index = index == -1 ? len2 - 1 : index;
+        Change()
+    }
+    //点击id为nextTop的按钮时执行下一页事件
+    oNextTop.onclick = function(){nextPic();}
+    //点击id为prevTop的按钮时执行下一页事件
+    oPrevTop.onclick = function(){prevPic()};
+    
+    //点击id为next的按钮时执行下一页事件
+    oNext.onclick = function(){nextPic();}
+    //点击id为prev的按钮时执行下一页事件
+    oPrev.onclick = function(){prevPic()};
+    for (var i = 0; i < len2; i++) {
+        oListLi[i].index = i;
+        oListLi[i].onclick = function() {
+            index = this.index;
+            Change()
+        }
+    }
+}
+picroll();
+</script></body>
+</html>

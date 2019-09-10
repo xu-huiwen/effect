@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>广告轮播</title>
+<style type="text/css">
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+q:before,q:after{content:''}
+fieldset,img,abbr,acronym{border:0}
+
+.conSlide {height: 20px;overflow: hidden;width: 1000px;background-color: #ccc;margin: 0 auto;}
+</style>
+</head>
+
+<body>
+
+<ul id="conSlide" class="conSlide">
+	<li><a href="###">内容1内容1内容1内容1内容1</a></li>
+	<li style="display:none;"><a href="###">内容2内容2内容2内容2内容2</a></li>
+	<li style="display:none;"><a href="###">内容3内容3内容3内容3内容3</a></li>
+</ul>
+
+
+
+
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="conSlide.js"></script>
+<script type="text/javascript">
+jQuery(function(){
+	$('#conSlide').conSlide({
+        delay:3000//时间（毫秒）
+    });	
+});
+</script>
+</body>
+</html>

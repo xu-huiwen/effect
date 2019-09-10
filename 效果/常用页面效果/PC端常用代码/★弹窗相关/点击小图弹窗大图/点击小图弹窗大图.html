@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击小图弹窗大图</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+		.c:before,.c:after {content:"";display:table;}
+		.c:after {clear:both;}
+		.c {zoom:1;}
+		.main {width: 1000px;margin: 0 auto;}
+		.list li {float: left;margin-right: 20px;display: inline;}
+		.pop {width: 400px;height: 400px;display: none;}
+	</style>
+</head>
+<body>
+<div class="main">
+	<ul class="list c">
+		<li><a href="javascript:showPic('pic1-big.jpg')"><img src="pic1.jpg" alt=""></a></li>
+		<li><a href="javascript:showPic('pic2-big.jpg')"><img src="pic2.jpg" alt=""></a></li>
+	</ul>
+	<div class="pop" id="pop">
+		<div id="pic"></div>
+		<a href="javascript:showDialog.hide()" class="pop-close">关闭</a>
+	</div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/milo/milo-min.js" charset="gb2312"></script>
+<script>
+function TGDialogS(e){
+	need("biz.dialog-min",function(Dialog){
+		Dialog.show({
+			id:e,
+			bgcolor:'#000',
+			opacity:70
+		});
+	});
+}
+function showPic(pic){
+	g('pic').innerHTML = '<img src="'+pic+'" alt="">'
+	TGDialogS('pop');
+}
+</script>
+</body>
+</html>

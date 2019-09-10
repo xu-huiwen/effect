@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk">
+<meta name="robots" content="all">
+<meta name="author" content="Summer">
+<meta name="Description" content="">
+<title>按钮动态效果</title>
+<style>
+.ico_cart,.btn_cart,.btn_cart:hover{background:url(sp_btn.png) no-repeat;}
+.btn_cart{position:relative}
+.ico_cart{height:26px;width:26px;background-position:-160px -150px;position:absolute;top:10px;left:30px;}
+.btn_cart{display:block;height:50px;width:184px;margin-right:10px;overflow:hidden;text-indent:-9999px;}
+.btn_cart:hover{background-position:0 -50px;}
+.btn_cart:hover .ico_cart,.btn_cart:hover .ico_cart
+{
+	-webkit-transform-style:preserve-3d;/* preserve-3d	子元素将保留其 3D 位置。 */
+	-moz-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+	-webkit-animation:aniBounce .8s .2s infinite ease-in-out;
+	-moz-animation:aniBounce .8s .2s infinite ease-in-out;
+	-o-animation:aniBounce .8s .2s infinite ease-in-out;
+	animation:aniBounce .8s .2s infinite ease-in-out
+}
+@-webkit-keyframes aniBounce{
+		0%{
+			-webkit-transform:translateY(0)}
+		50%{
+			-webkit-transform:translateY(-4px)}
+		100%{
+			-webkit-transform:translateY(0)}}
+	@-moz-keyframes aniBounce{
+		0%{-moz-transform:translateY(0)}
+		50%{-moz-transform:translateY(-4px)}
+		100%{-moz-transform:translateY(0)}}
+	@keyframes aniBounce{
+		0%{transform:translateY(0)}
+		50%{transform:translateY(-4px)}
+		100%{transform:translateY(0)}}
+</style>
+
+</head>
+<body >
+    <!--S 购物按钮 -->
+    <div style="width:200px;margin:0px auto;">
+        <a href="javascript:;" class="btn_cart">
+            <i class="ico_cart"></i>
+            加入购物车
+        </a>
+    </div>
+    <!--E 购物按钮 -->
+</body>
+</html>

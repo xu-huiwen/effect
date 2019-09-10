@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk">
+<meta name="robots" content="all">
+<meta name="author" content="Tencent-CP">
+<meta name="Copyright" content="Tencent">
+<meta name="Description" content="QQ自由幻想 幻想 官方网站 首页 引导 免费 永久 QQ Q版游戏 自由体验 免费" />
+<meta name="Keywords" content="QQ自由幻想 充值 Q币 永久免费 官方网站 首页 新手 神奇货架 游戏下载 合作媒体 完整客户端 最新补丁 客服 论坛 大型MMOG游戏" />
+<title>八仙过海-自由幻想官方网站-腾讯游戏</title>
+<!--<link href="http://game.gtimg.cn/images/ffo/cp/a20160315eight/common.css" rel="stylesheet">-->
+<!-- 页面设计：cp | 页面制作：cp-fullspeed-zangxiaozang| 创建：2016-03-15-->
+</head>
+<body id="scene">
+<h1 class="hide">八仙过海</h1>
+<div class="head_bg">
+	<canvas id="canvas"></canvas>
+    <!--<div class="wrap">
+    	<!--<div class="head">
+        	<div class="cont">
+            	<a href="http://ffo.qq.com/" title="自由幻想" target="_blank" class="hx_logo ff">自由幻想</a>
+                <p class="name clearfix">
+                    <a href="http://ffo.qq.com/" title="官网首页" target="_blank">官网首页</a>
+                    <a href="http://zc.qq.com/chs/index.html" target="_blank" title="注册账号">注册账号</a>
+                    <a href="http://ffo.qq.com/down.shtml" target="_blank" title="下载游戏">下载游戏</a>
+                </p>
+	        </div>-->
+        <!--</div>-->
+        <!--<div class="mian">
+        	<div class="cont">
+            	<ul class="nav">
+                    <li class="btn01"><a href="http://ffo.qq.com/cp/a20160315bless/index.htm" title="01八仙的祝福">01八仙的祝福</a></li>
+                    <li class="btn02"><a href="page01.htm" title="02百晓生副本">02百晓生副本</a></li>
+                    <li class="btn03"><a href="page02.htm" title="03羊羊的礼物">03羊羊的礼物</a></li>
+                    <li class="btn04"><a href="page03.htm" title="04签到有礼">04签到有礼</a></li>
+                    <li class="btn05"><a href="page04.htm" title="05欢迎回家">05欢迎回家</a></li>
+                    <li class="btn06"><a href="http://ffo.qq.com/cp/a20160317bxgh/index.htm" title="06周年新区">06周年新区</a></li>
+                    <li class="btn07"><a href="javascript:playVideo('o0188i3vf3o');" title="07微电影">07微电影</a></li>
+                    <li class="btn08"><a href="javascript:alert('敬请期待！')" title="08更多精彩">08更多精彩</a></li>
+                </ul>
+                <a href="javascript:playVideo('o0188i3vf3o');" title="视频" class="sp ff">视频</a>
+            </div>
+        </div>-->
+    </div>
+<!--</div>-->
+<!--弹窗视频-->
+<!--<div class="pop_sp" id="J_con1">
+	<div id="mod_player" class="video"></div>
+    <a class="dia-close comm ff" href="javascript:closeVideo()" title="关闭">×</a>
+</div>-->
+<!--<script src="http://ossweb-img.qq.com/images/js/foot.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/top_js/ffo_top_201007.js"></script>
+<script src="http://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2.js" charset="utf-8"></script>
+<script src="http://ossweb-img.qq.com/images/js/milo/milo-min.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/milo/milo-min.js"></script>-->
+<script src="js.js"></script>
+<!--<script src="http://pingjs.qq.com/ping_tcss_ied.js"></script>-->
+<script>
+//弹出层
+function TGDialogS(e){
+            need("biz.dialog-min",function(Dialog){
+		Dialog.show({
+			id:e,
+			bgcolor:'#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+			opacity:50      //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+		});
+            });
+}
+function closeDialog(){
+            need("biz.dialog-min",function(Dialog){
+		Dialog.hide();
+            });
+}
+//视频
+function playVideo(_vid){
+	TGDialogS('J_con1');
+	//视频
+	var video = new tvp.VideoInfo();
+		video.setVid(_vid);
+		var player =new tvp.Player();
+		player.create({
+			width:800,
+			height:460,
+			video:video,
+			modId:"mod_player",
+			pic:"http://ossweb-img.qq.com/images/roco/act/a20120925movie/video_pic.jpg",        //视频封面地址
+			vodFlashSkin:"http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf",  //精简皮肤        
+			autoplay:true   //是否自动播放
+		});	
+}
+function closeVideo(){
+	closeDialog();
+	document.getElementById('mod_player').innerHTML='';
+}
+//统计
+if(typeof(pgvMain) == 'function') pgvMain();
+</script>
+</body>
+</html>

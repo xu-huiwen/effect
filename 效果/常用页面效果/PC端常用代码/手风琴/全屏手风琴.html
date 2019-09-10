@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="all" />
+    <meta name="Copyright" content="Copyright (c) 1998-2014 TENCNET" />
+    <meta name="Description" content="巅峰巨制 迷雾破晓" />
+    <!-- 设计：icefan | 重构：silenceyin | 创建：20140219 | 团队博客：http://tgideas.qq.com -->
+    <title>巅峰巨制 迷雾破晓-腾讯游戏</title>
+    <style type="text/css">
+    body,div,h1,h2,h3,h4,h5,form,img,ul,ol,li,dl,dt,dd,p{margin:0;padding:0}
+    body{background:#000;font:normal 14px/1.6 Tahoma, Geneva, sans-serif;padding-top:42px;font-size:14px;color:#b4927d;line-height:25px;font-family:微软雅黑, 宋体;min-width:1000px}
+    table{border-collapse:collapse;border-spacing:0;empty-cells:show}
+    th,td{border-collapse:collapse}
+    index. .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .clearfix{zoom:1}
+    ol,ul{list-style:none}
+    a{text-decoration:none;overflow:hidden}
+    a:hover{text-decoration:underline}
+    input,select,form img,button{vertical-align:middle}
+    button{cursor:pointer}
+    img{border:0;vertical-align:middle}
+    .hidden{height:0;line-height:0;font-size:0;overflow:hidden}
+    .fl{float:left;_display:inline}
+    .fr{float:right;_display:inline}
+    .tint{text-indent:-999em}
+    .blk{display:block}
+    .none{display:none}
+    .wrap{height:883px;position:relative;min-widht:1000px}
+    .btnbox{width:615px;position:absolute;top:12px;right:20px;z-index:99}
+    .lg{width:450px}
+    .unlogin{margin-left:374px}
+    .lmr{margin-right:2px}
+    .loged_p1{margin-left:230px}
+    .btn,.close,.btn:hover,.cjbtn,.open{background:url(http://ossweb-img.qq.com/images/yl2/act/a20140331xnz/sprite.jpg) no-repeat;text-decoration:none}
+    .btn{background-position:0 -26px;width:74px;height:26px;color:#e9edf0;line-height:26px;text-align:center;font-size:12px}
+    .cjbtn{background-position:0 -106px;width:74px;height:26px;color:#fff;line-height:26px;text-align:center;font-size:12px}
+    .sign{margin:0 8px}
+    .open{background-position:0 -132px;width:29px;height:85px;position:absolute;right:0;top:400px;z-index:99}
+    .tips{background:#212b3c;color:#8fa1c0;font-size:12px;position:absolute;right:20px;top:34px;z-index:99;padding:12px}
+    .main{overflow:hidden;height:883px;position:absolute;top:0;left:0;z-index:8;width:100%}
+    .wrapLeft{width:100%;overflow:hidden;position:relative;height:746px}
+    .menu{background:#000;width:44px;height:746px;display:inline-block}
+    .menu a{width:44px;height:746px;display:block}
+    .panel{width:44px;height:746px;color:#fff;font-size:12px;line-height:16px;text-decoration:none}
+    .current0,.current1,.current2,.current3,.current_on0,.current_on1,.current_on2,.current_on3,.current0:hover,.current1:hover,.current2:hover,.current3:hover{background:url(http://ossweb-img.qq.com/images/yl2/act/a20140331xnz/menu_sprite1.jpg) no-repeat}
+    .current1{background-position:-46px 0}
+    .current2{background-position:-91px 0}
+    .current3{background-position:-136px 0}
+    .current0:hover{background-position:-360px 0}
+    .current1:hover{background-position:-406px 0}
+    .current2:hover{background-position:-451px 0}
+    .current3:hover{background-position:-496px 0}
+    .current_on0{background-position:-180px 0}
+    .current_on1{background-position:-226px 0}
+    .current_on2{background-position:-271px 0}
+    .current_on3{background-position:-316px 0}
+    .test{height:174px;float:left;position:relative}
+    .items{height:746px;position:absolute}
+    .contr{width:1110px;padding-top:340px;margin:0 auto}
+    .left,.right{width:60px;height:75px;display:block}
+    .left{margin-left:12px}
+    .right{margin:-75px 0 0 1050px}
+    .boss_bottom{background:#1a2333;height:137px;width:0;position:absolute;top:746px;left:0;display:none;z-index:999}
+    .boss_on0,.boss_on1,.boss_on2{background:url(http://ossweb-img.qq.com/images/yl2/act/a20140331xnz/boss_bottom4.jpg) no-repeat;width:1000px;height:137px;margin:0 auto}
+    .hidbtn1,.hidbtn2,.hidbtn3{width:88px;height:137px;margin-left:54px}
+    .hidbtn2{margin-left:153px}
+    .hidbtn3{margin-left:198px}
+    .pop,.pop5{background:url(http://ossweb-img.qq.com/images/yl2/act/a20140331xnz/pop_c.jpg) repeat-y;display:none}
+    .popcon{background:url(http://ossweb-img.qq.com/images/yl2/act/a20140331xnz/pop_t.jpg) 0 top no-repeat;border:10px solid #7d6237;width:550px}
+    .popshow{background:url(http://ossweb-img.qq.com/images/yl2/act/a20140331xnz/pop_b.jpg) 0 bottom no-repeat;width:550px;padding:30px 0}
+    .close{background-position:0 -52px;width:54px;height:54px;margin:-8px -64px 0 0}
+    .pop_h3{width:465px;text-align:center;border-bottom:1px solid #e5d4ba;font-size:20px;color:#c94815;padding-bottom:10px;margin:0 auto}
+    .poptxt{width:465px;color:#a65b1b;margin:0 auto;padding:20px 0}
+    .popcon1{background:url(http://ossweb-img.qq.com/images/yl2/act/a20140331xnz/pop_t.jpg) 0 top no-repeat;width:495px}
+    .popshow1{background:url(http://ossweb-img.qq.com/images/yl2/act/a20140331xnz/pop_b.jpg) 0 bottom no-repeat;width:495px}
+    .addcdk{background:#6f5732;height:55px}
+    .cdkbtn{color:#e7cda3;line-height:55px;padding-left:26px}
+    .flash{background:url(http://ossweb-img.qq.com/images/yl2/act/a20140331xnz/cjq3.jpg) no-repeat;width:475px;height:342px;border:10px solid #7d6237}
+    .pop5 .close{margin:0 -54px 0 0}
+    .pub3_con{background:url(http://ossweb-img.qq.com/images/yl2/act/a20140331xnz/con3.jpg) no-repeat;width:1000px;height:336px;padding-top:410px;margin:0 auto}
+    .video{background:url(http://ossweb-img.qq.com/images/yl2/act/a20140331xnz/video.jpg) no-repeat;width:142px;height:97px;margin-left:352px;border:3px solid #2a374e}
+    .txt{width:425px;color:#949eae;margin:-106px 0 0 525px}
+    .pub4_con{background:url(http://ossweb-img.qq.com/images/yl2/act/a20140331xnz/con4.jpg) no-repeat;width:1000px;height:441px;padding-top:305px;margin:0 auto}
+    .q4video{width:564px;height:345px;border:#cda45d 3px solid;margin:0 auto}
+    .pop_v{width:835px}
+    .popl1{background:#fdfbf6;width:763px;height:471px;border:11px solid #7d6237;position:relative}
+    .pop_v .close{margin:0 -4px 0 0}
+    .boss_on0{background-position:0 0}
+    .boss_on1{background-position:0 -137px}
+    .boss_on2{background-position:0 -271px}
+    #footer_ied{background:#000;height:80px;text-align:center;font-size:12px;line-height:19px;color:#666;padding-top:60px}
+    .wrap_ied{width:1000px;margin:0 auto}
+    .wrap_ied a{color:#666}
+    #footer_ied p.e{margin-top:-4px;font-size:10px}
+    </style>
+    <!-- 个人信息填写 -->
+    <style type=text/css>
+    .defaultContent{background:url(http://game.qq.com/comm-htdocs/js/newjs/images/bg.png) repeat-x;width:700px;font-size:10pt;padding:10px}
+    .defaultContent1{background:url(http://game.qq.com/comm-htdocs/js/newjs/images/bg.png) repeat-x;width:400px;font-size:10pt;padding:10px}
+    #getGiftContent_66681 td{text-align:center}
+    .pub3,.pub4{background:url(http://ossweb-img.qq.com/images/yl2/act/a20140331xnz/bg3.jpg) center top no-repeat;width:0;display:none;position:absolute;top:0;left:0}
+    .defaultContent .submitBtn,.defaultContent1 .submitBtn{width:120px;height:41px;background:url(http://ossweb-img.qq.com/images/cf/act/a20100610wcg/pIsubmitBtn.jpg) no-repeat 0 0;border:none;cursor:pointer}
+    .defaultContent tr,.defaultContent1 tr{height:32px}
+    .defaultContent td,.defaultContent1 td{font-size:12px}
+    .defaultContent input,.defaultContent select,.defaultContent1 input,.defaultContent select{width:240px}
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="main">
+            <div class="wrapLeft">
+                <div class="items" style="left:0px;">
+                    <div class="w" style="width:2520px">
+                        <div class="menu fl"><a index="0" href="javascript:;" class="panel tint on current0 current_on0" id="a0">4月10日 腾讯公司高级副总裁 马晓轶</a>
+                        </div>
+                        <div class="test">
+                            <div class="contr">
+                                <a href="###" class="left tint">left</a>
+                                <a href="###" class="right tint">right</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="w" style="width:2520px">
+                        <div class="menu fl"><a index="1" href="javascript:;" class="panel tint current1" id="a1">4月12日 神秘嘉宾 敬请期待</a>
+                        </div>
+                        <div class="test">
+                            <div class="contr">
+                                <a href="###" class="left tint">left</a>
+                                <a href="###" class="right tint">right</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="w" style="width:2520px">
+                        <div class="menu fl"><a index="2" href="javascript:;" class="panel tint current2" id="a2">4月14日 神秘嘉宾 敬请期待</a>
+                        </div>
+                        <div class="test">
+                            <div class="contr">
+                                <a href="###" class="left tint">left</a>
+                                <a href="###" class="right tint">right</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="w" style="width:2520px">
+                        <div class="menu fl"><a index="3" href="javascript:;" class="panel tint current3" id="a3">4月14日 神秘嘉宾 敬请期待</a>
+                        </div>
+                        <div class="test">
+                            <div class="contr">
+                                <a href="###" class="left tint">left</a>
+                                <a href="###" class="right tint">right</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="http://yl2.qq.com/jquery-1.3.2.min.js"></script>
+
+    <script>
+    $(function() {
+        var pageWidth = $(window).width();
+        var pageList = $('.items');
+        var pageLen = pageList.length;
+        var curIndex = 0;
+
+        $('.test').each(function(i, e) {
+            $(e).css({
+                background: "url(http://ossweb-img.qq.com/images/yl2/act/a20140331xnz/boss" + i + ".jpg) center top",
+                width: pageWidth - 176,
+                height: 746
+            })
+        })
+        function change(index) {
+            pageWidth = $(window).width();
+            var curPage = $(pageList[index]);
+            curPage.animate({
+                left: index * 44
+            }, 600);
+            if (curIndex < index) {
+                pageList.each(function(i, v) {
+                    if (i < index) {
+                        $(v).animate({
+                            left: i * 44
+                        }, 600)
+                    }
+                })
+            } else {
+                pageList.each(function(i, v) {
+                    if (i > index) {
+                        $(v).animate({
+                            left: pageWidth - (pageLen - i) * 44
+                        }, 600)
+                    }
+                })
+            }
+        }
+        function playTo(index) {
+            change(index);
+            curIndex = index;
+            $('.panel').each(function(i,e) {
+            	$(e).removeClass('on current_on'+i);
+            });
+            $('.panel:eq('+index+')').addClass('on current_on'+index);
+        }
+
+        $(".panel").click(function() {
+        	pageWidth = $(window).width();
+            var index = parseInt($(this).attr('index'));
+            playTo(index);
+
+        })
+        $(".left").click(function() {
+            pageWidth = $(window).width();
+            if (curIndex - 1 < 0) {
+                alert("已经是第一张了！");
+                return false
+            }
+            playTo(curIndex - 1);
+        })
+        $(".right").click(function() {
+            pageWidth = $(window).width();
+            if (curIndex + 1 > 3) {
+                alert("已经是最后一张了！");
+                return false
+            }
+            playTo(curIndex + 1);
+
+        })
+        $(window).bind('load',function() {
+            pageWidth = $(window).width();
+            $('.items').each(function(i, e) {
+                $(e).css({
+                    left: pageWidth - 44 * (pageLen - i),
+                    width: pageWidth
+                });
+                $('.items:eq(0)').css({
+                    left: 0,
+                    width: pageWidth
+                })
+            })
+        })
+        $(window).bind('resize', function() {
+            var pageWidth = $(window).width();
+            var curOn = $('.menu .on').attr('index');
+            change(curOn);
+            $(".test").css({
+                width: pageWidth - 176,
+                height: 746
+            });
+        })
+    });
+    </script>
+</body>
+
+</html>

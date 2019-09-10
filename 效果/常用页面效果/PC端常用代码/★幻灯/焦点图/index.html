@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="gbk">
+	<meta name="robots" content="all">
+	<meta name="author" content="Tencent-TGideas">
+	<meta name="Copyright" content="Tencent">
+	<meta name="Description" content="">
+	<meta name="Keywords" content="腾讯游戏">
+	<title>专题主题（标题） 产品中文全称-产品英文缩写-官方网站-腾讯游戏</title>
+	<!-- 页面设计： | 页面制作：vincentrong | 创建：2013-7-17 |  团队博客：http://tgideas.qq.com/ -->
+	<style type="text/css">
+		*{margin: 0; padding: 0; list-style: none; vertical-align: middle; font-family: "arial"}
+		body{background: #fff;}
+		#output1{position: relative; width: 460px; height: 240px;}
+		#output1 li{position: absolute; left: 0; top:0;}
+		.tabs li{display: inline-block; background: #ccc; line-height: 20px; width: 20px; text-align: center; color: #fff; cursor:pointer;}
+		.tabs li.current{background: #666;}
+		.tabs li.custom{background: #f1745a;}
+
+		#output2{position:relative; width: 460px; height: 240px; overflow: hidden;}
+		#output2 ul{position:absolute; width: 99999px;}
+		#output2 li{float:left;}
+	</style>
+</head>
+<body>
+	<div id="output1">
+		<ul>
+			<li><img src="http://placehold.it/460x240/5c9dff/ffffff" alt="图片标题" width="460" height="240"></li>
+			<li><img src="http://placehold.it/460x240/3cde81/ffffff" alt="图片标题" width="460" height="240"></li>
+			<li><img src="http://placehold.it/460x240/ff5c5c/ffffff" alt="图片标题" width="460" height="240"></li>
+		</ul>
+	</div>
+	<div id="tabs1" class="tabs">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</div>
+	<br><br>
+	<div id="output2">
+		<ul>
+			<li><img src="http://placehold.it/460x240/5c9dff/ffffff" alt="图片标题" width="460" height="240"></li>
+			<li><img src="http://placehold.it/460x240/3cde81/ffffff" alt="图片标题" width="460" height="240"></li>
+			<li><img src="http://placehold.it/460x240/ff5c5c/ffffff" alt="图片标题" width="460" height="240"></li>
+		</ul>
+	</div>
+	<div id="tabs2" class="tabs">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</div>
+	<p style="background: #eee; line-height: 30px; margin: 10px 0; padding: 10px; letter-spacing: 1px;">
+		$( <i>TABS</i> ).slider( <i>OUTPUT</i> , [ <i>options</i> ] )<br>
+		options为可选, <br>
+		itemCurr 起始索引值，默认为0 （Num）<br>
+		hoverPause	鼠标覆盖是否暂停, 默认true （布尔）<br>
+		speed 自动播放间隔时间，单位毫秒，默认为0,0为不自动播放（Num）<br>
+		currStyle 当前选项卡按钮样式，默认current（String）<br>
+		ease 切换动画效果，值为fade(渐变)||slide（滑动），默认为fade<br>
+		animateSpeed 过渡动画速度，单位毫秒，默认200<br>
+		actionType 按钮事件类型，"click","mouseenter"或其他jQuery事件，默认'click'
+	</p>
+	<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.2.min.js"></script>
+	<script src="slider.js"></script>
+	<script language="javascript">
+		$(function() {
+			$("#tabs1 li").slider("#output1 li",{
+				animateSpeed : 0,
+				actionType : 'mouseenter'
+			});
+
+			$("#tabs2 li").slider("#output2 li",{
+				ease: "fade",
+				speed: 2000,
+				currStyle:'custom',
+				animateSpeed : 1000,
+				actionType : 'mouseenter'
+			});
+
+
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,th,td,p,pre,form,input,textarea{padding: 0;margin: 0;}
+		table{border-collapse: collapse;border-spacing: 0;}
+		ol,ul{list-style:none;}
+		img{border:0 none;}
+		a{outline: none;outline:none;}
+		a:focus{outline:none;-moz-outline:none;}
+		em,strong{font-weight: normal;font-style: normal;}
+		html,body{overflow: hidden;background:#e3e8ee;font-family: "microsoft yahei"}
+		.clearfix:after{content:"."; height:0; line-height:0;display:block; clear:both;overflow: hidden;}
+		.clearfix{display: inline-block;}
+		.clearfix{display: block;}
+		.nav li{width: 150px;height: 25px;line-height: 25px;float: left;margin-right: 5px;display: inline;text-align: center;}
+		.nav a{display: block;width: 150px;height: 25px;background: seagreen;text-decoration: none;color: #fff;font-size: 12px;}
+		.nav .cur{background: sienna;}
+		.con{width: 615px;height: 250px;background: sienna;color: #fff;display: none;}
+		.con p{padding: 20px 0 0 20px;}
+		.db{display: block;}
+	</style>
+</head>
+<body>
+<div id="nav" class="nav">
+	<ul class="clearfix">
+		<li><a href="#0" class="cur">抢袋子</a></li>
+		<li><a href="#1">麋鹿宝箱</a></li>
+		<li><a href="#2">宠物pk</a></li>
+		<li><a href="#3">每天都是幸运儿</a></li>
+	</ul>
+</div>
+<div>
+	<div id="con0" class="con db"><p>0000000000000</p></div>
+	<div id="con1" class="con"><p>1111111111111</p></div>
+	<div id="con2" class="con"><p>2222222222222</p></div>
+	<div id="con3" class="con"><p>3333333333333</p></div>
+</div>
+<script>
+	function g(id) {
+		return document.getElementById(id);
+	}
+	var nav = g("nav"),
+		nav_arr = nav.getElementsByTagName("a"),
+		len = nav_arr.length;
+	for (var i = 0; i < len; i++) {
+		(function(i) {
+			nav_arr[i].onclick = function() {
+				for (var j = 0; j < len; j++) {
+					nav_arr[j].className = "";
+					g("con" + j).style.display = "none";
+				}
+				this.className = "cur";
+				g("con" + i).style.display = "block";
+			}
+		})(i);
+		if (i == getParam()) {
+			g("con" + i).style.display = "block";
+			nav_arr[i].className = "cur";
+		} else {
+			g("con" + i).style.display = "none";
+			nav_arr[i].className = "";
+		}
+	}
+
+	function getParam() {
+		var gUrl = location.href,
+			gStar = gUrl.indexOf("#"),
+			xb = gUrl.slice(gStar + 1, gStar + 2);
+		if (gStar > 0) {
+			return xb;
+		} else {
+			return 0;
+		}
+	}
+</script>
+</body>
+</html>

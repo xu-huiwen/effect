@@ -1,0 +1,380 @@
+<!doctype html> 
+<html><head>
+<meta charset="gb2312" /> 
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta name="Copyright" content="Tencent" />
+<meta name="Description" content="腾讯游戏FPS网络游戏 - 穿越火线CrossFire" />
+<meta name="Keywords" content="穿越火线,穿越火线官网,CF官网,穿越火线官方网站,CrossFire,FPS网络游戏,RPK,腾讯游戏" />
+<!-- 设计：zaneye | 重构：nickyxie | 创建： 2012-2-13|  团队博客：http://tgideas.qq.com/ -->
+<title>CFPL官网-穿越火线官方网站-腾讯游戏</title>
+<link href="./common.css" rel="stylesheet" />
+<style>
+body{background-image:none}
+.menu .homelink{text-decoration: none; background: url(http://ossweb-img.qq.com/images/cf/cfpl/ms/nav_bg.jpg) repeat-x 0px 0px;border-left: 1px solid #0074a6;}
+.hot-s{background-color: #ffffff;}
+.hotwrap{padding:15px}
+/* gg */
+.gg-wrap{float: left;;}
+.gg-box {width: 540px; height: 250px;overflow: hidden; position: relative;}
+.rotate { position: relative; width: 540px; height: 250px;}
+.rotate-box { height: 250px; width: 540px; overflow: hidden;  background-color: #fff; }
+.rotate-box img { vertical-align: bottom }
+.rotate-index { bottom:10px; left:0px; position: absolute; padding-left: 390px }
+.rotate-index li { float: left; margin-right: 6px; width: 20px; height: 8px; background-color: #fff; border: 1px solid #000000; text-indent: -9000em; cursor:pointer; overflow: hidden }
+.rotate-index .curr { background-color: #de6003 }
+
+.bonus img{display: block; margin: 0px auto;}
+.bonus{padding:20px 0px}
+
+.news{width: 415px; height: 450px;float: right;}
+.live{width: 548px; height: 185px;float: left; margin-top: 8px; }
+.live iframe{height: 185px;}
+.news iframe{height: 450px;}
+.data,.data .loading, .data iframe{height: 455px;}
+.section,.section iframe, .section .loading{height: 945px;}
+.section, .data{width: 1000px; margin: 0px auto;}
+iframe{width: 100%;}
+
+.loading{ background: url(http://ossweb-img.qq.com/images/comm/unload.gif) no-repeat 50% 50%;}
+.section .loading{background-position: 50% 150px;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<!--#include virtual="/cfpl/top.inc"-->
+	<div class="main"> 
+		<div class="hot-s"><div class="hotwrap clearfix">
+			<div class="gg-wrap">
+				<div id="gg-box" class="gg-box"><div class="rotate">
+						<div class="rotate-box" id="rotate">
+						  <ul id="rotateList">
+							<li><a href="#" data-TGAD="243,902" target="_blank" onclick='pgvSendClick({hottag:"cfpl.rotate.ad1"});'></a></li>
+							<li><a href="#" data-TGAD="243,903" target="_blank" onclick='pgvSendClick({hottag:"cfpl.rotate.ad2"});'></a></li>
+							<li><a href="#" data-TGAD="243,904" target="_blank" onclick='pgvSendClick({hottag:"cfpl.rotate.ad3"});'></a></li>
+							<li><a href="#" data-TGAD="243,905" target="_blank" onclick='pgvSendClick({hottag:"cfpl.rotate.ad4"});'></a></li>
+							<li><a href="#" data-TGAD="243,906" target="_blank" onclick='pgvSendClick({hottag:"cfpl.rotate.ad5"});'></a></li>
+						  </ul>
+						</div>
+						<ul class="rotate-index" id="rotateIndex">
+						</ul>
+					</div></div>
+			</div>
+			<div class="news ifr">
+				<iframe name="" id="" scrolling="no" frameborder="0" allowTransparency="true" src="http://cf.766.com/cfpl/news/index.html" ></iframe>
+			</div>
+			<div class="live ifr">
+				<iframe name="" id="" scrolling="no" frameborder="0" allowTransparency="true" src="http://cf.hd.766.com/sszb/" ></iframe>
+			</div>
+
+			</div>
+
+		</div></div>
+		<div class="bonus">
+			<img src="http://ossweb-img.qq.com/images/cf/cfpl/bonus.jpg" width="969" height="176" alt="cfpl奖励" />
+		</div>
+
+
+		<!-- <div class='section ifr'><iframe name='' id='' scrolling='no' frameborder='0' allowTransparency='true' src='http://cf.766.com/cfpl/dzb/index.html' ></iframe></div> -->
+		<div class='section ifr' id='ifrSch' delayLoad='loadSchifr()'><div class='loading'></div></div>
+
+		<!-- <div class='data ifr'><iframe name='' id='' scrolling='no' frameborder='0' allowTransparency='true' src='http://cfpl.gtv.com.cn/sjzx_cf.html' ></iframe></div> -->
+		<div class='data' id='ifrData' delayLoad='loaDdataifr()'><div class='loading'></div></div>
+
+		<!--#include virtual="/cfpl/other.inc"-->
+	</div>
+</div>
+
+<script src="http://ossweb-img.qq.com/images/cf/title/cf.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/comm/delayImage.min.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/comm/tgadshow.min.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/foot.js"></script>
+<script src="http://pingjs.qq.com/ping_tcss_ied.js"></script>
+<script>
+
+if(typeof(pgvMain) == 'function') pgvMain();//统计代码
+
+
+
+function loadSchifr(){
+	document.getElementById('ifrSch').innerHTML="<iframe name='' id='' scrolling='no' frameborder='0' allowTransparency='true' src='http://cf.766.com/cfpl/dzb/index.html'></iframe>"
+}
+
+function loaDdataifr(){
+	document.getElementById('ifrData').innerHTML="<iframe name='' id='' scrolling='no' frameborder='0' allowTransparency='true' src='http://cfpl.gtv.com.cn/sjzx_cf.html'></iframe>"
+}
+
+
+function postToWb(){
+	var _t = encodeURI("CFPL总决赛将于2月24日-4月8日落地北京，全程电视、网络直播，单赛季总奖金100万人民币！谁将会CFPL的第一届冠军？let's fire！点击进入CFPL2012总决赛专题：http://cf.qq.com/cfpl/");
+	var _url = encodeURIComponent('');
+	var _appkey = encodeURI('appkey');
+	var _pic = encodeURI('http://ossweb-img.qq.com/images/cf/cfpl/wbcfpl.jpg');
+	var _site = 'http://cf.qq.com';
+	var _u = 'http://v.t.qq.com/share/share.php?url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic+'&title='+_t;
+	window.open( _u,'', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
+}
+
+
+
+
+var $$ = function(id) {
+    return "string" == typeof id ? document.getElementById(id) : id;
+};
+
+var Extend = function(destination, source) {
+    for (var property in source) {
+        destination[property] = source[property];
+    }
+    return destination;
+}
+var CurrentStyle = function(element) {
+    return element.currentStyle || document.defaultView.getComputedStyle(element, null);
+}
+
+var Bind = function(object, fun) {
+    var args = Array.prototype.slice.call(arguments).slice(2);
+    return function() {
+        return fun.apply(object, args.concat(Array.prototype.slice.call(arguments)));
+    }
+}
+var forEach = function(array, callback, thisObject) {
+    if (array.forEach) {
+        array.forEach(callback, thisObject);
+    } else {
+        for (var i = 0,
+        len = array.length; i < len; i++) {
+            callback.call(thisObject, array[i], i, array);
+        }
+    }
+}
+var Tween = {
+    Quart: {
+        easeOut: function(t, b, c, d) {
+            return - c * ((t = t / d - 1) * t * t * t - 1) + b;
+        }
+    },
+    Back: {
+        easeOut: function(t, b, c, d, s) {
+            if (s == undefined) s = 1.70158;
+            return c * ((t = t / d - 1) * t * ((s + 1) * t + s) + 1) + b;
+        }
+    },
+    Bounce: {
+        easeOut: function(t, b, c, d) {
+            if ((t /= d) < (1 / 2.75)) {
+                return c * (7.5625 * t * t) + b;
+            } else if (t < (2 / 2.75)) {
+                return c * (7.5625 * (t -= (1.5 / 2.75)) * t + .75) + b;
+            } else if (t < (2.5 / 2.75)) {
+                return c * (7.5625 * (t -= (2.25 / 2.75)) * t + .9375) + b;
+            } else {
+                return c * (7.5625 * (t -= (2.625 / 2.75)) * t + .984375) + b;
+            }
+        }
+    }
+}
+
+var SlideTrans = function(container, slider, count, options) {
+    this._slider = $$(slider);
+    this._container = $$(container);
+    this._timer = null;
+    this._count = Math.abs(count);
+    this._target = 0;
+    this._t = this._b = this._c = 0;
+    this.Index = 0;
+    this.SetOptions(options);
+    this.Auto = !!this.options.Auto;
+    this.Duration = Math.abs(this.options.Duration);
+    this.Time = Math.abs(this.options.Time);
+    this.Pause = Math.abs(this.options.Pause);
+    this.Tween = this.options.Tween;
+    this.onStart = this.options.onStart;
+    this.onFinish = this.options.onFinish;
+
+    var bVertical = !!this.options.Vertical;
+    this._css = bVertical ? "top": "left";
+
+    var p = CurrentStyle(this._container).position;
+    p == "relative" || p == "absolute" || (this._container.style.position = "relative");
+    this._container.style.overflow = "hidden";
+    this._slider.style.position = "absolute";
+
+    this.Change = this.options.Change ? this.options.Change: this._slider[bVertical ? "offsetHeight": "offsetWidth"] / this._count;
+};
+SlideTrans.prototype = {
+    SetOptions: function(options) {
+        this.options = {
+            Vertical: true,
+            Auto: true,
+            Change: 250,
+            Duration: 30,
+            Time: 10,
+            Pause: 3000,
+            onStart: function() {},
+            onFinish: function() {},
+            Tween: Tween.Quart.easeOut
+        };
+        Extend(this.options, options || {});
+    },
+
+    Run: function(index) {
+        index == undefined && (index = this.Index);
+        index < 0 && (index = this._count - 1) || index >= this._count && (index = 0);
+        this._target = -Math.abs(this.Change) * (this.Index = index);
+        this._t = 0;
+        this._b = parseInt(CurrentStyle(this._slider)[this.options.Vertical ? "top": "left"]);
+        this._c = this._target - this._b;
+        this.onStart();
+        this.Move();
+    },
+
+    Move: function() {
+        clearTimeout(this._timer);
+        if (this._c && this._t < this.Duration) {
+            this.MoveTo(Math.round(this.Tween(this._t++, this._b, this._c, this.Duration)));
+            this._timer = setTimeout(Bind(this, this.Move), this.Time);
+        } else {
+            this.MoveTo(this._target);
+            this.Auto && (this._timer = setTimeout(Bind(this, this.Next), this.Pause));
+        }
+    },
+
+    MoveTo: function(i) {
+        this._slider.style[this._css] = i + "px";
+    },
+
+    Next: function() {
+        this.Run(++this.Index);
+    },
+
+    Previous: function() {
+        this.Run(--this.Index);
+    },
+
+    Stop: function() {
+        clearTimeout(this._timer);
+        this.MoveTo(this._target);
+    }
+};
+
+var nums = [],
+timer,
+n = $$("rotateList").getElementsByTagName("li").length,
+st = new SlideTrans("rotate", "rotateList", n, {
+    onStart: function() {
+        forEach(nums,
+        function(o, i) {
+            o.className = st.Index == i ? "curr": "";
+        })
+    }
+});
+
+for (var i = 1; i <= n; AddNum(i++)) {};
+function AddNum(i) {
+    var num = $$("rotateIndex").appendChild(document.createElement("li"));
+    num.innerHTML = i--;
+    num.onmouseover = function() {
+        timer = setTimeout(function() {
+            num.className = "curr";
+            st.Auto = false;
+            st.Run(i);
+        },
+        200);
+    }
+    num.onmouseout = function() {
+        clearTimeout(timer);
+        num.className = "";
+        st.Auto = true;
+        st.Run();
+    }
+    nums[i] = num;
+}
+st.Run();
+
+
+
+
+
+function dropDownMenu(x, y, h, n) {
+    this._x = document.getElementById(x);
+    this._y = document.getElementById(y);
+    this._timer = null;
+    this._n = n;
+    this._t = 15;
+    this._h = h
+};
+dropDownMenu.prototype = {
+    init: function() {
+        this._x.onmouseover = this._y.onmouseover = new Function(this._n + '.st(true)');
+        this._x.onmouseout = this._y.onmouseout= new Function(this._n + '.st()')
+    },
+    st: function(f) {
+        clearInterval(this._timer);
+        var z = this._n;
+        if (f) {
+            this._timer = setInterval(z + '.sl(1)', this._t); this._x.className="active";
+        } else{ this._timer = setInterval(z + '.sl(-1)', this._t);this._x.className="";}
+    },
+    sl: function(f) {
+        var c = this._y;
+        var h = c.offsetHeight,
+        s = 6;
+        if ((h <= 0 && f != 1) || (h >= this._h && f == 1)) {
+            if (f == 1) {
+                c.style.filter = '';
+                c.style.opacity = 1
+            }
+            clearInterval(this._timer);
+            return
+        };
+        var d = (f == 1) ? Math.ceil((this._h - h) / s) : Math.ceil(h / s),
+        o = h / this._h;
+        c.style.opacity = o;
+        c.style.filter = 'alpha(opacity=' + (o * 100) + ')';
+        c.style.height = h + (d * f) + 'px'
+    }
+};
+
+
+var subMenuList03 = new dropDownMenu('menuListSel03', 'subMenuList03', '120', 'subMenuList03');
+subMenuList03.init();
+
+var subMenuList01 = new dropDownMenu('menuListSel01', 'subMenuList01', '90', 'subMenuList01');
+subMenuList01.init();
+
+/* var subMenuList02 = new dropDownMenu('menuListSel02', 'subMenuList02', '90', 'subMenuList02');
+subMenuList02.init(); */
+
+
+
+
+</script>
+<script>
+(function(){
+var i=navigator.javaEnabled()?1:0;
+var ae=1000042;
+var n=100000740;
+var c=encodeURIComponent(document.location.href);
+var d=encodeURIComponent(document.referrer);
+var ver="47"
+var ext="";
+var v='miaozhen_java='+i+'&miaozhen_ae='+ae+'&miaozhen_n='+n+'&miaozhen_loc='+c+'&miaozhen_ref='+d+'&miaozhen_ver='+ver+'&miaozhen_ext='+ext;
+document.write('<object classid="clsid:D27CDB6E-AE6D-11CF-96B8-444553540000" id="m" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" border="0" width="1" height="1"><param name="movie" value="http://js.miaozhen.com/e.swf"><param name="allowScriptAccess" value="always"><param name="FlashVars" value="'+v+'"><embed src= http://js.miaozhen.com/e.swf allowScriptAccess="always" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="m" width="1" height="1" FlashVars="'+v+'"></embed></object>');
+ })();
+</script>
+<script>
+(function(){
+var i=navigator.javaEnabled()?1:0;
+var k="1000306";
+var p="3xUiy0";
+var c=encodeURIComponent(document.location.href);
+var d=encodeURIComponent(document.referrer);
+var ver="47";
+var ext="";
+var v="miaozhen_java="+i+"&miaozhen_caid="+k+"&miaozhen_spid="+p+"&miaozhen_loc="+c+"&miaozhen_ref="+d+"&miaozhen_ver="+ver+"&miaozhen_ext="+ext;
+document.write('<object classid="clsid:D27CDB6E-AE6D-11CF-96B8-444553540000" id="m" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" border="0" width="1" height="1"><param name="movie" value="http://js.miaozhen.com/c.swf"><param name="allowScriptAccess" value="always"><param name="FlashVars" value="'+v+'"><embed src="http://js.miaozhen.com/c.swf" allowScriptAccess="always" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="m" width="1" height="1" FlashVars="'+v+'"></embed></object>');
+})();
+</script>
+</body>
+<script src="http://ossweb-img.qq.com/images/js/pagespeed/page_speed_v2.js"></script></html><!--[if !IE]>|xGv00|9c9c70bf5fc0b8f5d3fe23ba8594a12f<![endif]-->

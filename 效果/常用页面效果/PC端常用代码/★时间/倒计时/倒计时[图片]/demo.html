@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>倒计时[图片]</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		.day,.day span {background-image: url(sp_time.png);background-repeat: no-repeat;}
+		.day {width: 188px;height: 79px;padding: 13px 0 0 29px;margin: 0 auto;background-position: 0 -69px;}
+		.day span {float: left;width: 36px;height: 68px;margin-right: 58px;}
+		.day1 {background-position: -36px 0;}
+		.day2 {background-position: -72px 0;}
+		.day3 {background-position: -108px 0;}
+		.day4 {background-position: -144px 0;}
+		.day5 {background-position: -180px 0;}
+		.day6 {background-position: -216px 0;}
+		.day7 {background-position: -252px 0;}
+		.day8 {background-position: -288px 0;}
+		.day9 {background-position: -324px 0;}
+	</style>
+</head>
+<body>
+	<div class="day" id="day">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+<script src="http://apps.game.qq.com/cgi-bin/comm_act/tgc2013/chicken/get_time.cgi"></script>
+<script>
+    var ddt = Date.parse(new Date(nowDate.replace(/-/g, "/")));
+    var endDay = Date.parse(new Date(Date.parse('2017-12-11'.replace(/-/g, "/"))));
+    var stillDay = Math.floor((endDay - ddt) / (1000 * 60 * 60 * 24));
+    if (stillDay < 0) stillDay = '0';
+    if (stillDay < 10) stillDay = '0' + stillDay;
+    else stillDay = stillDay + '';
+    stillDay = stillDay.split("");
+    document.getElementById('day').innerHTML = '<span class="day' + stillDay[0] + '"></span><span class="day' + stillDay[1] + '"></span>';
+</script>
+</body>
+</html>

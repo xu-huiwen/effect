@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="gbk">
+	<title>预加载+居中+延迟加载</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		.pa {position:absolute;}
+		.pr {position:relative;}
+		.head {height:1000px;background-color:#ccc;}
+		.loader{width:100%;height:100%; top:0;left:0; z-index:100;background-color:#000;}
+		.loader strong{margin:230px auto 0;display:block;width:100px;height:100px; background:url(http://ossweb-img.qq.com/images/nz/act/a20130607version/loading.gif) no-repeat; text-align:center; line-height:135px; overflow:hidden; color:#fff; font-size:14px;}
+		.box {height:608px;position:relative;overflow:hidden;}
+		.pic img {display:block;}
+	</style>
+</head>
+<body>
+	<div class="head"></div>
+	<div class="box pr" id="box" delayLoad="pic()">
+		<div class="pic pa" id="pic">
+			<img data-src="http://ossweb-img.qq.com/images/nz/act/a20130812version/map01.jpg" src="http://ossweb-img.qq.com/images/nz/web201306/blank.png" width="1920" height="608" alt="">
+			<img data-src="http://ossweb-img.qq.com/images/nz/act/a20130812version/map02.jpg" src="http://ossweb-img.qq.com/images/nz/web201306/blank.png" width="1920" height="608" alt="">
+			<img data-src="http://ossweb-img.qq.com/images/nz/act/a20130812version/map03.jpg" src="http://ossweb-img.qq.com/images/nz/web201306/blank.png" width="1920" height="608" alt="">
+			<img data-src="http://ossweb-img.qq.com/images/nz/act/a20130812version/map04.jpg" src="http://ossweb-img.qq.com/images/nz/web201306/blank.png" width="1920" height="608" alt="">
+			<img data-src="http://ossweb-img.qq.com/images/nz/act/a20130812version/map05.jpg" src="http://ossweb-img.qq.com/images/nz/web201306/blank.png" width="1920" height="608" alt="">
+			<img data-src="http://ossweb-img.qq.com/images/nz/act/a20130812version/map06.jpg" src="http://ossweb-img.qq.com/images/nz/web201306/blank.png" width="1920" height="608" alt="">
+			<img data-src="http://ossweb-img.qq.com/images/nz/act/a20130812version/map07.jpg" src="http://ossweb-img.qq.com/images/nz/web201306/blank.png" width="1920" height="608" alt="">
+			<img data-src="http://ossweb-img.qq.com/images/nz/act/a20130812version/map08.jpg" src="http://ossweb-img.qq.com/images/nz/web201306/blank.png" width="1920" height="608" alt="">
+			<img data-src="http://ossweb-img.qq.com/images/nz/act/a20130812version/map09.jpg" src="http://ossweb-img.qq.com/images/nz/web201306/blank.png" width="1920" height="608" alt="">
+			<img data-src="http://ossweb-img.qq.com/images/nz/act/a20130812version/map10.jpg" src="http://ossweb-img.qq.com/images/nz/web201306/blank.png" width="1920" height="608" alt="">
+			<img data-src="http://ossweb-img.qq.com/images/nz/act/a20130812version/map11.jpg" src="http://ossweb-img.qq.com/images/nz/web201306/blank.png" width="1920" height="608" alt="">
+			<img data-src="http://ossweb-img.qq.com/images/nz/act/a20130812version/map12.jpg" src="http://ossweb-img.qq.com/images/nz/web201306/blank.png" width="1920" height="608" alt="">
+		</div>
+		<div class="loader pa" id="pic-loading"><strong>0%</strong></div>
+	</div>
+<script src="common.js"></script>
+<script src="loading.js"></script>
+<script>
+	// 预加载
+	function pic() {
+		var load1 = new loading("pic");
+	}
+
+	//居中
+	window.onload = window.onresize = function() {
+	    var dw = document.documentElement.clientWidth || document.body.clientWidth;
+	    dw >= 1920 ? _$.gId("box").style.width = "1920px" : (dw <= 1000) ? _$.gId("box").style.width = "1000px" : _$.gId("box").style.width = "auto";
+	    dw < 1920 ? _$.gId("pic").style.left = -Math.ceil(Math.abs(dw - 1920) / 2) + "px" : _$.gId("pic").style.left = "0";
+	};
+
+	//延迟加载
+	_$.addOnLoad(function() {
+	    _$.loadJs("http://ossweb-img.qq.com/images/js/comm/delayImage.min.js");
+	});
+</script>
+</body>
+</html>

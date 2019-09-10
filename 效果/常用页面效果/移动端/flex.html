@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding:0;border:0;}
+		ul {list-style-type:none;}
+
+		.box {
+			display:-webkit-box;
+			display:-ms-flexbox;
+			display:-webkit-flex;
+			display:flex;
+		}
+		.tit {
+			-webkit-box-flex:16;
+			-ms-flex:16;
+			-webkit-flex:16;
+			flex:16;
+		}
+		.list {
+			-webkit-box-flex:84;
+			-ms-flex:84;
+			-webkit-flex:84;
+			flex:84;
+
+			display:-webkit-box;
+			display:-ms-flexbox;
+			display:-webkit-flex;
+			display:flex;
+		}
+		.list li {border:1px solid #f00;text-align:center;
+			-webkit-box-flex:1;
+			-ms-flex:1;
+			-webkit-flex:1;
+			flex:1;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<h4 class="tit">标题</h4>
+		<ul class="list">
+			<li>文字1</li>
+			<li>文字2</li>
+			<li>文字3</li>
+			<li>文字4</li>
+			<li>文字5</li>
+			<li>文字6</li>
+			<li>文字7</li>
+			<li>文字8</li>
+		</ul>
+	</div>
+</body>
+</html>

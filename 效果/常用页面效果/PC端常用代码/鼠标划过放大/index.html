@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery鼠标悬停图片放大滑动显示标题</title>
+<meta name="description" content="jquery图片特效鼠标悬停图片放大展示图片标题滑动显示，鼠标离开后图片缩小默认大小图片标题隐藏。非常实用的jQuery图片鼠标悬停效果。" />
+<script type="text/javascript" src='http://ossweb-img.qq.com/images/js/jquery/jquery-1.4.2.min.js'></script>
+<script type="text/javascript">
+$(window).load(function(){
+	//设置和获取一些变量
+	var thumbnail = {
+		imgIncrease : 100, /* 增加图像像素（变焦） */
+		effectDuration : 400, /* 效果的持续时间（变焦和标题） */
+		/* 
+		获取的图像的宽度和高度。要使用这些
+		2件事:
+		列表项大小相同
+		得到的图像缩放后恢复正常
+		*/
+		imgWidth : $('.thumbnailWrapper ul li').find('img').width(), 
+		imgHeight : $('.thumbnailWrapper ul li').find('img').height()
+	};
+
+	//列表项相同的大小作为图像
+	$('.thumbnailWrapper ul li').css({ 
+		'width' : thumbnail.imgWidth, 
+		'height' : thumbnail.imgHeight 
+	});
+
+	//当鼠标移到列表项...
+	$('.thumbnailWrapper ul li').hover(function(){
+		$(this).find('img').stop().animate({
+			/* 变焦效果，提高图像的宽度 */
+			width: parseInt(thumbnail.imgWidth) + thumbnail.imgIncrease,
+			/* 我们需要改变的左侧和顶部的位置，才能有放大效应，因此我们将它们移动到一个负占据一半的img增加 */
+			left: thumbnail.imgIncrease/2*(-1),
+			top: thumbnail.imgIncrease/2*(-1)
+		},{ 
+			"duration": thumbnail.effectDuration,
+			"queue": false
+		});
+
+		//使用slideDown事件显示的标题
+		$(this).find('.caption:not(:animated)').slideDown(thumbnail.effectDuration);
+		
+		//当鼠标离开...
+	}, function(){
+	
+		//发现图像和动画...
+		$(this).find('img').animate({
+			/* 回原来的尺寸（缩小） */
+			width: thumbnail.imgWidth,
+			/* 左侧和顶部位置恢复正常 */
+			left: 0,
+			top: 0
+
+		}, thumbnail.effectDuration);
+
+		//隐藏使用滑块事件的标题
+		$(this).find('.caption').slideUp(thumbnail.effectDuration);
+
+	});
+
+});
+</script>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+a{color:#FFCC00;}
+.clear{clear:both;}
+body{background-color:#292929;color:#ffffff;text-align:center;font-family:'georgia';font-size: 13px;}
+/* thumbnailWrapper */
+.thumbnailWrapper{width:600px;margin:40px auto 0 auto;}
+.thumbnailWrapper ul li{float:left;position:relative;overflow:hidden;}
+.thumbnailWrapper ul li a img{width:200px;position:relative;border:none;}
+.caption{position:absolute;bottom:0px;left:0px;width:100%;display:none;background:#0c4b62;color:#ffffff;opacity:0.9;}
+.caption .captionInside{padding:10px;margin:0px;}
+</style>
+</head>
+<body>
+
+	<div class='thumbnailWrapper'>
+		<ul>
+			<li>
+				<a href="http://www.17sucai.com/"><img src='images/1.jpg' /></a>
+				<div class='caption'>
+					<p class='captionInside'>CofeeNerd</p>
+				</div>
+			</li>
+			<li>
+				<a href="http://www.17sucai.com/"><img src='images/2.jpg' /></a>
+				<div class='caption'>
+					<p class='captionInside'>musiKings</p>
+				</div>
+			</li>
+			<li>
+				<a href="http://www.17sucai.com/"><img src='images/3.png' /></a>
+				<div class='caption'>
+					<p class='captionInside'>The Caribbean Energy Conference 2010</p>
+				</div>
+			</li>
+			<li>
+				<a href="http://www.17sucai.com/"><img src='images/4.jpg' /></a>
+				<div class='caption'>
+					<p class='captionInside'>Coffee</p>
+				</div>
+			</li>
+			<li>
+				<a href="http://www.17sucai.com/"><img src='images/5.jpg' /></a>
+				<div class='caption'>
+					<p class='captionInside'>Quantum</p>
+				</div>
+			</li>
+			<li>
+				<a href="http://www.17sucai.com/"><img src='images/6.png' /></a>
+				<div class='caption'>
+					<p class='captionInside'>Infinite Love</p>
+				</div>
+			</li>
+			<li>
+				<a href="http://www.17sucai.com/"><img src='images/7.jpg' /></a>
+				<div class='caption'>
+					<p class='captionInside'>Fathom</p>
+				</div>
+			</li>
+			<li>
+				<a href="http://www.17sucai.com/"><img src='images/9.PNG' /></a>
+				<div class='caption'>
+					<p class='captionInside'>Mixed Pome</p>
+				</div>
+			</li>
+			<li>
+				<a href="http://www.17sucai.com/"><img src='images/10.jpg' /></a>
+				<div class='caption'>
+					<p class='captionInside'>Golf Lessons Online</p>
+				</div>
+			</li>
+		</ul>
+		
+		<div class='clear'></div><!-- clear the float -->
+		
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery图片放大点击小图放大查看大图效果</title>
+<meta name="description" content="jquery图片点击放大查看大图效果，类似新浪微博点击文章中的小图片放大查看原图效果，可收起放大图片。jQuery下载。" />
+
+</head>
+
+<body>
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+.zoom{zoom:1;position:relative;}
+
+.zoombox{width:530px;margin:20px auto 0 auto;}
+.zoombox .tit{font-size:12px;color:#5e5e5e;line-height:20px;margin:0 0 10px 0;}
+
+.zoombox .photoBox{background:#fff;padding:2px;border:1px solid #E5E5E5;display:inline-block;margin:10px 20px 0 0;position:relative;}
+.zoombox .photoBox img{display:block;}
+.zoombox .photoBox .loadingBox{background:#fff;opacity:.3;*filter:alpha(opacity=30);z-index:1;text-align:center;position:absolute;left:50%;top:50%;margin:-8px 0 0 -8px;display:none;}
+.zoombox .photoBox .loading{background:url(images/loading_16.gif) no-repeat 0 0;width:16px;height:16px;display:inline-block;}
+.zoombox .zoom{cursor:url(images/big.cur),default;}
+.zoombox .photoArea{background:#F7F7F7;border:1px solid #EBEBEB;padding:10px;text-align:center;zoom:1;}
+.zoombox .minifier{cursor:url(images/small.cur),default;}
+.zoombox .photoArea .toolBar{padding:7px 0 0 0;text-align:right;font-size:12px;}
+.zoombox .photoArea .toolBar a{color:#3366cc;text-decoration:none;}
+.zoombox .photoArea .toolBar .view{padding-left:15px;background:url(images/array.gif) no-repeat;line-height:14px;margin-left:8px;}
+</style>
+
+<div class="zoombox">
+	<div class="tit">“如果真有那种一拍即合的爱情就好了，不需要暧昧的你来我往，不需要花太多时间去培养，我已经没有力气去玩猜测的游戏，因为我怕会受伤害。” 我们想要的，大概就是那种，你看一眼就知道，是这个人，没错了。”——舒淇</div>
+
+	<span class="photoBox">
+		<div class="loadingBox">
+			<span class="loading"></span>
+		</div>
+		<img src="images/1326m.jpg" class="zoom" onclick="zoom_image($(this).parent());"/>
+	</span><!--photoBox end-->
+	
+	<div class="photoArea" style="display:none;">
+		<p><img src="about:blank" class="minifier" onclick="zoom_image($(this).parent().parent());"></p>
+		<p class="toolBar gc">
+			<span><a class="green" href="javascript:void(0)" onclick="zoom_image($(this).parent().parent().parent());">收起</a></span>|<span class="view"><a class="green" href="images/1326l.jpg" target="_blank">查看原图</a></span>
+		</p>
+	</div><!--photoArea end-->
+			
+</div><!--zoombox end-->
+
+<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+function zoom_image(obj) {
+    if (obj.hasClass('photoBox')) {
+        var load = obj.find('.loadingBox');
+        load.show();
+        var img = obj.next().find('img');
+        if (img.attr('src') == 'about:blank') {
+            img.attr('src', obj.find('img').attr('src').replace('m.', 'l.'));
+            img.load(function() {
+                obj.hide();
+                obj.next().show();
+            });
+        } else {
+            obj.hide();
+            obj.next().show();
+        }
+    } else {
+        obj.hide();
+        obj.prev().show();
+        obj.prev().find('.loadingBox').hide();
+    }
+}
+</script>
+
+</body>
+</html>

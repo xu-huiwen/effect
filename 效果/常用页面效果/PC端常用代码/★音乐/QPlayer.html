@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>QPlayer</title>
+</head>
+<body>
+<a href="javascript:" id="btn-play">播放</a>
+
+<script src="http://imgcache.qq.com/music/js/module/qplayer.js"></script>
+<script>
+function gE(e) {
+    return (typeof (e) == "object") ? e : document.getElementById(e)
+}
+//QQ音乐
+$.qPlayer.init({
+   fromTag : 44,      //统计QQ音乐库内流媒体请求来源，外部门使用统一为44
+   statFromtag : 12    //web前端上报来源，细分外部门调用传参数值，找peterpeng申请
+});
+$.qPlayer.play({
+   list:[
+   		{songurl:"http://ossweb-img.qq.com/images/jf/act/a20141125musicsf/bg.mp3"}
+     ],
+   isPlay:true,
+   mode:3
+});
+
+var musicflag = 0;
+gE('btn-play').onclick = function() {
+	if (musicflag == 0) {
+		$.qPlayer.pause();
+		$(this).addClass("active");
+		musicflag = 1
+	} else {
+		$.qPlayer.play();
+		$(this).removeClass("active");
+		musicflag = 0
+	};
+	return false;
+}
+</script>
+</body>
+</html>

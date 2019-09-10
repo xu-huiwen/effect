@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+
+.wrap{ margin:0 auto;line-height:22px;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{height:200px;}
+ol{margin:0;padding:0;}
+li{margin-left:40px;}
+
+
+
+
+.defaultContent {background: url(http://game.qq.com/comm-htdocs/js/newjs/images/bg.png) repeat-x; width:400px; padding:10px;}
+.defaultContent .submitBtn{width: 120px;height: 41px;background: url(http://ossweb-img.qq.com/images/cf/act/a20100610wcg/pIsubmitBtn.jpg) no-repeat 0px 0px;border:none;cursor:pointer}
+.defaultContent tr {height: 32px;}
+.defaultContent td {font-size: 12px;}
+.infTxt{margin:5px 10px;}
+.aRit{text-align:right}
+.litSpan{color:#FF0000;}
+.iKuang{width:200px;}
+.tdCont{width:105px;text-align:right;}
+/*个人信息弹出层样式*/
+</style>
+<title>个人信息收集示例 - 腾讯游戏</title>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>个人信息收集示例</h1>
+	</div>
+	<div id="main">
+		<h2>一、使用说明</h2>
+		<ol>
+			<li>在/body前调用本规范中的脚本；</li>
+			<li>按示例编写结构、修改样式即可，功能由开发实现；</li>
+			<li>不要更改弹出层ID以及input表单的name属性，可以用"li"或是"table"构建弹出层结构；</li>
+			<li>打开弹出层的方法为：openOneFloater()；关闭的方法为：FloaterManager.close()；</li>
+		</ol>	
+	　　<h2>二、实例演示(详情请查看源文件)</h2>
+		<p><a href="javascript:openOneFloater();">点击查看</a></p>
+	</div>
+</div>
+<!-- 个人信息填写 -->
+<div id="personInfoContent" class="defaultContent" style="display:none;">
+<p class="infTxt aRit"><a href="javascript:FloaterManager.close();">关闭</a></p>
+<p class="infTxt">个人信息填写：为保证实物奖励能准确邮寄，下面所有项目务必详细填写！<span class="light">未获得实物奖励请勿填写</span></p>
+<table width="422" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+  <tr>
+    <td class="tdCont"><span class="litSpan">*</span> 姓名：</td>
+    <td><input name="sName" type="text" class="iKuang"></td>
+  </tr>
+  <tr>
+    <td class="tdCont"><span class="litSpan">*</span> 身份证号码：</td>
+    <td><input name="sIdentity" type="text" class="iKuang"></td>
+  </tr>
+  <tr>
+    <td class="tdCont"><span class="litSpan">*</span> 手机号码：</td>
+    <td><input name="sMobile" type="text" class="iKuang"></td>
+  </tr>
+  <tr>
+    <td class="tdCont"><span class="litSpan">*</span> 详细地址：</td>
+    <td><input name="sAddress" type="text" class="iKuang"></td>
+  </tr>
+  <tr>
+    <td class="tdCont"><span class="litSpan">*</span> 邮编：</td>
+    <td><input name="sPostCode" type="text" class="iKuang"></td>
+  </tr>
+  <tr>
+	<td></td>
+	<td><input id="personSubmitBtn" type="button" class='submitBtn' /></td>
+  </tr>
+</tbody>
+</table>
+</div>
+<!-- //个人信息填写 -->
+<script src="http://ossweb-img.qq.com/images/script/bootmanager.js"></script>
+<script language="javascript">
+$import('com.qq.basic.*');
+var openOneFloater = function(){
+	var oneFloater = FloaterManager.init({
+		'type' : 'dom',
+		'content' : 'personInfoContent' //页面ID
+	});
+	oneFloater.show();
+};
+</script>
+</body>
+</html>

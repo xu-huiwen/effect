@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif;line-height:22px;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{}
+ol{margin:0;padding:0;}
+li{margin-left:40px;}
+
+/*图片展示相关css开始*/
+.show {width:759px;border:1px solid #c4d3e3; padding:1px; background:#fff;}
+.show_img {padding:30px; background:#dbe7f3;}
+.show_img img {display:block; margin:0 auto; border:1px solid #c4d3e3; width:607px; height:429px;}
+.show_list {height:79px; background:url(http://ossweb-img.qq.com/images/xxz/act/a20110104baike/header.jpg) no-repeat 0 -337px;}
+.pic_left,.pic_right {display:inline; float:left; margin:15px 0 0 16px; width:50px; height:50px; overflow:hidden; text-indent:-9999px;}
+.pic_right {float:right; margin:15px 16px 0 0;}
+.show_listbox {float:left;display:inline; margin:8px 0 0 2px;width:624px;height:62px; overflow:hidden;}
+.show_listbox a {float:left; display:inline;width:92px; height:62px; margin:0 6px;}
+.show_listbox a img {width:90px; height:60px; border:1px solid #1d2a56;}
+.show_listbox a.on img {width:84px; height:54px;border:4px solid #ca0000;}
+/*图片展示相关css结束*/
+</style>
+<title>点击左右箭头滚动切换小图、点击小图，显示对应的大图的图片翻页展示效果</title>
+</head>
+<body>
+
+<div class="wrap">
+	<div id="header">
+		<h1>点击左右箭头滚动切换小图、点击小图，显示对应的大图的图片翻页展示效果</h1>
+	</div>
+	<div id="main">
+		<h2>一、使用说明：</h2>
+		<ol>
+			<li>按示例拷贝脚本和构建容器，修改容器、左右箭头ID、设置显示框、翻页宽度等参数。</li>
+			<li>图片命名形成有序列表，大小图片命令是有规律的对应关系。</li>
+		</ol>
+		<h2>二、实例演示：</h2>
+		<!--图片展示开始-->
+		<div class="show">
+				<div class="show_img"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_1d.jpg" alt="示例图片" id="show_bigimg" /></div>
+				<div class="show_list">
+					<a href="javascript:void(0);" id="video_left" class="pic_left">向左</a>
+					<div class="show_listbox">
+					<div id="video_img_box">
+						<a href="#" class="on"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_1.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_2.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_3.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_4.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_5.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_6.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_7.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_8.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_9.jpg" alt="示例图片" /></a>
+
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_10.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_11.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_12.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_13.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_14.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_15.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_16.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_17.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_18.jpg" alt="示例图片" /></a>
+
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_19.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_20.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_21.jpg" alt="示例图片" /></a>
+						<a href="#"><img src="http://ossweb-img.qq.com/images/xxz/act/a20110104baike/p2_22.jpg" alt="示例图片" /></a>
+					</div>
+					</div>
+					<a href="javascript:void(0);" id="video_right" class="pic_right">向右</a>
+				</div>
+		</div>
+		<!--图片展示结束-->
+	</div>
+</div>
+<script>
+var tcPicO = {
+    $: function(objName) {
+        if (document.getElementById) {
+            return eval('document.getElementById("' + objName + '")')
+        } else {
+            return eval('document.all.' + objName)
+        }
+    },
+    isIE: navigator.appVersion.indexOf("MSIE") != -1 ? true: false,
+    addEvent: function(l, i, I) {
+        if (l.attachEvent) {
+            l.attachEvent("on" + i, I)
+        } else {
+            l.addEventListener(i, I, false)
+        }
+    },
+    delEvent: function(l, i, I) {
+        if (l.detachEvent) {
+            l.detachEvent("on" + i, I)
+        } else {
+            l.removeEventListener(i, I, false)
+        }
+    },
+    readCookie: function(O) {
+        var o = "",
+        l = O + "=";
+        if (document.cookie.length > 0) {
+            var i = document.cookie.indexOf(l);
+            if (i != -1) {
+                i += l.length;
+                var I = document.cookie.indexOf(";", i);
+                if (I == -1) I = document.cookie.length;
+                o = unescape(document.cookie.substring(i, I))
+            }
+        };
+        return o
+    },
+    writeCookie: function(i, l, o, c) {
+        var O = "",
+        I = "";
+        if (o != null) {
+            O = new Date((new Date).getTime() + o * 3600000);
+            O = "; expires=" + O.toGMTString()
+        };
+        if (c != null) {
+            I = ";domain=" + c
+        };
+        document.cookie = i + "=" + escape(l) + O + I
+    },
+    readStyle: function(I, l) {
+        if (I.style[l]) {
+            return I.style[l]
+        } else if (I.currentStyle) {
+            return I.currentStyle[l]
+        } else if (document.defaultView && document.defaultView.getComputedStyle) {
+            var i = document.defaultView.getComputedStyle(I, null);
+            return i.getPropertyValue(l)
+        } else {
+            return null
+        }
+    }
+};
+
+//滚动图片构造函数
+function ScrollPic(scrollContId, arrLeftId, arrRightId, dotListId) {
+    this.scrollContId = scrollContId;
+    this.arrLeftId = arrLeftId;
+    this.arrRightId = arrRightId;
+    this.dotListId = dotListId;
+    this.dotClassName = "dotItem";
+    this.dotOnClassName = "dotItemOn";
+    this.dotObjArr = [];
+    this.pageWidth = 0;
+    this.frameWidth = 0;
+    this.speed = 10;
+    this.space = 10;
+    this.pageIndex = 0;
+    this.autoPlay = true;
+    this.autoPlayTime = 5;
+    var _autoTimeObj, _scrollTimeObj, _state = "ready";
+    this.stripDiv = document.createElement("DIV");
+    this.listDiv01 = document.createElement("DIV");
+    this.listDiv02 = document.createElement("DIV");
+    if (!ScrollPic.childs) {
+        ScrollPic.childs = []
+    };
+    this.ID = ScrollPic.childs.length;
+    ScrollPic.childs.push(this);
+    this.initialize = function() {
+        if (!this.scrollContId) {
+            throw new Error("必须指定scrollContId.");
+            return
+        };
+        this.scrollContDiv = tcPicO.$(this.scrollContId);
+        if (!this.scrollContDiv) {
+            throw new Error("scrollContId不是正确的对象.(scrollContId = \"" + this.scrollContId + "\")");
+            return
+        };
+        this.scrollContDiv.style.width = this.frameWidth + "px";
+        this.scrollContDiv.style.overflow = "hidden";
+        this.listDiv01.innerHTML = this.listDiv02.innerHTML = this.scrollContDiv.innerHTML;
+        this.scrollContDiv.innerHTML = "";
+        this.scrollContDiv.appendChild(this.stripDiv);
+        this.stripDiv.appendChild(this.listDiv01);
+        this.stripDiv.appendChild(this.listDiv02);
+        this.stripDiv.style.overflow = "hidden";
+        this.stripDiv.style.zoom = "1";
+        this.stripDiv.style.width = "4576px";
+        this.listDiv01.style.float = "left";
+        this.listDiv01.style.width = "2288px";
+        this.listDiv02.style.float = "left";
+        tcPicO.addEvent(this.scrollContDiv, "mouseover", Function("ScrollPic.childs[" + this.ID + "].stop()"));
+        tcPicO.addEvent(this.scrollContDiv, "mouseout", Function("ScrollPic.childs[" + this.ID + "].play()"));
+        if (this.arrLeftId) {
+            this.arrLeftObj = tcPicO.$(this.arrLeftId);
+            if (this.arrLeftObj) {
+                tcPicO.addEvent(this.arrLeftObj, "mousedown", Function("ScrollPic.childs[" + this.ID + "].rightMouseDown()"));
+                tcPicO.addEvent(this.arrLeftObj, "mouseup", Function("ScrollPic.childs[" + this.ID + "].rightEnd()"));
+                tcPicO.addEvent(this.arrLeftObj, "mouseout", Function("ScrollPic.childs[" + this.ID + "].rightEnd()"))
+            }
+        };
+        if (this.arrRightId) {
+            this.arrRightObj = tcPicO.$(this.arrRightId);
+            if (this.arrRightObj) {
+                tcPicO.addEvent(this.arrRightObj, "mousedown", Function("ScrollPic.childs[" + this.ID + "].leftMouseDown()"));
+                tcPicO.addEvent(this.arrRightObj, "mouseup", Function("ScrollPic.childs[" + this.ID + "].leftEnd()"));
+                tcPicO.addEvent(this.arrRightObj, "mouseout", Function("ScrollPic.childs[" + this.ID + "].leftEnd()"))
+            }
+        };
+        if (this.dotListId) {
+            this.dotListObj = tcPicO.$(this.dotListId);
+            if (this.dotListObj) {
+                var pages = Math.round(this.listDiv01.offsetWidth / this.frameWidth + 0.4),
+                i,
+                tempObj;
+                for (i = 0; i < pages; i++) {
+                    tempObj = document.createElement("span");
+                    this.dotListObj.appendChild(tempObj);
+                    this.dotObjArr.push(tempObj);
+                    if (i == this.pageIndex) {
+                        tempObj.className = this.dotClassName
+                    } else {
+                        tempObj.className = this.dotOnClassName
+                    };
+                    tempObj.title = "第" + (i + 1) + "页";
+                    tcPicO.addEvent(tempObj, "click", Function("ScrollPic.childs[" + this.ID + "].pageTo(" + i + ")"))
+                }
+            }
+        };
+        if (this.autoPlay) {
+            this.play()
+        }
+    };
+    this.leftMouseDown = function() {
+        if (_state != "ready") {
+            return
+        };
+        _state = "floating";
+        _scrollTimeObj = setInterval("ScrollPic.childs[" + this.ID + "].moveLeft()", this.speed)
+    };
+    this.rightMouseDown = function() {
+        if (_state != "ready") {
+            return
+        };
+        _state = "floating";
+        _scrollTimeObj = setInterval("ScrollPic.childs[" + this.ID + "].moveRight()", this.speed)
+    };
+    this.moveLeft = function() {
+        if (this.scrollContDiv.scrollLeft + this.space >= this.listDiv01.scrollWidth) {
+            this.scrollContDiv.scrollLeft = this.scrollContDiv.scrollLeft + this.space - this.listDiv01.scrollWidth
+        } else {
+            this.scrollContDiv.scrollLeft += this.space
+        };
+        this.accountPageIndex()
+    };
+    this.moveRight = function() {
+        if (this.scrollContDiv.scrollLeft - this.space <= 0) {
+            this.scrollContDiv.scrollLeft = this.listDiv01.scrollWidth + this.scrollContDiv.scrollLeft - this.space
+        } else {
+            this.scrollContDiv.scrollLeft -= this.space
+        };
+        this.accountPageIndex()
+    };
+    this.leftEnd = function() {
+        if (_state != "floating") {
+            return
+        };
+        _state = "stoping";
+        clearInterval(_scrollTimeObj);
+        var fill = this.pageWidth - this.scrollContDiv.scrollLeft % this.pageWidth;
+        this.move(fill)
+    };
+    this.rightEnd = function() {
+        if (_state != "floating") {
+            return
+        };
+        _state = "stoping";
+        clearInterval(_scrollTimeObj);
+        var fill = -this.scrollContDiv.scrollLeft % this.pageWidth;
+        this.move(fill)
+    };
+    this.move = function(num, quick) {
+        var thisMove = num / 5;
+        if (!quick) {
+            if (thisMove > this.space) {
+                thisMove = this.space
+            };
+            if (thisMove < -this.space) {
+                thisMove = -this.space
+            }
+        };
+        if (Math.abs(thisMove) < 1 && thisMove != 0) {
+            thisMove = thisMove >= 0 ? 1 : -1
+        } else {
+            thisMove = Math.round(thisMove)
+        };
+        var temp = this.scrollContDiv.scrollLeft + thisMove;
+        if (thisMove > 0) {
+            if (this.scrollContDiv.scrollLeft + thisMove >= this.listDiv01.scrollWidth) {
+                this.scrollContDiv.scrollLeft = this.scrollContDiv.scrollLeft + thisMove - this.listDiv01.scrollWidth
+            } else {
+                this.scrollContDiv.scrollLeft += thisMove
+            }
+        } else {
+            if (this.scrollContDiv.scrollLeft - thisMove <= 0) {
+                this.scrollContDiv.scrollLeft = this.listDiv01.scrollWidth + this.scrollContDiv.scrollLeft - thisMove
+            } else {
+                this.scrollContDiv.scrollLeft += thisMove
+            }
+        };
+        num -= thisMove;
+        if (Math.abs(num) == 0) {
+            _state = "ready";
+            if (this.autoPlay) {
+                this.play()
+            };
+            this.accountPageIndex();
+            return
+        } else {
+            this.accountPageIndex();
+            setTimeout("ScrollPic.childs[" + this.ID + "].move(" + num + "," + quick + ")", this.speed)
+        }
+    };
+    this.next = function() {
+        if (_state != "ready") {
+            return
+        };
+        _state = "stoping";
+        this.move(this.pageWidth, true)
+    };
+    this.play = function() {
+        if (!this.autoPlay) {
+            return
+        };
+        clearInterval(_autoTimeObj);
+        _autoTimeObj = setInterval("ScrollPic.childs[" + this.ID + "].next()", this.autoPlayTime * 1000)
+    };
+    this.stop = function() {
+        clearInterval(_autoTimeObj)
+    };
+    this.pageTo = function(num) {
+        if (_state != "ready") {
+            return
+        };
+        _state = "stoping";
+        var fill = num * this.frameWidth - this.scrollContDiv.scrollLeft;
+        this.move(fill, true)
+    };
+    this.accountPageIndex = function() {
+        this.pageIndex = Math.round(this.scrollContDiv.scrollLeft / this.frameWidth);
+        if (this.pageIndex > Math.round(this.listDiv01.offsetWidth / this.frameWidth + 0.4) - 1) {
+            this.pageIndex = 0
+        };
+        var i;
+        for (i = 0; i < this.dotObjArr.length; i++) {
+            if (i == this.pageIndex) {
+                this.dotObjArr[i].className = this.dotClassName
+            } else {
+                this.dotObjArr[i].className = this.dotOnClassName
+            }
+        }
+    }
+};
+
+var shopScroll = new ScrollPic();
+	shopScroll.scrollContId = "video_img_box"; //内容容器ID
+	shopScroll.arrLeftId = "video_right"; //左箭头ID
+	shopScroll.arrRightId = "video_left"; //右箭头ID
+	shopScroll.frameWidth = 624; //显示框宽度
+	shopScroll.pageWidth = 104; //翻页宽度
+	shopScroll.speed = 10; //移动速度(单位毫秒，越小越快)
+	shopScroll.space = 10.4; //每次移动像素(单位px，越大越快)
+	shopScroll.autoPlay = false; //自动播放
+	shopScroll.autoPlayTime = 3; //自动播放间隔时间(秒)
+	shopScroll.initialize(); //初始化
+
+var imga = document.getElementById("video_img_box").getElementsByTagName('a');
+	for (i = 0; i < imga.length; i++) {
+		imga[i].href = "javascript:setimg(" + i + ")";
+	}
+function setimg(id) {
+    for (i = 0; i < imga.length; i++) {
+        if (i == id) {
+            imga[i].className = "on";
+            document.getElementById("show_bigimg").src = imga[i].getElementsByTagName('img')[0].src.split(".jpg")[0] + "d.jpg";
+        } else {
+            imga[i].className = "";
+        }
+    }
+}
+</script>
+</body>
+</html>

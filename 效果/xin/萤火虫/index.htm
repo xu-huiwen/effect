@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GBK">
+		<title></title>
+		<style type="text/css">
+			body{height:1000px;background-color:#000;}
+			.canvas {position:fixed;top:0;left:0;width:100%!important;height:100%!important;z-index:2;}
+		</style>
+	</head>
+<body>
+<canvas id="canvas" class="canvas" width="1920" height="1122"></canvas>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.2.min.js"></script>
+<script src="js/particleCanvas.js"></script>
+<script type="text/javascript">
+ var cimi = {
+    init: function () {
+    //萤火虫效果
+    new particleCanvas("canvas",               [{"type":{"typeName":"image","url":"feather0.png"},"number":20,"op":{"min":0.2,"max":0.4},"size":{"min":20,"max":60},"speed":{"min":1,"max":1},"angle":{"value":30,"float":360},"rota":{"value":80,"speed":null,"floatValue":null,"floatSpeed":null},"reIn":"reverseDirection"}]);
+    }
+   };
+$(function () {
+    cimi.init();
+});
+</script>
+</body>
+</html>

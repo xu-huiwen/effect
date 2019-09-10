@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gb2312" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="author" content="Tencent-TGideas" />
+<meta name="robots" content="all" />
+<meta name="Copyright" content="Tencent" />
+<meta name="Description" content="《剑灵》官方网站。剑灵凭借完美的视觉表现力，电影版的剧情体验，深厚的东方文化底蕴，自由灵活的战斗体验，成为突破传统、引领潮流的最受期待网游。" />
+<meta name="Keywords" content="剑灵，剑灵官网，ncsoft，剑灵激活码，剑灵公测时间，剑灵测试，BNS，剑灵OL，剑灵职业，剑灵种族，剑灵视频，剑灵图片，剑灵新闻，刀魂，blade&soul，bladeandsoul,blade_soul,剑灵客户端下载，韩游，最期待网游" />
+<title>一路彤行-剑灵官方网站-腾讯游戏</title>
+<!--页面设计：cp | 页面制作:zorajiang | 创建:2017-10-20 | 团队博客：//tgideas.qq.com/-->
+<style>
+/*reset*/
+	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+	table{border-collapse:collapse;border-spacing:0;}
+	address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+	ol,ul{list-style:none;}
+	caption,th{text-align:left;}
+	h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+	q:before,q:after{content:'';}
+	fieldset,img,abbr,acronym{border:0;}
+
+/*footer*/
+	#footer_ied{text-align:center;font-size:12px;line-height:19px;min-width:1000px;color:#fff;background-color: #360da8}
+	.wrap_ied{margin:0 auto;padding:25px 30px;width:940px;}
+	.wrap_ied a{color:#fff;}
+	#footer_ied .e{font-size:10px;-webkit-text-size-adjust:none;}
+
+/*页面样式*/
+	.c:before,.c:after {content:"";display:table;}
+	.c:after {clear:both;}
+	.c {zoom:1;}
+	body {font:12px/1.5 '\5FAE\8F6F\96C5\9ED1';padding-top:42px;text-align:justify;}
+	a {text-decoration:none;overflow:hidden;}
+	a:hover {text-decoration:none;}
+	.wrap,#footer_ied {min-width:1000px;width:100%;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1002?'1000px':'');}
+	.wrap {background:url(ossweb-img/rp1.jpg) no-repeat 50% 0;min-width:1000px;}
+	.wrap1 {background:url(ossweb-img/rp2.jpg) no-repeat 50% 1277px;min-width:1000px;}
+	.container {width:1000px;margin:0 auto;}
+	.pr{position:relative;}
+	.pa{position:absolute;}
+	.hide {display:block;width:0;height:0;overflow:hidden;}
+	.db{display:block;text-indent:-999em;}
+	.fl{float:left;}
+	.fr{float:right;}
+	.c3{color:#669966;}
+	.wrap img{display: block;}
+	.nav a,.rborder,.btn-login,.btn,.one-ct,.fz,.tit,.ht-tit{font-family:Microsoft Yahei;}
+	.sp{background:url(ossweb-img/sp.png) no-repeat;}
+
+/* 通用头部  */
+	.spr{background: url(http://ossweb-img.qq.com/images/bns/act/a20131030repair/spr24.png) no-repeat;_background: url(http://ossweb-img.qq.com/images/bns/act/a20131030repair/spr8.png) no-repeat;}
+	.logo{height: 104px;width: 150px;top: 42px;left: 0;z-index: 10;}
+	.topbar{width: 100%;height: 48px;background-repeat: repeat-x;background-position: 0 -104px;overflow: hidden;}
+	.topnav{float: left;height: 30px;padding: 10px 0 0 130px;}
+	.topnav li{float: left;height: 30px;padding: 0 10px;line-height: 27px;background-position: -82px -154px;color: #fff;}
+	.topnav a{display: inline-block;zoom: 1;}
+	.topnav .wechat{font-family: '\5FAE\8F6F\96C5\9ED1', tahoma;font-size: 12px;color: #fff;}
+	.login{float: right;padding: 8px 25px 0 0;}
+	.login-btn{float: right;background-position: 0 -218px;width: 92px;height: 32px;padding-right: 15px;line-height: 30px;text-align: center;}
+	.login-btn:hover{color:#E82E0F;}
+	.logout{background-position: 0 -218px;width: 87px;padding-right: 20px;}
+	.login-text{float: right;color: #fff;font-family: '\5FAE\8F6F\96C5\9ED1', tahoma;font-size: 12px;padding: 8px 10px 0 14px;}
+	.icon-user{background-position: 0 -154px;width: 9px;height: 13px;overflow: hidden;left: 70px;top: 9px;}
+	.login-text .icon-user{left: 0;top: 9px;}
+	.icon-out{background-position: -10px -159px;width: 11px;height: 8px;overflow: hidden;left: 60px;top: 11px;}
+	.topnav li.rborder,.topnav li.rborder .wechat{color: #5b834e;}
+	.topnav li a{color: #fff;}
+	.topnav li a:hover{color:#E82E0F;}
+	.login a{color: #5b834e;}
+
+/* head */
+	.head{background:url(ossweb-img/hd.jpg) no-repeat 50% 0;height: 553px;}
+	.logo1{background: url(ossweb-img/logo.png) no-repeat;width: 183px;height: 61px;display: block;top: 60px;left: 24px;}
+	.btn-down{background-position: 0 0;width: 175px;height: 57px;display: block;top: 0;right: 0;color: #7425ec;font-size: 20px;font-weight: bold;text-align: center;line-height: 57px;}
+	.time{color: #fcff3d;font-size: 18px;text-align: center;left: -20px;width: 100%;line-height: 47px;top: 434px;}
+/* content */
+	.content{background:url(ossweb-img/ct.jpg) no-repeat 50% 0;height: 2244px;}
+/*par1*/
+    .par1{padding-top: 34px;}
+    .tit{color: #fcff3d;font-size: 40px;text-align: center;font-weight: bold;line-height: 46px;}
+    .tit-ct{color: #fff;font-size: 18px;text-align: center;line-height: 30px;}
+    .prop{margin: 65px 44px 0;}
+    .prop-l{width: 677px;float: left;}
+    .list-prop li{float: left;width: 150px;background: url(ossweb-img/prop-bg.png) no-repeat;height: 114px;display: block;margin-right: 25px;_margin-right: 25px;padding-top: 35px;}
+    .wrap .list-p{margin-right: 0;}
+    .list-prop li img{display: block;margin: 0 auto;}
+    .prop-ct{color: #4bffd3;font-size: 14px;text-align: center;line-height: 25px;padding-top: 35px;}
+    .prop-r{width: 181px;float: right;}
+    .btn-db{color: #4bffd3;font-size: 14px;text-align: center;text-decoration:underline;width: 180px;display: block;}
+    .txt{color: #fff;font-size: 12px;line-height: 20px;text-align: center;}
+    .btn-downx,.btn-lq{background-position: 0 -63px;width: 181px;height: 50px;display: block;margin: 0 auto;color: #914b08;font-size: 18px;text-align: center;line-height: 50px;font-weight: bold;margin: 5px auto 0;}
+    .switch{margin: 50px auto 0;background: url(ossweb-img/switch-bg.png) no-repeat;width: 989px;height: 64px;display: block;padding: 4px 5px;}
+    .switch a{width: 483px;height: 62px;display: block;text-align: center;line-height: 62px;color: #914b08;font-size: 24px;float: left;margin-right: 23px;_margin-right: 23px;background-position: 0 -195px;}
+    .switch a.on{background-position: 0 -125px;width: 483px;height: 62px;display: block;color: #fff;}
+    .txts{color: #fff;font-size: 18px;text-align: center;line-height: 25px;padding-top: 20px;}
+    .gift{margin-top: 35px;}
+    .gift-l{width: 320px;float: left;margin-right: 20px;}
+    .gift-t{width: 100%;text-align: center;}
+    .gift-t .xian{width: 80px;height: 2px;background-color: #fff;display: inline-block;*zoom: 1;*display: inline;margin-bottom: 6px;}
+    .gift-t span{display: inline-block;*zoom: 1;*display: inline;color: #fff;font-size: 20px;padding: 0 5px;}
+    .list-giftp{padding-top: 10px;}
+    .list-giftp li{background: url(ossweb-img/gift-bg.png) no-repeat;width: 99px;display: block;float: left;margin-right: 11px;_margin-right: 11px;padding: 10px 0 10px 0;}
+    .list-giftp li img{margin: 0 auto;}
+    .gift-ct{color: #4bffd3;font-size: 14px;text-align: center;line-height: 20px;padding-top: 18px;}
+    .xxin{height: 230px;background-color: #64d060;width: 1px;display: block;top: 45px;right: -10px;}
+    .btn-lq1{background-position: -184px -64px;width: 167px;height: 45px;display: block;color: #914b08;font-size: 18px;text-align: center;line-height: 45px;margin: 20px auto 0;font-weight: bold;}
+    .giftr{margin: 35px auto 0;width: 737px;}
+    .gift-l1{width: 330px;float: left;margin-right: 77px;}
+    .xxin1{height: 230px;background-color: #64d060;width: 1px;display: block;top: 45px;right: -35px;}
+    .list-s{margin-left: 56px!important;}
+/*par2*/
+    .par2{padding-top: 87px;}
+    .tit-ct a{color: #fff;text-decoration:underline;padding-left: 20px;}
+    .draw{margin-top:45px ;}
+    .draw-l{width: 488px;float: left;margin-right: 30px;}
+    .lottery {position: relative;width: 488px;height: 409px;}
+    .fnum{color: #914b08;font-size: 16px;width: 233px;line-height: 20px;top: 235px;left: 126px;text-align: center;}
+    .lot-ct{color: #4bffd3;font-size: 14px;text-align: center;line-height: 20px;top: 135px;left: 130px;}
+    .lot-ct a{color: #fcff3d;font-size: 14px;text-decoration:underline;padding-left: 20px;}
+    .list-dl{width: 233px;top: 160px;left: 130px;z-index: 999;}
+    .list-dl li{float: left;margin-right: 5px;}
+    .list-dl li .yuan{background-position: -263px -113px;width: 8px;height: 8px;display: block;float: left;margin-top: 5px;}
+    .list-dl li .yuan.on{background-position: -246px -113px;width: 8px;height: 8px;}
+    .list-dl li span{color: #fff;font-size: 13px;float: left;padding-left: 8px;}
+    .draw-r{width: 480px;float: left;}
+    .rule-tit{color: #4bffd3;font-size: 22px;font-weight: bold;line-height: 20px;}
+    .list-rule{margin-top: 15px;}
+    .list-rule li{color: #fff;font-size: 16px;line-height: 23px;}
+    .btn-downs{background-position: -178px 0;width: 211px;height: 58px;display: block;color: #914b08;text-align: center;line-height: 58px;font-size: 22px;font-weight: bold;margin: 13px 0 22px 0;}
+/*par3*/
+    .par3{padding-top: 83px;}
+    .list-gn{margin-top: 96px;}
+    .list-gn li{background: url(ossweb-img/gn-bg.png) no-repeat;width: 223px;height: 323px;display: block;margin-right: 34px;_margin-right: 34px;float: left;}
+    .num{background-position: -392px -9px;width: 104px;height: 74px;display: block;margin: -33px auto 0;color: #fff;font-size: 20px;text-align: center;line-height: 20px;padding-top: 30px;}
+    .gn-tit{color: #fff;font-size: 24px;text-align: center;font-weight: bold;line-height: 30px;padding-top: 15px;}
+    .show-pic{display: block;margin: 22px auto 0;}
+    .gn-ct{color: #4bdfd1;text-align: center;line-height: 20px;font-size: 18px;padding-top: 23px;}
+    .sc{width: 53px;height: 1px;background-color: #4bffd3;display: block;left: 85px;bottom: 45px;}
+</style>
+</head>
+<body>
+    <!--通用头部开始-->
+	<h1><a href="http://bns.qq.com" target="_blank" class="logo db pa spr" id="logo" title="点击打开剑灵官方网站">剑灵官方网站</a></h1>
+	<div class="topbar spr" id="topbar">
+	    <ul class="topnav">
+	        <li class="spr lborder"><a target="_blank" href="http://bns.qq.com">进入官网</a></li>
+	        <li class="spr"><a target="_blank" href="http://lz.bns.qq.com">灵值中心</a></li>
+	        <li class="spr"><a target="_blank" href="http://e.t.qq.com/bns">官方微博</a></li>
+	        <li class="rborder c1">微信号：<em class="wechat">LOVEBNS</em></li>
+	    </ul>
+	    <div class="login" id="unlogin">
+	        <a class="login-btn pr spr" href="javascript:LoginManager.login();">登录<span class="icon-user spr pa"></span></a>
+	    </div>
+	    <div class="login" id="logined" style="display:none;">
+	        <a class="login-btn logout pr spr" href="javascript:LoginManager.logout();">注销<span class="icon-out spr pa"></span></a>
+	        <p class="login-text pr"><span class="icon-user spr pa"></span><span id="login_qq_span">-</span>，欢迎您！</p>
+	    </div>
+	</div>
+	<!--通用头部结束-->
+	<!--内容开始-->
+	<div class="wrap">
+		<div class="wrap1">
+			<div class="container">
+		    	<div class="head pr">
+		            <h1 class="hide">一路彤行</h1>
+		            <a class="logo1 pa db" href="https://guanjia.qq.com/main.html?ADTAG=media.buy.baidu_xinxiliu3" title="电脑管家" target="_blank">电脑管家</a>
+		            <a class="btn-down pa sp" href="javascript:;" title="下载剑灵客户端">下载剑灵客户端</a>
+		            <p class="time pa">活动时间：2017年11月1日-12月31日</p>
+		        </div>
+			    <div class="content">
+					<div class="par1">
+						<h2 class="tit">登录管家 领专属礼包</h2>
+						<p class="tit-ct">在本页面下载新版电脑管家，安装并登录，即可获得管家专属游戏礼包一份，单Q限领一次。</p>
+						<div class="prop c">
+							<div class="prop-l">
+								<ul class="list-prop c">
+									<li>
+										<img src="ossweb-img/prop-pic1.jpg" width="73" height="73"/>
+										<p class="prop-ct">高级武魂神物×2</p>
+									</li>
+									<li>
+										<img src="ossweb-img/prop-pic2.jpg" width="73" height="73"/>
+										<p class="prop-ct">万年雪莲露×5</p>
+									</li>
+									<li>
+										<img src="ossweb-img/prop-pic3.jpg" width="73" height="73"/>
+										<p class="prop-ct">副本重置石板×1</p>
+									</li>
+									<li class="list-p">
+										<img src="ossweb-img/prop-pic4.jpg" width="73" height="73"/>
+										<p class="prop-ct">明朗（7天）×1</p>
+									</li>
+								</ul>
+							</div>
+							<div class="prop-r">
+								<a class="btn-db" href="javascript:;" title="点击绑定QQ管家">点击绑定QQ管家</a>
+								<p class="txt">请先QQ登录电脑管家后绑定电脑每台电脑仅可绑定一个QQ号码</p>
+								<a class="btn-downx sp" href="javascript:;" title="下载新版电脑管家">下载新版电脑管家</a>
+								<a class="btn-lq sp" href="javascript:;" title="立即领取">立即领取</a>
+							</div>
+						</div>
+					    <div class="switch c">
+					    	<a class="sp on" href="javascript:;">新玩家秒升55级</a>
+					    	<a class="list-p sp" href="javascript:;">老玩家回归豪礼</a>
+					    </div>
+					    <div class="switch-ct">
+					    	<p class="txts">活动期间，2017年11月1日起首次创建剑灵角色的玩家可以领取萌新招募礼，到达45级可领取冲级达人礼，<br />到达50级可领取勇战巅峰礼，每个QQ 限领一次。</p>
+					    	<div class="gift c">
+					    		<div class="gift-l pr">
+					    			<p class="gift-t"><em class="xian"></em><span>萌新招募礼</span><em class="xian"></em></p>
+					    			<ul class="list-giftp c">
+					    				<li>
+					    					<img src="ossweb-img/gift-pic1.jpg" width="74" height="72" />
+					    					<p class="gift-ct"> 黑色沙尘暴（30天）</p>
+					    				</li>
+					    				<li>
+					    					<img src="ossweb-img/gift-pic2.jpg" width="74" height="72" />
+					    					<p class="gift-ct"> 千年雪莲露<br/>×5</p>
+					    				</li>
+					    				<li class="list-p">
+					    					<img src="ossweb-img/gift-pic3.jpg" width="74" height="72" />
+					    					<p class="gift-ct">洪门四角金刚石×1</p>
+					    				</li>
+					    				<li>
+					    					<img src="ossweb-img/gift-pic4.jpg" width="74" height="72" />
+					    					<p class="gift-ct">金币聚灵阁空间扩展券×2</p>
+					    				</li>
+					    				<li>
+					    					<img src="ossweb-img/gift-pic5.jpg" width="74" height="72" />
+					    					<p class="gift-ct">舒筋活络汤<br/>×2</p>
+					    				</li>
+					    				<li class="list-p">
+					    					<img src="ossweb-img/gift-pic6.jpg" width="74" height="72" />
+					    					<p class="gift-ct">成长护符<br/>×1</p>
+					    				</li>
+					    			</ul>
+					    			<a class="btn-lq1 sp" href="javascript:;" title="1级领取">1级领取</a>
+					    			<em class="xxin pa"></em>
+					    		</div>
+					    		<div class="gift-l pr">
+					    			<p class="gift-t"><em class="xian"></em><span>冲级达人礼</span><em class="xian"></em></p>
+					    			<ul class="list-giftp c">
+					    				<li>
+					    					<img src="ossweb-img/gift-pic7.jpg" width="74" height="72" />
+					    					<p class="gift-ct">洪门六角金刚石×1</p>
+					    				</li>
+					    				<li>
+					    					<img src="ossweb-img/gift-pic8.jpg" width="74" height="72" />
+					    					<p class="gift-ct">猛攻的绍兴酒×5</p>
+					    				</li>
+					    				<li class="list-p">
+					    					<img src="ossweb-img/gift-pic9.jpg" width="74" height="72" />
+					    					<p class="gift-ct">初级试炼卷轴×1</p>
+					    				</li>
+					    				<li>
+					    					<img src="ossweb-img/gift-pic10.jpg" width="74" height="72" />
+					    					<p class="gift-ct">万年雪莲露×5</p>
+					    				</li>
+					    				<li>
+					    					<img src="ossweb-img/gift-pic11.jpg" width="74" height="72" />
+					    					<p class="gift-ct">暗蓝雨衣（30天）</p>
+					    				</li>
+					    				<li class="list-p">
+					    					<img src="ossweb-img/gift-pic12.jpg" width="74" height="72" />
+					    					<p class="gift-ct">暗蓝尾羽×1</p>
+					    				</li>
+					    			</ul>
+					    			<a class="btn-lq1 sp" href="javascript:;" title="45级领取">45级领取</a>
+					    			<em class="xxin pa"></em>
+					    		</div>
+					    		<div class="gift-l list-p">
+					    			<p class="gift-t"><em class="xian"></em><span>勇战巅峰礼</span><em class="xian"></em></p>
+					    			<ul class="list-giftp c">
+					    				<li>
+					    					<img src="ossweb-img/gift-pic13.jpg" width="74" height="72" />
+					    					<p class="gift-ct">优秀洪门成长护符×1</p>
+					    				</li>
+					    				<li>
+					    					<img src="ossweb-img/gift-pic14.jpg" width="74" height="72" />
+					    					<p class="gift-ct">鸿运×10</p>
+					    				</li>
+					    				<li class="list-p">
+					    					<img src="ossweb-img/gift-pic15.jpg" width="74" height="72" />
+					    					<p class="gift-ct">中级试炼卷轴×1</p>
+					    				</li>
+					    				<li>
+					    					<img src="ossweb-img/gift-pic16.jpg" width="74" height="72" />
+					    					<p class="gift-ct">破天八卦牌箱×1</p>
+					    				</li>
+					    				<li>
+					    					<img src="ossweb-img/gift-pic17.jpg" width="74" height="72" />
+					    					<p class="gift-ct">扣扣幻影石</p>
+					    				</li>
+					    				<li class="list-p">
+					    					<img src="ossweb-img/gift-pic18.jpg" width="74" height="72" />
+					    					<p class="gift-ct">期限制武器租借券×2</p>
+					    				</li>
+					    			</ul>
+					    			<a class="btn-lq1 sp" href="javascript:;" title="50级领取">50级领取</a>
+					    		</div>
+					    	</div>
+					    </div>
+					    <div class="switch-ct" style="display: none;">
+					    	<p class="txts">活动期间，2017年11月1日起首次创建剑灵角色的玩家可以领取萌新招募礼，到达45级可领取冲级达人礼，<br />到达50级可领取勇战巅峰礼，每个QQ 限领一次。</p>
+					    	<div class="giftr c">
+					    		<div class="gift-l1 pr">
+					    			<p class="gift-t"><em class="xian"></em><span>强力升级礼包</span><em class="xian"></em></p>
+					    			<ul class="list-giftp c">
+					    				<li>
+					    					<img src="ossweb-img/gift-pic19.jpg" width="74" height="72" />
+					    					<p class="gift-ct">继承者（7天）</p>
+					    				</li>
+					    				<li>
+					    					<img src="ossweb-img/gift-pic20.jpg" width="74" height="72" />
+					    					<p class="gift-ct">炽热成长护符×2</p>
+					    				</li>
+					    				<li class="list-p">
+					    					<img src="ossweb-img/gift-pic21.jpg" width="74" height="72" />
+					    					<p class="gift-ct">后起之秀礼物箱×2</p>
+					    				</li>
+					    				<li class="list-s">
+					    					<img src="ossweb-img/gift-pic22.jpg" width="74" height="72" />
+					    					<p class="gift-ct">聚灵阁空间扩展券×2</p>
+					    				</li>
+					    				<li>
+					    					<img src="ossweb-img/gift-pic23.jpg" width="74" height="72" />
+					    					<p class="gift-ct"> 九转还魂符（个人）×5</p>
+					    				</li>
+					    			</ul>
+					    			<a class="btn-lq1 sp" href="javascript:;" title="36级领取">36级领取</a>
+					    			<em class="xxin1 pa"></em>
+					    		</div>
+					    		<div class="gift-l1 list-p">
+					    			<p class="gift-t"><em class="xian"></em><span>全新挑战礼包</span><em class="xian"></em></p>
+					    			<ul class="list-giftp c">
+					    				<li>
+					    					<img src="ossweb-img/gift-pic24.jpg" width="74" height="72" />
+					    					<p class="gift-ct">继承者（30天）</p>
+					    				</li>
+					    				<li>
+					    					<img src="ossweb-img/gift-pic25.jpg" width="74" height="72" />
+					    					<p class="gift-ct">特殊洪门成长护符×1</p>
+					    				</li>
+					    				<li class="list-p">
+					    					<img src="ossweb-img/gift-pic26.jpg" width="74" height="72" />
+					    					<p class="gift-ct">破天八卦牌箱×1</p>
+					    				</li>
+					    				<li class="list-s">
+					    					<img src="ossweb-img/gift-pic27.jpg" width="74" height="72" />
+					    					<p class="gift-ct">期限制武器租借券×2</p>
+					    				</li>
+					    				<li>
+					    					<img src="ossweb-img/gift-pic28.jpg" width="74" height="72" />
+					    					<p class="gift-ct">中级试炼卷轴×1</p>
+					    				</li>
+					    			</ul>
+					    			<a class="btn-lq1 sp" href="javascript:;" title="50级领取">50级领取</a>
+					    		</div>
+					    	</div>
+					    </div>
+					</div>	
+					<div class="par2">
+						<h2 class="tit">管家达人 玩转大转盘</h2>
+						<p class="tit-ct">所有玩家可参与 <a href="javascript:;">抽奖记录</a></p>
+						<div class="draw c">
+							<div class="draw-l">
+								<div class="lottery" id="lotterycontent">
+									<img src="ossweb-img/flash.jpg" alt='奖品' width="488" height="409">
+									<p class="fnum pa">剩<em>XX</em>抽奖机会</p>
+									<p class="lot-ct pa">每次抽奖前<a href="javascript:;">点击此处获取抽奖机会</a></p>
+									<ul class="list-dl pa c">
+										<li class="c">
+											<em class="yuan sp on"></em>
+											<span>登录剑灵</span>
+										</li>
+										<li class="c">
+											<em class="yuan sp"></em>
+											<span>登录电脑管家</span>
+										</li>
+										<li class="c">
+											<em class="yuan sp"></em>
+											<span>使用管家游戏加速功能</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="draw-r">
+								<h3 class="rule-tit">转盘规则：</h3>
+								<ul class="list-rule ">
+									<li><span>1.当天登录剑灵+1</span></li>
+									<li><span>2.当天登录电脑管家+1</span></li>
+									<li><span>3.当天同本页面登录的QQ号使用管家游戏加速一键优化功能+1</span></li>
+									<li><span>4.所有获取转盘机会方法，单Q单日限一次，抽奖机会零点清零。</span></li>
+								</ul>
+								<a class="btn-downs sp" href="javascript:;" title="下载新版电脑管家">下载新版电脑管家</a>
+								<h3 class="rule-tit">TIPS:</h3>
+								<ul class="list-rule ">
+									<li><span>1.使用加速功能：建议使用IE浏览器，如使用其他浏览器， 可按照页面弹窗说明进行操作。在启动加速前，请把所有浏览器相关的勾选去掉</span></li>
+									<li><span>2.获取抽奖机会：如使用加速功能后无法获取抽奖机会，请在本页面下载管家后重新登录， 然后在页面上尝试再次获取可。</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="par3">
+						<h2 class="tit">管家四重功能 祝你畅玩剑灵</h2>
+						<ul class="list-gn c">
+							<li class="pr">
+								<em class="sp num">PART<br/>01</em>
+								<h3 class="gn-tit">启动加速</h3>
+								<img src="ossweb-img/show-pic1.png" width="166" height="74" class="show-pic"/>
+								<p class="gn-ct">节省30%以上时间<br />秒速开启游戏</p>
+								<em class="sc pa"></em>
+							</li>
+							<li class="pr">
+								<em class="sp num">PART<br/>02</em>
+								<h3 class="gn-tit">硬件检测</h3>
+								<img src="ossweb-img/show-pic2.png" width="166" height="74" class="show-pic"/>
+								<p class="gn-ct">释放电脑性能<br />游戏流畅加倍</p>
+								<em class="sc pa"></em>
+							</li>
+							<li class="pr">
+								<em class="sp num">PART<br/>03</em>
+								<h3 class="gn-tit">剑灵诊断</h3>
+								<img src="ossweb-img/show-pic3.png" width="166" height="74" class="show-pic"/>
+								<p class="gn-ct">专业游戏诊断报错<br />闪退、卡顿统统搞定</p>
+								<em class="sc pa"></em>
+							</li>
+							<li class="pr list-p">
+								<em class="sp num">PART<br/>04</em>
+								<h3 class="gn-tit">预约下载</h3>
+								<img src="ossweb-img/show-pic1.png" width="166" height="74" class="show-pic"/>
+								<p class="gn-ct">提前下载补丁<br />更新无需等待</p>
+								<em class="sc pa"></em>
+							</li>
+						</ul>
+					</div>
+		        </div>
+			</div>
+		</div>
+		
+	</div>
+	<!--内容结束-->
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/milo/milo.js"></script>
+<script src="//ossweb-img.qq.com/images/bns/title/bns.js"></script><!-- 页面顶部 自动生成html和css -->
+<script src="//ossweb-img.qq.com/images/js/foot.js"></script><!-- 页面底部 自动生成html -->
+<script src="//game.gtimg.cn/images/js/delottery/lottery.js"></script>
+<script>
+	//点击开始抽奖 通知js flash->js
+
+	//开始抽奖lottery->js
+	function callJsToStart() {
+		lottery.disable();
+		calllotteryToRoll(4);
+	}
+	//开发获得抽奖结果 通知lottery开始播放效果 js->lottery
+	function calllotteryToRoll(id) {
+		if (lottery) lottery.stopRoll(id);
+	}
+	//动画完成通知js lottery->js		
+	function callJsToComplete() {
+		alert('恭喜你获得大奖哟！！');
+	}
+
+	//初始化抽奖的 可以不知道内部
+	var lottery = new Lottery({
+		'lighturl': '//ossweb-img.qq.com/images/bns/cp/a20171020gj/sel.png',//外部光圈png 不填写就用默认的效果
+		'starturl': 'http://ossweb-img.qq.com/images/js/delottery/blankstartbtn.png', //外部按钮png 不填写就用默认的按钮效果
+		'width': 488,//lottery 宽度
+		'height': 409,//lottery 高度
+		'total': 10,//抽奖产品的总数
+		'sbtnx': 128,// 开始抽奖按钮的位置x坐标
+		'sbtny': 200,// 开始抽奖按钮的位置y坐标
+		'sbtnw': 233,// 开始抽奖按钮的宽度
+		'sbtnh': 64,// 开始抽奖按钮的高度
+		'boxw': 93,// 奖品光效的宽度
+		'boxh': 93,//奖品光效的高度 
+		'position': "2_2,133_2,264_2,394_2,394_140,394_278,264_278,133_278,2_278,2_140",
+		//奖品光效的位置，对应奖品图片的布局，填入每个奖品的位置以及角度用逗号分割 x_y 例如19_20或者19_20_0 表示第一个奖品的位置 x坐标为19px y坐标为20px 角度为0。）
+		'contentId': 'lotterycontent',//嵌入lottery 的div层的 id 
+		'onClickRollEvent': callJsToStart,//对应上面接口
+		'onCompleteRollEvent': callJsToComplete //对应上面接口
+	});
+</script>
+<script>
+ $(".list-dl li").each(function (i) {
+        $(this).click(function () {
+        	 $(this).find('.yuan').toggleClass( "on" );
+            $(this).siblings().children('.yuan').removeClass('on');
+        })
+   })
+//tab
+function swing(t,c){
+	$(t).each(function(i){
+		$(this).click(function(){
+			$(this).addClass('on').siblings().removeClass('on');
+			$(c).eq(i).show().siblings(c).hide();
+		})
+	})
+}
+swing('.switch a', '.switch-ct');
+milo.ready(function(){
+//登录js
+need("biz.login",function(LoginManager){
+    LoginManager.checkLogin(function(){
+        var unlogin = document.getElementById('unlogin');
+        var logined = document.getElementById('logined');
+        unlogin.style.display = 'none';
+        logined.style.display = 'block';
+        document.getElementById('login_qq_span').innerHTML=LoginManager.getUserUin();
+    	});
+	});
+});
+
+</script>
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script>
+//此段代码不能放到外链JS中，
+var setSite={ //设置网站属性
+ siteType:"a20171020gj", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+ pageType:"index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+ pageName:"一路彤行", //必填项:页面中文名
+ osact:0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+ ingame:0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+ stayTime:0 //选填项:是否需要统计停留时长boolean；默认是0
+}
+if(typeof(pgvMain)=='function')pgvMain();//千万不能忘记！
+</script>
+<script src="http://tajs.qq.com/stats?sId=22212170"></script><!--ta统计代码 -->
+</body>
+</html>

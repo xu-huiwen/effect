@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JS AS交互</title>
+<style>
+* {margin: 0;padding: 0;border: 0;}
+</style>
+</head>
+<body>
+<div id="flash"></div>
+<div id="flash2"></div>
+
+<script src="http://ossweb-img.qq.com/images/js/swfobject.js"></script>
+<script>
+//插入flash
+var params = {
+	scale: "noscale",
+	wmode: "transparent",
+	align: "middle",
+	allowFullscreen: "true",
+	allowScriptAccess: "always"
+}
+swfobject.embedSWF("flash.swf", "flash", 915, 791, "9.0.0", "http://ossweb-img.qq.com/images/swf/expressInstall.swf", null, params);
+swfobject.embedSWF("flash2.swf", "flash2", 928, 901, "9.0.0", "http://ossweb-img.qq.com/images/swf/expressInstall.swf", null, params);
+
+//获取flash
+function thisMovie(movieName) {
+	if (navigator.appName.indexOf("Microsoft") != -1) {
+		return window[movieName];
+	} else {
+		return document[movieName];
+	}
+}
+
+//由于flash在加载时需要时间，所以在flash加载完成后flash会调用页面中的函数，告知flash内部函数已经就绪。此时才可调用flash内部函数。如果直接调用则可能会报错。
+function swfIsReady() {
+	//设置祝福人数100
+	thisMovie("flash").setNum(10000000);
+
+	//设置小人位置
+	thisMovie("flash2").setPos(0);
+}
+
+// 大于等于start,小于end范围随机数
+function rnd(start, end){
+    return Math.floor(Math.random() * (end - start) + start);
+}
+function gotoPage(n) {
+	switch(n) {
+		case '1' :
+			thisMovie("flash2").setPos(rnd(1,24));
+			break;
+		case '2' :
+			thisMovie("flash").setNum(Math.random()*100);
+			break;
+		default:
+			alert(n);
+	}
+}
+</script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flip</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		.flip {width: 500px;height: 500px;text-align: center;line-height: 500px;font-family: Microsoft Yahei;font-size: 30px;border-radius: 5px;background-color: #ff0;margin: 0 auto}
+		#flipPad {width: 500px;margin: 0 auto}
+	</style>
+</head>
+<body>
+	<div class="flip" id="flipbox">这里是内容</div>
+	<div id="flipPad">
+		<a href="#" class="left" rel="rl" rev="#39AB3E" title="我变了 <em>真</em> 的变了！">左转</a>
+		<a href="#" class="top" rel="bt" rev="#B0EB17" title="亚美蝶">上转</a>
+		<a href="#" class="bottom" rel="tb" rev="#82BD2E" title="散会">下转</a>
+		<a href="#" class="right" rel="lr" rev="#C8D97E" title="好像没用的样子">右转</a>
+	</div>
+	<script src="jquery-1.4.4.min.js"></script>
+	<script src="jquery_ui_1.7.2.custom.min.js"></script>
+	<script src="jquery.flip.js"></script>
+	<script>
+		$("#flipPad a:not(.revert)").bind("click",function(){
+			var $this = $(this);
+			$("#flipbox").flip({
+				direction: $this.attr("rel"),
+				color: $this.attr("rev"),
+				content: $this.attr("title"),
+				onBefore: function(){$(".revert").show()}
+			})
+			return false;
+		});
+	</script>
+</body>
+</html>

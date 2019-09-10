@@ -1,0 +1,4 @@
+http://stackoverflow.com/questions/7588716/get-lightboxor-its-alternatives-to-dynamically-show-a-gallery-when-a-link-is-c
+
+
+动态dom后再次执行CB_Init();

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器</title>
+	<style>
+		/*Reset*/
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+		.c:before,.c:after{content:"";display:table}
+		.c:after{clear:both}
+		.c{zoom:1}
+
+		.list {width: 1000px;margin: 0 auto;}
+			.list li {float: left;width: 50px;height: 50px;background-color: #ccc;margin: 50px 10px 0 0}
+			.list .hover {background-color: #f00;}
+	</style>
+</head>
+<body>
+	<ul class="list c" id="list">
+		<li class="hover" data-idx="0"></li>
+		<li data-idx="1"></li>
+		<li data-idx="2"></li>
+		<li data-idx="3"></li>
+		<li data-idx="4"></li>
+	</ul>
+
+<script>
+	var chairs = (function() {
+		var exports = {},
+			lies, running;
+
+		function init() {
+			lies = document.getElementById('list').getElementsByTagName('li');
+			addEvent();
+			animate.start();
+		}
+
+		function addEvent() {
+			for (var i = 0, len = lies.length; i < len; i++) {
+				var li = lies[i];
+				li.onmouseover = liMouseover;
+				li.onmouseout = liMouseout;
+			}
+		}
+
+		function liMouseover() {
+			animate.stop();
+			this.className = 'hover';
+		}
+
+		function liMouseout() {
+			animate.start(this.getAttribute('data-idx'));
+		}
+
+
+		var animate = (function() {
+			var shutDown, currentIdx, timer = timer2 = 0;
+
+			function next() {
+				lies[currentIdx].className = ''
+				currentIdx++;
+				currentIdx %= 5;
+				lies[currentIdx].className = 'hover';
+				if (!shutDown) {
+					timer = setTimeout(function() {
+						next();
+					}, 2000);
+				}
+			}
+			return {
+				start: function(i) {
+					currentIdx = i || 0;
+					shutDown = false;
+					timer2 = setTimeout(function() {
+						next();
+					}, 2000);
+				},
+				stop: function() {
+					shutDown = true;
+					clearTimeout(timer);
+					clearTimeout(timer2);
+					for (var i = lies.length - 1; i >= 0; i--) {
+						lies[i].className = '';
+					};
+				}
+			}
+		})();
+		exports.init = init;
+		return exports;
+	})();
+	window.onload = function() {
+		chairs.init();
+	}
+</script>
+</body>
+</html>

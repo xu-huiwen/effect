@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif;line-height:22px;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{}
+#index .n1{background-position:0 -45px;}
+ol.regList{margin:0;padding:0;}
+ol.regList li{margin-left:40px;}
+
+.sns { list-style: none; padding: 5px;}
+	.sns_lst { float: left; padding: 0 5px 0 0;}
+		.sns_lnk { display: block; width: 16px; height: 16px; text-indent: -500px; overflow: hidden; cursor: pointer; background: url(http://ossweb-img.qq.com/images/js/sns/icons.png) no-repeat;}
+			.sns_weibo { background-position: 0 0;}
+			.sns_qzone { background-position: 0 -16px;}
+			.sns_xiaoyou { background-position: 0 -32px;}
+			.sns_kaixin { background-position: 0 -48px;}
+			.sns_renren { background-position: 0 -64px;}
+			.sns_baidu { background-position: 0 -80px;}
+			.sns_douban { background-position: 0 -96px;}
+			.sns_shuqian { background-position: 0 -112px;}
+			.sns_sina { background-position: 0 -128px;}
+			
+			
+</style>
+<title>SNS分享示例</title>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>SNS分享示例</h1>
+	</div>
+	<div id="main">
+		<h2>一、使用说明</h2>
+		<ol class="regList">
+			<li>在页面尾部，'/body'前调用：http://ossweb-img.qq.com/images/js/sns/sns.js?n=weibo,qzone,xiaoyou,kaixin,renren,baidu,douban,shuqian,sina；</li>
+			<li>页面中必须调用统计代码；</p>
+			<li>可根据实际情况加"appkey",调用格式为：http://ossweb-img.qq.com/images/js/sns/sns.js?n=weibo,qzone,xiaoyou,kaixin,renren,baidu,douban,shuqian,sina&key=4b618015079245628b25c42f8d71fac0，
+	其中：“4b618015079245628b25c42f8d71fac0”要替换为对应的appkey</li>
+		</ol>
+		<h2>二、实例演示</h2>
+		<div id="sns"></div>
+	</div>
+</div>
+<script src="http://pingjs.qq.com/ping_tcss_ied.js"></script>
+<script type="text/javascript" id="sns_lnks" src="http://ossweb-img.qq.com/images/js/sns/sns.js?n=weibo,qzone,xiaoyou,kaixin,renren,baidu,douban,shuqian,sina"></script>
+</body>
+</html>

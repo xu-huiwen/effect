@@ -1,0 +1,3 @@
+function doZoom(size) {
+    document.getElementById("news_cnt").style.fontSize = size + "px";
+  };

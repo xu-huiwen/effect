@@ -1,0 +1,67 @@
+/*----- css reset start ----- */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0}
+body, button, input, select, textarea { font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif}
+h1, h2, h3, h4, h5, h6 { font-size: 100%}
+em{ font-style: normal}
+ul, ol { list-style: none}
+a { text-decoration: none}
+a:hover { text-decoration: underline}
+fieldset, img { border: 0}
+button, input, select, textarea { font-size: 100%}
+table { border-collapse: collapse; border-spacing: 0}
+.clearfix:after {content:"."; display:block; height:0; clear:both; visibility:hidden}
+.clearfix{*zoom:1}
+.htxt{display: none}
+/*----- css reset end----- */
+body{padding-top: 42px;background: url(http://ossweb-img.qq.com/images/cf/cfpl/ms/index_b_bg.jpg) repeat-x 0px 100%;}
+.wrapper{background: url(http://ossweb-img.qq.com/images/cf/cfpl/index_t_bg.jpg) no-repeat 50% 0px;}
+.header{height: 544px;}
+.header, .main{width: 1000px; margin: 0px auto;}
+
+.quicklink{padding: 0px 0px 0px 641px; height: 32px;}
+.quicklink a{display: block;color:#b9b9b9; font-weight: bold;height: 32px; line-height: 30px; width: 80px; text-align: center; font-size: 14px;}
+.quicklink a:hover{color:#cb6e00; text-decoration: none}
+.quicklink li{float: left; padding-left: 36px}
+.share{ width: 80px; float: right; padding:11px 14px 0px 0px}
+.tmblog{margin-right: 15px}
+.share a{display: block; width: 25px; height: 24px; float: left; outline:none; text-indent: -9000em; outline:none;height: 24px}
+.top{height: 491px;}
+.menu a{height: 53px; line-height: 53px;display: block; text-align: center;  }
+.menu a:hover, .menu .active a{text-decoration: none; background: url(http://ossweb-img.qq.com/images/cf/cfpl/ms/nav_bg.jpg) repeat-x 0px 0px;border-left: 1px solid #0074a6;}
+
+.menu .end{width: 168px;}
+.menu li{float: left; width: 166px; }
+.menu a{border-right: 1px solid #312d2a; border-left: 1px solid #413e3b;color:#fdfdfd;}
+.nav{height: 53px; background: url(http://ossweb-img.qq.com/images/cf/cfpl/ms/nav_bg.jpg) repeat-x 0px -53px; position: relative; font-family:'Microsoft Yahei' }
+.menu{ font-size: 16px;font-weight: bold;}
+.submenuwrap{position: absolute; width: 166px; bottom:53px;  height: 0px; overflow: hidden;}
+*#subMenuList03 .filter{ height: 120px; } 
+#subMenuList01{left:498px;}
+#subMenuList02{left:664px}
+#subMenuList03{left:332px}
+.submenu{width: 166px; position: absolute;top:0px; right: 0px;}
+.submenu li{ height: 30px; line-height: 30px; float: left; width: 100%;}
+.submenu a{color:#B43615;_color:#fff; display: block;padding-left: 44px;}
+.submenu a:hover{}
+.filter{width: 166px; height: 90px; left:0px; top:0px; background-color: #018bd1;opacity:0.2;filter:alpha(opacity=20);}
+#menuListSel{position: relative;z-index:99}
+.go a span, .go span{background: url(http://ossweb-img.qq.com/images/cf/cfpl/ms/go.png) no-repeat 126px 14px; height: 53px; display: block;}
+.go a:hover  span, .go:hover span, .active .go span{background-position: 126px -61px; color:#FDFDFD}
+
+.other{width: 1000px; margin: 0px auto 50px;height: 100px; padding:12px 0px; margin-top: 15px; background: #eff6fa url(http://ossweb-img.qq.com/images/cf/cfpl/ms/service.jpg?d=0409) no-repeat 20px 50%; border: 1px solid #d0d8dc; }
+.other dl{padding-left: 230px; color:#7e7e7e; font-weight: bold; font-size: 14px;}
+.other dt{height: 100px; line-height: 100px; width: 70px; float: left; text-align: center; border-left: 1px dashed #0093dd; color:#0093dd}
+
+.other .gtv{  float: left;  padding-top: 20px; }
+
+.other img{vertical-align: middle; height:46px;}
+
+.other .media{padding-right: 0px; width: 498px; float: left;}
+.gtv{padding-right: 10px; width: 120px;}
+.media a{display: block; width: 117px; float: left;margin:5px 5px 0px 0px;_display:inline;height:46px;}
+
+/* footer */
+#footer_ied{text-align:center; font-size:12px; line-height:19px; background-color: #000}
+.wrap_ied{ margin:0 auto; padding:30px; width:800px; color:#8f8f8f}
+.wrap_ied a{color:#8f8f8f}
+#footer_ied p.e{font-size:10px;-webkit-text-size-adjust:none}/*  |xGv00|83ee74433c152085079ab7da0dbe4e69 */

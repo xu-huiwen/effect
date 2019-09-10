@@ -1,0 +1,512 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-CP" />
+<meta name="Description" content="御龙在天官方网站" />
+<meta name="Keywords" content="御龙在天" />
+<title>御龙在天-腾讯游戏公会-腾讯游戏</title>
+<link href="commen.css" type="text/css" rel="stylesheet" />
+<style type="text/css">
+a { color: #8C7D61;}
+.main{width:535px; float:left;}
+	.main_box{background-position:0 -400px; margin:0 0 15px 0;}
+		.main_title{padding:0 20px 0 12px; height:34px; line-height:34px; overflow:hidden;}
+			.title_name{background:none; float:left; font-family:"微软雅黑"; font-size:16px; font-weight:normal; color:#8c7d61;}
+			.main_more{color:#645d5d; font-family:"宋体"; font-size:12px; font-weight:normal; float:right;}
+			.sub_lnk { color: #FF8A00; font-size: 12px;font-weight: normal; float: right;padding:0 10px 0 0}
+			.main_more:hover{color:#645d5d; text-decoration:underline;}
+		.main_cnt{background-position:0 bottom; background:#2e2923;}
+	.news{}
+		.news_title{background-position: -835px 0;}
+		.news_box{height:140px; line-height:26px; color:#bf9e92; padding:7px 10px; overflow:hidden;}
+			.news_list{padding:0 10px; border-bottom:1px dotted #8a3b3b;}
+				.news_date{float:right; color:#684e31;}
+				.news_lnk{color:#928264; margin:0 5px 0 0;}
+				.news_lnk:hover{color:#d8c8ab; text-decoration:underline;}
+	.recmd{}
+		.recmd_title{background-position:-635px -9999px;}
+		.recmd_box{overflow:hidden; padding:8px 15px 10px 15px; _zoom:1;}
+			.recmd_list{width:125px; float:left; text-align:center; line-height:20px;}
+				.recmd_logo{width:100px; height:100px; overflow:hidden; display:block; border:1px solid #ac4c4a; margin:5px auto;}
+				.recmd_name{color:#8c7d61;}
+				.recmd_chn{color:#684e31;}
+	.sort{height:345px; background-position:0 -55px; margin:0 0 15px 0;}
+		.sort_title{background-position:-535px 0;}
+		.sort_box{padding:8px 10px;}
+			.sort_nav{width:98px; float:left;}
+				.sort_navlnk{width:89px; display:block; height:30px; color:#d7817f; line-height:30px; text-align:center; margin:0 0 8px 0;}
+				.sort_now{background-position:-535px -25px; color:#8c7d61;}
+			.sort_info{width:410px; float:left; border-collapse:collapse; border-spacing:0; empty-cells:show; margin-top:-2px;}
+				th,td{height:26px; border-collapse:collapse; text-align:center;}
+					th{font-weight:normal; color:#bf8b5e; height:32px;}
+					td{color:#8c7d61;}
+					.sort_info .icon1{color:#491908;}
+					.sort_info .icon2{color:#cc8e00;}
+	.ass{}
+		.ass_title{background-position:-735px 0;}
+		.ass_box{padding:20px 15px; overflow:hidden; position:relative; _zoom:1;}
+			.ass_logo{border:1px solid #ac4c4a; float:left; margin:0 15px 0 0;}
+			.ass_name{color:#e5d8b5; font-size:14px; line-height:24px;}
+				.ass_chn{color:#8c7d61; font-size:12px; font-weight:normal; padding:0 10px;}
+			.ass_intro{padding:8px 0 0 0; line-height:20px; color:#8c7d61;}
+			.ass_join{display:block; width:86px; height:30px; background-position:-625px -25px; position:absolute; top:20px; right:20px;}
+.side_right{width:220px; float:right;}
+	.sider_box{background-position:-915px -25px; margin:0 0 15px 0;}
+		.sider_title{padding:0px 12px; height:34px; line-height:34px; overflow:hidden; background:none; font-family:"微软雅黑"; font-size:16px; font-weight:normal; color:#8c7d61; margin-bottom:12px;}
+		.sider_cnt{background-position:-915px bottom;}
+	.gg{border:1px solid #040201; overflow:hidden; margin:0 0 15px 0;}
+		.gg_lnk{border:1px solid #2e2923; float:left;}
+	.view{}
+		.view_title{background-position:-1035px 0;}
+		.view_box{}
+			.view_pic{display:block; width:200px; height:100px; border:1px solid #1f3853; margin:10px auto;}
+			.view_info{color:#684e31; line-height:17px; padding:0 10px 10px 10px;}
+				.view_name{color:#d8c8ab; font-weight:normal;}
+				.view_pos{color:#8c7d61;}
+	.dyn{}
+		.dyn_title{background-position:-935px 0;}
+		.dyn_box{padding:0 10px;}
+			.dyn_list{color:#8c7d61; line-height:17px; border-bottom:1px dotted #645047; padding:10px;}
+				.dyn_date{display:block; color:#684e31;}
+</style>
+</head>
+<body id="index">
+<div class="banner shadow" id="banner">
+	<ul class="banner_box">
+		<li class="banner_left">
+			<h2 class="hidden">加入腾讯公会的三大优势</h2>
+			<ol>
+				<li>结交志同道合的朋友</li>
+				<li>参与活动，获得公会独有的丰富奖励</li>
+				<li>游戏激活码轻松拿</li>
+			</ol>
+		</li>
+		<li class="banner_right">
+			<h2 class="hidden">入驻腾讯公会的四大优势</h2>
+			<ol>
+				<li>年度明星公会评选，入驻终极荣誉殿堂</li>
+				<li>海量特权和激活码</li>
+				<li>最即时的官方活动通知和最丰富的活动奖励</li>
+				<li>实用的公会管理工具</li>
+			</ol>
+		</li>
+		<li><a href="#" class="banner_close spr" id="banner_close"><strong class="hidden">关闭</strong></a></li>
+	</ul>
+</div>
+<div class="wrap">
+<div class="header">
+	<h1 class="hidden">英雄联盟公会系统</h1>
+	<div class="nav">
+		<a href="index.shtml" class="nav_lnk lnk1 spr"><strong class="hidden">首页</strong></a>
+		<a href="news.shtml" class="nav_lnk lnk2 spr"><strong class="hidden">新闻公告</strong></a>
+		<a href="list.shtml" class="nav_lnk lnk3 spr"><strong class="hidden">公会列表</strong></a>
+		<a href="sort.shtml" class="nav_lnk lnk4 spr"><strong class="hidden">排行榜</strong></a>
+		<a href="recruit.shtml" class="nav_lnk lnk5 spr"><strong class="hidden">招聘信息</strong></a>
+	</div>
+	<div class="search">
+		<input class="search_input" />
+		<a href="search.shtml" class="search_submit"><strong class="hidden">搜索</strong></a>
+	</div>
+</div>
+<div class="content">
+	<div class="side_left">
+		<div class="log has_ass spr">
+			<p class="log_line">欢迎您，<strong class="str_person">miumiu</strong></p>
+			<p class="log_line">您是<strong class="str_ass">迪洛电竞AVA分会</strong>的会长/副会长/成员</p>
+			<p class="log_line"><a class="log_go" href="#"><strong class="hidden"></strong></a></p>
+			<ul class="ass_info">
+				<li>已入驻公会：<strong class="str_num">464654</strong>个</li>
+				<li>已加入公会：<strong class="str_num">464654</strong>个</li>
+			</ul>
+		</div>
+		<div class="log no_ass spr" style="display:none;">
+			<p class="log_line"><span class="str_unlogin">你尚未加入任何公会</span></p>
+			<p class="log_line"><a class="log_go" href="#"><strong class="hidden"></strong></a></p>
+			<p class="log_line"><a class="log_go" href="#"><strong class="hidden"></strong></a></p>
+			<ul class="ass_info">
+				<li>已入驻公会：<strong class="str_num">464654</strong>个</li>
+				<li>已加入公会：<strong class="str_num">464654</strong>个</li>
+			</ul>
+		</div>
+		<div class="help side_box spr">
+			<h2 class="side_title">帮助信息</h2>
+			<ul class="help_box">
+				<li><span class="side_dot">·</span><a href="#" class="help_lnk">哈哈哈哈哈</a></li>
+				<li><span class="side_dot">·</span><a href="#" class="help_lnk">哈哈哈哈哈</a></li>
+				<li><span class="side_dot">·</span><a href="#" class="help_lnk">哈哈哈哈哈</a></li>
+				<li><span class="side_dot">·</span><a href="#" class="help_lnk">哈哈哈哈哈</a></li>
+				<li><span class="side_dot">·</span><a href="#" class="help_lnk">哈哈哈哈哈</a></li>
+			</ul>
+		</div>
+		<div class="flink side_box spr">
+			<h2 class="side_title">友情链接</h2>
+			<ul>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+				<li class="flink_list"><img class="flink_img" src="http://ossweb-img.qq.com/images/lol/web201101/media_tencent.png" alt="" /><a class="flink_lnk" href="http://games.qq.com/tencent/lol/">腾讯游戏频道</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="main">
+		<div class="news main_box spr shadow">
+			<h2 class="main_title">
+				<span class="news_title title_name spr">新闻</span>
+				<a href="#" class="main_more">更多 &gt;</a>
+			</h2>
+			<ul class="news_box main_cnt spr">
+				<li class="news_list"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[公告]</a><a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈</a></li>
+				<li class="news_list"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[公告]</a><a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈</a></li>
+				<li class="news_list"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[公告]</a><a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈</a></li>
+				<li class="news_list"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[公告]</a><a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈</a></li>
+				<li class="news_list noborder"><span class="news_date">2011-01-31</span><a href="#" class="news_lnk">[公告]</a><a href="#" class="news_lnk">哈哈哈哈哈哈哈哈哈哈</a></li>
+			</ul>
+		</div>
+		<div class="recmd main_box spr shadow">
+			<h2 class="main_title">
+				<span class="recmd_title title_name spr">推荐公会</span>
+			</h2>
+			<ul class="recmd_box main_cnt spr">
+				<li class="recmd_list">
+					<a href="#" class="recmd_logo"><img src="img/pic.jpg" alt=""  /></a>
+					<a href="#" class="recmd_name">XXXXXXX</a>
+					<p class="recmd_chn">频道：34546</p>
+				</li>
+				<li class="recmd_list">
+					<a href="#" class="recmd_logo"><img src="img/pic.jpg" alt=""  /></a>
+					<a href="#" class="recmd_name">XXXXXXX</a>
+					<p class="recmd_chn">频道：34546</p>
+				</li>
+				<li class="recmd_list">
+					<a href="#" class="recmd_logo"><img src="img/pic.jpg" alt=""  /></a>
+					<a href="#" class="recmd_name">XXXXXXX</a>
+					<p class="recmd_chn">频道：34546</p>
+				</li>
+				<li class="recmd_list">
+					<a href="#" class="recmd_logo"><img src="img/pic.jpg" alt=""  /></a>
+					<a href="#" class="recmd_name">XXXXXXX</a>
+					<p class="recmd_chn">频道：34546</p>
+				</li>
+			</ul>
+		</div>
+		<div class="sort spr shadow" id="sort">
+			<h2 class="main_title">
+				<span class="sort_title title_name spr">排行榜</span>
+				<a href="#" class="main_more">更多信息 &gt;</a>
+			</h2>
+			<div class="sort_box">
+				<div class="sort_nav" id="sort_nav">
+					<a href="#sort_person" class="sort_navlnk sort_now spr">人数排名</a>
+					<a href="#sort_active" class="sort_navlnk">活跃排名</a>
+					<a href="#sort_honor" class="sort_navlnk">荣誉排名</a>
+				</div>
+				<table cellspacing="0" class="sort_info">
+					<thead>
+						<tr>
+							<th width="48">名次</th>
+							<th width="170">公会名</th>
+							<th width="72">人数</th>
+							<th width="120">会长</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="icon1">1</td>
+							<td><a href="#">11111111111111111</a></td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon1">2</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon1">3</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">4</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">5</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">6</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">7</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">8</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">9</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">10</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+					</tbody>
+				</table>
+				<table cellspacing="0" class="sort_info" style="display:none;">
+					<thead>
+						<tr>
+							<th width="48">名次</th>
+							<th width="170">公会名</th>
+							<th width="72">人数</th>
+							<th width="120">会长</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="icon1">1</td>
+							<td>22222222222222222</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon1">2</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon1">3</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">4</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">5</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">6</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">7</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">8</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">9</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">10</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+					</tbody>
+				</table>
+				<table cellspacing="0" class="sort_info" style="display:none;">
+					<thead>
+						<tr>
+							<th width="48">名次</th>
+							<th width="170">公会名</th>
+							<th width="72">人数</th>
+							<th width="120">会长</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="icon1">1</td>
+							<td>333333333333</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon1">2</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon1">3</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">4</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">5</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">6</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">7</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">8</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">9</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+						<tr>
+							<td class="icon2">10</td>
+							<td>哈哈哈哈啊哈哈哈哈哈哈</td>
+							<td>15646546</td>
+							<td>哈哈哈哈哈</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="ass main_box spr shadow">
+			<h2 class="main_title">
+				<span class="ass_title title_name spr">招兵买马</span>
+				<a href="#" class="main_more">更多</a>
+				<a href="javascript:void(0);" id="a_addrec" class="sub_lnk">发布信息</a>
+			</h2>
+			<div class="ass_box main_cnt spr">
+				<a href="#" class="ass_logo"><img src="img/pic.jpg" alt="" /></a>
+				<h3 class="ass_name">哈哈哈哈哈哈哈哈哈哈<span class="ass_chn">语音频道：456465416</span></h3>
+				<p class="ass_intro">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+				<a href="#" class="ass_join spr"><strong class="hidden">我要加入</strong></a>
+			</div>
+		</div>
+	</div>
+	<div class="side_right">
+		<div class="gg">
+			<a href="#" class="gg_lnk"><img src="img/pic.jpg" width="216" height="186" alt="" /></a>
+		</div>
+		<div class="view sider_box spr shadow">
+			<h2 class="sider_title">
+				<span class="view_title title_name spr">公会明星访谈</span>
+			</h2>
+			<div class="view_box sider_cnt spr">
+				<a href="#" class="view_pic"><img src="img/pic.jpg" width="200" height=" 100" alt="" /></a>
+				<ul class="view_info">
+					<li>本期明星：<strong class="view_name">哈哈哈哈</strong></li>
+					<li class="view_pos">哈哈哈哈啊哈 会长</li>
+				</ul>
+			</div>
+		</div>
+		<div class="dyn sider_box spr shadow">
+			<h2 class="sider_title">
+				<span class="dyn_title title_name spr">动态</span>
+			</h2>
+			<ul class="dyn_box sider_cnt spr">
+				<li class="dyn_list">哈啊啊啊啊啊啊啊啊啊<span class="dyn_date">18:30</span></li>
+				<li class="dyn_list">哈啊啊啊啊啊啊啊啊啊<span class="dyn_date">18:30</span></li>
+				<li class="dyn_list">哈啊啊啊啊啊啊啊啊啊<span class="dyn_date">18:30</span></li>
+				<li class="dyn_list">哈啊啊啊啊啊啊啊啊啊<span class="dyn_date">18:30</span></li>
+				<li class="dyn_list">哈啊啊啊啊啊啊啊啊啊<span class="dyn_date">18:30</span></li>
+				<li class="dyn_list">哈啊啊啊啊啊啊啊啊啊<span class="dyn_date">18:30</span></li>
+				<li class="dyn_list noborder">哈啊啊啊啊啊啊啊啊啊<span class="dyn_date">18:30</span></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="footer_box">
+		<a href="http://game.qq.com/" target="_blank" title="腾讯游戏" class="tg"><strong class="hidden">腾讯游戏</strong></a>
+		<div class="footer_detail">
+			<p><a class="footer_lnk" href="http://game.qq.com/portal2010/about.htm" target="_blank">关于腾讯游戏</a><span class="footer_div">|</span><a class="footer_lnk" href="http://www.qq.com/contract.shtml" target="_blank">服务条款</a><span class="footer_div">|</span><a class="footer_lnk" href="http://adver.qq.com/" target="_blank">广告服务</a><span class="footer_div">|</span><a class="footer_lnk" href="http://game.qq.com/hr/" target="_blank">腾讯游戏招聘</a><span class="footer_div">|</span><a class="footer_lnk" href="http://service.qq.com/" target="_blank">腾讯游戏客服</a><span class="footer_div">|</span><a class="footer_lnk" href="http://game.qq.com/portal2010/business.htm" target="_blank">商务合作</a><span class="footer_div">|</span><a class="footer_lnk" href="http://www.qq.com/map/" target="_blank">网站导航</a></p>
+			<p class="footer_small">COPYRIGHT &copy; 1998 – 2011 TENCENT. ALL RIGHTS RESERVED.</p>
+			<p class="footer_right"><a class="footer_lnk" href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank">腾讯公司版权所有</a></p>
+			<p class="footer_small">2011 Riot Games Inc. ALL RIGHTS RESERVED.</p>
+		</div>
+	</div>
+</div>
+</div>
+<script type="text/javascript" src="http://pingjs.qq.com/ping_tcss_ied.js"></script>
+<script type="text/javascript">
+if(typeof(pgvMain) == 'function') pgvMain();
+(function(){
+	var $=function(o){return document.getElementById(o);}
+	lnk=$("sort_nav").getElementsByTagName("a"),
+	table=$("sort").getElementsByTagName("table"),
+	now=0;
+	for(var i=0,len=lnk.length;i<len;i++){
+		lnk[i].count=i;
+		lnk[i].onmouseover=function(){
+			table[now].style.display="none";
+			lnk[now].className="sort_navlnk";
+			table[this.count].style.display="block";
+			lnk[this.count].className="sort_navlnk sort_now spr";
+			now=this.count;
+		};
+		lnk[i].onclick=function(){
+			return false;
+		};
+	};
+	$("banner_close").onclick=function(){
+		$("banner").style.display="none";
+		return false;
+	}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-CP" />
+<meta name="Description" content="腾讯游戏《穿越火线》下载官方网站。300万人同时在线，三亿鼠标的枪战梦想。《穿越火线》追求的不仅仅是开枪的爽快感，而是来自相互合作及默契带来的战略意义。最新活动尽在CF官方网站。" />
+<meta name="Keywords" content="穿越火线,穿越火线官网,穿越火线游戏下载,穿越火线下载,穿越火线官方下载,CF官网,CF下载,CF视频,穿越火线官方下载, CF官网下载专区,QQ穿越火线官方网站,穿越火线体验服,穿越火线视频,穿越火线官方网站,CrossFire,FPS网络游戏,RPK,腾讯游戏,免费,黄金AK,百城联赛,WCG,冠军杯,生化模式,幽灵模式,生化幽灵,斯沃特,赛斯,奥摩,猎狐者,保卫者,潜伏者,飞虎队" />
+<!-- 设计：cp  | 重构：cp | 创建：2014/2/28 | 更新：| 团队博客：http://tgideas.qq.com/ -->
+<title>五一大乐购-穿越火线官方网站-腾讯游戏</title>
+<style>
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+q:before,q:after{content:''}
+fieldset,img,abbr,acronym{border:0}
+
+/* footer */
+#footer_ied {text-align:center;font-size:12px;line-height:19px;color:#8f8f8f;background-color: #000000;}
+.wrap_ied {margin:0 auto;padding:30px;width:940px}
+.wrap_ied a {color:#8f8f8f;}
+#footer_ied .e {font-size:10px;-webkit-text-size-adjust:none;}
+
+/* 页面样式 */
+.c:before,.c:after {content:"";display:table;}
+.c:after {clear:both;}
+.c {zoom:1;}
+body {font-family:"\5FAE\8F6F\96C5\9ED1";font-size: 12px;padding-top:42px;}
+a {text-decoration:none;overflow:hidden;}
+a:hover {text-decoration:underline}
+:focus{outline: 0;}
+.wrap,.#footer_ied {width: 100%;min-width: 1000px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1002?'1000px':'');}
+.wrap {background:#24262e url(images/rp.jpg) no-repeat 50% 0;overflow: hidden;}
+.container {width:1000px;margin:0 auto;}
+.hide {display:block;width:0;height:0;overflow:hidden;}
+.pr {position:relative;}
+.pa {position:absolute;}
+.fl{float:left;_display:inline;}
+.fr{float:right;_display:inline;}
+.db {text-indent:-999em;}
+
+/* head */
+.head{background: url(images/head.jpg) no-repeat left top;height: 510px;}
+.logo{width: 159px;height: 46px;left: 59px;top: 10px;}
+.top-link {left:665px;top:0;width: 360px;height: 34px;}
+	.top-link .aw1{width: 90px;}
+	.top-link .aw2{width: 95px;}
+		.top-link a{color:#b9b9b9;font-size:14px;font-weight:bold;height:34px;display: block;line-height: 34px;padding-left: 26px;float: left;}
+		.top-link a:hover {text-decoration:none;}
+		.login{width: 600px;height: 35px;left: 0;top: 442px;line-height: 35px;color: #c0c0c0;}
+			.login a,.login strong{color: #ffe27e;}
+
+
+/*nav*/
+.main{widows: 100%;overflow:hidden;height:537px;background: url(images/nav-bg.jpg) no-repeat 50% 0;}
+	.test{height:537px;float:left;display: none;}
+	.c-show {display: block;}
+	.contr{width:1000px;margin:0 auto; position: relative;height: 537px;}
+
+	.wrapLeft{width: 100%;overflow:hidden;height:537px;}
+	.items{height:537px;position:absolute;}
+	.wid{width: 2520px;}
+	.menu{background:#000;width:50px;height:537px;display:inline-block;position: relative;z-index: 90;}
+		.menu a{width:50px;height:537px;display:block}
+	.panel{width:50px;height:537px;color:#fff;font-size:12px;line-height:16px;text-decoration: none;}
+
+	.current0,.current1,.current2,.current3,.current4,.current_on0,.current_on1,.current_on2,.current_on3,.current_on4,.current0:hover,.current1:hover,.current2:hover,.current3:hover,.current4:hover{
+	background: url(images/nav-sp.png) no-repeat;}
+.current0{background-position:-500px 0;}
+.current1{background-position:-550px 0;}
+.current2{background-position:-600px 0;}
+.current3{background-position:-650px 0;}
+.current4{background-position:-700px 0;}
+.current0:hover{background-position:0 0;}
+.current1:hover{background-position:-50px 0;}
+.current2:hover{background-position:-100px 0;}
+.current3:hover{background-position:-150px 0;}
+.current4:hover{background-position:-200px 0;}
+.current_on0{background-position:-250px 0;}
+.current_on1{background-position:-300px 0;}
+.current_on2{background-position:-350px 0;}
+.current_on3{background-position:-400px 0;}
+.current_on4{background-position:-450px 0;}
+.left,.right{width:29px;height:39px;display:block;top: 236px;left: 50%;background: url(images/btn-sp.png) no-repeat left top;position: absolute;}
+.left{margin-left:-529px;}
+.right{margin-left: 529px;background-position: -30px 0;}
+
+
+	.nav-tit{font-size: 26px;color: #e3e3e3;padding-left: 48px;height: 30px;line-height: 30px;}
+		.nav-tit em{color: #efc635;font-size: 20px;}
+	.goods{width: 1000px;height: 167px;overflow: hidden;}
+		.goods img{width: 763px;height: 167px;float: left;display: block;}
+		.goods .price{float: left;width: 237px;height: 467px;}
+			.price em{width: 50px;float: left;display: block;line-height: 20px;font-size: 14px;color: #b5a7a7;}
+			.price span{float: left;width: 187px;line-height: 20px;font-size: 14px;color: #edab09;}
+				.buy{width: 190px;height: 48px;background: url(images/djgm.png) no-repeat left top;float: left;margin-top: 10px;display: inline;}
+	.flash-box{height: 320px;}
+		.v-tab{margin-left: 47px;width: 477px;float: left;display: inline;height: 320px;}
+		.v-tab ul{width: 240px;height: 29px;margin-left: -1px;}
+		.v-tab ul li{width: 119px;height: 29px;float: left;margin-left: 1px;display: inline;}
+		.v-tab .tab-i{font-size: 15px;color: #0b0d10;text-align: center;line-height: 29px;background-color: #554729;cursor: pointer;}
+		.v-tab .on{background-color: #c48b12;}
+
+		.con-i{border: 10px solid #414141;width: 457px;height: 272px;}
+	.v-words{width: 396px;float: left;height: 200px;padding-left: 80px;padding-top: 20px;}
+		.v-words h3{width: 396px;height: 40px;line-height: 40px;color: #ebebeb;font-size: 30px;}
+		.v-words p{width: 396px;line-height: 24px;color: #d1d1d1;font-size: 14px;}
+		.v-words em{width: 87px;height: 24px;line-height: 24px;background-color: #550c10;text-align: center;display: block;font-size: 16px;color: #d4d4d4;margin-top: 30px;margin-bottom: 5px;}
+	/* content */
+	.content{padding: 34px 120px 54px 47px;width: 833px;}
+		.c-tit{height: 24px;line-height: 24px;width: 1000px;}
+			.c-tit em{background: url(images/sp.png) no-repeat left top;width: 22px;height: 21px;float: left;margin-left: 46px;display: inline;margin-top: 3px;}
+			.c-tit span{color: #f9f9f9;font-size: 24px;width: 927px;padding-left: 5px;display: block;float: left;}
+		.buy-get{width: 908px;height: 235px;border: 1px solid #14161a;margin-left: 46px;margin-top: 10px;background-color: #3b3e47;}
+			.buy-get .bg-tit{width: 908px;color: #ededed;font-size: 20px;height: 38px;line-height: 38px;background: url(images/tit-bg.jpg) repeat-x left top;text-align: center;}
+		.bg-ul{width: 908px;height: 147px;}
+		.bg-ul li{width: 181px;float: left;}
+		.bg-ul li img{display: block;}
+		.bg-ul li p{width: 181px;text-align: center;height: 20px;line-height: 20px;color: #c5c5c5;}
+		.djlq{background: url(images/dj-lq.jpg) no-repeat left top;width: 146px;height: 44px;display: block;margin-left: 384px;}
+		.c-mt1{margin-top: 35px;}
+	.flash{background: url(images/flash-cj.jpg) no-repeat left top;width: 908px;height: 357px;margin-left: 46px;margin-top: 10px;}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	<div class="container">
+	    <div class="head pr">
+	        <h1 class="hide">五一大乐购 英雄专场</h1>
+	        <a href="http://cf.qq.com/" title="穿越火线" class="logo db pa" target="_blank">穿越火线</a>
+	        <div class="top-link pa c">
+                <a href="http://cf.qq.com/web201105/download.shtml" target="_blank" class="aw1">下载游戏</a>
+                <a href="http://e.t.qq.com/cf" class="aw2">收听微博</a>
+                <a href="http://cf.qq.com/main.shtml" target="_blank" class="aw1">CF官网</a>
+            </div>
+            <div class="login pa">
+	            <p id="unlogin">你好,请<strong>【<a href="javascript:" id="dologin" title="登录">登录</a>】</strong></p>
+	            <p id="logined" style="display:none">欢迎您，<span id='login_qq_span'></span>，
+	            <strong>【<a href="javascript:;" id="dologout" class="c1">注销</a>】</strong>
+	            我的大区:<span></span>，
+	            <strong>【<a href="javascript:;">选择大区</a>】</strong>
+	            <strong>【<a href="javascript:;">我的礼包</a>】</strong>
+	            <strong>【<a href="javascript:;">查询战绩</a>】</strong>
+	            </p>
+	    	</div>
+	    </div>
+	</div>
+
+    <div class="main">
+		<div class="wrapLeft pr">
+			<div class="items" style="left:0px;">
+				<div class="wid c">
+					<div class="menu fl">
+						<a index="0" href="javascript:;" class="panel db on current0 current_on0" id="a0">4月10日 腾讯公司高级副总裁 马晓轶</a>
+					</div>
+					<div class="test c-show">
+				  		<div class="contr contr1">
+				    		<a href="###" class="left db">left</a>
+				    		<a href="###" class="right db">right</a>
+				    		<p class="nav-tit">英雄级武器——天龙<em>（永久）</em></p>
+				    		<div class="goods c">
+				    			<img src="images/tl.png" alt="天龙" width="763" height="167">
+				    			<div class="price">
+				    				<em>套装:</em><span>天龙<br/>价值xxx豪华赠礼<br/>8次抽奖</span>
+				    				<em>价格:</em><span>888Q币</span>
+				    				<a href="javascript:;" class="buy db" title="点击购买">点击购买</a>
+				    			</div>
+				    		</div>
+				    		<div class="flash-box c">
+				    			<div class="v-tab">
+				    				<ul id="tab0" class="c">
+										<li class="tab-i on">枪械CG</li>
+										<li class="tab-i">枪械测评</li>
+									</ul>
+									<div id="con0">
+										<div class="con-i">
+											<div id="video0"></div>
+										</div>
+										<div class="con-i" style="display: none;">
+											<div id="video1"></div>
+										</div>
+									</div>
+				    			</div>
+				    			<div class="v-words">
+				    				<h3>评测视频</h3>
+				    				<p>全新的永久AWM，枪身被一条飞翔的银龙缠绕，超大的弹夹及不错的切枪速度让使用者可以从容面对各种战场突发情况。适合团队竞技、爆破模式中使用。</p>
+				    				<em>武器特点</em>
+				    				<p>1、切枪速度快<br/>2、射击准确率高<br/>3、超大弹夹<br/>4、稀有特效外观</p>
+				    			</div>
+			    			</div>
+				  		</div>
+					</div>
+				</div>
+			</div>
+			<div class="items">
+				<div class="wid">
+					<div class="menu fl">
+						<a index="1" href="javascript:;" class="panel db current1" id="a1">4月12日 神秘嘉宾 敬请期待</a>
+					</div>
+					<div class="test">
+				  		<div class="contr contr2">
+				    		<a href="###" class="left db">left</a>
+				    		<a href="###" class="right db">right</a>
+				    		<p class="nav-tit">英雄级武器——天龙<em>（永久）</em></p>
+				    		<div class="goods c">
+				    			<img src="images/tl.png" alt="天龙" width="763" height="167">
+				    			<div class="price">
+				    				<em>套装:</em><span>天龙<br/>价值xxx豪华赠礼<br/>8次抽奖</span>
+				    				<em>价格:</em><span>888Q币</span>
+				    				<a href="javascript:;" class="buy db" title="点击购买">点击购买</a>
+				    			</div>
+				    		</div>
+				    		<div class="flash-box c">
+				    			<div class="v-tab">
+				    				<ul id="tab1" class="c">
+										<li class="tab-i on">枪械CG</li>
+										<li class="tab-i">枪械测评</li>
+									</ul>
+									<div id="con1">
+										<div class="con-i">
+											<div id="video2"></div>
+										</div>
+										<div class="con-i" style="display: none;">
+											<div id="video3"></div>
+										</div>
+									</div>
+				    			</div>
+				    			<div class="v-words">
+				    				<h3>评测视频</h3>
+				    				<p>全新的永久AWM，枪身被一条飞翔的银龙缠绕，超大的弹夹及不错的切枪速度让使用者可以从容面对各种战场突发情况。适合团队竞技、爆破模式中使用。</p>
+				    				<em>武器特点</em>
+				    				<p>1、切枪速度快<br/>2、射击准确率高<br/>3、超大弹夹<br/>4、稀有特效外观</p>
+				    			</div>
+			    			</div>
+				  		</div>
+					</div>
+				</div>
+			</div>
+			<div class="items">
+				<div class="wid">
+					<div class="menu fl">
+						<a index="2" href="javascript:;" class="panel db current2" id="a2">4月14日 神秘嘉宾 敬请期待</a>
+					</div>
+					<div class="test">
+				  		<div class="contr contr3">
+				    		<a href="###" class="left db">left</a>
+				    		<a href="###" class="right db">right</a>
+				    		<p class="nav-tit">英雄级武器——天龙<em>（永久）</em></p>
+				    		<div class="goods c">
+				    			<img src="images/tl.png" alt="天龙" width="763" height="167">
+				    			<div class="price">
+				    				<em>套装:</em><span>天龙<br/>价值xxx豪华赠礼<br/>8次抽奖</span>
+				    				<em>价格:</em><span>888Q币</span>
+				    				<a href="javascript:;" class="buy db" title="点击购买">点击购买</a>
+				    			</div>
+				    		</div>
+				    		<div class="flash-box c">
+				    			<div class="v-tab">
+				    				<ul id="tab2" class="c">
+										<li class="tab-i on">枪械CG</li>
+										<li class="tab-i">枪械测评</li>
+									</ul>
+									<div id="con2">
+										<div class="con-i">
+											<div id="video4"></div>
+										</div>
+										<div class="con-i" style="display: none;">
+											<div id="video5"></div>
+										</div>
+									</div>
+				    			</div>
+				    			<div class="v-words">
+				    				<h3>评测视频</h3>
+				    				<p>全新的永久AWM，枪身被一条飞翔的银龙缠绕，超大的弹夹及不错的切枪速度让使用者可以从容面对各种战场突发情况。适合团队竞技、爆破模式中使用。</p>
+				    				<em>武器特点</em>
+				    				<p>1、切枪速度快<br/>2、射击准确率高<br/>3、超大弹夹<br/>4、稀有特效外观</p>
+				    			</div>
+			    			</div>
+				  		</div>
+					</div>
+				</div>
+			</div>
+			<div class="items">
+				<div class="wid">
+					<div class="menu fl">
+						<a index="3"  href="javascript:;" class="panel db current3"  id="a3">4月14日 神秘嘉宾 敬请期待</a>
+					</div>
+					<div class="test">
+				  		<div class="contr contr4">
+				    		<a href="###" class="left db">left</a>
+				    		<a href="###" class="right db">right</a>
+				    		<p class="nav-tit">英雄级武器——天龙<em>（永久）</em></p>
+				    		<div class="goods c">
+				    			<img src="images/tl.png" alt="天龙" width="763" height="167">
+				    			<div class="price">
+				    				<em>套装:</em><span>天龙<br/>价值xxx豪华赠礼<br/>8次抽奖</span>
+				    				<em>价格:</em><span>888Q币</span>
+				    				<a href="javascript:;" class="buy db" title="点击购买">点击购买</a>
+				    			</div>
+				    		</div>
+				    		<div class="flash-box c">
+				    			<div class="v-tab">
+				    				<ul id="tab3" class="c">
+										<li class="tab-i on">枪械CG</li>
+										<li class="tab-i">枪械测评</li>
+									</ul>
+									<div id="con3">
+										<div class="con-i">
+											<div id="video6"></div>
+										</div>
+										<div class="con-i" style="display: none;">
+											<div id="video7"></div>
+										</div>
+									</div>
+				    			</div>
+				    			<div class="v-words">
+				    				<h3>评测视频</h3>
+				    				<p>全新的永久AWM，枪身被一条飞翔的银龙缠绕，超大的弹夹及不错的切枪速度让使用者可以从容面对各种战场突发情况。适合团队竞技、爆破模式中使用。</p>
+				    				<em>武器特点</em>
+				    				<p>1、切枪速度快<br/>2、射击准确率高<br/>3、超大弹夹<br/>4、稀有特效外观</p>
+				    			</div>
+			    			</div>
+				  		</div>
+					</div>
+				</div>
+			</div>
+			<div class="items">
+				<div class="wid">
+					<div class="menu fl">
+						<a index="4"  href="javascript:;" class="panel db current4"  id="a4">4月14日 神秘嘉宾 敬请期待</a>
+					</div>
+					<div class="test">
+				  		<div class="contr contr5">
+				    		<a href="###" class="left db">left</a>
+				    		<a href="###" class="right db">right</a>
+				    		<p class="nav-tit">英雄级武器——天龙<em>（永久）</em></p>
+				    		<div class="goods c">
+				    			<img src="images/tl.png" alt="天龙" width="763" height="167">
+				    			<div class="price">
+				    				<em>套装:</em><span>天龙<br/>价值xxx豪华赠礼<br/>8次抽奖</span>
+				    				<em>价格:</em><span>888Q币</span>
+				    				<a href="javascript:;" class="buy db" title="点击购买">点击购买</a>
+				    			</div>
+				    		</div>
+				    		<div class="flash-box c">
+				    			<div class="v-tab">
+				    				<ul id="tab4" class="c">
+										<li class="tab-i on">枪械CG</li>
+										<li class="tab-i">枪械测评</li>
+									</ul>
+									<div id="con4">
+										<div class="con-i">
+											<div id="video8"></div>
+										</div>
+										<div class="con-i" style="display: none;">
+											<div id="video9"></div>
+										</div>
+									</div>
+				    			</div>
+				    			<div class="v-words">
+				    				<h3>评测视频</h3>
+				    				<p>全新的永久AWM，枪身被一条飞翔的银龙缠绕，超大的弹夹及不错的切枪速度让使用者可以从容面对各种战场突发情况。适合团队竞技、爆破模式中使用。</p>
+				    				<em>武器特点</em>
+				    				<p>1、切枪速度快<br/>2、射击准确率高<br/>3、超大弹夹<br/>4、稀有特效外观</p>
+				    			</div>
+			    			</div>
+				  		</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+	    <div class="content">
+	    	<h2 class="c-tit c"><em class="db">>></em><span>买即送</span></h2>
+	    	<div class="buy-get pr">
+	    		<p class="bg-tit">价值xxxxQB，买即得</p>
+	    		<ul class="bg-ul c">
+	    			<li>
+	    				<img src="" alt="">
+	    				<p></p>
+	    			</li>
+	    			<li>
+	    				<img src="" alt="">
+	    				<p></p>
+	    			</li>
+	    			<li>
+	    				<img src="" alt="">
+	    				<p></p>
+	    			</li>
+	    			<li>
+	    				<img src="" alt="">
+	    				<p></p>
+	    			</li>
+	    			<li>
+	    				<img src="" alt="">
+	    				<p></p>
+	    			</li>
+	    		</ul>
+	    		<a href="javascript:;" class="djlq db" title="点击领取">点击领取</a>
+	    	</div>
+	    	<h2 class="c-tit c-mt1 c"><em class="db">>></em><span>买即抽</span></h2>
+	    	<div class="flash"><div id="swfcontent"></div></div>
+	    </div>
+	</div>
+</div>
+<script src="http://yl2.qq.com/jquery-1.3.2.min.js"></script>
+<script src="http://qzs.qq.com/tencentvideo_v1/js/tvp/tvp.player.js" charset="utf-8"></script>
+<script>
+    $(function() {
+        var pageWidth = $(window).width();
+        var pageList = $('.items');
+        var pageLen = pageList.length;
+        var curIndex = 0;
+
+        $('.test').each(function(i, e) {
+            $(e).css({
+                width: pageWidth - 250,
+                height: 537
+            })
+        })
+        function change(index) {
+            pageWidth = $(window).width();
+            var curPage = $(pageList[index]);
+            curPage.animate({
+                left: index * 50
+            }, 600);
+            if (curIndex < index) {
+                pageList.each(function(i, v) {
+                    if (i < index) {
+                        $(v).animate({
+                            left: i * 50
+                        }, 600)
+                    }
+                })
+            } else {
+                pageList.each(function(i, v) {
+                    if (i > index) {
+                        $(v).animate({
+                            left: pageWidth - (pageLen - i) * 50
+                        }, 600)
+                    }
+                })
+            }
+        }
+        function playTo(index) {
+            change(index);
+            curIndex = index;
+            $('.panel').each(function(i,e) {
+            	$(e).removeClass('on current_on'+i);
+            });
+            $('.panel:eq('+index+')').addClass('on current_on'+index);
+            $('.test').removeClass('c-show');
+            $('.test:eq('+index+')').addClass('c-show');
+            setTab(index);
+            $('.c-show .tab-i:eq(0)').click();
+        }
+
+        $(".panel").click(function() {
+        	pageWidth = $(window).width();
+            var index = parseInt($(this).attr('index'));
+            playTo(index);
+
+        })
+        $(".left").click(function() {
+            pageWidth = $(window).width();
+            if (curIndex - 1 < 0) {
+                alert("已经是第一张了！");
+                return false
+            }
+            playTo(curIndex - 1);
+        })
+        $(".right").click(function() {
+            pageWidth = $(window).width();
+            if (curIndex + 1 > 4) {
+                alert("已经是最后一张了！");
+                return false
+            }
+            playTo(curIndex + 1);
+
+        })
+        $(window).bind('load',function() {
+            pageWidth = $(window).width();
+            $('.items').each(function(i, e) {
+                $(e).css({
+                    left: pageWidth - 50 * (pageLen - i),
+                    width: pageWidth
+                });
+                $('.items:eq(0)').css({
+                    left: 0,
+                    width: pageWidth
+                })
+            })
+        })
+        $(window).bind('resize', function() {
+            var pageWidth = $(window).width();
+            var curOn = $('.menu .on').attr('index');
+            change(curOn);
+            $(".test").css({
+                width: pageWidth - 250,
+                height: 537
+            });
+        })
+    });
+    </script>
+    <!-- 标签切换视频 -->
+<script>
+	// 根据ID获取元素
+	function gE(e) {
+	    return (typeof (e) == "object") ? e : document.getElementById(e)
+	}
+
+	// 根据标签获取元素
+	function gTag(o,t) {
+		return o.getElementsByTagName(t)
+	}
+
+	// 判断是否有类
+	function hasClass(o,c) {
+		var regexp = new RegExp("(^|\\s)" + c + "(\\s|$)", "g");
+	    return regexp.test(o.className)
+	}
+
+	//根据类名获取元素
+	function gClass(o,c) {
+		var e = [],
+	       t = gTag(o, "*");
+	   for (var i = 0; i < t.length; i++) {
+	       if (hasClass(t[i], c)) {
+	           e[e.length] = t[i]
+	       }
+	   }
+	   return e
+	}
+
+	//播放视频
+	function playVideo(vid,i,auto) {
+		var video = new tvp.VideoInfo();
+		video.setVid(vid);
+		var player = new tvp.Player('457', '272');
+		player.setCurVideo(video);
+		player.addParam("autoplay",auto);
+		player.addParam("wmode","opaque");
+		player.addParam("flashskin", "http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf");
+		player.write("video"+i);
+	}
+
+	//清除视频
+	function clearVideo(i) {
+	    var v = gE("video"+i);
+	    if (v) {
+	        v.innerHTML = "";
+	    }
+	}
+	function clearAll() {
+		for (var i = 0; i < 10; i++) {
+			clearVideo(i)
+		};
+	}
+
+	function setTab(ch) {
+	    var tabs = gClass(gE('tab'+ch),"tab-i");
+	    var cons = gClass(gE('con'+ch),"con-i");
+	    var vid = ["x01047s4j2i","e010401srvz","e0014ulloi8","s0014kwqn0q","e0014ulloi8","s0014kwqn0q","e0014ulloi8","s0014kwqn0q","e0014ulloi8","s0014kwqn0q"];
+	    var nm;
+	    if(ch==0){nm=0}
+	    if(ch==1){nm=2;}
+	    if(ch==2){nm=4;}
+	    if(ch==3){nm=6;}
+	    if(ch==4){nm=8;}
+	    for (var i = 0; i < tabs.length; i++) {
+	        tabs[i].n = i;
+	        tabs[i].onclick = function () {
+	        	var tab = tabs[this.n];
+	            if (!hasClass(tab+ch,'on')) {
+	                for (var j = 0; j < cons.length; j++) {
+	                    cons[j].style.display = "none";
+	                    tabs[j].className = tabs[j].className.replace(RegExp("(^|\\s)" + 'on' + "(\\s|$)", "g"), "");
+	                    clearAll();
+	                }
+	                playVideo(vid[this.n+nm], this.n+nm, '1');
+	                this.className += (this.className ? " " : "") + 'on';
+	                cons[this.n].style.display = "block";
+	            }
+
+	        }
+	    }
+	};
+	playVideo('o0101a4o6bn', '0', '0');
+</script>
+
+</body>
+</html>

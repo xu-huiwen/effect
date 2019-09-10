@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>切换选中状态</title>
+	<style>
+		/* reset */
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+		table{border-collapse:collapse;border-spacing:0;}
+		address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+		ol,ul{list-style:none;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		q:before,q:after{content:'';}
+		fieldset,img,abbr,acronym{border:0;}
+
+		.c:before,.c:after {content:"";display:table}
+		.c:after {clear:both}
+		.c {zoom:1}
+		
+		.list {width: 1000px;margin: 0 auto;}
+			.list li {float: left;width: 50px;height: 50px;background-color: #ccc;}
+			.on0 {background-color: #000 !important;}
+			.on1 {background-color: #f00 !important;}
+			.on2 {background-color: #0f0 !important;}
+			.on3 {background-color: #00f !important;}
+			.on4 {background-color: #0ff !important;}
+			.on5 {background-color: #f0f !important;}
+	</style>
+</head>
+<body>
+	<ul class="list c" id="list">
+		<li class="l-i1"></li>
+		<li class="l-i2"></li>
+		<li class="l-i3"></li>
+		<li class="l-i4"></li>
+		<li class="l-i5"></li>
+	</ul>
+
+	<script>
+		var item = document.getElementById('list').getElementsByTagName('li');
+
+		for (var i = 0; i < item.length; i++) {
+			item[i]._index = i;
+			item[i].onmouseover = function() {
+				change(this);
+			}
+			item[i].onmouseout = function() {
+				this.className = this.className.replace(new RegExp("\\b" + "on"+ this._index + "\\b\\s*", "g"), "");
+			}
+		}
+
+
+		function change(obj) {
+			for (var o = 0; o < item.length; o++) {
+				if (item[o] == obj) {
+					item[o].className += " " + "on"+o;
+				} else {
+					item[o].className = item[o].className.replace(new RegExp("\\b" + "on"+o + "\\b\\s*", "g"), "");
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS3菜单</title>
+<style>
+    /*reset*/
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+    table{border-collapse:collapse;border-spacing:0}
+    fieldset,img{border:0}
+    address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+    ol,ul{list-style:none}
+    caption,th{text-align:left}
+    h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+    q:before,q:after{content:''}
+    abbr,acronym{border:0;font-variant:normal}
+    sup{vertical-align:text-top}
+    sub{vertical-align:text-bottom}
+    input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
+    input,textarea,select{*font-size:100%}
+
+    body{background-color: #000;}
+    .menu li{width: 169px;height: 53px;margin-top: 2px;}
+    .menu span{
+        width:0;
+        left:0px;
+        padding:0;
+        position:absolute;
+        overflow:hidden;line-height: 52px;
+        /* CSS3 Transition: */
+        -webkit-transition: 0.25s;
+        -moz-transition: 0.25s;
+        transition: 0.25s;text-indent: -9999px;
+    }
+
+    .menu a{background:url(images/nav_bj.jpg) no-repeat;width: 169px;height: 53px;display:block;position:relative;}
+    .menu a:hover span{ width:auto; padding:0 90px;overflow:visible; }
+    /*  */
+    .menu .home { background-position: 0 -2px;}
+    .menu .home span{background:url(images/nav_bj.jpg) no-repeat -169px -2px;}
+    /*  */
+    .menu .about { background-position:0 -57px;;}
+    .menu .about span{background:url(images/nav_bj.jpg) no-repeat -169px -57px;}
+    /*  */
+    .menu .services { background-position: 0 -112px;}
+    .menu .services span{background:url(images/nav_bj.jpg) no-repeat -169px -112px;}
+    /*  */
+    .menu .portfolio { background-position:0 -167px;}
+    .menu .portfolio span{background:url(images/nav_bj.jpg) no-repeat -169px -167px;}
+    /*  */
+    .menu .join { background-position:0 -222px;;}
+    .menu .join span{background:url(images/nav_bj.jpg) no-repeat -169px -222px;}
+     /*  */
+    .menu .contact { background-position:0 -277px;;}
+    .menu .contact span{background:url(images/nav_bj.jpg) no-repeat -169px -277px;}
+
+    #main{margin:80px auto;position:relative;width:40px;}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div id="main">
+    <ul class="menu">
+        <li>
+    	    <a class="home" href="#">
+                <span>首页</span>
+            </a>
+        </li>
+        
+         <li>
+        	<a class="about" href="#">
+                <span>关于我们</span>
+            </a>
+        </li>
+        
+        <li>
+    	     <a class="services" href="#">
+                <span>服务范围</span>
+             </a>
+        </li>
+        
+        <li>
+        	<a class="portfolio" href="#">
+                <span>经典案例</span>
+            </a>
+        </li>
+        
+        <li>
+        	<a class="join" href="#">
+                <span>加入我们</span>
+            </a>
+        </li>
+        <li>
+            <a class="contact" href="#">
+                <span>联系我们</span>
+            </a>
+        </li>
+    </ul>
+    
+</div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gbk">
+<title>jQuery放大镜效果Demo-jq22.com</title>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<style>
+	.imgbox {position:relative;margin-left:100px;}
+	.probox {width:300px;height:300px;border:1px solid #000;}
+	.probox img {width:300px;height:300px;vertical-align:top;}
+	.showbox {display:none;position:absolute;left:403px;top:0;width:400px;height:300px;overflow:hidden;border:1px solid #ccc;}
+	.showbox img {position:absolute;height:1200px;width:1200px;}
+	.hoverbox {display:none;position:absolute;top:0;background:#09f;border:1px solid #09f;height:75px;width:100px;cursor:move;z-index:10;opacity: .3;}
+</style>
+</head>
+<body>
+<div class="imgbox">
+    <div class="probox">
+        <img src="image/img01.jpg" alt="" />
+        <div class="hoverbox"></div>
+    </div>
+    <div class="showbox">
+        <img src="image/img01.jpg" alt="" />
+    </div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+<script>
+	function hovermove(probox,hoverbox,x,y,offL,offT,w,h,showbox){
+		var moveX=x-offL-w/2;
+		var moveY=y-offT-h/2;
+		console.log(moveX,moveY);
+		//设置区域范围
+		if(moveX<0){
+			moveX=0;
+		}
+		if(moveX>probox.width()-w){
+			moveX=probox.width()-w;
+		}
+		if(moveY<0){
+			moveY=0;
+		}
+		if(moveY>probox.height()-h){
+			moveY=probox.height()-h;
+		}
+		//设置比例
+		var scaleX=showbox.width()/probox.width();
+		var scaleY=showbox.height()/probox.height();
+		console.log(scaleX,scaleY);
+		//设置放大区域
+		showbox.css({
+			left:-scaleX*moveX,
+			top:-scaleY*moveY
+		});
+		//设置跟随
+		hoverbox.css({
+			left:moveX,
+			top:moveY
+		});
+	}
+	function move(probox,hoverbox,showbox){
+		var offL=probox.offset().left;
+		var offT=probox.offset().top;
+		var width=hoverbox.width();
+		var height=hoverbox.height();
+		var time;
+		$('.probox').mouseover(function(e){
+			var x=e.pageX;
+			var y=e.pageY;
+			console.log(x,y);
+			$('.hoverbox,.showbox').show();
+			time=setTimeout(hovermove(probox,hoverbox,x,y,offL,offT,width,height,showbox),1);
+		}).mousemove(function(e){
+			var x=e.pageX;
+			var y=e.pageY;
+			console.log(x,y);
+			time=setTimeout(hovermove(probox,hoverbox,x,y,offL,offT,width,height,showbox),1);
+		}).mouseout(function(e){
+			hoverbox.hide();
+			showbox.parent().hide();
+		});
+	}
+	$(function(){
+		move($('.probox img'),$('.hoverbox'),$('.showbox img'));
+	});
+</script>
+</body>
+</html>

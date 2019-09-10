@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+<title>通用top条、点击流统计代码加载</title>
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif;line-height:22px;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+
+.wrap{ margin:0 auto;}
+body{padding-top:42px;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{}
+ol{margin:0;padding:0;}
+ol li{margin-left:40px;}
+p{padding-left:30px;}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>延迟加载点击流统计、通用top条</h1>
+	</div>
+	<div id="main">
+		<h2>一、使用说明</h2>
+		<ol>
+			<li>在页面/body前调用脚本：http://ossweb-img.qq.com/images/js/milo/milo-min.js；</li>
+			<li>说明：loadScript("http://pingjs.qq.com/ping_tcss_ied.js",function(){if(typeof(pgvMain) == 'function')pgvMain();},"")表示加载完成http://pingjs.qq.com/ping_tcss_ied.js后，执行function(){if(typeof(pgvMain) == 'function')pgvMain();}事件，通用top条的调用方法与点击流统计加载方法一样；</li>
+            <li>ps:请看此页面顶部，已成功加载通用top条</li>
+            <li>详细代码请查看源文件。</li>
+		</ol>
+	</div>
+</div>
+<script src="http://ossweb-img.qq.com/images/js/milo/milo-min.js"></script>
+<script>
+milo.addEvent(window,'load',function(){
+	loadScript("http://ossweb-img.qq.com/images/js/title.js",function(){ostb_int()},"");//加载通用top条
+	loadScript("http://pingjs.qq.com/ping_tcss_ied.js",function(){if(typeof(pgvMain) == 'function')pgvMain();});//加载点击流统计
+});
+</script>
+</body>
+</html>

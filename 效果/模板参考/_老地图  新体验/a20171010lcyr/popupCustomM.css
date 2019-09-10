@@ -1,0 +1,18 @@
+.tab-con{overflow:hidden;}
+.accept-pic p{background:none;line-height:12px;}
+
+.tab-col1 ul{width:100%;margin:0 auto;}
+.tab-col1 li{width:100%;}
+.tab-col1 li .accept-pic img{width:100%;}
+
+.tab-col1 li .accept-btn{width:100px;}
+
+
+.popup-red h2{background:#14252c;font-size:20px;font-weight:bold;}
+.popup-red .accept-btn{background:#14252c;border:2px solid #ffa902;}
+.col-5 li .accept-btn{width:64px;}
+.lottery-status b,.login-box a{color:#14252c;}
+.accept-tit{padding: 0;}
+.accept-tit i{display: inline-block;vertical-align: middle;background:url(ossweb-img/icon_sq1.png) no-repeat;width: 10px;height: 10px;margin: 0 3px;}
+.exchange-list img{margin-top: 3px;}
+

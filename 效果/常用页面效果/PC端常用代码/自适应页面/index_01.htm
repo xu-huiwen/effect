@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>网页自适应</title>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="mediamin1642.css"  id="new_link" />
+</head>
+<body>
+	<div class="wrap c">
+		<div class="sidebar"></div>
+		<div class="main">
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+			<ul class="ct_ul">
+				<li class="li_01"></li>
+				<li class="li_02"></li>
+				<li class="li_03"></li>
+				<li class="li_04"></li>
+				<li class="li_05"></li>
+				<li class="li_06"></li>
+				<li class="li_07"></li>
+				<li class="li_08"></li>
+				<li class="li_09"></li>
+				<li class="li_10"></li>
+				<li class="li_11"></li>
+				<li class="li_12"></li>
+			</ul>
+		</div>
+	</div>
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.2.min.js"></script>
+<script>
+var winw2=$(window).width();
+winwidth(winw2);
+$(function(){
+	$(window).resize(function(){
+		var winw=$(this).width();
+		winwidth(winw);
+	});
+});
+function winwidth(wid){
+	if(wid<=1236){
+		$('#new_link').attr('href','mediamax1236.css');
+	}
+	if(wid>1236){
+		$('#new_link').attr('href','mediamin1236.css');
+	}
+	if(wid>1440){
+		$('#new_link').attr('href','mediamin1440.css');
+	}
+	if(wid>1642){
+		$('#new_link').attr('href','mediamin1642.css');
+	}
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>花瓣飘舞</title>
+</head>
+<style>
+	body{overflow: hidden;}
+	.flower {
+    width: 882px;
+    height: 820px;
+    display: block;
+    position: relative;
+    margin: 32px auto 0;
+    z-index: 3;
+}
+.flower .canvas {
+    position: absolute;
+    top: -32px;
+    left: -50%;
+    width: 1920px;
+    height: 1080px;
+    z-index: 9;
+    -webkit-appearance: none;
+    pointer-events: none;
+}
+
+
+</style>
+<body>
+	<div class="flower">
+        <canvas id="can" class="canvas" width="1920" height="1080"></canvas>
+    </div>
+    <script src="particleCanvas.js"></script>
+	<script>
+		var particleCanvas = new particleCanvas(
+		"can",[{
+			"type":{"typeName":"image",                                       
+			"url":"//game.gtimg.cn/images/x5/cp/a20180131xwflower/fl.png"},  //id和花瓣图片
+			"number":10,                                                     //花瓣数量
+			"op":{"min":1,"max":1},                                          
+			"size":{"min":12,"max":20},
+			"zoom":{"min":1,"max":1},
+			"speed":{"min":1,"max":3},
+			"angle":{"value":90,"float":50},
+			"rota":{"value":30,"speed":1.8,"floatValue":120,"floatSpeed":2},
+			"reIn":"reverseDirection"}
+		]);
+	</script>
+</body>
+</html>

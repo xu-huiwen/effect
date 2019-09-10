@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style type="text/css">
+@charset "gb2312";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'\5b8b\4f53',sans-serif;line-height:22px;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+
+.wrap{ margin:0 auto;}
+#header,#main{margin:5px auto;padding:30px;width:800px;background:#f9f9f9; border:1px solid #ccc;}
+#header{height:30px;}
+#main{}
+ol{margin:0;padding:0;}
+li{margin-left:40px;}
+</style>
+<title>弹出层使用规范</title>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<h1>弹出层使用规范</h1>
+	</div>
+	<div id="main">
+		<h2>一、使用说明：</h2>
+		<ol>
+			<li>在页面底部引入脚本：http://ossweb-img.qq.com/images/js/comm/showDialog.min.js（必须放在页面底部，禁止放在head里面）</li>
+			<li>配置弹出层背景颜色和透明度，即：function TGDialogS(e){showDialog.show({id:e,bgcolor:"这里填写背景颜色",opacity:这里填写透明度（0-100）});}，例如：bgcolor:"#000",opacity:70</li>
+			<li>弹出id为test的div：TGDialogS("test");</li>
+			<li>关闭弹出层：showDialog.hide();</li>
+			<li>高级功能见文件夹“showDialog扩展功能”里面的demo</li>
+		</ol>
+		<h2>二、实例演示：</h2>
+		<p>弹出id为test的div：<button onClick="TGDialogS('test')">点击弹出</button></p>
+
+		<h2>三、代码分离使用：</h2>
+		<p>弹出id为test2的div：<button id="btn-dialog-test2">点击弹出</button></p>
+		<div id="test"><button onClick="showDialog.hide()">点击关闭</button></div>
+		<div id="test2"><button id="btn-close-test2">点击关闭</button></div>
+	</div>
+</div>
+<!-- 引入脚本 -->
+<script src="http://ossweb-img.qq.com/images/js/comm/showDialog.min.js"></script>
+<script>
+//配置弹出层，传入id
+function TGDialogS(e){showDialog.show({id:e,bgcolor:"#fff",opacity:70});}
+//通用函数，传入id
+function gEl(e){return (typeof(e) == "object") ? e : document.getElementById(e)}
+//脚本分离
+gEl("btn-dialog-test2").onclick=function(){TGDialogS('test2')};
+gEl("btn-close-test2").onclick=function(){showDialog.hide()};
+</script>
+</body>
+</html>

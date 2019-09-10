@@ -1,0 +1,19 @@
+
+/*¸¡²ã*/
+.ad-nav,.ad-nav-p{width:200px; height:200px; display: none;}
+.ad-nav{ position:fixed; left:0; bottom:150px; display: block;z-index: 100;}
+.ad-nav-p{ position:relative;}
+.ad-nav-img{ display: block; width: 200px; height: 200px;}
+.ad-close{ display:block; width:26px; height:26px; position:absolute; right:5px; top:5px; text-indent:-9999px; background:url(//game.gtimg.cn/images/speed/act/a20190103znq/a-sp.png) no-repeat -147px -403px;}
+
+
+
+.oing{position: relative;min-width: 1000px;}
+.oing i{background:url(//game.gtimg.cn/images/speed/act/a20190103znq/boom.jpg) no-repeat 50% 0;display: block;position: absolute;top: 0;width: 100%;;height: 440px;}
+.ball{display: none;}
+@media screen and (max-width: 1024px) {
+	.head{overflow: hidden;}
+	.canvas{display: none;}
+	.ball{display: block;}
+}
+.canvas{top: 0;left: 0;z-index: 2;}

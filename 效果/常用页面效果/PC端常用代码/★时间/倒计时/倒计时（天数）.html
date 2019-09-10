@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" />
+<meta name="robots" content="all" />
+<meta name="Copyright" content="Copyright (c) 2006-2010 TENCENT" />
+<meta name="Keywords" content="腾讯游戏嘉年华,TGC,TGC2013,嘉年华2013,快乐一起来" />
+<meta name="Description" content="" />
+<!-- 设计：pavowang | 重构：rukkihuang | 创建：201210010 | 团队博客：http://tgideas.qq.com -->
+<title>腾讯游戏 嘉年华2013</title>
+<style type="text/css">
+@charset "gb2312";
+/*reset*/
+*{margin:0;padding:0;font-family:微软雅黑,Tahoma,宋体}html{color:#000;overflow-x:auto!important;overflow-x:hidden;overflow-y:auto}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000;}del,ins{text-decoration:none}p{ margin:0; padding:0}img {-ms-interpolation-mode: bicubic;}
+a{ text-decoration:none}
+.clear { clear:both; height:0; line-height:0; font-size:0}
+.hidden,h1,.header p {text-indent:-5000px; display:block; height:0; font-size:0; line-height:0; overflow:hidden}
+body { min-width:1000px; padding-top:42px; background:#f8f8f8; font-size:12px}
+body { background:#FFF url(http://ossweb-img.qq.com/images/tgc/2013/bg_2.jpg) no-repeat 50% 42px}
+/*top条*/
+.ost_bg,.rightMenu a,.bottomM,.titX,.mT1,.mT2,a.m2,.titY em,.rdBottom { background: url(http://ossweb-img.qq.com/images/tgc/2013/top.png) no-repeat;}
+.ost { width: 100%; height: 42px; background-repeat: repeat-x; color: #48403d; left: 0; top: 0 !important; text-align: left; font-size: 12px; z-index: 8000; font-family: Tahoma;}
+.ost_b { width: 980px; padding: 0 5px; margin: 0 auto; position: relative; list-style: none;}
+.ost_tg { width: 205px; height: 42px; padding: 0 15px 0 0; margin: 0 15px 0 0; float: left; background-position: 0 -42px;}
+.ost_blnk { display: block; width: 100%; height: 100%; text-indent: -5000px; overflow: hidden;}
+.ost_gg { width: 230px; height: 42px; float: left; background-position: 0 -84px; position: relative}
+.ost_gg2 { background-position: -27px -327px}
+.ost_i { height: 42px; line-height: 42px; *line-height: 44px !important; line-height: 44px \9; _line-height: 42px; float: right;}
+.ost_gl { float: right;}
+.ost_lnk { color: #48403d !important; text-decoration: none;}
+.ost_ldc { border-right: 1px solid #BFC6D7; padding: 0 9px;}
+.ost_lnk:hover { color: #0096D0 !important;}
+.ost_t { float: right; width: 100px; padding: 0 0 0 28px; background-position: 10px -126px; position:relative; height:42px}
+.tgcList { position:absolute; right:7px; top:34px; line-height:20px; width:103px; display:block; padding-bottom:2px; display:none}
+.tgcT { display:block; height:5px; line-height:0; font-size:0; background-position: -127px -168px}
+.tgcList a { display:block; height:26px; border-left:1px solid #d6d6d6; border-right:1px solid #d6d6d6; line-height:26px; text-align:center; color:#48403d; background-position:0 -15px}
+.tgcList a:hover { color: #0096D0 !important;}
+a.tgca { height:25px}
+.ost_ggBig { position:absolute; left:-238px; top:42px; width:970px; height:145px; text-indent: -5000px; display:none}
+/*foot*/
+.wrap_ied{ margin:0 auto; padding-top:35px;height:90px; background:#171717}
+#foot_info{ line-height:24px}
+#foot_info h2{ font-size:14px; font-weight:bold; line-height:28px}
+#foot_info table{}
+#foot_info table th{ font-weight:normal; text-align:right}
+#footer_ied{ text-align:center; font-size:12px; line-height:19px;color:#747474}
+#footer_ied p.e{ margin-top:-4px; font-size:10px}
+#footer_ied a { color:#747474}
+#footer_ied a:hover { color:#c8c8c8}
+/*header*/
+.headerM {background:url(http://ossweb-img.qq.com/images/tgc/2013/bg_1_o.jpg) no-repeat 50% top ; height:521px; position:relative}
+.headerMBg,.kv { position:absolute; background-repeat:no-repeat; background-position:50% top; width:100%; height:521px; position:absolute; left:0; top:0; z-index:2}
+.kv { z-index:3}
+.topMenu,.rightMenu,.mMenu { position:relative; z-index:4}
+.topMenu { margin:0 auto; width:999px; border-right:1px solid #c7c3cf; height:30px; line-height:30px}
+.topMenu li { float:right; border-left:1px solid #c7c3cf; height:30px; padding:0 16px}
+.topMenu a { color:#454048}
+.topMenu a:hover { color:#000}
+.rightMenu { position:absolute; right:0; top:87px}
+.rightMenu a { display:block; width:50px; height:70px; margin-bottom:10px; text-indent:-5000px}
+a.ra1 { background-position:0 -179px}
+a.ra1:hover { background-position:0 -249px}
+a.ra2 { background-position:-50px -179px}
+a.ra2:hover { background-position:-50px -249px}
+a.ra3 { background-position:-100px -179px}
+a.ra3:hover { background-position:-100px -249px}
+a.ra4 { background-position:-150px -179px}
+a.ra4:hover { background-position:-150px -249px}
+.mMenu { margin:0 auto; width:1000px; height:60px; top:431px}
+.mMenu li { float:left; width:166px}
+li.mli { width:170px}
+.mMenu a { display:block; width:100%; font-size:18px; color:#FFF; line-height:51px; height:57px; text-align:center; border-top:3px solid #430071}
+.mMenu a:hover,a.mActive {  border-top-color:#f00547; background:#28004b; transition: all 0.3s linear}
+a.mActive { border-top-color:#e50242; background:#1d0037}
+.mainM { width:1000px; margin:0 auto}
+.bottomM { background-repeat:repeat-x; background-position:0 -855px; background-color:#f7f7f7}
+.mediasB { margin:0 auto; width:1000px; padding-top:30px; overflow:hidden}
+.mediasB ul { width:1020px}
+.mediasB li { float:left; width:155px; height:65px; border:1px solid #f3f3f3; border-right-color:#e7e7e7; border-bottom-color:#e7e7e7; background:#FFF; margin:0 11px 15px 0}
+.mediasB2 li { height:40px}
+.titX { display:block; text-indent:-5000px; width:144px; height:35px; background-position:0 -369px; margin-bottom:15px}
+.titX2 { background-position:0 -404px}
+.together { min-width:1000px; background-position:50% 0; height:249px; background-repeat:no-repeat; text-indent:-5000px}
+
+.where { background:#f3f3f3; border-bottom:1px solid #e7e7e7}
+.where p { text-align:right; width:1000px; margin:0 auto; line-height:29px; height:29px; color:#888888}
+.where em { color:#333}
+
+.logos { float:none; width:260px; position:relative; z-index:3}
+a.m2 { display:block; width:260px; height:60px; margin-bottom:12px; background-position:0 -610px; text-indent:-5000px}
+a.m2:hover { background-position:0 -670px}
+a.m3 { background-position:0 -730px}
+a.m3:hover { background-position:0 -790px}
+.logos ul { vertical-align:top; border:1px solid #e6e6e6; background:#f2f2f2; padding-top:10px; height:264px}
+.logos li { width:238px; height:60px; border-right:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; margin:0 auto 4px auto}
+.logos li img,.logos li a { display:block; width:238px; height:60px; background:#FFF}
+.rundownBox { float:none; width:260px; margin-bottom:38px}
+.titY { background:#762eb2; border:1px solid #5e25a3; height:33px}
+.titY em { display:block; width:86px; height:17px; background-position:-122px -126px; text-indent:-5000px; margin:8px 0 0 9px}
+.rdBottom { overflow:hidden; line-height:0; font-size:0; width:260px; height:5px; background-position:0 -850px}
+.rdBox { height:415px; width:260px; overflow:hidden; position:relative; z-index:4}
+.rTabs { height:33px; width:258px; border-left:1px solid #dbdbdb; border-right:1px solid #dbdbdb; overflow:hidden; zoom:1}
+.rTabs li { float:left; height:33px; width:129px; border-top:1px solid #dbdbdb; border-bottom:1px solid #dbdbdb; background:#FFF; text-align:center; line-height:33px; font-size:16px; color:#333333}
+li.rActive { background:#6825a6; border-top-color:#451682; border-bottom-color:#451682; color:#FFF}
+.dTabs { height:29px; margin-top:3px; width:260px}
+.dTabs li { float:left; height:28px; width:130px; border-top:1px solid #dfdfdf; background:#efefef; text-align:center; line-height:28px; font-size:14px; color:#333333}
+li.dActive { background:#e2d3ee; border-top-color:#ccb2e1; color:#762eb2}
+.dLay { border-right:1px solid #ebebeb; border-left:1px solid #ebebeb}
+.rTable { width:100%; line-height:20px; color:#333333; border-top:1px solid #ebebeb; border-bottom:5px solid #762eb2; background:#FFF}
+.rTable td { padding-top:2px; padding-bottom:2px}
+.td1 { width:96px; padding-left:9px; border-bottom:1px solid #ebebeb}
+.td2 { border-top:1px solid #ebebeb}
+/*亮点 是否要归纳到all？*/
+.ldBox { vertical-align:top; background:#FFF; position:relative; z-index:4; border-bottom:5px solid #762eb2}
+.ldBox li { border-left:1px solid #e8e8e8; border-right:1px solid #e8e8e8}
+.ldBox a { display:block; width:100%; color:#333}
+.ldBox h4 { padding-left:9px; font-size:14px; line-height:36px; padding-top:5px}
+.ldBox img { display:block; width:258px; height:60px; background:#e7e7e7}
+
+.m_lPart { float:left; width:720px}
+.m_rPart { float:right; width:260px}
+/*  |xGv00|caabd8f78918ae5ef5c3e373ba05902c */
+
+body { background:#21073c url(http://ossweb-img.qq.com/images/tgc/2013/c/c_bg1.jpg) no-repeat 50% 0; padding-top:0}
+.header,.date span { background:url(http://ossweb-img.qq.com/images/tgc/2013/c/c_bg2.jpg) no-repeat 50% 0}
+.header { height:274px; width:1000px; margin:0 auto; position:relative; z-index:1}
+.kv { width:100%; position:absolute; left:0; top:0; height:274px; z-index:2}
+.date { position:relative; z-index:3; padding:185px 0 0 763px; width:237px; margin:0 auto;}
+.date span { display:block; float:left; width:36px; height:68px; float:left; margin-right:58px}
+span.date0 { background-position:0 -274px}
+span.date1 { background-position:-36px -274px}
+span.date2 { background-position:-72px -274px}
+span.date3 { background-position:-108px -274px}
+span.date4 { background-position:-144px -274px}
+span.date5 { background-position:-180px -274px}
+span.date6 { background-position:-216px -274px}
+span.date7 { background-position:-252px -274px}
+span.date8 { background-position:-288px -274px}
+span.date9 { background-position:-324px -274px}
+.main { border:1px solid #1b0039; width:838px; margin:0 auto; background:#2e1051}
+.tit2,.tit3,.tit3 em,.ma p,.tit4,.a1,a.a2,.inputBox,.share a,.show a.close { background:url(http://ossweb-img.qq.com/images/tgc/2013/c/c_sprites.jpg) no-repeat} 
+.lPart { float:left; width:217px; border-top:1px solid #3f1a63}
+.tit2 { width:217px; height:116px; text-indent:-5000px}
+.tit3 { height:34px; width:197px; padding:18px 0 0 20px; background-position:0 -116px}
+.tit3 em { display:block; width:154px; height:17px; text-indent:-5000px; background-position:0 -168px; overflow:hidden}
+em.tit5 { width:65px; background-position:0 -185px}
+.ma { border-top:1px solid #411b64; border-left:1px solid #3e1861; background:#2d0f50; padding-top:14px}
+.ma p { display:block; width:172px; height:173px; background-position:0 -202px; margin-left:21px; text-indent:-5000px}
+.ma em { display:block; padding-left:22px; color:#dac2f6; font-size:15px; line-height:36px; padding-bottom:19px}
+.news { border-top:1px solid #411b64; border-left:1px solid #3e1861; background:#2e1052; padding:9px 0 0 19px; height:159px}
+.news ul { vertical-align:top}
+.news li { position:relative; margin-bottom:5px; width:182px; min-height:40px}
+.news a { color:#e3cbff; line-height:20px}
+.news a:hover { color:#f6eeff}
+.news span { color:#5f457d; position:absolute; right:2px; bottom:0}
+.rPart { float:right; width:620px; border-top:1px solid #3f1a63; border-right:1px solid #3e1862; position:relative; background:#2f1053}
+.tit4 { position:absolute; text-indent:-5000px; width:312px; height:74px; background-position:0 -375px; left:56px; top:-2px; z-index:1}
+.loginBox { background:#361659; padding-top:20px}
+.login { width:580px; padding-right:20px; padding-top:13px; height:39px; background:#f3edf5}
+a.a1 { display:block; width:60px; height:26px; line-height:26px; text-align:center; color:#FFF; float:right; background-position:-217px 0}
+a.a1:hover { background-position:-217px -26px}
+#logined { position:relative; z-index:2}
+#logined p,a.a2 { float:right}
+#logined p { line-height:26px;}
+#logined p a { color:#6510c3}
+#logined p a:hover { color:#9827dd}
+a.a2 { display:block; width:69px; height:26px; line-height:26px; text-align:center; color:#FFF; background-position:-217px -52px; font-size:12px; margin-left:15px}
+a.a2:hover { background-position:-217px -78px}
+.chat { width:600px; height:391px; background:#FFF}
+.inputBox { width:580px; border-top:1px solid #cecece; border-bottom:1px solid #cecece; background-repeat:repeat-x; background-position:0 -449px; height:40px; padding:10px 0 0 20px}
+.inputBg { width:558px; height:28px; border:1px solid #cecece; background:#FFF}
+.inputBg a.a1 { margin:1px 2px 0 0; _margin-right:1px}
+.inputBg input { border:0; width:485px; float:left; display:block; padding-left:5px; height:28px; line-height:28px}
+.share { background:#f3edf5; padding-top:23px; height:74px; width:600px}
+.share a { display:block; width:306px; height:50px; border:1px solid #560fb6; background-position:0 -499px; margin:0 auto; text-indent:-5000px}
+.share a:hover { background-position:0 -549px}
+
+.medias { border:1px solid #1b0039; width:838px; margin:20px auto 0 auto}
+.mediasBox { border:1px solid #3e1862; background:#2d0f51; height:191px; padding-left:19px}
+.mediasBox h2 { color:#FFF; font-size:16px; line-height:30px; padding:13px 0 10px 0}
+.mediasBox h2 em { font-size:12px; padding-left:5px; color:#7f6f92}
+.medias li { float:left; border:1px solid #260c4a; background:#42196d; width:146px; height:54px; margin:0 15px 10px 0}
+.medias img { display:block; width:146px; height:54px}
+.tog { background:url(http://ossweb-img.qq.com/images/tgc/2013/c/c_bg3.jpg) no-repeat 50% 0; margin:0 auto; width:1000px; height:300px; text-indent:-5000px}
+.border { border-bottom:1px solid #401a64}
+.show { border:1px solid #1b003f; width:610px; position:relative}
+.show a.close { display:block; width:36px; height:36px; background-position:-217px -104px; position:absolute; right:13px; top:7px; text-indent:-5000px; cursor:pointer}
+.show2 { border:1px solid #4f217b; background:#3e156c; padding-bottom:5px}
+.tit6 { width:100%; height:50px; background:#260b4d; margin-bottom:5px}
+.show2 table { width:90%; margin:0 auto; color:#FFF; line-height:30px}
+.show2 td { padding-bottom:4px}
+</style>
+</head>
+
+<body>
+<div class="header">
+	<h1>TGC2013腾讯游戏嘉年华</h1>
+  <div class="kv"><div id="kv"></div></div>
+      <div class="date" id="date"></div>
+</div>
+<div class="main">
+	<div class="lPart">
+        <h2 class="tit2">TGC2013腾讯游戏嘉年华-关注TGC</h2>
+        <h3 class="tit3"><em>TGC2013腾讯游戏嘉年华-扫描二维码 关注TGC</em></h3>
+        <div class="ma"><p>腾讯游戏二维码</p><em>扫描二维码获取猜图答案</em></div>
+        <h3 class="tit3"><em class="tit5">TGC2013腾讯游戏嘉年华-媒体新闻</em></h3>
+        <div class="news">
+        	<ul id="news"></ul>
+        </div>
+    </div>
+	<div class="rPart">
+    	<h2 class="tit4">TGC2013腾讯游戏嘉年华-微博抽奖</h2>
+        <div class="loginBox">
+            <div class="login">
+                <!-- 登录前 -->
+                <p id="unlogin"><a class="a1" href="javascript:LoginManager.login();" title="用户登录">登录</a></p>
+                <div id="logined" style="display:none;">
+                    <a class="a2" href="javascript:myGiftList_5637.show();" title="获奖记录">获奖记录</a>
+                    <p><span id='login_qq_span'></span>&nbsp;<a href="javascript:LoginManager.logout(function(){control=0;});">[注销]</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="chat"><div id="chat"></div></div>
+        <div class="inputBox"><div class="inputBg"><input id="result" type="text" /><a id="ansButton" onclick="answerQuestion();return false;" class="a1" href="javascript:void(0)" title="发送">发送</a></div></div>
+        <div class="share"><a onclick="javascript:shareAndLottery();return false;" href="javascript:void(0)" title="分享微博获抽奖机会"><strong>分享微博获抽奖机会</strong></a></div>
+	</div>
+    <div class="clear border"></div>    
+</div>
+<div class="medias"><div class="mediasBox">
+	<h2>合作媒体<em>更多答题攻略，请点击如下媒体</em></h2>
+    <ul id="mediasList"></ul>
+</div></div>
+<div class="tog">TGC2013腾讯游戏嘉年华-快乐一起来，亿万玩家的狂欢节</div>
+<script type="text/javascript" src="http://apps.game.qq.com/cgi-bin/comm_act/tgc2013/chicken/get_time.cgi"></script>
+<script type="text/javascript">
+    var ddt = Date.parse(new Date(nowDate.replace(/-/g, "/")));
+    var endDay = Date.parse(new Date(Date.parse('2013-11-10'.replace(/-/g, "/")))); //转换成Data()
+    var stillDay = Math.floor((endDay - ddt) / (1000 * 60 * 60 * 24));
+    if (stillDay < 0) stillDay = '0';
+    if (stillDay < 10) stillDay = '0' + stillDay;
+    else stillDay = stillDay + '';
+    stillDay = stillDay.split("");
+    document.getElementById('date').innerHTML = '<span class="date' + stillDay[0] + '"></span><span class="date' + stillDay[1] + '"></span>';
+</script>
+</body>
+</html>

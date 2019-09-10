@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-TGideas" />
+<meta name="Copyright" content="Tencent" />
+<title>心悦规范</title>
+<style>
+/*---- global.css begin----*/
+html, body, div, span,applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;}
+body{font:normal normal normal 12px/1.5em;font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;text-align: center;height:100%;word-break : break-all;font-family:"微软雅黑","宋体";}
+div {text-align:left;}
+h1,h2,h3,h4,h5,h6{margin: 10px 0;font-family: inherit;font-weight: bold;line-height: 20px;color: inherit;text-rendering: optimizelegibility;}
+a{text-decoration: none;}
+a:hover{text-decoration:underline;}
+a:active{outline:none;}
+q:before, q:after {   content: '';   }    
+abbr, acronym {  border: 0; }
+code::selection{background-color:#209EEB}
+::-moz-selection {color:#FFFFFF;background-color:#209EEB;}
+code::-moz-selection{background-color:#209EEB}
+li{list-style-type:none;}
+img{border: none;}
+fieldset{border-style: none }
+label,button{cursor: pointer;}
+select,input,textarea{font-size:12px;line-height:1.2em;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {display: inline-block;}
+.clearfix {display: block;}
+.fix{word-break:keep-all;overflow:hidden;text-overflow:ellipsis;}
+.clear{font-size:0;line-height:0;height:0;clear:both;overflow: hidden;display: block;}
+.none{display: none;}
+
+.wrapper{text-align:left;}
+.header{background: linear-gradient(45deg, #020031 0%,#6d3353 100%);padding:70px 0 80px;margin-bottom:50px;}
+.header h1{color:#fff;font-size:80px;line-height: 1;letter-spacing: -2px;text-align:center;margin-bottom:20px;}
+.header p{font-size: 40px;font-weight: 200;line-height: 1.25;color:#fff;text-align:center;}
+
+.box_style_1 .hd h3{font-size:24px;line-height:40px;}
+.box_style_1 .bd li{color:#333;line-height:1.75;}
+
+.container{width:1000px;margin:0 auto;}
+.textarea_style_1 textarea{width:90%;height:150px;font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;line-height:1.5em;font-size:14px;color:#666;padding:10px;background:#f7f7f9;border:1px solid #ccc;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="container">
+			<h1>心悦活动重构规范</h1>
+			<p>更新时间：2017.9.28 有问题请联系nonoxiao</p>
+		</div>
+	</div>
+	<div class="page_content">
+		<div class="container">
+			<div class="box_style_1">
+				<div class="hd">
+					<h3>整体通用规范</h3>
+				</div>
+				<div class="bd">
+					<ul>
+						<li>移动端规范：<a href="http://tgideas.qq.com/webplat/info/news_version3/804/25810/26096/m16274/201610/517971.shtml">http://tgideas.qq.com/webplat/info/news_version3/804/25810/26096/m16274/201610/517971.shtml</a></li>
+						<li>PC端规范：<a href="http://tgideas.qq.com/webplat/info/news_version3/804/25810/26096/m16274/201609/509399.shtml">http://tgideas.qq.com/webplat/info/news_version3/804/25810/26096/m16274/201609/509399.shtml</a></li>
+					</ul>				
+				</div>
+			</div>
+			<!-- 请求优化 -->
+			<div class="box_style_1">
+				<div class="hd">
+					<h3>请求优化</h3>
+				</div>
+				<div class="bd">
+					<ul>
+						<li>1.所有修饰类图片（如图标，按钮）需要尽可能用css sprite，图片总数量不超过3张</li>
+						<li>2.转盘礼包图片可以直接讲抽奖转盘切成大图</li>
+						<li>3.礼包类图片尽可能使用css sprite合成后通过背景图插入</li>
+						<li>4.每个活动所有图片不超过15个</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 请求优化 -->
+			<!-- 所有业务必备js -->
+			<div class="box_style_1">
+				<div class="hd">
+					<h3>所有业务必备js</h3>
+				</div>
+				<div class="bd">
+					<div class="textarea_style_1">
+						<textarea>
+	<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+	<script>
+	//此段代码不能放到外链JS中，
+	var setSite = { //设置网站属性
+	siteType: "os" || "a20160711xxx", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+	pageType: "index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+	pageName: "首页", //必填项:页面中文名
+	osact: 0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+	ingame: 0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+	stayTime: 0 //选填项:是否需要统计停留时长boolean；默认是0
+	}
+	if (typeof (pgvMain) == 'function') pgvMain();//千万不能忘记！
+	</script>
+						</textarea>
+					</div>
+				</div>
+			</div>
+			<!-- 所有业务必备js -->
+			<!-- PC业务JS -->
+			<div class="box_style_1">
+				<div class="hd">
+					<h3>PC业务JS</h3>
+				</div>
+				<div class="bd">
+					<div class="textarea_style_1">
+						<textarea>
+<!-- PC top通栏 Start-->
+<script src="http://xinyue.qq.com/web201410/js/top_act.js"></script>
+<link href="http://xinyue.qq.com/web201410/css/basic.css" rel="stylesheet" /> 
+<!-- 页面不需要再单独定义字体样式，除非有特殊展示需求 -->
+<!-- PC top通栏 End -->
+<!-- PC 底部通栏 Start -->
+<script src="http://ossweb-img.qq.com/images/tgclub/web2017/mtopbar/pub_bottom_bar.js"></script>
+<!-- PC top通栏 End -->
+						</textarea>
+					</div>
+				</div>
+			</div>
+			<!-- PC业务JS -->
+			<!-- 移动端活动JS -->
+			<div class="box_style_1">
+				<div class="hd">
+					<h3>移动端活动JS</h3>
+				</div>
+				<div class="bd">
+					<div class="textarea_style_1">
+						<textarea>
+<!-- 移动端 TOP通顶 Start -->
+<script src="http://ossweb-img.qq.com/images/tgclub/web2017/mtopbar/pub_top_bar.js"></script>
+<!-- 移动端 TOP通顶 End -->
+						</textarea>
+					</div>
+				</div>
+			</div>
+			<!-- 移动端活动JS -->	
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+

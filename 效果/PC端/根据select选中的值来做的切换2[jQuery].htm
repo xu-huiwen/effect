@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="gb2312">
+	<title>根据select选中的值来做的切换</title>
+</head>
+<body>
+	<select class="select" name="">
+		<option value="" selected="true">选择内容1</option>
+		<option value="">选择内容2</option>
+		<option value="">选择内容3</option>
+		<option value="">选择内容4</option>
+	</select>
+	<p class="con">要显示的内容1</p>
+	<p class="con" style="display:none;">要显示的内容2</p>
+	<p class="con" style="display:none;">要显示的内容3</p>
+	<p class="con" style="display:none;">要显示的内容4</p>
+
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.3.2.min.js"></script>
+<script>
+	(function($){
+		$.fn.selectTab = function(o){
+				var d = {
+					select:'.select', //定义下拉对象
+					con:'.con'          //定义切换对象
+				};
+				var o = $.extend(d,o);
+				var $option = $(d.select).find('option');//遍历下拉对象下的option
+				$option.each(function(i){
+					$(this).attr('i',i);//设置option 属性i从下标为0开始赋值
+				});
+				selectFn();
+				$(d.select).change(function(){
+					selectFn();
+				})
+				function selectFn(){
+					var selectedIndex = $(d.select).find('option:selected').attr('i'); //保存被选中的option的属性i的值
+					$(d.con).eq(selectedIndex).show().siblings(d.con).hide();       //显示对应显示的对象
+				}
+		}
+	})(jQuery);
+	$(function(){
+		$().selectTab();
+	})
+</script>
+</body>
+</html>

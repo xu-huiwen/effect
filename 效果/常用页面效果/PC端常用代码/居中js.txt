@@ -1,0 +1,5 @@
+window.onscroll = window.onresize = function() {
+    var dw = document.documentElement.clientWidth || document.body.clientWidth;
+    dw >= 1920 ? _$.gId("wrap").style.width = "1920px" : (dw <= 1000) ? _$.gId("wrap").style.width = "1000px" : _$.gId("wrap").style.width = "auto";
+    dw < 1920 ? _$.gId("map-pic").style.left = -Math.ceil(Math.abs(dw - 1920) / 2) + "px" : _$.gId("map-pic").style.left = "0";
+};

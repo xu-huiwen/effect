@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {margin: 0;padding: 0;border: 0;}
+		.c:before,.c:after{content:"";display: table;}
+		.c:after{clear:both;}
+		.c{*zoom:1;}
+	</style>
+</head>
+<body>
+	<div id="ct1">内容1</div>
+	<div id="ct2" class="s" style="display: none;">内容2</div>
+	<div id="ct3" style="display: none;">内容3</div>
+
+<script>
+	function g(e) {
+		return (typeof e == 'object') ? e : document.getElementById(e)
+	}
+
+	function showCts(n) {
+		var cts = [];
+		for (var i = 1; i <= 3; i++) {
+			cts.push(g('ct' + i));
+		};
+		for (var i = 0; i < cts.length; i++) {
+			for (var j = 0; j < cts.length; j++) {
+				cts[j].style.display = 'none'
+			};
+			cts[n].style.display = 'block';
+		}
+	};
+	showCts(1);//显示内容2
+</script>
+</body>
+</html>

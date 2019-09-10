@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="gbk" />
+<meta name="robots" content="all" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="author" content="Tencent-CP" />
+<meta name="Description" content="腾讯游戏《穿越火线》下载官方网站。300万人同时在线，三亿鼠标的枪战梦想。《穿越火线》追求的不仅仅是开枪的爽快感，而是来自相互合作及默契带来的战略意义。最新活动尽在CF官方网站。" />
+<meta name="Keywords" content="穿越火线,穿越火线官网,穿越火线游戏下载,穿越火线下载,穿越火线官方下载,CF官网,CF下载,CF视频,穿越火线官方下载, CF官网下载专区,QQ穿越火线官方网站,穿越火线体验服,穿越火线视频,穿越火线官方网站,CrossFire,FPS网络游戏,RPK,腾讯游戏,免费,黄金AK,百城联赛,WCG,冠军杯,生化模式,幽灵模式,生化幽灵,斯沃特,赛斯,奥摩,猎狐者,保卫者,潜伏者,飞虎队" />
+<!-- 设计：cp  | 重构：cp | 创建：2018/01/24 | 团队博客：//tgideas.qq.com/ -->
+<title>在线盛典-穿越火线官方网站-腾讯游戏</title>
+<style type="text/css">
+/*reset*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+q:before,q:after{content:'';}
+fieldset,img,abbr,acronym{border:0;}
+
+/*footer*/
+#footer_ied{text-align:center;font-size:12px;line-height:19px;min-width:1000px;color:#b08c7e;background: #dcc8c0;}
+.wrap_ied{margin:0 auto;padding:25px 30px;width:940px;}
+.wrap_ied a{color:#b08c7e;}
+#footer_ied .e{font-size:10px;-webkit-text-size-adjust:none;}
+
+/*页面样式*/
+.c:before,.c:after {content:"";display:table;}
+.c:after {clear:both;}
+.c {zoom:1;}
+body {font:12px/1.5 '\5FAE\8F6F\96C5\9ED1';padding-top:42px;text-align:justify;overflow-x: hidden;background: #dcc8c0;}
+a {text-decoration:none;overflow:hidden;}
+a:hover {text-decoration:none;}
+.wrap1,.wrap2,.wrap3,.wrap4,#footer_ied {min-width:1000px;width:100%;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1002?'1000px':'');}
+.wrap1{background:url(//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/rp.jpg) no-repeat 50% 0;min-width:1000px;}
+.wrap2{background:url(//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/rp2.jpg) no-repeat 50% 0;min-width:1000px;height: 1343px;}
+.wrap3{background:url(//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/rp3.jpg) no-repeat 50% 0;min-width:1000px;height: 764px;}
+.wrap4{background:url(//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/rp4.jpg) no-repeat 50% 0;min-width:1000px;}
+.container {width:1000px;margin:0 auto;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.hide {display:block;width:0;height:0;overflow:hidden;}
+.db{display:block;text-indent:-999em;}
+.dis_db{display:block;}
+.dis_n{ display:none;}
+.sp{background: url(//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/sp.png) no-repeat;}
+.md{background:url(//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/md.png) no-repeat;}
+.mr{margin-right: 0 !important;}
+.mt{margin-top:72px!important;}
+.btn-down:hover,.btn-sc:hover,.btn-gw:hover,.btn-lq:hover,.btn-lq1:hover,.btn-lq2:hover,.btn-light:hover,.btn-down1:hover{filter:brightness(120%);-webkit-filter:brightness(120%);-moz-filter:brightness(120%);text-decoration:none}
+
+/*head*/
+.head{background: url(//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/hd.jpg) no-repeat; height: 849px;}
+.top_btn {top: 764px;left: 100px;}
+.top_btn a{float: left;display: block;width: 259px;height: 83px;margin-right: 15px;transition: all 1s;}
+.top_btn a:hover{transform: scale(1.1);}
+.btn-down{background-position: -17px -19px;}
+.btn-sc{background-position: -289px -19px;}
+.btn-gw{background-position: -559px -16px;}
+.time{color: #fff;font-size: 20px;width: 100%;text-align: center;top: 730px;}
+.time span{margin-right: 50px;}
+.time em{color: #492912;}
+.slogan{background: url(//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/slogan.png) no-repeat;width: 329px;height: 542px;top: 118px;left: 0;animation: msgShow 1s linear forwards;
+    -webkit-animation: msgShow 1s linear forwards;
+    transform-origin: 0 0 50% 50%;
+    -webkit-transform-origin: 0 0 50% 50%;}
+@keyframes msgShow {
+	0% {transform: scale(0);opacity: 0;}
+	80% {transform: scale(1.2);opacity: 0.8;}
+	100% {transform: scale(1);opacity: 1;}
+}
+@-webkit-keyframes msgShow {
+	0% {-webkit-transform: scale(0);opacity: 0;}
+	80% {-webkit-transform: scale(1.2);opacity: 0.8;}
+	100% {-webkit-transform: scale(1);opacity: 1;}
+}
+@keyframes msgShow1 {
+	0% {transform: scale(0);opacity: 0;}
+	80% {transform: scale(1.2);opacity: 0.8;}
+	100% {transform: scale(1);opacity: 1;}
+}
+@-webkit-keyframes msgShow1 {
+	0% {-webkit-transform: scale(0);opacity: 0;}
+	80% {-webkit-transform: scale(1.2);opacity: 0.8;}
+	100% {-webkit-transform: scale(1);opacity: 1;}
+}
+@keyframes msgShow2 {
+	0% {transform: scale(0);opacity: 0;}
+	80% {transform: scale(1.2);opacity: 0.8;}
+	100% {transform: scale(1);opacity: 1;}
+}
+@-webkit-keyframes msgShow2 {
+	0% {-webkit-transform: scale(0);opacity: 0;}
+	80% {-webkit-transform: scale(1.2);opacity: 0.8;}
+	100% {-webkit-transform: scale(1);opacity: 1;}
+}
+.bang{background-position: -3px -332px;width: 261px;height: 186px;top: 82px;right: -20px;animation: msgShow1 1.5s linear forwards;
+    -webkit-animation: msgShow1 1.5s linear forwards;
+    transform-origin: 0 50% 0;
+    -webkit-transform-origin:  0 50% 0;}
+.massage{background-position: 0 0;width: 297px;height: 303px;top: 372px;right: -35px;animation: msgShow2 2s linear forwards;
+    -webkit-animation: msgShow2 2s linear forwards;
+    transform-origin: 0 50% 0;
+    -webkit-transform-origin:  0 50% 0;}
+.cd1{background-position: -823px -1014px;width: 37px;height: 20px;top: 500px;left:0;z-index: 99;animation: movea 1.9s linear infinite;
+-webkit-animation: movea 1.9s linear infinite;}
+.cd2{background-position: -41px -1201px;width: 18px;height: 29px;top: 300px;right:270px;z-index: 99;animation: movea 3s linear infinite 0.5s;-webkit-animation: movea 3s linear infinite 0.5s;}
+.cd3{background-position: -125px -1122px;width: 26px;height: 12px;bottom: 290px;left:380px;z-index: 99;animation: movea 3s linear infinite 1s;-webkit-animation: movea 3s linear infinite 1s;}
+.cd4{background-position: -366px -1120px;width: 15px;height: 17px;bottom: 290px;left:320px;z-index: 99;animation: movea 3s linear infinite 2s;-webkit-animation: movea 3s linear infinite 2s;}
+.cd5{background-position: -564px -1146px;width: 27px;height: 9px;bottom: 350px;right:250px;z-index: 99;animation: movea 3s linear infinite 1.5s;-webkit-animation: movea 3s linear infinite 1.5s;}
+.cd6{background-position: -823px -1014px;width: 37px;height: 20px;top: 470px;right:-300px;z-index: 99;animation: movea 3s linear infinite 1.5s;-webkit-animation: movea 3s linear infinite 1.5s;}
+.cd7{background-position: -125px -1122px;width: 26px;height: 12px;bottom: 290px;left:50px;z-index: 99;animation: movea 3s linear infinite 1.8s;-webkit-animation: movea 3s linear infinite 1.8s;}
+.cd8{background-position: -366px -1120px;width: 15px;height: 17px;bottom: 290px;left:-100px;z-index: 99;animation: movea 3s linear infinite 2.5s;-webkit-animation: movea 3s linear infinite 2.5s;}
+.cd9{background-position: -564px -1146px;width: 27px;height: 9px;bottom: 350px;right:-100px;z-index: 99;animation: movea 3s linear infinite 3s;-webkit-animation: movea 3s linear infinite 3s;}
+.cd10{background-position: -823px -1014px;width: 37px;height: 20px;top: 470px;left:-300px;z-index: 99;animation: movea 1.9s linear infinite 3.5s;-webkit-animation: movea 1.9s linear infinite 3.5s;}
+@keyframes movea{
+    0%{transform:translate(-500px,-500px) rotate(0) ;opacity: 1; }
+    20%{transform:translate(-400px,-400px) rotate(60deg) ;opacity: 1;}
+    35%{transform:translate(-300px,-300px) rotate(120deg) ;opacity: 1;}
+    50%{transform:translate(-200px,-200px) rotate(180deg) ;opacity: 1;}
+    75%{transform:translate(-100px,-100px) rotate(240deg) ;opacity: 1;}
+    100%{transform:translate(0px,0px) rotate(360deg) ;opacity: 0;}
+}
+@-webkit-keyframes movea{
+    0%{transform:translate(0,-500px) rotate(0) ;opacity: 1; }
+    20%{transform:translate(0,-400px) rotate(60deg) ;opacity: 1;}
+    35%{transform:translate(0,-300px) rotate(120deg) ;opacity: 1;}
+    50%{transform:translate(0,-200px) rotate(180deg) ;opacity: 1;}
+    75%{transform:translate(0,-100px) rotate(240deg) ;opacity: 1;}
+    100%{transform:translate(0px,0px) rotate(360deg) ;opacity: 0;}
+}
+
+/*content*/
+.txt{width: 440px;color: #464544;font-size: 22px;padding-top: 20px;margin: 0 auto;}
+.txt .btn-ck{float: right;background-position: -16px -136px;width: 171px;height: 40px;*margin-top: -30px;}
+.content{height: 1988px;}
+.part1{padding-top: 15px;}
+.tit1{background-position: -8px -257px;width: 845px;height: 65px;margin: 0 auto;text-align: center;color: #5a3620;font-size: 50px;padding-left: 64px;}
+.tit1 strong{color: #ce2e45;font-weight: bold;}
+.txt1{font-size: 28px;color: #424242;width: 100%;text-align: center;padding-top: 10px;}
+.txt1 em{color: #ce2e45;}
+.txt1 span{color: #ce2e45;font-weight: bold;}
+.txt1-1{width: 550px;color: #424242;font-size: 18px;padding-top: 10px;margin: 0 auto;}
+.txt1-1 .btn-vip{float: right;background-position: -229px -142px;width: 64px;height: 24px;*margin-top: -30px;}
+.dj-list{background: url(//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/bg1.png) no-repeat;width: 973px;height: 293px;margin: 10px auto 0;}
+.dj-list li{float: left;}
+.dj-list .dj-left{width: 505px;position: relative;}
+.dj-left img{display: block;margin:15px auto 0;}
+.dj-left span{width: 100%;text-align: center;color: #4c4c4c;font-size:14px;display: block;bottom: 0;position: absolute;}
+.dj-list .dj-right{width: 465px;}
+.dj-list .btn-lq{background-position: -347px -146px;width: 250px;height: 80px;margin:90px auto 0;display: block;text-align: center;line-height: 70px;color: #f1ebe1;font-size: 29px;font-weight: bold;}
+.dj-list p{width: 100%;text-align: center;color: #3d3d3d;font-size: 18px;padding-top: 25px;}
+.dj-list p em{color: #ce2e45;}
+.txt-time{width: 100%;text-align: center;color: #424242;font-size: 28px;padding-top: 35px;line-height: 30px;}
+.txt-time span{color: #ce2e45;}
+.txt-time .span{color: #ce2e45;font-weight: bold;}
+.txt-time em{font-size: 20px;}
+.dj2-list{padding-top: 15px;padding-left: 10px;}
+.dj2-list img{display: block;}
+.dj2-li1{float: left;width: 476px;}
+.dj2-li2{float: left;width: 472px;margin-left: 25px;}
+.dj2-list .btn-lq1{background-position: -674px -156px;width: 207px;height: 69px;margin:0 auto;display: block;text-align: center;line-height: 60px;color: #f1ebe1;font-size: 24px;font-weight: bold;}
+.dj3{padding:0 0 0 10px;}
+.dj3 img{display: block;}
+.dj3-list{bottom: -35px;}
+.dj3-list li{float: left;width: 179px;margin-left: 55px;}
+.dj3-list em{color: #4c4c4c;font-size: 14px;width: 100%;text-align: center;display: block;}
+.dj3-list .btn-lq2{background-position: -2px -994px;width: 179px;height: 61px;margin:15px auto 0;display: block;text-align: center;line-height: 50px;color: #f1ebe1;font-size: 20px;font-weight: bold;}
+
+.part2{padding-top: 20px;}
+.tit2{background-position: -2px -372px;width: 885px;height: 65px;margin: 0 auto;text-align: center;color: #5a3620;font-size: 50px;padding-left: 64px;}
+.tit2 strong{color: #ce2e45;font-weight: bold;}
+.txt2{width: 100%;text-align: center;color: #424242;font-size: 28px;line-height: 35px;padding-top: 10px;}
+.txt2 span{color: #ce2e45;}
+.txt2 .span{font-weight: bold;}
+.txt2 em{font-size: 20px;}
+.lottery{position: relative;width: 1000px;height: 471px;margin-top: 103px;}
+
+
+
+.part3{padding-top: 20px;}
+.tit3{background-position: -16px -484px;width: 845px;height: 65px;margin: 0 auto;text-align: center;color: #5a3620;font-size: 50px;padding-left: 64px;}
+.txt3{width: 100%;text-align: center;color: #ce2e45;font-size: 50px;line-height: 55px;padding-top: 10px;font-weight: bold;}
+.list-jy{margin-top: 20px;background: url(//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/pic-jy.png) no-repeat; width: 1000px;height: 137px;}
+.list-jy li{float: left;width: 178px;margin-left: 117px;}
+.list-jy .jy-li1 em{display: block;text-align: center;width: 100%;color: #5a3620;font-size: 24px;padding-top: 20px;}
+.list-jy .jy-li1 span{display: block;text-align: center;width: 100%;color: #ffffff;font-size: 24px;padding-top: 20px;}
+.list-jy .jy-li2 em{display: block;text-align: center;width: 100%;color: #5a3620;font-size: 24px;padding-top: 3px;}
+.list-jy .jy-li2 span{display: block;text-align: center;width: 100%;color: #ffffff;font-size: 24px;padding-top: 3px;}
+
+.part4{padding-top: 40px;}
+.tit4{background-position: -3px -614px;width: 845px;height: 65px;margin: 0 auto;text-align: center;color: #5a3620;font-size: 50px;padding-left: 64px;}
+.tit4 strong{color: #ce2e45;font-weight: bold;}
+.txt4{width: 100%;text-align: center;color: #343434;font-size:18px;padding-top: 10px;}
+.txt4 span{color: #ce2e45;font-weight: bold;}
+.app-dj {padding-top: 25px;width: 737px;float: left;}
+.app-dj img{display: block;}
+.app-txt{width: 100%;text-align: center;color: #666666;font-size:14px;bottom: 11px;}
+.app-txt span{margin-right: 115px;}
+.app-txt .app-span{margin-right: 0px;}
+.app-rwm{float: right;padding-top: 25px;width: 263px;}
+.app-rwm img{display: block;}
+.app-rwm p{width: 100%;text-align: center;bottom: 12px;position: absolute;color: #666666;font-size: 14px;}
+
+
+
+.part5{padding-top: 60px;}
+.tit5{background-position: -8px -737px;width: 845px;height: 65px;margin: 0 auto;text-align: center;color: #5a3620;font-size: 50px;padding-left: 64px;}
+.tit5 strong{color: #ce2e45;font-weight: bold;}
+.txt5{font-size: 18px;color: #474747;width: 100%;text-align: center;padding-top: 10px;}
+.txt5 em{color: #dd2525;}
+.list-pt{}
+.list-pt li{float: left;width: 230px;height: 123px;margin-top: 20px;position: relative;margin-right: 20px;}
+.list-pt img{display: block;}
+.list-pt .ml{margin-left: 113px;}
+.list-pt li p{padding-top: 5px;}
+.list-pt li p a{display: block;width: 100px;height: 46px;float: left;font-size: 18px;text-align: center;font-weight: bold;line-height: 46px;margin-left: 10px;}
+.btn-down1{background-position: -352px -998px;color: #fff;}
+.btn-light{background-position: -246px -998px;color: #370609;}
+.list-pt .on .icon{background-position: -644px -969px;width: 152px;height: 91px;top:40px;position: absolute;left: -20px;}
+
+.pt-dj{padding-top: 75px;}
+.pt-dj img{display: block;}
+.pt-list{padding-top: 5px;}
+.pt-list li{float: left;width: 125px;}
+.pt-list li p{color: #595959;font-size: 14px;width: 100%;letter-spacing: -1px;text-align: center;}
+.pt-list li .btn-lq2{background-position: -487px -1000px;display: block;width: 100px;height: 40px;float: left;margin-top: 5px;margin-left: 5px;}
+
+.part6{padding-top: 40px;}
+.tit6{background-position: -3px -866px;width: 845px;height: 65px;margin: 0 auto;text-align: center;color: #5a3620;font-size: 50px;padding-left: 64px;}
+.tit6 strong{color: #ce2e45;font-weight: bold;}
+.txt6{font-size: 14px;color: #754405;width: 100%;text-align: center;padding-top: 10px;position: relative;z-index: 1;}
+.txt6 em{color: #dd2525;}
+.lottery2{position: relative;width: 1000px;height: 241px;margin-top: 10px;}
+
+
+/* 浮层1 关闭 */
+.float, .fixed {
+    margin-left: 550px;
+    left: 50%;
+    font-family: '\5FAE\8F6F\96C5\9ED1';
+    width:140px;
+}
+.float {position:absolute;top:800px !important;display: none;}
+.fixed {
+	position:fixed;top:60px;
+	_position:absolute;_top:expression(eval(document.documentElement.scrollTop));_bottom:auto;
+}
+.float_c{width:140px;position: relative;margin: 0 auto;height: 581px;background: url(//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/nav.jpg) no-repeat;}
+.nav {padding-top: 40px;}
+.nav li{float: left;height: 70px;line-height: 60px;}
+.nav li a{display: block;width:140px;text-align: center;font-size:18px;color:#5a3620;font-weight: bold;}
+.nav .on a,.nav a:hover{color: #ce2e45;}
+.nav li .li2{line-height: 30px !important;}
+.nav .li2{line-height: 30px !important;}
+.nav .li2 a{line-height: 32px !important;}
+.f_body{width: 149px;}
+.f_lxkf{display: block;width: 100%;height: 74px;}
+.top_srcoll{display: block;width: 100%;height:40px;}
+* html {background-image:url(about:blank);background-attachment:fixed;}/*解决 ie6 Fixed闪动问题*/
+:focus{outline: none;}
+
+</style>
+</head>
+
+<body>
+<div class="wrap1">
+	<div class="container">
+	    <div class="head pr" exposure-tag="head,头部">
+           <h1 class="hide">在线盛典</h1>
+		   <p class="hide">全新英雄级 永久黄金锅 首发限时免费抢</p>
+		   <div class="slogan pa"></div>
+		   <div class="md bang pa"></div>
+		   <div class="massage pa md"></div>
+		  	<span class="sp cd1 pa"></span>
+		   <span class="sp cd2 pa"></span>
+		    <span class="sp cd3 pa"></span>
+		     <span class="sp cd4 pa"></span>
+		     <span class="sp cd5 pa"></span>
+		     <span class="sp cd6 pa"></span>
+		     <span class="sp cd7 pa"></span>
+		     <span class="sp cd8 pa"></span>
+		     <span class="sp cd9 pa"></span>
+		     <span class="sp cd10 pa"></span>
+		   <p class="time pa">
+		   	<span><em>冲活跃活动时间</em>：2018年2月3日-2月4日</span>
+		   	<span><em>领取时间</em>：2018年2月3日-- 2月11日    10 : 00 -- 23 : 59</span>
+		   </p>
+		    <div class="top_btn c pa">
+		   		<a href="//cf.qq.com/web201105/download.shtml" title="下载游戏" target="_blank" onclick="PTTSendClick('link','down','下载游戏')" class="btn-down sp db">下载游戏
+		   		</a>
+		   		<a href="javascript:addFavorite('沙海生存');" onclick="PTTSendClick('btn','sc','收藏活动')" class="btn-sc db sp" title="收藏活动">收藏活动
+		   		</a>
+		   		<a href="//cf.qq.com/main.shtml" title="进入首页" target="_blank" onclick="PTTSendClick('link','come','进入官网')" class="btn-gw db sp">进入官网
+		   		</a>
+		   </div>
+   		</div>
+	</div>
+</div>
+<div class="wrap2">
+	<div class="container">
+		<p class="txt c">预约活动可领取精彩好礼<a href="javascript:;" onclick="PTTSendClick('btn','btn-ck','点击查看预约礼')" class="btn-ck sp db" title="点击查看预约礼">点击查看预约礼</a></p>
+		<div class="part1" exposure-tag="content,内容1">
+			<h2 class="tit1 sp">在线<strong>盛典</strong></h2>
+			<p class="txt1">活动期间（<span>1月29日至2月6日），</span><em>加入任意一局游戏，累计2天，即可获得：</em></p>
+			<p class="txt1-1 c">（灵狐VIP可在活动期间的任意一天游戏一局，领取红包）
+				<a href="javascript:;" onclick="PTTSendClick('btn','btn-vip','点击查看预约礼')" class="btn-vip sp db" title="灵狐VIP">灵狐VIP</a>
+			</p>
+			<ul class="dj-list c">
+				<li class="dj-left">
+					<img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/guo.png" width="291" height="261" alt="黄金锅"/>
+					<span>黄金平底锅（永久）</span>
+				</li>
+				<li class="dj-right">
+					<a href="javascript:;" onclick="PTTSendClick('btn','btn-lq1','立即领取')" class="btn-lq sp" title="立即领取">立即领取</a>
+					<p>（黄金平底锅(永久)奖励于2月3日开放领取）<br /><em>（活动数据从1月29日开始算起）</em></p>
+				</li>
+			</ul>
+			<p class="txt-time"><span class="span">2月3日、2月4日</span>加入任意一局游戏，<span>可立即领取英雄武器4件</span><br />
+<em>（每个QQ号活动期间仅参与一次）</em></p>
+			<ul class="dj2-list c">
+				<li class="dj2-li1">
+					<img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/dj1.png" width="476" height="279" alt=""/>
+					<a href="javascript:;" onclick="PTTSendClick('btn','btn-lq2','立即领取')" class="btn-lq1 sp" title="立即领取">立即领取</a>
+				</li>
+				<li class="dj2-li2">
+					<img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/dj2.png" width="472" height="279" alt=""/>
+					<a href="javascript:;" onclick="PTTSendClick('btn','btn-lq3','立即领取')" class="btn-lq1 sp" title="立即领取">立即领取</a>
+				</li>
+			</ul>
+			<div class="dj3 pr">
+				<img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/pic-dj0.png" width="974" height="290" alt="道具"/>
+				<ul class="dj3-list c pa">
+					<li>
+						<em>沙鹰-天神（7天）</em>
+						<a href="javascript:;" onclick="PTTSendClick('btn','btn-lq4','立即领取')" class="btn-lq2 sp" title="立即领取">立即领取</a>
+					</li>
+					<li>
+						<em>  千变（7天）</em>
+						<a href="javascript:;" onclick="PTTSendClick('btn','btn-lq5','立即领取')" class="btn-lq2 sp" title="立即领取">立即领取</a>
+					</li>
+					<li>
+						<em>擎天（7天）</em>
+						<a href="javascript:;" onclick="PTTSendClick('btn','btn-lq6','立即领取')" class="btn-lq2 sp" title="立即领取">立即领取</a>
+					</li>
+					<li>
+						<em>Barrett-极光（7天）</em>
+						<a href="javascript:;" onclick="PTTSendClick('btn','btn-lq7','立即领取')" class="btn-lq2 sp" title="立即领取">立即领取</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="wrap3">
+	<div class="container">
+		<div class="part2" exposure-tag="content,内容2">
+			<h2 class="tit2 sp">瓜分<strong>500万Q币</strong></h2>
+			<p class="txt2"><span><span class="span">2月3日</span>加入任意一局游戏，</span>可立即抽取Q币一次。<br /><em>（每个QQ号活动期间仅限参与一次）</em></p>
+			<div class="lottery" id="lotterycontent">
+				<img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/lottery1.png" alt='奖品' width="1000" height="471">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="wrap4">
+	<div class="container">
+		<div class="content" exposure-tag="content,内容3">
+			<div class="part3">
+				<h2 class="tit3 sp">2月3日、2月4日</h2>
+				<p class="txt3">最高经验爆表 在线风暴专享</p>
+				<ul class="list-jy c">
+					<li class="jy-li1">
+						<em>全天</em>
+						<span>5倍经验 </span>
+					</li>
+					<li class="jy-li2">
+						<em>14:30<br />15:30</em>
+						<span>12倍经验 </span>
+					</li>
+					<li class="jy-li2">
+						<em>15:30<br />16:30</em>
+						<span>18倍经验 </span>
+					</li>
+				</ul>
+			</div>
+			<div class="part4">
+				<h2 class="tit4 sp">掌上穿越火线<strong>APP特权</strong></h2>
+				<p class="txt4"><span>2月4日</span>，通过掌上穿越火线，可立即领取特权礼包一份，每个QQ账号仅限领取一次。</p>
+				<div class="app-main c">
+					<div class="app-dj pr">
+						<img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/pic-dj.png" width="737" height="238" alt="APP道具"/>
+						<p class="app-txt pa">
+							<span>凤舞云烟（30天）</span>
+							<span>玩具沙鹰（30天）</span>
+							<span class="app-span">复活币（10个）</span>
+						</p>
+					</div>
+					<div class="app-rwm pr">
+						<img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/erm.png" width="263" height="238" alt="二维码"/>
+						<p>官网APP</p>
+					</div>
+				</div>
+			</div>
+			<div class="part5">
+				<h2 class="tit5 sp">平台<strong>点亮特权</strong></h2>
+				<p class="txt5">活动期间，用户每点亮一个特权图标，即可领取1件装备，每件装备最多领取1次。</p>
+				<ul class="list-pt c">
+					<li><img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/pic-pt1.png" width="231" height="122" alt="wegame"/>
+						<p class="btn-pt c">
+							<a href="javascript:;" onclick="PTTSendClick('btn','light1','点亮')" class="btn-light sp" title="点亮">点亮</a>
+							<a href="javascript:;" onclick="PTTSendClick('btn','down1','下载')" class="btn-down1 sp mr" title="下载">下载</a>
+						</p>
+						<em class="icon sp"></em>
+					</li>
+					<li><img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/pic-pt3.png" width="231" height="122"  alt="腾讯电脑管家"/>
+						<p class="btn-pt c">
+							<a href="javascript:;" onclick="PTTSendClick('btn','light2','点亮')" class="btn-light sp" title="点亮">点亮</a>
+							<a href="javascript:;" onclick="PTTSendClick('btn','down2','下载')" class="btn-down1 sp mr" title="下载">下载</a>
+						</p>
+						<em class="icon sp"></em>
+					</li>
+					<li><img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/pic-pt2.png" width="231" height="122"  alt="腾讯视频VIP"/>
+						<p class="btn-pt c">
+							<a href="javascript:;" onclick="PTTSendClick('btn','light3','点亮')" class="btn-light sp" title="点亮">点亮</a>
+							<a href="javascript:;" onclick="PTTSendClick('btn','open1','下载')" class="btn-down1 sp mr" title="下载">下载</a>
+						</p>
+						<em class="icon sp"></em>
+					</li>
+					<li class="mr"><img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/pic-pt4.png" width="231" height="122"  alt="QQ浏览器"/>
+						<p class="btn-pt c">
+							<a href="javascript:;" onclick="PTTSendClick('btn','light4','点亮')" class="btn-light sp" title="点亮">点亮</a>
+							<a href="javascript:;" onclick="PTTSendClick('btn','open2','下载')" class="btn-down1 sp mr" title="开通">下载</a>
+						</p>
+						<em class="icon sp"></em>
+					</li>
+					<li class="mt ml"><img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/pic-pt5.png" width="231" height="122"  alt="黄钻贵族"/>
+						<p class="btn-pt c">
+							<a href="javascript:;" onclick="PTTSendClick('btn','light5','点亮')" class="btn-light sp" title="点亮">点亮</a>
+							<a href="javascript:;" onclick="PTTSendClick('btn','down3','开通')" class="btn-down1 sp mr" title="下载">开通</a>
+						</p>
+						<em class="icon sp"></em>
+					</li>
+					<li class="mt"><img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/pic-pt6.png" width="231" height="122"  alt="QQ会员"/>
+						<p class="btn-pt c">
+							<a href="javascript:;" onclick="PTTSendClick('btn','light6','点亮')" class="btn-light sp" title="点亮">点亮</a>
+							<a href="javascript:;" onclick="PTTSendClick('btn','open3','开通')" class="btn-down1 sp mr" title="开通">开通</a>
+						</p>
+						<em class="icon sp"></em>
+					</li>
+					<li class="mt"><img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/pic-pt7.png" width="231" height="122"  alt="粉钻贵族"/>
+						<p class="btn-pt c">
+							<a href="javascript:;" onclick="PTTSendClick('btn','light7','点亮')" class="btn-light sp" title="点亮">点亮</a>
+							<a href="javascript:;" onclick="PTTSendClick('btn','open4','开通')" class="btn-down1 sp mr" title="开通">开通</a>
+						</p>
+						<em class="icon sp"></em>
+					</li>
+				</ul>
+				<div class="pt-dj">
+					<img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/pic-dj2.png" width="1000" height="168" alt="平台道具"/>
+					<ul class="pt-list c">
+						<li>
+							<p>M14EBR-炎龙<br />（7天）</p>
+							<a href="javascript:;" onclick="PTTSendClick('btn','lq8','领取')" class="btn-lq2 sp db" title="领取">领取</a>
+						</li>
+						<li>
+							<p>黄金MP5-A<br />（7天）</p>
+							<a href="javascript:;" onclick="PTTSendClick('btn','lq8','领取')" class="btn-lq2 sp db" title="领取">领取</a>
+						</li>
+						<li>
+							<p>CheyTac-M200 <br />万圣节（7天）</p>
+							<a href="javascript:;" onclick="PTTSendClick('btn','lq8','领取')" class="btn-lq2 sp db" title="领取">领取</a>
+						</li>
+						<li>
+							<p>M249 MINIMI-<br />天羽（7天）</p>
+							<a href="javascript:;" onclick="PTTSendClick('btn','lq8','领取')" class="btn-lq2 sp db" title="领取">领取</a>
+						</li>
+						<li>
+							<p>凤凰之锋<br />（7天）</p>
+							<a href="javascript:;" onclick="PTTSendClick('btn','lq8','领取')" class="btn-lq2 sp db" title="领取">领取</a>
+						</li>
+						<li>
+							<p>大圣手雷<br />（7天）</p>
+							<a href="javascript:;" onclick="PTTSendClick('btn','lq9','领取')" class="btn-lq2 sp db" title="领取">领取</a>
+						</li>
+						<li>
+							<p>变异宝贝<br />（7天）</p>
+							<a href="javascript:;" onclick="PTTSendClick('btn','lq10','领取')" class="btn-lq2 sp db" title="领取">领取</a>
+						</li>
+						<li>
+							<p>雷霆道具卡<br />（1张）</p>
+							<a href="javascript:;" onclick="PTTSendClick('btn','lq11','领取')" class="btn-lq2 sp db" title="领取">领取</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="part6">
+				<h2 class="tit6 sp">幸运<strong>大抽奖</strong></h2>
+				<p class="txt6">活动期间，用户每点亮一个特权图标，即可获得1次玩<em>“幸运大抽奖”</em>的机会。</p>
+				<div class="lottery2" id="lotterycontent1">
+					<img src="//game.gtimg.cn/images/cf/cp/a20180124brisk/pc/lottery.jpg" alt='奖品' width="1000" height="287">
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+<!--浮层-->
+<div class="float" id="float">
+	<div class="float_c">
+		<ul class="nav c">
+			<li class="li"><a href="javascript:scrollTo(917);" class="nav1" onclick="PTTSendClick('btn','nav1','在线盛典')">在线盛典</a></li>
+			<li class="li"><a href="javascript:scrollTo(2211);" class="nav2" onclick="PTTSendClick('btn','nav2','瓜分500万Q币')">瓜分500万Q币</a></li>
+			<li class="li li2"><a href="javascript:scrollTo(2971);" class="nav3" onclick="PTTSendClick('btn','nav3','最高经验爆表在线风暴专享')">最高经验爆表 <br />在线风暴专享</a></li>
+			<li class="li li2"><a href="javascript:scrollTo(3302);" class="nav4" onclick="PTTSendClick('btn','nav4','掌上穿越火线APP权')">掌上穿越火线<br />APP权</a></li>
+			<li class="li"><a href="javascript:scrollTo(3713);" class="nav5" onclick="PTTSendClick('btn','nav5','平台点亮特权')">平台点亮特权</a></li>
+			<li class="li"><a href="javascript:scrollTo(4538);" class="nav5" onclick="PTTSendClick('btn','nav5','幸运大抽奖')">幸运大抽奖</a></li>
+		</ul>
+		<a class="f_lxkf" href="javascript:;" target="_blank" onclick="PTTSendClick('link','talk','客服')"></a>
+		<a class="top_srcoll" href="javascript:scrollTo(0)"></a>
+	</div>
+</div>
+
+<script src="//ossweb-img.qq.com/images/cf/title/cf.js"></script>
+<!--#include virtual="/act/a20170117top/top-login-v2.htm"-->
+<script>
+var cftop = new cfTop({
+	iAMSActivityId : '109064',
+	iQueryFlowID : '355918',
+	bIndFlowID : '355917',
+	iLotteryFlowId : '341670',
+	isShowLottery : 1,
+	objClose : 'myGiftList_341670',
+	callback: function(data){ console.log( data ) },
+	isLoginshow: 1,
+	failureFuc:function(){},
+	giftBtnArr:'',
+	isLoginshow: 1,
+	activityList : ''
+});
+</script>
+<script src="//ossweb-img.qq.com/images/js/foot.js"></script>
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="//game.gtimg.cn/images/js/delottery/lottery.js"></script>
+<script type="text/javascript">
+//收藏活动
+function addFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle);
+    } catch (e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, "");
+        } catch (e) {
+            alert("加入收藏失败，请使用Ctrl+D进行添加");
+        }
+    }
+}
+$(function(){
+	$('.list-pt li .btn-light').click(function(){
+		$(this).parents('li').addClass('on')
+	})
+})
+//点击开始抽奖 通知js flash->js
+	//开始抽奖lottery->js
+	function callJsToStart() {
+		lottery.disable();
+		calllotteryToRoll(4);
+	}
+	//开发获得抽奖结果 通知lottery开始播放效果 js->lottery
+	function calllotteryToRoll(id) {
+		if (lottery) lottery.stopRoll(id);
+	}
+	//动画完成通知js lottery->js		
+	function callJsToComplete() {
+		alert('恭喜你获得大奖哟！！');
+	}
+
+	//初始化抽奖的 可以不知道内部
+	var lottery = new Lottery({
+		'lighturl':'//ossweb-img.qq.com/images/js/delottery/sel.png',//外部光圈png 不填写就用默认的效果
+		'starturl':'//ossweb-img.qq.com/images/js/delottery/blankstartbtn.png', //外部按钮png 不填写就用默认的按钮效果
+		'width': 1000,//lottery 宽度
+		'height': 471,//lottery 高度
+		'total': 5,//抽奖产品的总数
+		'sbtnx': 380,// 开始抽奖按钮的位置x坐标
+		'sbtny': 266,// 开始抽奖按钮的位置y坐标
+		'sbtnw': 222,// 开始抽奖按钮的宽度
+		'sbtnh': 197,// 开始抽奖按钮的高度
+		'boxw': 222,// 奖品光效的宽度
+		'boxh': 197,//奖品光效的高度 
+		'position': "0_46,189_157,380_46,568_157,763_46",
+		//奖品光效的位置，对应奖品图片的布局，填入每个奖品的位置以及角度用逗号分割 x_y 例如19_20或者19_20_0 表示第一个奖品的位置 x坐标为19px y坐标为20px 角度为0。）
+		'contentId': 'lotterycontent',//嵌入lottery 的div层的 id 
+		'onClickRollEvent': callJsToStart,//对应上面接口
+		'onCompleteRollEvent': callJsToComplete //对应上面接口
+	});
+//点击开始抽奖 通知js flash->js
+	//开始抽奖lottery->js
+	function callJsToStart1() {
+		lottery1.disable();
+		calllotteryToRoll1(5);
+	}
+	//开发获得抽奖结果 通知lottery开始播放效果 js->lottery
+	function calllotteryToRoll1(id) {
+		if (lottery1) lottery1.stopRoll(id);
+	}
+	//动画完成通知js lottery->js		
+	function callJsToComplete1() {
+		alert('恭喜你获得大奖哟！！');
+	}
+
+	//初始化抽奖的 可以不知道内部
+	var lottery1 = new Lottery({
+		'lighturl':'//ossweb-img.qq.com/images/js/delottery/sel.png',//外部光圈png 不填写就用默认的效果
+		'starturl':'//ossweb-img.qq.com/images/js/delottery/blankstartbtn.png', //外部按钮png 不填写就用默认的按钮效果
+		'width': 1000,//lottery 宽度
+		'height': 241,//lottery 高度
+		'total': 6,//抽奖产品的总数
+		'sbtnx': 396,// 开始抽奖按钮的位置x坐标
+		'sbtny': 217,// 开始抽奖按钮的位置y坐标
+		'sbtnw': 209,// 开始抽奖按钮的宽度
+		'sbtnh': 67,// 开始抽奖按钮的高度
+		'boxw': 174,// 奖品光效的宽度
+		'boxh': 164,//奖品光效的高度 
+		'position': "0_5,181_5,339_5,489_5,650_5,823_5",
+		//奖品光效的位置，对应奖品图片的布局，填入每个奖品的位置以及角度用逗号分割 x_y 例如19_20或者19_20_0 表示第一个奖品的位置 x坐标为19px y坐标为20px 角度为0。）
+		'contentId': 'lotterycontent1',//嵌入lottery 的div层的 id 
+		'onClickRollEvent': callJsToStart1,//对应上面接口
+		'onCompleteRollEvent': callJsToComplete1 //对应上面接口
+	});
+////侧边栏
+function addEventSimple(obj, evt, fn) {
+		if (obj.addEventListener) obj.addEventListener(evt, fn, false);
+		else if (obj.attachEvent) obj.attachEvent('on' + evt, fn)
+	}
+	function fix() {
+		var fixE = document.getElementById("float");
+		var autoheight = document.body.scrollTop || document.documentElement.scrollTop;
+		if (autoheight < 600) {
+			fixE.className = "float"
+		} else {
+			fixE.className = "fixed";
+		}
+	}
+	addEventSimple(window, "load", fix);
+	addEventSimple(window, "scroll", fix);
+	function cc(nums){
+		$(".nav").find('li:eq('+nums+')').addClass('on').siblings().removeClass('on');
+	}
+	function ss(){
+		var sTop = $(document).scrollTop();
+		if (sTop >= 917 && sTop < 2211) {
+			cc(0);
+		}
+		if (sTop >= 2211 && sTop < 2971) {
+			cc(1);
+		}
+		if (sTop >= 2971 && sTop < 3302) {
+			cc(2);
+		}
+		if (sTop >= 3302 && sTop < 3713) {
+			cc(3);
+		}
+		if (sTop >= 3713 && sTop < 4538) {
+			cc(4);
+		}
+		if (sTop > 4038) {
+			cc(5);
+		}
+	} 
+	$(window).bind('load scroll', function() {
+		ss();
+	})
+	window.scrollTo = (function() {
+		var targets = jQuery(document.documentElement).add(document.body);
+		return function(n) {targets.stop().animate({scrollTop: n});
+		}
+	})();
+</script>
+<!-- 统计 -->
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script>
+//此段代码不能放到外链JS中，
+var setSite={ //设置网站属性
+ siteType:"a20180124brisk", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+ pageType:"index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+ pageName:"首页", //必填项:页面中文名
+ osact:0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+ ingame:0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+ stayTime:0 //选填项:是否需要统计停留时长boolean；默认是0
+}
+if(typeof(pgvMain)=='function')pgvMain();//千万不能忘记！
+</script>
+</body>
+</html>

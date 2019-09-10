@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+	<title>播放音乐</title>
+	<style>
+		* {margin: 0;padding: 0;border: 0;}
+		.list {width: 300px;margin: 0 auto;list-style-type: none;}
+		.list li {height: 40px;background-color: #ccc;margin-bottom: 1px;cursor: pointer;}
+		.list .on {background-color: #f00;}
+		.icon-play:before {content:'播放';}
+		.icon-pause:before {content:'停止';}
+		.music-wrap {position: absolute;left: 999em;top: 0;}
+	</style>
+</head>
+<body>
+	<ul class="list">
+		<li><span class="icon icon-play"></span></li>
+		<li><span class="icon icon-play"></span></li>
+		<li><span class="icon icon-play"></span></li>
+		<li><span class="icon icon-play"></span></li>
+	</ul>
+	<div class="music-wrap">
+		<audio class="music" src="1.mp3"></audio>
+		<audio class="music" src="2.mp3"></audio>
+		<audio class="music" src="3.mp3"></audio>
+		<audio class="music" src="4.mp3"></audio>
+	</div>
+<script>
+var btns = document.querySelectorAll('.list li'),
+	musics = document.querySelectorAll('.music'),
+	icons = document.querySelectorAll('.icon');
+for (var i = btns.length - 1; i >= 0; i--) {
+	btns[i].current = i;
+	btns[i].addEventListener('touchend', function(e) {
+		if (!this.classList.contains('on')) {
+			for (var j = btns.length - 1; j >= 0; j--) {
+				btns[j].classList.remove('on');
+				icons[j].classList.remove('icon-pause');
+				musics[j].pause();
+			};
+			this.classList.add('on');
+			icons[this.current].classList.add('icon-pause');
+			musics[this.current].setAttribute('src', (this.current+1)+'.mp3');
+			musics[this.current].play();
+		}
+		else {
+			this.classList.remove('on');
+			icons[this.current].classList.remove('icon-pause');
+			icons[this.current].classList.add('icon-play');
+			musics[this.current].pause();
+		}
+	}, false)
+};
+</script>
+</body>
+</html>

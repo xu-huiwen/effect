@@ -1,0 +1,40 @@
+<!doctype  html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+<title>CSS3 加载动画</title>
+<style>
+* {margin: 0;padding: 0;border: 0;font-style: normal;}
+.clearfix:before,.clearfix:after{content:"";display:table;}
+.clearfix:after{clear:both;}
+@-webkit-keyframes ellipsis {
+0%{width:0}
+16.7%{width:10px}
+33.4%{width:20px}
+50.1%{width:30px}
+66.8%{width:40px}
+83.5%{width:50px}
+100%{width:60px}
+}
+.ellipsis {text-align: center;-webkit-animation: ellipsis 1.5s linear infinite;position: relative;height: 10px;top: 0;overflow: hidden;}
+.ellipsis i {position: absolute;text-align: center;width: 2px;height: 2px;border-radius: 50%;background-color: #000;top: 3px;}
+.ellipsis i:nth-child(1) {left: 10px;}
+.ellipsis i:nth-child(2) {left: 20px;}
+.ellipsis i:nth-child(3) {left: 30px;}
+.ellipsis i:nth-child(4) {left: 40px;}
+.ellipsis i:nth-child(5) {left: 50px;}
+.ellipsis i:nth-child(6) {left: 60px;}
+</style>
+</head>
+<body>
+	<div class="ellipsis">
+		<i></i>
+		<i></i>
+		<i></i>
+		<i></i>
+		<i></i>
+		<i></i>
+	</div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="all">
+<title>jQuery游戏网站全屏焦点图带内嵌缩略图放大显示功能</title>
+<link href="style/style.css" rel="stylesheet" type="text/css">
+<!--[if IE 6]>
+ <script src="scripts/DD_belatedPNG_0.0.8a.js"></script>
+ <script>
+   /* EXAMPLE */
+   DD_belatedPNG.fix('*');
+   
+   /* string argument can be any CSS selector */
+   /* .png_bg example is unnecessary */
+   /* change it to what suits you! */
+ </script>
+ <![endif]-->
+</head>
+<body>
+<div class="outer">
+  <div class="toper">
+    <div class="toper-inner">
+      <ul class="menu cfix" id="menu">
+        <li class="menu-intro"> <a class="curr" title="游戏简介" href="#intro"><span>游戏简介</span></a> </li>
+        <li class="menu-feature"> <a title="游戏特色" href="#feature"><span>游戏特色</span></a> </li>
+        <li class="menu-guide"> <a title="游戏指南" href="#guide"><span>游戏指南</span></a> </li>
+        <li class="logo_li"><a href="default.htm" class="logo"></a></li>
+      </ul>
+    </div>
+  </div>
+  <!--wrap1-->
+  <div id="wrap-page0" class="wrap wrap-intro">
+    <div id="wrapinner-page0" class="wrap-intro-inner">
+      <div id="mainer2-page0" class="mainer2">
+        <p id="introImg" class="intro-img cfix zbc"> <a class="fl imgs-lnk" href="javascript:imgshow('introImg',0)" title=""><img src="img/pic/intro-pic1.jpg" alt=""><span class="sbg wx" id="span_1_0"></span></a> <a class="fl imgs-lnk" href="javascript:imgshow('introImg',1)" title=""><img src="img/pic/intro-pic2.jpg" alt=""><span class="sbg wx" id="span_1_1"></span></a> </p>
+        <div class="intro_text">
+          <h2>游戏简介</h2>
+          <p>《行星边际2》是一款顶级画面体验的战争MMOFPS射击游戏大作，游戏采用索尼在线娱乐（SOE）最新ForgeLight&#8482;游戏引擎制作，在射击游戏同图承载人数上取得了技术性突破，数以千计的玩家将能够同时在一张地图世界内展开战斗玩家可同自己的好友或公会携手共赴战场。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--wrap2-->
+  <div id="wrap-page1" class="wrap wrap-feature">
+    <div id="wrapinner-page1" class="wrap-feature-inner">
+      <div id="mainer2-page1" class="mainer2">
+        <div class="feature_text">
+          <h2>游戏特色</h2>
+          <p> 不同于传统FPS对战类游戏，《行星边际2》的战争将在一幅开放性无缝连接<span class="cBlue">世界地图</span>内展开，玩家<span class="cBlue">不需要加入或建立房间</span>进行游戏。</p>
+        </div>
+        <div class="feature_text2">
+          <h3>《行星边际2》作为一款全新的MMOFPS游戏，将包含以下特性：</h3>
+          <p>1. 地图面积达到<span class="cBlue">64平</span>方公里，最多可以<span class="cBlue">支持2000</span>名玩家在一个地图内进行战斗<br />
+            2. 三大阵营全面领土战争：地球共和国 vs 新联邦 vs 瓦努主权国<br />
+            3. <span class="cBlue">6大</span>步兵职业，可在游戏内可随意切换。<br />
+            4. <span class="cBlue">12</span>种陆空战争载具<br />
+            5. <span class="cBlue">数百种</span>武器+<span class="cBlue">近千种</span>升级配件</p>
+        </div>
+        <p id="featureImg" class="feature-img s-img cfix zbc"> <a class="fl imgs-lnk" href="javascript:imgshow('featureImg',0)" title=""><img src="img/pic/feature-pic1.jpg" alt=""><span class="sbg wx" id="span_1_2"></span></a> <a class="fl imgs-lnk" href="javascript:imgshow('featureImg',1)" title=""><img src="img/pic/feature-pic2.jpg" alt=""><span class="sbg wx" id="span_1_3"></span></a> <a class="fl imgs-lnk" href="javascript:imgshow('featureImg',2)" title=""><img src="img/pic/feature-pic3.jpg" alt=""><span class="sbg wx" id="span_1_4"></span></a> </p>
+      </div>
+    </div>
+  </div>
+  <!--wrap3-->
+  <div id="wrap-page2" class="wrap wrap-guide">
+    <div id="wrapinner-page2" class="wrap-guide-inner">
+      <div id="mainer2-page2" class="mainer2">
+        <div class="guideBox">
+          <div id="guideInner" class="guideInner">
+            <div class="gride grideCon1">
+              <div class="conInner">
+                <h2>战争目标</h2>
+                <h3>三阵营全面领土争夺战</h3>
+                <p class="tx">《行星边际2》的核心游戏内容是对关键地域的争夺，以及稀有资源的控制。每处战场都包含着价值昂贵的资源以及战略上的必争之地。</p>
+                <p class="tx">征服并占领这些地域的势力，将获得额外的资源和弹药，并在技术研究中处于优势，可在游戏内更快的获取证书训练点数，通过证书点玩家可以更快的解锁新武器。</p>
+              </div>
+            </div>
+            <div class="gride grideCon2">
+              <div class="conInner">
+                <h2>加入战场</h2>
+                <p class="tx"> 进入游戏后，按"M"键打开游戏战略地图，可在此界面玩家可以查看当前大陆的战争状态，并通过界面左下方的"快速加入战场"按钮直接空投至战斗最激烈的战场。<br />
+                  除了轨道空投外，玩家还可以通过右上方的地图控制板手动寻找战场，并通过鼠标右键地图上任意一点，设定个人或小队路标，这样在主视角HUD界面内便可以跟随这些路标到达指定战场。</p>
+                <div class="text2">
+                  <p>游戏中还提供11种陆空载具供玩家驾驶。</p>
+                  <p>玩家在载具终端内可以领取载具，驾驶它们便可快速到达战场，并且能够向友军提供强大的战场火力。按"E"键可进出载具或防御装置。</p>
+                </div>
+                <p id="guideImg" class="guide-img s-img cfix zbc"> <a class="fl imgs-lnk" href="javascript:imgshow('guideImg',0)" title=""><img src="img/pic/feature-pic8.jpg" alt=""><span class="sbg wx" id="span_1_5"></span></a> </p>
+              </div>
+            </div>
+            <div class="gride grideCon3">
+              <div class="conInner">
+                <h2>战场生存必备知识</h2>
+                <div class="rec">
+                  <h3>敌我识别：</h3>
+                  <p>游戏内默认设置友军顶部为蓝色倒三角标记<span><img src="img/p3_arr1.png" width="34" height="30" alt="arr" /></span>，敌军顶部为红色倒三角标记<span><img src="img/p3_arr2.png" width="34" height="30" alt="arr" /></span><br />
+                    如果发现敌军单位，请按"<span class="cBlue b">Q</span>"键报告敌人方位，进行标记，如果敌人尚未被附近任何友军报告位置的情况下，则头顶无任何标记。</p>
+                </div>
+                <div class="rec2">
+                  <h3>复活重生：</h3>
+                  <p>玩家在战斗中死亡后，可以在地图界面选择附近友军控制的重生装置内复活</p>
+                </div>
+                <div class="rec3 cfix">
+                  <div class="tx2 fl">
+                    <div class="cell">
+                      <h3>更换职业武器:</h3>
+                      <p>除了重生部署界面外，玩家还可以在游戏中寻找武器终端，以便随时更换职业和武器装备。</p>
+                    </div>
+                  </div>
+                  <div class="tx2 fl">
+                    <div class="cell">
+                      <h3>游戏中设施图标作用:</h3>
+                    </div>
+                  </div>
+                  <p id="con3Img" class="con3Img-img s-img cfix zbc"> <a class="fl imgs-lnk" href="javascript:imgshow('con3Img',0)" title=""><img src="img/pic/gride-pic1.jpg" alt=""><span class="sbg wx" id="span_1_7"></span></a> <a class="fl imgs-lnk" href="javascript:imgshow('con3Img',1)" title=""><img src="img/pic/gride-pic2.jpg" alt=""><span class="sbg wx" id="span_1_8"></span></a> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul id="guideNav" class="guideNav cfix">
+          <li class="guide_tab1"><a href="#" class="curr"><span>战争目标</span></a></li>
+          <li class="guide_tab2"><a href="#"><span>加入战场</span></a></li>
+          <li class="guide_tab3"><a href="#"><span>战场生存必备知识</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <a id="prevLink" class="prev-lnk" href="#happy" title="向左" style="display:none">&nbsp;</a> <a id="nextLink" class="next-lnk" href="#happy" title="向右">&nbsp;</a> </div>
+<div class="popup" id="popImg">
+  <div class="popinner">
+    <p id="popImgBox"></p>
+  </div>
+  <a title="关闭" href="javascript:hidDialogs();" class="popclose">×</a> <a title="上一张" href="javascript:;" class="pop-prev" id="popPrev">&nbsp;<span>已是第一张</span></a> <a title="下一张" href="javascript:;" class="pop-next" id="popNext">&nbsp;<span>最后一张了</span></a> </div>
+<div class="footer">
+  <!--通用底部-->
+</div>
+<script src="scripts/milo-min_zbc.js"></script>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script src="scripts/page_zbc.js"></script>
+<script>
+var showDialogs=function(o){
+	need("biz.dialog",function(Dialog){
+		Dialog.show({
+		id:o,
+		bgcolor:"#000",
+		opacity:60
+		});
+	});
+	return;
+},
+hidDialogs=function(){
+	need("biz.dialog",function(Dialog){Dialog.hide();});return;
+};
+	
+milo.ready(function(){
+	swap("guideNav");
+	
+	loadScript("scripts/tcss_ied.js",function(){
+		glb.hash.init("Page");
+		if(typeof(pgvMain) == 'function'){pgvMain();}
+	});
+	
+	
+});
+$(function(){
+	//图片按钮
+	$(".wx").animate({opacity:0},"fast");
+	$(".zbc span").mouseenter(function(){
+		$(this).stop().fadeTo('slow',0.7);
+	}).mouseleave(function(){
+		$(this).stop().fadeTo('slow',0);
+	});			
+})
+</script>
+</body>
+</html>

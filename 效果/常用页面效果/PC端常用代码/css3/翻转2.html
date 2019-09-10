@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画</title>
+	<style>
+		*{margin:0;padding:0;border:0;}
+		.box {width:200px;margin:0 auto;position:relative;
+			perspective:900px;
+			-webkit-perspective:900px;
+			transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+		}
+		.front,.back {width:200px;height:200px;text-align:center;line-height:200px;color:#fff;border-radius:50%;position:absolute;left:0;top:0;
+			transform-origin: 50% 0;
+			-webkit-transform-origin: 50% 0;
+			transition:all 0.4s linear;
+			-webkit-transition:all 0.4s linear;
+		}
+		.front {background-color:#f00;}
+		.back {background-color:#00f;
+			transform: translate3d(0, 0, -200px) rotate3d(1, 0, 0, 90deg);
+			-webkit-transform: translate3d(0, 0, -200px) rotate3d(1, 0, 0, 90deg);
+			opacity: 0;
+		}
+		.box:hover .front {
+			transform: translate3d(0, 200px, 0) rotate3d(1, 0, 0, -90deg);
+			-webkit-transform: translate3d(0, 200px, 0) rotate3d(1, 0, 0, -90deg);
+			opacity:0;
+		}
+		.box:hover .back {
+			opacity:1;
+			transform: rotate3d(1, 0, 0, 0deg);
+			-webkit-transform: rotate3d(1, 0, 0, 0deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="front">前</div>
+		<div class="back">后</div>
+	</div>
+</body>
+</html>

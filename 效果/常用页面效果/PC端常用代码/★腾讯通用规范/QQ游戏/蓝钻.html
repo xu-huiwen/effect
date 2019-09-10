@@ -1,0 +1,107 @@
+<!-- 
+名称: 蓝钻活动专题demo
+
+本次版本更新描述:
+
+1、footer底部版权时间的调整。以及和蓝钻官网底部视觉统一的规范调整。<script  src="http://qqgame.qq.com/public/footer/footer_lz.js?c=b" id="lib_js_footer"></script>
+其中?c=b为黑色logo，黑色字体版本，?c=w为白色logo，白色字体版本。
+
+2、不用添加标准弹层的样式与结构。这块我们已经做好封装。
+
+3、ie6的png滤镜代码再也不需要添加。
+
+请大家严格按照下面的demo代码格式进行重构，
+
+附：最近经常出现的问题也列下：
+
+1、全局定义中设置了img为block属性，导致头部的蓝钻图片换行。
+
+2、页面大量使用绝对定位，绝对定位的运算比浮动这些要多很多，所以尽量使用浮动来定位。
+
+3、登录、登录后模块已经固定化，只需要调整样式即可。
+
+版本: 02012-09-19
+
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-QQGame" />
+<meta name="Copyright" content="Copyright (c) 2006-2012 TENCNET" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>专题主标题名 - 蓝钻贵族官网 - 腾讯游戏VIP</title>
+<style type="text/css">
+/*rest style*/
+html{-webkit-text-size-adjust:none;}
+body, h1, h2, h3, h4, h5, h6, hr, p, pre, dl, dt, dd, ul, ol, li, th, td, form, fieldset, legend, button, input, textarea { margin:0; padding:0;}
+body{ background: /*根据页面由CP设置*/; font:12px/1.6 Tahoma, simsun, Verdana, Geneva; color:/*根据页面由CP设置*/;min-width:1000px;}
+h1, h2, h3, h4, h5, h6 { font-size:100%;}
+ul, ol { list-style:none;}
+a { text-decoration:none; color:/*根据页面由CP设置*/;}
+a:hover { text-decoration:none;}
+fieldset, img { border:0;}
+input,select,form,img { vertical-align:middle; }
+button, input, select, textarea { font-size:100%; outline:none;}
+button{ cursor:pointer;}
+table { border-collapse:collapse; border-spacing:0;}
+
+</style>
+</head>
+<body>
+    	        <p class="share_bar"><span>分享到:</span><a href="javascript:void(0);" onclick="postToWb();return false;" class="wb_s" title="分享到微薄">分享到微薄</a><a href="javascript:void(0);" onclick="postToQZone();return false;" class="qzone_s" title="分享到空间">分享到空间</a></p>
+
+<!--unlogin：登录前状态-->
+<div id="unlogin">
+	你好，请[<a href="javascript:LoginManager.login(function(){ location.reload();});">登录</a>]
+</div>
+<!--logined：登录状态-->
+<div id="logined"  style="display:none;">
+				<p><span>欢迎您，</span><span id="login_qq_span">&nbsp;&nbsp;</span> <span id="qqgame_diamond_content"></span><a href="javascript:LoginManager.logout(function(){ location.reload();});">[退出]</a></p>
+</div>
+
+<!--带蓝钻开通按钮的top条-->
+<script src="http://gamevip.qq.com/js/act_module/top_int_v2.min.js" type="text/javascript"></script>
+<!--不带蓝钻开通按钮的top条
+<script src="http://gamevip.qq.com/js/act_module/top_int_nobtn_v2.js" type="text/javascript"></script-->
+
+<!--黑色logo，黑色字体的底部-->
+<script  src="http://qqgame.qq.com/public/footer/footer_lz.js?c=b" id="lib_js_footer"></script>
+<!--白色logo，白色字体的底部
+<script  src="http://qqgame.qq.com/public/footer/footer_lz.js?c=w" id="lib_js_footer"></script-->
+
+<!--分享微博、空间代码-->
+<script  type="text/javascript">
+ //分享到微博
+function postToWb(){
+    var tloca = document.location.href.split('index.html')[0] + '?ADTAG=IED.WB';
+    tloca = encodeURIComponent(tloca);
+    var _t = encodeURI("蓝钻贵族VIP活动——蓝钻豪华版升级年费有礼！地址：\n");
+    var _url = tloca;
+    var _appkey = encodeURI("appkey");//你从腾讯获得的appkey
+    var _pic = encodeURI('');//（例如：var _pic='图片url1|图片url2|图片url3....）
+    var _site = '';//你的网站地址
+    var _u = 'http://v.t.qq.com/share/share.php?url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic+'&title='+_t;
+    window.open( _u,'', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
+};
+ //分享到空间
+function postToQZone(){
+    var tloca = document.location.href.split('index.html')[0] + '?ADTAG=IED.QZONE';
+    tloca = encodeURIComponent(tloca);
+	var _appkey = encodeURI("appkey");//你从腾讯获得的appkey
+    var _t = encodeURI('蓝钻豪华版升级年费有礼！');
+    var ttl = encodeURI('蓝钻贵族VIP');
+	var _uq = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + tloca + '&title=' + ttl + '&pics=&summary=' + _t;
+    window.open( _uq,'', 'width=800, height=500, top='+(screen.height-500)/2+', left='+(screen.width-800)/2+', toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
+    //return false;
+}
+</script>
+
+<!--统计代码-->
+<script type="text/javascript" src="http://pingjs.qq.com/tcss.ping.js"></script>
+<script type="text/javascript">
+ if(typeof(pgvMain) == 'function')
+ pgvMain();
+</script>
+</body>
+</html>
